@@ -116,25 +116,27 @@ body::before {
 }
 
 .un-spacy-insignia {
-  width: 52px;
-  height: 52px;
-  background: radial-gradient(circle, rgba(0, 240, 255, 0.2) 0%, transparent 70%);
-  border: 2px solid var(--un-cyan);
-  border-radius: 50%;
+  width: 58px;
+  height: 58px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 15px var(--un-cyan-glow);
   position: relative;
+  filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.4)) drop-shadow(0 0 16px rgba(255, 50, 50, 0.25));
+  transition: transform var(--transition-fast);
 }
 
-.insignia-symbol {
-  font-family: var(--font-hud);
-  font-weight: 900;
-  font-size: 24px;
-  color: var(--skull-amber);
-  text-shadow: 0 0 8px var(--skull-amber-glow);
+.un-spacy-insignia:hover {
+  transform: scale(1.08);
 }
+
+.insignia-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 
 .brand-text h1 {
   font-family: var(--font-hud);
