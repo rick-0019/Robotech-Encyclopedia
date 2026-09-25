@@ -1,0 +1,165 @@
+{
+  "system_version": "1.0.0",
+  "database_name": "ROBOTECH TACTICAL CODEX",
+  "updated_at": "2026-09-25",
+  "categories": [
+    {
+      "id": "all",
+      "label_es": "Todos los Mechas",
+      "label_en": "All Units"
+    },
+    {
+      "id": "destroid",
+      "label_es": "Destroids",
+      "label_en": "Destroids"
+    },
+    {
+      "id": "veritech",
+      "label_es": "Veritechs / Valkyries",
+      "label_en": "Veritechs / Valkyries"
+    },
+    {
+      "id": "zentraedi",
+      "label_es": "Fuerzas Zentraedi",
+      "label_en": "Zentraedi Forces"
+    }
+  ],
+  "mechas": [
+    {
+      "id": "destroid_raidar_x",
+      "name": "Raidar X",
+      "alias": "Defender ADR-04-MKX",
+      "category": "destroid",
+      "faction": {
+        "es": "U.N. Spacy",
+        "en": "U.N. Spacy"
+      },
+      "class": {
+        "es": "Destroid Antiaéreo No Transformable",
+        "en": "Non-Transformable Anti-Aircraft Destroid"
+      },
+      "thumbnail": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
+      "badge": "Defender ADR-04-MKX",
+      "summary": {
+        "es": "El Raidar X es un mecha no transformable utilizado como unidad antiaérea a bordo del SDF-1 por la U.N. SPACY y...",
+        "en": "The Raidar X is a non-transformable mecha used as an anti-aircraft unit aboard the SDF-1, by the U.N. SPACY an..."
+      },
+      "stats": {
+        "speed": 128.7,
+        "speed_unit": "km/h",
+        "armor": 250,
+        "armor_unit": "C.D.M.",
+        "firepower": 85,
+        "firepower_unit": "Pts",
+        "range": 12.7,
+        "range_unit": "km",
+        "sensors": 321,
+        "sensors_unit": "km",
+        "mobility": 30
+      },
+      "dataFile": "data/mechas/destroid_raidar_x.json"
+    },
+    {
+      "id": "vf1s_valkyrie",
+      "name": "VF-1S Valkyrie",
+      "alias": "Skull Leader / Veritech Fighter",
+      "category": "veritech",
+      "faction": {
+        "es": "U.N. Spacy (Skull Squadron)",
+        "en": "U.N. Spacy (Skull Squadron)"
+      },
+      "class": {
+        "es": "Caza Variable de Mando",
+        "en": "Command Variable Fighter"
+      },
+      "thumbnail": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80",
+      "badge": "ROY FOCKER / AS",
+      "summary": {
+        "es": "El caza transformable supremo para líderes de escuadrón. Triple configuración Caza/Guardián/Battloid.",
+        "en": "Flagship variable fighter for squadron commanders. Tri-mode Fighter/Guardian/Battloid."
+      },
+      "stats": {
+        "speed": 3871,
+        "speed_unit": "km/h",
+        "armor": 200,
+        "armor_unit": "CDM",
+        "firepower": 88,
+        "firepower_unit": "Pts",
+        "range": 6.5,
+        "range_unit": "km",
+        "sensors": 250,
+        "sensors_unit": "km",
+        "mobility": 98
+      },
+      "dataFile": "data/mechas/vf1s_valkyrie.json"
+    },
+    {
+      "id": "destroid_tomahawk",
+      "name": "Tomahawk",
+      "alias": "MBR-04-VI Heavy Battle Destroid",
+      "category": "destroid",
+      "faction": {
+        "es": "U.N. Spacy",
+        "en": "U.N. Spacy"
+      },
+      "class": {
+        "es": "Destroid de Asalto Blindado",
+        "en": "Armored Battle Destroid"
+      },
+      "thumbnail": "https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?w=600&auto=format&fit=crop&q=80",
+      "badge": "MAIN BATTLE TANK",
+      "summary": {
+        "es": "Fortaleza bípeda equipada con dos cañones de rayos de partículas de 127mm y lanzadores de misiles.",
+        "en": "Main battle walking fortress featuring twin 127mm particle beam cannons and missile pods."
+      },
+      "stats": {
+        "speed": 112,
+        "speed_unit": "km/h",
+        "armor": 400,
+        "armor_unit": "CDM",
+        "firepower": 95,
+        "firepower_unit": "Pts",
+        "range": 10,
+        "range_unit": "km",
+        "sensors": 100,
+        "sensors_unit": "km",
+        "mobility": 25
+      },
+      "dataFile": "data/mechas/destroid_tomahawk.json"
+    },
+    {
+      "id": "regult_battle_pod",
+      "name": "Regult Tactical Pod",
+      "alias": "Zentraedi Standard Battle Pod",
+      "category": "zentraedi",
+      "faction": {
+        "es": "Flota Zentraedi",
+        "en": "Zentraedi Fleet"
+      },
+      "class": {
+        "es": "Cápsula de Asalto de Infantería",
+        "en": "Infantry Assault Pod"
+      },
+      "thumbnail": "https://images.unsplash.com/photo-1563089145-599997674d42?w=600&auto=format&fit=crop&q=80",
+      "badge": "ZENTRAEDI SWARM",
+      "summary": {
+        "es": "Unidad bípeda ultrarrápida para ataques masivos de saturación en gravedad cero y superficie terrestre.",
+        "en": "Fast bipedal combat unit built for mass swarm tactics in zero-G and planetary terrain."
+      },
+      "stats": {
+        "speed": 281,
+        "speed_unit": "km/h",
+        "armor": 100,
+        "armor_unit": "CDM",
+        "firepower": 70,
+        "firepower_unit": "Pts",
+        "range": 4,
+        "range_unit": "km",
+        "sensors": 80,
+        "sensors_unit": "km",
+        "mobility": 80
+      },
+      "dataFile": "data/mechas/regult_battle_pod.json"
+    }
+  ]
+}

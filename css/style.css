@@ -1,0 +1,411 @@
+/* ==========================================================================
+   ROBOTECH / MACROSS TACTICAL CODEX - MAIN STYLESHEET
+   ========================================================================== */
+
+:root {
+  --bg-deep: #050a14;
+  --bg-panel: rgba(10, 20, 36, 0.85);
+  --bg-panel-solid: #0b1526;
+  --bg-card: rgba(13, 27, 49, 0.7);
+  --bg-card-hover: rgba(18, 38, 70, 0.85);
+  
+  /* Tactical Accent Colors */
+  --un-cyan: #00f0ff;
+  --un-cyan-glow: rgba(0, 240, 255, 0.4);
+  --un-blue: #0284c7;
+  --skull-amber: #ff9d00;
+  --skull-amber-glow: rgba(255, 157, 0, 0.45);
+  --veritech-red: #ff2d55;
+  --radar-green: #10b981;
+  --radar-green-glow: rgba(16, 185, 129, 0.4);
+  
+  --text-primary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --border-tactical: rgba(0, 240, 255, 0.25);
+  --border-amber: rgba(255, 157, 0, 0.35);
+  
+  --font-hud: 'Orbitron', 'Segoe UI', sans-serif;
+  --font-mono: 'Share Tech Mono', 'Roboto Mono', monospace;
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-deep);
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(2, 132, 199, 0.15) 0%, transparent 70%),
+    linear-gradient(rgba(0, 240, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 32px 32px, 32px 32px;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Subtle CRT Scanlines */
+body::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 4px;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Top Warning Line */
+.hud-border-top {
+  height: 3px;
+  background: linear-gradient(90deg, 
+    var(--un-cyan) 0%, 
+    var(--skull-amber) 35%, 
+    var(--veritech-red) 70%, 
+    var(--un-cyan) 100%);
+  box-shadow: 0 0 10px var(--un-cyan-glow);
+}
+
+.container {
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 16px 20px 60px 20px;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   HEADER & MILITARY TERMINAL BAR
+   ========================================================================== */
+.tactical-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-tactical);
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.tactical-header::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 160px;
+  height: 3px;
+  background: var(--skull-amber);
+  box-shadow: 0 0 10px var(--skull-amber-glow);
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.un-spacy-insignia {
+  width: 52px;
+  height: 52px;
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.2) 0%, transparent 70%);
+  border: 2px solid var(--un-cyan);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px var(--un-cyan-glow);
+  position: relative;
+}
+
+.insignia-symbol {
+  font-family: var(--font-hud);
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--skull-amber);
+  text-shadow: 0 0 8px var(--skull-amber-glow);
+}
+
+.brand-text h1 {
+  font-family: var(--font-hud);
+  font-size: 1.85rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-text h1 span {
+  color: var(--un-cyan);
+  text-shadow: 0 0 12px var(--un-cyan-glow);
+}
+
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--radar-green);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--radar-green);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* Control Controls Bar (Right) */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.lang-switch, .audio-switch, .admin-link-btn {
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid var(--border-tactical);
+  color: var(--text-primary);
+  font-family: var(--font-hud);
+  font-size: 0.78rem;
+  padding: 6px 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: var(--transition-fast);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-switch:hover, .audio-switch:hover, .admin-link-btn:hover {
+  background: rgba(0, 240, 255, 0.2);
+  border-color: var(--un-cyan);
+  box-shadow: 0 0 12px var(--un-cyan-glow);
+  color: #fff;
+}
+
+.lang-switch.active {
+  background: var(--un-cyan);
+  color: var(--bg-deep);
+  font-weight: 700;
+  box-shadow: 0 0 10px var(--un-cyan-glow);
+}
+
+.admin-link-btn {
+  border-color: var(--border-amber);
+  background: rgba(255, 157, 0, 0.08);
+  color: var(--skull-amber);
+}
+
+.admin-link-btn:hover {
+  background: rgba(255, 157, 0, 0.25);
+  border-color: var(--skull-amber);
+  box-shadow: 0 0 12px var(--skull-amber-glow);
+  color: #fff;
+}
+
+/* ==========================================================================
+   NAVIGATION, FILTERS & SEARCH BAR
+   ========================================================================== */
+.tactical-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 30px;
+  background: var(--bg-panel);
+  padding: 14px 20px;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 3px;
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.tactical-toolbar::before {
+  content: "";
+  position: absolute;
+  top: -1px; left: -1px;
+  width: 8px; height: 8px;
+  border-top: 2px solid var(--un-cyan);
+  border-left: 2px solid var(--un-cyan);
+}
+
+.tactical-toolbar::after {
+  content: "";
+  position: absolute;
+  bottom: -1px; right: -1px;
+  width: 8px; height: 8px;
+  border-bottom: 2px solid var(--un-cyan);
+  border-right: 2px solid var(--un-cyan);
+}
+
+.category-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cat-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  font-family: var(--font-hud);
+  font-size: 0.8rem;
+  padding: 8px 16px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: var(--transition-fast);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cat-btn:hover {
+  color: var(--un-cyan);
+  background: rgba(0, 240, 255, 0.05);
+}
+
+.cat-btn.active {
+  color: #fff;
+  background: rgba(0, 240, 255, 0.15);
+  border-color: var(--un-cyan);
+  box-shadow: 0 0 10px var(--un-cyan-glow);
+}
+
+.search-box {
+  position: relative;
+  min-width: 320px;
+}
+
+.search-input {
+  width: 100%;
+  background: rgba(5, 10, 20, 0.8);
+  border: 1px solid var(--border-tactical);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  padding: 10px 16px 10px 40px;
+  border-radius: 2px;
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.search-input:focus {
+  border-color: var(--un-cyan);
+  box-shadow: 0 0 12px var(--un-cyan-glow);
+  background: rgba(8, 16, 32, 0.95);
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--un-cyan);
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   RESULTS BANNER & COUNTER
+   ========================================================================== */
+.results-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  border-left: 3px solid var(--skull-amber);
+  padding-left: 10px;
+}
+
+.results-meta span.highlight {
+  color: var(--skull-amber);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   EMPTY STATE
+   ========================================================================== */
+.no-results-banner {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--bg-panel);
+  border: 1px dashed var(--veritech-red);
+  border-radius: 4px;
+}
+
+.no-results-banner h3 {
+  font-family: var(--font-hud);
+  color: var(--veritech-red);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.no-results-banner p {
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.tactical-footer {
+  margin-top: 80px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0, 240, 255, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-right a {
+  color: var(--un-cyan);
+  text-decoration: none;
+  margin-left: 12px;
+  transition: var(--transition-fast);
+}
+
+.footer-right a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px var(--un-cyan-glow);
+}

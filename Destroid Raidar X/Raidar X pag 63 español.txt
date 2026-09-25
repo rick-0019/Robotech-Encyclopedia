@@ -1,0 +1,68 @@
+2. Traducción al Español
+RAIDAR X
+El Raidar X es un mecha no transformable utilizado como unidad antiaérea a bordo del SDF-1 por la U.N. SPACY y los gobiernos terrestres locales. El Raidar X es más ligero y más rápido que los demás Destroids, pero depende de un único tipo de arma: su sistema de armamento láser de acción múltiple. Sin embargo, los láseres proporcionan capacidades de ataque múltiple y de largo alcance sin igual para cualquier otro mecha, con la excepción del M.A.C. II (Monster).
+
+A pesar del alcance superior del Raidar X, adolece de varias desventajas: es el más ligero y, por ende, el menos blindado; depende de un único sistema de armas; carece de armas secundarias de corto alcance (aunque los láseres pueden usarse a corta distancia); y carece de manos, por lo que no puede sujetar, sostener ni realizar ningún trabajo articulado. Incluso su velocidad mejorada se queda corta frente a la velocidad de los Battle Pods Zentraedi.
+
+Desde la invasión Zentraedi, el Raidar X se utiliza principalmente para la defensa en asaltos aéreos y como herramienta de mantenimiento de la paz, especialmente en regiones remotas y tierras bajas donde su velocidad y potencia pueden aprovecharse al máximo.
+
+Raidar X: También conocido como Defender ADR-04-MKX
+Tipo de Vehículo: Destroid
+Tripulación: Uno o dos
+
+C.D.M. (Capacidad de Daño Mega / M.D.C.) por Localización:
+
+Unidad de Radar / Sensores — 50
+Reflectores de búsqueda (2) — 15 cada uno
+Brazo superior — 100 cada uno
+Antebrazos láser — 75 por cada cañón
+*Cuerpo principal — 250
+Compartimiento reforzado de la tripulación — 250
+Piernas — 200 cada una
+Nota: No posee unidad de cabeza.
+*Agotar el C.D.M. del cuerpo principal desactiva el mecha por completo.
+Especificaciones:
+
+Velocidad: 80 mph (128,72 km/h)
+Altura: 35,3 pies (10,75 m)
+Ancho: 24,6 pies (7,5 m)
+Longitud: 16,7 pies (5,1 m)
+Peso: 21,7 toneladas
+Motor Principal: Reactor de Fusión MT 828; Potencia = 2800 SHP
+Sistemas de Armas
+1) Par de cañones láser de doble cañón, gran angular y disparo rápido, controlados por un avanzado sistema de puntería/radar. Este elaborado sistema de puntería/radar incrementa la precisión del Raidar X.
+
+Bonificación: +2 para impactar (strike) únicamente mientras la unidad sensorial de radar montada encima del mecha esté operativa. Esta bonificación se suma a cualquier otra bonificación que posea el piloto.
+Propósito Primario: Antiaéreo
+Propósito Secundario: Asalto
+Mega-Daño: 2D10 ráfaga corta, 4D10 ráfaga pesada, 6D10 ráfaga máxima, por brazo.
+Alcance: 8 millas (12,7 km)
+Cadencia de Fuego: 8 ráfagas cortas, 4 pesadas o 4 ráfagas máximas por asalto de combate (melee), por cada par de brazos láser (total de ráfagas por asalto: 16 cortas, 8 pesadas u 8 máximas). Este es el único mecha que tiene más ataques de energía/armas que sus capacidades de combate cuerpo a cuerpo.
+Munición / Carga: Ilimitada.
+2) Combate Cuerpo a Cuerpo Opcional: Es sumamente torpe debido a la falta de manos y brazos normales. No obstante, el Raidar X puede defenderse en un apuro.
+
+Mega-Daño:
+Puñetazo — 1D4
+Bloqueo corporal (Body Block) — 1D4
+Pisotón (Stomp) — 1D4
+*El pisotón con el pie solo es efectivo contra objetos pequeños de 12 pies (3,6 m) o menores.
+Nota: El Raidar X no puede saltar, brincar, patear ni trepar. Tampoco puede recoger ni transportar objetos a menos que sean grandes y puedan equilibrarse o acunarse entre los tubos de los cañones láser. La capacidad máxima de carga es de 6 toneladas.
+Número de ataques: Igual a las habilidades de combate cuerpo a cuerpo del piloto.
+3) Opcional: Reemplazar los brazos láser con cañones automáticos enfriados por aire duales tipo 966-PFG. Estos cañones automáticos se utilizaban en modelos anteriores, pero fueron reemplazados por los láseres más formidables.
+
+Mega-Daño: 2D10 andanada corta, 3D10 andanada larga y 4D10 para una andanada máxima, por brazo.
+Alcance: 8 millas (12,7 km)
+Cadencia de Fuego: 6 andanadas cortas, 4 largas o 2 andanadas máximas por cada par de cañones (total de 12, 8 o 4 disparos por asalto de combate).
+Munición: 200 proyectiles por brazo (se disparan 4 proyectiles al máximo).
+Equipamiento Especial
+1) Unidad Avanzada de Radar y Sensores: Montada en la parte superior del alojamiento del cuerpo principal del mecha. Alcance del radar: 200 millas (321 km) y puede rastrear 77 objetivos simultáneamente.
+
+Otros Sensores:
+Térmico: Puede detectar y ubicar con precisión emanaciones de calor. Excelente para rastreo y combate nocturno. Alcance: 600 pies (180 m).
+Movimiento: Detecta y registra movimientos en un radio de 600 pies (180 m). Puede precisar hasta 100 objetivos.
+Radiación: Detecta y registra niveles de radiación, señalando áreas de concentración específica. Alcance: 2700 pies (822,96 m).
+Sistema de escaneo óptico/video Infrarrojo y Ultravioleta: Alcance: 2700 pies (822,96 m).
+Computadora de Combate: Calcula y transmite datos a un monitor en el panel de control o a la mira frontal (HUD) en el casco del piloto.
+2) Sistema de computadora de a bordo para registrar y analizar datos.
+3) Sistema de comunicaciones láser de largo alcance: Alcance: 1200 millas (1931 km); indefinido mediante retransmisión satelital.
+4) Reflectores de luz infrarroja y visible: Alcance: 600 pies (180 m).

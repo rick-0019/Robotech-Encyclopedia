@@ -1,0 +1,138 @@
+{
+  "id": "regult_battle_pod",
+  "name": "Regult Tactical Pod",
+  "alias": "Zentraedi Standard Battle Pod",
+  "category": "zentraedi",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "faction": {
+    "es": "Flota Principal Zentraedi (Boddole Zer)",
+    "en": "Zentraedi Main Fleet (Boddole Zer)"
+  },
+  "vehicle_type": {
+    "es": "Cápsula de Combate Bípeda Ligera / Espacial",
+    "en": "Light Bipedal / Space Combat Pod"
+  },
+  "crew": {
+    "es": "Uno (Soldado Clon Gigante Zentraedi de tamaño completo)",
+    "en": "One (Full-sized Zentraedi Giant Clone Soldier)"
+  },
+  "thumbnail": "https://images.unsplash.com/photo-1563089145-599997674d42?w=600&auto=format&fit=crop&q=80",
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1563089145-599997674d42?w=1000&auto=format&fit=crop&q=80",
+      "title_es": "Regult Zentraedi en Despliegue Orbital",
+      "title_en": "Zentraedi Regult in Orbital Deployment",
+      "type": "render"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 281,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 72,
+      "label_es": "281 km/h (175 mph / Mach 1 Espacio)",
+      "label_en": "281 km/h (175 mph / Mach 1 Space)"
+    },
+    "armor": {
+      "value": 100,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 35,
+      "label_es": "100 C.D.M. Cuerpo / 350 Total",
+      "label_en": "100 M.D.C. Main Body / 350 Total"
+    },
+    "firepower": {
+      "value": 70,
+      "unit_es": "Pts / Rayos",
+      "unit_en": "Pts / Beams",
+      "rating": 70,
+      "label_es": "70 Pts (2x Rayos de Partículas)",
+      "label_en": "70 Pts (Twin Particle Beams)"
+    },
+    "range": {
+      "value": 4,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 60,
+      "label_es": "4 km (Fuego de Rayos)",
+      "label_en": "4 km (Beam Fire)"
+    },
+    "sensors": {
+      "value": 80,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 55,
+      "label_es": "80 km Radar / Sensores Ópticos",
+      "label_en": "80 km Radar / Optical Sensors"
+    },
+    "mobility": {
+      "value": 80,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 80,
+      "label_es": "80 Pts (Alta - Zancadas y saltos de 30m)",
+      "label_en": "80 Pts (High - Strides & 100ft leaps)"
+    }
+  },
+  "dimensions": {
+    "height": { "metric": "15,12 m", "imperial": "49,6 pies" },
+    "width": { "metric": "8,00 m", "imperial": "26,2 pies" },
+    "length": { "metric": "8,20 m", "imperial": "26,9 pies" },
+    "weight": { "metric": "37,0 toneladas", "imperial": "37.0 tons" }
+  },
+  "powerplant": {
+    "engine_es": "Generador de Fusión / Protocultura Zentraedi",
+    "engine_en": "Zentraedi Fusion / Protoculture Generator",
+    "output_es": "1.3 x 10^5 kW",
+    "output_en": "1.3 x 10^5 kW"
+  },
+  "lore": {
+    "overview_es": "El Regult es el mecha de producción en masa estándar de la infantería mecanizada Zentraedi. Con su diseño bípedo de huevo aviar invertido y sus largas piernas de zancada rápida, está concebido para operaciones de saturación numérica tanto en el vacío del espacio como en asaltos planetarios.",
+    "overview_en": "The Regult is the standard mass-production combat mecha of the Zentraedi mechanized infantry. Featuring an inverted egg-shaped cockpit and long bipedal running legs, it is engineered for overwhelming swarm tactics across both deep space and planetary assault zones.",
+    "tactical_analysis_es": "A pesar de su formidable potencia de fuego antiaérea y su gran velocidad terrestre superior a la de los Destroids terrestres, su blindaje ligero de solo 100 CDM lo convierte en un objetivo vulnerable si es alcanzado por salvas de misiles pesados.",
+    "tactical_analysis_en": "Despite its formidable offensive punch and superior running speed over Earth Destroids, its lightweight 100 MDC armor makes it fragile when targeted by concentrated heavy missile salvos."
+  },
+  "mdc_by_location": [
+    { "location_es": "Cuerpo Principal (*)", "location_en": "Main Body (*)", "mdc": 100, "notes_es": "Destrucción total.", "notes_en": "Total destruction." },
+    { "location_es": "Cañones de Partículas Superiores (2)", "location_en": "Upper Particle Cannons (2)", "mdc": 50, "notes_es": "50 C.D.M. cada uno.", "notes_en": "50 M.D.C. each." },
+    { "location_es": "Piernas (2)", "location_en": "Legs (2)", "mdc": 100, "notes_es": "100 C.D.M. cada una.", "notes_en": "100 M.D.C. each." }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañones Gemelos Pesados de Rayos de Partículas",
+      "name_en": "Twin Heavy Particle Beam Cannons",
+      "type_es": "Cañones de torreta superior",
+      "type_en": "Top-mounted turret cannons",
+      "damage": "4D10 por disparo",
+      "range": "3,2 km (2 millas)",
+      "rate_of_fire_es": "Hasta 4 disparos por asalto",
+      "rate_of_fire_en": "Up to 4 shots per melee round",
+      "payload_es": "Ilimitada",
+      "payload_en": "Unlimited"
+    },
+    {
+      "name_es": "Cañones Láser Ligeros Antiaéreos (Frontales)",
+      "name_en": "Light Anti-Personnel / Aircraft Laser Cannons (Chin)",
+      "type_es": "Láseres montados en el mentón",
+      "type_en": "Chin-mounted defense lasers",
+      "damage": "1D10 por ráfaga",
+      "range": "1,2 km",
+      "rate_of_fire_es": "Fuego continuo",
+      "rate_of_fire_en": "Continuous fire",
+      "payload_es": "Ilimitada",
+      "payload_en": "Unlimited"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Propulsores de Maniobra Espacial Vernier",
+      "name_en": "Vernier Space Thrusters",
+      "description_es": "Permite navegación tridimensional en combate de gravedad cero.",
+      "description_en": "Enables 3D navigation in zero-G combat."
+    }
+  ]
+}

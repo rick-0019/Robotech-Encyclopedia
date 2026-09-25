@@ -1,0 +1,236 @@
+{
+  "id": "destroid_raidar_x",
+  "name": "Raidar X",
+  "alias": "Defender ADR-04-MKX",
+  "category": "destroid",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "faction": {
+    "es": "U.N. Spacy / Gobiernos de la Tierra",
+    "en": "U.N. Spacy / Earth Defense Forces"
+  },
+  "vehicle_type": {
+    "es": "Destroid Antiaéreo No Transformable",
+    "en": "Non-Transformable Anti-Aircraft Destroid"
+  },
+  "crew": {
+    "es": "Uno o dos (Piloto y Artillero/Operador de Radar)",
+    "en": "One or two (Pilot and Gunner/Radar Operator)"
+  },
+  "thumbnail": "assets/images/mechas/destroid_raidar_x/b0eca7d9ebe0c448feae08c391418ea8.jpg",
+  "images": [
+    {
+      "url": "assets/images/mechas/destroid_raidar_x/7928130e25ac9e4139805ac4c7cf66e7.jpg",
+      "title_es": "Esquema Táctico Frontal Raidar X",
+      "title_en": "Raidar X Frontal Tactical Blueprint",
+      "type": "blueprint"
+    },
+    {
+      "url": "assets/images/mechas/destroid_raidar_x/976baeaccd4662b84a845d210058210c.jpg",
+      "title_es": "Vista de Despliegue en Combate",
+      "title_en": "Combat Deployment View",
+      "type": "artwork"
+    },
+    {
+      "url": "assets/images/mechas/destroid_raidar_x/Gemini_Generated_Image_4s5z7m4s5z7m4s5z.jfif",
+      "title_es": "Render Táctico de Alta Resolución - Vista A",
+      "title_en": "High-Resolution Tactical Render - View A",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/destroid_raidar_x/Gemini_Generated_Image_ddirm0ddirm0ddir.jfif",
+      "title_es": "Render Táctico de Alta Resolución - Vista B",
+      "title_en": "High-Resolution Tactical Render - View B",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
+      "title_es": "Ficha Técnica de Archivo Militar",
+      "title_en": "Military Archive Technical Card",
+      "type": "archive"
+    },
+    {
+      "url": "assets/images/mechas/destroid_raidar_x/59cedfd6ae1d800477b8de42264d6eea.jpg",
+      "title_es": "Detalle de Sensores Superiores",
+      "title_en": "Upper Sensor Array Detail",
+      "type": "detail"
+    },
+    {
+      "url": "assets/images/mechas/destroid_raidar_x/acd6ec62f64e655467f6ef29a1f4937e.jpg",
+      "title_es": "Cañones Láser Dobles en Posición",
+      "title_en": "Dual Laser Cannons in Firing Position",
+      "type": "weapons"
+    },
+    {
+      "url": "assets/images/mechas/destroid_raidar_x/b0eca7d9ebe0c448feae08c391418ea8.jpg",
+      "title_es": "Variante Terrestre Defensiva",
+      "title_en": "Ground Defense Variant",
+      "type": "variant"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 128.7,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 43,
+      "label_es": "128.7 km/h",
+      "label_en": "128.7 km/h"
+    },
+    "armor": {
+      "value": 250,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 50,
+      "label_es": "250 C.D.M. Cuerpo",
+      "label_en": "250 M.D.C. Main Body"
+    },
+    "firepower": {
+      "value": 85,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 85,
+      "label_es": "85 Pts",
+      "label_en": "85 Pts"
+    },
+    "range": {
+      "value": 12.7,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 89,
+      "label_es": "12.7 km",
+      "label_en": "12.7 km"
+    },
+    "sensors": {
+      "value": 321,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 92,
+      "label_es": "321 km Radar",
+      "label_en": "321 km Radar"
+    },
+    "mobility": {
+      "value": 30,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 30,
+      "label_es": "30 Pts",
+      "label_en": "30 Pts"
+    }
+  },
+  "dimensions": {
+    "height": {
+      "metric": "10,75 m"
+    },
+    "weight": {
+      "metric": "21,7 toneladas"
+    }
+  },
+  "powerplant": {
+    "engine_es": "Reactor de Fusión MT 828",
+    "engine_en": "MT 828 Fusion Reactor"
+  },
+  "lore": {
+    "overview_es": "El Raidar X es un mecha no transformable utilizado como unidad antiaérea a bordo del SDF-1 por la U.N. SPACY y los gobiernos terrestres locales. El Raidar X es más ligero y más rápido que los demás Destroids, pero depende de un único tipo de arma: su sistema de armamento láser de acción múltiple. Sin embargo, los láseres proporcionan capacidades de ataque múltiple y de largo alcance sin igual para cualquier otro mecha, con la excepción del gigantesco M.A.C. II (Monster).",
+    "overview_en": "The Raidar X is a non-transformable mecha used as an anti-aircraft unit aboard the SDF-1, by the U.N. SPACY and local Earth governments. Raidar X is lighter weight and faster than the other Destroids, but relies only on one weapon type — its multi-action, laser armament system. However, the lasers provide multiple, long range attack capabilities unequalled by any other mecha, except for the M.A.C. II (Monster).",
+    "tactical_analysis_es": "A pesar del alcance superior del Raidar X, adolece de varias desventajas: es el más ligero y, por ende, el menos blindado; depende de un único sistema de armas; carece de armas secundarias de corto alcance (aunque los láseres pueden usarse a corta distancia); y carece de manos, por lo que no puede sujetar, sostener ni realizar ningún trabajo articulado. Incluso su velocidad mejorada se queda corta frente a la velocidad de los Battle Pods Zentraedi. Desde la invasión Zentraedi, el Raidar X se utiliza principalmente para la defensa en asaltos aéreos y como herramienta de mantenimiento de la paz, especialmente en regiones remotas y tierras bajas donde su velocidad y potencia pueden aprovecharse al máximo.",
+    "tactical_analysis_en": "Despite the Raidar X's superior range it suffers from several disadvantages. It is the lightest and, therefore, least heavily armored, relies on one weapon system, lacks any short range secondary weapons (although the lasers can be used at close range), and lacks hands; so it can not grasp, hold or perform any articulated work. Even its enhanced speed falls short against the speed of the Zentraedi Battle Pods. Since the Zentraedi invasion, the Raidar X is used primarily for defense in air assaults and as a peace keeping tool, especially in remote regions and lowlands where its speed and power can be used to full advantage."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Cuerpo Principal (*)",
+      "location_en": "Main Body (*)",
+      "mdc": 250
+    },
+    {
+      "location_es": "Compartimiento Reforzado de Tripulación",
+      "location_en": "Reinforced Crew Compartment",
+      "mdc": 250
+    },
+    {
+      "location_es": "Piernas (2)",
+      "location_en": "Legs (2)",
+      "mdc": 200
+    },
+    {
+      "location_es": "Brazo Superior (2)",
+      "location_en": "Upper Arm (2)",
+      "mdc": 100
+    },
+    {
+      "location_es": "Antebrazos Láser (4 cañones)",
+      "location_en": "Laser Forearms (4 barrels)",
+      "mdc": 75
+    },
+    {
+      "location_es": "Unidad de Radar / Sensores",
+      "location_en": "Radar / Sensor Unit",
+      "mdc": 50
+    },
+    {
+      "location_es": "Reflectores de Búsqueda (2)",
+      "location_en": "Searchlights (2)",
+      "mdc": 15
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Par de Cañones Láser de Doble Cañón Gran Angular",
+      "name_en": "Pair of Wide Angle, Rapid Fire, Double Barrel Laser Cannons",
+      "damage": "2D10 (ráfaga corta) / 4D10 (pesada) / 6D10 (máxima) por brazo",
+      "range": "8 millas (12,7 km)"
+    },
+    {
+      "name_es": "Combate Cuerpo a Cuerpo Opcional",
+      "name_en": "Optional Hand to Hand Combat",
+      "damage": "Puñetazo: 1D4 | Bloqueo Corporal: 1D4 | Pisotón: 1D4",
+      "range": ""
+    },
+    {
+      "name_es": "Variante Opcional: Cañones Automáticos 966-PFG",
+      "name_en": "Optional: Dual Type 966-PFG Air-Cooled Auto Cannons",
+      "damage": "2D10 (andanada corta) / 3D10 (larga) / 4D10 (máxima) por brazo",
+      "range": "8 millas (12,7 km)"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Unidad Avanzada de Radar y Sensores",
+      "name_en": "Advanced Radar and Sensory Unit",
+      "description_es": "Montada en la parte superior. Alcance: 321 km (200 millas). Rastrear 77 objetivos simultáneamente.",
+      "description_en": "Mounted atop main housing. Range: 200 miles (321 km). Tracks 77 targets simultaneously."
+    },
+    {
+      "name_es": "Sensor Térmico y Rastreo Nocturno",
+      "name_en": "Thermal Sensor & Night Tracking",
+      "description_es": "Detecta y ubica emanaciones de calor con precisión milimétrica. Alcance: 180 m (600 pies).",
+      "description_en": "Detects and pinpoints heat signatures. Range: 600 ft (180 m)."
+    },
+    {
+      "name_es": "Detector de Movimiento Táctico",
+      "name_en": "Tactical Motion Detector",
+      "description_es": "Detecta y registra movimiento en un radio de 180 m (600 pies). Precisa hasta 100 blancos.",
+      "description_en": "Registers movement within 600 ft (180 m). Pinpoints up to 100 targets."
+    },
+    {
+      "name_es": "Escáner de Radiación",
+      "name_en": "Radiation Scanner",
+      "description_es": "Detecta niveles y áreas de concentración de radiación. Alcance: 823 m (2700 pies).",
+      "description_en": "Detects radiation levels and concentration zones. Range: 2,700 ft (823 m)."
+    },
+    {
+      "name_es": "Sistema Óptico Infrarrojo y Ultravioleta con HUD",
+      "name_en": "Infrared & UV Optical Video System with HUD",
+      "description_es": "Alcance 823 m. Computadora de combate que proyecta telemetría directamente al visor del casco del piloto.",
+      "description_en": "Range 2,700 ft. Combat computer projects targeting telemetry directly to pilot's helmet HUD."
+    },
+    {
+      "name_es": "Comunicaciones Láser de Largo Alcance",
+      "name_en": "Long-Range Laser Communications",
+      "description_es": "Alcance: 1931 km (1200 millas); alcance indefinido mediante retransmisión por satélite.",
+      "description_en": "Range: 1,200 miles (1,931 km); indefinite via satellite relay."
+    }
+  ]
+}

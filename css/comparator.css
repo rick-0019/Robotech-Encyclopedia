@@ -1,0 +1,391 @@
+/* ==========================================================================
+   ROBOTECH MECHA COMPARISON MATRIX - COMPARATOR STYLES
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   FLOATING COMPARISON TRAY (BOTTOM DOCK)
+   -------------------------------------------------------------------------- */
+.comparator-dock {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(5, 12, 24, 0.95);
+  border-top: 2px solid var(--skull-amber);
+  box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(14px);
+  padding: 12px 24px;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(120%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.comparator-dock.visible {
+  transform: translateY(0);
+}
+
+.dock-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dock-title {
+  font-family: var(--font-hud);
+  font-size: 0.85rem;
+  color: var(--skull-amber);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.dock-slots {
+  display: flex;
+  gap: 12px;
+}
+
+.dock-slot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(10, 22, 42, 0.8);
+  border: 1px dashed var(--border-tactical);
+  padding: 4px 10px;
+  border-radius: 2px;
+  min-width: 140px;
+  height: 44px;
+}
+
+.dock-slot.filled {
+  border-style: solid;
+  border-color: var(--un-cyan);
+  background: rgba(0, 240, 255, 0.08);
+}
+
+.dock-slot-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 2px;
+  object-fit: cover;
+  border: 1px solid var(--border-tactical);
+}
+
+.dock-slot-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 110px;
+}
+
+.dock-slot-remove {
+  background: transparent;
+  border: none;
+  color: var(--veritech-red);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0 4px;
+}
+
+.dock-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-open-compare {
+  background: var(--skull-amber);
+  color: #000;
+  font-family: var(--font-hud);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  box-shadow: 0 0 15px var(--skull-amber-glow);
+}
+
+.btn-open-compare:hover {
+  background: #ffb733;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px var(--skull-amber-glow);
+}
+
+.btn-clear-compare {
+  background: transparent;
+  border: 1px solid var(--text-dim);
+  color: var(--text-muted);
+  font-family: var(--font-hud);
+  font-size: 0.72rem;
+  padding: 10px 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn-clear-compare:hover {
+  border-color: var(--veritech-red);
+  color: var(--veritech-red);
+}
+
+/* --------------------------------------------------------------------------
+   FULL COMPARISON MODAL & MATRIX
+   -------------------------------------------------------------------------- */
+.compare-modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(3, 7, 16, 0.92);
+  backdrop-filter: blur(14px);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.compare-modal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.compare-modal {
+  width: 100%;
+  max-width: 1300px;
+  max-height: 92vh;
+  background: var(--bg-panel-solid);
+  border: 2px solid var(--skull-amber);
+  border-radius: 4px;
+  box-shadow: 0 0 35px var(--skull-amber-glow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalSlide 0.3s ease;
+}
+
+.compare-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: rgba(5, 12, 24, 0.95);
+  border-bottom: 1px solid var(--border-amber);
+}
+
+.compare-title-area h2 {
+  font-family: var(--font-hud);
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.compare-title-area span {
+  font-size: 0.8rem;
+  color: var(--skull-amber);
+}
+
+.compare-content-scroll {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Mechas header columns */
+.compare-mechas-banner {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.compare-mecha-col {
+  background: rgba(6, 14, 28, 0.8);
+  border: 1px solid var(--border-tactical);
+  padding: 16px;
+  border-radius: 3px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.compare-mecha-thumb {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 2px;
+  border: 1px solid var(--border-tactical);
+  margin-bottom: 12px;
+}
+
+.compare-mecha-col h3 {
+  font-family: var(--font-hud);
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.compare-mecha-col .col-alias {
+  font-size: 0.8rem;
+  color: var(--skull-amber);
+  margin-bottom: 6px;
+}
+
+.compare-mecha-col .col-faction {
+  font-size: 0.72rem;
+  color: var(--un-cyan);
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   GRAPHICAL COMPARATIVE BARS SECTION
+   -------------------------------------------------------------------------- */
+.compare-bars-section {
+  background: rgba(5, 12, 22, 0.7);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  padding: 20px;
+  border-radius: 3px;
+  margin-bottom: 28px;
+}
+
+.compare-bars-section h4 {
+  font-family: var(--font-hud);
+  font-size: 1rem;
+  color: var(--un-cyan);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.stat-duel-block {
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.stat-duel-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.duel-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.duel-mecha-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.duel-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.duel-mecha-name {
+  width: 140px;
+  font-size: 0.78rem;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.duel-bar-track {
+  flex: 1;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.duel-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 6px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.duel-stat-value {
+  width: 100px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-align: right;
+  font-family: var(--font-mono);
+}
+
+.winner-badge {
+  color: var(--radar-green);
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   SIDE-BY-SIDE SPECS TABLE
+   -------------------------------------------------------------------------- */
+.compare-table-section {
+  background: rgba(5, 12, 22, 0.7);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.compare-table-section h4 {
+  font-family: var(--font-hud);
+  font-size: 1rem;
+  color: var(--un-cyan);
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.specs-duel-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.specs-duel-table th, .specs-duel-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+.specs-duel-table th {
+  color: var(--text-muted);
+  text-align: left;
+  font-family: var(--font-hud);
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+}
+
+.specs-duel-table td:first-child {
+  font-weight: 700;
+  color: var(--un-cyan);
+  width: 220px;
+}

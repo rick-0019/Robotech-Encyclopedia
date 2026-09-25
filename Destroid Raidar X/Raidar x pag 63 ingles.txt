@@ -1,0 +1,65 @@
+1. OCR (Texto Original en Inglés)
+RAIDAR X
+The Raidar X is a non-transformable mecha used as an anti-aircraft unit aboard the SDF-1, by the U.N. SPACY and local Earth governments. Raidar X is lighter weight and faster than the other Destroids, but relies only on one weapon type — its multi-action, laser armament system. However, the lasers provide multiple, long range attack capabilities unequalled by any other mecha, except for the M.A.C. II.
+
+Despite the Raidar X's superior range it suffers from several disadvantages. It is the lightest and, therefore, least heavily armored, relies on one weapon system, lacks any short range secondary weapons (although the lasers can be used at close range), and lacks hands; so it can not grasp, hold or perform any articulated work. Even its enhanced speed falls short against the speed of the Zentraedi Battle Pods.
+
+Since the Zentraedi invasion, the Raidar X is used primarily for defense in air assaults and as a peace keeping tool, especially in remote regions and lowlands where its speed and power can be used to full advantage.
+
+Raidar X: Also known as the Defender ADR-04-MKX
+Vehicle Type: Destroid
+Crew: One or two
+
+M.D.C. By Location:
+
+Radar/Sensor Unit — 50
+Searchlights (2) — 15 each
+Upper Arm — 100 each
+Laser Forearms — 75 per each barrel
+*Main Body — 250
+Reinforced Crew Compartment — 250
+Legs — 200 each
+Note: No Head Unit
+*Depleting the M.D.C. of the main body shuts the mecha completely down.
+Speed: 80mph (128.72kmph)
+Height: 35.3ft (10.75m)
+Width: 24.6ft (7.5m)
+Length: 16.7ft (5.1m)
+Weight: 21.7 tons
+Main Engine: MT 828 Fusion Reactor; Output = 2800 SHP
+
+Weapon Systems 1) Pair of wide angle, rapid fire, double barrel Laser Cannons controlled by an advanced targeting/radar system. This elaborate targeting/radar system increases the Raidar X's accuracy.
+Bonus of +2 to strike only while the radar sensory unit mounted atop the mecha is functional. This bonus is in addition to any other bonuses the pilot might have.
+Primary Purpose: Anti-Aircraft
+Secondary Purpose: Assault
+Mega-Damage: 2D10 short burst, 4D10 heavy burst, 6D10 maximum burst, per arm.
+Range: 8 miles (12.7km)
+Rate of Fire: 8 short, 4 heavy, or 4 maximum bursts blasts per melee, per pair of laser arms (total bursts per melee: 16 short or 8 heavy or 8 maximum bursts). This is the only mecha that has more energy/weapon attacks than its hand to hand capabilities.
+Payload: Unlimited
+
+2) Optional Hand to Hand Combat: Is extremely awkward because of the lack of hands and normal arms. However, the Raidar X can get by in a pinch.
+Mega-Damage:
+
+Punch — 1D4
+Body Block — 1D4
+*Stomp — 1D4
+*The Stomp with the foot is effective only against small objects of 12ft (3.6m) or smaller.
+Note: The Raidar X can not jump, leap, kick or climb. Nor can it pick up or carry objects unless they are large and can be balanced or cradled by the laser barrel arms. Maximum carrying weight is 6 tons.
+Number of Attacks is equal to the hand to hand skills of the pilot.
+3) Optional: Replace laser arms with dual type, 966-PFG, air-cooled auto cannons. The auto cannons were used on earlier models, but replaced by the more formidable lasers.
+Mega-Damage: 2D10 short volley, 3D10 long volley and 4D10 for a maximum volley, per arm.
+Range: 8 miles (12.7km)
+Rate of Fire: 6 short volleys or 4 long or 2 maximum volleys per each pair of cannons (total of 12, 8 or 4 blasts per melee).
+Payload: 200 rounds per arm. (4 rounds are fired at max.)
+
+SPECIAL EQUIPMENT 1) Advanced Radar and Sensory Unit mounted on the top of the Raidar X mecha's main body housing. Radar Range: 200 miles and can track 77 targets simultaneously.
+Other Sensors ...
+
+Heat: Can pickup and pinpoint heat emanations. Excellent for tracking and night fighting. Range: 600ft (180m).
+Motion: Detects and registers movement within a 600ft (180m) area. Can pinpoint up to 100 targets.
+Radiation: Detects and registers levels of radiation, pinpointing areas of specific concentration. Range: 2700ft (822.96m).
+Infrared and Ultraviolet optical/video scan system. Range: 2700ft (822.96m).
+Combat Computer: Calculates and transmits data onto a control panel monitor or head up display on the pilot's helmet.
+2) On board computer system to record and analyze data.
+3) Long range laser communications system. Range: 1200 miles; with satellite relay indefinitely.
+4) Infrared and visible light searchlights. Range: 600ft (180m).

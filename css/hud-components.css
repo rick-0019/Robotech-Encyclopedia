@@ -1,0 +1,789 @@
+/* ==========================================================================
+   ROBOTECH / MACROSS HUD COMPONENTS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   MECHA GRID & TACTICAL CARDS
+   -------------------------------------------------------------------------- */
+.mecha-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 26px;
+}
+
+.mecha-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-tactical);
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+}
+
+.mecha-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 10px; height: 10px;
+  border-top: 2px solid var(--un-cyan);
+  border-left: 2px solid var(--un-cyan);
+  z-index: 2;
+}
+
+.mecha-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 10px; height: 10px;
+  border-bottom: 2px solid var(--un-cyan);
+  border-right: 2px solid var(--un-cyan);
+  z-index: 2;
+}
+
+.mecha-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--un-cyan);
+  box-shadow: 0 10px 24px rgba(0, 240, 255, 0.15), inset 0 0 15px rgba(0, 240, 255, 0.05);
+}
+
+.card-header-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: rgba(5, 12, 24, 0.9);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+}
+
+.faction-tag {
+  color: var(--un-cyan);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badge-tag {
+  background: rgba(255, 157, 0, 0.15);
+  color: var(--skull-amber);
+  border: 1px solid var(--border-amber);
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.card-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #020712;
+  cursor: pointer;
+}
+
+.card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 0.4s ease;
+}
+
+.mecha-card:hover .card-image-wrap img {
+  transform: scale(1.06);
+}
+
+.image-overlay-hud {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(5, 10, 20, 0.95) 100%);
+  pointer-events: none;
+}
+
+.card-body {
+  padding: 18px 18px 12px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title-group {
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-family: var(--font-hud);
+  font-size: 1.25rem;
+  color: #fff;
+  letter-spacing: 1.5px;
+  margin-bottom: 2px;
+}
+
+.card-alias {
+  font-size: 0.8rem;
+  color: var(--skull-amber);
+  letter-spacing: 1px;
+}
+
+.card-summary {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+/* --------------------------------------------------------------------------
+   GRAPHICAL STAT BARS
+   -------------------------------------------------------------------------- */
+.stats-bars-container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 16px;
+  background: rgba(5, 12, 22, 0.6);
+  padding: 10px 12px;
+  border: 1px solid rgba(0, 240, 255, 0.1);
+  border-radius: 2px;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+}
+
+.stat-label {
+  width: 95px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.stat-bar-track {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.6s cubic-bezier(0.1, 0.8, 0.2, 1);
+  position: relative;
+}
+
+.stat-bar-fill.speed {
+  background: linear-gradient(90deg, #0284c7, var(--un-cyan));
+  box-shadow: 0 0 6px var(--un-cyan-glow);
+}
+
+.stat-bar-fill.armor {
+  background: linear-gradient(90deg, #f59e0b, var(--skull-amber));
+  box-shadow: 0 0 6px var(--skull-amber-glow);
+}
+
+.stat-bar-fill.firepower {
+  background: linear-gradient(90deg, #dc2626, var(--veritech-red));
+  box-shadow: 0 0 6px rgba(255, 45, 85, 0.5);
+}
+
+.stat-bar-fill.sensors {
+  background: linear-gradient(90deg, #059669, var(--radar-green));
+  box-shadow: 0 0 6px var(--radar-green-glow);
+}
+
+.stat-bar-fill.range {
+  background: linear-gradient(90deg, #8b5cf6, #c084fc);
+  box-shadow: 0 0 6px rgba(192, 132, 252, 0.4);
+}
+
+.stat-bar-fill.mobility {
+  background: linear-gradient(90deg, #06b6d4, #67e8f9);
+}
+
+.stat-value {
+  width: 32px;
+  text-align: right;
+  font-weight: 700;
+  color: #fff;
+  font-family: var(--font-mono);
+}
+
+/* Card Actions */
+.card-actions {
+  display: flex;
+  gap: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+.btn-dossier, .btn-compare-toggle {
+  flex: 1;
+  padding: 8px 12px;
+  font-family: var(--font-hud);
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-dossier {
+  background: rgba(0, 240, 255, 0.15);
+  border: 1px solid var(--un-cyan);
+  color: var(--un-cyan);
+}
+
+.btn-dossier:hover {
+  background: var(--un-cyan);
+  color: var(--bg-deep);
+  box-shadow: 0 0 12px var(--un-cyan-glow);
+}
+
+.btn-compare-toggle {
+  background: transparent;
+  border: 1px solid var(--border-amber);
+  color: var(--skull-amber);
+}
+
+.btn-compare-toggle:hover {
+  background: rgba(255, 157, 0, 0.2);
+  border-color: var(--skull-amber);
+  color: #fff;
+}
+
+.btn-compare-toggle.active {
+  background: var(--skull-amber);
+  color: #000;
+  font-weight: 700;
+  border-color: var(--skull-amber);
+}
+
+/* --------------------------------------------------------------------------
+   FULL TACTICAL DOSSIER MODAL
+   -------------------------------------------------------------------------- */
+.dossier-modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(3, 7, 16, 0.88);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.dossier-modal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dossier-modal {
+  width: 100%;
+  max-width: 1200px;
+  max-height: 90vh;
+  background: var(--bg-panel-solid);
+  border: 2px solid var(--un-cyan);
+  border-radius: 4px;
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  animation: modalSlide 0.3s ease;
+}
+
+@keyframes modalSlide {
+  from { transform: translateY(20px) scale(0.98); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.dossier-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: rgba(5, 12, 24, 0.95);
+  border-bottom: 1px solid var(--border-tactical);
+}
+
+.dossier-title-area h2 {
+  font-family: var(--font-hud);
+  font-size: 1.5rem;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.dossier-title-area span {
+  font-size: 0.85rem;
+  color: var(--skull-amber);
+  letter-spacing: 1px;
+}
+
+.btn-close-modal {
+  background: transparent;
+  border: 1px solid var(--border-tactical);
+  color: var(--un-cyan);
+  font-size: 1.2rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+}
+
+.btn-close-modal:hover {
+  background: var(--veritech-red);
+  border-color: var(--veritech-red);
+  color: #fff;
+}
+
+/* Dossier Navigation Tabs */
+.dossier-tabs {
+  display: flex;
+  background: rgba(8, 16, 30, 0.9);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+  overflow-x: auto;
+}
+
+.dossier-tab-btn {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  font-family: var(--font-hud);
+  font-size: 0.78rem;
+  padding: 12px 20px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: var(--transition-fast);
+}
+
+.dossier-tab-btn:hover {
+  color: var(--un-cyan);
+  background: rgba(0, 240, 255, 0.05);
+}
+
+.dossier-tab-btn.active {
+  color: #fff;
+  border-bottom-color: var(--skull-amber);
+  background: rgba(255, 157, 0, 0.1);
+}
+
+.dossier-content-scroll {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* --------------------------------------------------------------------------
+   DOSSIER TAB CONTENTS
+   -------------------------------------------------------------------------- */
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+/* Overview tab layout */
+.overview-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 28px;
+}
+
+@media (max-width: 900px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dossier-hero-img {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid var(--border-tactical);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 16px;
+}
+
+.quick-specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.quick-specs-table tr {
+  border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+.quick-specs-table td {
+  padding: 8px 6px;
+}
+
+.quick-specs-table td:first-child {
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.quick-specs-table td:last-child {
+  color: #fff;
+  text-align: right;
+}
+
+.lore-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lore-box {
+  background: rgba(6, 14, 28, 0.7);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  padding: 16px 20px;
+  border-radius: 3px;
+}
+
+.lore-box h4 {
+  font-family: var(--font-hud);
+  color: var(--un-cyan);
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  letter-spacing: 1.5px;
+}
+
+.lore-box p {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   M.D.C. ARMOR LOCATION BREAKDOWN
+   -------------------------------------------------------------------------- */
+.mdc-locations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mdc-item {
+  background: rgba(6, 14, 28, 0.75);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  padding: 12px 16px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mdc-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mdc-location-name {
+  font-weight: 700;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.mdc-points {
+  font-family: var(--font-hud);
+  color: var(--skull-amber);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.mdc-progress-track {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.mdc-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #ea580c, #f59e0b);
+  border-radius: 2px;
+}
+
+.mdc-notes {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   WEAPONS SYSTEMS CARDS
+   -------------------------------------------------------------------------- */
+.weapons-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.weapon-card {
+  background: rgba(6, 14, 28, 0.85);
+  border: 1px solid var(--border-tactical);
+  border-left: 4px solid var(--veritech-red);
+  padding: 16px 20px;
+  border-radius: 2px;
+}
+
+.weapon-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.weapon-name {
+  font-family: var(--font-hud);
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.weapon-type-badge {
+  background: rgba(255, 45, 85, 0.15);
+  border: 1px solid var(--veritech-red);
+  color: var(--veritech-red);
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.weapon-specs-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin: 10px 0;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.weapon-spec-item {
+  font-size: 0.8rem;
+}
+
+.weapon-spec-item strong {
+  color: var(--text-muted);
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.weapon-spec-item span {
+  color: var(--un-cyan);
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   SENSORS & SPECIAL EQUIPMENT
+   -------------------------------------------------------------------------- */
+.equipment-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.equipment-card {
+  background: rgba(6, 14, 28, 0.75);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-left: 4px solid var(--radar-green);
+  padding: 16px;
+  border-radius: 2px;
+}
+
+.equipment-card h5 {
+  font-family: var(--font-hud);
+  font-size: 0.95rem;
+  color: var(--radar-green);
+  margin-bottom: 6px;
+}
+
+.equipment-card p {
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   TACTICAL CAROUSEL & LIGHTBOX GALLERY
+   -------------------------------------------------------------------------- */
+.tactical-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: rgba(4, 9, 18, 0.7);
+  border: 1px solid var(--border-tactical);
+  border-radius: 4px;
+  padding: 16px;
+  position: relative;
+}
+
+.carousel-viewport {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: #020610;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-in;
+}
+
+.carousel-main-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  user-select: none;
+}
+
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(6, 14, 28, 0.85);
+  border: 1px solid var(--un-cyan);
+  color: var(--un-cyan);
+  font-family: var(--font-hud);
+  font-size: 1.5rem;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  z-index: 10;
+  backdrop-filter: blur(4px);
+}
+
+.carousel-nav-btn:hover {
+  background: var(--un-cyan);
+  color: #000;
+  box-shadow: 0 0 15px var(--un-cyan-glow);
+}
+
+.carousel-nav-btn.prev {
+  left: 12px;
+}
+
+.carousel-nav-btn.next {
+  right: 12px;
+}
+
+.carousel-slide-counter {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: rgba(5, 12, 24, 0.9);
+  border: 1px solid var(--border-amber);
+  color: var(--skull-amber);
+  font-family: var(--font-hud);
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border-radius: 2px;
+  letter-spacing: 1.5px;
+  z-index: 5;
+}
+
+.carousel-caption-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(4, 9, 18, 0.95) 40%);
+  padding: 24px 20px 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.carousel-caption-title {
+  color: #fff;
+  font-family: var(--font-hud);
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+}
+
+.carousel-caption-type {
+  font-size: 0.72rem;
+  color: var(--un-cyan);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Strip inferior de miniaturas */
+.carousel-thumbs-strip {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--un-cyan) rgba(0, 0, 0, 0.3);
+}
+
+.carousel-thumb-item {
+  width: 90px;
+  height: 65px;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+  opacity: 0.6;
+  transition: var(--transition-fast);
+}
+
+.carousel-thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-thumb-item:hover {
+  opacity: 0.9;
+  border-color: var(--un-cyan);
+}
+
+.carousel-thumb-item.active {
+  opacity: 1;
+  border: 2px solid var(--skull-amber);
+  box-shadow: 0 0 10px var(--skull-amber-glow);
+}
+

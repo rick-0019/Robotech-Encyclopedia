@@ -1,0 +1,39 @@
+{
+  "categories": [
+    { "id": "destroid", "label_es": "Destroids", "label_en": "Destroids" },
+    { "id": "veritech", "label_es": "Veritechs / Valkyries", "label_en": "Veritechs / Valkyries" },
+    { "id": "zentraedi", "label_es": "Fuerzas Zentraedi", "label_en": "Zentraedi Forces" },
+    { "id": "capital_ships", "label_es": "Naves Capitales / Cruceros", "label_en": "Capital Ships / Warships" },
+    { "id": "ground_support", "label_es": "Vehículos de Apoyo Terrestre", "label_en": "Ground & Support Vehicles" },
+    { "id": "conventional_fighters", "label_es": "Cazas Convencionales", "label_en": "Conventional Aircraft" },
+    { "id": "characters", "label_es": "Personajes y Ases de Combate", "label_en": "Characters & Ace Pilots" },
+    { "id": "history_battles", "label_es": "Cronología y Grandes Batallas", "label_en": "Timeline & Major Battles" }
+  ],
+  "factions": [
+    { "id": "un_spacy", "name_es": "U.N. Spacy", "name_en": "U.N. Spacy" },
+    { "id": "earth_defense", "name_es": "Fuerzas de Defensa de la Tierra", "name_en": "Earth Defense Forces" },
+    { "id": "skull_squadron", "name_es": "U.N. Spacy - Escuadrón Skull", "name_en": "U.N. Spacy - Skull Squadron" },
+    { "id": "zentraedi_main", "name_es": "Flota Principal Zentraedi (Boddole Zer)", "name_en": "Zentraedi Main Fleet (Boddole Zer)" },
+    { "id": "meltrandi", "name_es": "Flota Meltrandi (Femenina)", "name_en": "Meltrandi Fleet" },
+    { "id": "southern_cross", "name_es": "Ejército de la Cruz del Sur", "name_en": "Army of the Southern Cross" },
+    { "id": "robotech_masters", "name_es": "Maestros de la Robotech (Tiroleses)", "name_en": "Robotech Masters (Tirolians)" },
+    { "id": "invid_swarm", "name_es": "Horda Invid (Regis / Regiss)", "name_en": "Invid Swarm (Regis / Regiss)" },
+    { "id": "ref_pioneer", "name_es": "Fuerza Expedicionaria Robotech (REF / Pioneer)", "name_en": "Robotech Expeditionary Force (REF)" }
+  ],
+  "vehicle_types": [
+    { "name_es": "Destroid Antiaéreo No Transformable", "name_en": "Non-Transformable Anti-Aircraft Destroid" },
+    { "name_es": "Destroid de Asalto y Artillería Pesada", "name_en": "Heavy Battle & Assault Destroid" },
+    { "name_es": "Caza Variable Aeroespacial / Mecha Transformable", "name_en": "Variable Aerospace Fighter / Transformable Mecha" },
+    { "name_es": "Cápsula de Combate Bípeda Ligera / Espacial", "name_en": "Light Bipedal / Space Combat Pod" },
+    { "name_es": "Acorazado Super Dimensional (SDF)", "name_en": "Super Dimensional Fortress (SDF)" },
+    { "name_es": "Crucero Espacial Pesado / Porta-Mechas", "name_en": "Heavy Space Cruiser / Mecha Carrier" },
+    { "name_es": "Vehículo de Artillería Autopropulsada", "name_en": "Self-Propelled Artillery Vehicle" },
+    { "name_es": "Armadura de Combate / Cyclone", "name_en": "Cyclone / Ride Armor System" }
+  ],
+  "series_eras": [
+    { "id": "macross_saga", "name_es": "La Saga Macross (Primera Guerra Robotech)", "name_en": "The Macross Saga (First Robotech War)" },
+    { "id": "masters_saga", "name_es": "Los Maestros de la Robotech (Segunda Guerra)", "name_en": "The Robotech Masters (Second Robotech War)" },
+    { "id": "new_generation", "name_es": "La Nueva Generación / Era Invid (Tercera Guerra)", "name_en": "The New Generation / Invid Era" },
+    { "id": "shadow_chronicles", "name_es": "Las Crónicas de las Sombras / Era Moderna", "name_en": "The Shadow Chronicles" }
+  ]
+}
