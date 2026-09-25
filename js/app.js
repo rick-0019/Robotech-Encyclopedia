@@ -83,6 +83,7 @@ window.appState = {
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
+  checkLocalEnvironment();
   initLanguage();
   initSoundToggle();
   await loadManifest();
@@ -95,6 +96,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.mechaComparator.init();
   }
 });
+
+// --------------------------------------------------------------------------
+// LOCAL ENVIRONMENT SECURITY CHECK
+// --------------------------------------------------------------------------
+function checkLocalEnvironment() {
+  const isLocal = ['localhost', '127.0.0.1', '0.0.0.0', ''].includes(window.location.hostname) || window.location.protocol === 'file:';
+  const adminBtn = document.getElementById('admin-link-btn');
+  if (adminBtn && isLocal) {
+    adminBtn.style.display = 'inline-flex';
+  }
+}
 
 // --------------------------------------------------------------------------
 // LANGUAGE SYSTEM
