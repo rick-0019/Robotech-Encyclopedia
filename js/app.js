@@ -183,9 +183,15 @@ function initSoundToggle() {
 // --------------------------------------------------------------------------
 async function loadManifest() {
   try {
-    const response = await fetch('data/manifest.json');
-    if (!response.ok) throw new Error("Could not load manifest.json");
-    window.appState.manifest = await response.json();
+    const [manifestRes, taxRes] = await Promise.all([
+      fetch('data/manifest.json'),
+      fetch('data/taxonomies.json').catch(() => null)
+    ]);
+    if (!manifestRes.ok) throw new Error("Could not load manifest.json");
+    window.appState.manifest = await manifestRes.json();
+    if (taxRes && taxRes.ok) {
+      window.appState.taxonomies = await taxRes.json();
+    }
     renderMechas();
   } catch (err) {
     console.error("Error loading manifest:", err);
@@ -245,6 +251,9 @@ function getFactionLogo(m) {
   }
 
   // Detección automática por palabras clave
+  if (facStr.includes('marte') || facStr.includes('mars') || facStr.includes('pioneer') || facStr.includes('expedicionaria') || facStr.includes('ref')) {
+    return 'assets/images/ui/Mars_Base.png';
+  }
   if (catStr === 'zentraedi' || facStr.includes('zentraedi') || facStr.includes('zentran') || facStr.includes('meltrandi')) {
     return 'assets/images/ui/logo_zentran.png';
   }
@@ -296,6 +305,13 @@ function renderMechas() {
     const classText = m.class[lang] || m.class.en || '';
     const factionLogo = getFactionLogo(m);
 
+    // Detección de Mecha Variable / Veritech 3-Modos
+    const isVariable = m.is_variable || (m.modes && (m.modes.fighter || m.modes.guardian || m.modes.battloid));
+    const modesObj = m.modes || {};
+    const fighterImg = (typeof modesObj.fighter === 'string' ? modesObj.fighter : modesObj.fighter?.image) || m.thumbnail;
+    const guardianImg = (typeof modesObj.guardian === 'string' ? modesObj.guardian : modesObj.guardian?.image) || m.thumbnail;
+    const battloidImg = (typeof modesObj.battloid === 'string' ? modesObj.battloid : modesObj.battloid?.image) || m.thumbnail;
+
     return `
       <div class="mecha-card">
         <div class="card-header-status">
@@ -303,12 +319,18 @@ function renderMechas() {
             <img src="${factionLogo}" class="card-faction-icon" alt="${factionText}">
             <span class="faction-tag">${factionText}</span>
           </div>
-          <span class="badge-tag">${m.badge || classText}</span>
         </div>
 
-        <div class="card-image-wrap" onclick="openDossier('${m.id}')">
-          <img src="${m.thumbnail}" alt="${m.name}" loading="lazy">
+        <div class="card-image-wrap" onclick="openDossier('${m.id}')" style="position:relative;">
+          <img src="${m.thumbnail}" id="card-img-${m.id}" alt="${m.name}" loading="lazy">
           <div class="image-overlay-hud"></div>
+          ${isVariable ? `
+            <div class="card-mode-switcher" onclick="event.stopPropagation()">
+              <button class="card-mode-btn active" onclick="window.switchCardMode(this, '${m.id}', '${fighterImg}')" title="Modo Caza">CAZA</button>
+              <button class="card-mode-btn" onclick="window.switchCardMode(this, '${m.id}', '${guardianImg}')" title="Modo Guardián">GUARDIÁN</button>
+              <button class="card-mode-btn" onclick="window.switchCardMode(this, '${m.id}', '${battloidImg}')" title="Modo Battloid">BATTLOID</button>
+            </div>
+          ` : ''}
         </div>
 
         <div class="card-body">
@@ -433,6 +455,7 @@ function closeDossier() {
 
 function populateDossierModal(m) {
   const lang = window.appState.lang;
+  window.currentDossierMecha = m;
 
   // Header
   const factionLogo = getFactionLogo(m);
@@ -457,13 +480,32 @@ function populateDossierModal(m) {
   const manifestItem = window.appState?.manifest?.mechas?.find(item => item.id === m.id);
   const heroThumb = manifestItem?.thumbnail || m.thumbnail;
 
+  const isVariable = m.is_variable || (m.modes && (m.modes.fighter || m.modes.guardian || m.modes.battloid));
+  const fighterMode = m.modes?.fighter || {};
+  const guardianMode = m.modes?.guardian || {};
+  const battloidMode = m.modes?.battloid || {};
+
+  const fighterImg = (typeof fighterMode === 'object' ? fighterMode.image : fighterMode) || heroThumb;
+  const guardianImg = (typeof guardianMode === 'object' ? guardianMode.image : guardianMode) || heroThumb;
+  const battloidImg = (typeof battloidMode === 'object' ? battloidMode.image : battloidMode) || heroThumb;
+
+  const fighterTitle = fighterMode[`name_${lang}`] || fighterMode.name_en || (lang === 'es' ? 'Modo Caza (Jet)' : 'Fighter Mode');
+  const guardianTitle = guardianMode[`name_${lang}`] || guardianMode.name_en || (lang === 'es' ? 'Modo Guardián (Gerwalk)' : 'Guardian Mode');
+  const battloidTitle = battloidMode[`name_${lang}`] || battloidMode.name_en || (lang === 'es' ? 'Modo Battloid (Humanoide)' : 'Battloid Mode');
+
+  const fighterNotes = fighterMode[`tactical_notes_${lang}`] || fighterMode.tactical_notes_en || '';
+  const guardianNotes = guardianMode[`tactical_notes_${lang}`] || guardianMode.tactical_notes_en || '';
+  const battloidNotes = battloidMode[`tactical_notes_${lang}`] || battloidMode.tactical_notes_en || '';
+
   const overviewPane = document.getElementById('pane-overview');
   overviewPane.innerHTML = `
     <div class="overview-grid">
       <div>
-        <img src="${heroThumb}" class="dossier-hero-img" alt="${m.name}">
-        <table class="quick-specs-table">
-          <tr><td>${I18N[lang].crew}:</td><td>${m.crew[lang] || m.crew.en}</td></tr>
+        <div style="position:relative;">
+          <img src="${heroThumb}" id="dossier-hero-img" class="dossier-hero-img" alt="${m.name}">
+        </div>
+        <table class="quick-specs-table" id="dossier-specs-table">
+          <tr><td>${I18N[lang].crew}:</td><td>${m.crew?.[lang] || m.crew?.en || m.crew || 'N/A'}</td></tr>
           <tr><td>${I18N[lang].height}:</td><td>${m.dimensions?.height?.metric || 'N/A'}</td></tr>
           <tr><td>${I18N[lang].weight}:</td><td>${m.dimensions?.weight?.metric || 'N/A'}</td></tr>
           <tr><td>${I18N[lang].engine}:</td><td>${m.powerplant?.[`engine_${lang}`] || m.powerplant?.engine_en || 'N/A'}</td></tr>
@@ -480,6 +522,125 @@ function populateDossierModal(m) {
         </div>
       </div>
     </div>
+
+    ${isVariable && m.modes ? `
+      <div class="veritech-modes-showcase">
+        <div class="modes-section-banner">
+          <span class="modes-section-title">// CONFIGURACIÓN VARIABLE TÁCTICA: TRIPLE MODO DE COMBATE</span>
+          <span class="modes-section-tag">TECNOLOGÍA VERITECH MULTI-ROL</span>
+        </div>
+
+        <div class="triple-modes-grid">
+          <!-- MODO 01: CAZA -->
+          <div class="triple-mode-card">
+            <div class="triple-mode-header">
+              <span class="triple-mode-badge">MODO 01</span>
+              <h4 class="triple-mode-title">${lang === 'es' ? 'CAZA / JET' : 'FIGHTER / JET'}</h4>
+            </div>
+            <div class="triple-mode-img-wrap" onclick="openLightbox('${fighterImg}', '${fighterTitle}')" title="Click para ampliar en alta resolución">
+              <img src="${fighterImg}" alt="${fighterTitle}" loading="lazy">
+              <span class="triple-mode-zoom-tag">⌖ AMPLIAR</span>
+            </div>
+            <div class="triple-mode-specs">
+              <div class="triple-mode-spec-row">
+                <span class="spec-name">${lang === 'es' ? 'LONGITUD' : 'LENGTH'}:</span>
+                <span class="spec-val">${fighterMode.length || 'N/A'}</span>
+              </div>
+              <div class="triple-mode-spec-row">
+                <span class="spec-name">${lang === 'es' ? 'ENVERGADURA' : 'WINGSPAN'}:</span>
+                <span class="spec-val">${fighterMode.wingspan || 'N/A'}</span>
+              </div>
+              <div class="triple-mode-spec-row">
+                <span class="spec-name">${lang === 'es' ? 'ALTURA' : 'HEIGHT'}:</span>
+                <span class="spec-val">${fighterMode.height || 'N/A'}</span>
+              </div>
+              <div class="triple-mode-spec-row">
+                <span class="spec-name">${lang === 'es' ? 'VELOCIDAD' : 'SPEED'}:</span>
+                <span class="spec-val">${fighterMode.speed || 'N/A'}</span>
+              </div>
+            </div>
+            ${fighterNotes ? `
+              <div class="triple-mode-doctrine">
+                <strong>${lang === 'es' ? 'ROL OPERACIONAL' : 'TACTICAL DOCTRINE'}:</strong>
+                ${fighterNotes}
+              </div>
+            ` : ''}
+          </div>
+
+          <!-- MODO 02: GUARDIÁN -->
+          <div class="triple-mode-card">
+            <div class="triple-mode-header">
+              <span class="triple-mode-badge">MODO 02</span>
+              <h4 class="triple-mode-title">${lang === 'es' ? 'GUARDIÁN' : 'GERWALK / GUARDIAN'}</h4>
+            </div>
+            <div class="triple-mode-img-wrap" onclick="openLightbox('${guardianImg}', '${guardianTitle}')" title="Click para ampliar en alta resolución">
+              <img src="${guardianImg}" alt="${guardianTitle}" loading="lazy">
+              <span class="triple-mode-zoom-tag">⌖ AMPLIAR</span>
+            </div>
+            <div class="triple-mode-specs">
+              <div class="triple-mode-spec-row">
+                <span class="spec-name">${lang === 'es' ? 'LONGITUD' : 'LENGTH'}:</span>
+                <span class="spec-val">${guardianMode.length || 'N/A'}</span>
+              </div>
+              <div class="triple-mode-spec-row">
+                <span class="spec-name">${lang === 'es' ? 'ENVERGADURA' : 'WINGSPAN'}:</span>
+                <span class="spec-val">${guardianMode.wingspan || 'N/A'}</span>
+              </div>
+              <div class="triple-mode-spec-row">
+                <span class="spec-name">${lang === 'es' ? 'ALTURA' : 'HEIGHT'}:</span>
+                <span class="spec-val">${guardianMode.height || 'N/A'}</span>
+              </div>
+              <div class="triple-mode-spec-row">
+                <span class="spec-name">${lang === 'es' ? 'VELOCIDAD' : 'SPEED'}:</span>
+                <span class="spec-val">${guardianMode.speed || 'N/A'}</span>
+              </div>
+            </div>
+            ${guardianNotes ? `
+              <div class="triple-mode-doctrine">
+                <strong>${lang === 'es' ? 'ROL OPERACIONAL' : 'TACTICAL DOCTRINE'}:</strong>
+                ${guardianNotes}
+              </div>
+            ` : ''}
+          </div>
+
+          <!-- MODO 03: BATTLOID -->
+          <div class="triple-mode-card">
+            <div class="triple-mode-header">
+              <span class="triple-mode-badge">MODO 03</span>
+              <h4 class="triple-mode-title">${lang === 'es' ? 'BATTLOID' : 'BATTLOID / HUMANOID'}</h4>
+            </div>
+            <div class="triple-mode-img-wrap" onclick="openLightbox('${battloidImg}', '${battloidTitle}')" title="Click para ampliar en alta resolución">
+              <img src="${battloidImg}" alt="${battloidTitle}" loading="lazy">
+              <span class="triple-mode-zoom-tag">⌖ AMPLIAR</span>
+            </div>
+            <div class="triple-mode-specs">
+              <div class="triple-mode-spec-row">
+                <span class="spec-name">${lang === 'es' ? 'LONGITUD' : 'LENGTH'}:</span>
+                <span class="spec-val">${battloidMode.length || 'N/A'}</span>
+              </div>
+              <div class="triple-mode-spec-row">
+                <span class="spec-name">${lang === 'es' ? 'ENVERGADURA' : 'WINGSPAN'}:</span>
+                <span class="spec-val">${battloidMode.wingspan || 'N/A'}</span>
+              </div>
+              <div class="triple-mode-spec-row">
+                <span class="spec-name">${lang === 'es' ? 'ALTURA' : 'HEIGHT'}:</span>
+                <span class="spec-val">${battloidMode.height || 'N/A'}</span>
+              </div>
+              <div class="triple-mode-spec-row">
+                <span class="spec-name">${lang === 'es' ? 'VELOCIDAD' : 'SPEED'}:</span>
+                <span class="spec-val">${battloidMode.speed || 'N/A'}</span>
+              </div>
+            </div>
+            ${battloidNotes ? `
+              <div class="triple-mode-doctrine">
+                <strong>${lang === 'es' ? 'ROL OPERACIONAL' : 'TACTICAL DOCTRINE'}:</strong>
+                ${battloidNotes}
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      </div>
+    ` : ''}
   `;
 
   // 2. Tab MDC
@@ -708,6 +869,85 @@ function closeLightbox() {
   const lb = document.getElementById('lightbox-backdrop');
   if (lb) lb.style.display = 'none';
 }
+
+// --------------------------------------------------------------------------
+// VERITECH 3-MODE INTERACTIVE CONTROLLERS
+// --------------------------------------------------------------------------
+window.switchCardMode = function(btn, mechaId, imgUrl) {
+  if (!btn || !imgUrl) return;
+  const container = btn.closest('.card-mode-switcher');
+  if (container) {
+    container.querySelectorAll('.card-mode-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  const img = document.getElementById(`card-img-${mechaId}`);
+  if (img) {
+    img.style.opacity = '0.35';
+    setTimeout(() => {
+      img.src = imgUrl;
+      img.style.opacity = '1';
+    }, 100);
+  }
+  window.tacticalAudio?.hover();
+};
+
+window.switchDossierMode = function(btn, modeKey) {
+  const m = window.currentDossierMecha;
+  if (!m || !m.modes) return;
+  const modeData = m.modes[modeKey];
+  if (!modeData) return;
+
+  const lang = window.appState.lang;
+
+  // Actualizar botones de modo
+  const container = btn.closest('.veritech-modes-bar');
+  if (container) {
+    container.querySelectorAll('.mode-tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  // Actualizar imagen hero
+  const heroImg = document.getElementById('dossier-hero-img');
+  const targetImg = (typeof modeData === 'object' ? modeData.image : modeData) || m.thumbnail;
+  if (heroImg && targetImg) {
+    heroImg.style.opacity = '0.2';
+    setTimeout(() => {
+      heroImg.src = targetImg;
+      heroImg.style.opacity = '1';
+    }, 120);
+  }
+
+  // Actualizar tabla de especificaciones si hay datos detallados del modo
+  if (typeof modeData === 'object') {
+    const heightRow = document.getElementById('spec-height');
+    if (heightRow && modeData.height) {
+      heightRow.innerHTML = `<td>${I18N[lang].height}:</td><td>${modeData.height}</td>`;
+    }
+    const wingspanRow = document.getElementById('spec-wingspan');
+    if (wingspanRow && modeData.wingspan) {
+      wingspanRow.innerHTML = `<td>${lang === 'es' ? 'Envergadura' : 'Wingspan'}:</td><td>${modeData.wingspan}</td>`;
+    }
+    const lengthRow = document.getElementById('spec-length');
+    if (lengthRow && modeData.length) {
+      lengthRow.innerHTML = `<td>${lang === 'es' ? 'Longitud' : 'Length'}:</td><td>${modeData.length}</td>`;
+    }
+    const speedRow = document.getElementById('spec-speed');
+    if (speedRow && modeData.speed) {
+      speedRow.innerHTML = `<td>${I18N[lang].speed}:</td><td>${modeData.speed}</td>`;
+    }
+
+    // Actualizar notas tácticas del modo
+    const notesBox = document.getElementById('dossier-mode-notes');
+    const notesText = document.getElementById('dossier-mode-notes-text');
+    if (notesBox && notesText) {
+      const text = modeData[`tactical_notes_${lang}`] || modeData.tactical_notes_en || '';
+      notesText.textContent = text;
+      notesBox.style.display = text ? 'block' : 'none';
+    }
+  }
+
+  window.tacticalAudio?.openDossier();
+};
 
 window.openDossier = openDossier;
 window.openLightbox = openLightbox;

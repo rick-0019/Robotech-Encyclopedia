@@ -1,0 +1,216 @@
+{
+  "id": "lisa_hayes",
+  "name": "Lisa Hayes",
+  "japanese_name": "Misa Hayase",
+  "callsign": "White Falcon // Control SDF-1",
+  "rank": {
+    "es": "Primer Oficial / Capitana (RDF) // Almirante (REF)",
+    "en": "First Officer / Captain (RDF) // Admiral (REF)"
+  },
+  "role": {
+    "es": "Oficial Superior de Operaciones y Mando Táctico",
+    "en": "Senior Operations & Tactical Command Officer"
+  },
+  "category": "command",
+  "faction": {
+    "es": "U.N. Spacy",
+    "en": "U.N. Spacy"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "assignment": {
+    "es": "SDF-1 Macross (Puente de Mando) // SDF-2 Megalord",
+    "en": "SDF-1 Macross (Command Bridge) // SDF-2 Megalord"
+  },
+  "birth_date": "3 de Marzo de 1989",
+  "birth_place": {
+    "es": "Isla Macross / Base Militar del Pacífico",
+    "en": "Macross Island / Pacific Military Base"
+  },
+  "blood_type": "AB+",
+  "height": "1,68 m",
+  "weight": "49 kg",
+  "thumbnail": "assets/images/personajes/lisa_hayes/lisa_puente.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/lisa_hayes/Lisa capitana.jpg",
+      "title_es": "Capitana Lisa Hayes - Uniforme de Comando",
+      "title_en": "Captain Lisa Hayes - Command Uniform",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/lisa_hayes/Lisa en traje de vuelo.jpg",
+      "title_es": "Lisa Hayes - Traje Táctico de Piloto RDF",
+      "title_en": "Lisa Hayes - RDF Flight Suit",
+      "type_es": "Misión Operativa",
+      "type_en": "Field Mission"
+    },
+    {
+      "url": "assets/images/personajes/lisa_hayes/Lisa de civil.jpg",
+      "title_es": "Lisa Hayes - Vestimenta de Civil (Fuera de Servicio)",
+      "title_en": "Lisa Hayes - Off-duty Civilian Attire",
+      "type_es": "Registro Personal",
+      "type_en": "Personal Log"
+    },
+    {
+      "url": "assets/images/personajes/lisa_hayes/Lisa joven.jpg",
+      "title_es": "Cadete Lisa Hayes - Academia de Oficiales de la RDF",
+      "title_en": "Cadet Lisa Hayes - RDF Military Academy",
+      "type_es": "Historial Temprano",
+      "type_en": "Early Career"
+    },
+    {
+      "url": "assets/images/personajes/lisa_hayes/d1a02b9a9ba01aa2936ae81c442f9053.jpg",
+      "title_es": "Primer Oficial Hayes - Centro de Control Táctico",
+      "title_en": "First Officer Hayes - Tactical Control Center",
+      "type_es": "Archivo Táctico",
+      "type_en": "Tactical File"
+    },
+    {
+      "url": "assets/images/personajes/lisa_hayes/lisa_puente.jpg",
+      "title_es": "Puesto de Mando en el Puente del SDF-1",
+      "title_en": "Bridge Command Post - SDF-1 Macross",
+      "type_es": "En Operación",
+      "type_en": "In Operation"
+    },
+    {
+      "url": "assets/images/personajes/lisa_hayes/8528ddb7a084340d60e6a236f7a1a188.jpg",
+      "title_es": "Lisa Hayes y Rick Hunter - Enlace de Combate",
+      "title_en": "Lisa Hayes & Rick Hunter - Combat Partnership",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/lisa_hayes/5c1bd378496ec4afc101668e59af6130.jpg",
+      "title_es": "Análisis Estratégico Post-Batalla de Marte",
+      "title_en": "Strategic Analysis Post-Mars Base Sara",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/lisa_hayes/07976417ddb2e82b5dfe778b4f4bbb2d.jpg",
+      "title_es": "Teniente Comandante Hayes - Ceremonia de Ascenso",
+      "title_en": "Lt. Commander Hayes - Promotion Ceremony",
+      "type_es": "Condecoración",
+      "type_en": "Commendation"
+    },
+    {
+      "url": "assets/images/personajes/lisa_hayes/8c24b9fa5b0dfb08ac248f5d6175e92c.jpg",
+      "title_es": "Monitoreo de Sensores e Intercepción Zentraedi",
+      "title_en": "Sensor Monitoring & Zentraedi Interception",
+      "type_es": "Vigilancia Radar",
+      "type_en": "Radar Surveillance"
+    }
+  ],
+  "summary": {
+    "es": "Lisa Hayes es la mente táctica más brillante de la Fuerza de Defensa Robotech durante la Primera Guerra Robotech. Hija del almirante Donald Hayes, creció inmers...",
+    "en": "Lisa Hayes is the sharpest tactical mind within the Robotech Defense Force during the First Robotech War. Daughter of Admiral Donald Hayes, she grew up steeped ..."
+  },
+  "lore": {
+    "overview_es": "Lisa Hayes es la mente táctica más brillante de la Fuerza de Defensa Robotech durante la Primera Guerra Robotech. Hija del almirante Donald Hayes, creció inmersa en la estricta disciplina castrense de una dinastía militar de generaciones. Egresada con honores máximos de la Academia Militar Robotech a los 18 años, fue asignada directamente al puesto neurálgico del SDF-1 como Primer Oficial y Jefa de Operaciones bajo las órdenes directas del Capitán Henry Gloval.",
+    "overview_en": "Lisa Hayes is the sharpest tactical mind within the Robotech Defense Force during the First Robotech War. Daughter of Admiral Donald Hayes, she grew up steeped in the rigorous discipline of a multi-generational military dynasty. Graduating at the top of her class from the Robotech Military Academy at age 18, she was assigned to the nerve center of the SDF-1 as First Officer and Chief of Operations under Captain Henry Gloval.",
+    "tactical_analysis_es": "A bordo del SDF-1, Lisa demostró una capacidad analítica sin parangón, coordinando el fuego defensivo del Cañón Principal, las transformaciones modulares de la nave y el despliegue de los escuadrones Veritech y Destroid en las condiciones más extremas del espacio profundo. Su mente calculadora y su templanza bajo fuego mantuvieron a la tripulación con vida durante el largo viaje de retorno desde Plutón. Posteriormente, lideró la formulación de la 'Operación Ataque Minmei' en conjunción con la flota rebelde de Boddole Zer y asumió el mando supremo del SDF-2 Megalord y la Fuerza Expedicionaria Robotech (REF).",
+    "tactical_analysis_en": "Aboard the SDF-1, Lisa displayed unparalleled analytical prowess, coordinating Main Gun firing solutions, modular ship transformations, and fighter wing sorties under harrowing deep-space siege conditions. Her calculating intellect and resilience under fire preserved the crew throughout the arduous return journey from Pluto. She formulated the 'Minmei Attack Strategy' during the climactic battle against Bodolza's armada and later commanded the SDF-2 Megalord and the Robotech Expeditionary Force (REF)."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 96,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Capacidad para comandar flotas y operaciones tácticas a gran escala."
+    },
+    "strategy": {
+      "value": 98,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Maestría en análisis balístico, predicción de movimientos y logística bélica."
+    },
+    "resolve": {
+      "value": 92,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Serenidad mental y toma de decisiones crítica en condiciones extremas."
+    },
+    "piloting": {
+      "value": 68,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Aptitud de pilotaje de cazas aeroespaciales y maniobras de evasión."
+    }
+  },
+  "stats": {
+    "command": 96,
+    "strategy": 98,
+    "resolve": 92,
+    "piloting": 68
+  },
+  "service_record": [
+    {
+      "period": "2006 - 2008",
+      "assignment_es": "Academia Militar de Oficiales de la Tierra (Graduación de Honor)",
+      "assignment_en": "Earth Military Officer Academy (Valedictorian)"
+    },
+    {
+      "period": "2009 - 2011",
+      "assignment_es": "Primer Oficial y Jefa de Operaciones del SDF-1 Macross",
+      "assignment_en": "First Officer & Operations Chief, SDF-1 Macross"
+    },
+    {
+      "period": "2011",
+      "assignment_es": "Co-diseñadora del Protocolo 'Operación Ataque Minmei' (Victoria de la Tierra)",
+      "assignment_en": "Co-architect of 'Operation Minmei Attack' (Earth Victory)"
+    },
+    {
+      "period": "2012 - 2014",
+      "assignment_es": "Capitana Comandante del SDF-2 Megalord",
+      "assignment_en": "Captain Commander, SDF-2 Megalord"
+    },
+    {
+      "period": "2022+",
+      "assignment_es": "Almirante de la Fuerza Expedicionaria Robotech (REF / Misión Pioneer)",
+      "assignment_en": "Admiral, Robotech Expeditionary Force (REF / Pioneer Mission)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Rick Hunter",
+      "relation_es": "Compañero de Armas // Esposo",
+      "relation_en": "Combat Partner // Husband",
+      "notes_es": "Su tensa relación militar inicial evolucionó hasta convertirse en un profundo amor y compañerismo táctico que lideró la reconstrucción terrestre."
+    },
+    {
+      "name": "Capitán Henry Gloval",
+      "relation_es": "Mentor Militar y Comandante",
+      "relation_en": "Military Mentor & Commander",
+      "notes_es": "Figura paternal y guía estratégica que vio en Lisa el futuro del liderazgo militar de la raza humana."
+    },
+    {
+      "name": "Claudia Grant",
+      "relation_es": "Oficial de Puente y Mejor Amiga",
+      "relation_en": "Bridge Officer & Best Friend",
+      "notes_es": "Oficial de comunicaciones del SDF-1, su principal confidente y soporte emocional durante los años más duros de la guerra."
+    },
+    {
+      "name": "Almirante Donald Hayes",
+      "relation_es": "Padre // Comandante del Gran Cañón de Alaska",
+      "relation_en": "Father // Commander of Alaska Grand Cannon",
+      "notes_es": "Impulsor de su carrera militar. Falleció en la defensa final de la Tierra durante el bombardeo orbital Zentraedi."
+    },
+    {
+      "name": "Karl Riber",
+      "relation_es": "Prometido de Juventud (Fallecido)",
+      "relation_en": "Youth Fiancé (Deceased)",
+      "notes_es": "Oficial científico destinado en la Base Marte Sara. Su trágica muerte marcó profundamente el carácter riguroso de Lisa."
+    }
+  ],
+  "decorations": [
+    "Medalla de Honor de la Fuerza de Defensa Robotech (Cruz de Oro)",
+    "Citación Presidencial al Valor Táctico en el Espacio Profundo",
+    "Cruz Distinguida por la Defensa Orbital de la Tierra",
+    "Cinta de Servicio Distinguido de la Campaña de Plutón"
+  ]
+}

@@ -20,8 +20,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="css/style.css?v=1.0.3">
-  <link rel="stylesheet" href="css/hud-components.css?v=1.0.3">
+  <link rel="stylesheet" href="css/style.css?v=1.0.8">
+  <link rel="stylesheet" href="css/hud-components.css?v=1.0.8">
   <style>
     .admin-container {
       width: 100%;
@@ -402,6 +402,12 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+
+    /* Botones globales militares */
+    button {
+      outline: none;
+      font-family: inherit;
+    }
   </style>
 </head>
 <body>
@@ -413,25 +419,37 @@
       <div style="display: flex; align-items: center; gap: 14px;">
         <img src="assets/images/ui/logo_UNSpacy.png" alt="RDF Insignia" style="width: 48px; height: 48px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(255, 157, 0, 0.45));">
         <div>
-          <h2 style="font-family: var(--font-hud); font-size: 1.4rem; color: #fff; letter-spacing: 2px; margin: 0;">
-            ROBOTECH <span style="color: var(--skull-amber);">ADMIN STUDIO</span>
+          <h2 id="admin-title-main" style="font-family: var(--font-hud); font-size: 1.35rem; color: #fff; letter-spacing: 2px; margin: 0;">
+            ROBOTECH <span style="color: var(--skull-amber);" id="admin-title-badge">ADMIN STUDIO</span>
           </h2>
-          <span style="font-size: 0.8rem; color: var(--text-dim);">BASE DE DATOS TÁCTICA EXPANDIBLE PARA TODO EL UNIVERSO ROBOTECH</span>
+          <span id="admin-subtitle" style="font-size: 0.8rem; color: var(--text-dim);">BASE DE DATOS TÁCTICA EXPANDIBLE</span>
         </div>
       </div>
 
+      <!-- Controles Dinámicos según Módulo (Mechas o Personajes) -->
       <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
-        <select id="select-mecha-to-edit" class="form-select" style="min-width: 220px;">
-          <option value="">-- SELECCIONAR MECHA EXISTENTE --</option>
-        </select>
+        <!-- Controles Mechas (Solo visible al editar Mechas) -->
+        <div id="top-mechas-controls" style="display: none; gap: 10px; align-items: center; flex-wrap: wrap;">
+          <select id="select-mecha-to-edit" class="form-select" style="min-width: 220px;">
+            <option value="">-- SELECCIONAR MECHA EXISTENTE --</option>
+          </select>
+          <button id="btn-new-mecha" class="btn-action-secondary">+ NUEVA UNIDAD</button>
+          <a href="mechas.html" class="btn-action-secondary">◀ VOLVER A MECHAS</a>
+        </div>
 
-        <button id="btn-new-mecha" class="btn-action-secondary">+ NUEVA UNIDAD</button>
-        <a href="index.html" class="btn-action-secondary">◀ VOLVER AL CODEX</a>
+        <!-- Controles Personajes (Solo visible al editar Personajes) -->
+        <div id="top-characters-controls" style="display: none; gap: 10px; align-items: center; flex-wrap: wrap;">
+          <select id="select-character-to-edit" class="form-select" style="min-width: 240px;">
+            <option value="">-- SELECCIONAR PERSONAJE EXISTENTE --</option>
+          </select>
+          <button id="btn-new-character" class="btn-action-secondary">+ NUEVO PERSONAJE</button>
+          <a href="personajes.html" class="btn-action-secondary">◀ VOLVER A PERSONAJES</a>
+        </div>
       </div>
     </div>
 
-    <!-- Main Studio Layout -->
-    <div class="admin-layout">
+    <!-- Main Studio Layout: MECHAS -->
+    <div id="admin-layout-mechas" class="admin-layout">
       <!-- Formulario de Edición -->
       <form id="crud-form" class="form-panel" onsubmit="event.preventDefault();">
         <!-- 1. Identificación Principal con Selectores Desplegables y Botón [+] -->
@@ -501,15 +519,21 @@
           <div class="form-grid-2">
             <div class="form-group">
               <label>Insignia / Logo de Facción</label>
-              <div style="display: flex; gap: 10px; align-items: center;">
-                <select id="m_faction_logo" class="form-select" onchange="window.updateFactionLogoPreview?.()">
-                  <option value="assets/images/ui/logo_UNSpacy.png">Robotech Defense Force / U.N. Spacy (logo_UNSpacy.png)</option>
-                  <option value="assets/images/ui/logo_zentran.png">Fuerzas Zentraedi (logo_zentran.png)</option>
-                  <option value="assets/images/ui/Mars_Base.png">REF - División Marte (Mars_Base.png)</option>
-                  <option value="">-- Detección Automática por Facción --</option>
-                </select>
-                <img id="faction_logo_preview" src="assets/images/ui/logo_UNSpacy.png" alt="Preview" style="width: 38px; height: 38px; object-fit: contain; background: rgba(0,0,0,0.5); border: 1px solid var(--border-tactical); border-radius: 4px; padding: 2px; flex-shrink: 0;">
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <input type="text" id="m_faction_logo" class="form-input" list="faction_logos_list" placeholder="assets/images/ui/... o URL" value="assets/images/ui/logo_UNSpacy.png" oninput="window.updateFactionLogoPreview?.()" style="flex: 1;">
+                <datalist id="faction_logos_list">
+                  <option value="assets/images/ui/logo_UNSpacy.png">Robotech Defense Force / U.N. Spacy</option>
+                  <option value="assets/images/ui/logo_zentran.png">Fuerzas Zentraedi</option>
+                  <option value="assets/images/ui/Mars_Base.png">REF - División Marte (Mars Base)</option>
+                </datalist>
+                <button type="button" class="btn-action-secondary" onclick="openAssetBrowser('m_faction_logo')" style="white-space: nowrap; padding: 8px 12px;" title="Elegir o subir logo">
+                  📁 ELEGIR
+                </button>
+                <img id="faction_logo_preview" src="assets/images/ui/logo_UNSpacy.png" alt="Preview" style="width: 52px; height: 52px; object-fit: contain; background: rgba(0,0,0,0.5); border: 1px solid var(--border-tactical); border-radius: 4px; padding: 3px; flex-shrink: 0;">
               </div>
+              <span style="font-size:0.75rem; color:var(--text-dim); margin-top:3px; display:block;">
+                Se auto-asigna según la facción militar, o pulsa 📁 ELEGIR para seleccionar Mars Base u otro logo.
+              </span>
             </div>
 
             <div class="form-group">
@@ -586,6 +610,158 @@
             <div class="form-group">
               <label>Powerplant Engine (English)</label>
               <input type="text" id="m_engine_en" class="form-input" placeholder="ej: MT 828 Fusion Reactor">
+            </div>
+          </div>
+        </div>
+
+        <!-- 3.1 MODOS DE TRANSFORMACIÓN VERITECH (3 MODOS) -->
+        <div class="form-section" id="veritech-modes-section" style="border: 1px solid var(--un-cyan); background: rgba(0, 240, 255, 0.03); display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px dashed rgba(0, 240, 255, 0.3); padding-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+            <h3 style="color: var(--un-cyan); margin: 0;">⚡ CONFIGURACIÓN VARIABLE: MODOS DE TRANSFORMACIÓN (3 MODOS)</h3>
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--un-cyan); cursor: pointer; background: rgba(0, 240, 255, 0.1); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(0,240,255,0.3);">
+              <input type="checkbox" id="m_is_variable" onchange="toggleVariableModes()">
+              <strong>Unidad Mecha Transformable (Veritech)</strong>
+            </label>
+          </div>
+          <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:14px;">
+            Define las especificaciones independientes y renders para cada configuración táctica. La ficha y la tarjeta del Codex permitirán alternar interactivamente entre los 3 modos.
+          </p>
+
+          <div id="veritech-modes-container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 16px;">
+              
+              <!-- 1. MODO CAZA / JET / FIGHTER -->
+              <div class="mode-card-admin" style="background: rgba(4, 18, 38, 0.85); border: 1px solid rgba(0, 240, 255, 0.3); border-radius: 4px; padding: 14px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                  <h4 style="color: var(--un-cyan); margin: 0; font-size: 0.95rem;">1. MODO CAZA (FIGHTER / JET)</h4>
+                  <span style="font-size: 0.7rem; background: rgba(0, 240, 255, 0.15); color: var(--un-cyan); padding: 2px 6px; border-radius: 2px;">AEROESPACIAL</span>
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 10px;">
+                  <label style="font-size: 0.75rem;">Foto / Render Modo Caza</label>
+                  <div style="display: flex; gap: 6px;">
+                    <input type="text" id="m_mode_fighter_img" class="form-input mode-img-input" placeholder="assets/images/mechas/.../caza.webp" style="font-size: 0.8rem;" oninput="updateModePreview('fighter')">
+                    <button type="button" class="btn-action-secondary" onclick="openAssetBrowser('m_mode_fighter_img')" style="padding: 6px 10px; font-size: 0.75rem; white-space: nowrap;">📁 ELEGIR</button>
+                  </div>
+                  <img id="m_mode_fighter_preview" style="width: 100%; height: 110px; object-fit: contain; background: rgba(0,0,0,0.6); margin-top: 6px; border: 1px solid rgba(0,240,255,0.2); border-radius: 2px; display: none;">
+                </div>
+
+                <div class="form-grid-2" style="gap: 8px;">
+                  <div class="form-group" style="margin-bottom: 8px;">
+                    <label style="font-size: 0.7rem;">Longitud</label>
+                    <input type="text" id="m_mode_fighter_length" class="form-input" placeholder="ej: 10.25 m" style="font-size: 0.8rem;" oninput="updateLivePreview()">
+                  </div>
+                  <div class="form-group" style="margin-bottom: 8px;">
+                    <label style="font-size: 0.7rem;">Envergadura Alar</label>
+                    <input type="text" id="m_mode_fighter_wingspan" class="form-input" placeholder="ej: 8.20 m" style="font-size: 0.8rem;">
+                  </div>
+                </div>
+
+                <div class="form-grid-2" style="gap: 8px;">
+                  <div class="form-group" style="margin-bottom: 8px;">
+                    <label style="font-size: 0.7rem;">Altura</label>
+                    <input type="text" id="m_mode_fighter_height" class="form-input" placeholder="ej: 4.60 m" style="font-size: 0.8rem;">
+                  </div>
+                  <div class="form-group" style="margin-bottom: 8px;">
+                    <label style="font-size: 0.7rem;">Velocidad Máx.</label>
+                    <input type="text" id="m_mode_fighter_speed" class="form-input" placeholder="ej: Mach 2.8 (3,000 km/h)" style="font-size: 0.8rem;">
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="font-size: 0.7rem;">Notas Tácticas / Rol del Modo</label>
+                  <textarea id="m_mode_fighter_notes" class="form-textarea" rows="2" placeholder="ej: Intercepción aeroespacial supersónica y superioridad aérea." style="font-size: 0.8rem;"></textarea>
+                </div>
+              </div>
+
+              <!-- 2. MODO GUARDIÁN / GERWALK / GUARDIAN -->
+              <div class="mode-card-admin" style="background: rgba(4, 18, 38, 0.85); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: 4px; padding: 14px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                  <h4 style="color: var(--skull-amber); margin: 0; font-size: 0.95rem;">2. MODO GUARDIÁN (GERWALK)</h4>
+                  <span style="font-size: 0.7rem; background: rgba(245, 158, 11, 0.15); color: var(--skull-amber); padding: 2px 6px; border-radius: 2px;">VTOL / HÍBRIDO</span>
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 10px;">
+                  <label style="font-size: 0.75rem;">Foto / Render Modo Guardián</label>
+                  <div style="display: flex; gap: 6px;">
+                    <input type="text" id="m_mode_guardian_img" class="form-input mode-img-input" placeholder="assets/images/mechas/.../guardian.webp" style="font-size: 0.8rem;" oninput="updateModePreview('guardian')">
+                    <button type="button" class="btn-action-secondary" onclick="openAssetBrowser('m_mode_guardian_img')" style="padding: 6px 10px; font-size: 0.75rem; white-space: nowrap;">📁 ELEGIR</button>
+                  </div>
+                  <img id="m_mode_guardian_preview" style="width: 100%; height: 110px; object-fit: contain; background: rgba(0,0,0,0.6); margin-top: 6px; border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 2px; display: none;">
+                </div>
+
+                <div class="form-grid-2" style="gap: 8px;">
+                  <div class="form-group" style="margin-bottom: 8px;">
+                    <label style="font-size: 0.7rem;">Longitud</label>
+                    <input type="text" id="m_mode_guardian_length" class="form-input" placeholder="ej: 8.00 m" style="font-size: 0.8rem;">
+                  </div>
+                  <div class="form-group" style="margin-bottom: 8px;">
+                    <label style="font-size: 0.7rem;">Envergadura Alar</label>
+                    <input type="text" id="m_mode_guardian_wingspan" class="form-input" placeholder="ej: 8.20 m" style="font-size: 0.8rem;">
+                  </div>
+                </div>
+
+                <div class="form-grid-2" style="gap: 8px;">
+                  <div class="form-group" style="margin-bottom: 8px;">
+                    <label style="font-size: 0.7rem;">Altura</label>
+                    <input type="text" id="m_mode_guardian_height" class="form-input" placeholder="ej: 5.72 m" style="font-size: 0.8rem;">
+                  </div>
+                  <div class="form-group" style="margin-bottom: 8px;">
+                    <label style="font-size: 0.7rem;">Velocidad / VTOL</label>
+                    <input type="text" id="m_mode_guardian_speed" class="form-input" placeholder="ej: 680 km/h (VTOL estacionario)" style="font-size: 0.8rem;">
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="font-size: 0.7rem;">Notas Tácticas / Rol del Modo</label>
+                  <textarea id="m_mode_guardian_notes" class="form-textarea" rows="2" placeholder="ej: Despegue vertical, vuelo estacionario y fuego de apoyo a ras de suelo." style="font-size: 0.8rem;"></textarea>
+                </div>
+              </div>
+
+              <!-- 3. MODO BATTLOID / HUMANOIDE / BATTLOID -->
+              <div class="mode-card-admin" style="background: rgba(4, 18, 38, 0.85); border: 1px solid rgba(239, 68, 68, 0.35); border-radius: 4px; padding: 14px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                  <h4 style="color: var(--accent-red); margin: 0; font-size: 0.95rem;">3. MODO BATTLOID (HUMANOIDE)</h4>
+                  <span style="font-size: 0.7rem; background: rgba(239, 68, 68, 0.15); color: var(--accent-red); padding: 2px 6px; border-radius: 2px;">CQC / MECHA</span>
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 10px;">
+                  <label style="font-size: 0.75rem;">Foto / Render Modo Battloid</label>
+                  <div style="display: flex; gap: 6px;">
+                    <input type="text" id="m_mode_battloid_img" class="form-input mode-img-input" placeholder="assets/images/mechas/.../battloid.webp" style="font-size: 0.8rem;" oninput="updateModePreview('battloid')">
+                    <button type="button" class="btn-action-secondary" onclick="openAssetBrowser('m_mode_battloid_img')" style="padding: 6px 10px; font-size: 0.75rem; white-space: nowrap;">📁 ELEGIR</button>
+                  </div>
+                  <img id="m_mode_battloid_preview" style="width: 100%; height: 110px; object-fit: contain; background: rgba(0,0,0,0.6); margin-top: 6px; border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 2px; display: none;">
+                </div>
+
+                <div class="form-grid-2" style="gap: 8px;">
+                  <div class="form-group" style="margin-bottom: 8px;">
+                    <label style="font-size: 0.7rem;">Altura Total</label>
+                    <input type="text" id="m_mode_battloid_height" class="form-input" placeholder="ej: 8.75 m" style="font-size: 0.8rem;">
+                  </div>
+                  <div class="form-group" style="margin-bottom: 8px;">
+                    <label style="font-size: 0.7rem;">Ancho Hombros</label>
+                    <input type="text" id="m_mode_battloid_width" class="form-input" placeholder="ej: 4.30 m" style="font-size: 0.8rem;">
+                  </div>
+                </div>
+
+                <div class="form-grid-2" style="gap: 8px;">
+                  <div class="form-group" style="margin-bottom: 8px;">
+                    <label style="font-size: 0.7rem;">Profundidad</label>
+                    <input type="text" id="m_mode_battloid_depth" class="form-input" placeholder="ej: 3.84 m" style="font-size: 0.8rem;">
+                  </div>
+                  <div class="form-group" style="margin-bottom: 8px;">
+                    <label style="font-size: 0.7rem;">Velocidad Terrestre</label>
+                    <input type="text" id="m_mode_battloid_speed" class="form-input" placeholder="ej: 110 km/h (a pie)" style="font-size: 0.8rem;">
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="font-size: 0.7rem;">Notas Tácticas / Rol del Modo</label>
+                  <textarea id="m_mode_battloid_notes" class="form-textarea" rows="2" placeholder="ej: Combate cerrado cuerpo a cuerpo y operaciones en zonas urbanas o naves enemigas." style="font-size: 0.8rem;"></textarea>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -690,6 +866,296 @@
         </div>
       </aside>
     </div>
+
+    <!-- ========================================================================
+         MAIN STUDIO LAYOUT: PERSONAJES & ASES
+         ======================================================================== -->
+    <div id="admin-layout-characters" class="admin-layout" style="display: none;">
+      <!-- Formulario de Edición de Personajes -->
+      <form id="crud-form-char" class="form-panel" onsubmit="event.preventDefault();">
+        <!-- 1. Identificación y Rango Militar -->
+        <div class="form-section">
+          <h3>1. IDENTIFICACIÓN Y RANGO MILITAR</h3>
+
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label>ID Único (Slug en minúsculas)</label>
+              <input type="text" id="c_id" class="form-input" placeholder="ej: lisa_hayes, rick_hunter" required>
+            </div>
+            <div class="form-group">
+              <label>Nombre del Personaje</label>
+              <input type="text" id="c_name" class="form-input" placeholder="ej: Lisa Hayes" required>
+            </div>
+            <div class="form-group">
+              <label>Nombre Original / Japonés</label>
+              <input type="text" id="c_japanese_name" class="form-input" placeholder="ej: Misa Hayase">
+            </div>
+          </div>
+
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label>Callsign / Indicativo Táctico</label>
+              <input type="text" id="c_callsign" class="form-input" placeholder="ej: White Falcon // Control SDF-1">
+            </div>
+            <div class="form-group">
+              <label>Categoría Militar</label>
+              <select id="c_category" class="form-select">
+                <option value="command">Oficiales y Mando (Command & Officers)</option>
+                <option value="pilots">Pilotos y Ases (Pilots & Aces)</option>
+                <option value="zentraedi">Líderes Zentraedi (Zentraedi Leaders)</option>
+                <option value="scientists">Científicos y Civiles (Scientists & Civilians)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Saga / Era Robotech</label>
+              <select id="c_series_select" class="form-select">
+                <option value="La Saga Macross (Primera Guerra Robotech)" data-en="The Macross Saga (First Robotech War)">La Saga Macross (Primera Guerra Robotech)</option>
+                <option value="Los Maestros de la Robotech (Segunda Guerra)" data-en="Robotech Masters (Second Robotech War)">Los Maestros de la Robotech (Segunda Guerra)</option>
+                <option value="La Nueva Generación / Era Invid (Tercera Guerra)" data-en="The New Generation / Invid Era (Third Robotech War)">La Nueva Generación / Era Invid (Tercera Guerra)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Rango Militar (Español)</label>
+              <input type="text" id="c_rank_es" class="form-input" placeholder="ej: Primer Oficial / Capitana (RDF) // Almirante (REF)">
+            </div>
+            <div class="form-group">
+              <label>Rango Militar (English)</label>
+              <input type="text" id="c_rank_en" class="form-input" placeholder="ej: First Officer / Captain (RDF) // Admiral (REF)">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Rol Principal / Especialidad (Español)</label>
+              <input type="text" id="c_role_es" class="form-input" placeholder="ej: Oficial Superior de Operaciones y Mando Táctico">
+            </div>
+            <div class="form-group">
+              <label>Rol Principal / Especialidad (English)</label>
+              <input type="text" id="c_role_en" class="form-input" placeholder="ej: Senior Operations & Tactical Command Officer">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Asignación Operativa (Español)</label>
+              <input type="text" id="c_assignment_es" class="form-input" placeholder="ej: SDF-1 Macross (Puente de Mando) // SDF-2 Megalord">
+            </div>
+            <div class="form-group">
+              <label>Asignación Operativa (English)</label>
+              <input type="text" id="c_assignment_en" class="form-input" placeholder="ej: SDF-1 Macross (Command Bridge) // SDF-2 Megalord">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Facción Militar</label>
+              <select id="c_faction_select" class="form-select" onchange="window.updateCharFactionFromSelect?.()">
+                <option value="U.N. Spacy" data-en="U.N. Spacy" data-logo="assets/images/ui/logo_UNSpacy.png">U.N. Spacy</option>
+                <option value="U.N. Spacy - Escuadrón Skull" data-en="U.N. Spacy - Skull Squadron" data-logo="assets/images/ui/logo_UNSpacy.png">U.N. Spacy - Escuadrón Skull</option>
+                <option value="Flota Principal Zentraedi (Boddole Zer)" data-en="Zentraedi Main Fleet" data-logo="assets/images/ui/logo_zentran.png">Flota Principal Zentraedi (Boddole Zer)</option>
+                <option value="Fuerzas Zentraedi Rebeldes (Khyron / Azonia)" data-en="Rogue Zentraedi Forces" data-logo="assets/images/ui/logo_zentran.png">Fuerzas Zentraedi Rebeldes</option>
+                <option value="Fuerza Expedicionaria Robotech (REF / Pioneer)" data-en="Robotech Expeditionary Force (REF)" data-logo="assets/images/ui/Mars_Base.png">Fuerza Expedicionaria Robotech (REF / Pioneer)</option>
+                <option value="REF - División Marte (Mars Base)" data-en="REF - Mars Base Division" data-logo="assets/images/ui/Mars_Base.png">REF - División Marte (Mars Base)</option>
+                <option value="Ejército de la Cruz del Sur" data-en="Army of the Southern Cross" data-logo="assets/images/ui/logo_UNSpacy.png">Ejército de la Cruz del Sur</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Insignia / Logo de Facción</label>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <input type="text" id="c_faction_logo" class="form-input" placeholder="assets/images/ui/... o URL" value="assets/images/ui/logo_UNSpacy.png" oninput="window.updateCharFactionLogoPreview?.()" style="flex: 1;">
+                <button type="button" class="btn-action-secondary" onclick="openAssetBrowser('c_faction_logo')" style="white-space: nowrap; padding: 8px 12px;" title="Elegir o subir logo">
+                  📁 ELEGIR
+                </button>
+                <img id="char_faction_logo_preview" src="assets/images/ui/logo_UNSpacy.png" alt="Preview" style="width: 52px; height: 52px; object-fit: contain; background: rgba(0,0,0,0.5); border: 1px solid var(--border-tactical); border-radius: 4px; padding: 3px; flex-shrink: 0;">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Foto de Portada / Retrato Principal</label>
+            <div style="display: flex; gap: 8px;">
+              <input type="text" id="c_thumbnail" class="form-input" placeholder="assets/images/personajes/... o URL externa" style="flex: 1;">
+              <button type="button" class="btn-action-secondary" onclick="openAssetBrowser('c_thumbnail')" style="white-space: nowrap; padding: 8px 14px;">
+                📁 EXPLORAR / SUBIR
+              </button>
+            </div>
+            <span style="font-size:0.75rem; color:var(--text-dim); margin-top:3px; display:block;">
+              💡 Podés buscar imágenes de la carpeta del personaje o subir una foto desde tu PC.
+            </span>
+          </div>
+        </div>
+
+        <!-- 2. Aptitudes Militares / Estadísticas (0-100) -->
+        <div class="form-section">
+          <h3>2. BARRAS TELEMÉTRICAS Y APTITUDES OPERATIVAS (0 - 100)</h3>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Mando y Liderazgo Táctico (0-100)</label>
+              <input type="number" id="c_stat_command" min="0" max="100" class="form-input" value="90">
+            </div>
+            <div class="form-group">
+              <label>Estrategia e Inteligencia Militar (0-100)</label>
+              <input type="number" id="c_stat_strategy" min="0" max="100" class="form-input" value="90">
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Resolución y Templanza bajo Fuego (0-100)</label>
+              <input type="number" id="c_stat_resolve" min="0" max="100" class="form-input" value="85">
+            </div>
+            <div class="form-group">
+              <label>Habilidad de Vuelo y Pilotaje (0-100)</label>
+              <input type="number" id="c_stat_piloting" min="0" max="100" class="form-input" value="70">
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Datos Personales y Biométricos -->
+        <div class="form-section">
+          <h3>3. DATOS PERSONALES Y BIOMÉTRICOS</h3>
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label>Fecha de Nacimiento</label>
+              <input type="text" id="c_birth_date" class="form-input" placeholder="ej: 3 de Marzo de 1989">
+            </div>
+            <div class="form-group">
+              <label>Grupo Sanguíneo</label>
+              <input type="text" id="c_blood_type" class="form-input" placeholder="ej: AB+, O+, A-">
+            </div>
+            <div class="form-group">
+              <label>Estatura y Peso</label>
+              <div style="display: flex; gap: 8px;">
+                <input type="text" id="c_height" class="form-input" placeholder="ej: 1,68 m">
+                <input type="text" id="c_weight" class="form-input" placeholder="ej: 49 kg">
+              </div>
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Lugar de Origen / Nacimiento (Español)</label>
+              <input type="text" id="c_birth_place_es" class="form-input" placeholder="ej: Isla Macross / Base Militar del Pacífico">
+            </div>
+            <div class="form-group">
+              <label>Lugar de Origen / Nacimiento (English)</label>
+              <input type="text" id="c_birth_place_en" class="form-input" placeholder="ej: Macross Island / Pacific Military Base">
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Resumen y Dossier Biográfico -->
+        <div class="form-section">
+          <h3>4. DOSSIER BIOGRÁFICO Y EVALUACIÓN</h3>
+          <div class="form-group">
+            <label>Resumen Breve para Card de Catálogo (Español, ~150 caracteres)</label>
+            <textarea id="c_summary_es" class="form-textarea" style="min-height: 60px;" placeholder="Breve síntesis táctica que aparece en la tarjeta del catálogo..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Resumen Breve para Card de Catálogo (English)</label>
+            <textarea id="c_summary_en" class="form-textarea" style="min-height: 60px;" placeholder="Brief personnel overview for card display..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Biografía e Historial Operativo Completo (Español)</label>
+            <textarea id="c_overview_es" class="form-textarea" style="min-height: 100px;" placeholder="Historia militar, orígenes, desarrollo y trascendencia..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Biografía e Historial Operativo Completo (English)</label>
+            <textarea id="c_overview_en" class="form-textarea" style="min-height: 100px;" placeholder="Full military biography and service background..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Evaluación Táctica y Desempeño en Batalla (Español)</label>
+            <textarea id="c_tactical_es" class="form-textarea" style="min-height: 90px;" placeholder="Análisis de combate, liderazgo, aptitud estratégica y momentos clave..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Evaluación Táctica y Desempeño en Batalla (English)</label>
+            <textarea id="c_tactical_en" class="form-textarea" style="min-height: 90px;" placeholder="Combat evaluation, tactical decisions, and field leadership..."></textarea>
+          </div>
+        </div>
+
+        <!-- 5. Hoja de Servicio Militar -->
+        <div class="form-section">
+          <h3>5. HOJA DE SERVICIO Y CRONOLOGÍA MILITAR</h3>
+          <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 12px;">
+            Registra las etapas militares del personaje ordenadas cronológicamente:
+          </p>
+          <div id="char-service-container"></div>
+          <button type="button" class="btn-add-item" onclick="addCharServiceRow()">+ AGREGAR ETAPA DE SERVICIO</button>
+        </div>
+
+        <!-- 6. Vínculos y Relaciones Clave -->
+        <div class="form-section">
+          <h3>6. VÍNCULOS Y RELACIONES CLAVE</h3>
+          <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 12px;">
+            Personajes vinculados táctica, afectiva o jerárquicamente:
+          </p>
+          <div id="char-relations-container"></div>
+          <button type="button" class="btn-add-item" onclick="addCharRelationRow()">+ AGREGAR VÍNCULO</button>
+        </div>
+
+        <!-- 7. Condecoraciones -->
+        <div class="form-section">
+          <h3>7. CONDECORACIONES Y RECONOCIMIENTOS</h3>
+          <div class="form-group">
+            <label>Condecoraciones (Una por línea)</label>
+            <textarea id="c_decorations" class="form-textarea" style="min-height: 80px;" placeholder="Medalla de Honor de la RDF&#10;Citación Presidencial al Valor Táctico&#10;Cruz por la Defensa Orbital de la Tierra"></textarea>
+          </div>
+        </div>
+
+        <!-- 8. Galería Fotográfica y Archivo Visual -->
+        <div class="form-section">
+          <h3>8. ARCHIVO VISUAL Y GALERÍA FOTOGRÁFICA</h3>
+          <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 12px;">
+            Fotos, retratos oficiales, tomas en el puente y capturas operativas:
+          </p>
+          <div id="char-gallery-container"></div>
+          <div style="display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap;">
+            <button type="button" class="btn-action-primary" onclick="openAssetBrowserForNewCharGalleryItem()" style="font-size: 0.78rem;">
+              📁 ELEGIR O SUBIR FOTO DEL PROYECTO
+            </button>
+            <button type="button" class="btn-add-item" onclick="addCharGalleryRow()">
+              + FILA MANUAL VACÍA
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Sidebar Vista Previa y Guardado del Personaje -->
+      <aside class="preview-sidebar">
+        <div class="preview-box">
+          <h4>VISTA PREVIA DEL EXPEDIENTE</h4>
+          <div id="admin-live-char-card"></div>
+        </div>
+
+        <div class="preview-box">
+          <h4>GESTIÓN DIRECTA EN DISCO</h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px;">
+            Guarda el expediente directamente en tu disco local. Actualiza <code>data/personajes/{id}.json</code> y <code>data/manifest_personajes.json</code> de manera instantánea:
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <button id="btn-save-char-direct" class="btn-action-primary" style="background: var(--un-cyan); color: #000; box-shadow: 0 0 15px var(--un-cyan-glow);">
+              💾 GUARDAR PERSONAJE EN DISCO (1 CLIC)
+            </button>
+            <button id="btn-download-char-json" class="btn-action-secondary" style="justify-content: center;">
+              ⬇ DESCARGAR .JSON
+            </button>
+          </div>
+
+          <!-- Mensaje de estado / terminal militar para Personajes -->
+          <div id="git-status-console-char" style="display:none; margin-top:14px; background:rgba(0,0,0,0.85); border:1px solid var(--border-tactical); padding:10px; border-radius:2px; font-family:var(--font-mono); font-size:0.75rem; color:#fff; max-height:150px; overflow-y:auto; white-space:pre-wrap;"></div>
+
+          <div class="sync-note" style="margin-top: 14px;">
+            <strong>Arquitectura Ligera:</strong>
+            <br><span style="font-size:0.75rem; color:var(--text-dim);">Al guardar, la información ligera (resumen y aptitudes) se actualiza en el manifiesto principal para cargas ultrarrápidas, y el expediente detallado se almacena en su archivo JSON individual.</span>
+          </div>
+        </div>
+      </aside>
+    </div>
   </div>
 
   <!-- MODAL PARA AÑADIR NUEVAS CATEGORÍAS/FACCIONES [+] -->
@@ -770,7 +1236,7 @@
     </div>
   </div>
 
-  <script src="js/audio.js?v=1.0.4"></script>
-  <script src="js/admin.js?v=1.0.4"></script>
+  <script src="js/audio.js?v=1.0.8"></script>
+  <script src="js/admin.js?v=1.0.8"></script>
 </body>
 </html>

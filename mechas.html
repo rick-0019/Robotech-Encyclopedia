@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotech Tactical Codex // Base de Datos SDF-1</title>
+  <link rel="icon" type="image/png" href="assets/images/ui/logo_UNSpacy.png">
+  
+  <!-- Tipografías Tácticas Futuristas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- Hojas de Estilos HUD con Cache Busting -->
+  <link rel="stylesheet" href="css/style.css?v=1.0.8">
+  <link rel="stylesheet" href="css/hud-components.css?v=1.0.8">
+  <link rel="stylesheet" href="css/comparator.css?v=1.0.8">
+</head>
+<body>
+  <!-- Borde Superior de Alerta -->
+  <div class="hud-border-top"></div>
+
+  <div class="container">
+    <!-- HEADER MILITAR TÁCTICO -->
+    <header class="tactical-header">
+      <div class="brand-section">
+        <div class="un-spacy-insignia">
+          <img src="assets/images/ui/logo_UNSpacy.png" alt="Robotech Defense Force Insignia" class="insignia-img">
+        </div>
+        <div class="brand-text">
+          <h1 data-i18n="system_title">ROBOTECH <span>TACTICAL CODEX</span></h1>
+          <div class="system-status">
+            <span class="status-dot"></span>
+            <span data-i18n="status_online">ONLINE // TACTICAL SECTOR ALPHA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Botón Volver al Portal de Inicio -->
+        <a href="index.html" class="portal-nav-btn" style="text-decoration: none; padding: 7px 14px; background: rgba(0,240,255,0.1); border: 1px solid var(--un-cyan); color: var(--un-cyan); font-family: var(--font-hud); font-size: 0.75rem; letter-spacing: 1.5px; border-radius: 2px; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition-fast);" onmouseover="this.style.background='var(--un-cyan)'; this.style.color='#000';" onmouseout="this.style.background='rgba(0,240,255,0.1)'; this.style.color='var(--un-cyan)';">⮌ INICIO</a>
+
+        <!-- Selector Bilingüe ES / EN -->
+        <button class="lang-switch active" data-lang="es">ES</button>
+        <button class="lang-switch" data-lang="en">EN</button>
+        
+        <!-- Toggle Efectos de Sonido Web Audio API -->
+        <button class="audio-switch" id="audio-switch" data-i18n="sound_on">SFX: ON</button>
+        
+        <!-- Acceso al Gestor CRUD Local (Solo visible en entorno local) -->
+        <a href="admin.html?module=mechas" id="admin-link-btn" class="admin-link-btn" data-i18n="admin_btn" style="display: none;">⚙ GESTIÓN CRUD LOCAL</a>
+      </div>
+    </header>
+
+    <!-- BARRA DE HERRAMIENTAS: CATEGORÍAS Y BÚSQUEDA -->
+    <section class="tactical-toolbar">
+      <div class="category-nav">
+        <button class="cat-btn active" data-category="all" data-i18n="all_units">TODOS LOS MECHAS</button>
+        <button class="cat-btn" data-category="destroid" data-i18n="destroids">DESTROIDS</button>
+        <button class="cat-btn" data-category="veritech" data-i18n="veritechs">VERITECHS / VALKYRIES</button>
+        <button class="cat-btn" data-category="zentraedi" data-i18n="zentraedi">FUERZAS ZENTRAEDI</button>
+      </div>
+
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="ESCANEAR BASE DE DATOS...">
+      </div>
+    </section>
+
+    <!-- METADATOS Y CONTADOR DE RESULTADOS -->
+    <div class="results-meta">
+      <div>
+        <span data-i18n="results_found">UNIDADES IDENTIFICADAS</span>: 
+        <span id="results-count" class="highlight">0 / 0</span>
+      </div>
+      <div>ENLACE TÁCTICO // PROTOCOLO DE DESPLIEGUE ACTIVO</div>
+    </div>
+
+    <!-- CUADRÍCULA DE MECHAS -->
+    <main id="mecha-grid" class="mecha-grid">
+      <!-- Inyectado dinámicamente por js/app.js -->
+    </main>
+
+    <!-- FOOTER TÁCTICO -->
+    <footer class="tactical-footer">
+      <div class="footer-left">
+        <span>© U.N. SPACY RECON ARCHIVES // SAGA ROBOTECH & MACROSS</span>
+      </div>
+      <div class="footer-right">
+        <span>HOSTED ON GITHUB PAGES</span>
+        <a href="https://github.com/rick-0019" target="_blank">[GITHUB: rick-0019]</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ========================================================================
+       BARRA INFERIOR FLOTANTE DEL COMPARADOR (DOCK)
+       ======================================================================== -->
+  <div id="comparator-dock" class="comparator-dock">
+    <div class="dock-left">
+      <span class="dock-title">⚔ COMPARADOR TÁCTICO:</span>
+      <div id="dock-slots" class="dock-slots">
+        <!-- Inyectado por js/comparator.js -->
+      </div>
+    </div>
+    <div class="dock-actions">
+      <button id="btn-clear-compare" class="btn-clear-compare">LIMPIAR</button>
+      <button id="btn-open-compare" class="btn-open-compare">COMPARAR AHORA (0/3)</button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL DE COMPARACIÓN EN TIEMPO REAL (MATRIZ GRÁFICA)
+       ======================================================================== -->
+  <div id="compare-modal-backdrop" class="compare-modal-backdrop">
+    <div class="compare-modal">
+      <div class="compare-header">
+        <div class="compare-title-area">
+          <h2>MATRIZ COMPARATIVA DE MECHAS</h2>
+          <span>TELEMETRÍA TÁCTICA FRENTE A FRENTE</span>
+        </div>
+        <button id="btn-close-compare-modal" class="btn-close-modal">✕</button>
+      </div>
+      <div id="compare-content-scroll" class="compare-content-scroll">
+        <!-- Inyectado dinámicamente con barras y tabla por js/comparator.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL DE FICHA TÉCNICA DETALLADA (DOSSIER)
+       ======================================================================== -->
+  <div id="dossier-modal-backdrop" class="dossier-modal-backdrop">
+    <div class="dossier-modal">
+      <div class="dossier-header">
+        <div class="dossier-title-area">
+          <img id="dossier-faction-logo" class="dossier-faction-logo" src="" alt="Insignia de Facción" width="34" height="34" style="width:34px; height:34px; max-width:34px; max-height:34px; object-fit:contain; display:none;">
+          <div class="dossier-title-text">
+            <h2 id="dossier-mecha-name">NOMBRE DEL MECHA</h2>
+            <span id="dossier-mecha-alias">DESIGNACIÓN MILITAR</span>
+          </div>
+        </div>
+        <button id="btn-close-dossier" class="btn-close-modal">✕</button>
+      </div>
+
+      <!-- Pestañas de Navegación del Dossier -->
+      <nav class="dossier-tabs">
+        <button class="dossier-tab-btn active" data-tab="pane-overview" data-i18n="tab_overview">VISIÓN GENERAL Y LORE</button>
+        <button class="dossier-tab-btn" data-tab="pane-mdc" data-i18n="tab_mdc">BLINDAJE C.D.M. (LOCALIZACIÓN)</button>
+        <button class="dossier-tab-btn" data-tab="pane-weapons" data-i18n="tab_weapons">SISTEMAS DE ARMAS</button>
+        <button class="dossier-tab-btn" data-tab="pane-sensors" data-i18n="tab_sensors">SENSORES Y ELECTRÓNICA</button>
+        <button class="dossier-tab-btn" data-tab="pane-gallery" data-i18n="tab_gallery">GALERÍA DE PLANOS Y RENDERS</button>
+      </nav>
+
+      <div class="dossier-content-scroll">
+        <div id="pane-overview" class="tab-pane active"></div>
+        <div id="pane-mdc" class="tab-pane"></div>
+        <div id="pane-weapons" class="tab-pane"></div>
+        <div id="pane-sensors" class="tab-pane"></div>
+        <div id="pane-gallery" class="tab-pane"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       VISOR LIGHTBOX DE PLANOS E IMÁGENES EN ALTA RESOLUCIÓN
+       ======================================================================== -->
+  <div id="lightbox-backdrop" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.95); z-index:1200; align-items:center; justify-content:center; flex-direction:column; padding:20px; cursor:zoom-out;">
+    <img id="lightbox-image" src="" style="max-width:92vw; max-height:85vh; border:2px solid var(--un-cyan); border-radius:4px; box-shadow:0 0 30px rgba(0,240,255,0.4);" alt="Lightbox">
+    <div id="lightbox-caption" style="margin-top:14px; color:#fff; font-family:var(--font-hud); letter-spacing:1.5px; font-size:1rem; text-shadow:0 0 8px var(--un-cyan);"></div>
+  </div>
+
+  <!-- Motores JavaScript con Cache Busting -->
+  <script src="js/audio.js?v=1.0.8"></script>
+  <script src="js/comparator.js?v=1.0.8"></script>
+  <script src="js/app.js?v=1.0.8"></script>
+</body>
+</html>

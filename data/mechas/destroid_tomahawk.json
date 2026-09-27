@@ -3,6 +3,8 @@
   "name": "Tomahawk",
   "alias": "MBR-04-VI Heavy Battle Destroid",
   "category": "destroid",
+  "is_variable": false,
+  "modes": null,
   "series": {
     "es": "La Saga Macross (Primera Guerra Robotech)",
     "en": "The Macross Saga (First Robotech War)"
@@ -17,15 +19,52 @@
   },
   "crew": {
     "es": "Uno o dos (Piloto y Oficial de Sistemas de Armas)",
-    "en": "One or two (Pilot and Weapon Systems Officer)"
+    "en": "Uno o dos (Piloto y Oficial de Sistemas de Armas)"
   },
-  "thumbnail": "https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?w=600&auto=format&fit=crop&q=80",
+  "thumbnail": "assets/images/mechas/Tomahawk/6d61a5d62aca2e39ace6d6298680a5c7.jpg",
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?w=1000&auto=format&fit=crop&q=80",
+      "url": "assets/images/mechas/Tomahawk/6d61a5d62aca2e39ace6d6298680a5c7.jpg",
       "title_es": "Ilustración Táctica del MBR-04 Tomahawk",
       "title_en": "MBR-04 Tomahawk Tactical Artwork",
       "type": "artwork"
+    },
+    {
+      "url": "assets/images/mechas/Tomahawk/620d51198ddcffc59846830788321496.jpg",
+      "title_es": "620d51198ddcffc59846830788321496",
+      "title_en": "620d51198ddcffc59846830788321496",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/Tomahawk/b73f7addf6b454c465b84874c2001b10.jpg",
+      "title_es": "b73f7addf6b454c465b84874c2001b10",
+      "title_en": "b73f7addf6b454c465b84874c2001b10",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/Tomahawk/d75150a73bac4706f9dce1f2bb05cbcc.jpg",
+      "title_es": "d75150a73bac4706f9dce1f2bb05cbcc",
+      "title_en": "d75150a73bac4706f9dce1f2bb05cbcc",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/Tomahawk/a86f971a87d8472f2a34dacff97369b2.jpg",
+      "title_es": "a86f971a87d8472f2a34dacff97369b2",
+      "title_en": "a86f971a87d8472f2a34dacff97369b2",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/Tomahawk/3e8a411af99d04c13628aa4cca604dcf.jpg",
+      "title_es": "3e8a411af99d04c13628aa4cca604dcf",
+      "title_en": "3e8a411af99d04c13628aa4cca604dcf",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/Tomahawk/c69c8cc6a4cd84464b963eaa61c1abd7.jpg",
+      "title_es": "c69c8cc6a4cd84464b963eaa61c1abd7",
+      "title_en": "c69c8cc6a4cd84464b963eaa61c1abd7",
+      "type": "render"
     }
   ],
   "stats": {
@@ -33,74 +72,62 @@
       "value": 112,
       "unit_es": "km/h",
       "unit_en": "km/h",
-      "rating": 35,
-      "label_es": "112 km/h (70 mph)",
-      "label_en": "112 km/h (70 mph)"
+      "rating": 37,
+      "label_es": "112 km/h",
+      "label_en": "112 km/h"
     },
     "armor": {
       "value": 400,
       "unit_es": "C.D.M.",
       "unit_en": "M.D.C.",
-      "rating": 85,
-      "label_es": "400 C.D.M. Cuerpo / 1.580 Total",
-      "label_en": "400 M.D.C. Main Body / 1,580 Total"
+      "rating": 80,
+      "label_es": "400 C.D.M. Cuerpo",
+      "label_en": "400 M.D.C. Main Body"
     },
     "firepower": {
       "value": 95,
-      "unit_es": "Pts / Rayos",
-      "unit_en": "Pts / Beams",
+      "unit_es": "Pts",
+      "unit_en": "Pts",
       "rating": 95,
-      "label_es": "95 Pts (2x Rayos 127mm + 36 Misiles)",
-      "label_en": "95 Pts (2x 127mm Beams + 36 Missiles)"
+      "label_es": "95 Pts",
+      "label_en": "95 Pts"
     },
     "range": {
       "value": 10,
       "unit_es": "km",
       "unit_en": "km",
-      "rating": 80,
-      "label_es": "10 km (Cañones de Rayos)",
-      "label_en": "10 km (Beam Cannons)"
+      "rating": 70,
+      "label_es": "10 km",
+      "label_en": "10 km"
     },
     "sensors": {
       "value": 100,
       "unit_es": "km",
       "unit_en": "km",
-      "rating": 70,
-      "label_es": "100 km Radar Táctico",
-      "label_en": "100 km Tactical Radar"
+      "rating": 29,
+      "label_es": "100 km Radar",
+      "label_en": "100 km Radar"
     },
     "mobility": {
       "value": 25,
       "unit_es": "Pts",
       "unit_en": "Pts",
       "rating": 25,
-      "label_es": "25 Pts (Muy Baja - Asedio)",
-      "label_en": "25 Pts (Very Low - Siege)"
+      "label_es": "25 Pts",
+      "label_en": "25 Pts"
     }
   },
   "dimensions": {
     "height": {
-      "metric": "11,27 m",
-      "imperial": "37,0 pies"
-    },
-    "width": {
-      "metric": "7,90 m",
-      "imperial": "25,9 pies"
-    },
-    "length": {
-      "metric": "5,10 m",
-      "imperial": "16,7 pies"
+      "metric": "11,27 m"
     },
     "weight": {
-      "metric": "31,3 toneladas",
-      "imperial": "31.3 tons"
+      "metric": "31,3 toneladas"
     }
   },
   "powerplant": {
     "engine_es": "Reactor Termonuclear Mitsubishi MT-828",
-    "engine_en": "Mitsubishi MT-828 Thermonuclear Reactor",
-    "output_es": "Potencia = 2800 SHP",
-    "output_en": "Output = 2800 SHP"
+    "engine_en": "Mitsubishi MT-828 Thermonuclear Reactor"
   },
   "lore": {
     "overview_es": "El MBR-04 Tomahawk es el pilar blindado de primera línea de las fuerzas terrestres de la U.N. Spacy y la defensa de cubierta del SDF-1. Diseñado como el principal mecha de combate pesado, monta dos devastadores cañones de rayos de partículas como brazos principales, complementados con lanzadores de misiles y cañones secundarios.",
@@ -112,56 +139,36 @@
     {
       "location_es": "Cuerpo Principal (*)",
       "location_en": "Main Body (*)",
-      "mdc": 400,
-      "notes_es": "Destrucción total si se agota.",
-      "notes_en": "Total destruction if depleted."
+      "mdc": 400
     },
     {
       "location_es": "Brazos / Cañones de Partículas (2)",
       "location_en": "Arms / Particle Cannons (2)",
-      "mdc": 200,
-      "notes_es": "200 C.D.M. cada uno.",
-      "notes_en": "200 M.D.C. each."
+      "mdc": 200
     },
     {
       "location_es": "Piernas (2)",
       "location_en": "Legs (2)",
-      "mdc": 250,
-      "notes_es": "250 C.D.M. cada una.",
-      "notes_en": "250 M.D.C. each."
+      "mdc": 250
     },
     {
       "location_es": "Lanzadores de Misiles Superiores (2)",
       "location_en": "Upper Missile Launchers (2)",
-      "mdc": 120,
-      "notes_es": "120 C.D.M. cada uno.",
-      "notes_en": "120 M.D.C. each."
+      "mdc": 120
     }
   ],
   "weapons": [
     {
       "name_es": "Cañones Gemelos de Rayos de Partículas de 127mm",
       "name_en": "Twin 127mm Particle Beam Cannons",
-      "type_es": "Arma Pesada de Energía",
-      "type_en": "Heavy Energy Weapon",
       "damage": "4D10x2 por disparo simultáneo",
-      "range": "10 km",
-      "rate_of_fire_es": "Hasta 4 disparos por asalto",
-      "rate_of_fire_en": "Up to 4 shots per melee round",
-      "payload_es": "Ilimitada",
-      "payload_en": "Unlimited"
+      "range": "10 km"
     },
     {
       "name_es": "Lanzamisiles de Corto Alcance (Hombros)",
       "name_en": "Short Range Missile Launchers (Shoulders)",
-      "type_es": "Misiles Guiados de Fragmentación",
-      "type_en": "Guided Fragmentation Missiles",
       "damage": "1D6x10 por misil",
-      "range": "8 km",
-      "rate_of_fire_es": "Andanadas de 2 a 12",
-      "rate_of_fire_en": "Volleys of 2 to 12",
-      "payload_es": "24 misiles en total",
-      "payload_en": "24 missiles total"
+      "range": "8 km"
     }
   ],
   "special_equipment": [
@@ -171,6 +178,5 @@
       "description_es": "Montado en la cabeza para adquisición de blancos a larga distancia.",
       "description_en": "Head-mounted for long distance target acquisition."
     }
-  ],
-  "faction_logo": "assets/images/ui/logo_UNSpacy.png"
+  ]
 }

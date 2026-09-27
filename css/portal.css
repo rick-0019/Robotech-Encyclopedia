@@ -1,0 +1,419 @@
+/* ==========================================================================
+   ROBOTECH TACTICAL MAINFRAME - PORTAL DE INICIO (LANDING GATEWAY)
+   Estética militar Sci-Fi HUD pura para el acceso central del sitio
+   ========================================================================== */
+
+.portal-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 20px);
+  padding: 0 20px 30px 20px;
+  max-width: 1720px;
+  margin: 0 auto;
+}
+
+.portal-hero {
+  text-align: center;
+  margin: 16px 0 24px 0;
+  position: relative;
+}
+
+.portal-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 14px;
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid var(--un-cyan);
+  border-radius: 2px;
+  font-family: var(--font-hud);
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  color: var(--un-cyan);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.portal-hero-title {
+  font-family: var(--font-hud);
+  font-size: 2.1rem;
+  letter-spacing: 3px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+  text-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+.portal-hero-title span {
+  color: var(--un-cyan);
+  text-shadow: 0 0 25px var(--un-cyan-glow);
+}
+
+.portal-hero-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+  max-width: 860px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   COLUMNAS TÁCTICAS EXPANDIBLES (ACCORDION COLUMNS GATEWAY)
+   -------------------------------------------------------------------------- */
+.portal-columns-container {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+  min-height: 600px;
+  position: relative;
+}
+
+.portal-column {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  background: #020712;
+  transition: flex 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s ease, box-shadow 0.4s ease;
+  min-width: 160px;
+}
+
+.portal-column:hover {
+  flex: 2.2;
+  border-color: var(--un-cyan);
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.35), inset 0 0 25px rgba(0, 240, 255, 0.15);
+}
+
+/* Capa de Imagen de Fondo (Reemplazable por el usuario) */
+.portal-column-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: brightness(0.55) saturate(0.85);
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.4s ease;
+  z-index: 1;
+}
+
+.portal-column:hover .portal-column-bg {
+  transform: scale(1.08);
+  filter: brightness(0.82) saturate(1.1);
+}
+
+/* Máscara Degradada Táctica & Viñeta */
+.portal-column-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, 
+    rgba(2, 7, 18, 0.8) 0%, 
+    rgba(2, 7, 18, 0.25) 30%, 
+    rgba(2, 7, 18, 0.75) 65%, 
+    rgba(2, 7, 18, 0.98) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+  transition: background 0.4s ease;
+}
+
+.portal-column:hover .portal-column-overlay {
+  background: linear-gradient(180deg, 
+    rgba(2, 7, 18, 0.6) 0%, 
+    rgba(2, 7, 18, 0.15) 30%, 
+    rgba(2, 7, 18, 0.6) 60%, 
+    rgba(2, 7, 18, 0.95) 100%
+  );
+}
+
+/* Efecto de Líneas de Escaneo Holográficas */
+.portal-column-scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.18) 0px,
+    rgba(0, 0, 0, 0.18) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  opacity: 0.65;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Corchetes Militares HUD en las 4 Esquinas */
+.portal-bracket {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--un-cyan);
+  border-style: solid;
+  z-index: 5;
+  pointer-events: none;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.portal-bracket.tl { top: 8px; left: 8px; border-width: 2px 0 0 2px; }
+.portal-bracket.tr { top: 8px; right: 8px; border-width: 2px 2px 0 0; }
+.portal-bracket.bl { bottom: 8px; left: 8px; border-width: 0 0 2px 2px; }
+.portal-bracket.br { bottom: 8px; right: 8px; border-width: 0 2px 2px 0; }
+
+.portal-column:hover .portal-bracket {
+  border-color: #fff;
+  filter: drop-shadow(0 0 6px var(--un-cyan));
+  transform: scale(1.15);
+}
+
+/* Área Superior de la Columna */
+.portal-col-top {
+  position: relative;
+  z-index: 4;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.portal-sector-tag {
+  font-family: var(--font-hud);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  color: var(--un-cyan);
+  background: rgba(5, 14, 28, 0.88);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  padding: 5px 12px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.portal-col-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(5, 14, 28, 0.88);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-hud);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--un-cyan);
+  transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.portal-column:hover .portal-col-icon {
+  transform: scale(1.1);
+  border-color: var(--un-cyan);
+  color: #fff;
+  box-shadow: 0 0 12px var(--un-cyan-glow);
+}
+
+/* Área Inferior con Título, Estado y Botón de Acción */
+.portal-col-content {
+  position: relative;
+  z-index: 4;
+  padding: 24px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.portal-col-title {
+  font-family: var(--font-hud);
+  font-size: 1.35rem;
+  color: #fff;
+  letter-spacing: 1.5px;
+  line-height: 1.25;
+  margin: 0;
+  text-transform: uppercase;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.portal-column:hover .portal-col-title {
+  color: #fff;
+  text-shadow: 0 0 15px rgba(0, 240, 255, 0.7);
+}
+
+.portal-col-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--skull-amber);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.portal-col-desc {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.portal-column:hover .portal-col-desc {
+  max-height: 100px;
+  opacity: 1;
+}
+
+.portal-col-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  width: fit-content;
+}
+
+.portal-col-status.active-status {
+  color: var(--radar-green);
+  background: rgba(5, 24, 18, 0.85);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.portal-col-status.pending-status {
+  color: var(--skull-amber);
+  background: rgba(26, 16, 4, 0.85);
+  border: 1px solid rgba(255, 157, 0, 0.3);
+}
+
+.portal-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.portal-col-status.active-status .portal-status-dot {
+  background: var(--radar-green);
+  box-shadow: 0 0 8px var(--radar-green);
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+.portal-col-status.pending-status .portal-status-dot {
+  background: var(--skull-amber);
+  box-shadow: 0 0 8px var(--skull-amber);
+}
+
+.portal-col-btn {
+  margin-top: 6px;
+  padding: 11px 18px;
+  font-family: var(--font-hud);
+  font-size: 0.82rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.portal-col-btn.primary {
+  background: rgba(0, 240, 255, 0.15);
+  border: 1px solid var(--un-cyan);
+  color: var(--un-cyan);
+}
+
+.portal-column:hover .portal-col-btn.primary {
+  background: var(--un-cyan);
+  color: #000;
+  font-weight: 700;
+  box-shadow: 0 0 22px var(--un-cyan-glow);
+}
+
+.portal-col-btn.secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-muted);
+}
+
+.portal-column:hover .portal-col-btn.secondary {
+  border-color: var(--skull-amber);
+  color: var(--skull-amber);
+  background: rgba(255, 157, 0, 0.12);
+}
+
+/* Modal Informativo para Sectores Clasificados / En Desarrollo */
+.portal-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: rgba(5, 12, 24, 0.95);
+  border: 1px solid var(--skull-amber);
+  border-left: 4px solid var(--skull-amber);
+  padding: 14px 20px;
+  border-radius: 3px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: none;
+  animation: slideUp 0.3s ease;
+}
+
+.portal-toast.show {
+  display: block;
+}
+
+.portal-toast h4 {
+  font-family: var(--font-hud);
+  color: var(--skull-amber);
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  margin: 0 0 4px 0;
+}
+
+.portal-toast p {
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE (TABLETS & SMARTPHONES)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .portal-columns-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .portal-column {
+    min-height: 240px;
+  }
+
+  .portal-column:hover {
+    flex: 1;
+    min-height: 300px;
+  }
+
+  .portal-col-desc {
+    max-height: 100px;
+    opacity: 1;
+  }
+}

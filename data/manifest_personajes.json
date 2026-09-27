@@ -1,0 +1,73 @@
+{
+  "system_version": "1.0.0",
+  "database_name": "ROBOTECH PERSONNEL ARCHIVE",
+  "updated_at": "2026-09-27",
+  "categories": [
+    {
+      "id": "all",
+      "label_es": "Todos los Expedientes",
+      "label_en": "All Dossiers"
+    },
+    {
+      "id": "command",
+      "label_es": "Oficiales y Mando",
+      "label_en": "Command & Officers"
+    },
+    {
+      "id": "pilots",
+      "label_es": "Pilotos y Ases",
+      "label_en": "Pilots & Aces"
+    },
+    {
+      "id": "zentraedi",
+      "label_es": "Líderes Zentraedi",
+      "label_en": "Zentraedi Leaders"
+    },
+    {
+      "id": "scientists",
+      "label_es": "Científicos y Civiles",
+      "label_en": "Scientists & Civilians"
+    }
+  ],
+  "characters": [
+    {
+      "id": "lisa_hayes",
+      "name": "Lisa Hayes",
+      "japanese_name": "Misa Hayase",
+      "category": "command",
+      "rank": {
+        "es": "Primer Oficial / Capitana (RDF) // Almirante (REF)",
+        "en": "First Officer / Captain (RDF) // Admiral (REF)"
+      },
+      "role": {
+        "es": "Oficial Superior de Operaciones y Mando Táctico",
+        "en": "Senior Operations & Tactical Command Officer"
+      },
+      "faction": {
+        "es": "U.N. Spacy",
+        "en": "U.N. Spacy"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "SDF-1 Macross (Puente de Mando) // SDF-2 Megalord",
+        "en": "SDF-1 Macross (Command Bridge) // SDF-2 Megalord"
+      },
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/lisa_hayes/lisa_puente.jpg",
+      "summary": {
+        "es": "Lisa Hayes es la mente táctica más brillante de la Fuerza de Defensa Robotech durante la Primera Guerra Robotech. Hija del almirante Donald Hayes, cre...",
+        "en": "Lisa Hayes is the sharpest tactical mind within the Robotech Defense Force during the First Robotech War. Daughter of Admiral Donald Hayes, she grew u..."
+      },
+      "stats": {
+        "command": 96,
+        "strategy": 98,
+        "resolve": 92,
+        "piloting": 68
+      },
+      "dataFile": "data/personajes/lisa_hayes.json"
+    }
+  ]
+}

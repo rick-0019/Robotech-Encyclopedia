@@ -21,6 +21,12 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=BASE_DIR, **kwargs)
 
+    def end_headers(self):
+        self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
+        self.send_header('Pragma', 'no-cache')
+        self.send_header('Expires', '0')
+        super().end_headers()
+
     def do_GET(self):
         if self.path.startswith('/api/browse-images'):
             self.handle_browse_images()
@@ -30,6 +36,8 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_POST(self):
         if self.path == '/api/save':
             self.handle_save()
+        elif self.path == '/api/save-character':
+            self.handle_save_character()
         elif self.path == '/api/git-push':
             self.handle_git_push()
         elif self.path == '/api/upload-image':
@@ -119,11 +127,96 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
         except Exception as e:
             self.send_json_response(500, {"success": False, "error": str(e)})
 
+    def handle_save_character(self):
+        try:
+            content_length = int(self.headers.get('Content-Length', 0))
+            body = self.rfile.read(content_length).decode('utf-8')
+            payload = json.loads(body)
+            self.save_character_data(payload)
+        except Exception as e:
+            self.send_json_response(500, {"success": False, "error": str(e)})
+
+    def save_character_data(self, payload):
+        char = payload.get('character')
+        if not char or not char.get('id'):
+            raise ValueError("Datos de personaje o ID faltante")
+
+        char_id = char['id']
+
+        # 1. Guardar data/personajes/{id}.json
+        char_dir = os.path.join(BASE_DIR, 'data', 'personajes')
+        os.makedirs(char_dir, exist_ok=True)
+        char_file = os.path.join(char_dir, f"{char_id}.json")
+        with open(char_file, 'w', encoding='utf-8') as f:
+            json.dump(char, f, indent=2, ensure_ascii=False)
+
+        # 2. Actualizar data/manifest_personajes.json
+        manifest_file = os.path.join(BASE_DIR, 'data', 'manifest_personajes.json')
+        manifest_data = {}
+        if os.path.exists(manifest_file):
+            with open(manifest_file, 'r', encoding='utf-8') as f:
+                manifest_data = json.load(f)
+
+        if 'characters' not in manifest_data:
+            manifest_data['characters'] = []
+
+        stats_obj = char.get('stats', {})
+        aptitudes = char.get('aptitudes', {})
+        summary_item = {
+            "id": char["id"],
+            "name": char["name"],
+            "japanese_name": char.get("japanese_name", ""),
+            "category": char.get("category", "command"),
+            "rank": char.get("rank", {}),
+            "role": char.get("role", {}),
+            "faction": char.get("faction", {}),
+            "faction_logo": char.get("faction_logo", "assets/images/ui/logo_UNSpacy.png"),
+            "assignment": char.get("assignment", {}),
+            "series": char.get("series", {}),
+            "thumbnail": char.get("thumbnail", ""),
+            "summary": {
+                "es": (char.get("summary", {}).get("es") or char.get("lore", {}).get("overview_es") or "")[:150] + "...",
+                "en": (char.get("summary", {}).get("en") or char.get("lore", {}).get("overview_en") or "")[:150] + "..."
+            },
+            "stats": {
+                "command": stats_obj.get("command") or aptitudes.get("command", {}).get("value", 90),
+                "strategy": stats_obj.get("strategy") or aptitudes.get("strategy", {}).get("value", 90),
+                "resolve": stats_obj.get("resolve") or aptitudes.get("resolve", {}).get("value", 90),
+                "piloting": stats_obj.get("piloting") or aptitudes.get("piloting", {}).get("value", 70)
+            },
+            "dataFile": f"data/personajes/{char_id}.json"
+        }
+
+        idx = -1
+        for i, c in enumerate(manifest_data['characters']):
+            if c.get('id') == char_id:
+                idx = i
+                break
+
+        if idx >= 0:
+            manifest_data['characters'][idx] = summary_item
+        else:
+            manifest_data['characters'].append(summary_item)
+
+        with open(manifest_file, 'w', encoding='utf-8') as f:
+            json.dump(manifest_data, f, indent=2, ensure_ascii=False)
+
+        response = {
+            "success": True,
+            "message": f"Expediente de '{char['name']}' y manifest_personajes.json guardados directamente en el disco.",
+            "character_file": f"data/personajes/{char_id}.json"
+        }
+        self.send_json_response(200, response)
+
     def handle_save(self):
         try:
             content_length = int(self.headers.get('Content-Length', 0))
             body = self.rfile.read(content_length).decode('utf-8')
             payload = json.loads(body)
+
+            if payload.get('character'):
+                self.save_character_data(payload)
+                return
 
             mecha = payload.get('mecha')
             if not mecha or not mecha.get('id'):
@@ -157,8 +250,13 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
                 "faction": mecha.get("faction", {}),
                 "class": mecha.get("vehicle_type", {}),
                 "thumbnail": mecha.get("thumbnail", ""),
-                "badge": mecha.get("alias", "UN SPACY"),
-                "faction_logo": mecha.get("faction_logo") or ("assets/images/ui/logo_zentran.png" if mecha.get("category") == "zentraedi" or "zentraedi" in str(mecha.get("faction", "")).lower() else "assets/images/ui/logo_UNSpacy.png"),
+                "faction_logo": mecha.get("faction_logo") or ("assets/images/ui/Mars_Base.png" if "marte" in str(mecha.get("faction", "")).lower() or "mars" in str(mecha.get("faction", "")).lower() else ("assets/images/ui/logo_zentran.png" if mecha.get("category") == "zentraedi" or "zentraedi" in str(mecha.get("faction", "")).lower() else "assets/images/ui/logo_UNSpacy.png")),
+                "is_variable": bool(mecha.get("is_variable") or mecha.get("modes") or mecha.get("category") == "veritech" or "variable" in str(mecha.get("vehicle_type", "")).lower()),
+                "modes": {
+                    "fighter": mecha.get("modes", {}).get("fighter", {}).get("image", ""),
+                    "guardian": mecha.get("modes", {}).get("guardian", {}).get("image", ""),
+                    "battloid": mecha.get("modes", {}).get("battloid", {}).get("image", "")
+                } if mecha.get("modes") else None,
                 "summary": {
                     "es": (mecha.get("lore", {}).get("overview_es") or "")[:110] + "...",
                     "en": (mecha.get("lore", {}).get("overview_en") or "")[:110] + "..."

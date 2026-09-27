@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Robotech Tactical Codex // Base de Datos SDF-1</title>
+  <title>Robotech Tactical Terminal // Acceso Central SDF-1</title>
   <link rel="icon" type="image/png" href="assets/images/ui/logo_UNSpacy.png">
   
   <!-- Tipografías Tácticas Futuristas -->
@@ -12,15 +12,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   
   <!-- Hojas de Estilos HUD con Cache Busting -->
-  <link rel="stylesheet" href="css/style.css?v=1.0.3">
-  <link rel="stylesheet" href="css/hud-components.css?v=1.0.3">
-  <link rel="stylesheet" href="css/comparator.css?v=1.0.3">
+  <link rel="stylesheet" href="css/style.css?v=1.0.8">
+  <link rel="stylesheet" href="css/hud-components.css?v=1.0.8">
+  <link rel="stylesheet" href="css/portal.css?v=1.0.8">
 </head>
 <body>
-  <!-- Borde Superior de Alerta -->
+  <!-- Borde Superior de Alerta Táctica -->
   <div class="hud-border-top"></div>
 
-  <div class="container">
+  <div class="portal-wrapper">
     <!-- HEADER MILITAR TÁCTICO -->
     <header class="tactical-header">
       <div class="brand-section">
@@ -28,10 +28,10 @@
           <img src="assets/images/ui/logo_UNSpacy.png" alt="Robotech Defense Force Insignia" class="insignia-img">
         </div>
         <div class="brand-text">
-          <h1 data-i18n="system_title">ROBOTECH <span>TACTICAL CODEX</span></h1>
+          <h1 data-portal-i18n="system_title">ROBOTECH <span data-portal-i18n="system_subtitle">TERMINAL CENTRAL SDF-1</span></h1>
           <div class="system-status">
             <span class="status-dot"></span>
-            <span data-i18n="status_online">ONLINE // TACTICAL SECTOR ALPHA</span>
+            <span data-portal-i18n="status_online">ONLINE // ENLACE GLOBAL ACTIVO</span>
           </div>
         </div>
       </div>
@@ -42,134 +42,190 @@
         <button class="lang-switch" data-lang="en">EN</button>
         
         <!-- Toggle Efectos de Sonido Web Audio API -->
-        <button class="audio-switch" id="audio-switch" data-i18n="sound_on">SFX: ON</button>
+        <button class="audio-switch" id="audio-switch" data-portal-i18n="sound_on">SFX: ON</button>
         
         <!-- Acceso al Gestor CRUD Local (Solo visible en entorno local) -->
-        <a href="admin.html" id="admin-link-btn" class="admin-link-btn" data-i18n="admin_btn" style="display: none;">⚙ GESTIÓN CRUD LOCAL</a>
+        <a href="admin.html?module=mechas" id="admin-link-btn" class="admin-link-btn" data-portal-i18n="admin_btn" style="display: none;">⚙ GESTIÓN CRUD LOCAL</a>
       </div>
     </header>
 
-    <!-- BARRA DE HERRAMIENTAS: CATEGORÍAS Y BÚSQUEDA -->
-    <section class="tactical-toolbar">
-      <div class="category-nav">
-        <button class="cat-btn active" data-category="all" data-i18n="all_units">TODOS LOS MECHAS</button>
-        <button class="cat-btn" data-category="destroid" data-i18n="destroids">DESTROIDS</button>
-        <button class="cat-btn" data-category="veritech" data-i18n="veritechs">VERITECHS / VALKYRIES</button>
-        <button class="cat-btn" data-category="zentraedi" data-i18n="zentraedi">FUERZAS ZENTRAEDI</button>
-      </div>
-
-      <div class="search-box">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="search-input" class="search-input" placeholder="ESCANEAR BASE DE DATOS...">
-      </div>
+    <!-- SECCIÓN HERO DE BIENVENIDA -->
+    <section class="portal-hero">
+      <div class="portal-hero-badge" data-portal-i18n="welcome_badge">TERMINAL MILITAR PRINCIPAL // PROTOCOLO REF-01</div>
+      <h2 class="portal-hero-title" data-portal-i18n="hero_title">BASE DE DATOS TÁCTICA <span>ROBOTECH</span></h2>
+      <p class="portal-hero-subtitle" data-portal-i18n="hero_subtitle">
+        Selecciona el sector de inteligencia militar y registros operacionales para desplegar los archivos clasificados de la Tierra y el espacio profundo.
+      </p>
     </section>
 
-    <!-- METADATOS Y CONTADOR DE RESULTADOS -->
-    <div class="results-meta">
-      <div>
-        <span data-i18n="results_found">UNIDADES IDENTIFICADAS</span>: 
-        <span id="results-count" class="highlight">0 / 0</span>
-      </div>
-      <div>ENLACE TÁCTICO // PROTOCOLO DE DESPLIEGUE ACTIVO</div>
-    </div>
+    <!-- ========================================================================
+         GRANDES COLUMNAS TÁCTICAS UNA AL LADO DE OTRA (EXPANDIBLES)
+         Aquí puedes cambiar la foto de cada columna en el background-image
+         ======================================================================== -->
+    <main class="portal-columns-container">
 
-    <!-- CUADRÍCULA DE MECHAS -->
-    <main id="mecha-grid" class="mecha-grid">
-      <!-- Inyectado dinámicamente por js/app.js -->
-    </main>
+      <!-- ====================================================================
+           COLUMNA 01: MECHAS & VEHÍCULOS (SECTOR ACTIVO)
+           FOTO: Cambia la ruta en background-image abajo
+           ==================================================================== -->
+      <a href="mechas.html" class="portal-column" id="col-mechas" title="Ingresar al Codex Táctico de Mechas">
+        <!-- FOTO DE FONDO MECHAS -->
+        <div class="portal-column-bg" style="background-image: url('assets/images/mechas/portada_mechas.jpg');"></div>
+        <div class="portal-column-overlay"></div>
+        <div class="portal-column-scanlines"></div>
 
-    <!-- FOOTER TÁCTICO -->
-    <footer class="tactical-footer">
-      <div class="footer-left">
-        <span>© U.N. SPACY RECON ARCHIVES // SAGA ROBOTECH & MACROSS</span>
-      </div>
-      <div class="footer-right">
-        <span>HOSTED ON GITHUB PAGES</span>
-        <a href="https://github.com/rick-0019" target="_blank">[GITHUB: rick-0019]</a>
-      </div>
-    </footer>
-  </div>
+        <!-- Corchetes HUD -->
+        <div class="portal-bracket tl"></div>
+        <div class="portal-bracket tr"></div>
+        <div class="portal-bracket bl"></div>
+        <div class="portal-bracket br"></div>
 
-  <!-- ========================================================================
-       BARRA INFERIOR FLOTANTE DEL COMPARADOR (DOCK)
-       ======================================================================== -->
-  <div id="comparator-dock" class="comparator-dock">
-    <div class="dock-left">
-      <span class="dock-title">⚔ COMPARADOR TÁCTICO:</span>
-      <div id="dock-slots" class="dock-slots">
-        <!-- Inyectado por js/comparator.js -->
-      </div>
-    </div>
-    <div class="dock-actions">
-      <button id="btn-clear-compare" class="btn-clear-compare">LIMPIAR</button>
-      <button id="btn-open-compare" class="btn-open-compare">COMPARAR AHORA (0/3)</button>
-    </div>
-  </div>
-
-  <!-- ========================================================================
-       MODAL DE COMPARACIÓN EN TIEMPO REAL (MATRIZ GRÁFICA)
-       ======================================================================== -->
-  <div id="compare-modal-backdrop" class="compare-modal-backdrop">
-    <div class="compare-modal">
-      <div class="compare-header">
-        <div class="compare-title-area">
-          <h2>MATRIZ COMPARATIVA DE MECHAS</h2>
-          <span>TELEMETRÍA TÁCTICA FRENTE A FRENTE</span>
+        <!-- Encabezado de Columna -->
+        <div class="portal-col-top">
+          <span class="portal-sector-tag" data-portal-i18n="col_01_tag">SECTOR 01 // OPERATIVO</span>
+          <div class="portal-col-icon">01</div>
         </div>
-        <button id="btn-close-compare-modal" class="btn-close-modal">✕</button>
-      </div>
-      <div id="compare-content-scroll" class="compare-content-scroll">
-        <!-- Inyectado dinámicamente con barras y tabla por js/comparator.js -->
-      </div>
-    </div>
-  </div>
 
-  <!-- ========================================================================
-       MODAL DE FICHA TÉCNICA DETALLADA (DOSSIER)
-       ======================================================================== -->
-  <div id="dossier-modal-backdrop" class="dossier-modal-backdrop">
-    <div class="dossier-modal">
-      <div class="dossier-header">
-        <div class="dossier-title-area">
-          <img id="dossier-faction-logo" class="dossier-faction-logo" src="" alt="Insignia de Facción" width="34" height="34" style="width:34px; height:34px; max-width:34px; max-height:34px; object-fit:contain; display:none;">
-          <div class="dossier-title-text">
-            <h2 id="dossier-mecha-name">NOMBRE DEL MECHA</h2>
-            <span id="dossier-mecha-alias">DESIGNACIÓN MILITAR</span>
+        <!-- Contenido y Acción -->
+        <div class="portal-col-content">
+          <div class="portal-col-subtitle" data-portal-i18n="col_01_sub">DESTROIDS · VERITECHS · ZENTRAEDI</div>
+          <h3 class="portal-col-title" data-portal-i18n="col_01_title">MECHAS & VEHÍCULOS</h3>
+          <p class="portal-col-desc" data-portal-i18n="col_01_desc">
+            Banco de datos completo con telemetría de combate, esquemas C.D.M. de blindaje, armamento, configuraciones Veritech triples y comparador balístico.
+          </p>
+          <div class="portal-col-status active-status">
+            <span class="portal-status-dot"></span>
+            <span data-portal-i18n="col_01_status">EN LÍNEA // 5 UNIDADES REGISTRADAS</span>
+          </div>
+          <div class="portal-col-btn primary">
+            <span data-portal-i18n="col_01_btn">INGRESAR AL CODEX →</span>
+            <span>⌖</span>
           </div>
         </div>
-        <button id="btn-close-dossier" class="btn-close-modal">✕</button>
+      </a>
+
+      <!-- ====================================================================
+           COLUMNA 02: PERSONAJES & ASES (SECTOR OPERATIVO)
+           FOTO: portada_personajes.jpg
+           ==================================================================== -->
+      <a href="personajes.html" class="portal-column" id="col-personajes" title="Ingresar a los Expedientes de Personajes">
+        <!-- FOTO DE FONDO PERSONAJES -->
+        <div class="portal-column-bg" style="background-image: url('assets/images/personajes/portada_personajes.jpg');"></div>
+        <div class="portal-column-overlay"></div>
+        <div class="portal-column-scanlines"></div>
+
+        <div class="portal-bracket tl"></div>
+        <div class="portal-bracket tr"></div>
+        <div class="portal-bracket bl"></div>
+        <div class="portal-bracket br"></div>
+
+        <div class="portal-col-top">
+          <span class="portal-sector-tag" data-portal-i18n="col_02_tag">SECTOR 02 // OPERATIVO</span>
+          <div class="portal-col-icon">02</div>
+        </div>
+
+        <div class="portal-col-content">
+          <div class="portal-col-subtitle" data-portal-i18n="col_02_sub">PILOTOS RDF · COMANDANTES · HÉROES</div>
+          <h3 class="portal-col-title" data-portal-i18n="col_02_title">PERSONAJES & ASES</h3>
+          <p class="portal-col-desc" data-portal-i18n="col_02_desc">
+            Expedientes biográficos, historiales de servicio, asignación de escuadrones y condecoraciones de los pilotos y líderes de las Guerras Robotech.
+          </p>
+          <div class="portal-col-status active-status">
+            <span class="portal-status-dot"></span>
+            <span data-portal-i18n="col_02_status">EN LÍNEA // EXPEDIENTES DISPONIBLES</span>
+          </div>
+          <div class="portal-col-btn primary">
+            <span data-portal-i18n="col_02_btn">VER EXPEDIENTES →</span>
+            <span>⌖</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ====================================================================
+           COLUMNA 03: NAVES CAPITALES & FLOTAS
+           FOTO: Coloca tu foto en 'assets/images/naves/' y cambia la ruta
+           ==================================================================== -->
+      <div class="portal-column" id="col-naves" onclick="showClassifiedToast('naves', 'assets/images/naves/')" title="Click para información del sector">
+        <!-- FOTO DE FONDO NAVES -->
+        <div class="portal-column-bg" style="background-image: url('assets/images/naves/portada_naves.jpg');"></div>
+        <div class="portal-column-overlay"></div>
+        <div class="portal-column-scanlines"></div>
+
+        <div class="portal-bracket tl"></div>
+        <div class="portal-bracket tr"></div>
+        <div class="portal-bracket bl"></div>
+        <div class="portal-bracket br"></div>
+
+        <div class="portal-col-top">
+          <span class="portal-sector-tag" data-portal-i18n="col_03_tag">SECTOR 03 // CLASIFICADO</span>
+          <div class="portal-col-icon">03</div>
+        </div>
+
+        <div class="portal-col-content">
+          <div class="portal-col-subtitle" data-portal-i18n="col_03_sub">SDF-1 · CRUCEROS ARMD · FLOTAS</div>
+          <h3 class="portal-col-title" data-portal-i18n="col_03_title">NAVES CAPITALES</h3>
+          <p class="portal-col-desc" data-portal-i18n="col_03_desc">
+            Planos estructurales, capacidades hiperespaciales (Fold Drives), sistemas modulares y hangares de fortalezas y cruceros estelares.
+          </p>
+          <div class="portal-col-status pending-status">
+            <span class="portal-status-dot"></span>
+            <span data-portal-i18n="col_03_status">TELEMETRÍA // HANGAR EN ESPERA</span>
+          </div>
+          <div class="portal-col-btn secondary">
+            <span data-portal-i18n="col_03_btn">REGISTRO NAVAL 🔒</span>
+            <span>ℹ</span>
+          </div>
+        </div>
       </div>
 
-      <!-- Pestañas de Navegación del Dossier -->
-      <nav class="dossier-tabs">
-        <button class="dossier-tab-btn active" data-tab="pane-overview" data-i18n="tab_overview">VISIÓN GENERAL Y LORE</button>
-        <button class="dossier-tab-btn" data-tab="pane-mdc" data-i18n="tab_mdc">BLINDAJE C.D.M. (LOCALIZACIÓN)</button>
-        <button class="dossier-tab-btn" data-tab="pane-weapons" data-i18n="tab_weapons">SISTEMAS DE ARMAS</button>
-        <button class="dossier-tab-btn" data-tab="pane-sensors" data-i18n="tab_sensors">SENSORES Y ELECTRÓNICA</button>
-        <button class="dossier-tab-btn" data-tab="pane-gallery" data-i18n="tab_gallery">GALERÍA DE PLANOS Y RENDERS</button>
-      </nav>
+      <!-- ====================================================================
+           COLUMNA 04: HISTORIA & CRONOLOGÍA DE GUERRAS
+           FOTO: Coloca tu foto en 'assets/images/historia/' y cambia la ruta
+           ==================================================================== -->
+      <div class="portal-column" id="col-historia" onclick="showClassifiedToast('historia', 'assets/images/historia y guerras/')" title="Click para información del sector">
+        <!-- FOTO DE FONDO HISTORIA -->
+        <div class="portal-column-bg" style="background-image: url('assets/images/historia y guerras/portada_historia_y_guerras.jpg');"></div>
+        <div class="portal-column-overlay"></div>
+        <div class="portal-column-scanlines"></div>
 
-      <div class="dossier-content-scroll">
-        <div id="pane-overview" class="tab-pane active"></div>
-        <div id="pane-mdc" class="tab-pane"></div>
-        <div id="pane-weapons" class="tab-pane"></div>
-        <div id="pane-sensors" class="tab-pane"></div>
-        <div id="pane-gallery" class="tab-pane"></div>
+        <div class="portal-bracket tl"></div>
+        <div class="portal-bracket tr"></div>
+        <div class="portal-bracket bl"></div>
+        <div class="portal-bracket br"></div>
+
+        <div class="portal-col-top">
+          <span class="portal-sector-tag" data-portal-i18n="col_04_tag">SECTOR 04 // ARCHIVADO</span>
+          <div class="portal-col-icon">04</div>
+        </div>
+
+        <div class="portal-col-content">
+          <div class="portal-col-subtitle" data-portal-i18n="col_04_sub">CRONOLOGÍA 1999-2044 · GUERRAS 1-3</div>
+          <h3 class="portal-col-title" data-portal-i18n="col_04_title">HISTORIA & GUERRAS</h3>
+          <p class="portal-col-desc" data-portal-i18n="col_04_desc">
+            Línea temporal detallada: El impacto del Macross, la invasión de los Maestros de la Robotecnia y la ocupación Invid en la Nueva Generación.
+          </p>
+          <div class="portal-col-status pending-status">
+            <span class="portal-status-dot"></span>
+            <span data-portal-i18n="col_04_status">ARCHIVO MAESTRO // EN DESARROLLO</span>
+          </div>
+          <div class="portal-col-btn secondary">
+            <span data-portal-i18n="col_04_btn">LÍNEA TEMPORAL 🔒</span>
+            <span>ℹ</span>
+          </div>
+        </div>
       </div>
+
+    </main>
+
+    <!-- TOAST NOTIFICACIÓN TÁCTICA -->
+    <div id="portal-toast" class="portal-toast">
+      <h4>ACCESO RESTRINGIDO // SECTOR EN PREPARACIÓN</h4>
+      <p>Este sector está listo para recibir fotos y datos militares.</p>
     </div>
-  </div>
-
-  <!-- ========================================================================
-       VISOR LIGHTBOX DE PLANOS E IMÁGENES EN ALTA RESOLUCIÓN
-       ======================================================================== -->
-  <div id="lightbox-backdrop" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.95); z-index:1200; align-items:center; justify-content:center; flex-direction:column; padding:20px; cursor:zoom-out;">
-    <img id="lightbox-image" src="" style="max-width:92vw; max-height:85vh; border:2px solid var(--un-cyan); border-radius:4px; box-shadow:0 0 30px rgba(0,240,255,0.4);" alt="Lightbox">
-    <div id="lightbox-caption" style="margin-top:14px; color:#fff; font-family:var(--font-hud); letter-spacing:1.5px; font-size:1rem; text-shadow:0 0 8px var(--un-cyan);"></div>
   </div>
 
   <!-- Motores JavaScript con Cache Busting -->
-  <script src="js/audio.js?v=1.0.3"></script>
-  <script src="js/comparator.js?v=1.0.3"></script>
-  <script src="js/app.js?v=1.0.3"></script>
+  <script src="js/audio.js?v=1.0.8"></script>
+  <script src="js/portal.js?v=1.0.8"></script>
 </body>
 </html>

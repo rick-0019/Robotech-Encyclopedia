@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotech Personnel Archive // Expedientes Militares SDF-1</title>
+  <link rel="icon" type="image/png" href="assets/images/ui/logo_UNSpacy.png">
+  
+  <!-- Tipografías Tácticas Futuristas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- Hojas de Estilos HUD con Cache Busting -->
+  <link rel="stylesheet" href="css/style.css?v=1.0.8">
+  <link rel="stylesheet" href="css/hud-components.css?v=1.0.8">
+</head>
+<body>
+  <!-- Borde Superior de Alerta -->
+  <div class="hud-border-top"></div>
+
+  <div class="container">
+    <!-- HEADER MILITAR TÁCTICO -->
+    <header class="tactical-header">
+      <div class="brand-section">
+        <div class="un-spacy-insignia">
+          <img src="assets/images/ui/logo_UNSpacy.png" alt="Robotech Defense Force Insignia" class="insignia-img">
+        </div>
+        <div class="brand-text">
+          <h1 data-i18n="system_title">ROBOTECH <span>PERSONNEL ARCHIVE</span></h1>
+          <div class="system-status">
+            <span class="status-dot"></span>
+            <span data-i18n="status_online">ONLINE // EXPEDIENTES DE PERSONAL SDF-1</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Botón Volver al Portal de Inicio -->
+        <a href="index.html" class="portal-nav-btn" style="text-decoration: none; padding: 7px 14px; background: rgba(0,240,255,0.1); border: 1px solid var(--un-cyan); color: var(--un-cyan); font-family: var(--font-hud); font-size: 0.75rem; letter-spacing: 1.5px; border-radius: 2px; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition-fast);" onmouseover="this.style.background='var(--un-cyan)'; this.style.color='#000';" onmouseout="this.style.background='rgba(0,240,255,0.1)'; this.style.color='var(--un-cyan)';">⮌ INICIO</a>
+
+        <!-- Enlace al Codex de Mechas -->
+        <a href="mechas.html" class="portal-nav-btn" style="text-decoration: none; padding: 7px 14px; background: rgba(255,157,0,0.1); border: 1px solid var(--skull-amber); color: var(--skull-amber); font-family: var(--font-hud); font-size: 0.75rem; letter-spacing: 1.5px; border-radius: 2px; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition-fast);" onmouseover="this.style.background='var(--skull-amber)'; this.style.color='#000';" onmouseout="this.style.background='rgba(255,157,0,0.1)'; this.style.color='var(--skull-amber)';">⌖ CODEX MECHAS</a>
+
+        <!-- Selector Bilingüe ES / EN -->
+        <button class="lang-switch active" data-lang="es">ES</button>
+        <button class="lang-switch" data-lang="en">EN</button>
+        
+        <!-- Toggle Efectos de Sonido Web Audio API -->
+        <button class="audio-switch" id="audio-switch" data-i18n="sound_on">SFX: ON</button>
+        
+        <!-- Acceso al Gestor CRUD Local -->
+        <a href="admin.html?module=personajes" id="admin-link-btn" class="admin-link-btn" data-i18n="admin_btn" style="display: none;">⚙ GESTIÓN CRUD LOCAL</a>
+      </div>
+    </header>
+
+    <!-- BARRA DE HERRAMIENTAS: CATEGORÍAS Y BÚSQUEDA -->
+    <section class="tactical-toolbar">
+      <div class="category-nav">
+        <button class="cat-btn active" data-category="all" data-i18n="cat_all">TODOS LOS EXPEDIENTES</button>
+        <button class="cat-btn" data-category="command" data-i18n="cat_command">OFICIALES Y MANDO</button>
+        <button class="cat-btn" data-category="pilots" data-i18n="cat_pilots">PILOTOS Y ASES</button>
+        <button class="cat-btn" data-category="zentraedi" data-i18n="cat_zentraedi">LÍDERES ZENTRAEDI</button>
+        <button class="cat-btn" data-category="scientists" data-i18n="cat_scientists">CIENTÍFICOS Y CIVILES</button>
+      </div>
+
+      <div class="search-filter-box">
+        <div class="search-input-wrapper">
+          <span class="search-icon">⌕</span>
+          <input type="text" id="search-input" class="search-input" placeholder="Buscar por nombre, rango, asignación o saga..." autocomplete="off">
+        </div>
+        <div class="results-telemetry">
+          <span class="telemetry-label" data-i18n="records_label">EXPEDIENTES ACTIVOS:</span>
+          <span class="telemetry-count" id="results-count">-- / --</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUADRÍCULA PRINCIPAL DE PERSONAJES -->
+    <main class="mecha-grid-container">
+      <div id="personajes-grid" class="mecha-grid">
+        <!-- Inyección dinámica desde js/personajes.js -->
+      </div>
+    </main>
+
+    <!-- FOOTER MILITAR TÁCTICO -->
+    <footer class="tactical-footer">
+      <div class="footer-status">
+        <span class="status-indicator"></span>
+        <span data-i18n="footer_status">ESTADO DE TELEMETRÍA: ENLACE MILITAR SEGURO // BASE SDF-1 // MACROSS CITY</span>
+      </div>
+      <div class="footer-credits">
+        ROBOTECH TACTICAL MAINFRAME // REF DEFENSE NET &bull; SISTEMA EXPEDIENTES V1.0
+      </div>
+    </footer>
+  </div>
+
+  <!-- ========================================================================
+       MODAL DE EXPEDIENTE MILITAR DETALLADO (DOSSIER DE PERSONAJE)
+       ======================================================================== -->
+  <div id="char-dossier-modal-backdrop" class="dossier-modal-backdrop">
+    <div class="dossier-modal">
+      <div class="dossier-header">
+        <div class="dossier-title-area">
+          <img id="char-dossier-faction-logo" class="dossier-faction-logo" src="" alt="Insignia de Facción" width="34" height="34" style="width:34px; height:34px; max-width:34px; max-height:34px; object-fit:contain; display:none;">
+          <div class="dossier-title-text">
+            <h2 id="char-dossier-name">NOMBRE DEL PERSONAJE</h2>
+            <span id="char-dossier-rank">RANGO MILITAR // ASIGNACIÓN</span>
+          </div>
+        </div>
+        <button id="btn-close-char-dossier" class="btn-close-modal">✕</button>
+      </div>
+
+      <!-- Pestañas de Navegación del Expediente -->
+      <nav class="dossier-tabs">
+        <button class="dossier-tab-btn active" data-tab="pane-char-overview" data-i18n="tab_overview">VISIÓN GENERAL Y BIOGRAFÍA</button>
+        <button class="dossier-tab-btn" data-tab="pane-char-stats" data-i18n="tab_stats">APTITUDES Y EVALUACIÓN TÁCTICA</button>
+        <button class="dossier-tab-btn" data-tab="pane-char-service" data-i18n="tab_service">HISTORIAL DE SERVICIO Y VÍNCULOS</button>
+        <button class="dossier-tab-btn" data-tab="pane-char-gallery" data-i18n="tab_gallery">GALERÍA DE FOTOS Y REGISTROS</button>
+      </nav>
+
+      <div class="dossier-content-scroll">
+        <div id="pane-char-overview" class="tab-pane active"></div>
+        <div id="pane-char-stats" class="tab-pane"></div>
+        <div id="pane-char-service" class="tab-pane"></div>
+        <div id="pane-char-gallery" class="tab-pane"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISOR LIGHTBOX PARA AMPLIAR FOTOS EN ALTA RESOLUCIÓN -->
+  <div id="lightbox-backdrop" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.95); z-index:1200; align-items:center; justify-content:center; flex-direction:column; padding:20px; cursor:zoom-out;">
+    <img id="lightbox-image" src="" style="max-width:92vw; max-height:85vh; border:2px solid var(--un-cyan); border-radius:4px; box-shadow:0 0 30px rgba(0,240,255,0.4);" alt="Lightbox">
+    <div id="lightbox-caption" style="margin-top:14px; color:#fff; font-family:var(--font-hud); letter-spacing:1.5px; font-size:1rem; text-shadow:0 0 8px var(--un-cyan);"></div>
+  </div>
+
+  <!-- Motores JavaScript con Cache Busting -->
+  <script src="js/audio.js?v=1.0.8"></script>
+  <script src="js/personajes.js?v=1.0.8"></script>
+</body>
+</html>

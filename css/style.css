@@ -411,3 +411,268 @@ body::before {
   color: #fff;
   text-shadow: 0 0 8px var(--un-cyan-glow);
 }
+
+/* ==========================================================================
+   GLOBAL TACTICAL HUD SCROLLBARS (ZERO CHUNKY SYSTEM BARS)
+   ========================================================================== */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+*::-webkit-scrollbar-track {
+  background: rgba(4, 10, 22, 0.95);
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.35);
+  border-radius: 3px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--un-cyan);
+  box-shadow: 0 0 6px var(--un-cyan-glow);
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 240, 255, 0.35) rgba(4, 10, 22, 0.95);
+}
+
+/* ==========================================================================
+   CARD MODE SWITCHER (CATALOG HUD)
+   ========================================================================== */
+.card-mode-switcher {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 3px;
+  background: rgba(3, 8, 20, 0.92);
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  border-radius: 3px;
+  padding: 2px 4px;
+  z-index: 5;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.card-mode-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-dim);
+  font-size: 0.62rem;
+  font-family: var(--font-hud);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 3px 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  text-transform: uppercase;
+}
+
+.card-mode-btn:hover {
+  color: #fff;
+  border-color: rgba(0, 240, 255, 0.3);
+  background: rgba(0, 240, 255, 0.15);
+}
+
+.card-mode-btn.active {
+  background: var(--un-cyan);
+  color: #030712;
+  border-color: var(--un-cyan);
+  box-shadow: 0 0 8px var(--un-cyan-glow);
+}
+
+/* ==========================================================================
+   TRIPLE CARD VERITECH 3-MODOS SHOWCASE (DOSSIER MODAL)
+   ========================================================================== */
+.veritech-modes-showcase {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.modes-section-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(4, 15, 30, 0.9);
+  border-left: 3px solid var(--un-cyan);
+  padding: 8px 14px;
+  margin-bottom: 16px;
+  border-radius: 0 3px 3px 0;
+}
+
+.modes-section-title {
+  font-family: var(--font-hud);
+  font-size: 0.85rem;
+  color: var(--un-cyan);
+  letter-spacing: 1.5px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.modes-section-tag {
+  font-family: var(--font-hud);
+  font-size: 0.68rem;
+  color: var(--skull-amber);
+  letter-spacing: 1px;
+}
+
+.triple-modes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 860px) {
+  .triple-modes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.triple-mode-card {
+  background: rgba(8, 18, 36, 0.85);
+  border: 1px solid var(--border-tactical);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  position: relative;
+}
+
+.triple-mode-card:hover {
+  border-color: var(--un-cyan);
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.triple-mode-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(5, 12, 24, 0.95);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+}
+
+.triple-mode-badge {
+  font-family: var(--font-hud);
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--un-cyan);
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  padding: 2px 6px;
+  border-radius: 2px;
+  letter-spacing: 0.5px;
+}
+
+.triple-mode-title {
+  font-family: var(--font-hud);
+  font-size: 0.82rem;
+  color: #fff;
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.triple-mode-img-wrap {
+  width: 100%;
+  height: 175px;
+  background: radial-gradient(circle at center, rgba(0, 45, 90, 0.35) 0%, rgba(2, 6, 16, 0.95) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.12);
+}
+
+.triple-mode-img-wrap img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.8));
+}
+
+.triple-mode-card:hover .triple-mode-img-wrap img {
+  transform: scale(1.05);
+}
+
+.triple-mode-zoom-tag {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background: rgba(2, 6, 18, 0.88);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  color: var(--un-cyan);
+  font-size: 0.62rem;
+  font-family: var(--font-hud);
+  padding: 2px 6px;
+  border-radius: 2px;
+  letter-spacing: 0.5px;
+  opacity: 0.75;
+  transition: opacity var(--transition-fast), background var(--transition-fast);
+}
+
+.triple-mode-card:hover .triple-mode-zoom-tag {
+  opacity: 1;
+  background: var(--un-cyan);
+  color: #000;
+  font-weight: 700;
+}
+
+.triple-mode-specs {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+  background: rgba(3, 8, 20, 0.55);
+  font-size: 0.75rem;
+}
+
+.triple-mode-spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.triple-mode-spec-row .spec-name {
+  color: var(--text-dim);
+  font-family: var(--font-hud);
+  font-size: 0.66rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.triple-mode-spec-row .spec-val {
+  color: var(--skull-amber);
+  font-weight: 600;
+  font-size: 0.74rem;
+  text-align: right;
+}
+
+.triple-mode-doctrine {
+  padding: 10px 12px;
+  font-size: 0.74rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  flex: 1;
+  background: rgba(2, 6, 18, 0.3);
+}
+
+.triple-mode-doctrine strong {
+  display: block;
+  font-family: var(--font-hud);
+  font-size: 0.66rem;
+  color: var(--un-cyan);
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+

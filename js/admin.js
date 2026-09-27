@@ -8,17 +8,33 @@ let currentManifest = null;
 let currentMechaData = null;
 let currentTaxonomies = null;
 let currentTaxModalType = null;
+let currentCharManifest = null;
+let currentCharData = null;
+let activeAdminModule = 'mechas';
 
 document.addEventListener('DOMContentLoaded', async () => {
-  await loadTaxonomies();
-  await loadAdminManifest();
-  setupFormListeners();
-  setupExportButtons();
+  const params = new URLSearchParams(window.location.search);
+  const modParam = params.get('module') || params.get('section') || 'mechas';
+  activeAdminModule = (modParam === 'personajes' || modParam === 'characters' || modParam === 'personaje') ? 'characters' : 'mechas';
 
-  const select = document.getElementById('select-mecha-to-edit');
-  if (select && select.options.length > 1) {
-    select.selectedIndex = 1;
-    select.dispatchEvent(new Event('change'));
+  setupModuleView(activeAdminModule);
+  await loadTaxonomies();
+
+  if (activeAdminModule === 'characters') {
+    await loadAdminCharManifest();
+    setupCharEventListeners();
+    setupCharExportButtons();
+    updateLiveCharPreview();
+  } else {
+    await loadAdminManifest();
+    setupFormListeners();
+    setupExportButtons();
+    const select = document.getElementById('select-mecha-to-edit');
+    if (select && select.options.length > 1) {
+      select.selectedIndex = 1;
+      select.dispatchEvent(new Event('change'));
+    }
+    updateLivePreview();
   }
 });
 
@@ -27,17 +43,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 // --------------------------------------------------------------------------
 async function loadTaxonomies() {
   try {
-    const cached = localStorage.getItem('robotech_taxonomies');
-    if (cached) {
-      currentTaxonomies = JSON.parse(cached);
+    const res = await fetch(`data/taxonomies.json?_t=${Date.now()}`, { cache: 'no-store' });
+    if (res.ok) {
+      currentTaxonomies = await res.json();
+      localStorage.setItem('robotech_taxonomies', JSON.stringify(currentTaxonomies));
     } else {
-      const res = await fetch('data/taxonomies.json');
-      if (res.ok) {
-        currentTaxonomies = await res.json();
-      }
+      const cached = localStorage.getItem('robotech_taxonomies');
+      if (cached) currentTaxonomies = JSON.parse(cached);
     }
   } catch (e) {
-    console.warn("Could not load taxonomies:", e);
+    console.warn("Could not load taxonomies from server, using fallback:", e);
+    const cached = localStorage.getItem('robotech_taxonomies');
+    if (cached) currentTaxonomies = JSON.parse(cached);
   }
 
   if (!currentTaxonomies) {
@@ -48,20 +65,22 @@ async function loadTaxonomies() {
         { id: "zentraedi", label_es: "Fuerzas Zentraedi", label_en: "Zentraedi Forces" }
       ],
       factions: [
-        { id: "un_spacy", name_es: "U.N. Spacy", name_en: "U.N. Spacy" },
-        { id: "skull", name_es: "U.N. Spacy - Escuadrón Skull", name_en: "U.N. Spacy - Skull Squadron" },
-        { id: "zentraedi", name_es: "Flota Principal Zentraedi (Boddole Zer)", name_en: "Zentraedi Main Fleet" }
+        { id: "un_spacy", name_es: "U.N. Spacy", name_en: "U.N. Spacy", logo: "assets/images/ui/logo_UNSpacy.png" },
+        { id: "skull_squadron", name_es: "U.N. Spacy - Escuadrón Skull", name_en: "U.N. Spacy - Skull Squadron", logo: "assets/images/ui/logo_UNSpacy.png" },
+        { id: "zentraedi_main", name_es: "Flota Principal Zentraedi (Boddole Zer)", name_en: "Zentraedi Main Fleet", logo: "assets/images/ui/logo_zentran.png" },
+        { id: "ref_pioneer", name_es: "Fuerza Expedicionaria Robotech (REF / Pioneer)", name_en: "Robotech Expeditionary Force (REF)", logo: "assets/images/ui/Mars_Base.png" },
+        { id: "mars_base_division", name_es: "REF - División Marte (Mars Base)", name_en: "REF - Mars Base Division", logo: "assets/images/ui/Mars_Base.png" }
       ],
       vehicle_types: [
         { name_es: "Destroid Antiaéreo No Transformable", name_en: "Non-Transformable Anti-Aircraft Destroid" },
         { name_es: "Destroid de Asalto y Artillería Pesada", name_en: "Heavy Battle & Assault Destroid" },
-        { name_es: "Caza Variable Aeroespacial / Mecha Transformable", name_en: "Variable Aerospace Fighter" },
+        { name_es: "Caza Variable Aeroespacial / Mecha Transformable", name_en: "Variable Aerospace Fighter / Transformable Mecha" },
         { name_es: "Cápsula de Combate Bípeda Ligera / Espacial", name_en: "Light Bipedal Combat Pod" }
       ],
       series_eras: [
         { id: "macross", name_es: "La Saga Macross (Primera Guerra Robotech)", name_en: "The Macross Saga" },
         { id: "masters", name_es: "Los Maestros de la Robotech (Segunda Guerra)", name_en: "Robotech Masters" },
-        { id: "invid", name_es: "La Nueva Generación / Era Invid (Tercera Guerra)", name_en: "The New Generation" }
+        { id: "new_generation", name_es: "La Nueva Generación / Era Invid (Tercera Guerra)", name_en: "The New Generation / Invid Era" }
       ]
     };
   }
@@ -76,6 +95,11 @@ function populateTaxonomySelects() {
     catSel.innerHTML = currentTaxonomies.categories.map(c => 
       `<option value="${c.id}">${c.label_es} (${c.label_en})</option>`
     ).join('');
+
+    catSel.onchange = () => {
+      checkAutoVariableModes();
+      updateLivePreview();
+    };
   }
 
   // 2. Facciones con data-logo y auto-asignación instantánea
@@ -89,15 +113,19 @@ function populateTaxonomySelects() {
     facSel.onchange = () => {
       const opt = facSel.selectedOptions[0];
       const logo = opt?.dataset?.logo;
-      const logoSel = document.getElementById('m_faction_logo');
-      if (logoSel) {
+      const logoInp = document.getElementById('m_faction_logo');
+      if (logoInp) {
         if (logo) {
-          logoSel.value = logo;
+          logoInp.value = logo;
         } else {
           const txt = facSel.value.toLowerCase();
-          logoSel.value = (txt.includes('zentraedi') || txt.includes('zentran') || txt.includes('meltrandi'))
-            ? 'assets/images/ui/logo_zentran.png'
-            : 'assets/images/ui/logo_UNSpacy.png';
+          if (txt.includes('marte') || txt.includes('mars')) {
+            logoInp.value = 'assets/images/ui/Mars_Base.png';
+          } else if (txt.includes('zentraedi') || txt.includes('zentran') || txt.includes('meltrandi')) {
+            logoInp.value = 'assets/images/ui/logo_zentran.png';
+          } else {
+            logoInp.value = 'assets/images/ui/logo_UNSpacy.png';
+          }
         }
         updateFactionLogoPreview();
         updateLivePreview();
@@ -105,19 +133,21 @@ function populateTaxonomySelects() {
     };
   }
 
-  // 2b. Catálogo de Logos de Facción (Dinámico)
-  const logoSel = document.getElementById('m_faction_logo');
-  if (logoSel) {
-    const logos = currentTaxonomies.faction_logos || [
-      { id: 'un_spacy', name: 'Robotech Defense Force / U.N. Spacy', file: 'assets/images/ui/logo_UNSpacy.png' },
-      { id: 'zentraedi', name: 'Fuerzas Zentraedi', file: 'assets/images/ui/logo_zentran.png' }
-    ];
-    const curVal = logoSel.value;
-    logoSel.innerHTML = `
-      <option value="">-- Detección Automática por Facción --</option>
-      ${logos.map(l => `<option value="${l.file}">${l.name} (${l.file.split('/').pop()})</option>`).join('')}
-    `;
-    if (curVal) logoSel.value = curVal;
+  // 2b. Catálogo de Logos de Facción en Datalist
+  const logoList = document.getElementById('faction_logos_list');
+  if (logoList) {
+    const knownLogos = new Map();
+    knownLogos.set('assets/images/ui/logo_UNSpacy.png', 'Robotech Defense Force / U.N. Spacy');
+    knownLogos.set('assets/images/ui/logo_zentran.png', 'Fuerzas Zentraedi / Meltrandi');
+    knownLogos.set('assets/images/ui/Mars_Base.png', 'REF - División Marte (Mars Base)');
+    
+    (currentTaxonomies.factions || []).forEach(f => {
+      if (f.logo) knownLogos.set(f.logo, f.name_es);
+    });
+
+    logoList.innerHTML = Array.from(knownLogos.entries()).map(([path, name]) => 
+      `<option value="${path}">${name}</option>`
+    ).join('');
   }
 
   // 3. Tipos de Vehículo
@@ -126,6 +156,11 @@ function populateTaxonomySelects() {
     typeSel.innerHTML = currentTaxonomies.vehicle_types.map(t => 
       `<option value="${t.name_es}" data-en="${t.name_en}">${t.name_es}</option>`
     ).join('');
+
+    typeSel.onchange = () => {
+      checkAutoVariableModes();
+      updateLivePreview();
+    };
   }
 
   // 4. Series / Eras
@@ -136,6 +171,40 @@ function populateTaxonomySelects() {
     ).join('');
   }
 }
+
+window.checkAutoVariableModes = function() {
+  const typeVal = (document.getElementById('m_type_select')?.value || '').toLowerCase();
+  const catVal = (document.getElementById('m_category_select')?.value || '').toLowerCase();
+  const isVar = catVal === 'veritech' || typeVal.includes('variable') || typeVal.includes('transformable');
+  
+  if (isVar) {
+    toggleVariableModes(true);
+  }
+};
+
+window.toggleVariableModes = function(forceState) {
+  const checkbox = document.getElementById('m_is_variable');
+  const section = document.getElementById('veritech-modes-section');
+  if (!section) return;
+
+  const active = typeof forceState === 'boolean' ? forceState : (checkbox ? checkbox.checked : false);
+  if (checkbox) checkbox.checked = active;
+
+  section.style.display = active ? 'block' : 'none';
+  updateLivePreview();
+};
+
+window.updateModePreview = function(mode) {
+  const inp = document.getElementById(`m_mode_${mode}_img`);
+  const prev = document.getElementById(`m_mode_${mode}_preview`);
+  if (!inp || !prev) return;
+  if (inp.value.trim()) {
+    prev.src = inp.value.trim();
+    prev.style.display = 'block';
+  } else {
+    prev.style.display = 'none';
+  }
+};
 
 // Modal [+] para añadir cualquier opción al instante
 window.openAddTaxonomyModal = function(type) {
@@ -317,6 +386,42 @@ async function loadMechaIntoForm(id) {
     wepContainer.innerHTML = '';
     (data.weapons || []).forEach(w => addWeaponRow(w));
 
+    // Veritech / Modos de Transformación
+    const isVar = Boolean(data.is_variable || data.category === 'veritech' || (data.vehicle_type?.es && (data.vehicle_type.es.toLowerCase().includes('variable') || data.vehicle_type.es.toLowerCase().includes('transformable'))) || data.modes);
+    const varCheck = document.getElementById('m_is_variable');
+    if (varCheck) varCheck.checked = isVar;
+    toggleVariableModes(isVar);
+
+    if (data.modes) {
+      if (data.modes.fighter) {
+        document.getElementById('m_mode_fighter_img').value = data.modes.fighter.image || '';
+        document.getElementById('m_mode_fighter_length').value = data.modes.fighter.length || '';
+        document.getElementById('m_mode_fighter_wingspan').value = data.modes.fighter.wingspan || '';
+        document.getElementById('m_mode_fighter_height').value = data.modes.fighter.height || '';
+        document.getElementById('m_mode_fighter_speed').value = data.modes.fighter.max_speed || data.modes.fighter.speed || '';
+        document.getElementById('m_mode_fighter_notes').value = data.modes.fighter.notes_es || data.modes.fighter.notes || '';
+        updateModePreview('fighter');
+      }
+      if (data.modes.guardian) {
+        document.getElementById('m_mode_guardian_img').value = data.modes.guardian.image || '';
+        document.getElementById('m_mode_guardian_length').value = data.modes.guardian.length || '';
+        document.getElementById('m_mode_guardian_wingspan').value = data.modes.guardian.wingspan || '';
+        document.getElementById('m_mode_guardian_height').value = data.modes.guardian.height || '';
+        document.getElementById('m_mode_guardian_speed').value = data.modes.guardian.speed || '';
+        document.getElementById('m_mode_guardian_notes').value = data.modes.guardian.notes_es || data.modes.guardian.notes || '';
+        updateModePreview('guardian');
+      }
+      if (data.modes.battloid) {
+        document.getElementById('m_mode_battloid_img').value = data.modes.battloid.image || '';
+        document.getElementById('m_mode_battloid_height').value = data.modes.battloid.height || '';
+        document.getElementById('m_mode_battloid_width').value = data.modes.battloid.width || '';
+        document.getElementById('m_mode_battloid_depth').value = data.modes.battloid.depth || '';
+        document.getElementById('m_mode_battloid_speed').value = data.modes.battloid.ground_speed || data.modes.battloid.speed || '';
+        document.getElementById('m_mode_battloid_notes').value = data.modes.battloid.notes_es || data.modes.battloid.notes || '';
+        updateModePreview('battloid');
+      }
+    }
+
     // Galería de Imágenes
     const galContainer = document.getElementById('gallery-items-container');
     galContainer.innerHTML = '';
@@ -340,6 +445,23 @@ function resetForm() {
   document.getElementById('mdc-items-container').innerHTML = '';
   document.getElementById('weapons-items-container').innerHTML = '';
   document.getElementById('gallery-items-container').innerHTML = '';
+
+  const varCheck = document.getElementById('m_is_variable');
+  if (varCheck) varCheck.checked = false;
+  toggleVariableModes(false);
+
+  ['fighter', 'guardian', 'battloid'].forEach(m => {
+    const imgInp = document.getElementById(`m_mode_${m}_img`);
+    if (imgInp) imgInp.value = '';
+    const prev = document.getElementById(`m_mode_${m}_preview`);
+    if (prev) { prev.src = ''; prev.style.display = 'none'; }
+    const lenInp = document.getElementById(`m_mode_${m}_length`);
+    if (lenInp) lenInp.value = '';
+    const speedInp = document.getElementById(`m_mode_${m}_speed`);
+    if (speedInp) speedInp.value = '';
+    const notesInp = document.getElementById(`m_mode_${m}_notes`);
+    if (notesInp) notesInp.value = '';
+  });
 
   addMdcRow({ location_es: 'Cuerpo Principal', location_en: 'Main Body', mdc: 250, notes_es: '', notes_en: '' });
   addWeaponRow({ name_es: 'Arma Primaria', name_en: 'Primary Weapon', damage: '4D10', range: '10 km' });
@@ -489,27 +611,50 @@ function updateLivePreview() {
   const name = document.getElementById('m_name').value || 'NOMBRE DE LA UNIDAD';
   const alias = document.getElementById('m_alias').value || 'DESIGNACIÓN';
   const faction = document.getElementById('m_faction_select')?.value || 'U.N. SPACY';
-  const logo = document.getElementById('m_faction_logo')?.value || (faction.toLowerCase().includes('zentraedi') || faction.toLowerCase().includes('zentran') ? 'assets/images/ui/logo_zentran.png' : 'assets/images/ui/logo_UNSpacy.png');
-  const thumb = document.getElementById('m_thumbnail').value || 'assets/images/mechas/destroid_raidar_x/b0eca7d9ebe0c448feae08c391418ea8.jpg';
+  const logo = document.getElementById('m_faction_logo')?.value || (faction.toLowerCase().includes('marte') || faction.toLowerCase().includes('mars') ? 'assets/images/ui/Mars_Base.png' : (faction.toLowerCase().includes('zentraedi') || faction.toLowerCase().includes('zentran') ? 'assets/images/ui/logo_zentran.png' : 'assets/images/ui/logo_UNSpacy.png'));
   
+  const isVar = document.getElementById('m_is_variable')?.checked || document.getElementById('m_category_select')?.value === 'veritech';
+  const fighterImg = document.getElementById('m_mode_fighter_img')?.value.trim();
+  const guardianImg = document.getElementById('m_mode_guardian_img')?.value.trim();
+  const battloidImg = document.getElementById('m_mode_battloid_img')?.value.trim();
+
+  let thumb = document.getElementById('m_thumbnail').value.trim();
+  if (!thumb) {
+    thumb = fighterImg || 'assets/images/mechas/destroid_raidar_x/b0eca7d9ebe0c448feae08c391418ea8.jpg';
+  }
+
   const speed = parseFloat(document.getElementById('m_stat_speed_val').value) || 0;
   const armor = parseInt(document.getElementById('m_stat_armor_val').value) || 0;
   const firepower = parseInt(document.getElementById('m_stat_firepower_val').value) || 0;
   const sensors = parseInt(document.getElementById('m_stat_sensors_val').value) || 0;
 
+  const varBadge = isVar ? `<span class="badge-tag" style="border-color: var(--un-cyan); color: var(--un-cyan); margin-left: 6px;">3-MODOS VERITECH</span>` : '';
+  
+  const modeSwitcher = (isVar && (fighterImg || guardianImg || battloidImg)) ? `
+    <div style="display: flex; gap: 4px; justify-content: center; margin-top: 6px; background: rgba(0,0,0,0.7); padding: 4px; border-radius: 4px; border: 1px solid rgba(0,240,255,0.2);">
+      <button type="button" style="padding: 2px 6px; font-size: 0.65rem; background: var(--un-cyan); color: #000; border: none; border-radius: 2px; cursor: pointer; font-weight: bold;" onclick="previewSwitchMode(this, '${fighterImg || thumb}')">CAZA</button>
+      <button type="button" style="padding: 2px 6px; font-size: 0.65rem; background: rgba(255,255,255,0.1); color: var(--text-muted); border: none; border-radius: 2px; cursor: pointer;" onclick="previewSwitchMode(this, '${guardianImg || thumb}')">GUARDIÁN</button>
+      <button type="button" style="padding: 2px 6px; font-size: 0.65rem; background: rgba(255,255,255,0.1); color: var(--text-muted); border: none; border-radius: 2px; cursor: pointer;" onclick="previewSwitchMode(this, '${battloidImg || thumb}')">BATTLOID</button>
+    </div>
+  ` : '';
+
   preview.innerHTML = `
     <div class="mecha-card" style="box-shadow: none;">
       <div class="card-header-status">
         <div class="card-faction-badge">
-          <img src="${logo}" class="card-faction-icon" alt="${faction}" style="width:16px; height:16px; object-fit:contain;">
+          <img src="${logo}" class="card-faction-icon" alt="${faction}" onerror="this.src='assets/images/ui/logo_UNSpacy.png'">
           <span class="faction-tag">${faction}</span>
         </div>
-        <span class="badge-tag">VISTA PREVIA</span>
+        <div style="display: flex; align-items: center;">
+          ${varBadge}
+          <span class="badge-tag" style="margin-left: 4px;">VISTA PREVIA</span>
+        </div>
       </div>
       <div class="card-image-wrap" style="height: 180px;">
-        <img src="${thumb}" alt="${name}" onerror="this.src='assets/images/mechas/destroid_raidar_x/b0eca7d9ebe0c448feae08c391418ea8.jpg'">
+        <img id="admin-preview-img" src="${thumb}" alt="${name}" onerror="this.src='assets/images/mechas/destroid_raidar_x/b0eca7d9ebe0c448feae08c391418ea8.jpg'">
         <div class="image-overlay-hud"></div>
       </div>
+      ${modeSwitcher}
       <div class="card-body">
         <div class="card-title-group">
           <h3 class="card-title">${name}</h3>
@@ -554,6 +699,22 @@ function updateLivePreview() {
   `;
 }
 
+window.previewSwitchMode = function(btn, imgUrl) {
+  const imgEl = document.getElementById('admin-preview-img');
+  if (imgEl && imgUrl) {
+    imgEl.src = imgUrl;
+  }
+  btn.parentElement.querySelectorAll('button').forEach(b => {
+    b.style.background = 'rgba(255,255,255,0.1)';
+    b.style.color = 'var(--text-muted)';
+    b.style.fontWeight = 'normal';
+  });
+  btn.style.background = 'var(--un-cyan)';
+  btn.style.color = '#000';
+  btn.style.fontWeight = 'bold';
+  window.tacticalAudio?.scan();
+};
+
 function buildCurrentMechaJSON() {
   const id = document.getElementById('m_id').value.trim() || 'mecha_nuevo';
   const name = document.getElementById('m_name').value.trim() || 'Mecha';
@@ -576,6 +737,47 @@ function buildCurrentMechaJSON() {
 
   const crew_es = document.getElementById('m_crew_es').value.trim() || 'Uno o dos';
   const thumbnail = document.getElementById('m_thumbnail').value.trim();
+
+  const isVariable = Boolean(document.getElementById('m_is_variable')?.checked || category === 'veritech' || type_es.toLowerCase().includes('variable') || type_es.toLowerCase().includes('transformable'));
+
+  let modesData = null;
+  if (isVariable) {
+    modesData = {
+      fighter: {
+        name_es: "Modo Caza / Jet",
+        name_en: "Fighter Mode / Jet",
+        image: document.getElementById('m_mode_fighter_img')?.value.trim() || thumbnail,
+        length: document.getElementById('m_mode_fighter_length')?.value.trim() || '',
+        wingspan: document.getElementById('m_mode_fighter_wingspan')?.value.trim() || '',
+        height: document.getElementById('m_mode_fighter_height')?.value.trim() || '',
+        max_speed: document.getElementById('m_mode_fighter_speed')?.value.trim() || '',
+        notes_es: document.getElementById('m_mode_fighter_notes')?.value.trim() || '',
+        notes_en: document.getElementById('m_mode_fighter_notes')?.value.trim() || ''
+      },
+      guardian: {
+        name_es: "Modo Guardián (Gerwalk)",
+        name_en: "Guardian Mode (Gerwalk)",
+        image: document.getElementById('m_mode_guardian_img')?.value.trim() || thumbnail,
+        length: document.getElementById('m_mode_guardian_length')?.value.trim() || '',
+        wingspan: document.getElementById('m_mode_guardian_wingspan')?.value.trim() || '',
+        height: document.getElementById('m_mode_guardian_height')?.value.trim() || '',
+        speed: document.getElementById('m_mode_guardian_speed')?.value.trim() || '',
+        notes_es: document.getElementById('m_mode_guardian_notes')?.value.trim() || '',
+        notes_en: document.getElementById('m_mode_guardian_notes')?.value.trim() || ''
+      },
+      battloid: {
+        name_es: "Modo Battloid (Humanoide)",
+        name_en: "Battloid Mode (Humanoid)",
+        image: document.getElementById('m_mode_battloid_img')?.value.trim() || thumbnail,
+        height: document.getElementById('m_mode_battloid_height')?.value.trim() || '',
+        width: document.getElementById('m_mode_battloid_width')?.value.trim() || '',
+        depth: document.getElementById('m_mode_battloid_depth')?.value.trim() || '',
+        ground_speed: document.getElementById('m_mode_battloid_speed')?.value.trim() || '',
+        notes_es: document.getElementById('m_mode_battloid_notes')?.value.trim() || '',
+        notes_en: document.getElementById('m_mode_battloid_notes')?.value.trim() || ''
+      }
+    };
+  }
 
   const speedVal = parseFloat(document.getElementById('m_stat_speed_val').value) || 0;
   const armorVal = parseInt(document.getElementById('m_stat_armor_val').value) || 0;
@@ -624,12 +826,14 @@ function buildCurrentMechaJSON() {
     name: name,
     alias: alias,
     category: category,
+    is_variable: isVariable,
+    modes: modesData,
     series: { es: series_es, en: series_en },
     faction: { es: faction_es, en: faction_en },
     vehicle_type: { es: type_es, en: type_en },
     crew: { es: crew_es, en: crew_es },
     thumbnail: thumbnail,
-    faction_logo: document.getElementById('m_faction_logo')?.value || (category === 'zentraedi' ? 'assets/images/ui/logo_zentran.png' : 'assets/images/ui/logo.png'),
+    faction_logo: document.getElementById('m_faction_logo')?.value || (category === 'zentraedi' ? 'assets/images/ui/logo_zentran.png' : 'assets/images/ui/logo_UNSpacy.png'),
     images: imagesList.length > 0 ? imagesList : [{ url: thumbnail, title_es: name, title_en: name, type: "render" }],
     stats: {
       speed: {
@@ -976,23 +1180,48 @@ window.filterAssetBrowserGrid = function() {
 };
 
 window.selectAsset = function(path) {
-  if (currentAssetTarget === 'm_thumbnail') {
-    const thumbInput = document.getElementById('m_thumbnail');
-    if (thumbInput) thumbInput.value = path;
-    updateLivePreview();
-  } else if (currentAssetTarget === 'new_gallery_row') {
-    const filename = path.split('/').pop().replace(/\.[^/.]+$/, '').replace(/_/g, ' ');
-    addGalleryRow({
-      url: path,
-      title_es: filename,
-      title_en: filename,
-      type: 'render'
-    });
-    updateLivePreview();
+  if (typeof currentAssetTarget === 'string') {
+    if (currentAssetTarget === 'new_gallery_row') {
+      const filename = path.split('/').pop().replace(/\.[^/.]+$/, '').replace(/_/g, ' ');
+      addGalleryRow({
+        url: path,
+        title_es: filename,
+        title_en: filename,
+        type: 'render'
+      });
+      updateLivePreview();
+    } else if (currentAssetTarget === 'new_char_gallery_row') {
+      const filename = path.split('/').pop().replace(/\.[^/.]+$/, '').replace(/_/g, ' ');
+      addCharGalleryRow({
+        url: path,
+        title_es: filename,
+        title_en: filename,
+        type_es: 'Retrato Oficial',
+        type_en: 'Official Portrait'
+      });
+      updateLiveCharPreview();
+    } else {
+      const targetInput = document.getElementById(currentAssetTarget);
+      if (targetInput) {
+        targetInput.value = path;
+        if (currentAssetTarget === 'm_faction_logo') {
+          updateFactionLogoPreview();
+        } else if (currentAssetTarget === 'c_faction_logo') {
+          updateCharFactionLogoPreview();
+        } else if (currentAssetTarget.startsWith('m_mode_')) {
+          const mode = currentAssetTarget.replace('m_mode_', '').replace('_img', '');
+          updateModePreview(mode);
+        }
+        updateLivePreview();
+        updateLiveCharPreview();
+      }
+    }
   } else if (currentAssetTarget && typeof currentAssetTarget === 'object' && currentAssetTarget.tagName === 'INPUT') {
     currentAssetTarget.value = path;
-    syncRowThumb(currentAssetTarget);
+    if (typeof syncCharRowThumb === 'function') syncCharRowThumb(currentAssetTarget);
+    if (typeof syncRowThumb === 'function') syncRowThumb(currentAssetTarget);
     updateLivePreview();
+    updateLiveCharPreview();
   }
 
   window.tacticalAudio?.scan();
@@ -1009,12 +1238,15 @@ window.handleNativeFileSelected = async function(event) {
     statusEl.innerHTML = `<span style="color:var(--un-cyan);">[*] Leyendo archivo <strong>${file.name}</strong>...</span>`;
   }
 
-  // Determinar carpeta destino: Si el usuario seleccionó una carpeta específica en el filtro, subir allí; si no, usar el ID del mecha
+  // Determinar carpeta destino según módulo activo
   const selectedFolder = document.getElementById('asset-folder-filter')?.value;
   const mechaId = document.getElementById('m_id')?.value?.trim();
+  const charId = document.getElementById('c_id')?.value?.trim();
   let folder = 'uploads';
   if (selectedFolder && selectedFolder !== 'all') {
     folder = selectedFolder;
+  } else if (activeAdminModule === 'characters' && charId) {
+    folder = `personajes/${charId}`;
   } else if (mechaId) {
     folder = mechaId;
   }
@@ -1061,10 +1293,766 @@ window.handleNativeFileSelected = async function(event) {
   reader.readAsDataURL(file);
 };
 
+// ==========================================================================
+// 5. GESTIÓN DEL MÓDULO DE PERSONAJES (CRUD COMPLETO)
+// ==========================================================================
+
+function setupModuleView(moduleName) {
+  activeAdminModule = moduleName;
+  const layoutMechas = document.getElementById('admin-layout-mechas');
+  const layoutChars = document.getElementById('admin-layout-characters');
+  const topMechas = document.getElementById('top-mechas-controls');
+  const topChars = document.getElementById('top-characters-controls');
+  const titleBadge = document.getElementById('admin-title-badge');
+  const subtitle = document.getElementById('admin-subtitle');
+
+  if (moduleName === 'characters') {
+    if (layoutMechas) layoutMechas.style.display = 'none';
+    if (layoutChars) layoutChars.style.display = 'grid';
+    if (topMechas) topMechas.style.display = 'none';
+    if (topChars) topChars.style.display = 'flex';
+    if (titleBadge) titleBadge.textContent = 'EXPEDIENTES // PERSONAJES';
+    if (subtitle) subtitle.textContent = 'GESTIÓN CRUD DE PERSONAJES Y ASES MILITARES SDF-1';
+    document.title = 'Robotech Admin Studio // Personajes';
+  } else {
+    if (layoutChars) layoutChars.style.display = 'none';
+    if (layoutMechas) layoutMechas.style.display = 'grid';
+    if (topChars) topChars.style.display = 'none';
+    if (topMechas) topMechas.style.display = 'flex';
+    if (titleBadge) titleBadge.textContent = 'CODEX // MECHAS';
+    if (subtitle) subtitle.textContent = 'GESTIÓN CRUD DE MECHAS Y VEHÍCULOS DE COMBATE';
+    document.title = 'Robotech Admin Studio // Mechas';
+  }
+}
+
+window.switchAdminModule = function(moduleName) {
+  setupModuleView(moduleName);
+  if (moduleName === 'characters') {
+    if (!currentCharManifest) loadAdminCharManifest();
+    updateLiveCharPreview();
+  } else {
+    if (!currentManifest) loadAdminManifest();
+    updateLivePreview();
+  }
+  window.tacticalAudio?.click();
+};
+
+async function loadAdminCharManifest() {
+  try {
+    const res = await fetch(`data/manifest_personajes.json?_t=${Date.now()}`, { cache: 'no-store' });
+    if (!res.ok) throw new Error("Could not load manifest_personajes.json");
+    currentCharManifest = await res.json();
+    populateCharSelect();
+  } catch (err) {
+    console.error("Error loading character manifest in admin:", err);
+  }
+}
+
+function populateCharSelect() {
+  const select = document.getElementById('select-character-to-edit');
+  if (!select || !currentCharManifest) return;
+
+  select.innerHTML = '<option value="">-- SELECCIONAR PERSONAJE EXISTENTE --</option>';
+  (currentCharManifest.characters || []).forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c.id;
+    opt.textContent = `${c.name} (${c.rank?.es || c.category || c.id})`;
+    select.appendChild(opt);
+  });
+
+  select.onchange = async (e) => {
+    const id = e.target.value;
+    if (id) {
+      await loadCharacterIntoForm(id);
+    } else {
+      initNewCharacter();
+    }
+  };
+
+  const btnNew = document.getElementById('btn-new-character');
+  if (btnNew) {
+    btnNew.onclick = () => {
+      initNewCharacter();
+      select.value = '';
+    };
+  }
+
+  // Preseleccionar primer personaje (ej: Lisa Hayes)
+  if (select.options.length > 1 && !currentCharData) {
+    select.selectedIndex = 1;
+    loadCharacterIntoForm(select.value);
+  }
+}
+
+async function loadCharacterIntoForm(id) {
+  try {
+    const res = await fetch(`data/personajes/${id}.json?_t=${Date.now()}`, { cache: 'no-store' });
+    if (!res.ok) throw new Error(`Could not load character data for ${id}`);
+    const data = await res.json();
+    currentCharData = data;
+
+    // 1. Identificación y Rol
+    const elId = document.getElementById('c_id');
+    if (elId) elId.value = data.id || '';
+    const elName = document.getElementById('c_name');
+    if (elName) elName.value = data.name || '';
+    const elJp = document.getElementById('c_japanese_name');
+    if (elJp) elJp.value = data.japanese_name || '';
+    const elCall = document.getElementById('c_callsign');
+    if (elCall) elCall.value = data.callsign || '';
+    const elCat = document.getElementById('c_category');
+    if (elCat && data.category) elCat.value = data.category;
+    const elSer = document.getElementById('c_series_select');
+    if (elSer && data.series?.es) elSer.value = data.series.es;
+
+    const elRankEs = document.getElementById('c_rank_es');
+    if (elRankEs) elRankEs.value = data.rank?.es || '';
+    const elRankEn = document.getElementById('c_rank_en');
+    if (elRankEn) elRankEn.value = data.rank?.en || '';
+    const elRoleEs = document.getElementById('c_role_es');
+    if (elRoleEs) elRoleEs.value = data.role?.es || '';
+    const elRoleEn = document.getElementById('c_role_en');
+    if (elRoleEn) elRoleEn.value = data.role?.en || '';
+    const elAssEs = document.getElementById('c_assignment_es');
+    if (elAssEs) elAssEs.value = data.assignment?.es || '';
+    const elAssEn = document.getElementById('c_assignment_en');
+    if (elAssEn) elAssEn.value = data.assignment?.en || '';
+
+    const elFac = document.getElementById('c_faction_select');
+    if (elFac && data.faction?.es) elFac.value = data.faction.es;
+    const elLogo = document.getElementById('c_faction_logo');
+    if (elLogo) {
+      elLogo.value = data.faction_logo || 'assets/images/ui/logo_UNSpacy.png';
+      window.updateCharFactionLogoPreview();
+    }
+
+    const elThumb = document.getElementById('c_thumbnail');
+    if (elThumb) elThumb.value = data.thumbnail || '';
+
+    // 2. Aptitudes
+    const apt = data.aptitudes || {};
+    const stats = data.stats || {};
+    const elCmd = document.getElementById('c_stat_command');
+    if (elCmd) elCmd.value = apt.command?.value || stats.command || 90;
+    const elStr = document.getElementById('c_stat_strategy');
+    if (elStr) elStr.value = apt.strategy?.value || stats.strategy || 90;
+    const elRes = document.getElementById('c_stat_resolve');
+    if (elRes) elRes.value = apt.resolve?.value || stats.resolve || 85;
+    const elPil = document.getElementById('c_stat_piloting');
+    if (elPil) elPil.value = apt.piloting?.value || stats.piloting || 70;
+
+    // 3. Biométricos
+    const elBirth = document.getElementById('c_birth_date');
+    if (elBirth) elBirth.value = data.birth_date || '';
+    const elBPlaceEs = document.getElementById('c_birth_place_es');
+    if (elBPlaceEs) elBPlaceEs.value = data.birth_place?.es || '';
+    const elBPlaceEn = document.getElementById('c_birth_place_en');
+    if (elBPlaceEn) elBPlaceEn.value = data.birth_place?.en || '';
+    const elBlood = document.getElementById('c_blood_type');
+    if (elBlood) elBlood.value = data.blood_type || '';
+    const elH = document.getElementById('c_height');
+    if (elH) elH.value = data.height || '';
+    const elW = document.getElementById('c_weight');
+    if (elW) elW.value = data.weight || '';
+
+    // 4. Dossier y Resumen
+    const elSumEs = document.getElementById('c_summary_es');
+    if (elSumEs) elSumEs.value = data.summary?.es || (data.lore?.overview_es ? data.lore.overview_es.substring(0, 160) + '...' : '');
+    const elSumEn = document.getElementById('c_summary_en');
+    if (elSumEn) elSumEn.value = data.summary?.en || (data.lore?.overview_en ? data.lore.overview_en.substring(0, 160) + '...' : '');
+    const elOverEs = document.getElementById('c_overview_es');
+    if (elOverEs) elOverEs.value = data.lore?.overview_es || '';
+    const elOverEn = document.getElementById('c_overview_en');
+    if (elOverEn) elOverEn.value = data.lore?.overview_en || '';
+    const elTacEs = document.getElementById('c_tactical_es');
+    if (elTacEs) elTacEs.value = data.lore?.tactical_analysis_es || '';
+    const elTacEn = document.getElementById('c_tactical_en');
+    if (elTacEn) elTacEn.value = data.lore?.tactical_analysis_en || '';
+
+    // 5. Hoja de Servicio
+    const srvContainer = document.getElementById('char-service-container');
+    if (srvContainer) {
+      srvContainer.innerHTML = '';
+      (data.service_record || []).forEach(row => addCharServiceRow(row));
+    }
+
+    // 6. Relaciones
+    const relContainer = document.getElementById('char-relations-container');
+    if (relContainer) {
+      relContainer.innerHTML = '';
+      (data.relationships || []).forEach(row => addCharRelationRow(row));
+    }
+
+    // 7. Condecoraciones
+    const elDec = document.getElementById('c_decorations');
+    if (elDec) elDec.value = (data.decorations || []).join('\n');
+
+    // 8. Galería
+    const galContainer = document.getElementById('char-gallery-container');
+    if (galContainer) {
+      galContainer.innerHTML = '';
+      (data.images || []).forEach(row => addCharGalleryRow(row));
+    }
+
+    updateLiveCharPreview();
+  } catch (err) {
+    console.error("Error loading character into form:", err);
+  }
+}
+
+function initNewCharacter() {
+  currentCharData = null;
+  const form = document.getElementById('crud-form-char');
+  if (form) form.reset();
+
+  const setVal = (id, val) => { const el = document.getElementById(id); if (el) el.value = val; };
+  setVal('c_id', 'nuevo_personaje');
+  setVal('c_name', 'Nuevo Personaje');
+  setVal('c_japanese_name', '');
+  setVal('c_callsign', '');
+  setVal('c_category', 'command');
+  setVal('c_series_select', 'La Saga Macross (Primera Guerra Robotech)');
+  setVal('c_rank_es', 'Oficial / Piloto');
+  setVal('c_rank_en', 'Officer / Pilot');
+  setVal('c_role_es', 'Operaciones Tácticas');
+  setVal('c_role_en', 'Tactical Operations');
+  setVal('c_assignment_es', 'Fuerza de Defensa Robotech');
+  setVal('c_assignment_en', 'Robotech Defense Force');
+  setVal('c_faction_select', 'U.N. Spacy');
+  setVal('c_faction_logo', 'assets/images/ui/logo_UNSpacy.png');
+  window.updateCharFactionLogoPreview();
+  setVal('c_thumbnail', 'assets/images/ui/logo_UNSpacy.png');
+
+  setVal('c_stat_command', 85);
+  setVal('c_stat_strategy', 85);
+  setVal('c_stat_resolve', 85);
+  setVal('c_stat_piloting', 75);
+
+  setVal('c_birth_date', '');
+  setVal('c_birth_place_es', 'Tierra');
+  setVal('c_birth_place_en', 'Earth');
+  setVal('c_blood_type', 'O+');
+  setVal('c_height', '');
+  setVal('c_weight', '');
+
+  setVal('c_summary_es', '');
+  setVal('c_summary_en', '');
+  setVal('c_overview_es', '');
+  setVal('c_overview_en', '');
+  setVal('c_tactical_es', '');
+  setVal('c_tactical_en', '');
+
+  const srvContainer = document.getElementById('char-service-container');
+  if (srvContainer) {
+    srvContainer.innerHTML = '';
+    addCharServiceRow({ period: '2009 - 2011', assignment_es: 'Asignación Inicial', assignment_en: 'Initial Assignment' });
+  }
+
+  const relContainer = document.getElementById('char-relations-container');
+  if (relContainer) relContainer.innerHTML = '';
+  setVal('c_decorations', '');
+
+  const galContainer = document.getElementById('char-gallery-container');
+  if (galContainer) {
+    galContainer.innerHTML = '';
+    addCharGalleryRow({
+      url: 'assets/images/ui/logo_UNSpacy.png',
+      title_es: 'Retrato de Servicio',
+      title_en: 'Service Portrait',
+      type_es: 'Retrato Oficial',
+      type_en: 'Official Portrait'
+    });
+  }
+
+  updateLiveCharPreview();
+}
+
+window.addCharServiceRow = function(data = {}) {
+  const container = document.getElementById('char-service-container');
+  if (!container) return;
+  const div = document.createElement('div');
+  div.className = 'dyn-list-item';
+  div.innerHTML = `
+    <button type="button" class="dyn-list-remove" onclick="this.closest('.dyn-list-item').remove();" title="Eliminar fila">✕</button>
+    <div class="form-grid-3">
+      <div class="form-group">
+        <label>Período / Año</label>
+        <input type="text" class="form-input srv-period" placeholder="ej: 2009 - 2011" value="${data.period || ''}">
+      </div>
+      <div class="form-group">
+        <label>Asignación (Español)</label>
+        <input type="text" class="form-input srv-es" placeholder="Destino militar en español" value="${data.assignment_es || ''}">
+      </div>
+      <div class="form-group">
+        <label>Asignación (English)</label>
+        <input type="text" class="form-input srv-en" placeholder="Assignment in English" value="${data.assignment_en || ''}">
+      </div>
+    </div>
+  `;
+  container.appendChild(div);
+};
+
+window.addCharRelationRow = function(data = {}) {
+  const container = document.getElementById('char-relations-container');
+  if (!container) return;
+  const div = document.createElement('div');
+  div.className = 'dyn-list-item';
+  div.innerHTML = `
+    <button type="button" class="dyn-list-remove" onclick="this.closest('.dyn-list-item').remove();" title="Eliminar fila">✕</button>
+    <div class="form-grid-3">
+      <div class="form-group">
+        <label>Nombre del Personaje</label>
+        <input type="text" class="form-input rel-name" placeholder="ej: Rick Hunter" value="${data.name || ''}">
+      </div>
+      <div class="form-group">
+        <label>Vínculo (Español)</label>
+        <input type="text" class="form-input rel-type-es" placeholder="ej: Compañero de Armas // Esposo" value="${data.relation_es || ''}">
+      </div>
+      <div class="form-group">
+        <label>Vínculo (English)</label>
+        <input type="text" class="form-input rel-type-en" placeholder="ej: Combat Partner // Husband" value="${data.relation_en || ''}">
+      </div>
+    </div>
+    <div class="form-group" style="margin-bottom: 0;">
+      <label>Notas de la Relación (Español)</label>
+      <textarea class="form-textarea rel-notes" style="min-height: 50px;" placeholder="Detalles de la interacción militar o personal...">${data.notes_es || ''}</textarea>
+    </div>
+  `;
+  container.appendChild(div);
+};
+
+window.addCharGalleryRow = function(data = {}) {
+  const container = document.getElementById('char-gallery-container');
+  if (!container) return;
+  const thumbUrl = data.url || 'assets/images/ui/logo_UNSpacy.png';
+  const isCover = document.getElementById('c_thumbnail')?.value === thumbUrl;
+  const div = document.createElement('div');
+  div.className = 'gallery-admin-row';
+  div.innerHTML = `
+    <img src="${thumbUrl}" class="gallery-admin-thumb" alt="Preview" onerror="this.src='assets/images/ui/logo_UNSpacy.png'">
+    <div style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+      <div style="display: flex; gap: 8px;">
+        <input type="text" class="form-input gal-char-url" placeholder="assets/images/personajes/... o URL" value="${data.url || ''}" oninput="syncCharRowThumb(this); updateLiveCharPreview();">
+        <button type="button" class="btn-action-secondary" onclick="openAssetBrowserForCharGalleryRow(this)" style="padding: 4px 10px; font-size: 0.72rem; white-space: nowrap;">
+          📁 ELEGIR
+        </button>
+      </div>
+      <div class="form-grid-3" style="gap: 6px;">
+        <input type="text" class="form-input gal-char-title-es" placeholder="Título foto (Español)" value="${data.title_es || ''}">
+        <input type="text" class="form-input gal-char-title-en" placeholder="Title (English)" value="${data.title_en || ''}">
+        <select class="form-select gal-char-type-es">
+          <option value="Retrato Oficial" ${data.type_es === 'Retrato Oficial' ? 'selected' : ''}>Retrato Oficial</option>
+          <option value="Misión Operativa" ${data.type_es === 'Misión Operativa' ? 'selected' : ''}>Misión Operativa</option>
+          <option value="Registro Personal" ${data.type_es === 'Registro Personal' ? 'selected' : ''}>Registro Personal</option>
+          <option value="Historial Temprano" ${data.type_es === 'Historial Temprano' ? 'selected' : ''}>Historial Temprano</option>
+          <option value="Archivo Táctico" ${data.type_es === 'Archivo Táctico' ? 'selected' : ''}>Archivo Táctico</option>
+          <option value="En Operación" ${data.type_es === 'En Operación' ? 'selected' : ''}>En Operación</option>
+          <option value="Condecoración" ${data.type_es === 'Condecoración' ? 'selected' : ''}>Condecoración</option>
+          <option value="Vigilancia Radar" ${data.type_es === 'Vigilancia Radar' ? 'selected' : ''}>Vigilancia Radar</option>
+        </select>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px; align-items: flex-end;">
+      <button type="button" class="btn-set-cover ${isCover ? 'active' : ''}" onclick="setAsCharThumbnail(this)">
+        ${isCover ? '★ PORTADA ACTUAL' : '☆ HACER PORTADA'}
+      </button>
+      <button type="button" class="dyn-list-remove" style="position: static;" onclick="this.closest('.gallery-admin-row').remove(); updateLiveCharPreview();">✕</button>
+    </div>
+  `;
+  container.appendChild(div);
+};
+
+window.syncCharRowThumb = function(input) {
+  const row = input.closest('.gallery-admin-row');
+  const img = row ? row.querySelector('.gallery-admin-thumb') : null;
+  if (img) img.src = input.value || 'assets/images/ui/logo_UNSpacy.png';
+};
+
+window.setAsCharThumbnail = function(btn) {
+  const row = btn.closest('.gallery-admin-row');
+  const urlInp = row ? row.querySelector('.gal-char-url') : null;
+  if (!urlInp || !urlInp.value) return;
+
+  const thumbInput = document.getElementById('c_thumbnail');
+  if (thumbInput) thumbInput.value = urlInp.value;
+
+  document.querySelectorAll('#char-gallery-container .btn-set-cover').forEach(b => {
+    b.classList.remove('active');
+    b.textContent = '☆ HACER PORTADA';
+  });
+  btn.classList.add('active');
+  btn.textContent = '★ PORTADA ACTUAL';
+
+  updateLiveCharPreview();
+  window.tacticalAudio?.scan();
+};
+
+window.openAssetBrowserForCharGalleryRow = function(btn) {
+  const row = btn.closest('.gallery-admin-row');
+  const input = row ? row.querySelector('.gal-char-url') : null;
+  if (input) {
+    window.openAssetBrowser(input);
+  }
+};
+
+window.openAssetBrowserForNewCharGalleryItem = function() {
+  window.openAssetBrowser('new_char_gallery_row');
+};
+
+window.updateCharFactionFromSelect = function() {
+  const sel = document.getElementById('c_faction_select');
+  const logoInp = document.getElementById('c_faction_logo');
+  if (!sel || !logoInp) return;
+  const opt = sel.selectedOptions[0];
+  const logo = opt?.dataset?.logo;
+  if (logo) {
+    logoInp.value = logo;
+  } else {
+    const val = sel.value.toLowerCase();
+    if (val.includes('marte') || val.includes('mars')) {
+      logoInp.value = 'assets/images/ui/Mars_Base.png';
+    } else if (val.includes('zentraedi') || val.includes('zentran')) {
+      logoInp.value = 'assets/images/ui/logo_zentran.png';
+    } else {
+      logoInp.value = 'assets/images/ui/logo_UNSpacy.png';
+    }
+  }
+  updateCharFactionLogoPreview();
+  updateLiveCharPreview();
+};
+
+window.updateCharFactionLogoPreview = function() {
+  const inp = document.getElementById('c_faction_logo');
+  const img = document.getElementById('char_faction_logo_preview');
+  if (inp && img) {
+    img.src = inp.value || 'assets/images/ui/logo_UNSpacy.png';
+  }
+};
+
+function updateLiveCharPreview() {
+  const preview = document.getElementById('admin-live-char-card');
+  if (!preview) return;
+
+  const name = document.getElementById('c_name')?.value || 'NOMBRE DEL PERSONAJE';
+  const rank = document.getElementById('c_rank_es')?.value || 'RANGO MILITAR';
+  const assignment = document.getElementById('c_assignment_es')?.value || 'ASIGNACIÓN OPERATIVA';
+  const faction = document.getElementById('c_faction_select')?.value || 'U.N. Spacy';
+  const logo = document.getElementById('c_faction_logo')?.value || 'assets/images/ui/logo_UNSpacy.png';
+  const thumb = document.getElementById('c_thumbnail')?.value || 'assets/images/ui/logo_UNSpacy.png';
+  const summary = document.getElementById('c_summary_es')?.value || 'Resumen biográfico táctico del personaje...';
+
+  const cmd = parseInt(document.getElementById('c_stat_command')?.value) || 85;
+  const str = parseInt(document.getElementById('c_stat_strategy')?.value) || 85;
+  const res = parseInt(document.getElementById('c_stat_resolve')?.value) || 85;
+  const pil = parseInt(document.getElementById('c_stat_piloting')?.value) || 75;
+
+  preview.innerHTML = `
+    <div class="mecha-card" style="box-shadow: none;">
+      <div class="card-header-status">
+        <div class="card-faction-badge" title="${faction}">
+          <img src="${logo}" class="card-faction-icon" alt="${faction}" onerror="this.src='assets/images/ui/logo_UNSpacy.png'">
+          <span class="faction-tag">${faction}</span>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="badge-tag" style="border-color: var(--skull-amber); color: var(--skull-amber);">EXPEDIENTE</span>
+        </div>
+      </div>
+
+      <div class="card-image-wrap" style="height: 220px; position: relative;">
+        <img src="${thumb}" alt="${name}" onerror="this.src='assets/images/ui/logo_UNSpacy.png'" style="object-position: center 15%;">
+        <div class="image-overlay-hud"></div>
+      </div>
+
+      <div class="card-body">
+        <div class="card-title-group">
+          <h3 class="card-title">${name}</h3>
+          <div class="card-alias">${rank}</div>
+        </div>
+
+        <div style="margin-bottom: 8px; font-family: var(--font-mono); font-size: 0.72rem; color: var(--un-cyan); letter-spacing: 0.8px;">
+          ⌖ ${assignment}
+        </div>
+
+        <p class="card-summary">${summary}</p>
+
+        <div class="stats-bars-container">
+          <div class="stat-row">
+            <span class="stat-label">MANDO</span>
+            <div class="stat-bar-track">
+              <div class="stat-bar-fill speed" style="width: ${cmd}%;"></div>
+            </div>
+            <span class="stat-value" style="width: auto;">${cmd}</span>
+          </div>
+
+          <div class="stat-row">
+            <span class="stat-label">ESTRATEGIA</span>
+            <div class="stat-bar-track">
+              <div class="stat-bar-fill armor" style="width: ${str}%;"></div>
+            </div>
+            <span class="stat-value" style="width: auto;">${str}</span>
+          </div>
+
+          <div class="stat-row">
+            <span class="stat-label">RESOLUCIÓN</span>
+            <div class="stat-bar-track">
+              <div class="stat-bar-fill sensors" style="width: ${res}%;"></div>
+            </div>
+            <span class="stat-value" style="width: auto;">${res}</span>
+          </div>
+
+          <div class="stat-row">
+            <span class="stat-label">PILOTAJE</span>
+            <div class="stat-bar-track">
+              <div class="stat-bar-fill firepower" style="width: ${pil}%;"></div>
+            </div>
+            <span class="stat-value" style="width: auto;">${pil}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function buildCurrentCharJSON() {
+  const id = document.getElementById('c_id')?.value.trim() || 'nuevo_personaje';
+  const name = document.getElementById('c_name')?.value.trim() || 'Nuevo Personaje';
+  const jp = document.getElementById('c_japanese_name')?.value.trim() || '';
+  const callsign = document.getElementById('c_callsign')?.value.trim() || '';
+  const category = document.getElementById('c_category')?.value || 'command';
+
+  const serSel = document.getElementById('c_series_select');
+  const series_es = serSel ? serSel.value : 'La Saga Macross (Primera Guerra Robotech)';
+  const series_en = serSel?.selectedOptions[0]?.dataset?.en || series_es;
+
+  const rank_es = document.getElementById('c_rank_es')?.value.trim() || '';
+  const rank_en = document.getElementById('c_rank_en')?.value.trim() || rank_es;
+
+  const role_es = document.getElementById('c_role_es')?.value.trim() || '';
+  const role_en = document.getElementById('c_role_en')?.value.trim() || role_es;
+
+  const assign_es = document.getElementById('c_assignment_es')?.value.trim() || '';
+  const assign_en = document.getElementById('c_assignment_en')?.value.trim() || assign_es;
+
+  const facSel = document.getElementById('c_faction_select');
+  const faction_es = facSel ? facSel.value : 'U.N. Spacy';
+  const faction_en = facSel?.selectedOptions[0]?.dataset?.en || faction_es;
+  const faction_logo = document.getElementById('c_faction_logo')?.value || 'assets/images/ui/logo_UNSpacy.png';
+
+  const thumbnail = document.getElementById('c_thumbnail')?.value.trim() || 'assets/images/ui/logo_UNSpacy.png';
+
+  const cmdVal = parseInt(document.getElementById('c_stat_command')?.value) || 85;
+  const strVal = parseInt(document.getElementById('c_stat_strategy')?.value) || 85;
+  const resVal = parseInt(document.getElementById('c_stat_resolve')?.value) || 85;
+  const pilVal = parseInt(document.getElementById('c_stat_piloting')?.value) || 75;
+
+  const birth_date = document.getElementById('c_birth_date')?.value.trim() || '';
+  const birth_place_es = document.getElementById('c_birth_place_es')?.value.trim() || '';
+  const birth_place_en = document.getElementById('c_birth_place_en')?.value.trim() || birth_place_es;
+  const blood_type = document.getElementById('c_blood_type')?.value.trim() || '';
+  const height = document.getElementById('c_height')?.value.trim() || '';
+  const weight = document.getElementById('c_weight')?.value.trim() || '';
+
+  const summary_es = document.getElementById('c_summary_es')?.value.trim() || '';
+  const summary_en = document.getElementById('c_summary_en')?.value.trim() || summary_es;
+  const overview_es = document.getElementById('c_overview_es')?.value.trim() || '';
+  const overview_en = document.getElementById('c_overview_en')?.value.trim() || overview_es;
+  const tactical_es = document.getElementById('c_tactical_es')?.value.trim() || '';
+  const tactical_en = document.getElementById('c_tactical_en')?.value.trim() || tactical_es;
+
+  // Hoja de Servicio
+  const serviceList = [];
+  document.querySelectorAll('#char-service-container .dyn-list-item').forEach(el => {
+    const period = el.querySelector('.srv-period')?.value.trim();
+    const ass_es = el.querySelector('.srv-es')?.value.trim();
+    const ass_en = el.querySelector('.srv-en')?.value.trim();
+    if (period || ass_es) {
+      serviceList.push({
+        period: period,
+        assignment_es: ass_es,
+        assignment_en: ass_en || ass_es
+      });
+    }
+  });
+
+  // Relaciones
+  const relList = [];
+  document.querySelectorAll('#char-relations-container .dyn-list-item').forEach(el => {
+    const relName = el.querySelector('.rel-name')?.value.trim();
+    const rel_es = el.querySelector('.rel-type-es')?.value.trim();
+    const rel_en = el.querySelector('.rel-type-en')?.value.trim();
+    const notes = el.querySelector('.rel-notes')?.value.trim();
+    if (relName) {
+      relList.push({
+        name: relName,
+        relation_es: rel_es,
+        relation_en: rel_en || rel_es,
+        notes_es: notes
+      });
+    }
+  });
+
+  // Condecoraciones
+  const decRaw = document.getElementById('c_decorations')?.value || '';
+  const decorations = decRaw.split('\n').map(d => d.trim()).filter(d => d.length > 0);
+
+  // Galería
+  const imagesList = [];
+  document.querySelectorAll('#char-gallery-container .gallery-admin-row').forEach(row => {
+    const url = row.querySelector('.gal-char-url')?.value.trim();
+    if (url) {
+      const typeEs = row.querySelector('.gal-char-type-es')?.value || 'Retrato Oficial';
+      const typeMapEn = {
+        'Retrato Oficial': 'Official Portrait',
+        'Misión Operativa': 'Field Mission',
+        'Registro Personal': 'Personal Log',
+        'Historial Temprano': 'Early Career',
+        'Archivo Táctico': 'Tactical File',
+        'En Operación': 'In Operation',
+        'Condecoración': 'Commendation',
+        'Vigilancia Radar': 'Radar Surveillance'
+      };
+      imagesList.push({
+        url: url,
+        title_es: row.querySelector('.gal-char-title-es')?.value.trim() || name,
+        title_en: row.querySelector('.gal-char-title-en')?.value.trim() || name,
+        type_es: typeEs,
+        type_en: typeMapEn[typeEs] || typeEs
+      });
+    }
+  });
+
+  return {
+    id: id,
+    name: name,
+    japanese_name: jp,
+    callsign: callsign,
+    rank: { es: rank_es, en: rank_en },
+    role: { es: role_es, en: role_en },
+    category: category,
+    faction: { es: faction_es, en: faction_en },
+    faction_logo: faction_logo,
+    series: { es: series_es, en: series_en },
+    assignment: { es: assign_es, en: assign_en },
+    birth_date: birth_date,
+    birth_place: { es: birth_place_es, en: birth_place_en },
+    blood_type: blood_type,
+    height: height,
+    weight: weight,
+    thumbnail: thumbnail,
+    images: imagesList.length > 0 ? imagesList : [{ url: thumbnail, title_es: name, title_en: name, type_es: "Retrato Oficial", type_en: "Official Portrait" }],
+    summary: { es: summary_es, en: summary_en },
+    lore: {
+      overview_es: overview_es,
+      overview_en: overview_en,
+      tactical_analysis_es: tactical_es,
+      tactical_analysis_en: tactical_en
+    },
+    aptitudes: {
+      command: {
+        value: cmdVal,
+        label_es: "Mando y Liderazgo Táctico",
+        label_en: "Command & Tactical Leadership",
+        desc_es: "Capacidad para comandar flotas y operaciones tácticas a gran escala."
+      },
+      strategy: {
+        value: strVal,
+        label_es: "Estrategia e Inteligencia Militar",
+        label_en: "Strategic Intelligence & Planning",
+        desc_es: "Maestría en análisis balístico, predicción de movimientos y logística bélica."
+      },
+      resolve: {
+        value: resVal,
+        label_es: "Resolución y Templanza bajo Fuego",
+        label_en: "Poise & Crisis Resolution",
+        desc_es: "Serenidad mental y toma de decisiones crítica en condiciones extremas."
+      },
+      piloting: {
+        value: pilVal,
+        label_es: "Habilidad de Vuelo y Pilotaje",
+        label_en: "Flight & Piloting Proficiency",
+        desc_es: "Aptitud de pilotaje de cazas aeroespaciales y maniobras de evasión."
+      }
+    },
+    stats: {
+      command: cmdVal,
+      strategy: strVal,
+      resolve: resVal,
+      piloting: pilVal
+    },
+    service_record: serviceList,
+    relationships: relList,
+    decorations: decorations
+  };
+}
+
+function setupCharEventListeners() {
+  document.getElementById('crud-form-char')?.addEventListener('input', () => {
+    updateLiveCharPreview();
+  });
+}
+
+function setupCharExportButtons() {
+  const btnSaveChar = document.getElementById('btn-save-char-direct');
+  if (btnSaveChar) {
+    btnSaveChar.addEventListener('click', async () => {
+      const data = buildCurrentCharJSON();
+      const consoleBox = document.getElementById('git-status-console-char');
+      if (consoleBox) {
+        consoleBox.style.display = 'block';
+        consoleBox.innerHTML = '<span style="color:var(--un-cyan);">[*] Guardando expediente militar en el disco duro local...</span>';
+      }
+
+      try {
+        const res = await fetch('/api/save-character', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ character: data })
+        });
+
+        if (res.ok) {
+          const result = await res.json();
+          window.tacticalAudio?.scan();
+          if (consoleBox) {
+            consoleBox.innerHTML = `
+              <span style="color: var(--radar-green); font-weight: bold;">✓ [ÉXITO] Expediente guardado en disco:</span>
+              <br>• data/personajes/${data.id}.json
+              <br>• data/manifest_personajes.json
+              <br><span style="color: var(--text-dim);">${result.message || ''}</span>
+            `;
+          }
+
+          // Refrescar selector de personajes
+          await loadAdminCharManifest();
+          const select = document.getElementById('select-character-to-edit');
+          if (select) select.value = data.id;
+
+        } else {
+          throw new Error("El servidor local respondió con error.");
+        }
+      } catch (err) {
+        console.warn("Fallo guardado por API /api/save-character, usando fallback:", err);
+        if (consoleBox) {
+          consoleBox.innerHTML = '<span style="color: var(--skull-amber);">[!] Servidor API no disponible. Descargando archivo JSON manualmente...</span>';
+        }
+        downloadJSON(data, `${data.id}.json`);
+      }
+    });
+  }
+
+  const btnDlChar = document.getElementById('btn-download-char-json');
+  if (btnDlChar) {
+    btnDlChar.addEventListener('click', () => {
+      const data = buildCurrentCharJSON();
+      downloadJSON(data, `${data.id}.json`);
+    });
+  }
+}
+
 window.addMdcRow = addMdcRow;
 window.addWeaponRow = addWeaponRow;
 window.addGalleryRow = addGalleryRow;
 window.updateLivePreview = updateLivePreview;
+window.updateLiveCharPreview = updateLiveCharPreview;
 window.updateFactionLogoPreview = updateFactionLogoPreview;
 
 

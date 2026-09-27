@@ -1,30 +1,121 @@
 {
   "id": "vf1s_valkyrie",
-  "name": "VF-1S Valkyrie",
-  "alias": "Skull Leader / Veritech Fighter",
+  "name": "VF-1 Valkyrie",
+  "alias": "Veritech Fighter",
   "category": "veritech",
+  "is_variable": true,
+  "modes": {
+    "fighter": {
+      "name_es": "Modo Caza / Jet",
+      "name_en": "Fighter Mode / Jet",
+      "image": "assets/images/mechas/VF-1/cd7542498611aaee9cefa3fc17e710b9.jpg",
+      "length": "",
+      "wingspan": "",
+      "height": "",
+      "max_speed": "",
+      "notes_es": "",
+      "notes_en": ""
+    },
+    "guardian": {
+      "name_es": "Modo Guardián (Gerwalk)",
+      "name_en": "Guardian Mode (Gerwalk)",
+      "image": "assets/images/mechas/VF-1/fa092418fdb7296f0be73ed9085f4a04.jpg",
+      "length": "",
+      "wingspan": "",
+      "height": "",
+      "speed": "",
+      "notes_es": "",
+      "notes_en": ""
+    },
+    "battloid": {
+      "name_es": "Modo Battloid (Humanoide)",
+      "name_en": "Battloid Mode (Humanoid)",
+      "image": "assets/images/mechas/VF-1/ebab350fda69bd2bfcb39b98a92a6153.jpg",
+      "height": "",
+      "width": "",
+      "depth": "",
+      "ground_speed": "",
+      "notes_es": "",
+      "notes_en": ""
+    }
+  },
   "series": {
     "es": "La Saga Macross (Primera Guerra Robotech)",
     "en": "The Macross Saga (First Robotech War)"
   },
   "faction": {
-    "es": "U.N. Spacy - Escuadrón Skull",
-    "en": "U.N. Spacy - Skull Squadron"
+    "es": "U.N. Spacy",
+    "en": "U.N. Spacy"
   },
   "vehicle_type": {
     "es": "Caza Variable Aeroespacial / Mecha Transformable",
     "en": "Variable Aerospace Fighter / Transformable Mecha"
   },
   "crew": {
-    "es": "Uno (Comandante de Escuadrón / As Roy Focker)",
-    "en": "One (Squadron Commander / Ace Pilot Roy Focker)"
+    "es": "Uno",
+    "en": "Uno"
   },
-  "thumbnail": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80",
+  "thumbnail": "assets/images/mechas/VF-1/cd7542498611aaee9cefa3fc17e710b9.jpg",
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1000&auto=format&fit=crop&q=80",
+      "url": "assets/images/mechas/VF-1/cd7542498611aaee9cefa3fc17e710b9.jpg",
       "title_es": "VF-1S Veritech en Modo Caza Espacial",
       "title_en": "VF-1S Veritech in Space Fighter Mode",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/VF-1/9821aff3d34f70d7b144def0a4704ba3.jpg",
+      "title_es": "9821aff3d34f70d7b144def0a4704ba3",
+      "title_en": "9821aff3d34f70d7b144def0a4704ba3",
+      "type": "blueprint"
+    },
+    {
+      "url": "assets/images/mechas/VF-1/96c28b9621f284f2e663ecbfd8e864b7.jpg",
+      "title_es": "96c28b9621f284f2e663ecbfd8e864b7",
+      "title_en": "96c28b9621f284f2e663ecbfd8e864b7",
+      "type": "artwork"
+    },
+    {
+      "url": "assets/images/mechas/VF-1/32d3d4608a80960d6e2081ee51b8d7da.jpg",
+      "title_es": "32d3d4608a80960d6e2081ee51b8d7da",
+      "title_en": "32d3d4608a80960d6e2081ee51b8d7da",
+      "type": "detail"
+    },
+    {
+      "url": "assets/images/mechas/VF-1/81d53ef0068e8ddd5d2bd9b7711ce704.jpg",
+      "title_es": "81d53ef0068e8ddd5d2bd9b7711ce704",
+      "title_en": "81d53ef0068e8ddd5d2bd9b7711ce704",
+      "type": "detail"
+    },
+    {
+      "url": "assets/images/mechas/VF-1/2e5482ea55258c1841db8e5fce92d1c2.jpg",
+      "title_es": "2e5482ea55258c1841db8e5fce92d1c2",
+      "title_en": "2e5482ea55258c1841db8e5fce92d1c2",
+      "type": "detail"
+    },
+    {
+      "url": "assets/images/mechas/VF-1/bc7d8ede55f572728f0a429bb7f3613c.jpg",
+      "title_es": "bc7d8ede55f572728f0a429bb7f3613c",
+      "title_en": "bc7d8ede55f572728f0a429bb7f3613c",
+      "type": "detail"
+    },
+    {
+      "url": "assets/images/mechas/VF-1/432f63a42022aff997eb077e54460e7d.jpg",
+      "title_es": "432f63a42022aff997eb077e54460e7d",
+      "title_en": "432f63a42022aff997eb077e54460e7d",
+      "type": "artwork"
+    },
+    {
+      "url": "assets/images/mechas/VF-1/b9c8ff03c62308265c845b5c7aef768c.jpg",
+      "title_es": "b9c8ff03c62308265c845b5c7aef768c",
+      "title_en": "b9c8ff03c62308265c845b5c7aef768c",
+      "type": "artwork"
+    },
+    {
+      "url": "assets/images/mechas/VF-1/90f6536e213efe8c307080206735fa11.jpg",
+      "title_es": "90f6536e213efe8c307080206735fa11",
+      "title_en": "90f6536e213efe8c307080206735fa11",
       "type": "render"
     }
   ],
@@ -33,74 +124,62 @@
       "value": 3871,
       "unit_es": "km/h",
       "unit_en": "km/h",
-      "rating": 95,
-      "label_es": "3.871 km/h (Mach 3.87 / Crucero Mach 2.71)",
-      "label_en": "3,871 km/h (Mach 3.87 / Cruise Mach 2.71)"
+      "rating": 97,
+      "label_es": "3871 km/h",
+      "label_en": "3871 km/h"
     },
     "armor": {
       "value": 200,
       "unit_es": "C.D.M.",
       "unit_en": "M.D.C.",
-      "rating": 50,
-      "label_es": "200 C.D.M. Cuerpo / 680 Total",
-      "label_en": "200 M.D.C. Main Body / 680 Total"
+      "rating": 40,
+      "label_es": "200 C.D.M. Cuerpo",
+      "label_en": "200 M.D.C. Main Body"
     },
     "firepower": {
       "value": 88,
-      "unit_es": "Pts / GU-11",
-      "unit_en": "Pts / GU-11",
+      "unit_es": "Pts",
+      "unit_en": "Pts",
       "rating": 88,
-      "label_es": "88 Pts (GU-11 55mm + 4x RoV-20)",
-      "label_en": "88 Pts (GU-11 55mm + 4x RoV-20)"
+      "label_es": "88 Pts",
+      "label_en": "88 Pts"
     },
     "range": {
       "value": 6.5,
       "unit_es": "km",
       "unit_en": "km",
-      "rating": 75,
-      "label_es": "6,5 km Cañón / 40 km Misiles",
-      "label_en": "6.5 km Gunpod / 40 km Missiles"
+      "rating": 46,
+      "label_es": "6.5 km",
+      "label_en": "6.5 km"
     },
     "sensors": {
       "value": 250,
       "unit_es": "km",
       "unit_en": "km",
-      "rating": 85,
-      "label_es": "250 km Radar Aeroespacial",
-      "label_en": "250 km Aerospace Radar"
+      "rating": 71,
+      "label_es": "250 km Radar",
+      "label_en": "250 km Radar"
     },
     "mobility": {
       "value": 98,
       "unit_es": "Pts",
       "unit_en": "Pts",
       "rating": 98,
-      "label_es": "98 Pts (Sobresaliente - Caza/Guardián/Battloid)",
-      "label_en": "98 Pts (Outstanding - Fighter/Guardian/Battloid)"
+      "label_es": "98 Pts",
+      "label_en": "98 Pts"
     }
   },
   "dimensions": {
     "height": {
-      "metric": "12,68 m (Battloid)",
-      "imperial": "41,6 pies (Battloid)"
-    },
-    "width": {
-      "metric": "14,78 m (Envergadura)",
-      "imperial": "48,5 pies (Wingspan)"
-    },
-    "length": {
-      "metric": "14,23 m (Caza)",
-      "imperial": "46,7 pies (Fighter)"
+      "metric": "12,68 m (Battloid)"
     },
     "weight": {
-      "metric": "13,25 toneladas",
-      "imperial": "13.25 tons"
+      "metric": "13,25 toneladas"
     }
   },
   "powerplant": {
     "engine_es": "2x Turbinas Termonucleares Shinnakasu-Daimler FF-2001",
-    "engine_en": "2x Shinnakasu-Daimler FF-2001 Thermonuclear Turbines",
-    "output_es": "Empuje = 2x 11.500 kg (postcombustión: 23.000 kg)",
-    "output_en": "Thrust = 2x 11,500 kg (afterburner: 23,000 kg)"
+    "engine_en": "2x Shinnakasu-Daimler FF-2001 Thermonuclear Turbines"
   },
   "lore": {
     "overview_es": "El VF-1S Valkyrie es el caza variable Veritech insignia para líderes de escuadrón. Equipado con una unidad de cabeza reforzada que monta cuatro cañones láser Mauler RoV-20 y aviónica avanzada de mando, fue pilotado famosamente por Roy Focker al mando del legendario Escuadrón Skull a bordo del SDF-1.",
@@ -112,75 +191,47 @@
     {
       "location_es": "Cuerpo Principal (*)",
       "location_en": "Main Body (*)",
-      "mdc": 200,
-      "notes_es": "Desactivación si cae a 0.",
-      "notes_en": "Destruction if drops to 0."
+      "mdc": 200
     },
     {
       "location_es": "Cabina Reforzada",
       "location_en": "Reinforced Cockpit",
-      "mdc": 150,
-      "notes_es": "Blindaje de dosel desplegable.",
-      "notes_en": "Deployable armor canopy."
+      "mdc": 150
     },
     {
       "location_es": "Cabeza con 4 Láseres",
       "location_en": "Head Unit with 4 Lasers",
-      "mdc": 100,
-      "notes_es": "Antenas y sensores de mando.",
-      "notes_en": "Command communications array."
+      "mdc": 100
     },
     {
       "location_es": "Piernas / Motores (2)",
       "location_en": "Legs / Engine Nacelles (2)",
-      "mdc": 150,
-      "notes_es": "150 C.D.M. cada una.",
-      "notes_en": "150 M.D.C. each."
+      "mdc": 150
     },
     {
       "location_es": "Alas (2)",
       "location_en": "Wings (2)",
-      "mdc": 90,
-      "notes_es": "90 C.D.M. cada una.",
-      "notes_en": "90 M.D.C. each."
+      "mdc": 90
     }
   ],
   "weapons": [
     {
       "name_es": "Cañón Gunpod Howard GU-11 de 55mm",
       "name_en": "Howard GU-11 55mm Triple Barrel Gunpod",
-      "type_es": "Cañón rotativo balístico de 3 cañones",
-      "type_en": "Triple barrel ballistic rotary cannon",
       "damage": "3D6 ráfaga corta / 6D6 ráfaga pesada / 1D6x10 ráfaga completa",
-      "range": "1,2 km (4000 pies)",
-      "rate_of_fire_es": "Hasta 10 ráfagas por asalto",
-      "rate_of_fire_en": "Up to 10 bursts per melee round",
-      "payload_es": "200 rondas (cargador de tambor)",
-      "payload_en": "200 rounds (drum magazine)"
+      "range": "1,2 km (4000 pies)"
     },
     {
       "name_es": "Cuádruple Cañón Láser Mauler RoV-20 (Cabeza)",
       "name_en": "Quad Mauler RoV-20 Anti-Aircraft Laser Cannons (Head)",
-      "type_es": "Láseres de fuego rápido",
-      "type_en": "Rapid fire pulse lasers",
       "damage": "4D10 (fuego coordinado cuádruple)",
-      "range": "1,5 km",
-      "rate_of_fire_es": "Igual a ataques del piloto",
-      "rate_of_fire_en": "Equal to pilot attacks",
-      "payload_es": "Ilimitada",
-      "payload_en": "Unlimited"
+      "range": "1,5 km"
     },
     {
       "name_es": "Soportes Alares de Misiles Térmicos",
       "name_en": "Wing Hardpoints for Guided Missiles",
-      "type_es": "Misiles de corto y medio alcance",
-      "type_en": "Short & Medium Range Missiles",
       "damage": "2D6x10 por impacto",
-      "range": "30 a 60 km",
-      "rate_of_fire_es": "Andanadas de 2 a 12 misiles",
-      "rate_of_fire_en": "Volleys of 2 to 12 missiles",
-      "payload_es": "Hasta 12 misiles en afustes alares",
-      "payload_en": "Up to 12 missiles on wing racks"
+      "range": "30 a 60 km"
     }
   ],
   "special_equipment": [
@@ -196,6 +247,5 @@
       "description_es": "Enlace de datos con el SDF-1 y capacidad de coordinar escuadrones enteros.",
       "description_en": "Direct data-link with SDF-1 and command capability for full squadrons."
     }
-  ],
-  "faction_logo": "assets/images/ui/logo_UNSpacy.png"
+  ]
 }
