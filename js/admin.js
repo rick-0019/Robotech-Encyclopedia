@@ -429,6 +429,7 @@ function addGalleryRow(data = {}) {
     <div style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
       <div style="display: flex; gap: 8px;">
         <input type="text" class="form-input gal-url" value="${data.url || ''}" placeholder="Ruta: assets/images/mechas/... o URL" style="flex: 2;" oninput="syncRowThumb(this)">
+        <button type="button" class="btn-action-secondary" style="padding: 6px 10px; font-size: 0.72rem; white-space: nowrap;" onclick="openAssetBrowserForGalleryRow(this)">📁 ELEGIR</button>
         <select class="form-select gal-type" style="flex: 1;">
           <option value="render" ${data.type === 'render' ? 'selected' : ''}>Render 3D</option>
           <option value="blueprint" ${data.type === 'blueprint' ? 'selected' : ''}>Plano Táctico</option>
@@ -847,14 +848,211 @@ function updateFactionLogoPreview() {
     const fac = document.getElementById('m_faction_select')?.value || '';
     val = (cat === 'zentraedi' || fac.toLowerCase().includes('zentraedi') || fac.toLowerCase().includes('zentran')) 
       ? 'assets/images/ui/logo_zentran.png' 
-      : 'assets/images/ui/logo.png';
+      : 'assets/images/ui/logo_UNSpacy.png';
   }
   img.src = val;
 }
+
+// --------------------------------------------------------------------------
+// 4. EXPLORADOR TÁCTICO DE IMÁGENES / ASSET BROWSER
+// --------------------------------------------------------------------------
+let currentAssetTarget = null;
+let cachedAssetsList = [];
+
+window.openAssetBrowser = async function(target = 'm_thumbnail') {
+  currentAssetTarget = target;
+  const modal = document.getElementById('asset-browser-modal');
+  if (modal) modal.style.display = 'flex';
+  window.tacticalAudio?.hover();
+  await loadProjectAssets();
+};
+
+window.openAssetBrowserForGalleryRow = function(btn) {
+  const row = btn.closest('.gallery-admin-row');
+  const input = row ? row.querySelector('.gal-url') : null;
+  if (input) {
+    window.openAssetBrowser(input);
+  }
+};
+
+window.openAssetBrowserForNewGalleryItem = function() {
+  window.openAssetBrowser('new_gallery_row');
+};
+
+window.closeAssetBrowser = function() {
+  const modal = document.getElementById('asset-browser-modal');
+  if (modal) modal.style.display = 'none';
+  window.tacticalAudio?.click();
+};
+
+async function loadProjectAssets() {
+  const label = document.getElementById('asset-count-label');
+  if (label) label.textContent = 'Explorando archivos en assets/images/...';
+
+  try {
+    const res = await fetch('/api/browse-images');
+    if (res.ok) {
+      const data = await res.json();
+      if (data.success && Array.isArray(data.images)) {
+        cachedAssetsList = data.images;
+      }
+    }
+  } catch (err) {
+    console.warn("No se pudo conectar a /api/browse-images, usando listado fallback:", err);
+  }
+
+  // Si falló o lista vacía, construir catálogo desde manifest
+  if (!cachedAssetsList || cachedAssetsList.length === 0) {
+    const fallbackImages = new Set();
+    fallbackImages.add('assets/images/ui/logo_UNSpacy.png');
+    fallbackImages.add('assets/images/ui/logo_zentran.png');
+    (currentManifest?.mechas || []).forEach(m => {
+      if (m.thumbnail && m.thumbnail.startsWith('assets/')) fallbackImages.add(m.thumbnail);
+    });
+    cachedAssetsList = Array.from(fallbackImages).map(p => {
+      const parts = p.split('/');
+      const name = parts[parts.length - 1];
+      const folder = parts.slice(2, -1).join('/') || 'raíz';
+      return { path: p, name: name, folder: folder, size_kb: 'OK' };
+    });
+  }
+
+  // Poblar filtro de carpetas
+  const folderFilter = document.getElementById('asset-folder-filter');
+  if (folderFilter) {
+    const folders = Array.from(new Set(cachedAssetsList.map(a => a.folder))).sort();
+    const curVal = folderFilter.value || 'all';
+    folderFilter.innerHTML = '<option value="all">📂 Todas las Carpetas</option>' + 
+      folders.map(f => `<option value="${f}">📁 ${f}</option>`).join('');
+    folderFilter.value = folders.includes(curVal) ? curVal : 'all';
+  }
+
+  filterAssetBrowserGrid();
+}
+
+window.filterAssetBrowserGrid = function() {
+  const container = document.getElementById('asset-grid-container');
+  const label = document.getElementById('asset-count-label');
+  const folderVal = document.getElementById('asset-folder-filter')?.value || 'all';
+  const query = (document.getElementById('asset-search-input')?.value || '').toLowerCase().trim();
+
+  if (!container) return;
+
+  const filtered = cachedAssetsList.filter(item => {
+    if (folderVal !== 'all' && item.folder !== folderVal) return false;
+    if (query && !item.name.toLowerCase().includes(query) && !item.folder.toLowerCase().includes(query)) return false;
+    return true;
+  });
+
+  if (label) {
+    label.textContent = `${filtered.length} imágenes encontradas`;
+  }
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div style="grid-column: 1/-1; padding: 30px; text-align: center; color: var(--text-dim);">
+        <p style="font-size: 1.1rem; margin-bottom: 6px;">No se encontraron imágenes en este criterio.</p>
+        <p style="font-size: 0.8rem;">Podés usar el botón <strong>"Subir desde mi PC (Windows)"</strong> para añadir imágenes nuevas.</p>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = filtered.map(item => `
+    <div class="asset-item-card" onclick="selectAsset('${item.path}')" title="${item.path}">
+      <img src="${item.path}" class="asset-item-thumb" alt="${item.name}" loading="lazy">
+      <div class="asset-item-details">
+        <span class="asset-item-name" title="${item.name}">${item.name}</span>
+        <span class="asset-item-meta">${item.folder}</span>
+      </div>
+    </div>
+  `).join('');
+};
+
+window.selectAsset = function(path) {
+  if (currentAssetTarget === 'm_thumbnail') {
+    const thumbInput = document.getElementById('m_thumbnail');
+    if (thumbInput) thumbInput.value = path;
+    updateLivePreview();
+  } else if (currentAssetTarget === 'new_gallery_row') {
+    const filename = path.split('/').pop().replace(/\.[^/.]+$/, '').replace(/_/g, ' ');
+    addGalleryRow({
+      url: path,
+      title_es: filename,
+      title_en: filename,
+      type: 'render'
+    });
+    updateLivePreview();
+  } else if (currentAssetTarget && typeof currentAssetTarget === 'object' && currentAssetTarget.tagName === 'INPUT') {
+    currentAssetTarget.value = path;
+    syncRowThumb(currentAssetTarget);
+    updateLivePreview();
+  }
+
+  window.tacticalAudio?.scan();
+  closeAssetBrowser();
+};
+
+window.handleNativeFileSelected = async function(event) {
+  const file = event.target.files?.[0];
+  if (!file) return;
+
+  const statusEl = document.getElementById('asset-upload-status');
+  if (statusEl) {
+    statusEl.style.display = 'block';
+    statusEl.innerHTML = `<span style="color:var(--un-cyan);">[*] Leyendo archivo <strong>${file.name}</strong>...</span>`;
+  }
+
+  // Determinar carpeta destino basada en el ID del mecha
+  const mechaId = document.getElementById('m_id')?.value?.trim();
+  const folder = mechaId ? mechaId : 'uploads';
+
+  const reader = new FileReader();
+  reader.onload = async (e) => {
+    const base64Data = e.target.result;
+
+    if (statusEl) {
+      statusEl.innerHTML = `<span style="color:var(--skull-amber);">[*] Guardando en disco duro: assets/images/mechas/${folder}/${file.name}...</span>`;
+    }
+
+    try {
+      const res = await fetch('/api/upload-image', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          folder: folder,
+          filename: file.name,
+          data: base64Data
+        })
+      });
+
+      const json = await res.json();
+      if (json.success) {
+        if (statusEl) {
+          statusEl.innerHTML = `<span style="color:#10b981;">✓ ¡Archivo guardado exitosamente en el disco duro!</span>`;
+          setTimeout(() => { statusEl.style.display = 'none'; }, 2500);
+        }
+        await loadProjectAssets();
+        selectAsset(json.path);
+      } else {
+        throw new Error(json.error || 'Error al guardar');
+      }
+    } catch (err) {
+      console.warn("No se pudo subir vía /api/upload-image (posible entorno estático), usando dataUrl:", err);
+      selectAsset(base64Data);
+      if (statusEl) statusEl.style.display = 'none';
+    }
+
+    event.target.value = '';
+  };
+
+  reader.readAsDataURL(file);
+};
 
 window.addMdcRow = addMdcRow;
 window.addWeaponRow = addWeaponRow;
 window.addGalleryRow = addGalleryRow;
 window.updateLivePreview = updateLivePreview;
 window.updateFactionLogoPreview = updateFactionLogoPreview;
+
 

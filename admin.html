@@ -352,10 +352,55 @@
       background: var(--bg-panel-solid);
       border: 2px solid var(--skull-amber);
       border-radius: 4px;
-      max-width: 500px;
+    .asset-item-card {
+      background: rgba(6, 14, 28, 0.85);
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      border-radius: 3px;
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-fast);
+      position: relative;
+    }
+
+    .asset-item-card:hover {
+      border-color: var(--un-cyan);
+      transform: translateY(-2px);
+      box-shadow: 0 0 12px var(--un-cyan-glow);
+    }
+
+    .asset-item-thumb {
       width: 100%;
-      padding: 24px;
-      box-shadow: 0 0 30px var(--skull-amber-glow);
+      height: 105px;
+      object-fit: cover;
+      background: #000;
+      display: block;
+    }
+
+    .asset-item-details {
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      background: rgba(4, 9, 20, 0.95);
+    }
+
+    .asset-item-name {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .asset-item-meta {
+      font-size: 0.65rem;
+      color: var(--text-dim);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   </style>
 </head>
@@ -467,10 +512,15 @@
             </div>
 
             <div class="form-group">
-              <label>Foto de Portada / Miniatura Principal (Thumbnail URL o Ruta Local)</label>
-              <input type="text" id="m_thumbnail" class="form-input" placeholder="assets/images/mechas/... o URL externa">
-              <span style="font-size:0.75rem; color:var(--text-dim); margin-top:2px;">
-                💡 También puedes marcar cualquier imagen de la sección 7 como portada con un solo clic.
+              <label>Foto de Portada / Miniatura Principal</label>
+              <div style="display: flex; gap: 8px;">
+                <input type="text" id="m_thumbnail" class="form-input" placeholder="assets/images/mechas/... o URL externa" style="flex: 1;">
+                <button type="button" class="btn-action-secondary" onclick="openAssetBrowser('m_thumbnail')" style="white-space: nowrap; padding: 8px 14px;">
+                  📁 EXPLORAR / SUBIR
+                </button>
+              </div>
+              <span style="font-size:0.75rem; color:var(--text-dim); margin-top:3px; display:block;">
+                💡 Puedes explorar archivos de tu PC, seleccionar imágenes del proyecto o marcar una foto de la galería.
               </span>
             </div>
           </div>
@@ -581,7 +631,14 @@
             💡 <strong>¿Cómo subir imágenes?</strong> Crea una carpeta en <code>assets/images/mechas/{nombre_carpeta}/</code> y coloca allí tus fotos JPG, PNG o JFIF. Luego añade aquí las rutas correspondientes:
           </p>
           <div id="gallery-items-container"></div>
-          <button type="button" class="btn-add-item" onclick="addGalleryRow()">+ AÑADIR IMAGEN A LA GALERÍA</button>
+          <div style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap;">
+            <button type="button" class="btn-action-primary" style="font-size:0.8rem; padding: 10px 18px;" onclick="openAssetBrowserForNewGalleryItem()">
+              📁 EXPLORAR / SUBIR IMAGEN A LA GALERÍA
+            </button>
+            <button type="button" class="btn-add-item" style="margin-top: 0;" onclick="addGalleryRow()">
+              + AÑADIR FILA MANUAL
+            </button>
+          </div>
         </div>
       </form>
 
@@ -659,6 +716,55 @@
       <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 18px;">
         <button type="button" class="btn-action-secondary" onclick="closeTaxonomyModal()">CANCELAR</button>
         <button type="button" class="btn-action-primary" onclick="confirmAddTaxonomy()">+ AGREGAR A LA LISTA</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL EXPLORADOR TÁCTICO DE IMÁGENES
+       ======================================================================== -->
+  <div id="asset-browser-modal" class="taxonomy-modal-backdrop" style="display: none;">
+    <div class="taxonomy-modal" style="max-width: 960px; width: 95vw; max-height: 88vh; display: flex; flex-direction: column; padding: 22px;">
+      <!-- Header -->
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-tactical); padding-bottom: 12px; margin-bottom: 14px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: 1.5rem;">📁</span>
+          <div>
+            <h3 style="font-family: var(--font-hud); color: var(--skull-amber); margin: 0; font-size: 1.2rem; letter-spacing: 1.5px;">
+              EXPLORADOR TÁCTICO DE IMÁGENES
+            </h3>
+            <span style="font-size: 0.75rem; color: var(--text-dim);">SELECCIONÁ CUALQUIER IMAGEN DEL PROYECTO O SUBÍ ARCHIVOS DESDE TU PC DIRECTO AL DISCO</span>
+          </div>
+        </div>
+        <button type="button" class="btn-close-modal" onclick="closeAssetBrowser()">✕</button>
+      </div>
+
+      <!-- Barra de Herramientas -->
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; align-items: center; background: rgba(5,12,24,0.7); padding: 10px 14px; border-radius: 4px; border: 1px solid rgba(0,240,255,0.2);">
+        <input type="file" id="asset-native-file-input" accept="image/*" style="display: none;" onchange="handleNativeFileSelected(event)">
+        <button type="button" class="btn-action-primary" onclick="document.getElementById('asset-native-file-input').click()" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; padding: 8px 16px;">
+          📤 SUBIR DESDE MI PC (WINDOWS)
+        </button>
+
+        <select id="asset-folder-filter" class="form-select" style="max-width: 260px;" onchange="filterAssetBrowserGrid()">
+          <option value="all">📂 Todas las Carpetas</option>
+        </select>
+
+        <input type="text" id="asset-search-input" class="form-input" placeholder="🔍 Buscar por nombre..." style="flex: 1; min-width: 160px;" oninput="filterAssetBrowserGrid()">
+      </div>
+
+      <!-- Mensaje de estado de subida -->
+      <div id="asset-upload-status" style="display: none; padding: 8px 12px; margin-bottom: 12px; border-radius: 2px; font-size: 0.8rem; background: rgba(0,240,255,0.1); border-left: 3px solid var(--un-cyan); color: var(--un-cyan);"></div>
+
+      <!-- Cuadrícula de Imágenes -->
+      <div id="asset-grid-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 14px; overflow-y: auto; flex: 1; padding: 6px; min-height: 250px; max-height: 52vh; background: rgba(2, 7, 18, 0.6); border: 1px solid rgba(0,240,255,0.1); border-radius: 4px;">
+        <!-- Se inyecta dinámicamente -->
+      </div>
+
+      <!-- Footer -->
+      <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,240,255,0.15); padding-top: 12px; margin-top: 12px;">
+        <span id="asset-count-label" style="font-size: 0.8rem; color: var(--un-cyan);">Cargando catálogo...</span>
+        <button type="button" class="btn-action-secondary" onclick="closeAssetBrowser()">CERRAR</button>
       </div>
     </div>
   </div>

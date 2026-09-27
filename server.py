@@ -21,13 +21,94 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=BASE_DIR, **kwargs)
 
+    def do_GET(self):
+        if self.path.startswith('/api/browse-images'):
+            self.handle_browse_images()
+        else:
+            super().do_GET()
+
     def do_POST(self):
         if self.path == '/api/save':
             self.handle_save()
         elif self.path == '/api/git-push':
             self.handle_git_push()
+        elif self.path == '/api/upload-image':
+            self.handle_upload_image()
         else:
             self.send_error(404, "Endpoint not found")
+
+    def handle_browse_images(self):
+        try:
+            images_dir = os.path.join(BASE_DIR, 'assets', 'images')
+            valid_exts = {'.png', '.jpg', '.jpeg', '.webp', '.jfif', '.svg', '.gif'}
+            images = []
+            
+            if os.path.exists(images_dir):
+                for root, _, files in os.walk(images_dir):
+                    for f in files:
+                        ext = os.path.splitext(f)[1].lower()
+                        if ext in valid_exts:
+                            full_path = os.path.join(root, f)
+                            rel_path = os.path.relpath(full_path, BASE_DIR).replace('\\', '/')
+                            subfolder = os.path.relpath(root, images_dir).replace('\\', '/')
+                            images.append({
+                                "path": rel_path,
+                                "name": f,
+                                "folder": subfolder if subfolder != '.' else "raíz",
+                                "size_kb": round(os.path.getsize(full_path) / 1024, 1),
+                                "mtime": os.path.getmtime(full_path)
+                            })
+            
+            # Ordenar primero los más recientes
+            images.sort(key=lambda x: x['mtime'], reverse=True)
+            self.send_json_response(200, {"success": True, "images": images})
+        except Exception as e:
+            self.send_json_response(500, {"success": False, "error": str(e)})
+
+    def handle_upload_image(self):
+        try:
+            import base64
+            content_length = int(self.headers.get('Content-Length', 0))
+            body = self.rfile.read(content_length).decode('utf-8')
+            payload = json.loads(body)
+
+            folder_name = payload.get('folder', '').strip()
+            filename = payload.get('filename', '').strip()
+            data_b64 = payload.get('data', '')
+
+            if not filename or not data_b64:
+                raise ValueError("Nombre de archivo o datos de imagen faltantes")
+
+            # Limpiar nombre de archivo
+            clean_name = os.path.basename(filename).replace(' ', '_')
+            
+            # Directorio destino: assets/images/mechas/{folder} o assets/images/{folder}
+            if folder_name.startswith('assets/images/'):
+                target_dir = os.path.join(BASE_DIR, folder_name)
+            elif folder_name:
+                target_dir = os.path.join(BASE_DIR, 'assets', 'images', 'mechas', folder_name)
+            else:
+                target_dir = os.path.join(BASE_DIR, 'assets', 'images', 'uploads')
+                
+            os.makedirs(target_dir, exist_ok=True)
+            target_path = os.path.join(target_dir, clean_name)
+
+            if ',' in data_b64:
+                data_b64 = data_b64.split(',', 1)[1]
+
+            image_bytes = base64.b64decode(data_b64)
+            with open(target_path, 'wb') as f:
+                f.write(image_bytes)
+
+            rel_path = os.path.relpath(target_path, BASE_DIR).replace('\\', '/')
+            self.send_json_response(200, {
+                "success": True,
+                "message": f"Imagen '{clean_name}' guardada correctamente.",
+                "path": rel_path,
+                "name": clean_name
+            })
+        except Exception as e:
+            self.send_json_response(500, {"success": False, "error": str(e)})
 
     def handle_save(self):
         try:

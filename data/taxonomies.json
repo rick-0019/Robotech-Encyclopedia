@@ -95,6 +95,12 @@
       "name_es": "Fuerza Expedicionaria Robotech (REF / Pioneer)",
       "name_en": "Robotech Expeditionary Force (REF)",
       "logo": "assets/images/ui/logo_UNSpacy.png"
+    },
+    {
+      "id": "mars_base_division",
+      "name_es": "REF - División Marte (Mars Base)",
+      "name_en": "REF - Mars Base Division",
+      "logo": "assets/images/ui/Mars_Base.png"
     }
   ],
   "vehicle_types": [
