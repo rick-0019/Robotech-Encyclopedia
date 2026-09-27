@@ -149,7 +149,9 @@
         "en": "Light Bipedal / Space Combat Pod"
       },
       "thumbnail": "assets/images/mechas/Zentraedi_Tactical_Battlepod/Zentraedi_Tactical_Battlepod.webp",
-      "badge": "Zentraedi Standard Battle Pod",
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "is_variable": false,
+      "modes": null,
       "summary": {
         "es": "El Regult es el mecha de producción en masa estándar de la infantería mecanizada Zentraedi. Con su diseño bípe...",
         "en": "The Regult is the standard mass-production combat mecha of the Zentraedi mechanized infantry. Featuring an inv..."
@@ -167,8 +169,7 @@
         "sensors_unit": "km",
         "mobility": 80
       },
-      "dataFile": "data/mechas/regult_battle_pod.json",
-      "faction_logo": "assets/images/ui/logo_zentran.png"
+      "dataFile": "data/mechas/regult_battle_pod.json"
     },
     {
       "id": "Alfa_Fighter",

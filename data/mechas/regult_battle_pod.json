@@ -3,6 +3,8 @@
   "name": "Regult Tactical Pod",
   "alias": "Zentraedi Standard Battle Pod",
   "category": "zentraedi",
+  "is_variable": false,
+  "modes": null,
   "series": {
     "es": "La Saga Macross (Primera Guerra Robotech)",
     "en": "The Macross Saga (First Robotech War)"
@@ -20,11 +22,12 @@
     "en": "Uno (Soldado Clon Gigante Zentraedi de tamaño completo)"
   },
   "thumbnail": "assets/images/mechas/Zentraedi_Tactical_Battlepod/Zentraedi_Tactical_Battlepod.webp",
+  "faction_logo": "assets/images/ui/logo_zentran.png",
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1563089145-599997674d42?w=1000&auto=format&fit=crop&q=80",
-      "title_es": "Regult Zentraedi en Despliegue Orbital",
-      "title_en": "Zentraedi Regult in Orbital Deployment",
+      "url": "assets/images/mechas/Zentraedi_Tactical_Battlepod/Zentraedi_Tactical_Battlepod.webp",
+      "title_es": "Regult Tactical Pod",
+      "title_en": "Regult Tactical Pod",
       "type": "render"
     }
   ],
@@ -134,6 +137,5 @@
       "description_es": "Permite navegación tridimensional en combate de gravedad cero.",
       "description_en": "Enables 3D navigation in zero-G combat."
     }
-  ],
-  "faction_logo": "assets/images/ui/logo_zentran.png"
+  ]
 }

@@ -33,7 +33,7 @@
   "blood_type": "AB+",
   "height": "1,68 m",
   "weight": "49 kg",
-  "thumbnail": "assets/images/personajes/lisa_hayes/lisa_puente.jpg",
+  "thumbnail": "assets/images/personajes/lisa_hayes/lisa_puente.webp",
   "images": [
     {
       "url": "assets/images/personajes/lisa_hayes/Lisa capitana.jpg",
@@ -71,13 +71,6 @@
       "type_en": "Tactical File"
     },
     {
-      "url": "assets/images/personajes/lisa_hayes/lisa_puente.jpg",
-      "title_es": "Puesto de Mando en el Puente del SDF-1",
-      "title_en": "Bridge Command Post - SDF-1 Macross",
-      "type_es": "En Operación",
-      "type_en": "In Operation"
-    },
-    {
       "url": "assets/images/personajes/lisa_hayes/8528ddb7a084340d60e6a236f7a1a188.jpg",
       "title_es": "Lisa Hayes y Rick Hunter - Enlace de Combate",
       "title_en": "Lisa Hayes & Rick Hunter - Combat Partnership",
@@ -104,6 +97,13 @@
       "title_en": "Sensor Monitoring & Zentraedi Interception",
       "type_es": "Vigilancia Radar",
       "type_en": "Radar Surveillance"
+    },
+    {
+      "url": "assets/images/personajes/lisa_hayes/lisa_puente.webp",
+      "title_es": "lisa puente",
+      "title_en": "lisa puente",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
     }
   ],
   "summary": {

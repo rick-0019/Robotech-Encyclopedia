@@ -1,0 +1,201 @@
+{
+  "id": "rick_hunter",
+  "name": "Rick Hunter",
+  "japanese_name": "Hikaru Ichijyo",
+  "callsign": "Skull Leader // Vermilion Leader",
+  "rank": {
+    "es": "Piloto Civil // Teniente (Escuadrón Vermilion) // Comandante (Escuadrón Skull) // Mayor General (REF)",
+    "en": "Civilian Pilot // Lieutenant (Vermilion Squadron) // Commander (Skull Squadron) // Major General (REF)"
+  },
+  "role": {
+    "es": "Comandante del Escuadrón Skull y As Supremo de Cazas Veritech",
+    "en": "Skull Squadron Commander & Supreme Veritech Fighter Ace"
+  },
+  "category": "pilots",
+  "faction": {
+    "es": "U.N. Spacy - Escuadrón Skull",
+    "en": "U.N. Spacy - Skull Squadron"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "assignment": {
+    "es": "SDF-1 Macross // Escuadrón Skull (VF-1J / VF-1S Valkyrie)",
+    "en": "SDF-1 Macross // Skull Squadron (VF-1J / VF-1S Valkyrie)"
+  },
+  "birth_date": "16 de Octubre de 1990",
+  "birth_place": {
+    "es": "California, Estados Unidos (Tierra)",
+    "en": "California, United States (Earth)"
+  },
+  "blood_type": "O+",
+  "height": "1,75 m",
+  "weight": "63 kg",
+  "thumbnail": "assets/images/personajes/rick_hunter/rick_hunter_03.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/rick_hunter/rick_hunter.jpg",
+      "title_es": "Rick Hunter - Retrato Oficial de Vuelo RDF",
+      "title_en": "Rick Hunter - Official RDF Flight Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/rick_hunter/rick_hunter_01.jpg",
+      "title_es": "En la Cabina del Veritech - Misión de Combate",
+      "title_en": "In the Veritech Cockpit - Combat Sortie",
+      "type_es": "Misión Operativa",
+      "type_en": "Field Mission"
+    },
+    {
+      "url": "assets/images/personajes/rick_hunter/rick_hunter_02.jpg",
+      "title_es": "Preparado en Catapulta de Despegue - Visor Táctico",
+      "title_en": "Ready on Launch Catapult - Tactical Visor",
+      "type_es": "En Operación",
+      "type_en": "In Operation"
+    },
+    {
+      "url": "assets/images/personajes/rick_hunter/rick_hunter_03.jpg",
+      "title_es": "Teniente Hunter - Traje de Vuelo Completo RDF",
+      "title_en": "Lieutenant Hunter - Full RDF Flight Suit",
+      "type_es": "Archivo Táctico",
+      "type_en": "Tactical File"
+    },
+    {
+      "url": "assets/images/personajes/rick_hunter/rick_hunter_04.jpg",
+      "title_es": "Postura de Despliegue de Combate Terrestre",
+      "title_en": "Ground Combat Deployment Stance",
+      "type_es": "Historial Temprano",
+      "type_en": "Early Career"
+    },
+    {
+      "url": "assets/images/personajes/rick_hunter/rick_hunter y Roy.jpg",
+      "title_es": "Rick Hunter y Roy Fokker - Hermandad y Mentoría",
+      "title_en": "Rick Hunter & Roy Fokker - Brotherhood & Mentorship",
+      "type_es": "Registro Personal",
+      "type_en": "Personal Log"
+    },
+    {
+      "url": "assets/images/personajes/rick_hunter/rick_hunter y Lisa.jpg",
+      "title_es": "Rick Hunter y Lisa Hayes - Reconstrucción de Macross City",
+      "title_en": "Rick Hunter & Lisa Hayes - Rebuilding Macross City",
+      "type_es": "Registro Personal",
+      "type_en": "Personal Log"
+    }
+  ],
+  "summary": {
+    "es": "As de caza supremo de la RDF y líder legendario del Escuadrón Skull tras la caída de Roy Fokker. Protagonista indiscutido de la Primera Guerra Robotech y futuro Comandante de la REF.",
+    "en": "Supreme RDF fighter ace and legendary Skull Squadron leader following the fall of Roy Fokker. Pivotal combat pilot of the First Robotech War and future REF Commander."
+  },
+  "lore": {
+    "overview_es": "Rick Hunter comenzó su carrera en la aviación civil como piloto de exhibiciones acrobáticas en el Circo Aéreo de su padre, ganando el campeonato amateur a temprana edad. Su vida cambió radicalmente el día de la botadura del SDF-1 en la Isla Macross al verse involucrado en el ataque sorpresa Zentraedi. Guiado e inspirado por su 'hermano mayor' y mentor militar Roy Fokker, Rick ingresó a las Fuerzas de Defensa Robotech, demostrando reflejos sobrehumanos e instintos de combate inigualables a los mandos del Veritech Valkyrie. A lo largo de la guerra ascendió rápidamente hasta liderar el Escuadrón Vermilion y, tras la trágica muerte de Roy, asumió el legendario mando del Escuadrón Skull al timón del VF-1S.",
+    "overview_en": "Rick Hunter began his aviation path in civilian barnstorming and aerobatic racing within his father's Flying Circus, winning amateur championships at an early age. His destiny shifted dramatically on the launch day of the SDF-1 on Macross Island during the sudden Zentraedi planetary assault. Guided and inspired by his 'big brother' and military mentor Roy Fokker, Rick enlisted in the Robotech Defense Force, proving exceptional situational awareness and unrivaled dogfighting instincts behind the controls of the transformable Veritech Valkyrie. Rising swiftly through combat sorties, he commanded Vermilion Squadron and ultimately inherited the legendary Skull Squadron leadership in the VF-1S following Fokker's untimely demise.",
+    "tactical_analysis_es": "En el teatro de operaciones aeroespaciales, Rick Hunter representa la máxima evolución del combate transformable. Su maestría para alternar instantáneamente entre los modos Fighter, Guardian y Battloid en pleno fuego cruzado le permitió derribar docenas de cápsulas Regult y cazas Zentraedi en solitario, acumulando el mayor récord de victorias aire-aire de la guerra. En la batalla orbital final contra la flota de Boddole Zer, lideró las formaciones de ataque en vanguardia ejecutando la 'Estrategia Minmei' y penetrando la nave nodriza alienígena. Años después, su madurez estratégica lo llevó a comandar la Fuerza Expedicionaria Robotech (REF) a bordo del SDF-3 Pioneer.",
+    "tactical_analysis_en": "In aerospace combat theaters, Rick Hunter embodies the pinnacle of variable mecha dogfighting doctrine. His instinctive mastery in shifting between Fighter, Guardian, and Battloid modes mid-engagement enabled him to outmaneuver swarms of Zentraedi Battlepods, achieving the highest confirmed kill tally of the First Robotech War. During the climactic orbital battle against Bodolza's armada, he spearheaded frontline strike formations executing the 'Minmei Attack', breaching the alien flagship. His strategic evolution eventually positioned him as Commander of the Robotech Expeditionary Force (REF) aboard the SDF-3 Pioneer."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 88,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Capacidad para comandar flotas y operaciones tácticas a gran escala."
+    },
+    "strategy": {
+      "value": 86,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Maestría en análisis balístico, predicción de movimientos y logística bélica."
+    },
+    "resolve": {
+      "value": 94,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Serenidad mental y toma de decisiones crítica en condiciones extremas."
+    },
+    "piloting": {
+      "value": 99,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Aptitud de pilotaje de cazas aeroespaciales y maniobras de evasión."
+    }
+  },
+  "stats": {
+    "command": 88,
+    "strategy": 86,
+    "resolve": 94,
+    "piloting": 99
+  },
+  "service_record": [
+    {
+      "period": "2009",
+      "assignment_es": "Piloto Civil y Campeón Acrobático del Circo Aéreo Hunter",
+      "assignment_en": "Civilian Pilot & Aerobatic Champion, Hunter Flying Circus"
+    },
+    {
+      "period": "2009 - 2010",
+      "assignment_es": "Ingreso a la RDF; Líder del Escuadrón Vermilion (VF-1J Valkyrie)",
+      "assignment_en": "Enlistment in RDF; Vermilion Squadron Leader (VF-1J Valkyrie)"
+    },
+    {
+      "period": "2010",
+      "assignment_es": "Rescate Táctico de la Primer Oficial Hayes en Marte y Base Sara",
+      "assignment_en": "Tactical Rescue of First Officer Hayes on Mars Base Sara"
+    },
+    {
+      "period": "2010 - 2012",
+      "assignment_es": "Comandante del Escuadrón Skull (VF-1S); Victoria en la Batalla de la Tierra",
+      "assignment_en": "Commander of Skull Squadron (VF-1S); Victory in the Battle of Earth"
+    },
+    {
+      "period": "2013 - 2014",
+      "assignment_es": "Operaciones de Pacificación Global contra insurgentes Zentraedi de Khyron",
+      "assignment_en": "Global Pacification Operations against Khyron Zentraedi insurgents"
+    },
+    {
+      "period": "2022+",
+      "assignment_es": "Mayor General y Comandante Supremo de la Misión REF Pioneer (SDF-3)",
+      "assignment_en": "Major General & Supreme Commander, REF Pioneer Mission (SDF-3)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Lisa Hayes",
+      "relation_es": "Oficial Superior // Esposa y Compañera de Vida",
+      "relation_en": "Superior Officer // Wife & Life Partner",
+      "notes_es": "De un choque inicial constante entre el rigor de Lisa y el espíritu rebelde de Rick, forjaron un respeto táctico inquebrantable que culminó en un amor profundo, matrimonio y el mando conjunto de la REF."
+    },
+    {
+      "name": "Roy Fokker",
+      "relation_es": "Mentor Militar // Figura de Hermano Mayor",
+      "relation_en": "Military Mentor // Big Brother Figure",
+      "notes_es": "As de combate original de la RDF e inspirador de Rick. Su muerte dejó a Rick el mando del Escuadrón Skull y su icónico caza VF-1S."
+    },
+    {
+      "name": "Lynn Minmay",
+      "relation_es": "Primer Amor // Ídolo Cultural",
+      "relation_en": "First Love // Cultural Icon",
+      "notes_es": "Se conocieron durante el ataque inicial a la Isla Macross. Aunque sus caminos se distanciaron por la guerra y la fama, su vínculo fue vital en la Operación Ataque Minmei."
+    },
+    {
+      "name": "Max Sterling y Ben Dixon",
+      "relation_es": "Subordinados y Compañeros de Ala (Escuadrón Vermilion)",
+      "relation_en": "Subordinates & Wingmen (Vermilion Squadron)",
+      "notes_es": "Sus primeros pilotos asignados; juntos formaron una de las alas de combate más formidables de la historia aeroespacial."
+    },
+    {
+      "name": "Capitán Henry Gloval",
+      "relation_es": "Comandante Supremo del SDF-1",
+      "relation_en": "Supreme Commander of SDF-1",
+      "notes_es": "Confió en el potencial y madurez de Rick en los momentos más oscuros de la travesía espacial del SDF-1."
+    }
+  ],
+  "decorations": [
+    "Medalla de Honor de la Fuerza de Defensa Robotech (Cruz de Oro)",
+    "Cruz de Vuelo Distinguido con Hojas de Roble (As de Caza)",
+    "Citación Presidencial al Valor por la Defensa Orbital de la Tierra",
+    "Cinta al Mérito en Combate por la Misión de Rescate de Marte",
+    "Condecoración Skull Leader por Mando de Escuadrilla en Combate"
+  ]
+}

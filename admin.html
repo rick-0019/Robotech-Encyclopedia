@@ -1138,16 +1138,25 @@
           </p>
 
           <div style="display: flex; flex-direction: column; gap: 12px;">
+            <!-- 1 solo botón para guardar en disco -->
             <button id="btn-save-char-direct" class="btn-action-primary" style="background: var(--un-cyan); color: #000; box-shadow: 0 0 15px var(--un-cyan-glow);">
               💾 GUARDAR PERSONAJE EN DISCO (1 CLIC)
             </button>
-            <button id="btn-download-char-json" class="btn-action-secondary" style="justify-content: center;">
-              ⬇ DESCARGAR .JSON
+
+            <!-- 1 botón para hacer push a GitHub -->
+            <button id="btn-git-push-char" class="btn-action-primary" style="background: var(--skull-amber); color: #000;">
+              🚀 SUBIR A GITHUB (GIT PUSH)
             </button>
           </div>
 
           <!-- Mensaje de estado / terminal militar para Personajes -->
           <div id="git-status-console-char" style="display:none; margin-top:14px; background:rgba(0,0,0,0.85); border:1px solid var(--border-tactical); padding:10px; border-radius:2px; font-family:var(--font-mono); font-size:0.75rem; color:#fff; max-height:150px; overflow-y:auto; white-space:pre-wrap;"></div>
+
+          <div style="margin-top: 10px; text-align: right;">
+            <button type="button" id="btn-download-char-json" style="background:none; border:none; color:var(--text-dim); font-size:0.7rem; cursor:pointer; text-decoration:underline;">
+              ¿Descarga manual de archivo .json?
+            </button>
+          </div>
 
           <div class="sync-note" style="margin-top: 14px;">
             <strong>Arquitectura Ligera:</strong>

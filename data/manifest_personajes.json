@@ -56,7 +56,7 @@
         "es": "La Saga Macross (Primera Guerra Robotech)",
         "en": "The Macross Saga (First Robotech War)"
       },
-      "thumbnail": "assets/images/personajes/lisa_hayes/lisa_puente.jpg",
+      "thumbnail": "assets/images/personajes/lisa_hayes/lisa_puente.webp",
       "summary": {
         "es": "Lisa Hayes es la mente táctica más brillante de la Fuerza de Defensa Robotech durante la Primera Guerra Robotech. Hija del almirante Donald Hayes, cre...",
         "en": "Lisa Hayes is the sharpest tactical mind within the Robotech Defense Force during the First Robotech War. Daughter of Admiral Donald Hayes, she grew u..."
@@ -68,6 +68,45 @@
         "piloting": 68
       },
       "dataFile": "data/personajes/lisa_hayes.json"
+    },
+    {
+      "id": "rick_hunter",
+      "name": "Rick Hunter",
+      "japanese_name": "Hikaru Ichijyo",
+      "category": "pilots",
+      "rank": {
+        "es": "Piloto Civil // Teniente (Escuadrón Vermilion) // Comandante (Escuadrón Skull) // Mayor General (REF)",
+        "en": "Civilian Pilot // Lieutenant (Vermilion Squadron) // Commander (Skull Squadron) // Major General (REF)"
+      },
+      "role": {
+        "es": "Comandante del Escuadrón Skull y As Supremo de Cazas Veritech",
+        "en": "Skull Squadron Commander & Supreme Veritech Fighter Ace"
+      },
+      "faction": {
+        "es": "U.N. Spacy - Escuadrón Skull",
+        "en": "U.N. Spacy - Skull Squadron"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "SDF-1 Macross // Escuadrón Skull (VF-1J / VF-1S Valkyrie)",
+        "en": "SDF-1 Macross // Skull Squadron (VF-1J / VF-1S Valkyrie)"
+      },
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/rick_hunter/rick_hunter_03.jpg",
+      "summary": {
+        "es": "As de caza supremo de la RDF y líder legendario del Escuadrón Skull tras la caída de Roy Fokker. Protagonista indiscutido de la Primera Guerra Robotec...",
+        "en": "Supreme RDF fighter ace and legendary Skull Squadron leader following the fall of Roy Fokker. Pivotal combat pilot of the First Robotech War and futur..."
+      },
+      "stats": {
+        "command": 88,
+        "strategy": 86,
+        "resolve": 94,
+        "piloting": 99
+      },
+      "dataFile": "data/personajes/rick_hunter.json"
     }
   ]
 }

@@ -2039,6 +2039,60 @@ function setupCharExportButtons() {
     });
   }
 
+  // 2. Botón Subir Personaje a GitHub (Git Push)
+  const btnGitPushChar = document.getElementById('btn-git-push-char');
+  if (btnGitPushChar) {
+    btnGitPushChar.addEventListener('click', async () => {
+      const data = buildCurrentCharJSON();
+      const consoleBox = document.getElementById('git-status-console-char');
+      if (consoleBox) {
+        consoleBox.style.display = 'block';
+        consoleBox.innerHTML = '<span style="color: var(--skull-amber); font-weight: bold;">[*] Ejecutando protocolo militar Git: add, commit y push a GitHub...</span>\nPor favor espera unos segundos...';
+      }
+
+      btnGitPushChar.disabled = true;
+      btnGitPushChar.style.opacity = '0.5';
+
+      try {
+        const res = await fetch('/api/git-push', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ commitMessage: `Update Robotech Personnel: ${data.name} (${data.id})` })
+        });
+
+        const result = await res.json();
+        btnGitPushChar.disabled = false;
+        btnGitPushChar.style.opacity = '1';
+
+        if (result.success) {
+          window.tacticalAudio?.scan();
+          if (consoleBox) {
+            consoleBox.innerHTML = `
+              <span style="color: var(--radar-green); font-weight: bold;">✓ [ÉXITO] Cambios sincronizados y subidos a GitHub:</span>
+              <pre style="margin-top:6px; color:#a3e635; font-size:0.7rem;">${result.logs || 'Push exitoso.'}</pre>
+            `;
+          }
+        } else {
+          window.tacticalAudio?.alert();
+          if (consoleBox) {
+            consoleBox.innerHTML = `
+              <span style="color: var(--veritech-red); font-weight: bold;">✕ [AVISO / REPORTE GIT]:</span>
+              <pre style="margin-top:6px; color:#ff9999; font-size:0.7rem;">${result.error || result.logs || 'Verifica tus credenciales de Git o conexión.'}</pre>
+            `;
+          }
+        }
+      } catch (err) {
+        btnGitPushChar.disabled = false;
+        btnGitPushChar.style.opacity = '1';
+        window.tacticalAudio?.alert();
+        if (consoleBox) {
+          consoleBox.innerHTML = `<span style="color: var(--veritech-red);">✕ Error de comunicación con server.py: ${err.message}</span>`;
+        }
+      }
+    });
+  }
+
+  // 3. Descarga manual opcional
   const btnDlChar = document.getElementById('btn-download-char-json');
   if (btnDlChar) {
     btnDlChar.addEventListener('click', () => {
