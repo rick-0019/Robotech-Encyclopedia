@@ -42,15 +42,18 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
             images_dir = os.path.join(BASE_DIR, 'assets', 'images')
             valid_exts = {'.png', '.jpg', '.jpeg', '.webp', '.jfif', '.svg', '.gif'}
             images = []
+            folders = set()
             
             if os.path.exists(images_dir):
-                for root, _, files in os.walk(images_dir):
+                for root, dirs, files in os.walk(images_dir):
+                    subfolder = os.path.relpath(root, images_dir).replace('\\', '/')
+                    if subfolder != '.':
+                        folders.add(subfolder)
                     for f in files:
                         ext = os.path.splitext(f)[1].lower()
                         if ext in valid_exts:
                             full_path = os.path.join(root, f)
                             rel_path = os.path.relpath(full_path, BASE_DIR).replace('\\', '/')
-                            subfolder = os.path.relpath(root, images_dir).replace('\\', '/')
                             images.append({
                                 "path": rel_path,
                                 "name": f,
@@ -61,7 +64,11 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
             
             # Ordenar primero los más recientes
             images.sort(key=lambda x: x['mtime'], reverse=True)
-            self.send_json_response(200, {"success": True, "images": images})
+            self.send_json_response(200, {
+                "success": True, 
+                "images": images,
+                "folders": sorted(list(folders))
+            })
         except Exception as e:
             self.send_json_response(500, {"success": False, "error": str(e)})
 
@@ -85,6 +92,8 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
             # Directorio destino: assets/images/mechas/{folder} o assets/images/{folder}
             if folder_name.startswith('assets/images/'):
                 target_dir = os.path.join(BASE_DIR, folder_name)
+            elif folder_name.startswith('mechas/') or folder_name.startswith('ui/'):
+                target_dir = os.path.join(BASE_DIR, 'assets', 'images', folder_name)
             elif folder_name:
                 target_dir = os.path.join(BASE_DIR, 'assets', 'images', 'mechas', folder_name)
             else:

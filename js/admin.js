@@ -858,6 +858,7 @@ function updateFactionLogoPreview() {
 // --------------------------------------------------------------------------
 let currentAssetTarget = null;
 let cachedAssetsList = [];
+let cachedFoldersList = [];
 
 window.openAssetBrowser = async function(target = 'm_thumbnail') {
   currentAssetTarget = target;
@@ -890,11 +891,14 @@ async function loadProjectAssets() {
   if (label) label.textContent = 'Explorando archivos en assets/images/...';
 
   try {
-    const res = await fetch('/api/browse-images');
+    const res = await fetch(`/api/browse-images?_t=${Date.now()}`, { cache: 'no-store' });
     if (res.ok) {
       const data = await res.json();
       if (data.success && Array.isArray(data.images)) {
         cachedAssetsList = data.images;
+        if (Array.isArray(data.folders)) {
+          cachedFoldersList = data.folders;
+        }
       }
     }
   } catch (err) {
@@ -920,7 +924,9 @@ async function loadProjectAssets() {
   // Poblar filtro de carpetas
   const folderFilter = document.getElementById('asset-folder-filter');
   if (folderFilter) {
-    const folders = Array.from(new Set(cachedAssetsList.map(a => a.folder))).sort();
+    const foldersSet = new Set(cachedAssetsList.map(a => a.folder).filter(f => f && f !== 'raíz'));
+    cachedFoldersList.forEach(f => foldersSet.add(f));
+    const folders = Array.from(foldersSet).sort();
     const curVal = folderFilter.value || 'all';
     folderFilter.innerHTML = '<option value="all">📂 Todas las Carpetas</option>' + 
       folders.map(f => `<option value="${f}">📁 ${f}</option>`).join('');
@@ -939,7 +945,7 @@ window.filterAssetBrowserGrid = function() {
   if (!container) return;
 
   const filtered = cachedAssetsList.filter(item => {
-    if (folderVal !== 'all' && item.folder !== folderVal) return false;
+    if (folderVal !== 'all' && item.folder !== folderVal && !item.folder.startsWith(folderVal + '/')) return false;
     if (query && !item.name.toLowerCase().includes(query) && !item.folder.toLowerCase().includes(query)) return false;
     return true;
   });
@@ -1003,16 +1009,22 @@ window.handleNativeFileSelected = async function(event) {
     statusEl.innerHTML = `<span style="color:var(--un-cyan);">[*] Leyendo archivo <strong>${file.name}</strong>...</span>`;
   }
 
-  // Determinar carpeta destino basada en el ID del mecha
+  // Determinar carpeta destino: Si el usuario seleccionó una carpeta específica en el filtro, subir allí; si no, usar el ID del mecha
+  const selectedFolder = document.getElementById('asset-folder-filter')?.value;
   const mechaId = document.getElementById('m_id')?.value?.trim();
-  const folder = mechaId ? mechaId : 'uploads';
+  let folder = 'uploads';
+  if (selectedFolder && selectedFolder !== 'all') {
+    folder = selectedFolder;
+  } else if (mechaId) {
+    folder = mechaId;
+  }
 
   const reader = new FileReader();
   reader.onload = async (e) => {
     const base64Data = e.target.result;
 
     if (statusEl) {
-      statusEl.innerHTML = `<span style="color:var(--skull-amber);">[*] Guardando en disco duro: assets/images/mechas/${folder}/${file.name}...</span>`;
+      statusEl.innerHTML = `<span style="color:var(--skull-amber);">[*] Guardando en disco duro en [${folder}]: ${file.name}...</span>`;
     }
 
     try {
