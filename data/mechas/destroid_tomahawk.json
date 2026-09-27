@@ -79,10 +79,22 @@
     }
   },
   "dimensions": {
-    "height": { "metric": "11,27 m", "imperial": "37,0 pies" },
-    "width": { "metric": "7,90 m", "imperial": "25,9 pies" },
-    "length": { "metric": "5,10 m", "imperial": "16,7 pies" },
-    "weight": { "metric": "31,3 toneladas", "imperial": "31.3 tons" }
+    "height": {
+      "metric": "11,27 m",
+      "imperial": "37,0 pies"
+    },
+    "width": {
+      "metric": "7,90 m",
+      "imperial": "25,9 pies"
+    },
+    "length": {
+      "metric": "5,10 m",
+      "imperial": "16,7 pies"
+    },
+    "weight": {
+      "metric": "31,3 toneladas",
+      "imperial": "31.3 tons"
+    }
   },
   "powerplant": {
     "engine_es": "Reactor Termonuclear Mitsubishi MT-828",
@@ -97,10 +109,34 @@
     "tactical_analysis_en": "Its heavy 400 MDC armor on the main torso allows it to endure sustained direct enemy fire while neutralizing hostile formations with twin particle beams."
   },
   "mdc_by_location": [
-    { "location_es": "Cuerpo Principal (*)", "location_en": "Main Body (*)", "mdc": 400, "notes_es": "Destrucción total si se agota.", "notes_en": "Total destruction if depleted." },
-    { "location_es": "Brazos / Cañones de Partículas (2)", "location_en": "Arms / Particle Cannons (2)", "mdc": 200, "notes_es": "200 C.D.M. cada uno.", "notes_en": "200 M.D.C. each." },
-    { "location_es": "Piernas (2)", "location_en": "Legs (2)", "mdc": 250, "notes_es": "250 C.D.M. cada una.", "notes_en": "250 M.D.C. each." },
-    { "location_es": "Lanzadores de Misiles Superiores (2)", "location_en": "Upper Missile Launchers (2)", "mdc": 120, "notes_es": "120 C.D.M. cada uno.", "notes_en": "120 M.D.C. each." }
+    {
+      "location_es": "Cuerpo Principal (*)",
+      "location_en": "Main Body (*)",
+      "mdc": 400,
+      "notes_es": "Destrucción total si se agota.",
+      "notes_en": "Total destruction if depleted."
+    },
+    {
+      "location_es": "Brazos / Cañones de Partículas (2)",
+      "location_en": "Arms / Particle Cannons (2)",
+      "mdc": 200,
+      "notes_es": "200 C.D.M. cada uno.",
+      "notes_en": "200 M.D.C. each."
+    },
+    {
+      "location_es": "Piernas (2)",
+      "location_en": "Legs (2)",
+      "mdc": 250,
+      "notes_es": "250 C.D.M. cada una.",
+      "notes_en": "250 M.D.C. each."
+    },
+    {
+      "location_es": "Lanzadores de Misiles Superiores (2)",
+      "location_en": "Upper Missile Launchers (2)",
+      "mdc": 120,
+      "notes_es": "120 C.D.M. cada uno.",
+      "notes_en": "120 M.D.C. each."
+    }
   ],
   "weapons": [
     {
@@ -135,5 +171,6 @@
       "description_es": "Montado en la cabeza para adquisición de blancos a larga distancia.",
       "description_en": "Head-mounted for long distance target acquisition."
     }
-  ]
+  ],
+  "faction_logo": "assets/images/ui/logo.png"
 }

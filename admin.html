@@ -453,12 +453,26 @@
             </div>
           </div>
 
-          <div class="form-group">
-            <label>Foto de Portada / Miniatura Principal (Thumbnail URL o Ruta Local)</label>
-            <input type="text" id="m_thumbnail" class="form-input" placeholder="assets/images/mechas/... o URL externa">
-            <span style="font-size:0.75rem; color:var(--text-dim); margin-top:2px;">
-              💡 También puedes marcar cualquier imagen de la sección 7 como portada con un solo clic.
-            </span>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Insignia / Logo de Facción</label>
+              <div style="display: flex; gap: 10px; align-items: center;">
+                <select id="m_faction_logo" class="form-select" onchange="window.updateFactionLogoPreview?.()">
+                  <option value="assets/images/ui/logo.png">Robotech Defense Force / U.N. Spacy (logo.png)</option>
+                  <option value="assets/images/ui/logo_zentran.png">Fuerzas Zentraedi (logo_zentran.png)</option>
+                  <option value="">-- Detección Automática por Facción --</option>
+                </select>
+                <img id="faction_logo_preview" src="assets/images/ui/logo.png" alt="Preview" style="width: 38px; height: 38px; object-fit: contain; background: rgba(0,0,0,0.5); border: 1px solid var(--border-tactical); border-radius: 4px; padding: 2px; flex-shrink: 0;">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Foto de Portada / Miniatura Principal (Thumbnail URL o Ruta Local)</label>
+              <input type="text" id="m_thumbnail" class="form-input" placeholder="assets/images/mechas/... o URL externa">
+              <span style="font-size:0.75rem; color:var(--text-dim); margin-top:2px;">
+                💡 También puedes marcar cualquier imagen de la sección 7 como portada con un solo clic.
+              </span>
+            </div>
           </div>
         </div>
 

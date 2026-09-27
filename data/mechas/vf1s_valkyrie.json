@@ -79,10 +79,22 @@
     }
   },
   "dimensions": {
-    "height": { "metric": "12,68 m (Battloid)", "imperial": "41,6 pies (Battloid)" },
-    "width": { "metric": "14,78 m (Envergadura)", "imperial": "48,5 pies (Wingspan)" },
-    "length": { "metric": "14,23 m (Caza)", "imperial": "46,7 pies (Fighter)" },
-    "weight": { "metric": "13,25 toneladas", "imperial": "13.25 tons" }
+    "height": {
+      "metric": "12,68 m (Battloid)",
+      "imperial": "41,6 pies (Battloid)"
+    },
+    "width": {
+      "metric": "14,78 m (Envergadura)",
+      "imperial": "48,5 pies (Wingspan)"
+    },
+    "length": {
+      "metric": "14,23 m (Caza)",
+      "imperial": "46,7 pies (Fighter)"
+    },
+    "weight": {
+      "metric": "13,25 toneladas",
+      "imperial": "13.25 tons"
+    }
   },
   "powerplant": {
     "engine_es": "2x Turbinas Termonucleares Shinnakasu-Daimler FF-2001",
@@ -97,11 +109,41 @@
     "tactical_analysis_en": "Thanks to its tri-mode transformation (Supersonic Fighter for space interception, Guardian/Gerwalk for close ground support, and Battloid for urban and melee combat), the VF-1S provides unmatched tactical adaptability."
   },
   "mdc_by_location": [
-    { "location_es": "Cuerpo Principal (*)", "location_en": "Main Body (*)", "mdc": 200, "notes_es": "Desactivación si cae a 0.", "notes_en": "Destruction if drops to 0." },
-    { "location_es": "Cabina Reforzada", "location_en": "Reinforced Cockpit", "mdc": 150, "notes_es": "Blindaje de dosel desplegable.", "notes_en": "Deployable armor canopy." },
-    { "location_es": "Cabeza con 4 Láseres", "location_en": "Head Unit with 4 Lasers", "mdc": 100, "notes_es": "Antenas y sensores de mando.", "notes_en": "Command communications array." },
-    { "location_es": "Piernas / Motores (2)", "location_en": "Legs / Engine Nacelles (2)", "mdc": 150, "notes_es": "150 C.D.M. cada una.", "notes_en": "150 M.D.C. each." },
-    { "location_es": "Alas (2)", "location_en": "Wings (2)", "mdc": 90, "notes_es": "90 C.D.M. cada una.", "notes_en": "90 M.D.C. each." }
+    {
+      "location_es": "Cuerpo Principal (*)",
+      "location_en": "Main Body (*)",
+      "mdc": 200,
+      "notes_es": "Desactivación si cae a 0.",
+      "notes_en": "Destruction if drops to 0."
+    },
+    {
+      "location_es": "Cabina Reforzada",
+      "location_en": "Reinforced Cockpit",
+      "mdc": 150,
+      "notes_es": "Blindaje de dosel desplegable.",
+      "notes_en": "Deployable armor canopy."
+    },
+    {
+      "location_es": "Cabeza con 4 Láseres",
+      "location_en": "Head Unit with 4 Lasers",
+      "mdc": 100,
+      "notes_es": "Antenas y sensores de mando.",
+      "notes_en": "Command communications array."
+    },
+    {
+      "location_es": "Piernas / Motores (2)",
+      "location_en": "Legs / Engine Nacelles (2)",
+      "mdc": 150,
+      "notes_es": "150 C.D.M. cada una.",
+      "notes_en": "150 M.D.C. each."
+    },
+    {
+      "location_es": "Alas (2)",
+      "location_en": "Wings (2)",
+      "mdc": 90,
+      "notes_es": "90 C.D.M. cada una.",
+      "notes_en": "90 M.D.C. each."
+    }
   ],
   "weapons": [
     {
@@ -154,5 +196,6 @@
       "description_es": "Enlace de datos con el SDF-1 y capacidad de coordinar escuadrones enteros.",
       "description_en": "Direct data-link with SDF-1 and command capability for full squadrons."
     }
-  ]
+  ],
+  "faction_logo": "assets/images/ui/logo.png"
 }

@@ -231,6 +231,12 @@ async function loadMechaIntoForm(id) {
     document.getElementById('m_crew_es').value = data.crew?.es || '';
     document.getElementById('m_thumbnail').value = data.thumbnail || '';
 
+    const logoSel = document.getElementById('m_faction_logo');
+    if (logoSel) {
+      logoSel.value = data.faction_logo || (data.category === 'zentraedi' ? 'assets/images/ui/logo_zentran.png' : 'assets/images/ui/logo.png');
+      window.updateFactionLogoPreview?.();
+    }
+
     // Unidades reales
     document.getElementById('m_stat_speed_val').value = data.stats?.speed?.value || data.stats?.speed?.rating || 120;
     document.getElementById('m_stat_armor_val').value = data.stats?.armor?.value || data.stats?.armor?.main_body_mdc || data.stats?.armor?.rating || 200;
@@ -568,6 +574,7 @@ function buildCurrentMechaJSON() {
     vehicle_type: { es: type_es, en: type_en },
     crew: { es: crew_es, en: crew_es },
     thumbnail: thumbnail,
+    faction_logo: document.getElementById('m_faction_logo')?.value || (category === 'zentraedi' ? 'assets/images/ui/logo_zentran.png' : 'assets/images/ui/logo.png'),
     images: imagesList.length > 0 ? imagesList : [{ url: thumbnail, title_es: name, title_en: name, type: "render" }],
     stats: {
       speed: {
@@ -776,7 +783,24 @@ function downloadJSON(obj, filename) {
   window.tacticalAudio?.scan();
 }
 
+function updateFactionLogoPreview() {
+  const sel = document.getElementById('m_faction_logo');
+  const img = document.getElementById('faction_logo_preview');
+  if (!sel || !img) return;
+  let val = sel.value;
+  if (!val) {
+    const cat = document.getElementById('m_category_select')?.value || '';
+    const fac = document.getElementById('m_faction_select')?.value || '';
+    val = (cat === 'zentraedi' || fac.toLowerCase().includes('zentraedi') || fac.toLowerCase().includes('zentran')) 
+      ? 'assets/images/ui/logo_zentran.png' 
+      : 'assets/images/ui/logo.png';
+  }
+  img.src = val;
+}
+
 window.addMdcRow = addMdcRow;
 window.addWeaponRow = addWeaponRow;
 window.addGalleryRow = addGalleryRow;
 window.updateLivePreview = updateLivePreview;
+window.updateFactionLogoPreview = updateFactionLogoPreview;
+

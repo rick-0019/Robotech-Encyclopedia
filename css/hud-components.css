@@ -60,6 +60,21 @@
   letter-spacing: 1.5px;
 }
 
+.card-faction-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+}
+
+.card-faction-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px rgba(0, 240, 255, 0.45));
+  flex-shrink: 0;
+}
+
 .faction-tag {
   color: var(--un-cyan);
   font-weight: 700;
@@ -325,14 +340,41 @@
   border-bottom: 1px solid var(--border-tactical);
 }
 
-.dossier-title-area h2 {
+.dossier-title-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.dossier-faction-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.45));
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.dossier-faction-logo:hover {
+  transform: scale(1.08);
+}
+
+.dossier-title-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dossier-title-text h2 {
   font-family: var(--font-hud);
   font-size: 1.5rem;
   color: #fff;
   letter-spacing: 2px;
+  margin: 0;
 }
 
-.dossier-title-area span {
+.dossier-title-text span {
   font-size: 0.85rem;
   color: var(--skull-amber);
   letter-spacing: 1px;

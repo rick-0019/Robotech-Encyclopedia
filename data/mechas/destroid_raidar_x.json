@@ -232,5 +232,6 @@
       "description_es": "Alcance: 1931 km (1200 millas); alcance indefinido mediante retransmisión por satélite.",
       "description_en": "Range: 1,200 miles (1,931 km); indefinite via satellite relay."
     }
-  ]
+  ],
+  "faction_logo": "assets/images/ui/logo.png"
 }

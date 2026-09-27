@@ -224,6 +224,16 @@ function setupSearch() {
 // --------------------------------------------------------------------------
 // RENDER MECHA GRID
 // --------------------------------------------------------------------------
+function getFactionLogo(m) {
+  if (m && m.faction_logo) return m.faction_logo;
+  const cat = (m?.category || '').toLowerCase();
+  const fac = (typeof m?.faction === 'object' ? (m?.faction.es || m?.faction.en || '') : (m?.faction || '')).toLowerCase();
+  if (cat === 'zentraedi' || fac.includes('zentraedi') || fac.includes('zentran')) {
+    return 'assets/images/ui/logo_zentran.png';
+  }
+  return 'assets/images/ui/logo.png';
+}
+
 function renderMechas() {
   const grid = document.getElementById('mecha-grid');
   const countEl = document.getElementById('results-count');
@@ -267,11 +277,15 @@ function renderMechas() {
     const summaryText = m.summary[lang] || m.summary.en || '';
     const factionText = m.faction[lang] || m.faction.en || '';
     const classText = m.class[lang] || m.class.en || '';
+    const factionLogo = getFactionLogo(m);
 
     return `
       <div class="mecha-card">
         <div class="card-header-status">
-          <span class="faction-tag">${factionText}</span>
+          <div class="card-faction-badge" title="${factionText}">
+            <img src="${factionLogo}" class="card-faction-icon" alt="${factionText}">
+            <span class="faction-tag">${factionText}</span>
+          </div>
           <span class="badge-tag">${m.badge || classText}</span>
         </div>
 
@@ -404,6 +418,12 @@ function populateDossierModal(m) {
   const lang = window.appState.lang;
 
   // Header
+  const factionLogo = getFactionLogo(m);
+  const dossierLogo = document.getElementById('dossier-faction-logo');
+  if (dossierLogo) {
+    dossierLogo.src = factionLogo;
+    dossierLogo.alt = m.faction[lang] || m.faction.en || 'Faction Insignia';
+  }
   document.getElementById('dossier-mecha-name').textContent = m.name;
   document.getElementById('dossier-mecha-alias').textContent = `${m.alias} // ${m.faction[lang] || m.faction.en}`;
 

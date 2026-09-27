@@ -57,7 +57,8 @@
         "sensors_unit": "km",
         "mobility": 30
       },
-      "dataFile": "data/mechas/destroid_raidar_x.json"
+      "dataFile": "data/mechas/destroid_raidar_x.json",
+      "faction_logo": "assets/images/ui/logo.png"
     },
     {
       "id": "vf1s_valkyrie",
@@ -91,7 +92,8 @@
         "sensors_unit": "km",
         "mobility": 98
       },
-      "dataFile": "data/mechas/vf1s_valkyrie.json"
+      "dataFile": "data/mechas/vf1s_valkyrie.json",
+      "faction_logo": "assets/images/ui/logo.png"
     },
     {
       "id": "destroid_tomahawk",
@@ -125,7 +127,8 @@
         "sensors_unit": "km",
         "mobility": 25
       },
-      "dataFile": "data/mechas/destroid_tomahawk.json"
+      "dataFile": "data/mechas/destroid_tomahawk.json",
+      "faction_logo": "assets/images/ui/logo.png"
     },
     {
       "id": "regult_battle_pod",
@@ -133,24 +136,24 @@
       "alias": "Zentraedi Standard Battle Pod",
       "category": "zentraedi",
       "faction": {
-        "es": "Flota Zentraedi",
-        "en": "Zentraedi Fleet"
+        "es": "Flota Principal Zentraedi (Boddole Zer)",
+        "en": "Zentraedi Main Fleet (Boddole Zer)"
       },
       "class": {
-        "es": "Cápsula de Asalto de Infantería",
-        "en": "Infantry Assault Pod"
+        "es": "Cápsula de Combate Bípeda Ligera / Espacial",
+        "en": "Light Bipedal / Space Combat Pod"
       },
-      "thumbnail": "https://images.unsplash.com/photo-1563089145-599997674d42?w=600&auto=format&fit=crop&q=80",
-      "badge": "ZENTRAEDI SWARM",
+      "thumbnail": "assets/images/mechas/Zentraedi_Tactical_Battlepod/Zentraedi_Tactical_Battlepod.webp",
+      "badge": "Zentraedi Standard Battle Pod",
       "summary": {
-        "es": "Unidad bípeda ultrarrápida para ataques masivos de saturación en gravedad cero y superficie terrestre.",
-        "en": "Fast bipedal combat unit built for mass swarm tactics in zero-G and planetary terrain."
+        "es": "El Regult es el mecha de producción en masa estándar de la infantería mecanizada Zentraedi. Con su diseño bípe...",
+        "en": "The Regult is the standard mass-production combat mecha of the Zentraedi mechanized infantry. Featuring an inv..."
       },
       "stats": {
         "speed": 281,
         "speed_unit": "km/h",
         "armor": 100,
-        "armor_unit": "CDM",
+        "armor_unit": "C.D.M.",
         "firepower": 70,
         "firepower_unit": "Pts",
         "range": 4,
@@ -159,7 +162,8 @@
         "sensors_unit": "km",
         "mobility": 80
       },
-      "dataFile": "data/mechas/regult_battle_pod.json"
+      "dataFile": "data/mechas/regult_battle_pod.json",
+      "faction_logo": "assets/images/ui/logo_zentran.png"
     }
   ]
 }

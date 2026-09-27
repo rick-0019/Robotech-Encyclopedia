@@ -205,12 +205,17 @@ class MechaComparator {
     // 1. Column headers
     let bannerHtml = `<div class="compare-mechas-banner" style="grid-template-columns: repeat(${mechas.length}, 1fr);">`;
     mechas.forEach((m, idx) => {
+      const fLogo = m.faction_logo || (m.category === 'zentraedi' ? 'assets/images/ui/logo_zentran.png' : 'assets/images/ui/logo.png');
+      const fName = m.faction[lang] || m.faction.en || '';
       bannerHtml += `
         <div class="compare-mecha-col" style="border-top: 3px solid ${colors[idx]}">
-          <img src="${m.thumbnail}" class="compare-mecha-thumb" alt="${m.name}">
+          <div style="position: relative; display: inline-block;">
+            <img src="${m.thumbnail}" class="compare-mecha-thumb" alt="${m.name}">
+            <img src="${fLogo}" class="compare-faction-logo" alt="${fName}" title="${fName}">
+          </div>
           <h3>${m.name}</h3>
           <div class="col-alias">${m.alias}</div>
-          <div class="col-faction">${m.faction[lang] || m.faction.en || ''}</div>
+          <div class="col-faction">${fName}</div>
         </div>
       `;
     });

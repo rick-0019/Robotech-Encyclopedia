@@ -224,6 +224,21 @@
   border-radius: 2px;
   border: 1px solid var(--border-tactical);
   margin-bottom: 12px;
+  display: block;
+}
+
+.compare-faction-logo {
+  position: absolute;
+  bottom: 16px;
+  right: 6px;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  background: rgba(4, 9, 20, 0.9);
+  border: 1px solid var(--border-tactical);
+  border-radius: 50%;
+  padding: 3px;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
 }
 
 .compare-mecha-col h3 {
