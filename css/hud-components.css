@@ -68,10 +68,12 @@
 }
 
 .card-faction-icon {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
+  max-width: 16px;
+  max-height: 16px;
   object-fit: contain;
-  filter: drop-shadow(0 0 5px rgba(0, 240, 255, 0.45));
+  filter: drop-shadow(0 0 4px rgba(0, 240, 255, 0.45));
   flex-shrink: 0;
 }
 
@@ -348,10 +350,12 @@
 }
 
 .dossier-faction-logo {
-  width: 52px;
-  height: 52px;
+  width: 34px;
+  height: 34px;
+  max-width: 34px;
+  max-height: 34px;
   object-fit: contain;
-  filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.45));
+  filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.45));
   flex-shrink: 0;
   transition: transform var(--transition-fast);
 }

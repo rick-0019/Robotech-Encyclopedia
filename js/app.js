@@ -225,13 +225,30 @@ function setupSearch() {
 // RENDER MECHA GRID
 // --------------------------------------------------------------------------
 function getFactionLogo(m) {
-  if (m && m.faction_logo) return m.faction_logo;
-  const cat = (m?.category || '').toLowerCase();
-  const fac = (typeof m?.faction === 'object' ? (m?.faction.es || m?.faction.en || '') : (m?.faction || '')).toLowerCase();
-  if (cat === 'zentraedi' || fac.includes('zentraedi') || fac.includes('zentran')) {
+  if (m && m.faction_logo) {
+    // Convertir nombres heredados
+    if (m.faction_logo.endsWith('logo.png')) return 'assets/images/ui/logo_UNSpacy.png';
+    return m.faction_logo;
+  }
+
+  const facStr = (typeof m?.faction === 'object' ? (m.faction.es || m.faction.en || '') : (m?.faction || '')).trim().toLowerCase();
+  const catStr = (m?.category || '').toLowerCase();
+
+  // Buscar coincidencia exacta en taxonomies si están disponibles
+  if (window.appState?.taxonomies?.factions) {
+    const found = window.appState.taxonomies.factions.find(f => 
+      (f.name_es && f.name_es.toLowerCase() === facStr) || 
+      (f.name_en && f.name_en.toLowerCase() === facStr) || 
+      (f.id && f.id.toLowerCase() === facStr)
+    );
+    if (found && found.logo) return found.logo;
+  }
+
+  // Detección automática por palabras clave
+  if (catStr === 'zentraedi' || facStr.includes('zentraedi') || facStr.includes('zentran') || facStr.includes('meltrandi')) {
     return 'assets/images/ui/logo_zentran.png';
   }
-  return 'assets/images/ui/logo.png';
+  return 'assets/images/ui/logo_UNSpacy.png';
 }
 
 function renderMechas() {
@@ -421,8 +438,13 @@ function populateDossierModal(m) {
   const factionLogo = getFactionLogo(m);
   const dossierLogo = document.getElementById('dossier-faction-logo');
   if (dossierLogo) {
-    dossierLogo.src = factionLogo;
-    dossierLogo.alt = m.faction[lang] || m.faction.en || 'Faction Insignia';
+    if (factionLogo) {
+      dossierLogo.src = factionLogo;
+      dossierLogo.alt = m.faction[lang] || m.faction.en || 'Faction Insignia';
+      dossierLogo.style.display = 'block';
+    } else {
+      dossierLogo.style.display = 'none';
+    }
   }
   document.getElementById('dossier-mecha-name').textContent = m.name;
   document.getElementById('dossier-mecha-alias').textContent = `${m.alias} // ${m.faction[lang] || m.faction.en}`;

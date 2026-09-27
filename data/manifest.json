@@ -58,7 +58,7 @@
         "mobility": 30
       },
       "dataFile": "data/mechas/destroid_raidar_x.json",
-      "faction_logo": "assets/images/ui/logo.png"
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png"
     },
     {
       "id": "vf1s_valkyrie",
@@ -93,7 +93,7 @@
         "mobility": 98
       },
       "dataFile": "data/mechas/vf1s_valkyrie.json",
-      "faction_logo": "assets/images/ui/logo.png"
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png"
     },
     {
       "id": "destroid_tomahawk",
@@ -128,7 +128,7 @@
         "mobility": 25
       },
       "dataFile": "data/mechas/destroid_tomahawk.json",
-      "faction_logo": "assets/images/ui/logo.png"
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png"
     },
     {
       "id": "regult_battle_pod",

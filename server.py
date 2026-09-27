@@ -68,7 +68,7 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
                 "class": mecha.get("vehicle_type", {}),
                 "thumbnail": mecha.get("thumbnail", ""),
                 "badge": mecha.get("alias", "UN SPACY"),
-                "faction_logo": mecha.get("faction_logo") or ("assets/images/ui/logo_zentran.png" if mecha.get("category") == "zentraedi" or "zentraedi" in str(mecha.get("faction", "")).lower() else "assets/images/ui/logo.png"),
+                "faction_logo": mecha.get("faction_logo") or ("assets/images/ui/logo_zentran.png" if mecha.get("category") == "zentraedi" or "zentraedi" in str(mecha.get("faction", "")).lower() else "assets/images/ui/logo_UNSpacy.png"),
                 "summary": {
                     "es": (mecha.get("lore", {}).get("overview_es") or "")[:110] + "...",
                     "en": (mecha.get("lore", {}).get("overview_en") or "")[:110] + "..."

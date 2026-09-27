@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Robotech Admin Studio // Gestor CRUD Local</title>
-  <link rel="icon" type="image/png" href="assets/images/ui/logo.png">
+  <link rel="icon" type="image/png" href="assets/images/ui/logo_UNSpacy.png">
   
   <script>
     // Seguridad militar: El Admin Studio solo es accesible en entorno local
@@ -20,8 +20,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/hud-components.css">
+  <link rel="stylesheet" href="css/style.css?v=1.0.3">
+  <link rel="stylesheet" href="css/hud-components.css?v=1.0.3">
   <style>
     .admin-container {
       width: 100%;
@@ -366,7 +366,7 @@
     <!-- Top Action Bar -->
     <div class="admin-top-bar">
       <div style="display: flex; align-items: center; gap: 14px;">
-        <img src="assets/images/ui/logo.png" alt="RDF Insignia" style="width: 48px; height: 48px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(255, 157, 0, 0.45));">
+        <img src="assets/images/ui/logo_UNSpacy.png" alt="RDF Insignia" style="width: 48px; height: 48px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(255, 157, 0, 0.45));">
         <div>
           <h2 style="font-family: var(--font-hud); font-size: 1.4rem; color: #fff; letter-spacing: 2px; margin: 0;">
             ROBOTECH <span style="color: var(--skull-amber);">ADMIN STUDIO</span>
@@ -651,6 +651,11 @@
         <input type="text" id="new_tax_en" class="form-input" placeholder="English Name">
       </div>
 
+      <div class="form-group" id="group_new_tax_logo" style="display:none;">
+        <label>Insignia / Logo Asociado</label>
+        <select id="new_tax_logo" class="form-select"></select>
+      </div>
+
       <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 18px;">
         <button type="button" class="btn-action-secondary" onclick="closeTaxonomyModal()">CANCELAR</button>
         <button type="button" class="btn-action-primary" onclick="confirmAddTaxonomy()">+ AGREGAR A LA LISTA</button>
@@ -658,7 +663,7 @@
     </div>
   </div>
 
-  <script src="js/audio.js"></script>
-  <script src="js/admin.js"></script>
+  <script src="js/audio.js?v=1.0.3"></script>
+  <script src="js/admin.js?v=1.0.3"></script>
 </body>
 </html>

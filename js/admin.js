@@ -78,12 +78,46 @@ function populateTaxonomySelects() {
     ).join('');
   }
 
-  // 2. Facciones
+  // 2. Facciones con data-logo y auto-asignación instantánea
   const facSel = document.getElementById('m_faction_select');
   if (facSel) {
     facSel.innerHTML = currentTaxonomies.factions.map(f => 
-      `<option value="${f.name_es}" data-en="${f.name_en}">${f.name_es}</option>`
+      `<option value="${f.name_es}" data-en="${f.name_en}" data-logo="${f.logo || ''}">${f.name_es}</option>`
     ).join('');
+
+    // Al cambiar la facción militar, auto-selecciona el logo correspondiente
+    facSel.onchange = () => {
+      const opt = facSel.selectedOptions[0];
+      const logo = opt?.dataset?.logo;
+      const logoSel = document.getElementById('m_faction_logo');
+      if (logoSel) {
+        if (logo) {
+          logoSel.value = logo;
+        } else {
+          const txt = facSel.value.toLowerCase();
+          logoSel.value = (txt.includes('zentraedi') || txt.includes('zentran') || txt.includes('meltrandi'))
+            ? 'assets/images/ui/logo_zentran.png'
+            : 'assets/images/ui/logo_UNSpacy.png';
+        }
+        updateFactionLogoPreview();
+        updateLivePreview();
+      }
+    };
+  }
+
+  // 2b. Catálogo de Logos de Facción (Dinámico)
+  const logoSel = document.getElementById('m_faction_logo');
+  if (logoSel) {
+    const logos = currentTaxonomies.faction_logos || [
+      { id: 'un_spacy', name: 'Robotech Defense Force / U.N. Spacy', file: 'assets/images/ui/logo_UNSpacy.png' },
+      { id: 'zentraedi', name: 'Fuerzas Zentraedi', file: 'assets/images/ui/logo_zentran.png' }
+    ];
+    const curVal = logoSel.value;
+    logoSel.innerHTML = `
+      <option value="">-- Detección Automática por Facción --</option>
+      ${logos.map(l => `<option value="${l.file}">${l.name} (${l.file.split('/').pop()})</option>`).join('')}
+    `;
+    if (curVal) logoSel.value = curVal;
   }
 
   // 3. Tipos de Vehículo
@@ -110,9 +144,22 @@ window.openAddTaxonomyModal = function(type) {
   const title = document.getElementById('taxonomy-modal-title');
   const inEs = document.getElementById('new_tax_es');
   const inEn = document.getElementById('new_tax_en');
+  const logoGroup = document.getElementById('group_new_tax_logo');
+  const logoSel = document.getElementById('new_tax_logo');
 
   inEs.value = '';
   inEn.value = '';
+
+  if (type === 'faction' && logoGroup && logoSel) {
+    logoGroup.style.display = 'block';
+    const logos = currentTaxonomies.faction_logos || [
+      { id: 'un_spacy', name: 'Robotech Defense Force / U.N. Spacy', file: 'assets/images/ui/logo_UNSpacy.png' },
+      { id: 'zentraedi', name: 'Fuerzas Zentraedi', file: 'assets/images/ui/logo_zentran.png' }
+    ];
+    logoSel.innerHTML = logos.map(l => `<option value="${l.file}">${l.name}</option>`).join('');
+  } else if (logoGroup) {
+    logoGroup.style.display = 'none';
+  }
 
   const titles = {
     category: 'AÑADIR NUEVA CATEGORÍA',
@@ -148,9 +195,12 @@ window.confirmAddTaxonomy = function() {
     populateTaxonomySelects();
     document.getElementById('m_category_select').value = slug;
   } else if (currentTaxModalType === 'faction') {
-    currentTaxonomies.factions.push({ id: slug, name_es: inEs, name_en: inEn });
+    const chosenLogo = document.getElementById('new_tax_logo')?.value || 'assets/images/ui/logo_UNSpacy.png';
+    currentTaxonomies.factions.push({ id: slug, name_es: inEs, name_en: inEn, logo: chosenLogo });
     populateTaxonomySelects();
     document.getElementById('m_faction_select').value = inEs;
+    document.getElementById('m_faction_logo').value = chosenLogo;
+    updateFactionLogoPreview();
   } else if (currentTaxModalType === 'vehicle_type') {
     currentTaxonomies.vehicle_types.push({ name_es: inEs, name_en: inEn });
     populateTaxonomySelects();
@@ -438,6 +488,7 @@ function updateLivePreview() {
   const name = document.getElementById('m_name').value || 'NOMBRE DE LA UNIDAD';
   const alias = document.getElementById('m_alias').value || 'DESIGNACIÓN';
   const faction = document.getElementById('m_faction_select')?.value || 'U.N. SPACY';
+  const logo = document.getElementById('m_faction_logo')?.value || (faction.toLowerCase().includes('zentraedi') || faction.toLowerCase().includes('zentran') ? 'assets/images/ui/logo_zentran.png' : 'assets/images/ui/logo_UNSpacy.png');
   const thumb = document.getElementById('m_thumbnail').value || 'assets/images/mechas/destroid_raidar_x/b0eca7d9ebe0c448feae08c391418ea8.jpg';
   
   const speed = parseFloat(document.getElementById('m_stat_speed_val').value) || 0;
@@ -448,7 +499,10 @@ function updateLivePreview() {
   preview.innerHTML = `
     <div class="mecha-card" style="box-shadow: none;">
       <div class="card-header-status">
-        <span class="faction-tag">${faction}</span>
+        <div class="card-faction-badge">
+          <img src="${logo}" class="card-faction-icon" alt="${faction}" style="width:16px; height:16px; object-fit:contain;">
+          <span class="faction-tag">${faction}</span>
+        </div>
         <span class="badge-tag">VISTA PREVIA</span>
       </div>
       <div class="card-image-wrap" style="height: 180px;">

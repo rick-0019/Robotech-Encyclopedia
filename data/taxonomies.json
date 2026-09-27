@@ -45,47 +45,56 @@
     {
       "id": "un_spacy",
       "name_es": "U.N. Spacy",
-      "name_en": "U.N. Spacy"
+      "name_en": "U.N. Spacy",
+      "logo": "assets/images/ui/logo_UNSpacy.png"
     },
     {
       "id": "earth_defense",
       "name_es": "Fuerzas de Defensa de la Tierra",
-      "name_en": "Earth Defense Forces"
+      "name_en": "Earth Defense Forces",
+      "logo": "assets/images/ui/logo_UNSpacy.png"
     },
     {
       "id": "skull_squadron",
       "name_es": "U.N. Spacy - Escuadrón Skull",
-      "name_en": "U.N. Spacy - Skull Squadron"
+      "name_en": "U.N. Spacy - Skull Squadron",
+      "logo": "assets/images/ui/logo_UNSpacy.png"
     },
     {
       "id": "zentraedi_main",
       "name_es": "Flota Principal Zentraedi (Boddole Zer)",
-      "name_en": "Zentraedi Main Fleet (Boddole Zer)"
+      "name_en": "Zentraedi Main Fleet (Boddole Zer)",
+      "logo": "assets/images/ui/logo_zentran.png"
     },
     {
       "id": "meltrandi",
       "name_es": "Flota Meltrandi (Femenina)",
-      "name_en": "Meltrandi Fleet"
+      "name_en": "Meltrandi Fleet",
+      "logo": "assets/images/ui/logo_zentran.png"
     },
     {
       "id": "southern_cross",
       "name_es": "Ejército de la Cruz del Sur",
-      "name_en": "Army of the Southern Cross"
+      "name_en": "Army of the Southern Cross",
+      "logo": "assets/images/ui/logo_UNSpacy.png"
     },
     {
       "id": "robotech_masters",
       "name_es": "Maestros de la Robotech (Tiroleses)",
-      "name_en": "Robotech Masters (Tirolians)"
+      "name_en": "Robotech Masters (Tirolians)",
+      "logo": "assets/images/ui/logo_UNSpacy.png"
     },
     {
       "id": "invid_swarm",
       "name_es": "Horda Invid (Regis / Regiss)",
-      "name_en": "Invid Swarm (Regis / Regiss)"
+      "name_en": "Invid Swarm (Regis / Regiss)",
+      "logo": "assets/images/ui/logo_UNSpacy.png"
     },
     {
       "id": "ref_pioneer",
       "name_es": "Fuerza Expedicionaria Robotech (REF / Pioneer)",
-      "name_en": "Robotech Expeditionary Force (REF)"
+      "name_en": "Robotech Expeditionary Force (REF)",
+      "logo": "assets/images/ui/logo_UNSpacy.png"
     }
   ],
   "vehicle_types": [
@@ -142,6 +151,18 @@
       "id": "shadow_chronicles",
       "name_es": "Las Crónicas de las Sombras / Era Moderna",
       "name_en": "The Shadow Chronicles"
+    }
+  ],
+  "faction_logos": [
+    {
+      "id": "un_spacy",
+      "name": "Robotech Defense Force / U.N. Spacy",
+      "file": "assets/images/ui/logo_UNSpacy.png"
+    },
+    {
+      "id": "zentraedi",
+      "name": "Fuerzas Zentraedi",
+      "file": "assets/images/ui/logo_zentran.png"
     }
   ]
 }
