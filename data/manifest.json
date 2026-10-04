@@ -172,6 +172,42 @@
       "dataFile": "data/mechas/regult_battle_pod.json"
     },
     {
+      "id": "zentraedi_officers_pod",
+      "name": "Officer's Battle Pod",
+      "alias": "Glaug Tactical Officer Pod",
+      "category": "zentraedi",
+      "faction": {
+        "es": "Flota Principal Zentraedi (Boddole Zer)",
+        "en": "Zentraedi Main Fleet (Boddole Zer)"
+      },
+      "class": {
+        "es": "Cápsula Bípeda Pesada de Mando y Asalto Frontal",
+        "en": "Heavy Bipedal Command & Assault Battlepod"
+      },
+      "thumbnail": "assets/images/mechas/Zentraedi_Officiers_Pod/1d1a7cedb0381842975d1d8864537abf.jpg",
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "is_variable": false,
+      "modes": null,
+      "summary": {
+        "es": "El Glaug es el mecha de mando supremo de la infantería Zentraedi, reservado para comandantes como Khyron. Combina un cañón superior de partículas devastador con blindaje reforzado y propulsores de alta maniobrabilidad.",
+        "en": "The Glaug is the premier command battlepod of the Zentraedi forces, piloted by high-ranking leaders such as Khyron. It pairs a devastating dorsal particle cannon with heavy armor and high-output maneuvering thrusters."
+      },
+      "stats": {
+        "speed": 281.6,
+        "speed_unit": "km/h",
+        "armor": 225,
+        "armor_unit": "C.D.M.",
+        "firepower": 92,
+        "firepower_unit": "Pts",
+        "range": 16,
+        "range_unit": "km",
+        "sensors": 150,
+        "sensors_unit": "km",
+        "mobility": 75
+      },
+      "dataFile": "data/mechas/zentraedi_officers_pod.json"
+    },
+    {
       "id": "Alfa_Fighter",
       "name": "Alpha Fighter",
       "alias": "VAF-6R Alpha Fighter",

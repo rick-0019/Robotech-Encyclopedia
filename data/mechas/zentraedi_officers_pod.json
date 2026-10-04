@@ -1,0 +1,221 @@
+{
+  "id": "zentraedi_officers_pod",
+  "name": "Officer's Battle Pod",
+  "alias": "Glaug Tactical Officer Pod",
+  "category": "zentraedi",
+  "is_variable": false,
+  "modes": null,
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "faction": {
+    "es": "Flota Principal Zentraedi (Boddole Zer)",
+    "en": "Zentraedi Main Fleet (Boddole Zer)"
+  },
+  "vehicle_type": {
+    "es": "Cápsula Bípeda Pesada de Mando y Asalto Frontal",
+    "en": "Heavy Bipedal Command & Assault Battlepod"
+  },
+  "crew": {
+    "es": "Uno (Comandante o As de Élite Zentraedi, p. ej. Khyron / Geral)",
+    "en": "One (Zentraedi Field Commander or Elite Ace, e.g. Khyron / Geral)"
+  },
+  "thumbnail": "assets/images/mechas/Zentraedi_Officiers_Pod/1d1a7cedb0381842975d1d8864537abf.jpg",
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/Zentraedi_Officiers_Pod/1d1a7cedb0381842975d1d8864537abf.jpg",
+      "title_es": "Modelo de Estudio Táctico - Officer's Battle Pod (Glaug)",
+      "title_en": "Tactical Studio Model - Officer's Battle Pod (Glaug)",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/Zentraedi_Officiers_Pod/4a8d0e2ebee1fa728066d5e28bb4c69d.jpg",
+      "title_es": "Ilustración Oficial de Combate y Esquema de Pintura de Mando",
+      "title_en": "Official Combat Artwork and Command Color Scheme",
+      "type": "artwork"
+    },
+    {
+      "url": "assets/images/mechas/Zentraedi_Officiers_Pod/2c3726bc0ace8a08e39c34961bde4c6b.jpg",
+      "title_es": "Perfil Lateral de Elevación y Articulación Bípeda",
+      "title_en": "Side Elevation Profile & Bipedal Articulation",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/Zentraedi_Officiers_Pod/262975b2d33f40c413a81f0cacee4d58.jpg",
+      "title_es": "Plano Esquemático de Propulsores Dorsales y Cañón Superior",
+      "title_en": "Schematic Blueprint of Dorsal Thrusters & Top Cannon",
+      "type": "blueprint"
+    },
+    {
+      "url": "assets/images/mechas/Zentraedi_Officiers_Pod/f239f721c978e0c4fb6a1b01350b9d02.jpg",
+      "title_es": "Render Operacional Tridimensional en Ángulo Frontal",
+      "title_en": "3D Operational Render in Front-Quarter Angle",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/Zentraedi_Officiers_Pod/aeeb4d4bf3262ba0db6c693b0f9e8ca7.jpg",
+      "title_es": "Diagrama de Estructura de Combate y Sistemas de Armas",
+      "title_en": "Combat Structural Diagram & Weapon Systems",
+      "type": "blueprint"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 281.6,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 94,
+      "label_es": "281.6 km/h",
+      "label_en": "281.6 km/h"
+    },
+    "armor": {
+      "value": 225,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 45,
+      "label_es": "225 C.D.M. Cuerpo",
+      "label_en": "225 M.D.C. Main Body"
+    },
+    "firepower": {
+      "value": 92,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 92,
+      "label_es": "92 Pts",
+      "label_en": "92 Pts"
+    },
+    "range": {
+      "value": 16,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 75,
+      "label_es": "16 km",
+      "label_en": "16 km"
+    },
+    "sensors": {
+      "value": 150,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 45,
+      "label_es": "150 km Radar",
+      "label_en": "150 km Radar"
+    },
+    "mobility": {
+      "value": 75,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 75,
+      "label_es": "75 Pts",
+      "label_en": "75 Pts"
+    }
+  },
+  "dimensions": {
+    "height": {
+      "metric": "16,55 m (hasta el cañón) / 12,65 m (cabeza)"
+    },
+    "weight": {
+      "metric": "41,2 toneladas (vacío) / 48,0 toneladas (cargado)"
+    },
+    "width": {
+      "metric": "11,40 m"
+    },
+    "length": {
+      "metric": "12,80 m"
+    }
+  },
+  "powerplant": {
+    "engine_es": "Generador de Fusión / Protocultura de Alta Densidad Zentraedi",
+    "engine_en": "Zentraedi High-Density Fusion / Protoculture Generator"
+  },
+  "lore": {
+    "overview_es": "La Cápsula de Mando Táctico Zentraedi (designada como Glaug o 'Officer's Battle Pod') es un mecha de combate de élite reservado exclusivamente para oficiales de campo de alto rango, comandantes de batallón y ases de combate como el temido Khyron. Diseñado para liderar desde la vanguardia, el Glaug supera drásticamente al pod táctico Regult estándar en blindaje, velocidad de respuesta y, sobre todo, en una potencia de fuego abrumadora capaz de destruir Mechas Destroid y cazas Veritech de un solo impacto.",
+    "overview_en": "The Zentraedi Tactical Officer's Battle Pod (designated Glaug) is an elite combat mecha reserved exclusively for high-ranking field commanders, battalion leaders, and lethal aces such as Khyron. Engineered to spearhead assaults from the front lines, the Glaug far outperforms the standard Regult battle pod in armor plating, command telemetry, and overwhelming destructive firepower capable of obliterating Earth Destroids and Veritech fighters with single direct hits.",
+    "tactical_analysis_es": "El Glaug monta en su lomo un devastador Cañón de Haz de Partículas de Largo Alcance capaz de perforar blindajes pesados a distancias de hasta 16 km en atmósfera y distancias aún mayores en el vacío orbital. Sus dos brazos portan baterías dobles de cañones automáticos y armas de haz que saturan zonas completas de combate. Para contrarrestar su peso superior, incorpora potentes impulsores dorsales que le permiten realizar zancadas de gran velocidad y saltos propulsados de hasta 90 metros de altura, convirtiéndolo en un oponente formidable tanto en terreno terrestre como en gravedad cero.",
+    "tactical_analysis_en": "The Glaug is armed with a devastating dorsal Long-Range Particle Beam Cannon capable of punching through heavy armor at ranges of up to 16 km in atmosphere and vast distances in orbital zero-G. Its arms house twin-barreled impact and energy automatic cannons that lay down brutal saturating fire. To compensate for its heavier combat mass, high-output dorsal thrusters grant it blistering running speeds and thruster-assisted leaps up to 90 meters high, making it a lethal threat in planetary ground war and deep space skirmishes alike."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Cuerpo Principal / Cabina de Mando (*)",
+      "location_en": "Main Body / Command Cockpit (*)",
+      "mdc": 225
+    },
+    {
+      "location_es": "Cañón Pesado de Haz de Partículas (Lomo)",
+      "location_en": "Heavy Particle Beam Cannon (Top)",
+      "mdc": 120
+    },
+    {
+      "location_es": "Brazos con Cañones Gemelos (2)",
+      "location_en": "Twin Cannon Arm Assemblies (2)",
+      "mdc": 100
+    },
+    {
+      "location_es": "Piernas Articuladas Bípedas (2)",
+      "location_en": "Articulated Bipedal Legs (2)",
+      "mdc": 150
+    },
+    {
+      "location_es": "Propulsores Dorsales Principales (2)",
+      "location_en": "Main Dorsal Thrusters (2)",
+      "mdc": 75
+    },
+    {
+      "location_es": "Domo Sensor y Cañones Secundarios Frontales",
+      "location_en": "Sensor Dome & Chin Secondary Cannons",
+      "mdc": 60
+    },
+    {
+      "location_es": "Bahías de Micro-Misiles Laterales (2)",
+      "location_en": "Lateral Micro-Missile Bays (2)",
+      "mdc": 50
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañón Pesado Superior de Haz de Partículas Colimado",
+      "name_en": "Heavy Top-Mounted Collimated Particle Beam Cannon",
+      "damage": "4D10x10 C.D.M. por disparo de energía pesada",
+      "range": "16 km en atmósfera // 80 km en el espacio profundo"
+    },
+    {
+      "name_es": "Cañones Automáticos Gemelos Pesados de Impacto y Energía (Brazos)",
+      "name_en": "Twin Heavy Impact & Energy Auto-Cannons (Forearms)",
+      "damage": "1D6x10 C.D.M. por ráfaga concentrada",
+      "range": "4,8 km (3 millas)"
+    },
+    {
+      "name_es": "Cañones Láser Ligeros Antiaéreos y Antipersonal (Barbilla)",
+      "name_en": "Light Anti-Personnel & Anti-Aircraft Laser Cannons (Chin)",
+      "damage": "4D8 C.D.M. por ráfaga rápida",
+      "range": "1,2 km"
+    },
+    {
+      "name_es": "Lanzadores de Micro-Misiles Guiados de Saturación",
+      "name_en": "Guided Saturation Micro-Missile Launchers",
+      "damage": "2D6x10 C.D.M. por salva completa (12 a 24 misiles)",
+      "range": "4 km"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Módulo C4I de Enlace Táctico de Mando Zentraedi",
+      "name_en": "Zentraedi C4I Tactical Command Data Link",
+      "description_es": "Transmite telemetría en tiempo real a las naves nodrizas y coordina formaciones masivas de Regults en el campo de batalla.",
+      "description_en": "Transmits real-time battlefield telemetry to motherships and orchestrates massive Regult swarm formations."
+    },
+    {
+      "name_es": "Propulsores de Maniobra Tridimensional Vernier y Retrocohetes",
+      "name_en": "Vernier 3D Thrusters & Retro-Rocket Array",
+      "description_es": "Otorga agilidad superior en gravedad cero y capacidad de saltos asistidos en superficie de hasta 90 metros.",
+      "description_en": "Grants superior zero-G combat agility and thruster-assisted planetary leaps up to 90 meters high."
+    },
+    {
+      "name_es": "Computadora de Disparo Predictiva Multiobjetivo",
+      "name_en": "Predictive Multi-Targeting Fire Computer",
+      "description_es": "Capaz de fijar y seguir hasta 48 blancos simultáneamente mediante escáner óptico y radar Doppler.",
+      "description_en": "Capable of locking and tracking up to 48 targets simultaneously via optical scanner and Doppler radar."
+    }
+  ]
+}

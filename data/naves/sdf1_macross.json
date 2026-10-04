@@ -1,0 +1,265 @@
+{
+  "id": "sdf1_macross",
+  "name": "SDF-1 Macross",
+  "class_name": {
+    "es": "Fortaleza Superdimensional de Batalla Clase Macross",
+    "en": "Super Dimensional Fortress Macross-Class"
+  },
+  "category": "fortress",
+  "faction": {
+    "es": "U.N. Spacy // Tierra Unificada",
+    "en": "U.N. Spacy // Tierra Unificada"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "La Saga Macross (Primera Guerra Robotech)"
+  },
+  "commissioned": "Febrero de 2009 (Isla Macross)",
+  "commanding_officer": {
+    "es": "Capitán Henry J. Gloval // Primer Oficial Lisa Hayes",
+    "en": "Capitán Henry J. Gloval // Primer Oficial Lisa Hayes"
+  },
+  "complement": {
+    "es": "Tripulación Militar: ~20.000 // Civiles Evacuados: ~56.000 (Macross City)",
+    "en": "Tripulación Militar: ~20.000 // Civiles Evacuados: ~56.000 (Macross City)"
+  },
+  "air_group": {
+    "es": "300+ Cazas Veritech VF-1 Valkyrie, 120+ Destroids (Tomahawk, Defender, Raidar X, Spartan, Monster), lanzaderas Cat's Eye y naves de apoyo logístico",
+    "en": "300+ Cazas Veritech VF-1 Valkyrie, 120+ Destroids (Tomahawk, Defender, Raidar X, Spartan, Monster), lanzaderas Cat's Eye y naves de apoyo logístico"
+  },
+  "docked_vessels": {
+    "es": "Portaaviones Espacial CVS-101 Prometheus (Brazo Babor) y Nave de Asalto Anfibio SLV-111 Daedalus (Brazo Estribor)",
+    "en": "Portaaviones Espacial CVS-101 Prometheus (Brazo Babor) y Nave de Asalto Anfibio SLV-111 Daedalus (Brazo Estribor)"
+  },
+  "thumbnail": "assets/images/naves/SDF-1/b5dfd69b7c4162e32ee76112044fdb3d.jpg",
+  "is_modular": true,
+  "modes": {
+    "cruiser": {
+      "name_es": "Modo Crucero de Batalla Aeroespacial",
+      "name_en": "Aerospace Battle Cruiser Mode",
+      "image": "assets/images/naves/SDF-1/b5dfd69b7c4162e32ee76112044fdb3d.jpg",
+      "length": "1.210 m",
+      "width": "496 m",
+      "height": "312 m",
+      "desc_es": "Configuración aerodinámica primaria para navegación interplanetaria e inserción orbital con la proa unificada.",
+      "desc_en": "Primary streamlined configuration for interplanetary cruise and orbital insertion."
+    },
+    "attack": {
+      "name_es": "Modo Ataque Humanoide (Attack Mode / Stormer)",
+      "name_en": "Humanoid Attack Mode (Stormer)",
+      "image": "assets/images/naves/SDF-1/229cd357524ca4c9c5aaa1e938a5fa3e.jpg",
+      "length": "1.200 m (Altura)",
+      "width": "600 m",
+      "height": "1.200 m",
+      "desc_es": "Configuración humanoide de combate donde la nave se divide y flexiona para reconectar los conductos de energía al Cañón Principal y habilitar el 'Ataque Daedalus'.",
+      "desc_en": "Humanoid combat configuration where the hull articulates to bridge power conduits to the Main Gun."
+    }
+  },
+  "dimensions": {
+    "length": "1.210 m (1,21 km)",
+    "width": "496 m",
+    "height": "312 m (Crucero) // 1.200 m (Modo Ataque)",
+    "mass": "18.000.000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines_es": "4 Motores Termonucleares Principales Robotech + Sistema de Impulsores Gravitacionales Vernier",
+    "engines_en": "Robotech Thermonuclear Engines",
+    "fold_system_es": "Generador Hiperespacial Fold Drive Robotech (Desaparecido en el salto accidental a Plutón)",
+    "fold_system_en": "Robotech Space Fold Drive Generator"
+  },
+  "defenses": {
+    "armor_es": "Superaleación Blindada Robotech con placas ablativas de alta densidad (Cuerpo Principal: 350.000 C.D.M.)",
+    "armor_en": "Robotech High-Density Superalloy Hull",
+    "shields_es": "Sistema de Barrera Puntual (Pin-Point Barrier System) + Barrera Omnidireccional de 360°",
+    "shields_en": "Pin-Point Barrier System (PPB)"
+  },
+  "stats": {
+    "firepower": 100,
+    "armor": 98,
+    "capacity": 96,
+    "range": 92
+  },
+  "stats_detail": {
+    "firepower": {
+      "value": 100,
+      "label_es": "Potencia de Fuego Absoluta",
+      "label_en": "Absolute Firepower Rating",
+      "desc_es": "Evaluación de daño destructivo de las baterías principales y cañones de partículas."
+    },
+    "armor": {
+      "value": 98,
+      "label_es": "Resistencia Estructural y Blindaje",
+      "label_en": "Structural Hull Resilience",
+      "desc_es": "Capacidad de absorción de daño en blindaje C.D.M. y barreras energéticas."
+    },
+    "capacity": {
+      "value": 96,
+      "label_es": "Capacidad de Hangar y Tropas",
+      "label_en": "Hangar & Troop Capacity",
+      "desc_es": "Almacén para escuadrones Veritech, batallones de Destroids y personal."
+    },
+    "range": {
+      "value": 92,
+      "label_es": "Alcance Operativo y Autonomía",
+      "label_en": "Operational Range & Endurance",
+      "desc_es": "Autonomía de navegación estelar y alcance de tiro balístico."
+    }
+  },
+  "weapons": [
+    {
+      "name_es": "Cañón Principal de Haz Robotech (Disparo de Arco)",
+      "name_en": "Main Robotech Particle Beam Cannon (Spanning Bow)",
+      "damage": "Destrucción Masiva de Flotas / Desintegración Molecular",
+      "range": "120.000 km",
+      "desc_es": "Arma suprema de la nave. Requiere la apertura en 'V' de las dos secciones frontales para liberar una descarga colosal de energía.",
+      "desc_en": "Arma suprema de la nave. Requiere la apertura en 'V' de las dos secciones frontales para liberar una descarga colosal de energía."
+    },
+    {
+      "name_es": "8 Cañones de Riel Triples de 178 mm",
+      "name_en": "8 Triple 178mm Heavy Railgun Batteries",
+      "damage": "3.500 C.D.M. por andanada",
+      "range": "500 km",
+      "desc_es": "Baterías pesadas de artillería electromagnética montadas a lo largo de las bandas del casco para defensa de medio y largo alcance.",
+      "desc_en": "Baterías pesadas de artillería electromagnética montadas a lo largo de las bandas del casco para defensa de medio y largo alcance."
+    },
+    {
+      "name_es": "16 Torretas Láser Binarias de Haz Concentrado",
+      "name_en": "16 Twin Beam Secondary Laser Turrets",
+      "damage": "1.200 C.D.M. por disparo",
+      "range": "200 km",
+      "desc_es": "Armamento defensivo de respuesta rápida contra destructores y cazas enemigos.",
+      "desc_en": "Armamento defensivo de respuesta rápida contra destructores y cazas enemigos."
+    },
+    {
+      "name_es": "Baterías de Misiles Espaciales de Fusión (1.200 Tubos)",
+      "name_en": "Spatial Fusion Missile Silo Arrays (1,200 Tubes)",
+      "damage": "Variable / Ojivas de Fusión y Saturación",
+      "range": "1.500 km",
+      "desc_es": "Lanzadores modulares capaces de generar cortinas de misiles defensivas de saturación absoluta.",
+      "desc_en": "Lanzadores modulares capaces de generar cortinas de misiles defensivas de saturación absoluta."
+    },
+    {
+      "name_es": "Maniobra Especial: Ataque Daedalus",
+      "name_en": "Special Tactic: Daedalus Attack",
+      "damage": "Aniquilación Interna Total",
+      "range": "Contacto Físico",
+      "desc_es": "El proel acorazado del Daedalus, cubierto por la Barrera Puntual, embiste el casco de la nave insignia enemiga abriendo sus compuertas para disparar todos los Destroids a quemarropa en el interior alienígena.",
+      "desc_en": "El proel acorazado del Daedalus, cubierto por la Barrera Puntual, embiste el casco de la nave insignia enemiga abriendo sus compuertas para disparar todos los Destroids a quemarropa en el interior alienígena."
+    }
+  ],
+  "internal_sections": [
+    {
+      "name_es": "Puente de Mando Principal (Command Tower)",
+      "name_en": "Main Command Bridge (Command Tower)",
+      "desc_es": "Ubicado en la alta torre dorsal de control. Alberga los puestos de pilotaje, computadoras Robotech de telemetría y el puesto supremo del Capitán Gloval y Lisa Hayes.",
+      "desc_en": "Ubicado en la alta torre dorsal de control. Alberga los puestos de pilotaje, computadoras Robotech de telemetría y el puesto supremo del Capitán Gloval y Lisa Hayes."
+    },
+    {
+      "name_es": "Macross City (Metrópolis Interior)",
+      "name_en": "Macross City (Interior Metropolis)",
+      "desc_es": "Ciudad civil completa reconstruida dentro de las bodegas inferiores del casco para albergar a los 56.000 refugiados tras el salto a Plutón, con avenidas, comercios y vida urbana.",
+      "desc_en": "Ciudad civil completa reconstruida dentro de las bodegas inferiores del casco para albergar a los 56.000 refugiados tras el salto a Plutón, con avenidas, comercios y vida urbana."
+    },
+    {
+      "name_es": "Portaaviones CVS-101 Prometheus (Brazo Izquierdo)",
+      "name_en": "CVS-101 Prometheus Carrier (Port Arm)",
+      "desc_es": "Portaaviones naval de superficie adaptado al vacío espacial acoplado permanentemente a la fortaleza. Actúa como cubierta principal de despegue y aterrizaje de los cazas Veritech.",
+      "desc_en": "Portaaviones naval de superficie adaptado al vacío espacial acoplado permanentemente a la fortaleza. Actúa como cubierta principal de despegue y aterrizaje de los cazas Veritech."
+    },
+    {
+      "name_es": "Nave de Asalto SLV-111 Daedalus (Brazo Derecho)",
+      "name_en": "SLV-111 Daedalus Assault Vessel (Starboard Arm)",
+      "desc_es": "Buque de asalto pesado adaptado como brazo derecho. En su proa alberga las divisiones de Destroids de combate pesado listas para el Ataque Daedalus.",
+      "desc_en": "Buque de asalto pesado adaptado como brazo derecho. En su proa alberga las divisiones de Destroids de combate pesado listas para el Ataque Daedalus."
+    },
+    {
+      "name_es": "Complejo de Ingeniería y Reactor de Protocultura",
+      "name_en": "Protoculture Power Core & Engineering Bays",
+      "desc_es": "El corazón de energía alienígena supervisado por el Dr. Emil Lang. Almacena las matrices selladas de Protocultura que despertaron el interés de los Maestros de la Robotech.",
+      "desc_en": "El corazón de energía alienígena supervisado por el Dr. Emil Lang. Almacena las matrices selladas de Protocultura que despertaron el interés de los Maestros de la Robotech."
+    }
+  ],
+  "lore": {
+    "overview_es": "El SDF-1 Macross (Super Dimension Fortress One) es el artefacto tecnológico más trascendental en la historia de la civilización humana y el bastión indiscutido que defendió a la Tierra durante la Primera Guerra Robotech. Originalmente una nave alienígena de combate extraterrestre (bautizada provisoriamente como ASS-1) que se estrelló en la Isla Macross en julio de 1999, motivó el fin de las guerras globales y la unificación de la Tierra bajo un gobierno único para reconstruirla e investigar la misteriosa tecnología llamada 'Robotech'. Tras una década de titánica reconstrucción bajo la dirección del Dr. Emil Lang, fue puesta en servicio en febrero de 2009 bajo el mando del veterano Capitán Henry Gloval.",
+    "overview_en": "El SDF-1 Macross (Super Dimension Fortress One) es el artefacto tecnológico más trascendental en la historia de la civilización humana y el bastión indiscutido que defendió a la Tierra durante la Primera Guerra Robotech. Originalmente una nave alienígena de combate extraterrestre (bautizada provisoriamente como ASS-1) que se estrelló en la Isla Macross en julio de 1999, motivó el fin de las guerras globales y la unificación de la Tierra bajo un gobierno único para reconstruirla e investigar la misteriosa tecnología llamada 'Robotech'. Tras una década de titánica reconstrucción bajo la dirección del Dr. Emil Lang, fue puesta en servicio en febrero de 2009 bajo el mando del veterano Capitán Henry Gloval.",
+    "tactical_analysis_es": "Durante la ceremonia de botadura, un mecanismo de seguridad automático disparó el Cañón Principal al detectar la aproximación de la armada Zentraedi de Boddole Zer. Con la Isla Macross sitiada, el Capitán Gloval ordenó un salto hiperespacial de emergencia que accidentalmente transportó la fortaleza y toda la isla hasta las inmediaciones de Plutón, destruyendo en el proceso los motores Fold. La tripulación rescató a 56.000 civiles y reconstruyó Macross City dentro de los gigantescos compartimientos de carga. A lo largo de una épica travesía de regreso de más de un año luchando en solitario contra flotas alienígenas, el SDF-1 adoptó la transformación humanoide 'Attack Mode' para canalizar la energía del Cañón Principal y ejecutó tácticas legendarias como el 'Ataque Daedalus' y la 'Operación Minmei', culminando en la defensa final y victoria orbital sobre la armada de 4 millones de naves Zentraedi.",
+    "tactical_analysis_en": "Durante la ceremonia de botadura, un mecanismo de seguridad automático disparó el Cañón Principal al detectar la aproximación de la armada Zentraedi de Boddole Zer. Con la Isla Macross sitiada, el Capitán Gloval ordenó un salto hiperespacial de emergencia que accidentalmente transportó la fortaleza y toda la isla hasta las inmediaciones de Plutón, destruyendo en el proceso los motores Fold. La tripulación rescató a 56.000 civiles y reconstruyó Macross City dentro de los gigantescos compartimientos de carga. A lo largo de una épica travesía de regreso de más de un año luchando en solitario contra flotas alienígenas, el SDF-1 adoptó la transformación humanoide 'Attack Mode' para canalizar la energía del Cañón Principal y ejecutó tácticas legendarias como el 'Ataque Daedalus' y la 'Operación Minmei', culminando en la defensa final y victoria orbital sobre la armada de 4 millones de naves Zentraedi."
+  },
+  "summary": {
+    "es": "El SDF-1 Macross (Super Dimension Fortress One) es el artefacto tecnológico más trascendental en la historia de la civilización humana y el bastión indiscutido ...",
+    "en": "The SDF-1 Macross (Super Dimension Fortress One) is the single most pivotal technological creation in human history and the fortress that saved Earth during the..."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/SDF-1/d5647d5221a5d1da67395c5488c0e7d3.jpg",
+      "title_es": "SDF-1 en Órbita Terrestre - Modo Crucero con Escoltas",
+      "title_en": "SDF-1 in Earth Orbit - Cruiser Mode with Escort Wing",
+      "type_es": "Pintura Oficial",
+      "type_en": "Official Art"
+    },
+    {
+      "url": "assets/images/naves/SDF-1/b5dfd69b7c4162e32ee76112044fdb3d.jpg",
+      "title_es": "Perfil Táctico Horizontal - Modo Crucero de Batalla",
+      "title_en": "Horizontal Tactical Profile - Battle Cruiser Mode",
+      "type_es": "Diseño Esquemático",
+      "type_en": "Schematic Design"
+    },
+    {
+      "url": "assets/images/naves/SDF-1/1b28a79cdd4adc2c5096ee9b3d7eaa26.jpg",
+      "title_es": "SDF-1 en Modo Ataque Humanoide - Vista Lateral",
+      "title_en": "SDF-1 in Humanoid Attack Mode - Side Profile",
+      "type_es": "Render de Estudio",
+      "type_en": "Studio Render"
+    },
+    {
+      "url": "assets/images/naves/SDF-1/229cd357524ca4c9c5aaa1e938a5fa3e.jpg",
+      "title_es": "Configuración de Ataque Frontal - Despliegue de Cañón Principal",
+      "title_en": "Frontal Attack Stance - Main Gun Deployment",
+      "type_es": "Pintura Oficial",
+      "type_en": "Official Art"
+    },
+    {
+      "url": "assets/images/naves/SDF-1/06c32862d9091a1ab7ebb73227604c77.jpg",
+      "title_es": "Esquema Técnico de Transformación - Brazos Prometheus y Daedalus",
+      "title_en": "Transformation Lineart - Prometheus & Daedalus Arms",
+      "type_es": "Pintura Oficial",
+      "type_en": "Official Art"
+    },
+    {
+      "url": "assets/images/naves/SDF-1/86efcb77a308b8e5ab0fe42c4a7885e3.jpg",
+      "title_es": "Sección Posterior de Popa - Propulsores Sub-Luz y Bloques Motores",
+      "title_en": "Aft Stern Section - Sub-light Thrusters & Engine Blocks",
+      "type_es": "Pintura Oficial",
+      "type_en": "Official Art"
+    },
+    {
+      "url": "assets/images/naves/SDF-1/d2d78d1f2476161da198ec8a3ae7220a.jpg",
+      "title_es": "Torre y Puente de Mando en Espacio Profundo",
+      "title_en": "Command Bridge Tower in Deep Space",
+      "type_es": "Arte Conceptual",
+      "type_en": "Concept Art"
+    },
+    {
+      "url": "assets/images/naves/SDF-1/0b16871d63b87cf4729007c78a5141ef.jpg",
+      "title_es": "Boceto de Producción - Puente de Mando y Cubierta de Vuelo",
+      "title_en": "Production Sketch - Command Bridge & Flight Deck",
+      "type_es": "Pintura Oficial",
+      "type_en": "Official Art"
+    },
+    {
+      "url": "assets/images/naves/SDF-1/ffb39ea52ea9b390e4724c28f20ec9f8.jpg",
+      "title_es": "SDF-1 Anclado en el Lago de New Macross City (Reconstrucción)",
+      "title_en": "SDF-1 Anchored in New Macross City Lake (Reconstruction)",
+      "type_es": "Pintura Oficial",
+      "type_en": "Official Art"
+    },
+    {
+      "url": "assets/images/naves/SDF-1/60d176861ca3aba0c4e07a0cc2e086eb.jpg",
+      "title_es": "Emblema Conmemorativo - Fortaleza Superdimensional SDF-1",
+      "title_en": "Commemorative Insignia - Super Dimensional Fortress SDF-1",
+      "type_es": "Pintura Oficial",
+      "type_en": "Official Art"
+    }
+  ]
+}

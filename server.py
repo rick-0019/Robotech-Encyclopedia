@@ -38,6 +38,8 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
             self.handle_save()
         elif self.path == '/api/save-character':
             self.handle_save_character()
+        elif self.path == '/api/save-ship':
+            self.handle_save_ship()
         elif self.path == '/api/git-push':
             self.handle_git_push()
         elif self.path == '/api/upload-image':
@@ -208,6 +210,85 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
         }
         self.send_json_response(200, response)
 
+    def handle_save_ship(self):
+        try:
+            content_length = int(self.headers.get('Content-Length', 0))
+            body = self.rfile.read(content_length).decode('utf-8')
+            payload = json.loads(body)
+            self.save_ship_data(payload)
+        except Exception as e:
+            self.send_json_response(500, {"success": False, "error": str(e)})
+
+    def save_ship_data(self, payload):
+        ship = payload.get('ship')
+        if not ship or not ship.get('id'):
+            raise ValueError("Datos de nave capital o ID faltante")
+
+        ship_id = ship['id']
+
+        # 1. Guardar data/naves/{id}.json
+        naves_dir = os.path.join(BASE_DIR, 'data', 'naves')
+        os.makedirs(naves_dir, exist_ok=True)
+        ship_file = os.path.join(naves_dir, f"{ship_id}.json")
+        with open(ship_file, 'w', encoding='utf-8') as f:
+            json.dump(ship, f, indent=2, ensure_ascii=False)
+
+        # 2. Actualizar data/manifest_naves.json
+        manifest_file = os.path.join(BASE_DIR, 'data', 'manifest_naves.json')
+        manifest_data = {}
+        if os.path.exists(manifest_file):
+            with open(manifest_file, 'r', encoding='utf-8') as f:
+                manifest_data = json.load(f)
+
+        if 'ships' not in manifest_data:
+            manifest_data['ships'] = []
+
+        stats_obj = ship.get('stats', {})
+        summary_item = {
+            "id": ship["id"],
+            "name": ship["name"],
+            "class_name": ship.get("class_name", {}),
+            "category": ship.get("category", "fortress"),
+            "faction": ship.get("faction", {}),
+            "faction_logo": ship.get("faction_logo", "assets/images/ui/logo_UNSpacy.png"),
+            "assignment": ship.get("assignment", {}),
+            "series": ship.get("series", {}),
+            "thumbnail": ship.get("thumbnail", ""),
+            "summary": {
+                "es": (ship.get("summary", {}).get("es") or ship.get("lore", {}).get("overview_es") or "")[:160] + ("..." if len(ship.get("summary", {}).get("es") or "") > 160 else ""),
+                "en": (ship.get("summary", {}).get("en") or ship.get("lore", {}).get("overview_en") or "")[:160] + ("..." if len(ship.get("summary", {}).get("en") or "") > 160 else "")
+            },
+            "stats": {
+                "firepower": stats_obj.get("firepower", 95),
+                "armor": stats_obj.get("armor", 95),
+                "capacity": stats_obj.get("capacity", 90),
+                "range": stats_obj.get("range", 90)
+            },
+            "is_modular": ship.get("is_modular", False),
+            "dataFile": f"data/naves/{ship_id}.json"
+        }
+
+        idx = -1
+        for i, s in enumerate(manifest_data['ships']):
+            if s.get('id') == ship_id:
+                idx = i
+                break
+
+        if idx >= 0:
+            manifest_data['ships'][idx] = summary_item
+        else:
+            manifest_data['ships'].append(summary_item)
+
+        with open(manifest_file, 'w', encoding='utf-8') as f:
+            json.dump(manifest_data, f, indent=2, ensure_ascii=False)
+
+        response = {
+            "success": True,
+            "message": f"Nave '{ship['name']}' y manifest_naves.json guardados directamente en el disco.",
+            "ship_file": f"data/naves/{ship_id}.json"
+        }
+        self.send_json_response(200, response)
+
     def handle_save(self):
         try:
             content_length = int(self.headers.get('Content-Length', 0))
@@ -216,6 +297,10 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
 
             if payload.get('character'):
                 self.save_character_data(payload)
+                return
+
+            if payload.get('ship'):
+                self.save_ship_data(payload)
                 return
 
             mecha = payload.get('mecha')

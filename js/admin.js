@@ -10,17 +10,30 @@ let currentTaxonomies = null;
 let currentTaxModalType = null;
 let currentCharManifest = null;
 let currentCharData = null;
+let currentShipManifest = null;
+let currentShipData = null;
 let activeAdminModule = 'mechas';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const params = new URLSearchParams(window.location.search);
   const modParam = params.get('module') || params.get('section') || 'mechas';
-  activeAdminModule = (modParam === 'personajes' || modParam === 'characters' || modParam === 'personaje') ? 'characters' : 'mechas';
+  if (modParam === 'personajes' || modParam === 'characters' || modParam === 'personaje') {
+    activeAdminModule = 'characters';
+  } else if (modParam === 'naves' || modParam === 'ships' || modParam === 'nave' || modParam === 'flota') {
+    activeAdminModule = 'ships';
+  } else {
+    activeAdminModule = 'mechas';
+  }
 
   setupModuleView(activeAdminModule);
   await loadTaxonomies();
 
-  if (activeAdminModule === 'characters') {
+  if (activeAdminModule === 'ships') {
+    await loadAdminShipManifest();
+    setupShipEventListeners();
+    setupShipExportButtons();
+    updateLiveShipPreview();
+  } else if (activeAdminModule === 'characters') {
     await loadAdminCharManifest();
     setupCharEventListeners();
     setupCharExportButtons();
@@ -1208,20 +1221,25 @@ window.selectAsset = function(path) {
           updateFactionLogoPreview();
         } else if (currentAssetTarget === 'c_faction_logo') {
           updateCharFactionLogoPreview();
+        } else if (currentAssetTarget === 's_faction_logo') {
+          updateShipFactionLogoPreview();
         } else if (currentAssetTarget.startsWith('m_mode_')) {
           const mode = currentAssetTarget.replace('m_mode_', '').replace('_img', '');
           updateModePreview(mode);
         }
         updateLivePreview();
         updateLiveCharPreview();
+        updateLiveShipPreview();
       }
     }
   } else if (currentAssetTarget && typeof currentAssetTarget === 'object' && currentAssetTarget.tagName === 'INPUT') {
     currentAssetTarget.value = path;
     if (typeof syncCharRowThumb === 'function') syncCharRowThumb(currentAssetTarget);
+    if (typeof syncShipRowThumb === 'function') syncShipRowThumb(currentAssetTarget);
     if (typeof syncRowThumb === 'function') syncRowThumb(currentAssetTarget);
     updateLivePreview();
     updateLiveCharPreview();
+    updateLiveShipPreview();
   }
 
   window.tacticalAudio?.scan();
@@ -1242,9 +1260,12 @@ window.handleNativeFileSelected = async function(event) {
   const selectedFolder = document.getElementById('asset-folder-filter')?.value;
   const mechaId = document.getElementById('m_id')?.value?.trim();
   const charId = document.getElementById('c_id')?.value?.trim();
+  const shipId = document.getElementById('s_id')?.value?.trim();
   let folder = 'uploads';
   if (selectedFolder && selectedFolder !== 'all') {
     folder = selectedFolder;
+  } else if (activeAdminModule === 'ships' && shipId) {
+    folder = `naves/${shipId}`;
   } else if (activeAdminModule === 'characters' && charId) {
     folder = `personajes/${charId}`;
   } else if (mechaId) {
@@ -1301,23 +1322,39 @@ function setupModuleView(moduleName) {
   activeAdminModule = moduleName;
   const layoutMechas = document.getElementById('admin-layout-mechas');
   const layoutChars = document.getElementById('admin-layout-characters');
+  const layoutShips = document.getElementById('admin-layout-ships');
   const topMechas = document.getElementById('top-mechas-controls');
   const topChars = document.getElementById('top-characters-controls');
+  const topShips = document.getElementById('top-ships-controls');
   const titleBadge = document.getElementById('admin-title-badge');
   const subtitle = document.getElementById('admin-subtitle');
 
-  if (moduleName === 'characters') {
+  if (moduleName === 'ships') {
+    if (layoutMechas) layoutMechas.style.display = 'none';
+    if (layoutChars) layoutChars.style.display = 'none';
+    if (layoutShips) layoutShips.style.display = 'grid';
+    if (topMechas) topMechas.style.display = 'none';
+    if (topChars) topChars.style.display = 'none';
+    if (topShips) topShips.style.display = 'flex';
+    if (titleBadge) titleBadge.textContent = 'REGISTRO // NAVES CAPITALES';
+    if (subtitle) subtitle.textContent = 'GESTIÓN CRUD DE FORTALEZAS Y FLOTAS DE COMBATE SDF';
+    document.title = 'Robotech Admin Studio // Naves Capitales';
+  } else if (moduleName === 'characters') {
     if (layoutMechas) layoutMechas.style.display = 'none';
     if (layoutChars) layoutChars.style.display = 'grid';
+    if (layoutShips) layoutShips.style.display = 'none';
     if (topMechas) topMechas.style.display = 'none';
     if (topChars) topChars.style.display = 'flex';
+    if (topShips) topShips.style.display = 'none';
     if (titleBadge) titleBadge.textContent = 'EXPEDIENTES // PERSONAJES';
     if (subtitle) subtitle.textContent = 'GESTIÓN CRUD DE PERSONAJES Y ASES MILITARES SDF-1';
     document.title = 'Robotech Admin Studio // Personajes';
   } else {
     if (layoutChars) layoutChars.style.display = 'none';
+    if (layoutShips) layoutShips.style.display = 'none';
     if (layoutMechas) layoutMechas.style.display = 'grid';
     if (topChars) topChars.style.display = 'none';
+    if (topShips) topShips.style.display = 'none';
     if (topMechas) topMechas.style.display = 'flex';
     if (titleBadge) titleBadge.textContent = 'CODEX // MECHAS';
     if (subtitle) subtitle.textContent = 'GESTIÓN CRUD DE MECHAS Y VEHÍCULOS DE COMBATE';
@@ -1327,7 +1364,10 @@ function setupModuleView(moduleName) {
 
 window.switchAdminModule = function(moduleName) {
   setupModuleView(moduleName);
-  if (moduleName === 'characters') {
+  if (moduleName === 'ships') {
+    if (!currentShipManifest) loadAdminShipManifest();
+    updateLiveShipPreview();
+  } else if (moduleName === 'characters') {
     if (!currentCharManifest) loadAdminCharManifest();
     updateLiveCharPreview();
   } else {
@@ -2108,5 +2148,782 @@ window.addGalleryRow = addGalleryRow;
 window.updateLivePreview = updateLivePreview;
 window.updateLiveCharPreview = updateLiveCharPreview;
 window.updateFactionLogoPreview = updateFactionLogoPreview;
+
+// ==========================================================================
+// 6. GESTIÓN DEL MÓDULO DE NAVES CAPITALES (CRUD COMPLETO)
+// ==========================================================================
+
+async function loadAdminShipManifest() {
+  try {
+    const res = await fetch(`data/manifest_naves.json?_t=${Date.now()}`, { cache: 'no-store' });
+    if (!res.ok) throw new Error("Could not load manifest_naves.json");
+    currentShipManifest = await res.json();
+    populateShipSelect();
+  } catch (err) {
+    console.error("Error loading ships manifest in admin:", err);
+  }
+}
+
+function populateShipSelect() {
+  const select = document.getElementById('select-ship-to-edit');
+  if (!select || !currentShipManifest) return;
+
+  select.innerHTML = '<option value="">-- SELECCIONAR NAVE EXISTENTE --</option>';
+  (currentShipManifest.ships || []).forEach(s => {
+    const opt = document.createElement('option');
+    opt.value = s.id;
+    opt.textContent = `${s.name} (${s.class_name?.es || s.category || s.id})`;
+    select.appendChild(opt);
+  });
+
+  select.onchange = async (e) => {
+    const id = e.target.value;
+    if (id) {
+      await loadShipIntoForm(id);
+    } else {
+      initNewShip();
+    }
+  };
+
+  const btnNew = document.getElementById('btn-new-ship');
+  if (btnNew) {
+    btnNew.onclick = () => {
+      initNewShip();
+      select.value = '';
+    };
+  }
+
+  // Preseleccionar primera nave (ej: SDF-1 Macross)
+  if (select.options.length > 1 && !currentShipData) {
+    select.selectedIndex = 1;
+    loadShipIntoForm(select.value);
+  }
+}
+
+async function loadShipIntoForm(id) {
+  try {
+    const res = await fetch(`data/naves/${id}.json?_t=${Date.now()}`, { cache: 'no-store' });
+    if (!res.ok) throw new Error(`Could not load ship data for ${id}`);
+    const data = await res.json();
+    currentShipData = data;
+
+    // 1. Identificación y Mando
+    const setVal = (elemId, val) => { const el = document.getElementById(elemId); if (el) el.value = val || ''; };
+    setVal('s_id', data.id);
+    setVal('s_name', data.name);
+    setVal('s_category', data.category || 'fortress');
+    setVal('s_class_name_es', data.class_name?.es);
+    setVal('s_class_name_en', data.class_name?.en);
+    setVal('s_series_select', data.series?.es || 'La Saga Macross (Primera Guerra Robotech)');
+    setVal('s_faction_select', data.faction?.es || 'U.N. Spacy // Tierra Unificada');
+    setVal('s_faction_logo', data.faction_logo || 'assets/images/ui/logo_UNSpacy.png');
+    updateShipFactionLogoPreview();
+    setVal('s_thumbnail', data.thumbnail);
+    setVal('s_commissioned', data.commissioned);
+    setVal('s_command_es', data.commanding_officer?.es);
+    setVal('s_complement_es', data.complement?.es);
+    setVal('s_airgroup_es', data.air_group?.es);
+    setVal('s_docked_es', data.docked_vessels?.es);
+
+    // 2. Modos Modulares
+    const chkMod = document.getElementById('s_is_modular');
+    if (chkMod) chkMod.checked = !!data.is_modular;
+    toggleShipModularSection(!!data.is_modular);
+
+    const cr = data.modes?.cruiser || {};
+    setVal('s_mode_cruiser_name_es', cr.name_es || 'Modo Crucero de Batalla Aeroespacial');
+    setVal('s_mode_cruiser_name_en', cr.name_en || 'Aerospace Battle Cruiser Mode');
+    setVal('s_mode_cruiser_img', cr.image || '');
+    setVal('s_mode_cruiser_length', cr.length || '1.210 m');
+    setVal('s_mode_cruiser_width', cr.width || '496 m');
+    setVal('s_mode_cruiser_height', cr.height || '312 m');
+    setVal('s_mode_cruiser_desc_es', cr.desc_es || '');
+
+    const at = data.modes?.attack || {};
+    setVal('s_mode_attack_name_es', at.name_es || 'Modo Ataque Humanoide (Attack Mode / Stormer)');
+    setVal('s_mode_attack_name_en', at.name_en || 'Humanoid Attack Mode (Stormer)');
+    setVal('s_mode_attack_img', at.image || '');
+    setVal('s_mode_attack_height', at.height || '1.200 m');
+    setVal('s_mode_attack_width', at.width || '600 m');
+    setVal('s_mode_attack_length', at.length || '1.200 m');
+    setVal('s_mode_attack_desc_es', at.desc_es || '');
+
+    // 3. Dimensiones y Propulsión
+    setVal('s_dim_length', data.dimensions?.length || '1.210 m');
+    setVal('s_dim_width', data.dimensions?.width || '496 m');
+    setVal('s_dim_height', data.dimensions?.height || '312 m');
+    setVal('s_dim_mass', data.dimensions?.mass || '18.000.000 toneladas');
+    setVal('s_prop_engines_es', data.propulsion?.engines_es || '');
+    setVal('s_prop_fold_es', data.propulsion?.fold_system_es || '');
+    setVal('s_def_armor_es', data.defenses?.armor_es || '');
+    setVal('s_def_shields_es', data.defenses?.shields_es || '');
+
+    // 4. Estadísticas
+    setVal('s_stat_firepower', data.stats?.firepower || 100);
+    setVal('s_stat_armor', data.stats?.armor || 98);
+    setVal('s_stat_capacity', data.stats?.capacity || 96);
+    setVal('s_stat_range', data.stats?.range || 92);
+
+    // 5. Resumen e Historia
+    setVal('s_summary_es', data.summary?.es || (data.lore?.overview_es ? data.lore.overview_es.substring(0, 160) + '...' : ''));
+    setVal('s_summary_en', data.summary?.en || (data.lore?.overview_en ? data.lore.overview_en.substring(0, 160) + '...' : ''));
+    setVal('s_overview_es', data.lore?.overview_es || '');
+    setVal('s_tactical_es', data.lore?.tactical_analysis_es || '');
+
+    // 6. Armamento
+    const wContainer = document.getElementById('ship-weapons-container');
+    if (wContainer) {
+      wContainer.innerHTML = '';
+      (data.weapons || []).forEach(w => addShipWeaponRow(w));
+    }
+
+    // 7. Secciones Internas
+    const secContainer = document.getElementById('ship-sections-container');
+    if (secContainer) {
+      secContainer.innerHTML = '';
+      (data.internal_sections || []).forEach(sec => addShipSectionRow(sec));
+    }
+
+    // 8. Galería
+    const galContainer = document.getElementById('ship-gallery-container');
+    if (galContainer) {
+      galContainer.innerHTML = '';
+      (data.images || []).forEach(img => addShipGalleryRow(img));
+    }
+
+    updateLiveShipPreview();
+  } catch (err) {
+    console.error("Error loading ship into form:", err);
+  }
+}
+
+function initNewShip() {
+  currentShipData = null;
+  const form = document.getElementById('crud-form-ship');
+  if (form) form.reset();
+
+  const setVal = (id, val) => { const el = document.getElementById(id); if (el) el.value = val; };
+  setVal('s_id', 'nueva_nave');
+  setVal('s_name', 'Nueva Nave Capital');
+  setVal('s_category', 'fortress');
+  setVal('s_class_name_es', 'Crucero Estelar Pesado');
+  setVal('s_class_name_en', 'Heavy Space Cruiser');
+  setVal('s_series_select', 'La Saga Macross (Primera Guerra Robotech)');
+  setVal('s_faction_select', 'U.N. Spacy // Tierra Unificada');
+  setVal('s_faction_logo', 'assets/images/ui/logo_UNSpacy.png');
+  updateShipFactionLogoPreview();
+  setVal('s_thumbnail', 'assets/images/ui/logo_UNSpacy.png');
+  setVal('s_commissioned', '2010');
+  setVal('s_command_es', 'Comandante en Jefe');
+  setVal('s_complement_es', 'Tripulación Militar: ~5.000');
+  setVal('s_airgroup_es', '60 Cazas Veritech');
+  setVal('s_docked_es', 'Lanzaderas auxiliares');
+
+  const chkMod = document.getElementById('s_is_modular');
+  if (chkMod) chkMod.checked = false;
+  toggleShipModularSection(false);
+
+  setVal('s_dim_length', '600 m');
+  setVal('s_dim_width', '250 m');
+  setVal('s_dim_height', '180 m');
+  setVal('s_dim_mass', '4.000.000 toneladas');
+  setVal('s_prop_engines_es', 'Reactores Termonucleares Robotech');
+  setVal('s_prop_fold_es', 'Generador Fold Estándar');
+  setVal('s_def_armor_es', 'Casco Blindado C.D.M.');
+  setVal('s_def_shields_es', 'Barrera Puntual Defensiva');
+
+  setVal('s_stat_firepower', 90);
+  setVal('s_stat_armor', 90);
+  setVal('s_stat_capacity', 85);
+  setVal('s_stat_range', 90);
+
+  setVal('s_summary_es', '');
+  setVal('s_summary_en', '');
+  setVal('s_overview_es', '');
+  setVal('s_tactical_es', '');
+
+  const wContainer = document.getElementById('ship-weapons-container');
+  if (wContainer) {
+    wContainer.innerHTML = '';
+    addShipWeaponRow({ name_es: 'Baterías de Cañones Láser Pesados', damage: '2.000 C.D.M.', range: '500 km', desc_es: 'Defensa primaria de superficie.' });
+  }
+
+  const secContainer = document.getElementById('ship-sections-container');
+  if (secContainer) {
+    secContainer.innerHTML = '';
+    addShipSectionRow({ name_es: 'Puente de Mando', desc_es: 'Centro de control táctico y comunicaciones.' });
+  }
+
+  const galContainer = document.getElementById('ship-gallery-container');
+  if (galContainer) {
+    galContainer.innerHTML = '';
+    addShipGalleryRow({ url: 'assets/images/ui/logo_UNSpacy.png', title_es: 'Perfil Táctico', title_en: 'Tactical Profile', type_es: 'Diseño Esquemático', type_en: 'Schematic Design' });
+  }
+
+  updateLiveShipPreview();
+}
+
+window.toggleShipModularSection = function(checked) {
+  const container = document.getElementById('ship-modes-container');
+  if (container) {
+    container.style.display = checked ? 'block' : 'none';
+  }
+};
+
+window.updateShipFactionFromSelect = function() {
+  const sel = document.getElementById('s_faction_select');
+  const logoInput = document.getElementById('s_faction_logo');
+  if (!sel || !logoInput) return;
+  const opt = sel.options[sel.selectedIndex];
+  if (opt && opt.dataset.logo) {
+    logoInput.value = opt.dataset.logo;
+    updateShipFactionLogoPreview();
+  }
+  updateLiveShipPreview();
+};
+
+window.updateShipFactionLogoPreview = function() {
+  const input = document.getElementById('s_faction_logo');
+  const preview = document.getElementById('ship_faction_logo_preview');
+  if (input && preview) {
+    preview.src = input.value.trim() || 'assets/images/ui/logo_UNSpacy.png';
+  }
+};
+
+window.addShipWeaponRow = function(data = {}) {
+  const container = document.getElementById('ship-weapons-container');
+  if (!container) return;
+  const div = document.createElement('div');
+  div.className = 'dyn-list-item';
+  div.innerHTML = `
+    <button type="button" class="dyn-list-remove" onclick="this.closest('.dyn-list-item').remove();" title="Eliminar arma">✕</button>
+    <div class="form-grid-2">
+      <div class="form-group">
+        <label>Nombre del Sistema (Español)</label>
+        <input type="text" class="form-input shp-wpn-es" placeholder="ej: Cañón Principal de Haz Robotech" value="${data.name_es || ''}">
+      </div>
+      <div class="form-group">
+        <label>Nombre del Sistema (English)</label>
+        <input type="text" class="form-input shp-wpn-en" placeholder="ej: Main Particle Beam Cannon" value="${data.name_en || ''}">
+      </div>
+    </div>
+    <div class="form-grid-2">
+      <div class="form-group">
+        <label>Daño Estimado (C.D.M. o Efecto)</label>
+        <input type="text" class="form-input shp-wpn-dmg" placeholder="ej: Destrucción Masiva / 3.500 C.D.M." value="${data.damage || ''}">
+      </div>
+      <div class="form-group">
+        <label>Alcance Efectivo</label>
+        <input type="text" class="form-input shp-wpn-rng" placeholder="ej: 120.000 km" value="${data.range || ''}">
+      </div>
+    </div>
+    <div class="form-group" style="margin-bottom:0;">
+      <label>Descripción del Arma (Español)</label>
+      <textarea class="form-textarea shp-wpn-desc-es" style="min-height:50px;" placeholder="Detalles de disparo, recarga y ángulo de cobertura...">${data.desc_es || ''}</textarea>
+    </div>
+  `;
+  container.appendChild(div);
+};
+
+window.addShipSectionRow = function(data = {}) {
+  const container = document.getElementById('ship-sections-container');
+  if (!container) return;
+  const div = document.createElement('div');
+  div.className = 'dyn-list-item';
+  div.innerHTML = `
+    <button type="button" class="dyn-list-remove" onclick="this.closest('.dyn-list-item').remove();" title="Eliminar sección">✕</button>
+    <div class="form-grid-2">
+      <div class="form-group">
+        <label>Nombre de la Sección (Español)</label>
+        <input type="text" class="form-input shp-sec-es" placeholder="ej: Macross City (Metrópolis Interior)" value="${data.name_es || ''}">
+      </div>
+      <div class="form-group">
+        <label>Nombre de la Sección (English)</label>
+        <input type="text" class="form-input shp-sec-en" placeholder="ej: Macross City (Interior Metropolis)" value="${data.name_en || ''}">
+      </div>
+    </div>
+    <div class="form-group" style="margin-bottom:0;">
+      <label>Descripción Operativa (Español)</label>
+      <textarea class="form-textarea shp-sec-desc-es" style="min-height:50px;" placeholder="Ubicación, funciones y características de la sección...">${data.desc_es || ''}</textarea>
+    </div>
+  `;
+  container.appendChild(div);
+};
+
+window.addShipGalleryRow = function(data = {}) {
+  const container = document.getElementById('ship-gallery-container');
+  if (!container) return;
+  const thumbUrl = data.url || 'assets/images/ui/logo_UNSpacy.png';
+  const isCover = document.getElementById('s_thumbnail')?.value === thumbUrl;
+  const div = document.createElement('div');
+  div.className = 'gallery-admin-row';
+  div.innerHTML = `
+    <img src="${thumbUrl}" class="gallery-admin-thumb" alt="Preview" onerror="this.src='assets/images/ui/logo_UNSpacy.png'">
+    <div style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+      <div style="display: flex; gap: 8px;">
+        <input type="text" class="form-input gal-ship-url" placeholder="assets/images/naves/... o URL" value="${data.url || ''}" oninput="syncShipRowThumb(this); updateLiveShipPreview();">
+        <button type="button" class="btn-action-secondary" onclick="openAssetBrowserForShipGalleryRow(this)" style="padding: 4px 10px; font-size: 0.72rem; white-space: nowrap;">
+          📁 ELEGIR
+        </button>
+      </div>
+      <div class="form-grid-3" style="gap: 6px;">
+        <input type="text" class="form-input gal-ship-title-es" placeholder="Título foto (Español)" value="${data.title_es || ''}">
+        <input type="text" class="form-input gal-ship-title-en" placeholder="Title (English)" value="${data.title_en || ''}">
+        <select class="form-select gal-ship-type-es">
+          <option value="Pintura Oficial" ${data.type_es === 'Pintura Oficial' ? 'selected' : ''}>Pintura Oficial</option>
+          <option value="Diseño Esquemático" ${data.type_es === 'Diseño Esquemático' ? 'selected' : ''}>Diseño Esquemático</option>
+          <option value="Render de Estudio" ${data.type_es === 'Render de Estudio' ? 'selected' : ''}>Render de Estudio</option>
+          <option value="Lineart Estructural" ${data.type_es === 'Lineart Estructural' ? 'selected' : ''}>Lineart Estructural</option>
+          <option value="Vista Dorsal / Popa" ${data.type_es === 'Vista Dorsal / Popa' ? 'selected' : ''}>Vista Dorsal / Popa</option>
+          <option value="Torre de Mando" ${data.type_es === 'Torre de Mando' ? 'selected' : ''}>Torre de Mando</option>
+          <option value="Arte Conceptual" ${data.type_es === 'Arte Conceptual' ? 'selected' : ''}>Arte Conceptual</option>
+          <option value="Emblema / Insignia" ${data.type_es === 'Emblema / Insignia' ? 'selected' : ''}>Emblema / Insignia</option>
+        </select>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px; align-items: flex-end;">
+      <button type="button" class="btn-set-cover ${isCover ? 'active' : ''}" onclick="setAsShipThumbnail(this)">
+        ${isCover ? '★ PORTADA ACTUAL' : '☆ HACER PORTADA'}
+      </button>
+      <button type="button" class="dyn-list-remove" style="position: static;" onclick="this.closest('.gallery-admin-row').remove(); updateLiveShipPreview();">✕</button>
+    </div>
+  `;
+  container.appendChild(div);
+};
+
+window.setAsShipThumbnail = function(btn) {
+  const row = btn.closest('.gallery-admin-row');
+  const urlInp = row ? row.querySelector('.gal-ship-url') : null;
+  if (!urlInp || !urlInp.value) return;
+
+  const thumbInput = document.getElementById('s_thumbnail');
+  if (thumbInput) thumbInput.value = urlInp.value;
+
+  document.querySelectorAll('#ship-gallery-container .btn-set-cover').forEach(b => {
+    b.classList.remove('active');
+    b.textContent = '☆ HACER PORTADA';
+  });
+  btn.classList.add('active');
+  btn.textContent = '★ PORTADA ACTUAL';
+
+  updateLiveShipPreview();
+};
+
+window.syncShipRowThumb = function(input) {
+  const row = input.closest('.gallery-admin-row');
+  const img = row?.querySelector('.gallery-admin-thumb');
+  if (img) img.src = input.value.trim() || 'assets/images/ui/logo_UNSpacy.png';
+};
+
+window.openAssetBrowserForNewShipGalleryItem = function() {
+  openAssetBrowserCallback((chosenPath) => {
+    addShipGalleryRow({
+      url: chosenPath,
+      title_es: 'Fotografía Naval',
+      title_en: 'Naval Photo',
+      type_es: 'Pintura Oficial',
+      type_en: 'Official Art'
+    });
+    updateLiveShipPreview();
+  });
+};
+
+window.openAssetBrowserForShipGalleryRow = function(btn) {
+  const row = btn.closest('.gallery-admin-row');
+  const input = row?.querySelector('.gal-ship-url');
+  if (input) {
+    openAssetBrowserCallback((chosenPath) => {
+      input.value = chosenPath;
+      syncShipRowThumb(input);
+      updateLiveShipPreview();
+    });
+  }
+};
+
+function buildCurrentShipJSON() {
+  const getVal = (id) => (document.getElementById(id)?.value || '').trim();
+  const id = getVal('s_id') || 'nueva_nave';
+  const name = getVal('s_name') || 'Nueva Nave Capital';
+  const category = getVal('s_category') || 'fortress';
+  const class_es = getVal('s_class_name_es') || 'Crucero Estelar';
+  const class_en = getVal('s_class_name_en') || 'Space Cruiser';
+  const series_es = getVal('s_series_select') || 'La Saga Macross (Primera Guerra Robotech)';
+  const faction_es = getVal('s_faction_select') || 'U.N. Spacy // Tierra Unificada';
+  const faction_logo = getVal('s_faction_logo') || 'assets/images/ui/logo_UNSpacy.png';
+  const thumbnail = getVal('s_thumbnail') || 'assets/images/ui/logo_UNSpacy.png';
+  const commissioned = getVal('s_commissioned') || 'Febrero de 2009';
+  const command_es = getVal('s_command_es') || '';
+  const complement_es = getVal('s_complement_es') || '';
+  const airgroup_es = getVal('s_airgroup_es') || '';
+  const docked_es = getVal('s_docked_es') || '';
+
+  const is_modular = document.getElementById('s_is_modular')?.checked ?? true;
+
+  const cruiserData = {
+    name_es: getVal('s_mode_cruiser_name_es') || 'Modo Crucero de Batalla Aeroespacial',
+    name_en: getVal('s_mode_cruiser_name_en') || 'Aerospace Battle Cruiser Mode',
+    image: getVal('s_mode_cruiser_img') || thumbnail,
+    length: getVal('s_mode_cruiser_length') || '1.210 m',
+    width: getVal('s_mode_cruiser_width') || '496 m',
+    height: getVal('s_mode_cruiser_height') || '312 m',
+    desc_es: getVal('s_mode_cruiser_desc_es') || '',
+    desc_en: 'Primary streamlined configuration for interplanetary cruise and orbital insertion.'
+  };
+
+  const attackData = {
+    name_es: getVal('s_mode_attack_name_es') || 'Modo Ataque Humanoide (Attack Mode / Stormer)',
+    name_en: getVal('s_mode_attack_name_en') || 'Humanoid Attack Mode (Stormer)',
+    image: getVal('s_mode_attack_img') || thumbnail,
+    length: getVal('s_mode_attack_length') || '1.200 m',
+    width: getVal('s_mode_attack_width') || '600 m',
+    height: getVal('s_mode_attack_height') || '1.200 m',
+    desc_es: getVal('s_mode_attack_desc_es') || '',
+    desc_en: 'Humanoid combat configuration where the hull articulates to bridge power conduits to the Main Gun.'
+  };
+
+  const dimensions = {
+    length: getVal('s_dim_length') || '1.210 m',
+    width: getVal('s_dim_width') || '496 m',
+    height: getVal('s_dim_height') || '312 m',
+    mass: getVal('s_dim_mass') || '18.000.000 toneladas'
+  };
+
+  const propulsion = {
+    engines_es: getVal('s_prop_engines_es') || 'Motores Termonucleares Robotech',
+    engines_en: 'Robotech Thermonuclear Engines',
+    fold_system_es: getVal('s_prop_fold_es') || 'Generador Hiperespacial Fold Drive',
+    fold_system_en: 'Robotech Space Fold Drive Generator'
+  };
+
+  const defenses = {
+    armor_es: getVal('s_def_armor_es') || 'Superaleación Blindada Robotech',
+    armor_en: 'Robotech High-Density Superalloy Hull',
+    shields_es: getVal('s_def_shields_es') || 'Sistema de Barrera Puntual',
+    shields_en: 'Pin-Point Barrier System (PPB)'
+  };
+
+  const fpVal = parseInt(getVal('s_stat_firepower')) || 100;
+  const armVal = parseInt(getVal('s_stat_armor')) || 98;
+  const capVal = parseInt(getVal('s_stat_capacity')) || 96;
+  const rngVal = parseInt(getVal('s_stat_range')) || 92;
+
+  const summary_es = getVal('s_summary_es');
+  const summary_en = getVal('s_summary_en') || summary_es;
+  const overview_es = getVal('s_overview_es');
+  const tactical_es = getVal('s_tactical_es');
+
+  // Armamento
+  const weaponsList = [];
+  document.querySelectorAll('#ship-weapons-container .dyn-list-item').forEach(item => {
+    const wNameEs = item.querySelector('.shp-wpn-es')?.value.trim();
+    if (wNameEs) {
+      weaponsList.push({
+        name_es: wNameEs,
+        name_en: item.querySelector('.shp-wpn-en')?.value.trim() || wNameEs,
+        damage: item.querySelector('.shp-wpn-dmg')?.value.trim() || 'Variable',
+        range: item.querySelector('.shp-wpn-rng')?.value.trim() || 'Variable',
+        desc_es: item.querySelector('.shp-wpn-desc-es')?.value.trim() || '',
+        desc_en: item.querySelector('.shp-wpn-desc-es')?.value.trim() || ''
+      });
+    }
+  });
+
+  // Secciones
+  const sectionsList = [];
+  document.querySelectorAll('#ship-sections-container .dyn-list-item').forEach(item => {
+    const sNameEs = item.querySelector('.shp-sec-es')?.value.trim();
+    if (sNameEs) {
+      sectionsList.push({
+        name_es: sNameEs,
+        name_en: item.querySelector('.shp-sec-en')?.value.trim() || sNameEs,
+        desc_es: item.querySelector('.shp-sec-desc-es')?.value.trim() || '',
+        desc_en: item.querySelector('.shp-sec-desc-es')?.value.trim() || ''
+      });
+    }
+  });
+
+  // Galería
+  const imagesList = [];
+  document.querySelectorAll('#ship-gallery-container .gallery-admin-row').forEach(row => {
+    const url = row.querySelector('.gal-ship-url')?.value.trim();
+    if (url) {
+      const typeEs = row.querySelector('.gal-ship-type-es')?.value || 'Pintura Oficial';
+      const typeMapEn = {
+        'Pintura Oficial': 'Official Art',
+        'Diseño Esquemático': 'Schematic Design',
+        'Render de Estudio': 'Studio Render',
+        'Lineart Estructural': 'Structural Lineart',
+        'Vista Dorsal / Popa': 'Dorsal / Aft View',
+        'Torre de Mando': 'Command Tower',
+        'Arte Conceptual': 'Concept Art',
+        'Emblema / Insignia': 'Naval Insignia'
+      };
+      imagesList.push({
+        url: url,
+        title_es: row.querySelector('.gal-ship-title-es')?.value.trim() || name,
+        title_en: row.querySelector('.gal-ship-title-en')?.value.trim() || name,
+        type_es: typeEs,
+        type_en: typeMapEn[typeEs] || typeEs
+      });
+    }
+  });
+
+  return {
+    id: id,
+    name: name,
+    class_name: { es: class_es, en: class_en },
+    category: category,
+    faction: { es: faction_es, en: faction_es },
+    faction_logo: faction_logo,
+    series: { es: series_es, en: series_es },
+    commissioned: commissioned,
+    commanding_officer: { es: command_es, en: command_es },
+    complement: { es: complement_es, en: complement_es },
+    air_group: { es: airgroup_es, en: airgroup_es },
+    docked_vessels: { es: docked_es, en: docked_es },
+    thumbnail: thumbnail,
+    is_modular: is_modular,
+    modes: is_modular ? { cruiser: cruiserData, attack: attackData } : null,
+    dimensions: dimensions,
+    propulsion: propulsion,
+    defenses: defenses,
+    stats: {
+      firepower: fpVal,
+      armor: armVal,
+      capacity: capVal,
+      range: rngVal
+    },
+    stats_detail: {
+      firepower: { value: fpVal, label_es: "Potencia de Fuego Absoluta", label_en: "Absolute Firepower Rating", desc_es: "Evaluación de daño destructivo de las baterías principales y cañones de partículas." },
+      armor: { value: armVal, label_es: "Resistencia Estructural y Blindaje", label_en: "Structural Hull Resilience", desc_es: "Capacidad de absorción de daño en blindaje C.D.M. y barreras energéticas." },
+      capacity: { value: capVal, label_es: "Capacidad de Hangar y Tropas", label_en: "Hangar & Troop Capacity", desc_es: "Almacén para escuadrones Veritech, batallones de Destroids y personal." },
+      range: { value: rngVal, label_es: "Alcance Operativo y Autonomía", label_en: "Operational Range & Endurance", desc_es: "Autonomía de navegación estelar y alcance de tiro balístico." }
+    },
+    weapons: weaponsList,
+    internal_sections: sectionsList,
+    lore: {
+      overview_es: overview_es,
+      overview_en: overview_es,
+      tactical_analysis_es: tactical_es,
+      tactical_analysis_en: tactical_es
+    },
+    summary: {
+      es: summary_es || (overview_es ? overview_es.substring(0, 160) + '...' : ''),
+      en: summary_en || (overview_es ? overview_es.substring(0, 160) + '...' : '')
+    },
+    images: imagesList.length > 0 ? imagesList : [{ url: thumbnail, title_es: name, title_en: name, type_es: "Pintura Oficial", type_en: "Official Art" }]
+  };
+}
+
+function updateLiveShipPreview() {
+  const container = document.getElementById('admin-live-ship-card');
+  if (!container) return;
+
+  const data = buildCurrentShipJSON();
+  const catLabel = data.category ? data.category.toUpperCase() : 'FORTRESS';
+  const factionText = data.faction?.es || 'U.N. Spacy';
+  const summaryText = data.summary?.es || data.lore?.overview_es || 'Sin resumen disponible.';
+
+  container.innerHTML = `
+    <div class="mecha-card" style="box-shadow:none;">
+      <div class="card-header-status">
+        <div class="card-faction-badge" title="${factionText}">
+          <img src="${data.faction_logo || 'assets/images/ui/logo_UNSpacy.png'}" class="card-faction-icon" alt="Faction">
+          <span class="faction-tag">${factionText}</span>
+        </div>
+        <span class="card-category-tag">${data.is_modular ? 'MODULAR // TRANSFORMABLE' : 'CAPITAL SHIP'}</span>
+      </div>
+
+      <div class="card-image-wrap" style="position:relative; height: 230px;">
+        <img src="${data.thumbnail || 'assets/images/ui/logo_UNSpacy.png'}" alt="${data.name}" style="object-position: center center;">
+        <div class="image-overlay-hud"></div>
+        <div style="position:absolute; bottom:8px; right:8px; background:rgba(6,16,29,0.85); border:1px solid var(--un-cyan); padding:2px 6px; font-family:var(--font-hud); font-size:0.65rem; color:var(--un-cyan); letter-spacing:1px;">
+          CLASE: ${catLabel}
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="card-title-group">
+          <h3 class="card-title">${data.name}</h3>
+          <div class="card-alias">${data.class_name?.es || 'Clase de Batalla'}</div>
+        </div>
+
+        <div style="margin-bottom: 8px; font-family: var(--font-mono); font-size: 0.72rem; color: var(--hud-amber); letter-spacing: 0.8px;">
+          ⌖ ${data.series?.es || ''}
+        </div>
+
+        <p class="card-summary">${summaryText}</p>
+
+        <div class="stats-bars-container">
+          <div class="stat-row">
+            <span class="stat-label">FUEGO</span>
+            <div class="stat-bar-track">
+              <div class="stat-bar-fill firepower" style="width: ${data.stats.firepower}%;"></div>
+            </div>
+            <span class="stat-value" style="width: auto;">${data.stats.firepower}</span>
+          </div>
+
+          <div class="stat-row">
+            <span class="stat-label">BLINDAJE</span>
+            <div class="stat-bar-track">
+              <div class="stat-bar-fill armor" style="width: ${data.stats.armor}%;"></div>
+            </div>
+            <span class="stat-value" style="width: auto;">${data.stats.armor}</span>
+          </div>
+
+          <div class="stat-row">
+            <span class="stat-label">CAPACIDAD</span>
+            <div class="stat-bar-track">
+              <div class="stat-bar-fill speed" style="width: ${data.stats.capacity}%;"></div>
+            </div>
+            <span class="stat-value" style="width: auto;">${data.stats.capacity}</span>
+          </div>
+
+          <div class="stat-row">
+            <span class="stat-label">ALCANCE</span>
+            <div class="stat-bar-track">
+              <div class="stat-bar-fill sensors" style="width: ${data.stats.range}%;"></div>
+            </div>
+            <span class="stat-value" style="width: auto;">${data.stats.range}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function setupShipEventListeners() {
+  document.getElementById('crud-form-ship')?.addEventListener('input', () => {
+    updateLiveShipPreview();
+  });
+}
+
+function setupShipExportButtons() {
+  // 1. Guardar directo en disco
+  const btnSaveShip = document.getElementById('btn-save-ship-direct');
+  if (btnSaveShip) {
+    btnSaveShip.addEventListener('click', async () => {
+      const data = buildCurrentShipJSON();
+      const consoleBox = document.getElementById('git-status-console-ship');
+      if (consoleBox) {
+        consoleBox.style.display = 'block';
+        consoleBox.innerHTML = '<span style="color:var(--un-cyan);">[*] Guardando expediente naval militar en el disco duro local...</span>';
+      }
+
+      try {
+        const res = await fetch('/api/save-ship', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ship: data })
+        });
+
+        if (res.ok) {
+          const result = await res.json();
+          window.tacticalAudio?.scan();
+          if (consoleBox) {
+            consoleBox.innerHTML = `
+              <span style="color: var(--radar-green); font-weight: bold;">✓ [ÉXITO] Ficha naval guardada en disco:</span>
+              <br>• data/naves/${data.id}.json
+              <br>• data/manifest_naves.json
+              <br><span style="color: var(--text-dim);">${result.message || ''}</span>
+            `;
+          }
+
+          // Refrescar selector de naves
+          await loadAdminShipManifest();
+          const select = document.getElementById('select-ship-to-edit');
+          if (select) select.value = data.id;
+
+        } else {
+          throw new Error("El servidor local respondió con error.");
+        }
+      } catch (err) {
+        console.warn("Fallo guardado por API /api/save-ship, usando fallback:", err);
+        if (consoleBox) {
+          consoleBox.innerHTML = '<span style="color: var(--skull-amber);">[!] Servidor API no disponible. Descargando archivo JSON manualmente...</span>';
+        }
+        downloadJSON(data, `${data.id}.json`);
+      }
+    });
+  }
+
+  // 2. Botón Subir Nave a GitHub (Git Push)
+  const btnGitPushShip = document.getElementById('btn-git-push-ship');
+  if (btnGitPushShip) {
+    btnGitPushShip.addEventListener('click', async () => {
+      const data = buildCurrentShipJSON();
+      const consoleBox = document.getElementById('git-status-console-ship');
+      if (consoleBox) {
+        consoleBox.style.display = 'block';
+        consoleBox.innerHTML = '<span style="color: var(--skull-amber); font-weight: bold;">[*] Ejecutando protocolo militar Git: add, commit y push a GitHub...</span>\nPor favor espera unos segundos...';
+      }
+
+      btnGitPushShip.disabled = true;
+      btnGitPushShip.style.opacity = '0.6';
+
+      try {
+        // Primero asegurar que la nave esté guardada en el disco
+        await fetch('/api/save-ship', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ship: data })
+        });
+
+        const res = await fetch('/api/git-push', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ commitMessage: `Update Robotech Capital Ships: ${data.name} (${data.id})` })
+        });
+
+        const result = await res.json();
+        btnGitPushShip.disabled = false;
+        btnGitPushShip.style.opacity = '1';
+
+        if (result.success) {
+          window.tacticalAudio?.scan();
+          if (consoleBox) {
+            consoleBox.innerHTML = `
+              <span style="color: var(--radar-green); font-weight: bold;">✓ [ÉXITO] Cambios sincronizados y subidos a GitHub:</span>
+              <pre style="margin-top:6px; color:#a3e635; font-size:0.7rem;">${result.logs || 'Push exitoso.'}</pre>
+            `;
+          }
+        } else {
+          window.tacticalAudio?.alert();
+          if (consoleBox) {
+            consoleBox.innerHTML = `
+              <span style="color: var(--veritech-red); font-weight: bold;">✕ [AVISO / REPORTE GIT]:</span>
+              <pre style="margin-top:6px; color:#ff9999; font-size:0.7rem;">${result.error || result.logs || 'Verifica tus credenciales de Git o conexión.'}</pre>
+            `;
+          }
+        }
+      } catch (err) {
+        btnGitPushShip.disabled = false;
+        btnGitPushShip.style.opacity = '1';
+        window.tacticalAudio?.alert();
+        if (consoleBox) {
+          consoleBox.innerHTML = `<span style="color: var(--veritech-red);">✕ Error de comunicación con server.py: ${err.message}</span>`;
+        }
+      }
+    });
+  }
+
+  // 3. Descarga manual opcional
+  const btnDlShip = document.getElementById('btn-download-ship-json');
+  if (btnDlShip) {
+    btnDlShip.addEventListener('click', () => {
+      const data = buildCurrentShipJSON();
+      downloadJSON(data, `${data.id}.json`);
+    });
+  }
+}
+
+window.addShipWeaponRow = addShipWeaponRow;
+window.addShipSectionRow = addShipSectionRow;
+window.addShipGalleryRow = addShipGalleryRow;
+window.setAsShipThumbnail = setAsShipThumbnail;
+window.updateLiveShipPreview = updateLiveShipPreview;
+window.updateShipFactionLogoPreview = updateShipFactionLogoPreview;
+window.updateShipFactionFromSelect = updateShipFactionFromSelect;
+
 
 

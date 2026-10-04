@@ -310,7 +310,8 @@
   transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 
-.dossier-modal-backdrop.open {
+.dossier-modal-backdrop.open,
+.dossier-modal-backdrop.active {
   opacity: 1;
   visibility: visible;
 }

@@ -20,8 +20,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="css/style.css?v=1.0.8">
-  <link rel="stylesheet" href="css/hud-components.css?v=1.0.8">
+  <link rel="stylesheet" href="css/style.css?v=1.0.9">
+  <link rel="stylesheet" href="css/hud-components.css?v=1.0.9">
   <style>
     .admin-container {
       width: 100%;
@@ -444,6 +444,15 @@
           </select>
           <button id="btn-new-character" class="btn-action-secondary">+ NUEVO PERSONAJE</button>
           <a href="personajes.html" class="btn-action-secondary">◀ VOLVER A PERSONAJES</a>
+        </div>
+
+        <!-- Controles Naves (Solo visible al editar Naves) -->
+        <div id="top-ships-controls" style="display: none; gap: 10px; align-items: center; flex-wrap: wrap;">
+          <select id="select-ship-to-edit" class="form-select" style="min-width: 240px;">
+            <option value="">-- SELECCIONAR NAVE EXISTENTE --</option>
+          </select>
+          <button id="btn-new-ship" class="btn-action-secondary">+ NUEVA NAVE</button>
+          <a href="naves.html" class="btn-action-secondary">◀ VOLVER A NAVES</a>
         </div>
       </div>
     </div>
@@ -1165,6 +1174,376 @@
         </div>
       </aside>
     </div>
+
+    <!-- ====================================================================
+         MAIN STUDIO LAYOUT: NAVES CAPITALES & FLOTAS (SECTOR 03)
+         ==================================================================== -->
+    <div id="admin-layout-ships" class="admin-layout" style="display: none;">
+      <!-- Formulario de Edición de Naves Capitales -->
+      <form id="crud-form-ship" class="form-panel" onsubmit="event.preventDefault();">
+        
+        <!-- 1. Identificación y Mando Supremo -->
+        <div class="form-section">
+          <h3>1. DESIGNACIÓN NAVAL Y CLASIFICACIÓN TÁCTICA</h3>
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label>ID del Archivo (Slug Único)</label>
+              <input type="text" id="s_id" class="form-input" placeholder="ej: sdf1_macross" required>
+            </div>
+            <div class="form-group">
+              <label>Nombre de la Nave Capital</label>
+              <input type="text" id="s_name" class="form-input" placeholder="ej: SDF-1 Macross" required>
+            </div>
+            <div class="form-group">
+              <label>Categoría Naval</label>
+              <select id="s_category" class="form-select">
+                <option value="fortress">Fortalezas Superdimensionales</option>
+                <option value="cruisers">Cruceros y Destructores</option>
+                <option value="carriers">Portanaves y Asalto</option>
+                <option value="alien">Flotas Alienígenas</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Clase Naval (Español)</label>
+              <input type="text" id="s_class_name_es" class="form-input" placeholder="ej: Fortaleza Superdimensional de Batalla Clase Macross" required>
+            </div>
+            <div class="form-group">
+              <label>Clase Naval (English)</label>
+              <input type="text" id="s_class_name_en" class="form-input" placeholder="ej: Super Dimensional Fortress Macross-Class" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Saga / Época Robotech</label>
+              <select id="s_series_select" class="form-select">
+                <option value="La Saga Macross (Primera Guerra Robotech)">La Saga Macross (Primera Guerra Robotech)</option>
+                <option value="Los Maestros de la Robotech (Segunda Guerra)">Los Maestros de la Robotech (Segunda Guerra)</option>
+                <option value="La Nueva Generación / Era Invid (Tercera Guerra)">La Nueva Generación / Era Invid (Tercera Guerra)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Facción Operativa</label>
+              <select id="s_faction_select" class="form-select" onchange="window.updateShipFactionFromSelect?.()">
+                <option value="U.N. Spacy // Tierra Unificada" data-en="U.N. Spacy // United Earth Forces" data-logo="assets/images/ui/logo_UNSpacy.png">U.N. Spacy // Tierra Unificada</option>
+                <option value="Armada Imperial Zentraedi (Boddole Zer)" data-en="Zentraedi Imperial Fleet" data-logo="assets/images/ui/logo_zentran.png">Armada Imperial Zentraedi (Boddole Zer)</option>
+                <option value="Flota Expedicionaria Robotech (REF / Pioneer)" data-en="Robotech Expeditionary Force (REF)" data-logo="assets/images/ui/Mars_Base.png">Flota Expedicionaria Robotech (REF / Pioneer)</option>
+                <option value="Ejército de la Cruz del Sur (Defensa Espacial)" data-en="Army of the Southern Cross" data-logo="assets/images/ui/logo_UNSpacy.png">Ejército de la Cruz del Sur</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Insignia / Logo de Facción</label>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <input type="text" id="s_faction_logo" class="form-input" placeholder="assets/images/ui/... o URL" value="assets/images/ui/logo_UNSpacy.png" oninput="window.updateShipFactionLogoPreview?.()" style="flex: 1;">
+                <button type="button" class="btn-action-secondary" onclick="openAssetBrowser('s_faction_logo')" style="white-space: nowrap; padding: 8px 12px;">📁 ELEGIR</button>
+                <img id="ship_faction_logo_preview" src="assets/images/ui/logo_UNSpacy.png" alt="Preview" style="width: 48px; height: 48px; object-fit: contain; background: rgba(0,0,0,0.5); border: 1px solid var(--border-tactical); border-radius: 4px; padding: 3px; flex-shrink: 0;">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Foto de Portada / Miniatura Principal</label>
+              <div style="display: flex; gap: 8px;">
+                <input type="text" id="s_thumbnail" class="form-input" placeholder="assets/images/naves/... o URL" style="flex: 1;">
+                <button type="button" class="btn-action-secondary" onclick="openAssetBrowser('s_thumbnail')" style="white-space: nowrap; padding: 8px 14px;">📁 EXPLORAR / SUBIR</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Fecha de Botadura / Comisionado</label>
+              <input type="text" id="s_commissioned" class="form-input" placeholder="ej: Febrero de 2009 (Isla Macross)">
+            </div>
+            <div class="form-group">
+              <label>Oficiales al Mando (Español)</label>
+              <input type="text" id="s_command_es" class="form-input" placeholder="ej: Capitán Henry J. Gloval // Primer Oficial Lisa Hayes">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Dotación y Población Militar/Civil (Español)</label>
+              <input type="text" id="s_complement_es" class="form-input" placeholder="ej: Tripulación Militar: ~20.000 // Civiles: ~56.000">
+            </div>
+            <div class="form-group">
+              <label>Ala Embarcada y Mechas (Español)</label>
+              <input type="text" id="s_airgroup_es" class="form-input" placeholder="ej: 300+ Cazas Veritech VF-1 Valkyrie, 120+ Destroids">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Buques Acoplados y Naves Auxiliares (Español)</label>
+            <input type="text" id="s_docked_es" class="form-input" placeholder="ej: CVS-101 Prometheus (Brazo Babor) y SLV-111 Daedalus (Brazo Estribor)">
+          </div>
+        </div>
+
+        <!-- 2. Modos Modulares Transformables (Crucero y Ataque) -->
+        <div class="form-section">
+          <h3>2. CONFIGURACIÓN MODULAR Y MODOS DE COMBATE</h3>
+          <div style="margin-bottom: 14px;">
+            <label style="display: inline-flex; align-items: center; gap: 8px; cursor: pointer; color: var(--un-cyan);">
+              <input type="checkbox" id="s_is_modular" checked onchange="toggleShipModularSection(this.checked)">
+              <strong style="letter-spacing: 1px;">NAVE TRANSFORMABLE MODULAR (MODO CRUCERO + MODO ATAQUE)</strong>
+            </label>
+          </div>
+
+          <div id="ship-modes-container">
+            <!-- Modo Crucero -->
+            <div style="background: rgba(6,16,29,0.7); border: 1px solid rgba(0,240,255,0.2); border-radius: 4px; padding: 14px; margin-bottom: 16px;">
+              <h4 style="color: var(--un-cyan); font-family: var(--font-hud); font-size: 0.95rem; margin-bottom: 10px;">🚀 CONFIGURACIÓN 01: MODO CRUCERO DE BATALLA</h4>
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label>Nombre del Modo (Español)</label>
+                  <input type="text" id="s_mode_cruiser_name_es" class="form-input" value="Modo Crucero de Batalla Aeroespacial">
+                </div>
+                <div class="form-group">
+                  <label>Nombre del Modo (English)</label>
+                  <input type="text" id="s_mode_cruiser_name_en" class="form-input" value="Aerospace Battle Cruiser Mode">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Foto Modo Crucero</label>
+                <div style="display: flex; gap: 8px;">
+                  <input type="text" id="s_mode_cruiser_img" class="form-input" placeholder="assets/images/naves/..." style="flex: 1;">
+                  <button type="button" class="btn-action-secondary" onclick="openAssetBrowser('s_mode_cruiser_img')">📁 ELEGIR</button>
+                </div>
+              </div>
+              <div class="form-grid-3">
+                <div class="form-group">
+                  <label>Eslora (Largo)</label>
+                  <input type="text" id="s_mode_cruiser_length" class="form-input" value="1.210 m">
+                </div>
+                <div class="form-group">
+                  <label>Manga (Ancho)</label>
+                  <input type="text" id="s_mode_cruiser_width" class="form-input" value="496 m">
+                </div>
+                <div class="form-group">
+                  <label>Puntal (Altura)</label>
+                  <input type="text" id="s_mode_cruiser_height" class="form-input" value="312 m">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Descripción Táctica del Modo Crucero (Español)</label>
+                <textarea id="s_mode_cruiser_desc_es" class="form-textarea" style="min-height: 50px;">Configuración aerodinámica primaria para navegación interplanetaria e inserción orbital con la proa unificada.</textarea>
+              </div>
+            </div>
+
+            <!-- Modo Ataque -->
+            <div style="background: rgba(6,16,29,0.7); border: 1px solid rgba(255,157,0,0.3); border-radius: 4px; padding: 14px;">
+              <h4 style="color: var(--skull-amber); font-family: var(--font-hud); font-size: 0.95rem; margin-bottom: 10px;">⚔ CONFIGURACIÓN 02: MODO ATAQUE HUMANOIDE</h4>
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label>Nombre del Modo (Español)</label>
+                  <input type="text" id="s_mode_attack_name_es" class="form-input" value="Modo Ataque Humanoide (Attack Mode / Stormer)">
+                </div>
+                <div class="form-group">
+                  <label>Nombre del Modo (English)</label>
+                  <input type="text" id="s_mode_attack_name_en" class="form-input" value="Humanoid Attack Mode (Stormer)">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Foto Modo Ataque</label>
+                <div style="display: flex; gap: 8px;">
+                  <input type="text" id="s_mode_attack_img" class="form-input" placeholder="assets/images/naves/..." style="flex: 1;">
+                  <button type="button" class="btn-action-secondary" onclick="openAssetBrowser('s_mode_attack_img')">📁 ELEGIR</button>
+                </div>
+              </div>
+              <div class="form-grid-3">
+                <div class="form-group">
+                  <label>Altura Total (Modo Humanoide)</label>
+                  <input type="text" id="s_mode_attack_height" class="form-input" value="1.200 m">
+                </div>
+                <div class="form-group">
+                  <label>Envergadura / Ancho de Hombros</label>
+                  <input type="text" id="s_mode_attack_width" class="form-input" value="600 m">
+                </div>
+                <div class="form-group">
+                  <label>Profundidad de Casco</label>
+                  <input type="text" id="s_mode_attack_length" class="form-input" value="1.200 m">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Descripción Táctica del Modo Ataque (Español)</label>
+                <textarea id="s_mode_attack_desc_es" class="form-textarea" style="min-height: 50px;">Configuración humanoide de combate donde la nave se divide y flexiona para reconectar los conductos de energía al Cañón Principal y habilitar el 'Ataque Daedalus'.</textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Dimensiones Estructurales, Propulsión y Blindaje -->
+        <div class="form-section">
+          <h3>3. INGENIERÍA, DIMENSIONES Y BLINDAJE C.D.M.</h3>
+          <div class="form-grid-4">
+            <div class="form-group">
+              <label>Eslora Máxima</label>
+              <input type="text" id="s_dim_length" class="form-input" value="1.210 m">
+            </div>
+            <div class="form-group">
+              <label>Manga (Ancho)</label>
+              <input type="text" id="s_dim_width" class="form-input" value="496 m">
+            </div>
+            <div class="form-group">
+              <label>Puntal (Altura)</label>
+              <input type="text" id="s_dim_height" class="form-input" value="312 m">
+            </div>
+            <div class="form-group">
+              <label>Masa / Desplazamiento</label>
+              <input type="text" id="s_dim_mass" class="form-input" value="18.000.000 toneladas">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Motores Principales (Español)</label>
+              <input type="text" id="s_prop_engines_es" class="form-input" placeholder="ej: 4 Motores Termonucleares Robotech">
+            </div>
+            <div class="form-group">
+              <label>Sistema Fold Hiperespacial (Español)</label>
+              <input type="text" id="s_prop_fold_es" class="form-input" placeholder="ej: Generador Hiperespacial Fold Drive Robotech">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Blindaje y Casco C.D.M. (Español)</label>
+              <input type="text" id="s_def_armor_es" class="form-input" placeholder="ej: Superaleación Blindada Robotech (Cuerpo: 350.000 C.D.M.)">
+            </div>
+            <div class="form-group">
+              <label>Barreras y Escudos de Energía (Español)</label>
+              <input type="text" id="s_def_shields_es" class="form-input" placeholder="ej: Barrera Puntual (PPB) + Barrera Omnidireccional 360°">
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Barras Telemétricas y Estadísticas (0-100) -->
+        <div class="form-section">
+          <h3>4. BARRAS TELEMÉTRICAS Y POTENCIA BALÍSTICA (0 - 100)</h3>
+          <div class="form-grid-4">
+            <div class="form-group">
+              <label>Potencia de Fuego (0-100)</label>
+              <input type="number" id="s_stat_firepower" min="0" max="100" class="form-input" value="100">
+            </div>
+            <div class="form-group">
+              <label>Blindaje y Resistencia (0-100)</label>
+              <input type="number" id="s_stat_armor" min="0" max="100" class="form-input" value="98">
+            </div>
+            <div class="form-group">
+              <label>Capacidad de Tropas/Hangar (0-100)</label>
+              <input type="number" id="s_stat_capacity" min="0" max="100" class="form-input" value="96">
+            </div>
+            <div class="form-group">
+              <label>Alcance y Autonomía (0-100)</label>
+              <input type="number" id="s_stat_range" min="0" max="100" class="form-input" value="92">
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Resumen, Historia y Análisis Operacional -->
+        <div class="form-section">
+          <h3>5. EXPEDIENTE HISTÓRICO Y ANÁLISIS TÁCTICO</h3>
+          <div class="form-group">
+            <label>Resumen Breve para Catálogo (Español, ~160 caracteres)</label>
+            <textarea id="s_summary_es" class="form-textarea" style="min-height: 60px;" placeholder="Síntesis naval para la tarjeta del catálogo..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Resumen Breve para Catálogo (English)</label>
+            <textarea id="s_summary_en" class="form-textarea" style="min-height: 60px;" placeholder="Brief naval overview for card display..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Historial de Servicio y Orígenes de la Nave (Español)</label>
+            <textarea id="s_overview_es" class="form-textarea" style="min-height: 100px;" placeholder="Origen de la nave, reconstrucción, campañas militares y legado..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Análisis Táctico en Combate y Hazañas Bélicas (Español)</label>
+            <textarea id="s_tactical_es" class="form-textarea" style="min-height: 90px;" placeholder="Tácticas de combate, maniobras legendarias y victorias de flota..."></textarea>
+          </div>
+        </div>
+
+        <!-- 6. Sistemas de Armamento -->
+        <div class="form-section">
+          <h3>6. BATERÍAS Y SISTEMAS DE ARMAS</h3>
+          <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 12px;">
+            Registra los cañones principales, torretas secundarias, silos de misiles y maniobras especiales:
+          </p>
+          <div id="ship-weapons-container"></div>
+          <button type="button" class="btn-add-item" onclick="addShipWeaponRow()">+ AGREGAR SISTEMA DE ARMAS</button>
+        </div>
+
+        <!-- 7. Secciones y Compartimientos Internos -->
+        <div class="form-section">
+          <h3>7. SECCIONES Y COMPARTIMIENTOS INTERNOS</h3>
+          <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 12px;">
+            Puente de mando, metrópolis interior, hangares y bahías de propulsión:
+          </p>
+          <div id="ship-sections-container"></div>
+          <button type="button" class="btn-add-item" onclick="addShipSectionRow()">+ AGREGAR SECCIÓN INTERNA</button>
+        </div>
+
+        <!-- 8. Galería Fotográfica y Planos -->
+        <div class="form-section">
+          <h3>8. ARCHIVO VISUAL Y PLANOS ESTRUCTURALES</h3>
+          <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 12px;">
+            Fotos en órbita, esquemas técnicos, renders de estudio y tomas de combate:
+          </p>
+          <div id="ship-gallery-container"></div>
+          <div style="display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap;">
+            <button type="button" class="btn-action-primary" onclick="openAssetBrowserForNewShipGalleryItem()" style="font-size: 0.78rem;">
+              📁 ELEGIR O SUBIR FOTO DEL PROYECTO
+            </button>
+            <button type="button" class="btn-add-item" onclick="addShipGalleryRow()">
+              + FILA MANUAL VACÍA
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Sidebar Vista Previa y Guardado de Naves -->
+      <aside class="preview-sidebar">
+        <div class="preview-box">
+          <h4>VISTA PREVIA DE LA NAVE</h4>
+          <div id="admin-live-ship-card"></div>
+        </div>
+
+        <div class="preview-box">
+          <h4>GESTIÓN DIRECTA EN DISCO</h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px;">
+            Guarda la nave capital directamente en tu disco local. Actualiza <code>data/naves/{id}.json</code> y <code>data/manifest_naves.json</code> de manera instantánea:
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <!-- 1 solo botón para guardar en disco -->
+            <button id="btn-save-ship-direct" class="btn-action-primary" style="background: var(--un-cyan); color: #000; box-shadow: 0 0 15px var(--un-cyan-glow);">
+              💾 GUARDAR NAVE EN DISCO (1 CLIC)
+            </button>
+
+            <!-- 1 botón para hacer push a GitHub -->
+            <button id="btn-git-push-ship" class="btn-action-primary" style="background: var(--skull-amber); color: #000;">
+              🚀 SUBIR A GITHUB (GIT PUSH)
+            </button>
+          </div>
+
+          <!-- Mensaje de estado / terminal militar para Naves -->
+          <div id="git-status-console-ship" style="display:none; margin-top:14px; background:rgba(0,0,0,0.85); border:1px solid var(--border-tactical); padding:10px; border-radius:2px; font-family:var(--font-mono); font-size:0.75rem; color:#fff; max-height:150px; overflow-y:auto; white-space:pre-wrap;"></div>
+
+          <div style="margin-top: 10px; text-align: right;">
+            <button type="button" id="btn-download-ship-json" style="background:none; border:none; color:var(--text-dim); font-size:0.7rem; cursor:pointer; text-decoration:underline;">
+              ¿Descarga manual de archivo .json?
+            </button>
+          </div>
+
+          <div class="sync-note" style="margin-top: 14px;">
+            <strong>Arquitectura Ligera:</strong>
+            <br><span style="font-size:0.75rem; color:var(--text-dim);">Al guardar, la ficha ligera (resumen y telemetría) se sincroniza en el manifiesto general de naves para mantener el sitio ágil, y las especificaciones técnicas completas quedan en su archivo individual.</span>
+          </div>
+        </div>
+      </aside>
+    </div>
   </div>
 
   <!-- MODAL PARA AÑADIR NUEVAS CATEGORÍAS/FACCIONES [+] -->
@@ -1245,7 +1624,7 @@
     </div>
   </div>
 
-  <script src="js/audio.js?v=1.0.8"></script>
-  <script src="js/admin.js?v=1.0.8"></script>
+  <script src="js/audio.js?v=1.0.9"></script>
+  <script src="js/admin.js?v=1.0.9"></script>
 </body>
 </html>

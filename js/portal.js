@@ -32,12 +32,12 @@ const PORTAL_I18N = {
     col_02_btn: "VER EXPEDIENTES →",
 
     // Column 03: Naves
-    col_03_tag: "SECTOR 03 // CLASIFICADO",
+    col_03_tag: "SECTOR 03 // OPERATIVO",
     col_03_title: "NAVES CAPITALES",
     col_03_sub: "SDF-1 · CRUCEROS ARMD · FLOTAS",
     col_03_desc: "Planos estructurales, capacidades hiperespaciales (Fold Drives), sistemas modulares y hangares de fortalezas y cruceros estelares.",
-    col_03_status: "TELEMETRÍA // HANGAR EN ESPERA",
-    col_03_btn: "REGISTRO NAVAL 🔒",
+    col_03_status: "EN LÍNEA // REGISTRO NAVAL ACTIVO",
+    col_03_btn: "INGRESAR AL REGISTRO NAVAL →",
 
     // Column 04: Historia
     col_04_tag: "SECTOR 04 // ARCHIVADO",
@@ -79,12 +79,12 @@ const PORTAL_I18N = {
     col_02_btn: "VIEW DOSSIERS →",
 
     // Column 03: Naves
-    col_03_tag: "SECTOR 03 // CLASSIFIED",
+    col_03_tag: "SECTOR 03 // OPERATIONAL",
     col_03_title: "CAPITAL WARSHIPS",
     col_03_sub: "SDF-1 · ARMD CARRIERS · FLEETS",
     col_03_desc: "Structural schematics, hyperspace fold drives, modular systems, and mecha hangars of space battle fortresses and dreadnoughts.",
-    col_03_status: "TELEMETRY // HANGAR ON STANDBY",
-    col_03_btn: "NAVAL REGISTRY 🔒",
+    col_03_status: "ONLINE // NAVAL REGISTRY ACTIVE",
+    col_03_btn: "ENTER NAVAL REGISTRY →",
 
     // Column 04: Historia
     col_04_tag: "SECTOR 04 // ARCHIVED",

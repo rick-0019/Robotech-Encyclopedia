@@ -16,7 +16,7 @@
     "es": "U.N. Spacy - Escuadrón Skull",
     "en": "U.N. Spacy - Skull Squadron"
   },
-  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "faction_logo": "assets/images/personajes/rick_hunter/rick_hunter_02.jpg",
   "series": {
     "es": "La Saga Macross (Primera Guerra Robotech)",
     "en": "The Macross Saga (First Robotech War)"
@@ -33,7 +33,7 @@
   "blood_type": "O+",
   "height": "1,75 m",
   "weight": "63 kg",
-  "thumbnail": "assets/images/personajes/rick_hunter/rick_hunter_03.jpg",
+  "thumbnail": "assets/images/personajes/rick_hunter/rick_hunter_04.jpg",
   "images": [
     {
       "url": "assets/images/personajes/rick_hunter/rick_hunter.jpg",

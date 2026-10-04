@@ -1,0 +1,66 @@
+{
+  "system_version": "1.0.0",
+  "database_name": "ROBOTECH CAPITAL FLEET ARCHIVE",
+  "updated_at": "2026-09-28",
+  "categories": [
+    {
+      "id": "all",
+      "label_es": "Todas las Naves Capitales",
+      "label_en": "All Capital Ships"
+    },
+    {
+      "id": "fortress",
+      "label_es": "Fortalezas Superdimensionales",
+      "label_en": "Super Dimensional Fortresses"
+    },
+    {
+      "id": "cruisers",
+      "label_es": "Cruceros y Destructores",
+      "label_en": "Cruisers & Destroyers"
+    },
+    {
+      "id": "carriers",
+      "label_es": "Portanaves y Asalto",
+      "label_en": "Carriers & Assault Ships"
+    },
+    {
+      "id": "alien",
+      "label_es": "Flotas Alienígenas",
+      "label_en": "Alien Warships"
+    }
+  ],
+  "ships": [
+    {
+      "id": "sdf1_macross",
+      "name": "SDF-1 Macross",
+      "class_name": {
+        "es": "Fortaleza Superdimensional de Batalla Clase Macross",
+        "en": "Super Dimensional Fortress Macross-Class"
+      },
+      "category": "fortress",
+      "faction": {
+        "es": "U.N. Spacy // Tierra Unificada",
+        "en": "U.N. Spacy // Tierra Unificada"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {},
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "La Saga Macross (Primera Guerra Robotech)"
+      },
+      "thumbnail": "assets/images/naves/SDF-1/b5dfd69b7c4162e32ee76112044fdb3d.jpg",
+      "summary": {
+        "es": "El SDF-1 Macross (Super Dimension Fortress One) es el artefacto tecnológico más trascendental en la historia de la civilización humana y el bastión indiscutido ...",
+        "en": "The SDF-1 Macross (Super Dimension Fortress One) is the single most pivotal technological creation in human history and the fortress that saved Earth during the..."
+      },
+      "stats": {
+        "firepower": 100,
+        "armor": 98,
+        "capacity": 96,
+        "range": 92
+      },
+      "is_modular": true,
+      "dataFile": "data/naves/sdf1_macross.json"
+    }
+  ]
+}

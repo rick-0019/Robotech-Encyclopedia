@@ -86,7 +86,7 @@
         "es": "U.N. Spacy - Escuadrón Skull",
         "en": "U.N. Spacy - Skull Squadron"
       },
-      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "faction_logo": "assets/images/personajes/rick_hunter/rick_hunter_02.jpg",
       "assignment": {
         "es": "SDF-1 Macross // Escuadrón Skull (VF-1J / VF-1S Valkyrie)",
         "en": "SDF-1 Macross // Skull Squadron (VF-1J / VF-1S Valkyrie)"
@@ -95,7 +95,7 @@
         "es": "La Saga Macross (Primera Guerra Robotech)",
         "en": "The Macross Saga (First Robotech War)"
       },
-      "thumbnail": "assets/images/personajes/rick_hunter/rick_hunter_03.jpg",
+      "thumbnail": "assets/images/personajes/rick_hunter/rick_hunter_04.jpg",
       "summary": {
         "es": "As de caza supremo de la RDF y líder legendario del Escuadrón Skull tras la caída de Roy Fokker. Protagonista indiscutido de la Primera Guerra Robotec...",
         "en": "Supreme RDF fighter ace and legendary Skull Squadron leader following the fall of Roy Fokker. Pivotal combat pilot of the First Robotech War and futur..."
