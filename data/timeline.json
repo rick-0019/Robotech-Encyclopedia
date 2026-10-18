@@ -1,0 +1,1422 @@
+{
+  "system_version": "1.0.0",
+  "database_name": "ROBOTECH HISTORICAL ARCHIVE & BATTLE CHRONOLOGY",
+  "updated_at": "2026-10-04",
+  "eras": [
+    {
+      "id": "all",
+      "label_es": "Toda la Cronología (1999 - 2044+)",
+      "label_en": "Full Chronology (1999 - 2044+)",
+      "color": "#00f0ff"
+    },
+    {
+      "id": "genesis",
+      "label_es": "1999-2008 // Génesis & Reconstrucción",
+      "label_en": "1999-2008 // Genesis & Reconstruction",
+      "color": "#00f0ff"
+    },
+    {
+      "id": "first_war",
+      "label_es": "2009-2014 // Primera Guerra Robotech",
+      "label_en": "2009-2014 // First Robotech War",
+      "color": "#ff9d00"
+    },
+    {
+      "id": "pioneer",
+      "label_es": "2015-2028 // Misión Pionera REF",
+      "label_en": "2015-2028 // REF Pioneer Mission",
+      "color": "#10b981"
+    },
+    {
+      "id": "second_war",
+      "label_es": "2029-2030 // Segunda Guerra Robotech",
+      "label_en": "2029-2030 // Second Robotech War",
+      "color": "#c084fc"
+    },
+    {
+      "id": "third_war",
+      "label_es": "2031-2044 // Tercera Guerra Robotech",
+      "label_en": "2031-2044 // Third Robotech War",
+      "color": "#ff2d55"
+    },
+    {
+      "id": "shadow_chronicles",
+      "label_es": "2044+ // Las Crónicas de las Sombras",
+      "label_en": "2044+ // The Shadow Chronicles",
+      "color": "#38bdf8"
+    }
+  ],
+  "events": [
+    {
+      "era": "genesis",
+      "technologies": [
+        "Robotecnología",
+        "Motores de Pliegue Espacial",
+        "Sobreflexión Protocultura"
+      ],
+      "key_figures": [
+        "Dr. Emil Lang",
+        "Roy Fokker",
+        "Henry Gloval"
+      ],
+      "date_display": {
+        "es": "Julio de 1999",
+        "en": "July 1999"
+      },
+      "defcon": "DEFCON 1",
+      "casualties": {
+        "es": "Destrucción total del arrecife sur de la Isla Macross.",
+        "en": "Total destruction of Macross Island southern reef."
+      },
+      "badge": {
+        "es": "IMPACTO CERO // GÉNESIS ROBOTECH",
+        "en": "GROUND ZERO // ROBOTECH GENESIS"
+      },
+      "factions": [
+        {
+          "logo": "assets/images/ui/logo_UNSpacy.png",
+          "name_en": "United Earth Forces (UN Spacy)",
+          "name_es": "Naciones Unidas de la Tierra (UN Spacy)"
+        }
+      ],
+      "outcomes": {
+        "es": "Cese inmediato de las guerras civiles mundiales y creación del Gobierno de la Tierra Unificada.",
+        "en": "Immediate cessation of global civil warfare and creation of the United Earth Government."
+      },
+      "image": "assets/images/historia y guerras/portada_historia_y_guerras.jpg",
+      "summary": {
+        "es": "Una gigantesca nave espacial alienígena de combate se estrella en la Isla Macross.",
+        "en": "A colossal alien warship crashes onto Macross Island."
+      },
+      "tactical_report": {
+        "es": "El 17 de Julio de 1999, un colosal meteoro metálico atraviesa la atmósfera terrestre...",
+        "en": "On July 17, 1999, a colossal metallic meteor pierced Earth's atmosphere..."
+      },
+      "year": "1999",
+      "location": {
+        "es": "Isla Macross, Pacífico Sur, Planeta Tierra",
+        "en": "South Atoll Island, South Pacific, Planet Earth"
+      },
+      "subtitle": {
+        "es": "El Impacto en la Isla Macross y el Fin de la Guerra Global",
+        "en": "The Macross Island Impact and the End of Global War"
+      },
+      "title": {
+        "es": "La Caída del SDF-1 en la Tierra",
+        "en": "The Crash of the SDF-1 on Earth"
+      },
+      "id": "1999_fall_of_alien_ship"
+    },
+    {
+      "id": "2000_2008_veritech_development",
+      "year": "2000-2008",
+      "date_display": {
+        "es": "Años 2000 a 2008",
+        "en": "2000 to 2008"
+      },
+      "era": "genesis",
+      "badge": {
+        "es": "CARRERA ARMAMENTÍSTICA // I+D TÁCTICO",
+        "en": "ARMS RACE // TACTICAL R&D"
+      },
+      "defcon": "DEFCON 2",
+      "title": {
+        "es": "Desarrollo del Sistema Veritech y los Destroids",
+        "en": "Development of the Veritech System & Destroid Corps"
+      },
+      "subtitle": {
+        "es": "La respuesta militar humana ante la amenaza de invasores gigantes",
+        "en": "Mankind's Tactical Response to the Threat of Giant Invaders"
+      },
+      "location": {
+        "es": "Isla Macross, Base Edwards y Fábricas Robotech Subterráneas",
+        "en": "Macross Island, Edwards AFB & Underground Robotech Facilities"
+      },
+      "image": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
+      "factions": [
+        {
+          "name_es": "RDF // Proyecto Veritech X",
+          "name_en": "RDF // Project Veritech X",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        }
+      ],
+      "key_figures": [
+        "Dr. Emil Lang",
+        "Comandante Roy Fokker",
+        "Capitán Henry J. Gloval",
+        "Lisa Hayes"
+      ],
+      "summary": {
+        "es": "Para combatir contra soldados alienígenas de 12 metros de altura tanto en aire como en tierra, los científicos de la RDF desarrollan la tecnología de transformación modular tridimensional. Nace el legendario caza variable VF-1 Valkyrie (capaz de transformarse en Caza, Guardián y Battloid) junto a la formidable línea de tanques bípedos pesados Destroid.",
+        "en": "To counter twelve-meter-tall alien infantry across air and ground theaters, RDF engineers develop three-mode modular transformation technology. The iconic VF-1 Valkyrie variable fighter is perfected (shifting between Fighter, Guardian, and Battloid) alongside the formidable Destroid heavy artillery walker line."
+      },
+      "tactical_report": {
+        "es": "La hipótesis de batalla dictaba que los cazas convencionales serían inútiles en combate cuerpo a cuerpo contra infantería extraterrestre gigante, mientras que los carros de combate terrestres carecían de la velocidad de inserción y combate aéreo requerida. El Dr. Emil Lang combinó la potencia de los motores de fusión con células de Protocultura para permitir servomotores biomórficos capaces de reconfigurar la geometría del fuselaje en pleno vuelo.\n\nRoy Fokker lideró los vuelos de prueba del prototipo VF-X en condiciones extremas. Paralelamente, se construyeron los Destroids de asalto (MBR-04 Tomahawk, ADR-04 Raidar X / Defender, SDR-04 Spartan, MBR-07 Spartan y HWR-00 Monster) diseñados como artillería pesada móvil e implacable defensa de cubierta para la fortaleza estelar.",
+        "en": "Military doctrine concluded that conventional jets would be useless in close-quarters hand-to-hand combat against giant alien infantry, while battle tanks lacked the high-altitude intercept capability required. Dr. Emil Lang fused thermonuclear jet engines with Protoculture cells to power biomorphic servos capable of reconfiguring airframe geometries mid-flight.\n\nCommander Roy Fokker spearheaded test flights on the cutting-edge VF-X prototypes under extreme G-loads. Concurrently, ground assault Destroids were produced (MBR-04 Tomahawk, Raidar X, Spartan, and HWR-00 Monster) as mobile siege bastions and heavy point-defense bulwarks for the SDF-1 hull."
+      },
+      "outcomes": {
+        "es": [
+          "Homologación operativa del caza Veritech VF-1 Valkyrie (A, J, R, S).",
+          "Despliegue de los batallones de Destroids terrestres y antiaéreos.",
+          "Formación del legendario Escuadrón Skull liderado por Roy Fokker.",
+          "Finalización de la reconstrucción y reactivación de sistemas del SDF-1."
+        ],
+        "en": [
+          "Operational deployment of the VF-1 Valkyrie variable fighter series (A, J, R, S).",
+          "Commissioning of the heavy armored Destroid defense regiments.",
+          "Establishment of the premier Skull Squadron led by Roy Fokker.",
+          "Completion of the decennial overhaul of the SDF-1 main systems."
+        ]
+      },
+      "technologies": [
+        "Mecanismo de Transformación Trimodal Veritech (Caza/Guardián/Battloid)",
+        "Armas de Láser y Rayos Gatling GU-11",
+        "Motores Turbofan Termonucleares FF-2001",
+        "Blindaje C.D.M. de Superaleación"
+      ],
+      "casualties_impact": {
+        "es": "Varios pilotos de pruebas y accidentes en prototipos; éxito total en la creación del escudo defensivo humano.",
+        "en": "Several test pilot casualties during prototype trials; ultimate success in arming humanity."
+      }
+    },
+    {
+      "id": "2009_launch_macross_first_shot",
+      "year": "2009",
+      "date_display": {
+        "es": "Febrero de 2009",
+        "en": "February 2009"
+      },
+      "era": "first_war",
+      "badge": {
+        "es": "PRIMERA GUERRA // DISPARO FATÍDICO",
+        "en": "FIRST WAR // FATAL FIRST SHOT"
+      },
+      "defcon": "DEFCON 1",
+      "title": {
+        "es": "La Ceremonia de Botadura y la Llegada Zentraedi",
+        "en": "The Maiden Launch Ceremony & Zentraedi Arrival"
+      },
+      "subtitle": {
+        "es": "El Cañón Principal se dispara solo: Estalla la Primera Guerra Robotech",
+        "en": "The Main Gun Fires on Its Own: The First Robotech War Begins"
+      },
+      "location": {
+        "es": "Isla Macross, Atmósfera Terrestre y Órbita Lunar",
+        "en": "Macross Island, Earth Atmosphere & Lunar Orbit"
+      },
+      "image": "assets/images/naves/SDF-1/b5dfd69b7c4162e32ee76112044fdb3d.jpg",
+      "factions": [
+        {
+          "name_es": "U.N. Spacy // RDF (SDF-1)",
+          "name_en": "U.N. Spacy // RDF (SDF-1)",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        },
+        {
+          "name_es": "Flota Zentraedi de Vanguardia (Breetai)",
+          "name_en": "Zentraedi Vanguard Fleet (Breetai)",
+          "logo": "assets/images/ui/logo_zentran.png"
+        }
+      ],
+      "key_figures": [
+        "Capitán Henry J. Gloval",
+        "Comandante Breetai",
+        "Ministro Exedore",
+        "Rick Hunter",
+        "Lynn Minmay",
+        "Lisa Hayes"
+      ],
+      "summary": {
+        "es": "Durante la celebración mundial de la botadura del SDF-1, una gigantesca flota Zentraedi comandada por Breetai emerge del hiperespacio. Una trampa de software oculta dejada por Zor reactiva el Cañón Principal del SDF-1, disparando automáticamente contra los invasores sin control humano. Se desata el primer combate aéreo entre cazas Valkyrie y pods Regult.",
+        "en": "During the worldwide celebration of the SDF-1's maiden launch, an immense Zentraedi armada led by Commander Breetai defolds into orbit. A booby-trap subroutine embedded by Zor activates the SDF-1 Main Cannon, firing automatically into the alien fleet without human input. Savage warfare erupts between Valkyries and Zentraedi Battle Pods."
+      },
+      "tactical_report": {
+        "es": "La mañana del 7 de febrero de 2009, la tripulación militar del Capitán Gloval se preparaba para alzar vuelo cuando los sensores colapsaron por la distorsión gravitatoria de la flota Zentraedi. Antes de que Gloval pudiera ordenar el cese del fuego o intentar comunicación pacífica, los circuitos alienígenas originales del SDF-1 detectaron a los Zentraedi como enemigos acérrimos y descargaron un rayo devastador que desintegró a dos cruceros alienígenas en órbita.\n\nBreetai respondió ordenando un asalto masivo de desembarco planetario con millones de cápsulas Regult y cazas Gnerl. Rick Hunter, un joven piloto civil acrobático que asistía a la fiesta como espectador, queda atrapado en el combate al abordar accidentalmente el caza militar biplaza VT-1D de Roy Fokker, salvando a la joven civil Lynn Minmay de la aniquilación en las calles destruidas de Macross City.",
+        "en": "On the morning of February 7, 2009, Captain Gloval's bridge crew initiated launch sequences when sensory grids crashed under the gravitational wake of Breetai's defolding battlegroup. Before human diplomatic channels could be opened, hidden alien subroutines in the SDF-1 recognized the Zentraedi signature and discharged the Main Gun, annihilating two scouting warships in high orbit.\n\nCommander Breetai responded with an overwhelming planetary drop of Regult pods and Gnerl fighter bombers. Rick Hunter, a civilian stunt pilot visiting his surrogate brother Roy Fokker, is swept into the inferno. Taking the controls of a military two-seater VT-1D, Rick rescues young civilian Lynn Minmay amidst the obliteration of Macross City."
+      },
+      "outcomes": {
+        "es": [
+          "Inicio formal de la Primera Guerra Robotech.",
+          "Destrucción casi total de las instalaciones terrestres de la Isla Macross.",
+          "Rick Hunter ingresa involuntariamente en el conflicto militar de la RDF.",
+          "Orden de evacuación urgente de los 70.000 civiles al interior del SDF-1."
+        ],
+        "en": [
+          "Formal outbreak of the First Robotech War.",
+          "Near-total devastation of Macross Island's surface infrastructure.",
+          "Rick Hunter is drawn into the military defense corps.",
+          "Emergency civil evacuation order bringing 70,000 citizens into the SDF-1."
+        ]
+      },
+      "technologies": [
+        "Disparo Automático de Reflexión de Zor",
+        "Cápsulas de Combate Zentraedi Regult",
+        "Primer Despliegue de Combate del VF-1 Valkyrie"
+      ],
+      "casualties_impact": {
+        "es": "Destrucción total de la base insular de Macross; cientos de civiles fallecidos.",
+        "en": "Complete destruction of Macross Island base; hundreds of civilian casualties."
+      }
+    },
+    {
+      "id": "2009_pluto_fold_accident",
+      "year": "2009",
+      "date_display": {
+        "es": "Febrero de 2009",
+        "en": "February 2009"
+      },
+      "era": "first_war",
+      "badge": {
+        "es": "SALTO HIPERESPACIAL // ERROR CRÍTICO",
+        "en": "SPACE FOLD // CRITICAL ANOMALY"
+      },
+      "defcon": "DEFCON 1",
+      "title": {
+        "es": "El Salto Espacial Accidental hacia la Órbita de Plutón",
+        "en": "The Accidental Space Fold to the Orbit of Pluto"
+      },
+      "subtitle": {
+        "es": "La Isla Macross es transportada al vacío y el motor Fold desaparece",
+        "en": "Macross Island is Pulled into Deep Space as Fold Drives Vanish"
+      },
+      "location": {
+        "es": "Órbita de Plutón, Confines del Sistema Solar",
+        "en": "Pluto's Orbit, Outer Solar System Edge"
+      },
+      "image": "assets/images/naves/SDF-1/ffb39ea52ea9b390e4724c28f20ec9f8.jpg",
+      "factions": [
+        {
+          "name_es": "U.N. Spacy // RDF (SDF-1)",
+          "name_en": "U.N. Spacy // RDF (SDF-1)",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        }
+      ],
+      "key_figures": [
+        "Capitán Henry J. Gloval",
+        "Lisa Hayes",
+        "Claudia Grant",
+        "Dr. Emil Lang"
+      ],
+      "summary": {
+        "es": "Para alejar el devastador combate de la Tierra, el Capitán Gloval ordena ejecutar un salto hiperespacial de emergencia detrás de la Luna. Sin embargo, la física inexplorada de la Protocultura arrastra a la totalidad de la Isla Macross y a 56.000 civiles al vacío glacial de Plutón, mientras que los generadores Fold colapsan y desaparecen en otra dimensión.",
+        "en": "To draw the catastrophic alien assault away from Earth, Captain Gloval orders an emergency space fold maneuver behind the Moon. However, untested Protoculture fold mechanics transport the entire island and 56,000 civilians to the frozen vacuum of Pluto, while the fold drive generators completely vanish into subspace."
+      },
+      "tactical_report": {
+        "es": "El salto hiperespacial se ejecutó dentro de la gravedad atmosférica de la Tierra, un error de cálculo con consecuencias catastróficas. La burbuja de espacio plegado arrancó un radio de diez kilómetros de tierra, agua y las ruinas de Macross City, reapareciendo en el cinturón de Kuiper, cerca de Plutón.\n\nAl intentar estabilizar la nave, el equipo de ingeniería descubrió con horror que el par de generadores Fold se había desvanecido físicamente del casco de la nave, dejando un gigantesco vacío estructural. Sin capacidad de hiperespacio, el SDF-1 quedó varado a miles de millones de kilómetros de casa, obligado a regresar a velocidad subluz a través de un viaje que tomaría más de un año. La tripulación rescató a los 56.000 supervivientes flotando en refugios antibombas y reconstruyó Macross City completa dentro de las bodegas cavernosas del vientre de la fortaleza.",
+        "en": "Executing a hyperspace jump inside a planetary gravity well proved disastrous. The spacetime bubble scooped up a 10-kilometer radius of earth, seawater, and the wreckage of Macross City, emerging near Pluto's desolate orbit.\n\nTo the engineering team's horror, both primary fold drives completely vanished into subspace, leaving massive structural voids in the central core. Incapable of folding back to Earth, the SDF-1 was forced to undertake a perilous sub-light voyage back home across hostile space. The military rescued 56,000 citizens trapped in airtight shelters and rebuilt the entire civilian city inside the cavernous hull of the fortress."
+      },
+      "outcomes": {
+        "es": [
+          "Pérdida irreversible del sistema de salto hiperespacial de la nave.",
+          "Reconstrucción urbana de Macross City dentro del casco del SDF-1.",
+          "Acoplamiento de los portaaviones de rescate Prometheus y Daedalus como brazos de la fortaleza.",
+          "Inicio de la odisea de un año de combate continuo hacia la Tierra."
+        ],
+        "en": [
+          "Irreversible loss of the SDF-1's hyperdrive fold engine.",
+          "Reconstruction of Macross City inside the cavernous warship hull.",
+          "Docking of aircraft carriers Prometheus and Daedalus as articulated arm appendages.",
+          "Beginning of the perilous year-long journey home under constant siege."
+        ]
+      },
+      "technologies": [
+        "Modo Modular Humanoide (Modular Transformation / Stormer)",
+        "Táctica de Asalto 'Daedalus Attack'",
+        "Sistema de Soporte Vital Masivo para 70.000 Humanos"
+      ],
+      "casualties_impact": {
+        "es": "Miles de bajas iniciales por asfixia en el espacio; 56.000 civiles rescatados con vida.",
+        "en": "Thousands perished in initial atmospheric vacuum breach; 56,000 survivors rescued."
+      }
+    },
+    {
+      "id": "2009_2010_mars_base_and_saturn",
+      "year": "2009-2010",
+      "date_display": {
+        "es": "Septiembre 2009 - Enero 2010",
+        "en": "September 2009 - January 2010"
+      },
+      "era": "first_war",
+      "badge": {
+        "es": "ASALTO TÁCTICO // TRAMPA EN MARTE",
+        "en": "TACTICAL RAID // MARS BASE AMBUSH"
+      },
+      "defcon": "DEFCON 1",
+      "title": {
+        "es": "Batallas en Saturno, Cinturón de Asteroides y Base Sara en Marte",
+        "en": "Battles at Saturn Rings, Asteroid Belt & Mars Base Sara"
+      },
+      "subtitle": {
+        "es": "El primer 'Daedalus Attack' y el descubrimiento de la trampa gravitatoria",
+        "en": "The Maiden 'Daedalus Attack' and the Gravitational Mine Ambush"
+      },
+      "location": {
+        "es": "Anillos de Saturno y Base Sara (Planeta Marte)",
+        "en": "Saturn's Rings & Mars Base Sara (Planet Mars)"
+      },
+      "image": "assets/images/naves/SDF-1/229cd357524ca4c9c5aaa1e938a5fa3e.jpg",
+      "factions": [
+        {
+          "name_es": "U.N. Spacy // RDF (SDF-1)",
+          "name_en": "U.N. Spacy // RDF (SDF-1)",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        },
+        {
+          "name_es": "Flota de Ataque de Khyron // Breetai",
+          "name_en": "Khyron's Strike Fleet // Breetai",
+          "logo": "assets/images/ui/logo_zentran.png"
+        }
+      ],
+      "key_figures": [
+        "Comandante Khyron",
+        "Capitán Henry J. Gloval",
+        "Lisa Hayes",
+        "Roy Fokker",
+        "Rick Hunter"
+      ],
+      "summary": {
+        "es": "Durante su travesía por el Sistema Solar, el SDF-1 es perseguido sin tregua por el infame comandante Zentraedi Khyron 'El Asesino de Espaldas'. En la Base Sara en Marte, los Zentraedi activan minas de gravedad para inmovilizar a la nave, pero Lisa Hayes detona el reactor de la base y el SDF-1 estrena su demoledor 'Ataque Daedalus'.",
+        "en": "Navigating inward through the Solar System, the SDF-1 is hunted relentlessly by rogue Zentraedi commander Khyron 'The Backstabber'. At Mars Base Sara, alien gravity mines pin down the fortress. Lisa Hayes detonates the abandoned base reactor while the SDF-1 executes its devastating maiden 'Daedalus Attack'."
+      },
+      "tactical_report": {
+        "es": "Al llegar a Marte, la tripulación del SDF-1 buscaba reabastecer sus suministros de agua y minerales en la Base Sara, un puesto de investigación humano abandonado. Khyron tendió una trampa colocando minas gravitatorias que atraparon al SDF-1 contra la superficie arenosa del planeta rojo, bombardeándolo desde la órbita.\n\nLa primer oficial Lisa Hayes, arriesgando su vida en el complejo en ruinas donde había muerto su antiguo prometido Karl Riber, logró sobrecargar manualmente el reactor geotérmico de la base. La detonación destruyó las minas gravitatorias. Para abrirse paso a través de la flota de Khyron, el Capitán Gloval ordenó la primera transformación a 'Modo Ataque' humanoide: embistió la proa blindada del buque de asalto Daedalus contra el casco de la nave insignia enemiga, abrió las compuertas de proa y una falange de Destroids Tomahawk y Monster barrió el interior del crucero alienígena con fuego a quemarropa.",
+        "en": "Reaching Mars, SDF-1 forces sought desperately to replenish critical water and supplies at abandoned Mars Base Sara. Khyron sprung a lethal trap utilizing gravitational distortion mines that pinned the fortress to the Martian surface under orbital bombardment.\n\nFirst Officer Lisa Hayes manually overloaded the base's geothermal core amidst the ruins where her lost love Karl Riber had served. The thermonuclear eruption shattered the gravitational net. To breach Khyron's blocking fleet, Captain Gloval executed the humanoid Modular Transformation: punching the reinforced armored bow of the SLV-111 Daedalus through the alien warship's hull and unleashing a phalanx of Tomahawk and Monster Destroids directly inside the enemy craft."
+      },
+      "outcomes": {
+        "es": [
+          "Destrucción de la Base Sara y ruptura del bloqueo de Khyron en Marte.",
+          "Consagración militar de la táctica 'Ataque Daedalus'.",
+          "Desarrollo del Sistema de Barrera Puntual (Pin-Point Barrier System).",
+          "Khyron jura venganza personal contra el SDF-1 y los micronianos."
+        ],
+        "en": [
+          "Destruction of Mars Base Sara and breakthrough of Khyron's blockade.",
+          "Tactical perfection of the signature 'Daedalus Attack'.",
+          "Invention of the localized Pin-Point Barrier defensive shield.",
+          "Khyron vows obsessive vengeance against the SDF-1 micronians."
+        ]
+      },
+      "technologies": [
+        "Ataque Daedalus (Asalto de Proa a Quemarropa)",
+        "Barrera de Energía Pin-Point (PPB)",
+        "Cápsula de Mando Pesada Glaug (Khyron)"
+      ],
+      "casualties_impact": {
+        "es": "Daños moderados en el SDF-1; destrucción de una división naval completa de Khyron.",
+        "en": "Moderate structural damage to SDF-1; complete destruction of Khyron's battle group."
+      }
+    },
+    {
+      "id": "2010_cultural_shock_and_captivity",
+      "year": "2010",
+      "date_display": {
+        "es": "Marzo de 2010",
+        "en": "March 2010"
+      },
+      "era": "first_war",
+      "badge": {
+        "es": "PRIMER CONTACTO // SHOCK CULTURAL",
+        "en": "FIRST CONTACT // CULTURAL SHOCK"
+      },
+      "defcon": "DEFCON 2",
+      "title": {
+        "es": "Captura en la Nave Insignia Zentraedi y el Factor Minmay",
+        "en": "Captivity Aboard Breetai's Flagship & The Minmay Factor"
+      },
+      "subtitle": {
+        "es": "El descubrimiento de que el arte, el amor y la música pueden derrotar ejércitos",
+        "en": "The Discovery that Art, Love and Music Can Shatter Giant Armies"
+      },
+      "location": {
+        "es": "Nave Nodriza de Breetai, Espacio Profundo",
+        "en": "Breetai's Command Dreadnought, Deep Space"
+      },
+      "image": "assets/images/personajes/rick_hunter/rick_hunter y Roy.jpg",
+      "factions": [
+        {
+          "name_es": "U.N. Spacy // Pilotos de Reconocimiento",
+          "name_en": "U.N. Spacy // Recon Flight Wing",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        },
+        {
+          "name_es": "Alto Mando Zentraedi (Breetai & Exedore)",
+          "name_en": "Zentraedi High Command (Breetai & Exedore)",
+          "logo": "assets/images/ui/logo_zentran.png"
+        }
+      ],
+      "key_figures": [
+        "Rick Hunter",
+        "Lisa Hayes",
+        "Roy Fokker",
+        "Lynn Minmay",
+        "Comandante Breetai",
+        "Exedore Formo"
+      ],
+      "summary": {
+        "es": "Rick Hunter, Lisa Hayes y Roy Fokker son capturados por los Zentraedi e interrogados por Breetai y Exedore. Los gigantes guerreros quedan paralizados de terror e incomprensión al descubrir los conceptos humanos del afecto, la música, el beso y la vida civil, revelando la debilidad psicológica fundamental de una raza clonada solo para la guerra.",
+        "en": "Rick Hunter, Lisa Hayes, and Max Sterling are captured by Zentraedi forces and interrogated before Breetai and Exedore. The giant warriors are paralyzed with bewilderment and dread upon learning of human affection, kissing, music, and civilian emotions, exposing the critical vulnerability of a warrior race cloned purely for war."
+      },
+      "tactical_report": {
+        "es": "Durante una misión de reconocimiento en la nave Cat's Eye, Lisa Hayes y Rick Hunter fueron capturados e introducidos ante el Consejo de Guerra Zentraedi. Por primera vez, los mandos humanos vieron cara a cara a los gigantes alienígenas, mientras Breetai y Exedore estudiaban con pavor a los 'Micronianos'. Al ser obligados a demostrar cómo los humanos expresan afecto, Rick y Lisa compartieron un beso, provocando horror y repulsión en los soldados Zentraedi.\n\nEspías Zentraedi micronizados (Konda, Rico y Bron) se infiltraron en Macross City y quedaron totalmente hipnotizados por los conciertos de Lynn Minmay, la comida, los juguetes y la libertad individual. La música de Minmay comenzó a transmitirse en las frecuencias militares alienígenas, desatando una 'epidemia cultural' que erosionó la disciplina marcial de la flota Zentraedi más rápido que cualquier armamento balístico.",
+        "en": "During a deep-space reconnaissance flight, Lisa Hayes and Rick Hunter were captured and brought before the Zentraedi War Council. For the first time, humans stood face-to-face with the colossi. Compelled to demonstrate human mating customs, Rick and Lisa shared a kiss, sending shockwaves of panic and disgust across the alien command bridge.\n\nMicronized Zentraedi spies (Konda, Rico, and Bron) infiltrated Macross City and fell under the intoxicating sway of civilian freedom, romantic movies, and Lynn Minmay's pop music. Transmitted across open battle frequencies, Minmay's songs sparked a viral psychological revolution that dismantled Zentraedi military obedience far more effectively than nuclear warheads."
+      },
+      "outcomes": {
+        "es": [
+          "Escape exitoso de Rick, Lisa y Max Sterling gracias al asalto de Roy Fokker.",
+          "Descubrimiento de que los Zentraedi carecen de cultura, reproducción biológica y emociones.",
+          "Infiltración de los tres espías Zentraedi en Macross City.",
+          "Nacimiento del 'Arma Minmay' como doctrina psicológica de guerra."
+        ],
+        "en": [
+          "Successful escape of the recon crew aided by Roy Fokker's rescue assault.",
+          "Intelligence confirmed that Zentraedi are artificially cloned with zero culture.",
+          "Infiltration of the trio of Zentraedi spies into Macross City.",
+          "Birth of the 'Minmay Attack' psychological warfare doctrine."
+        ]
+      },
+      "technologies": [
+        "Cámara de Micronización Zentraedi",
+        "Dispositivos de Enlace Holográfico Interceptado",
+        "Transmisión Omnidireccional Psicoacústica"
+      ],
+      "casualties_impact": {
+        "es": "Pocas bajas físicas; impacto ideológico masivo en la jerarquía alienígena.",
+        "en": "Minor physical casualties; massive ideological demoralization across alien ranks."
+      }
+    },
+    {
+      "id": "2011_rain_of_death",
+      "year": "2011",
+      "date_display": {
+        "es": "Abril de 2011",
+        "en": "April 2011"
+      },
+      "era": "first_war",
+      "badge": {
+        "es": "HOLOCAUSTO PLANETARIO // APOCALIPSIS",
+        "en": "PLANETARY HOLOCAUST // APOCALYPSE"
+      },
+      "defcon": "DEFCON 1",
+      "title": {
+        "es": "El Día de la Lluvia de Muerte (The Rain of Death)",
+        "en": "The Day of the Rain of Death"
+      },
+      "subtitle": {
+        "es": "4.8 millones de naves alienígenas incineran el 95% de la superficie de la Tierra",
+        "en": "4.8 Million Warships Incinerate 95% of Earth's Surface"
+      },
+      "location": {
+        "es": "La Tierra (Órbita Global y Hemisferios Terrestres)",
+        "en": "Planet Earth (Global Orbit & Continental Hemispheres)"
+      },
+      "image": "assets/images/historia y guerras/portada_historia_y_guerras.jpg",
+      "factions": [
+        {
+          "name_es": "Gran Flota Imperial de Boddole Zer (Dolza)",
+          "name_en": "Grand Fleet of Supreme Commander Dolza",
+          "logo": "assets/images/ui/logo_zentran.png"
+        },
+        {
+          "name_es": "Defensas de la Tierra // Alaska Grand Cannon",
+          "name_en": "Earth Defense Forces // Alaska Grand Cannon",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        }
+      ],
+      "key_figures": [
+        "Comandante Supremo Boddole Zer (Dolza)",
+        "Almirante Donald Hayes",
+        "Capitán Henry J. Gloval",
+        "Lisa Hayes",
+        "Rick Hunter"
+      ],
+      "summary": {
+        "es": "Al comprobar que su flota de millones de naves se encuentra 'infectada' por las emociones humanas y la música de Lynn Minmay, el Comandante Supremo Dolza arriba a la Tierra con la Flota Imperial de 4.8 millones de naves y desata un bombardeo orbital masivo simultáneo. En pocos minutos, la superficie del planeta es reducida a cenizas y miles de millones de seres humanos perecen.",
+        "en": "Realizing his fleet of millions of warships is ideologically contaminated by human culture and Minmay's songs, Supreme Commander Dolza arrives with the Imperial Grand Fleet of 4.8 million warships, unleashing an omnidirectional orbital bombardment. Within minutes, 95% of the planet's surface is incinerated and billions perish."
+      },
+      "tactical_report": {
+        "es": "El SDF-1 finalmente había llegado a la Tierra, pero el Alto Mando del Gobierno de la Tierra, cegado por la arrogancia, desterró a la nave al espacio exterior para evitar atraer el ataque. No sirvió de nada. El cielo se oscureció cuando 4.800.000 buques capitales Zentraedi saltaron al unísono alrededor de la órbita terrestre formando una red esférica impenetrable.\n\nDolza ordenó fuego a discreción. Cada nave disparó sus rayos de energía pesada sobre las ciudades, continentes y océanos. Ciudades enteras como Nueva York, Tokio, Londres y París se evaporaron instantáneamente. En Alaska, el Alto Mando disparó el masivo 'Gran Cañón de Alaska' excavado en la corteza terrestre, vaporizando a cientos de miles de cruceros Zentraedi en un solo disparo cataclísmico antes de ser destruido por la réplica enemiga. La atmósfera ardió y la civilización humana colapsó en menos de diez minutos.",
+        "en": "The SDF-1 had finally arrived at Earth, but the arrogant United Earth High Command exiled the ship back to space to draw fire away from the planet. It was futile. The sky went pitch-black as 4,800,000 Zentraedi capital ships defolded in a dense spherical lattice around the globe.\n\nDolza ordered synchronized saturation fire. Deep-penetration laser and particle beam salvos scorched continents, vaporizing entire metropolitan centers including New York, Tokyo, London, and Paris. In Alaska, the buried planetary 'Grand Cannon' fired a cataclysmic blast that incinerated hundreds of thousands of alien warships before being obliterated by counter-bombardment. Earth's atmosphere ignited, reducing human civilization to ash in mere minutes."
+      },
+      "outcomes": {
+        "es": [
+          "Aniquilación del 95% de la biósfera y de la población mundial humana.",
+          "Destrucción del Gran Cañón de Alaska y muerte del Alto Mando Terrestre.",
+          "Lisa Hayes sobrevive en el búnker subterráneo de Alaska y es rescatada por Rick Hunter.",
+          "El SDF-1 y los remanentes aliados quedan como la única esperanza de supervivencia."
+        ],
+        "en": [
+          "Extinction of 95% of Earth's biosphere and human population.",
+          "Destruction of the Alaska Grand Cannon and death of the High Command.",
+          "Lisa Hayes survives in the deep command bunker and is rescued by Rick Hunter.",
+          "The SDF-1 and its fragile coalition stand as humanity's sole surviving bastion."
+        ]
+      },
+      "technologies": [
+        "Gran Cañón de Partículas Planetario de Alaska",
+        "Red de Saturación Orbital Imperial Zentraedi",
+        "Blindaje Térmico del Caza VF-1S Valkyrie"
+      ],
+      "casualties_impact": {
+        "es": "Aproximadamente 4.500 millones de seres humanos fallecidos; colapso ambiental mundial.",
+        "en": "Approximately 4.5 billion human casualties; total planetary ecological collapse."
+      }
+    },
+    {
+      "id": "2011_final_battle_boddole_zer",
+      "year": "2011",
+      "date_display": {
+        "es": "Mayo de 2011",
+        "en": "May 2011"
+      },
+      "era": "first_war",
+      "badge": {
+        "es": "BATALLA DECISIVA // ATAQUE MINMAY",
+        "en": "DECISIVE CLIMAX // MINMAY ATTACK"
+      },
+      "defcon": "DEFCON 1",
+      "title": {
+        "es": "La Batalla Final de Boddole Zer y la Alianza con Breetai",
+        "en": "The Final Battle of Boddole Zer & The Breetai Alliance"
+      },
+      "subtitle": {
+        "es": "La victoria del amor y la Protocultura en el interior de la Fortaleza Suprema",
+        "en": "Victory of Love & Protoculture Inside the Supreme Fortress"
+      },
+      "location": {
+        "es": "Órbita Alta Terrestre y Centro de Mando de Dolza",
+        "en": "High Earth Orbit & Dolza's Command Super-Fortress"
+      },
+      "image": "assets/images/naves/SDF-1/06c32862d9091a1ab7ebb73227604c77.jpg",
+      "factions": [
+        {
+          "name_es": "Alianza Tierra-Zentraedi (SDF-1 & Flota de Breetai)",
+          "name_en": "Earth-Zentraedi Alliance (SDF-1 & Breetai Fleet)",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        },
+        {
+          "name_es": "Gran Flota Imperial de Dolza",
+          "name_en": "Dolza's Imperial Grand Fleet",
+          "logo": "assets/images/ui/logo_zentran.png"
+        }
+      ],
+      "key_figures": [
+        "Lynn Minmay",
+        "Capitán Henry J. Gloval",
+        "Comandante Breetai",
+        "Rick Hunter",
+        "Lisa Hayes",
+        "Max Sterling",
+        "Miriya Parina"
+      ],
+      "summary": {
+        "es": "En el clímax de la Primera Guerra Robotech, el SDF-1 sella una histórica alianza con la Flota Zentraedi rebelde de Breetai. Transmitiendo la voz de Lynn Minmay en todas las frecuencias, el SDF-1 penetra violentamente el corazón de la colosal nave nodriza de Dolza y detona su Barrera Omnidireccional junto con todas sus ojivas de misiles, desintegrando a la flota invasora.",
+        "en": "In the climactic duel of the First Robotech War, the SDF-1 forges a historic pact with Breetai's defecting Zentraedi forces. Broadcasting Lynn Minmay's voice across all frequencies, the SDF-1 rams into the core of Dolza's colossal super-fortress, detonating its Omnidirectional Barrier and missile payload to obliterate the armada from within."
+      },
+      "tactical_report": {
+        "es": "Con el 95% del planeta incinerado, el Capitán Gloval y Breetai urdieron una táctica desesperada y sin precedentes: el 'Ataque Minmay'. Mientras Lynn Minmay cantaba 'We Will Win' y 'My Time to Be a Star' amplificada por todos los transmisores de la flota aliada, los millones de soldados de Dolza colapsaron en confusión psicológica y pánico religioso al ver a una hembra cantando y a cazas Veritech realizando acrobacias.\n\nAprovechando el caos, el SDF-1 activó su Barrera de Energía de 360 grados y embistió directamente contra la superestructura de la nave central de Dolza, penetrando hasta el núcleo del centro de mando. Allí dentro, Gloval descargó todas las baterías pesadas, el Cañón Principal y sobrecargó la barrera en una explosión termonuclear gigantesca que destruyó la fortaleza de Dolza. La reacción en cadena consumió a millones de naves de la flota enemiga.",
+        "en": "With Earth ablaze, Captain Gloval and Breetai devised a desperate tactical gambit: the 'Minmay Attack'. As Lynn Minmay sang 'We Will Win' amplified across open battle frequencies, millions of Dolza's warriors were paralyzed in psychological shock and mutinous awe at the sight of a female singing.\n\nCapitalizing on the chaos, the SDF-1 raised its 360-degree Barrier and accelerated at maximum thrust directly into the heart of Dolza's multi-kilometer flagship. Once inside the central chamber, Gloval fired all point-blank reflex batteries and deliberately overloaded the barrier into a catastrophic thermonuclear nova that annihilated Dolza and triggered a cosmic chain reaction through the imperial fleet."
+      },
+      "outcomes": {
+        "es": [
+          "Destrucción de la Gran Flota Imperial de Dolza y fin de la invasión masiva.",
+          "Supervivencia milagrosa del SDF-1, que desciende para posarse en la Tierra devastada.",
+          "Alianza formal y pacífica entre humanos y millones de Zentraedi aliados.",
+          "Inicio del duro proceso de reconstrucción planetaria y colonización."
+        ],
+        "en": [
+          "Obliteration of Dolza's Imperial Fleet and end of the invasion.",
+          "Miraculous survival of the scarred SDF-1, landing on the scorched Earth.",
+          "Historic peace accord between humanity and allied Zentraedi defectors.",
+          "Commencement of planetary ecological terraforming and reconstruction."
+        ]
+      },
+      "technologies": [
+        "Doctrina Psicoacústica 'Ataque Minmay'",
+        "Sobrecarga de Barrera Omnidireccional de 360 Grados",
+        "Caza de Élite VF-1S Strike / Super Valkyrie"
+      ],
+      "casualties_impact": {
+        "es": "Más de 4 millones de naves alienígenas destruidas; el SDF-1 sufre graves daños en sus cascos de proa.",
+        "en": "Over 4 million alien warships destroyed; SDF-1 suffers catastrophic structural damage."
+      }
+    },
+    {
+      "id": "2014_khyron_last_stand",
+      "year": "2014",
+      "date_display": {
+        "es": "Enero de 2014",
+        "en": "January 2014"
+      },
+      "era": "first_war",
+      "badge": {
+        "es": "ÚLTIMO COMBATE // SACRIFICIO HEROICO",
+        "en": "FINAL STAND // HEROIC SACRIFICE"
+      },
+      "defcon": "DEFCON 1",
+      "title": {
+        "es": "La Batalla de Nuevo Macross y la Destrucción del SDF-1 y SDF-2",
+        "en": "The Battle of New Macross & Destruction of SDF-1 and SDF-2"
+      },
+      "subtitle": {
+        "es": "El ataque suicida de Khyron y la muerte heroica del Capitán Gloval",
+        "en": "Khyron's Kamikaze Assault & The Heroic Sacrifice of Captain Gloval"
+      },
+      "location": {
+        "es": "Nuevo Macross City, Tierra Devastada",
+        "en": "New Macross City, Scorched Earth"
+      },
+      "image": "assets/images/naves/SDF-1/d2d78d1f2476161da198ec8a3ae7220a.jpg",
+      "factions": [
+        {
+          "name_es": "RDF // Gobierno de Reconstrucción de la Tierra",
+          "name_en": "RDF // Earth Reconstruction Government",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        },
+        {
+          "name_es": "Facciones Rebeldes Zentraedi (Khyron & Azonia)",
+          "name_en": "Rogue Zentraedi Insurgents (Khyron & Azonia)",
+          "logo": "assets/images/ui/logo_zentran.png"
+        }
+      ],
+      "key_figures": [
+        "Capitán Henry J. Gloval",
+        "Claudia Grant",
+        "Comandante Khyron",
+        "Comandante Azonia",
+        "Lisa Hayes",
+        "Rick Hunter"
+      ],
+      "summary": {
+        "es": "Khyron y Azonia recuperan un crucero de guerra Zentraedi averiado y lanzan un asalto desesperado contra Nuevo Macross City para robar la última cámara de Protocultura. Al verse acorralado, Khyron embiste su nave en un ataque kamikaze contra el SDF-1 y el recién terminado SDF-2, sepultando a las naves y a la plana mayor de mando en un holocausto radiactivo.",
+        "en": "Khyron and Azonia reactivate a downed Zentraedi gunship, launching a suicidal strike against New Macross City to seize the last Protoculture matrix. Outgunned, Khyron steers his ship into a kamikaze collision against both the SDF-1 and newly christened SDF-2, annihilating the command bridge and killing Captain Gloval."
+      },
+      "tactical_report": {
+        "es": "Dos años después del fin de la guerra, Nuevo Macross City prosperaba como el epicentro de la reconstrucción pacífica entre humanos y Zentraedi micronizados. Sin embargo, facciones renegadas lideradas por Khyron se negaban a someterse a la paz. Tras capturar una cámara de Protocultura en una base de suministros, Khyron y Azonia energizaron un crucero acorazado y volaron directamente hacia la base donde reposaba el SDF-1 junto al nuevo SDF-2.\n\nEn un duelo de artillería épico, el SDF-1 logró abrir fuego con su último aliento de energía, destruyendo las armas de Khyron. Comprendiendo su inminente final, Khyron fijó los aceleradores a máxima potencia y se estrelló de lleno contra el puente de mando de la fortaleza. El Capitán Henry J. Gloval logró empujar a Lisa Hayes hacia la única cápsula de escape presurizada antes de que el puente explotara. Gloval, Claudia Grant y las operadoras del puente fallecieron en el impacto.",
+        "en": "Two years after the armistice, New Macross City flourished as the beacon of peaceful coexistence between humans and micronized Zentraedi. However, insurgent factions led by Khyron rejected peace. Stealing a Protoculture energy matrix, Khyron and Azonia powered up a scarred battlecruiser and spearheaded a direct suicide run toward the SDF-1 and the nearly completed SDF-2.\n\nIn a furious artillery duel, the SDF-1 channeled its final reserves to fire its main batteries, crippling the alien vessel's weapons. Seeing his doom, Khyron locked throttle to maximum thrust and rammed straight into the command citadel. Captain Henry J. Gloval shoved Lisa Hayes into the last ejection shelter moments before detonation. Gloval, Claudia Grant, and the veteran bridge crew perished together."
+      },
+      "outcomes": {
+        "es": [
+          "Destrucción definitiva del SDF-1, SDF-2 y el crucero de batalla de Khyron.",
+          "Muerte heroica del Capitán Henry J. Gloval, Claudia Grant y la tripulación del puente.",
+          "Entierro de los restos del SDF-1 y de la Matriz de Protocultura original bajo los montículos.",
+          "Rick Hunter y Lisa Hayes asumen el mando supremo para liderar la Misión Pionera (REF)."
+        ],
+        "en": [
+          "Complete destruction of the SDF-1, SDF-2, and Khyron's battlecruiser.",
+          "Heroic deaths of Captain Henry J. Gloval, Claudia Grant, and bridge staff.",
+          "Entombment of the SDF-1 wreckage and the original Protoculture Matrix beneath the burial mounds.",
+          "Rick Hunter and Lisa Hayes assume high command to launch the REF Pioneer Mission."
+        ]
+      },
+      "technologies": [
+        "Construcción del SDF-2 Megaload",
+        "Aislamiento Radiactivo de Túmulos de Protocultura",
+        "Prototipo de Cruceros de Batalla de Clase Pioneer"
+      ],
+      "casualties_impact": {
+        "es": "Muerte de toda la cúpula de mando original de la RDF; Nuevo Macross City reducida a ruinas.",
+        "en": "Loss of the original RDF senior command; New Macross City devastated."
+      }
+    },
+    {
+      "id": "2022_pioneer_mission_departure",
+      "year": "2022",
+      "date_display": {
+        "es": "Diciembre de 2022",
+        "en": "December 2022"
+      },
+      "era": "pioneer",
+      "badge": {
+        "es": "MISIÓN PIONERA // VIAJE A TIROL",
+        "en": "PIONEER MISSION // VOYAGE TO TIROL"
+      },
+      "defcon": "DEFCON 2",
+      "title": {
+        "es": "Partida de la Fuerza Expedicionaria Robotech (REF / SDF-3)",
+        "en": "Departure of the Robotech Expeditionary Force (REF / SDF-3)"
+      },
+      "subtitle": {
+        "es": "La humanidad viaja hacia las estrellas para evitar una nueva guerra en la Tierra",
+        "en": "Humanity Journeys into Deep Space to Prevent Another War on Earth"
+      },
+      "location": {
+        "es": "Órbita Terrestre y Fábrica Satélite Espacial Robotech",
+        "en": "Earth Orbit & Space Robotech Factory Satellite"
+      },
+      "image": "assets/images/personajes/rick_hunter/rick_hunter y Lisa.jpg",
+      "factions": [
+        {
+          "name_es": "Fuerza Expedicionaria Robotech (REF / UEEF)",
+          "name_en": "Robotech Expeditionary Force (REF / UEEF)",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        },
+        {
+          "name_es": "Gobierno de Defensa de la Tierra",
+          "name_en": "United Earth Defense Government",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        }
+      ],
+      "key_figures": [
+        "Almirante Rick Hunter",
+        "Almirante Lisa Hayes-Hunter",
+        "Dr. Emil Lang",
+        "Comandante Breetai",
+        "Exedore Formo",
+        "General Anatole Leonard"
+      ],
+      "summary": {
+        "es": "Conscientes de que los amos de los Zentraedi (los temidos Maestros de la Robotecnia) vendrán tarde o temprano a reclamar la nave de Zor, el Almirante Rick Hunter y Lisa Hayes parten al espacio profundo al mando del nuevo buque insignia SDF-3 Pioneer y una gigantesca flota expedicionaria. Su objetivo es encontrar el planeta natal de los alienígenas y buscar la paz diplomática.",
+        "en": "Aware that the masters of the Zentraedi—the feared Robotech Masters—will eventually come to reclaim Zor's vessel, Admiral Rick Hunter and Lisa Hayes depart into the galaxy aboard the new flagship SDF-3 Pioneer. Leading an armada of humans and allied Zentraedi, their mission is to locate the alien homeworld of Tirol and secure diplomatic peace."
+      },
+      "tactical_report": {
+        "es": "La estrategia militar ideada por la RDF tras la Primera Guerra Robotech era clara: la Tierra, con su biosfera apenas en recuperación, jamás resistiría una segunda invasión alienígena a escala orbital. Por tanto, la guerra debía trasladarse lejos de casa.\n\nUtilizando la gigantesca Fábrica Satélite Zentraedi capturada en órbita, se construyó el SDF-3 Pioneer, una nave tres veces más potente y avanzada que el SDF-1. Rick Hunter y Lisa Hayes contrajeron matrimonio antes de la partida. Mientras la REF zarpaba hacia las profundidades del Cuadrante Galáctico, la defensa de la Tierra quedó encomendada al Ejército de la Cruz del Sur (Army of the Southern Cross - ASC) liderado por el inflexible General Anatole Leonard. Trágicamente, ambas flotas se cruzaron en el hiperespacio: mientras la REF viajaba a Tirol, la flota de los Maestros ya venía en camino hacia la Tierra.",
+        "en": "The strategic consensus following the First War was unanimous: Earth's fragile regenerating ecosystem could not endure another planetary war. Any future conflict had to be intercepted in deep space before reaching Earth.\n\nLeveraging the captured Zentraedi Factory Satellite, humanity constructed the SDF-3 Pioneer, a battle-fortress far superior to its predecessor. Rick Hunter and Lisa Hayes married on the eve of launch. As the REF defolded toward the far reaches of the galaxy, terrestrial defense was entrusted to the Army of the Southern Cross (ASC) under Supreme Commander Anatole Leonard. Tragically, the two armadas crossed paths in fold space: as the REF voyaged to Tirol, the Robotech Masters were already en route to Earth."
+      },
+      "outcomes": {
+        "es": [
+          "Partida del SDF-3 Pioneer con lo mejor de la flota militar humana y Zentraedi.",
+          "Creación en la Tierra del Ejército de la Cruz del Sur (ASC) para la defensa local.",
+          "La Tierra queda sin sus veteranos más experimentados ni sus mejores naves de guerra.",
+          "Comienzo de las Guerras de los Centinelas en mundos alienígenas distantes."
+        ],
+        "en": [
+          "Launch of the SDF-3 Pioneer with the elite cadre of human and Zentraedi forces.",
+          "Formation of the Army of the Southern Cross (ASC) for home planetary defense.",
+          "Earth is left without its most seasoned veterans or primary capital warships.",
+          "Ignition of the Sentinels Campaign across distant alien star systems."
+        ]
+      },
+      "technologies": [
+        "Fortaleza Espacial de Nueva Generación SDF-3 Pioneer",
+        "Unidades de Propulsión Fold Mejoradas",
+        "Flota Modular REF y Cazas Alpha de Producción Temprana"
+      ],
+      "casualties_impact": {
+        "es": "Sin bajas inmediatas; separación emocional prolongada de miles de familias de combatientes.",
+        "en": "Zero battle casualties; poignant separation of pioneer crews from Earth for decades."
+      }
+    },
+    {
+      "id": "2029_second_robotech_war_masters_arrival",
+      "year": "2029-2030",
+      "date_display": {
+        "es": "Marzo de 2029 - Junio de 2030",
+        "en": "March 2029 - June 2030"
+      },
+      "era": "second_war",
+      "badge": {
+        "es": "SEGUNDA GUERRA // INVASIÓN TIROLESA",
+        "en": "SECOND WAR // TIROLIAN INVASION"
+      },
+      "defcon": "DEFCON 1",
+      "title": {
+        "es": "La Segunda Guerra Robotech: Los Maestros de la Robotecnia",
+        "en": "The Second Robotech War: The Robotech Masters Arrive"
+      },
+      "subtitle": {
+        "es": "El Ejército de la Cruz del Sur contra los Bioroids y naves bioplásmicas",
+        "en": "The Army of the Southern Cross vs. Alien Bioroids & Motherships"
+      },
+      "location": {
+        "es": "Órbita Terrestre y Ruinas de Nuevo Macross (Tierra)",
+        "en": "Earth Orbit & Ruins of New Macross (Earth)"
+      },
+      "image": "assets/images/naves/portada_naves.jpg",
+      "factions": [
+        {
+          "name_es": "Ejército de la Cruz del Sur (ASC // 15º Escuadrón)",
+          "name_en": "Army of the Southern Cross (ASC // 15th Squadron)",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        },
+        {
+          "name_es": "Flota Armada de los Maestros de la Robotecnia",
+          "name_en": "Robotech Masters Imperial Fleet",
+          "logo": "assets/images/ui/logo_zentran.png"
+        }
+      ],
+      "key_figures": [
+        "Teniente Dana Sterling",
+        "Zor Prime",
+        "Supremo Comandante Anatole Leonard",
+        "Bowie Grant",
+        "Rolf Emerson",
+        "Maestros de la Robotecnia (Triunvirato)"
+      ],
+      "summary": {
+        "es": "Los creadores de la Robotecnología, los Maestros de la Robotecnia, llegan a la Tierra con sus gigantescas naves colmena. Desesperados por cosechar la Matriz de Protocultura antes de que se agote su energía y los Invid los alcancen, entran en una brutal guerra de desgaste contra el Ejército de la Cruz del Sur, encabezado en tierra por la joven oficial Dana Sterling.",
+        "en": "The creators of Robotechnology—the Robotech Masters—arrive at Earth in their colossal city-ships. Desperate to reclaim the Protoculture Matrix buried in the SDF-1 ruins before their bio-energy runs dry and the Invid swarm discovers them, they wage a war of attrition against the Army of the Southern Cross, spearheaded on the ground by Lieutenant Dana Sterling."
+      },
+      "tactical_report": {
+        "es": "Quince años después de la muerte de Dolza, las naves de los Maestros aparecieron sobre la Tierra. A diferencia de los Zentraedi, los Maestros no buscaban destruir la humanidad, sino excavar quirúrgicamente las ruinas del SDF-1 para recuperar la última Matriz de Protocultura activa del universo.\n\nEl Supremo Comandante Anatole Leonard adoptó una postura intransigente de ofensiva frontal total, enviando oleadas de cazas y cruceros del ASC contra las pantallas de energía bioplásmica de los invasores. En tierra, la Teniente Dana Sterling (hija de Max y Miriya) comandaba el 15º Escuadrón Táctico de Hovertanks Spartas VHT-1. Dana y su escuadrón lograron infiltrarse en las naves colmena de los Maestros, capturando a un piloto Bioroid clonado que resultó ser Zor Prime, el clon del creador original de la Robotecnología.",
+        "en": "Fifteen years after Dolza's fall, the city-ships of the Masters darkened Earth's skies. Unlike the Zentraedi, the Masters did not seek planetary annihilation, but rather surgical access to the buried SDF-1 wreckage to excavate the universe's last functional Protoculture Matrix.\n\nSupreme Commander Anatole Leonard executed an unyielding policy of relentless frontal assaults, sacrificing fleets against impenetrable alien defensive matrices. On Earth, Lieutenant Dana Sterling (daughter of Max and Miriya) commanded the 15th Tactical Armored Hovertank Corps (VHT-1 Spartas). Dana's squad infiltrated the flagship mothership, capturing a cloned Bioroid pilot revealed to be Zor Prime, the genetic re-creation of Robotechnology's legendary father."
+      },
+      "outcomes": {
+        "es": [
+          "Descubrimiento de la vulnerabilidad de los Bioroids y ruptura del control mental de los clones.",
+          "Infiltración exitosa del 15º Escuadrón Táctico en la nave nodriza alienígena.",
+          "Muerte en combate del General Rolf Emerson y del Supremo Comandante Leonard.",
+          "El Ejército de la Cruz del Sur pierde más del 70% de sus fuerzas aeroespaciales."
+        ],
+        "en": [
+          "Discovery of Bioroid interface mechanics and breaking of clone bio-telepathic conditioning.",
+          "Successful tactical infiltration of the alien flagship by the 15th Squad.",
+          "Battlefield deaths of General Rolf Emerson and Supreme Commander Leonard.",
+          "The Army of the Southern Cross loses over 70% of its aerospace defense assets."
+        ]
+      },
+      "technologies": [
+        "Hovertank Transformable VHT-1 Spartas",
+        "Mechas Bioroid Psicolink de los Maestros",
+        "Naves Ciudad Bioplásmicas con Escudos Reflectores",
+        "Caza Ligero de Ataque Espacial Logan y Veritech Ajax"
+      ],
+      "casualties_impact": {
+        "es": "Colapso casi total de las defensas militares de la Tierra; miles de soldados del ASC fallecidos.",
+        "en": "Near-total collapse of Earth military defenses; thousands of ASC casualties."
+      }
+    },
+    {
+      "id": "2030_climax_masters_flower_of_life",
+      "year": "2030",
+      "date_display": {
+        "es": "Julio de 2030",
+        "en": "July 2030"
+      },
+      "era": "second_war",
+      "badge": {
+        "es": "CATACLISMO // FLOR DE LA VIDA",
+        "en": "CATACLYSM // FLOWER OF LIFE"
+      },
+      "defcon": "DEFCON 1",
+      "title": {
+        "es": "La Caída de los Maestros y la Liberación de las Esporas Invid",
+        "en": "The Fall of the Masters & Release of the Flower of Life"
+      },
+      "subtitle": {
+        "es": "El sacrificio de Zor Prime y el llamado inevitable a la invasión Invid",
+        "en": "Zor Prime's Sacrifice & The Irresistible Beacon Calling the Invid"
+      },
+      "location": {
+        "es": "Nave Nodriza Suprema y Valle del SDF-1 (Tierra)",
+        "en": "Supreme Mothership & SDF-1 Valley (Earth)"
+      },
+      "image": "assets/images/naves/SDF-1/1b28a79cdd4adc2c5096ee9b3d7eaa26.jpg",
+      "factions": [
+        {
+          "name_es": "15º Escuadrón Táctico (Dana Sterling & Zor Prime)",
+          "name_en": "15th Tactical Squad (Dana Sterling & Zor Prime)",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        },
+        {
+          "name_es": "Alto Triunvirato de los Maestros de la Robotecnia",
+          "name_en": "High Triumvirate of the Robotech Masters",
+          "logo": "assets/images/ui/logo_zentran.png"
+        }
+      ],
+      "key_figures": [
+        "Zor Prime",
+        "Teniente Dana Sterling",
+        "Musica (Sirenista)",
+        "Bowie Grant",
+        "Los Maestros de la Robotecnia"
+      ],
+      "summary": {
+        "es": "Al recuperar la memoria de su antepasado, Zor Prime se rebela contra los Maestros y destruye la nave nodriza estelar sobre las ruinas del SDF-1. Sin embargo, la explosión rompe los sellos herméticos de la Matriz de Protocultura original, esparciendo trillones de esporas de la Flor de la Vida por la atmósfera terrestre, atrayendo al enjambre Invid.",
+        "en": "Recovering the memories of his original self, Zor Prime turns against the Masters and detonates the flagship mothership over the SDF-1 ruins. Tragically, the explosion shatters the bio-containment seals of the buried Protoculture Matrix, releasing trillions of Flower of Life spores across the globe and summoning the Invid swarm."
+      },
+      "tactical_report": {
+        "es": "En la batalla climática final, Zor Prime asesinó a los tres miembros del Alto Triunvirato de los Maestros en su sanctasanctórum biológico. Para evitar que la Matriz cayera en manos alienígenas, Zor estrelló la gigantesca nave colmena contra el montículo funerario donde reposaban los motores de Protocultura del SDF-1.\n\nDana Sterling y los supervivientes del 15º Escuadrón lograron evacuar segundos antes de la deflagración. La nave de los Maestros estalló en una supernova bioplásmica que aniquiló a la armada invasora. No obstante, el impacto no destruyó la Protocultura: la liberó. Nubes brillantes de esporas de la Flor de la Vida flotaron sobre la Tierra como polen cósmico, emitiendo una señal biológica inconfundible que viajó a la velocidad de la luz hacia el imperio Invid.",
+        "en": "In the climactic confrontation, Zor Prime executed the ruling triumvirate of the Masters inside their biological sanctum. To ensure the Matrix never fueled conquest again, Zor piloted the failing leviathan directly into the funeral burial mound sheltering the SDF-1's Protoculture generators.\n\nDana Sterling and her surviving comrades escaped moments before the cataclysm. The mothership ignited in a bioplasmic supernova, obliterating the Masters' remaining fleet. However, the blast did not incinerate the Protoculture—it liberated it. Trillions of glowing Flower of Life spores germinated across Earth's continents, broadcasting a radiant bio-resonance signal across the cosmos directly to the hungry Invid swarm."
+      },
+      "outcomes": {
+        "es": [
+          "Aniquilación definitiva de los Maestros de la Robotecnia y su civilización.",
+          "Muerte heroica de Zor Prime en la detonación de la nave nodriza.",
+          "Germinación de la Flor de la Vida en todos los continentes de la Tierra.",
+          "La Tierra queda indefensa ante la inminente llegada de la Horda Invid."
+        ],
+        "en": [
+          "Extinction of the Robotech Masters and collapse of their imperial regime.",
+          "Heroic martyrdom of Zor Prime in the flagship core explosion.",
+          "Worldwide germination of the alien Flower of Life across Earth's soil.",
+          "Earth is left utterly defenseless against the incoming Invid swarm."
+        ]
+      },
+      "technologies": [
+        "Matriz Bioenergética de Protocultura (Flor de la Vida)",
+        "Esporas de Germinación Global",
+        "Bioroid Rojo Invid-Fighter de Zor Prime"
+      ],
+      "casualties_impact": {
+        "es": "Destrucción total de la armada de los Maestros; aniquilación del mando militar terrestre.",
+        "en": "Total destruction of the Masters' armada; decimation of Earth's military command."
+      }
+    },
+    {
+      "id": "2031_invid_invasion_earth_fall",
+      "year": "2031",
+      "date_display": {
+        "es": "Enero de 2031",
+        "en": "January 2031"
+      },
+      "era": "third_war",
+      "badge": {
+        "es": "TERCERA GUERRA // OCUPACIÓN TOTAL",
+        "en": "THIRD WAR // PLANETARY CONQUEST"
+      },
+      "defcon": "DEFCON 1",
+      "title": {
+        "es": "La Invasión Invid y la Caída de la Tierra",
+        "en": "The Invid Invasion & The Fall of Earth"
+      },
+      "subtitle": {
+        "es": "La Reina Regiss conquista el planeta e instaura la ocupación cibernética",
+        "en": "The Invid Regiss Conquers Earth & Establishes Colonial Hive Rule"
+      },
+      "location": {
+        "es": "Punto Réflex (América del Norte) y Cobertura Planetaria",
+        "en": "Reflex Point (North America) & Worldwide Planetary Grid"
+      },
+      "image": "assets/images/mechas/Cyclone/df2b7cb1f34cbffe77a1544227c2e127.jpg",
+      "factions": [
+        {
+          "name_es": "Horda Invid (Reina Madre Regiss)",
+          "name_en": "Invid Swarm (The Regiss / Regis)",
+          "logo": "assets/images/ui/logo_zentran.png"
+        },
+        {
+          "name_es": "Remanentes de la Tierra // Civiles",
+          "name_en": "Earth Remnants // Civilian Resistance",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        }
+      ],
+      "key_figures": [
+        "La Regiss (Reina Madre Invid)",
+        "Príncipe Corg",
+        "Princesa Sera",
+        "Supervivientes Civiles"
+      ],
+      "summary": {
+        "es": "Apenas unos meses después de la Segunda Guerra Robotech, la Reina Madre Invid (La Regiss) arriba a la Tierra con miles de millones de mechas biológicos orgánicos (Invid Troopers, Shock Troopers e Inorganics). Sin ejército que pueda oponer resistencia, la Tierra es conquistada en menos de una semana y su población sometida a campos de trabajo agrícola para cultivar la Flor de la Vida.",
+        "en": "Mere months after the Second War, the Invid Queen Mother (The Regiss) defolds into Earth's skies with millions of bio-mecha drones (Invid Scouts, Shock Troopers, and Enforcers). With Earth's defense forces shattered, the planet falls within days, subjecting humanity to alien occupation and slave-labor farming of the Flower of Life."
+      },
+      "tactical_report": {
+        "es": "Los Invid, una raza despojada de su mundo natal Optera por los Maestros de la Robotecnia, cruzaron las galaxias siguiendo el olor de su fuente de vida original: la Flor de la Vida. Al llegar a la Tierra, encontraron un planeta fértil donde las flores brotaban silvestres.\n\nLos remanentes del Ejército de la Cruz del Sur intentaron una resistencia testimonial, pero fueron aplastados en cuestión de horas por la superioridad numérica abrumadora de las cápsulas Invid. La Regiss estableció su colmena central y palacio biomecánico en **Punto Réflex (Reflex Point)**, en América del Norte. Los sensores Invid, capaces de detectar el uso de Protocultura activa a kilómetros de distancia, convirtieron cualquier encendido de motor o mecha humano en una sentencia de muerte instantánea. La humanidad entró en su hora más oscura.",
+        "en": "The Invid, driven from their ancestral homeworld Optera by the Robotech Masters, had tracked the scent of their divine Flower of Life across the stars. Reaching Earth, they found a paradise where the flowers bloomed wild across every continent.\n\nShattered ASC garrisons attempted valiant last stands, but were overwhelmed in hours by endless swarms of Invid organic mecha. The Regiss constructed her towering biomechanical hive and citadel at **Reflex Point** in North America. Tuning sensory grids to detect Protoculture emissions across vast distances, any human machine activating Protoculture invited instant vaporizing bombardment. Humanity was plunged into dark-age alien captivity."
+      },
+      "outcomes": {
+        "es": [
+          "Ocupación Invid absoluta de la Tierra y construcción de la colmena en Punto Réflex.",
+          "Prohibición estricta de tecnología de Protocultura para la población civil.",
+          "Humanidad reducida a colonias agrarias y enclaves nómadas en las ruinas.",
+          "La Fuerza Expedicionaria Robotech (REF) en el espacio profundo recibe el llamado de socorro."
+        ],
+        "en": [
+          "Complete Invid conquest of Earth and construction of the hive at Reflex Point.",
+          "Strict ban and sensor-targeting of human Protoculture emissions.",
+          "Human population reduced to farming enclaves and nomadic scavenging.",
+          "The Robotech Expeditionary Force (REF) receives emergency distress transmissions in deep space."
+        ]
+      },
+      "technologies": [
+        "Mechas Biológicos Invid (Scout, Shock Trooper, Enforcer)",
+        "Sensores de Detección de Frecuencia de Protocultura",
+        "Colmena Biomecánica de Punto Réflex"
+      ],
+      "casualties_impact": {
+        "es": "Decenas de miles de militares eliminados; la totalidad del planeta cae bajo dominio Invid.",
+        "en": "Tens of thousands of soldiers slain; total planetary subjugation."
+      }
+    },
+    {
+      "id": "2038_mars_division_disaster",
+      "year": "2038",
+      "date_display": {
+        "es": "Septiembre de 2038",
+        "en": "September 2038"
+      },
+      "era": "third_war",
+      "badge": {
+        "es": "RECONQUISTA FALLIDA // EMBOSCADA ORBITAL",
+        "en": "FAILED RECONQUEST // ORBITAL AMBUSH"
+      },
+      "defcon": "DEFCON 1",
+      "title": {
+        "es": "El Trágico Desembarco de la 10ª División de Marte (REF)",
+        "en": "The Tragic Slaughter of the REF 10th Mars Division"
+      },
+      "subtitle": {
+        "es": "La primera oleada de reconquista es aniquilada en el reingreso atmosférico",
+        "en": "The First Liberation Fleet Is Vaporized in Earth's Upper Atmosphere"
+      },
+      "location": {
+        "es": "Atmósfera Superior Terrestre y Tierras Baldías",
+        "en": "Earth Upper Stratosphere & Barren Wastelands"
+      },
+      "image": "assets/images/mechas/Alfa Fighter/front.jpg",
+      "factions": [
+        {
+          "name_es": "10ª División de Marte (Fuerza Expedicionaria REF)",
+          "name_en": "10th Mars Division (REF Liberation Fleet)",
+          "logo": "assets/images/ui/Mars_Base.png"
+        },
+        {
+          "name_es": "Enjambre de Defensa Orbital Invid",
+          "name_en": "Invid Orbital Defense Swarm",
+          "logo": "assets/images/ui/logo_zentran.png"
+        }
+      ],
+      "key_figures": [
+        "Teniente Scott Bernard",
+        "Marlene Rush (Prometida de Scott)",
+        "Comandantes de la 10ª División"
+      ],
+      "summary": {
+        "es": "La primera flota de ataque enviada por la REF desde el espacio profundo para liberar la Tierra, la 10ª División de Marte, desdobla en órbita terrestre. Pero los Invid desatan una emboscada aérea masiva con enjambres espaciales. La flota entera es desintegrada mientras sus cazas descienden ardiendo en la atmósfera; solo un puñado de soldados, incluido el Teniente Scott Bernard, sobreviven al impacto en tierra.",
+        "en": "The first liberation task force deployed by the REF from deep space, the 10th Mars Division, defolds into Earth's orbit. The Invid launch an ambush of unprecedented ferocity. Warships and troop carriers are torn to shreds during atmospheric reentry. Only a handful of soldiers, including Lieutenant Scott Bernard, survive crash-landing on the surface."
+      },
+      "tactical_report": {
+        "es": "La Fuerza Expedicionaria Robotech creía que la Tierra podía ser liberada mediante un asalto orbital relámpago coordinado con cazas transformables VAF-6 Alpha. Sin embargo, subestimaron la ferocidad y coordinación de los Invid. En cuanto las naves de transporte Garfish y acorazados de asalto entraron en la termosfera, millones de Invid Shock Troopers se abalanzaron sobre ellos.\n\nLos escudos de reingreso ardían mientras los misiles Invid destrozaban nave tras nave. El caza de la teniente Marlene Rush, prometida de Scott Bernard, fue alcanzado directamente y estalló frente a sus ojos. El Alpha de Scott cayó en picada en llamas y aterrizó de emergencia en un bosque desolado. Solo, con el corazón roto pero con una determinación inquebrantable, Scott activó su moto-armadura Ciclón y juró cumplir su misión militar: llegar a Punto Réflex y destruir a los Invid.",
+        "en": "The REF high command believed Earth could be liberated with a swift orbital strike utilizing next-generation VAF-6 Alpha variable fighters. They gravely underestimated the numbers and hive-mind precision of the Invid. As Garfish troop transports entered the fiery stratosphere, millions of Invid Shock Troopers fell upon the descent corridor.\n\nAtmospheric heat-shields buckled as plasma fire ripped through human cruisers. The fighter of Lieutenant Marlene Rush, Scott Bernard's fiancée, took a direct missile hit, detonating before his eyes. Scott's Alpha fighter spiraled down in flames, crash-landing into a desolate wilderness. Marooned and grief-stricken, Scott donned his VR-052 Cyclone armor, swearing to complete his sacred objective: reach Reflex Point and liberate Earth."
+      },
+      "outcomes": {
+        "es": [
+          "Aniquilación del 99% de la flota de la 10ª División de Marte de la REF.",
+          "Muerte de la teniente Marlene Rush y de miles de pilotos de combate.",
+          "Supervivencia del Teniente Scott Bernard en suelo terrestre.",
+          "Nacimiento del comando de resistencia de Scott hacia Punto Réflex."
+        ],
+        "en": [
+          "Destruction of 99% of the REF 10th Mars Division task force.",
+          "Death of Lieutenant Marlene Rush and thousands of frontline pilots.",
+          "Survival of Lieutenant Scott Bernard on the surface.",
+          "Ignition of Scott's legendary guerrilla march toward Reflex Point."
+        ]
+      },
+      "technologies": [
+        "Caza Variable Aeroespacial VAF-6 Alpha Fighter",
+        "Traje de Combate y Moto Transformable VR-052 Cyclone",
+        "Transportes de Asalto Espacial Clase Garfish"
+      ],
+      "casualties_impact": {
+        "es": "Más de 20.000 combatientes de la REF muertos en la reentrada orbital.",
+        "en": "Over 20,000 REF troops killed during atmospheric descent."
+      }
+    },
+    {
+      "id": "2042_2044_bernard_cyclone_resistance",
+      "year": "2042-2044",
+      "date_display": {
+        "es": "1942 - 2044",
+        "en": "2042 - 2044"
+      },
+      "era": "third_war",
+      "badge": {
+        "es": "GUERRA DE GUERRILLAS // LA RESISTENCIA",
+        "en": "GUERRILLA WARFARE // THE RESISTANCE"
+      },
+      "defcon": "DEFCON 2",
+      "title": {
+        "es": "La Odisea de la Resistencia de Scott Bernard y los Cyclones",
+        "en": "The Odyssey of Scott Bernard's Cyclone Resistance"
+      },
+      "subtitle": {
+        "es": "Una banda de rebeldes armados con Cyclones atraviesa un continente ocupado",
+        "en": "A Band of Misfits Armed with Cyclones Fights Across an Occupied Continent"
+      },
+      "location": {
+        "es": "Rutas y Enclaves de América del Norte hacia Punto Réflex",
+        "en": "North American Highways, Ruins & Outposts toward Reflex Point"
+      },
+      "image": "assets/images/mechas/Cyclone/Armadura.jpg",
+      "factions": [
+        {
+          "name_es": "Comando de Resistencia Terrestre (Escuadrón Bernard)",
+          "name_en": "Earth Resistance Vanguard (Bernard Squad)",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        },
+        {
+          "name_es": "Fuerzas de Ocupación Invid",
+          "name_en": "Invid Occupation Forces",
+          "logo": "assets/images/ui/logo_zentran.png"
+        }
+      ],
+      "key_figures": [
+        "Teniente Scott Bernard",
+        "Rand (Motociclista carroñero)",
+        "Rook Bartley",
+        "Lancer / Yellow Dancer (Piloto encubierto)",
+        "Lunk (Mecánico de la RDF)",
+        "Annie LaBelle",
+        "Ariel / Marlene (Invid humanizada)"
+      ],
+      "summary": {
+        "es": "A lo largo de miles de kilómetros, Scott Bernard reúne a un variopinto grupo de supervivientes, rebeldes y civiles: Rand, Rook Bartley, el veterano encubierto Lancer, Lunk, la joven Annie y una amnésica Invid humanizada llamada Ariel (Marlene). Armados con motos transformables Cyclone y cazas Alpha recuperados, destruyen colmenas secundarias, liberan pueblos y lideran la marcha popular hacia Punto Réflex.",
+        "en": "Spanning thousands of miles of ruins, Scott Bernard unites a ragtag team of scavengers, rebels, and veteran pilots: Rand, Rook Bartley, undercover operative Lancer, combat mechanic Lunk, Annie, and a humanized Invid amnesiac named Ariel (Marlene). Armed with transformable Cyclone armor-cycles and recovered Alpha fighters, they liberate settlements and advance toward Reflex Point."
+      },
+      "tactical_report": {
+        "es": "La táctica de guerra regular no servía de nada contra la red sensitiva de los Invid. La resistencia adoptó la guerra asimétrica: circular en motocicletas normales y solo acoplar las armaduras de Protocultura Cyclone (VR-052, VR-041, VR-038) en los segundos cruciales del asalto para evitar ser detectados por los sensores colmena.\n\nEl equipo de Scott se convirtió en leyenda. Destruyeron fortalezas Invid subterráneas, frustraron experimentos genéticos de La Regiss y demostraron a la desmoralizada población humana que los invasores alienígenas podían sangrar y morir. La presencia de Ariel—una Invid transmutada en cuerpo de mujer humana por la Regiss para estudiar a los humanos, que perdió la memoria y se enamoró de Scott—demostró que incluso entre especies enemigas, la empatía y la paz eran posibles.",
+        "en": "Conventional frontal doctrine was suicide against the Invid sensor net. Bernard's squad pioneered asymmetric hit-and-run warfare: traveling in unpowered motorbikes and engaging their Protoculture-powered Cyclone riding armor (VR-052, VR-041, VR-038) only at the moment of tactical ambush to bypass alien radar.\n\nScott's band became freedom icons across the wastelands. They obliterated Invid hives, sabotaged transmutation labs, and proved to humanity that the hive conquerors were not invincible gods. The presence of Ariel—an Invid princess bio-engineered into human form who lost her memory and fell in love with Scott—proved that understanding and love could transcend hatred between warring species."
+      },
+      "outcomes": {
+        "es": [
+          "Destrucción de múltiples colmenas y puestos de mando Invid regionales.",
+          "Inspiración de un levantamiento general de la resistencia civil en todo el continente.",
+          "Descubrimiento de que los Invid están evolucionando hacia formas humanoides.",
+          "El Escuadrón Bernard alcanza los perímetros exteriores de Punto Réflex."
+        ],
+        "en": [
+          "Destruction of numerous regional Invid hives and processing plants.",
+          "Ignition of widespread civilian uprisings across the Americas.",
+          "Discovery that the Invid are evolving toward humanoid biological form.",
+          "Bernard's squad arrives at the outer perimeter of Reflex Point."
+        ]
+      },
+      "technologies": [
+        "Moto-Armadura Táctica Cyclone VR-052F Battler / VR-038 Bartley",
+        "Caza Variable VAF-6R Alpha en Conexión VFH-10 Beta Fighter (Legioss/Tread)",
+        "Rifle de Rayo de Partículas EP-40 de 35mm"
+      ],
+      "casualties_impact": {
+        "es": "Incontables bajas de soldados y rebeldes en el camino; creación del núcleo de la victoria final.",
+        "en": "Countless guerrilla lives lost; successful preparation of ground intelligence for the final offensive."
+      }
+    },
+    {
+      "id": "2044_reflex_point_assault_invid_departure",
+      "year": "2044",
+      "date_display": {
+        "es": "Julio de 2044",
+        "en": "July 2044"
+      },
+      "era": "third_war",
+      "badge": {
+        "es": "BATALLA FINAL // LIBERACIÓN DE LA TIERRA",
+        "en": "CLIMACTIC BATTLE // EARTH LIBERATION"
+      },
+      "defcon": "DEFCON 1",
+      "title": {
+        "es": "La Batalla de Punto Réflex y la Partida de los Invid",
+        "en": "The Battle of Reflex Point & The Departure of the Invid"
+      },
+      "subtitle": {
+        "es": "La llegada de la Gran Flota de la REF y la transmutación de la Regiss",
+        "en": "Arrival of the Main REF Armada & The Invid Ascension into Light"
+      },
+      "location": {
+        "es": "Punto Réflex, Grandes Llanuras (América del Norte)",
+        "en": "Reflex Point, Great Plains (North America)"
+      },
+      "image": "assets/images/mechas/Alfa Fighter/dea9e582911564ac2b30ed0341f7199e.jpg",
+      "factions": [
+        {
+          "name_es": "Flota Principal de la REF // Comando Terrestre",
+          "name_en": "Main REF Liberation Armada // Ground Strike",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        },
+        {
+          "name_es": "Horda Suprema Invid (Colmena Madre)",
+          "name_en": "Supreme Invid Swarm (The Hive Mother)",
+          "logo": "assets/images/ui/logo_zentran.png"
+        }
+      ],
+      "key_figures": [
+        "Teniente Scott Bernard",
+        "La Regiss",
+        "Príncipe Corg",
+        "Princesa Sera",
+        "Ariel (Marlene)",
+        "Comandantes de la REF"
+      ],
+      "summary": {
+        "es": "La Flota Principal de la REF arriba desde el espacio profundo para el asalto definitivo a Punto Réflex, armada con destructores de Misiles de Neutrones S para arrasar la Tierra si es necesario. Mientras Scott y sus compañeros combaten en tierra y derrotan al despiadado Príncipe Corg, la Regiss comprende que los humanos se han convertido en fanáticos de la destrucción como los antiguos Maestros; transmutando a su raza entera en un colosal fénix de luz pura, los Invid abandonan la Tierra para buscar un plano de existencia superior.",
+        "en": "The main REF armada arrives from deep space for the decisive siege on Reflex Point, armed with planet-killing Neutron-S missiles to incinerate the Earth if liberation fails. While Scott and his team defeat Prince Corg in apocalyptic aerial combat, the Regiss realizes mankind has inherited the genocidal madness of the Masters. Transmuting her entire race into a cosmic phoenix of pure energy, the Invid depart Earth for a higher plane."
+      },
+      "tactical_report": {
+        "es": "El cielo de Punto Réflex se tiñó de fuego cuando decenas de miles de cazas Alpha y Beta chocaron contra millones de mechas Invid en la mayor batalla aérea de la historia. En tierra, Scott Bernard se batió en duelo singular contra el implacable Príncipe Corg, logrando derribarlo.\n\nEn la órbita, los comandantes de la REF, temiendo que la invasión no pudiera quebrarse, se preparaban para disparar los apocalípticos Misiles de Neutrones S, capaces de quemar la atmósfera terrestre y matar a humanos e Invid por igual. Ariel confrontó a su madre, La Regiss, implorándole piedad para la humanidad. La Regiss comprendió que la obsesión por la Protocultura solo traería sombras y aniquilación mutua. En un estallido de esplendor divino, la colmena entera se disolvió en un inmenso pájaro de fuego de energía cósmica pura que ascendió al espacio profundo, destruyendo los misiles de neutrones en órbita y dejando a la Tierra finalmente libre.",
+        "en": "The skies above Reflex Point erupted in thermonuclear brilliance as tens of thousands of Alpha and Beta fighters engaged endless waves of Invid mecha. On the ground, Scott Bernard engaged Prince Corg in an aerial dogfight of legends, obliterating the Invid prince's battle machine.\n\nIn high orbit, panicked REF commanders prepared to launch apocalyptic Neutron-S warheads, ready to incinerate humanity's homeworld to ensure alien extermination. Ariel stood before her mother, The Regiss, pleading for the preservation of Earth. Recognizing that humanity's dark quest for Protoculture would consume both races, the Regiss commanded the great ascension: the entire Invid species transmuted into a cosmic firebird of pure divine energy, ascending into deep space while disintegrating the descending Neutron-S missiles in orbit. Earth was finally liberated."
+      },
+      "outcomes": {
+        "es": [
+          "Liberación definitiva de la Tierra y fin de la Tercera Guerra Robotech.",
+          "Partida cósmica de La Regiss y de toda la raza Invid hacia las estrellas.",
+          "Sera y Ariel eligen quedarse en la Tierra con los humanos supervivientes.",
+          "Scott Bernard aborda un transporte para reunirse con Rick Hunter y la flota principal de la REF."
+        ],
+        "en": [
+          "Definitive liberation of Earth and conclusion of the Third Robotech War.",
+          "Cosmic ascension and peaceful galactic departure of the Invid species.",
+          "Princess Sera and Ariel choose to remain on Earth with human survivors.",
+          "Scott Bernard boards a starship to link up with Admiral Rick Hunter's main fleet."
+        ]
+      },
+      "technologies": [
+        "Misiles de Neutrones S (Neutron-S Planetary Kill Missiles)",
+        "Configuración Combinada Alpha-Beta Legioss/Tread",
+        "Transmutación Bioenergética Invid a Luz Pura"
+      ],
+      "casualties_impact": {
+        "es": "Decenas de miles de bajas militares; la Tierra es rescatada de la aniquilación nuclear por segundos.",
+        "en": "Heavy military casualties; Earth narrowly saved from thermonuclear extinction."
+      }
+    },
+    {
+      "id": "2044_shadow_chronicles_haydonite_betrayal",
+      "year": "2044",
+      "date_display": {
+        "es": "Agosto de 2044",
+        "en": "August 2044"
+      },
+      "era": "shadow_chronicles",
+      "badge": {
+        "es": "CRÓNICAS DE LAS SOMBRAS // LA TRAICIÓN",
+        "en": "SHADOW CHRONICLES // THE BETRAYAL"
+      },
+      "defcon": "DEFCON 1",
+      "title": {
+        "es": "Robotech: Las Crónicas de las Sombras y la Traición Haydonita",
+        "en": "Robotech: The Shadow Chronicles & The Haydonite Betrayal"
+      },
+      "subtitle": {
+        "es": "Los misteriosos 'Niños de las Sombras' activan su trampa contra la humanidad",
+        "en": "The Enigmatic 'Children of the Shadow' Unleash Their Extinction Trap"
+      },
+      "location": {
+        "es": "Agujero Negro del Sector Ómicron y Órbita Terrestre",
+        "en": "Omicron Sector Black Hole & Earth Orbit"
+      },
+      "image": "assets/images/mechas/Alfa Fighter/671d609a0cd0fc43ce2af07e514e9762.jpg",
+      "factions": [
+        {
+          "name_es": "Flota Avanzada de la REF (SDF-4 Liberator & Icarus)",
+          "name_en": "REF Vanguard Fleet (SDF-4 Liberator & Icarus)",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        },
+        {
+          "name_es": "Los Haydonitas (Los Hijos de las Sombras)",
+          "name_en": "The Haydonites (Children of the Shadow)",
+          "logo": "assets/images/ui/logo_zentran.png"
+        }
+      ],
+      "key_figures": [
+        "Capitán Vince Grant",
+        "Mayor Scott Bernard",
+        "Janice Em (Androide cibernético)",
+        "Marcus Gallant",
+        "Almirante Rick Hunter (Desaparecido)",
+        "General Reinhart"
+      ],
+      "summary": {
+        "es": "En la aclamada película 'Robotech: The Shadow Chronicles' (2006), la humanidad descubre con horror que sus supuestos aliados alienígenas, los Haydonitas, les suministraron la 'Tecnología de las Sombras' y los Misiles de Neutrones S como una trampa orquestada. Al caer los Invid, los Haydonitas revelan su verdadero objetivo: exterminar a toda civilización que utilice Protocultura en la galaxia.",
+        "en": "In the feature film 'Robotech: The Shadow Chronicles' (2006), humanity discovers that their enigmatic alien allies, the Haydonites, gifted them 'Shadow Technology' and Neutron-S warheads as a Trojan horse. With the Invid gone, the Haydonites reveal their genocidal crusade: eradicate any civilization contaminated by Protoculture."
+      },
+      "tactical_report": {
+        "es": "Durante la ofensiva contra Punto Réflex, los cazas y acorazados de la REF operaban con 'Tecnología de las Sombras' (Shadow Technology), un sistema provisto por los enigmáticos Haydonitas que volvía invisibles a las naves frente a los sensores de Protocultura de los Invid. Además, los Haydonitas suministraron los Misiles de Neutrones S para el bombardeo final.\n\nSin embargo, en el Sector Ómicron, las pruebas del misil de neutrones a bordo del buque insignia del Almirante Rick Hunter, el **SDF-3 Pioneer**, revelaron un fallo monstruoso: los misiles no eran armas convencionales, sino generadores de singularidades de agujeros negros diseñados para devorar sistemas solares enteros. Los Haydonitas detonaron las singularidades y sabotearon los sistemas de la nave insignia. Rick Hunter y Lisa Hayes quedaron atrapados en el horizonte de sucesos del agujero negro. Inmediatamente, naves con forma de aguja de los Haydonitas abrieron fuego contra la flota humana indefensa.",
+        "en": "Throughout the Reflex Point campaign, REF forces fought with 'Shadow Technology'—a stealth cloak supplied by the enigmatic Haydonites that masked human Protoculture emissions. Furthermore, the Haydonites had manufactured the immense Neutron-S missiles for the final siege.\n\nHowever, in the deep-space Omicron Sector, live-fire trials aboard Admiral Rick Hunter's flagship, the **SDF-3 Pioneer**, exposed a terrifying conspiracy: the warheads were singularity generators engineered to birth black holes and collapse star systems. The Haydonites detonated the anomalies, trapping the SDF-3 inside an expanding event horizon. Simultaneously, needle-shaped Haydonite warships uncloaked and assaulted the human fleet, turning human stealth systems against their creators."
+      },
+      "outcomes": {
+        "es": [
+          "Revelación de la conspiración Haydonita: los 'Hijos de las Sombras' son los verdaderos enemigos ancestrales.",
+          "Desaparición del SDF-3 Pioneer y del Almirante Rick Hunter en el Sector Ómicron.",
+          "Los sistemas 'Shadow' humanos quedan comprometidos por códigos maliciosos alienígenas.",
+          "El Capitán Vince Grant y el Mayor Scott Bernard asumen el liderazgo táctico de la flota."
+        ],
+        "en": [
+          "Unmasking of the Haydonite conspiracy: the 'Children of the Shadow' are the ultimate galaxy threat.",
+          "Disappearance of the SDF-3 Pioneer and Admiral Rick Hunter in the Omicron Sector.",
+          "Human 'Shadow' stealth suites compromised by alien kill-switch backdoors.",
+          "Captain Vince Grant and Major Scott Bernard assume tactical command of the surviving fleet."
+        ]
+      },
+      "technologies": [
+        "Tecnología de Ocultamiento 'Shadow Cloaking'",
+        "Caza Variable Avanzado VAF-6J / VF-X Shadow Fighter",
+        "Androide Sintético de Protocultura (Janice Em)",
+        "Naves de Guerra Haydonitas Biomecánicas"
+      ],
+      "casualties_impact": {
+        "es": "Múltiples acorazados de la REF desintegrados; el Almirante Hunter y el SDF-3 dados por desaparecidos.",
+        "en": "Multiple capital ships destroyed; Admiral Rick Hunter and the SDF-3 missing in action."
+      }
+    },
+    {
+      "id": "2044_battle_of_space_station_liberty_search_for_rick",
+      "year": "2044+",
+      "date_display": {
+        "es": "Final de 2044 y Más Allá",
+        "en": "Late 2044 & Beyond"
+      },
+      "era": "shadow_chronicles",
+      "badge": {
+        "es": "EL HORIZONTE FINAL // LA BÚSQUEDA",
+        "en": "FINAL FRONTIER // THE QUEST"
+      },
+      "defcon": "DEFCON 1",
+      "title": {
+        "es": "La Batalla de la Estación Libertad y la Búsqueda de Rick Hunter",
+        "en": "The Battle of Space Station Liberty & The Quest for Rick Hunter"
+      },
+      "subtitle": {
+        "es": "La caída del bastión orbital y el salto hiperespacial hacia lo desconocido",
+        "en": "Destruction of the Orbital Citadel & The Deep Space Fold into the Unknown"
+      },
+      "location": {
+        "es": "Estación Espacial Libertad y Cuadrante Haydonita Inexplorado",
+        "en": "Space Station Liberty & Uncharted Haydonite Star Quadrant"
+      },
+      "image": "assets/images/naves/SDF-1/0b16871d63b87cf4729007c78a5141ef.jpg",
+      "factions": [
+        {
+          "name_es": "Fuerzas Sobrevivientes de la REF (Acorazado Icarus)",
+          "name_en": "REF Surviving Fleet (Battleship Icarus)",
+          "logo": "assets/images/ui/logo_UNSpacy.png"
+        },
+        {
+          "name_es": "Armada de los Haydonitas",
+          "name_en": "Haydonite War Armada",
+          "logo": "assets/images/ui/logo_zentran.png"
+        }
+      ],
+      "key_figures": [
+        "Capitán Vince Grant",
+        "Mayor Scott Bernard",
+        "Janice Em",
+        "Marcus Gallant",
+        "Ariel",
+        "Almirante Rick Hunter"
+      ],
+      "summary": {
+        "es": "Los Haydonitas atacan y destruyen la colosal Estación Espacial Libertad, el principal depósito de suministros de la humanidad en el espacio. El Capitán Vince Grant, Scott Bernard y la androide Janice Em descubren el talón de Aquiles de los Haydonitas: desconectar la tecnología de las Sombras y recurrir a armamento convencional puro. Tras repeler a los invasores, el acorazado Icarus ejecuta un salto espacial para rescatar a Rick Hunter en el espacio profundo.",
+        "en": "The Haydonites assault and obliterate Space Station Liberty, humanity's primary deep-space depot. Captain Vince Grant, Scott Bernard, and the gynoid Janice Em uncover the Haydonites' vulnerability: purging the compromised Shadow systems and returning to raw conventional reflex weaponry. Repelling the fleet, the battleship Icarus folds into uncharted space to find Admiral Rick Hunter."
+      },
+      "tactical_report": {
+        "es": "La flota Haydonita rodeó la gigantesca Estación Espacial Libertad con intenciones de erradicación total. Su tecnología convertía en chatarra cualquier nave humana equipada con generadores Shadow. Janice Em, el androide musical creado con bio-sensores únicos, sacrificó parte de su matriz para penetrar el lenguaje computacional Haydonita, descubriendo que los Haydonitas eran seres cibernéticos orgánicos ciegos a las armas cinéticas y ópticas no modificadas.\n\nEl Capitán Vince Grant ordenó purgar manualmente todos los módulos de las Sombras del acorazado *Icarus* y de los cazas de Marcus Gallant y Scott Bernard. Con armas convencionales de Protocultura sin modificar, contraatacaron con furia, destruyendo la nave insignia de los asesinos alienígenas. Con la Estación Libertad en ruinas pero la Tierra a salvo, Scott Bernard y Vince Grant trazaron las coordenadas del salto de emergencia del SDF-3 Pioneer hacia el lejano sistema Haydonita. La película concluye con el *Icarus* saltando hacia las estrellas, uniendo a humanos, Zentraedi y rebeldes Invid en la búsqueda definitiva del Almirante Rick Hunter y la supervivencia de la galaxia.",
+        "en": "The Haydonite armada surrounded the colossal Space Station Liberty to sever human communication and supply lines. Janice Em, a gynoid possessing cybernetic empathy, linked her core directly into the alien mainframe, unmasking their fatal vulnerability: Haydonite technology was configured exclusively to disrupt and absorb Shadow emissions, leaving them vulnerable to raw conventional reflex firepower.\n\nCaptain Vince Grant ordered all Shadow cloak modules manually jettisoned from the battleship *Icarus* and Marcus Gallant's flight wings. Operating with pure manual weapon linkages, the human fleet counterattacked, shattering the Haydonite dreadnought. With Space Station Liberty lost but Earth safeguarded, Scott Bernard and Vince Grant deciphered the trajectory of the SDF-3 Pioneer's emergency fold. The movie concludes with the *Icarus* initiating a hyper-fold into the dark expanse, uniting humans, Zentraedi, and Invid allies in the ultimate quest for Admiral Rick Hunter."
+      },
+      "outcomes": {
+        "es": [
+          "Destrucción de la Estación Espacial Libertad por el ataque de los Haydonitas.",
+          "Purga total de la comprometida Tecnología de las Sombras en la flota de la REF.",
+          "Alianza duradera entre los sobrevivientes de la Tierra, la REF y Ariel.",
+          "El acorazado Icarus salta al hiperespacio para iniciar la búsqueda de Rick Hunter y el SDF-3.",
+          "Final épico de la saga Robotech: La humanidad enfrenta unida su destino estelar."
+        ],
+        "en": [
+          "Catastrophic loss of Space Station Liberty under intense alien bombardment.",
+          "Total purge of compromised Shadow Technology across the remaining REF fleet.",
+          "Enduring multi-species alliance between Earth, the REF, and Ariel's Invid faction.",
+          "Battleship Icarus jumps into hyperspace to launch the search for Rick Hunter and the SDF-3.",
+          "Epic conclusion of the Robotech saga: Humanity united to conquer its galactic destiny."
+        ]
+      },
+      "technologies": [
+        "Acorazado Estelar de Asalto Clase Icarus",
+        "Sistemas de Armas de Reflexión Manual Desacoplada",
+        "Navegación Hiperespacial Hacia el Mundo Natal Haydonita"
+      ],
+      "casualties_impact": {
+        "es": "Pérdida de la mayor estación orbital de la humanidad; la flota sobrevive y emprende el viaje final.",
+        "en": "Destruction of humanity's foremost orbital space station; surviving fleet embarks on the final voyage."
+      }
+    }
+  ]
+}

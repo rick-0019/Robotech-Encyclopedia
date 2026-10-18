@@ -319,6 +319,8 @@
 .dossier-modal {
   width: 100%;
   max-width: 1200px;
+  height: 85vh;
+  min-height: 560px;
   max-height: 90vh;
   background: var(--bg-panel-solid);
   border: 2px solid var(--un-cyan);
@@ -331,8 +333,16 @@
   animation: modalSlide 0.3s ease;
 }
 
+@media (max-width: 768px) {
+  .dossier-modal {
+    height: 92vh;
+    min-height: 460px;
+    max-height: 96vh;
+  }
+}
+
 @keyframes modalSlide {
-  from { transform: translateY(20px) scale(0.98); opacity: 0; }
+  from { transform: translateY(15px) scale(0.99); opacity: 0; }
   to { transform: translateY(0) scale(1); opacity: 1; }
 }
 
@@ -453,6 +463,8 @@
   padding: 24px;
   overflow-y: auto;
   flex: 1;
+  min-height: 0;
+  scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 240, 255, 0.4) rgba(4, 10, 22, 0.95);
 }
@@ -479,10 +491,24 @@
    -------------------------------------------------------------------------- */
 .tab-pane {
   display: none;
+  opacity: 0;
 }
 
 .tab-pane.active {
   display: block;
+  opacity: 1;
+  animation: tabFadeIn 0.22s ease-out forwards;
+}
+
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Overview tab layout */

@@ -426,7 +426,7 @@ function renderShips() {
 // --------------------------------------------------------------------------
 // APERTURA Y CARGA MODULAR DEL DOSSIER INDIVIDUAL (LAZY LOAD)
 // --------------------------------------------------------------------------
-async function openShipDossier(shipId) {
+async function openShipDossier(shipId, pushHistory = true) {
   window.tacticalAudio?.openDossier ? window.tacticalAudio.openDossier() : window.tacticalAudio?.click();
   const modalBackdrop = document.getElementById('ship-dossier-modal-backdrop');
   if (!modalBackdrop) return;
@@ -457,15 +457,27 @@ async function openShipDossier(shipId) {
   modalBackdrop.classList.add('open');
   modalBackdrop.classList.add('active');
   document.body.style.overflow = 'hidden';
+
+  if (pushHistory) {
+    const newUrl = `${window.location.pathname}?ship=${encodeURIComponent(shipId)}`;
+    history.pushState({ modal: 'ship-dossier', shipId: shipId, tab: 'pane-ship-specs' }, '', newUrl);
+  }
 }
 
-function closeShipDossier() {
+function closeShipDossier(updateHistory = true) {
   window.tacticalAudio?.click();
   const modalBackdrop = document.getElementById('ship-dossier-modal-backdrop');
   if (modalBackdrop) {
     modalBackdrop.classList.remove('open');
     modalBackdrop.classList.remove('active');
     document.body.style.overflow = '';
+  }
+
+  if (updateHistory) {
+    const cleanUrl = window.location.pathname;
+    if (history.state?.modal === 'ship-dossier') {
+      history.pushState(null, '', cleanUrl);
+    }
   }
 }
 
@@ -771,27 +783,86 @@ function populateShipModal(s) {
 // --------------------------------------------------------------------------
 function setupModalEvents() {
   const closeBtn = document.getElementById('btn-close-ship-dossier');
-  if (closeBtn) closeBtn.addEventListener('click', closeShipDossier);
-
   const modalBackdrop = document.getElementById('ship-dossier-modal-backdrop');
+  const modalBox = modalBackdrop?.querySelector('.dossier-modal');
+
+  if (closeBtn) closeBtn.addEventListener('click', () => closeShipDossier(true));
+
+  if (modalBox) {
+    modalBox.addEventListener('click', (e) => e.stopPropagation());
+  }
+
   if (modalBackdrop) {
+    let isBackdropMousedown = false;
+    modalBackdrop.addEventListener('mousedown', (e) => {
+      isBackdropMousedown = (e.target === modalBackdrop);
+    });
     modalBackdrop.addEventListener('click', (e) => {
-      if (e.target === modalBackdrop) closeShipDossier();
+      if (e.target === modalBackdrop && isBackdropMousedown) {
+        closeShipDossier(true);
+      }
+      isBackdropMousedown = false;
     });
   }
 
   // Tabs switching
-  document.querySelectorAll('.dossier-tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.dossier-tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('#ship-dossier-modal-backdrop .dossier-tab-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const tabId = btn.dataset.tab;
+
+      document.querySelectorAll('#ship-dossier-modal-backdrop .dossier-tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('#ship-dossier-modal-backdrop .tab-pane').forEach(p => p.classList.remove('active'));
 
       btn.classList.add('active');
-      const targetPane = document.getElementById(btn.dataset.tab);
+      const targetPane = document.getElementById(tabId);
       if (targetPane) targetPane.classList.add('active');
+
+      const scrollContainer = modalBackdrop.querySelector('.dossier-content-scroll');
+      if (scrollContainer) scrollContainer.scrollTop = 0;
+
+      if (window.shipState.activeShipData) {
+        const tabClean = tabId.replace('pane-ship-', '');
+        history.replaceState({ modal: 'ship-dossier', shipId: window.shipState.activeShipData.id, tab: tabId }, '', `?ship=${encodeURIComponent(window.shipState.activeShipData.id)}&tab=${encodeURIComponent(tabClean)}`);
+      }
+
       window.tacticalAudio?.hover();
     });
   });
+
+  // Manejo de historial con botón Atrás del navegador
+  window.addEventListener('popstate', (e) => {
+    const backdrop = document.getElementById('ship-dossier-modal-backdrop');
+    if (e.state && e.state.modal === 'ship-dossier') {
+      if (!backdrop?.classList.contains('open')) {
+        openShipDossier(e.state.shipId, false).then(() => {
+          if (e.state.tab) {
+            const btn = document.querySelector(`#ship-dossier-modal-backdrop .dossier-tab-btn[data-tab="${e.state.tab}"]`);
+            if (btn) btn.click();
+          }
+        });
+      }
+    } else {
+      if (backdrop?.classList.contains('open')) {
+        closeShipDossier(false);
+      }
+    }
+  });
+
+  // Apertura directa por URL (?ship=sdf_01_macross)
+  const urlParams = new URLSearchParams(window.location.search);
+  const shipParam = urlParams.get('ship');
+  const tabParam = urlParams.get('tab');
+  if (shipParam) {
+    openShipDossier(shipParam, false).then(() => {
+      if (tabParam) {
+        const cleanTab = tabParam.startsWith('pane-ship-') ? tabParam : `pane-ship-${tabParam}`;
+        const btn = document.querySelector(`#ship-dossier-modal-backdrop .dossier-tab-btn[data-tab="${cleanTab}"]`);
+        if (btn) btn.click();
+      }
+    });
+  }
 
   // Lightbox close on click
   const lbBackdrop = document.getElementById('lightbox-backdrop');
@@ -810,7 +881,7 @@ function setupModalEvents() {
         lb.style.display = 'none';
         return;
       }
-      closeShipDossier();
+      closeShipDossier(true);
     }
   });
 }

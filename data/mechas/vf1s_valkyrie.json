@@ -247,5 +247,120 @@
       "description_es": "Enlace de datos con el SDF-1 y capacidad de coordinar escuadrones enteros.",
       "description_en": "Direct data-link with SDF-1 and command capability for full squadrons."
     }
+  ],
+  "has_variants": true,
+  "variants": [
+    {
+      "id": "vf-1a",
+      "model_code": "VF-1A",
+      "name_es": "VF-1A Valkyrie (Modelo Estándar)",
+      "name_en": "VF-1A Valkyrie (Standard Model)",
+      "role_es": "Caza Variable Estándar de Producción Masiva",
+      "role_en": "Standard Mass-Production Variable Fighter",
+      "crew_es": "1 Piloto (Monoplaza)",
+      "crew_en": "1 Pilot (Single seat)",
+      "head_lasers": {
+        "count": 1,
+        "description_es": "1 Cañón Láser Mauler RoV-20 montado en el domo central de la cabeza",
+        "description_en": "1 Mauler RoV-20 Laser Cannon mounted centrally on the head turret"
+      },
+      "color_scheme": {
+        "name_es": "Marrón Táctico estándar U.N. Spacy / Blanco con detalles castaño y gris",
+        "name_en": "Standard U.N. Spacy Tactical Brown / White with brown and grey trim",
+        "primary_color": "#8c6239",
+        "secondary_color": "#d9d9d9"
+      },
+      "pilots": ["Pilotos de Flota de la RDF / U.N. Spacy", "Ben Dixon (asignación inicial)", "Escuadrones de Línea"],
+      "image": "assets/images/mechas/VF-1/14e12a40a8a5de3416717e1002976daa.jpg",
+      "description_es": "Modelo estándar de un solo asiento, utilizado por la mayoría de las tripulaciones y caracterizado por su capacidad de combate general y versatilidad en todos los teatros operativos.",
+      "description_en": "Standard single-seat mass-production model, utilized by the majority of fleet aircrews and characterized by balanced general combat capabilities and high reliability.",
+      "speed": "Mach 2.71 (3.870 km/h a 10.000m)",
+      "armor": "C.D.M. Estándar de Fábrica",
+      "firepower": "1x Láser Craneal RoV-20 + Cañón GU-11 55mm + Micro-Misiles"
+    },
+    {
+      "id": "vf-1j",
+      "model_code": "VF-1J",
+      "name_es": "VF-1J Valkyrie (Líder / As)",
+      "name_en": "VF-1J Valkyrie (Squadron Leader / Ace)",
+      "role_es": "Caza Variable para Líderes de Escuadrón y Ases de Combate",
+      "role_en": "Flight Lead & Ace Variable Fighter",
+      "crew_es": "1 Piloto (Monoplaza)",
+      "crew_en": "1 Pilot (Single seat)",
+      "head_lasers": {
+        "count": 2,
+        "description_es": "2 Cañones Láser Mauler RoV-20 gemelos montados a los costados de la cabeza",
+        "description_en": "Twin Mauler RoV-20 Laser Cannons mounted on both head sides"
+      },
+      "color_scheme": {
+        "name_es": "Blanco con franjas Rojas (Vermilion / Rick Hunter) o Azul Cobalto (Max Sterling)",
+        "name_en": "White with Red striping (Vermilion / Rick Hunter) or Cobalt Blue (Max Sterling)",
+        "primary_color": "#c41e3a",
+        "secondary_color": "#ffffff"
+      },
+      "pilots": ["Rick Hunter (Líder Vermilion)", "Max Sterling (Azul Cobalto)", "Miriya Parina (Rojo Carmesí)"],
+      "image": "assets/images/mechas/VF-1/4aafa5d4665991cca0a0711ba92cd796.jpg",
+      "description_es": "Variante de un solo asiento con mejoras en el armamento y sistemas, siendo la nave emblemática de pilotos como Rick Hunter y Max Sterling.",
+      "description_en": "Single-seat variant with upgraded avionics, targeting computers, and twin head weaponry, serving as the iconic craft of pilots like Rick Hunter and Max Sterling.",
+      "speed": "Mach 2.71 (3.870 km/h a 10.000m)",
+      "armor": "C.D.M. Reforzado para Oficiales de Vuelo",
+      "firepower": "2x Láseres Craneales RoV-20 + Cañón GU-11 55mm + Micro-Misiles"
+    },
+    {
+      "id": "vf-1s",
+      "model_code": "VF-1S",
+      "name_es": "VF-1S Valkyrie (Comandante Skull)",
+      "name_en": "VF-1S Valkyrie (Strike Commander Skull)",
+      "role_es": "Caza de Mando Supremo de Élite y Superioridad Aérea Espacial",
+      "role_en": "Elite Command Fighter / Air-Space Superiority Lead",
+      "crew_es": "1 Comandante de Escuadrón (Monoplaza)",
+      "crew_en": "1 Wing Commander (Single seat)",
+      "head_lasers": {
+        "count": 4,
+        "description_es": "4 Cañones Láser Mauler RoV-20 (Disposición Cuádruple en Torrecilla Craneal)",
+        "description_en": "Quad Mauler RoV-20 Laser Cannons (Quad turret layout on head)"
+      },
+      "color_scheme": {
+        "name_es": "Blanco y Gris con franjas Negras y Amarillas (Insignia Skull / Jolly Roger)",
+        "name_en": "White and Grey with Black and Yellow striping (Skull Insignia / Jolly Roger)",
+        "primary_color": "#f59e0b",
+        "secondary_color": "#111827"
+      },
+      "pilots": ["Roy Fokker (Skull Leader Original)", "Rick Hunter (Comandante Skull One)"],
+      "image": "assets/images/mechas/VF-1/826b12a642952f0af85bf05e6ce58f3a.jpg",
+      "description_es": "Versión de élite de un solo asiento con mayor velocidad y maniobrabilidad, diseñada para pilotos de alto rango como Miriya Parusa y Roy Fokker.",
+      "description_en": "Elite single-seat version with enhanced speed and agility, designed for high-ranking commanders such as Roy Fokker and Miriya Parina.",
+      "speed": "Mach 3.87 en atmósfera / Mach 4.5+ en vacío orbital",
+      "armor": "Blindaje Reforzado Especial de Alta Densidad C.D.M.",
+      "firepower": "4x Láseres Craneales RoV-20 + Cañón GU-11 55mm + Misiles Guiados Pesados"
+    },
+    {
+      "id": "vf-1d",
+      "model_code": "VF-1D",
+      "name_es": "VF-1D Valkyrie (Entrenador Biplaza)",
+      "name_en": "VF-1D Valkyrie (Tandem Trainer)",
+      "role_es": "Entrenador Operacional de Doble Comando y Reconocimiento Táctico",
+      "role_en": "Dual-Control Operational Trainer & Tactical Observation",
+      "crew_es": "2 Tripulantes (Piloto / Instructor y Alumno en Tándem)",
+      "crew_en": "2 Crew (Pilot / Instructor and Trainee in Tandem)",
+      "head_lasers": {
+        "count": 2,
+        "description_es": "2 Cañones Láser Mauler RoV-20 montados a los lados de la cabeza",
+        "description_en": "2 Lateral Mauler RoV-20 Laser Cannons on trainer head"
+      },
+      "color_scheme": {
+        "name_es": "Naranja de Alta Visibilidad de Entrenamiento con Crema y Blanco",
+        "name_en": "High-Visibility Training Orange with Cream and White",
+        "primary_color": "#ea580c",
+        "secondary_color": "#ffffff"
+      },
+      "pilots": ["Rick Hunter & Lynn Minmay (Primer Vuelo de Combate en Macross)", "Instructores de Vuelo RDF"],
+      "image": "assets/images/mechas/VF-1/9821aff3d34f70d7b144def0a4704ba3.jpg",
+      "description_es": "Modelo de dos asientos utilizado para entrenamiento y observación, aunque capaz de entrar en combate si es necesario.",
+      "description_en": "Two-seat model used for training and observation, though fully capable of engaging in active combat if required.",
+      "speed": "Mach 2.71 (3.870 km/h a 10.000m)",
+      "armor": "C.D.M. Reforzado para Instrucción",
+      "firepower": "2x Láseres Craneales RoV-20 + Cañón GU-11 55mm + Cargas de Práctica/Combate"
+    }
   ]
 }

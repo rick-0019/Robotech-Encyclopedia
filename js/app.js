@@ -28,6 +28,7 @@ const I18N = {
     tab_mdc: "BLINDAJE C.D.M. (LOCALIZACIÓN)",
     tab_weapons: "SISTEMAS DE ARMAS",
     tab_sensors: "SENSORES Y ELECTRÓNICA",
+    tab_variants: "VARIANTES DE PRODUCCIÓN",
     tab_gallery: "GALERÍA DE PLANOS Y RENDERS",
     admin_btn: "GESTIÓN CRUD LOCAL",
     sound_on: "SFX: ON",
@@ -62,6 +63,7 @@ const I18N = {
     tab_mdc: "M.D.C. ARMOR (LOCATIONS)",
     tab_weapons: "WEAPONS SYSTEMS",
     tab_sensors: "SENSORS & AVIONICS",
+    tab_variants: "PRODUCTION VARIANTS",
     tab_gallery: "BLUEPRINTS & RENDERS",
     admin_btn: "LOCAL CRUD STUDIO",
     sound_on: "SFX: ON",
@@ -319,6 +321,11 @@ function renderMechas() {
             <img src="${factionLogo}" class="card-faction-icon" alt="${factionText}">
             <span class="faction-tag">${factionText}</span>
           </div>
+          ${m.has_variants ? `
+            <span class="badge-tag" style="border-color: var(--un-cyan); color: var(--un-cyan);" title="${lang === 'es' ? 'Modelos y Variantes Tácticas' : 'Tactical Production Variants'}">
+              ⚡ ${m.variants_count || 4} ${lang === 'es' ? 'VARIANTES' : 'VARIANTS'}
+            </span>
+          ` : ''}
         </div>
 
         <div class="card-image-wrap" onclick="openDossier('${m.id}')" style="position:relative;">
@@ -393,37 +400,110 @@ function renderMechas() {
 }
 
 // --------------------------------------------------------------------------
-// FULL TACTICAL DOSSIER MODAL
+// FULL TACTICAL DOSSIER MODAL & FLUID NAVIGATION
 // --------------------------------------------------------------------------
 function setupDossierModal() {
   const modalBackdrop = document.getElementById('dossier-modal-backdrop');
   const btnClose = document.getElementById('btn-close-dossier');
+  const modalBox = modalBackdrop?.querySelector('.dossier-modal');
 
   if (btnClose) {
-    btnClose.addEventListener('click', closeDossier);
-  }
-
-  if (modalBackdrop) {
-    modalBackdrop.addEventListener('click', (e) => {
-      if (e.target === modalBackdrop) closeDossier();
+    btnClose.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeDossier(true);
     });
   }
 
-  // Tabs de navegación interna del dossier
-  document.querySelectorAll('.dossier-tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.dossier-tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  // Prevenir que clics dentro del modal se propaguen al backdrop
+  if (modalBox) {
+    modalBox.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
 
-      btn.classList.add('active');
-      const targetPane = document.getElementById(btn.dataset.tab);
-      if (targetPane) targetPane.classList.add('active');
-      window.tacticalAudio?.hover();
+  // Cierre intencional por backdrop: solo si mousedown y click ocurrieron en el fondo
+  if (modalBackdrop) {
+    let isBackdropMousedown = false;
+    modalBackdrop.addEventListener('mousedown', (e) => {
+      isBackdropMousedown = (e.target === modalBackdrop);
+    });
+    modalBackdrop.addEventListener('click', (e) => {
+      if (e.target === modalBackdrop && isBackdropMousedown) {
+        closeDossier(true);
+      }
+      isBackdropMousedown = false;
+    });
+  }
+
+  // Pestañas de navegación interna del dossier
+  document.querySelectorAll('.dossier-tab-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const tabId = btn.dataset.tab;
+      window.switchDossierTab(tabId, true);
     });
   });
+
+  // Manejo de retroceso fluido con botón 'Atrás' del navegador
+  window.addEventListener('popstate', (e) => {
+    const backdrop = document.getElementById('dossier-modal-backdrop');
+    if (e.state && e.state.modal === 'dossier') {
+      if (!backdrop?.classList.contains('open')) {
+        openDossier(e.state.mechaId, false).then(() => {
+          if (e.state.tab) window.switchDossierTab(e.state.tab, false);
+        });
+      } else if (e.state.tab) {
+        window.switchDossierTab(e.state.tab, false);
+      }
+    } else {
+      if (backdrop?.classList.contains('open')) {
+        closeDossier(false);
+      }
+    }
+  });
+
+  // Apertura directa si viene con parámetros (?mecha=vf1s_valkyrie&tab=variants)
+  const urlParams = new URLSearchParams(window.location.search);
+  const mechaParam = urlParams.get('mecha');
+  const tabParam = urlParams.get('tab');
+  if (mechaParam) {
+    openDossier(mechaParam, false).then(() => {
+      if (tabParam) {
+        const cleanTab = tabParam.startsWith('pane-') ? tabParam : `pane-${tabParam}`;
+        window.switchDossierTab(cleanTab, false);
+      }
+    });
+  }
 }
 
-async function openDossier(id) {
+window.switchDossierTab = function(tabId, updateHistory = true) {
+  const targetPane = document.getElementById(tabId);
+  if (!targetPane) return;
+
+  document.querySelectorAll('.dossier-tab-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.tab === tabId);
+  });
+  document.querySelectorAll('.tab-pane').forEach(p => {
+    p.classList.toggle('active', p.id === tabId);
+  });
+
+  // Reiniciar suavemente el scroll para que el contenido comience desde arriba sin saltos
+  const scrollContainer = document.querySelector('.dossier-content-scroll');
+  if (scrollContainer) {
+    scrollContainer.scrollTop = 0;
+  }
+
+  if (updateHistory && window.currentDossierMecha) {
+    const tabClean = tabId.replace('pane-', '');
+    const newUrl = `${window.location.pathname}?mecha=${encodeURIComponent(window.currentDossierMecha.id)}&tab=${encodeURIComponent(tabClean)}`;
+    history.replaceState({ modal: 'dossier', mechaId: window.currentDossierMecha.id, tab: tabId }, '', newUrl);
+  }
+
+  window.tacticalAudio?.hover();
+};
+
+async function openDossier(id, pushHistory = true) {
   window.tacticalAudio?.openDossier();
   const modalBackdrop = document.getElementById('dossier-modal-backdrop');
   if (!modalBackdrop) return;
@@ -445,12 +525,26 @@ async function openDossier(id) {
 
   populateDossierModal(data);
   modalBackdrop.classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  if (pushHistory) {
+    const newUrl = `${window.location.pathname}?mecha=${encodeURIComponent(id)}`;
+    history.pushState({ modal: 'dossier', mechaId: id, tab: 'pane-overview' }, '', newUrl);
+  }
 }
 
-function closeDossier() {
+function closeDossier(updateHistory = true) {
   window.tacticalAudio?.click();
   const modalBackdrop = document.getElementById('dossier-modal-backdrop');
   if (modalBackdrop) modalBackdrop.classList.remove('open');
+  document.body.style.overflow = '';
+
+  if (updateHistory) {
+    const cleanUrl = window.location.pathname;
+    if (history.state?.modal === 'dossier') {
+      history.pushState(null, '', cleanUrl);
+    }
+  }
 }
 
 function populateDossierModal(m) {
@@ -729,6 +823,17 @@ function populateDossierModal(m) {
     </div>
   `;
 
+  // 4b. Tab Variantes de Producción (Modelos Tácticos)
+  const tabBtnVariants = document.getElementById('tab-btn-variants');
+  const variantsPane = document.getElementById('pane-variants');
+  if (m.variants && m.variants.length > 0) {
+    if (tabBtnVariants) tabBtnVariants.style.display = 'inline-flex';
+    if (variantsPane) renderDossierVariants(m);
+  } else {
+    if (tabBtnVariants) tabBtnVariants.style.display = 'none';
+    if (variantsPane) variantsPane.innerHTML = '';
+  }
+
   // 5. Tab Gallery (Carrusel Táctico Interactivo)
   const galleryPane = document.getElementById('pane-gallery');
   const images = (m.images && m.images.length > 0) 
@@ -773,6 +878,145 @@ function populateDossierModal(m) {
     </div>
   `;
 }
+
+// --------------------------------------------------------------------------
+// DOSSIER VARIANTS RENDERER & CONTROLLER
+// --------------------------------------------------------------------------
+function renderDossierVariants(m) {
+  const lang = window.appState.lang;
+  const variantsPane = document.getElementById('pane-variants');
+  if (!variantsPane) return;
+
+  window.currentDossierVariants = m.variants;
+  window.currentSelectedVariantId = m.variants[0].id;
+
+  variantsPane.innerHTML = `
+    <div class="variants-showcase">
+      <div class="variants-section-banner">
+        <div class="variants-banner-title">
+          <span>⚡ // ${lang === 'es' ? 'MODELOS DE PRODUCCIÓN Y VARIANTES TÁCTICAS' : 'PRODUCTION MODELS & TACTICAL VARIANTS'}</span>
+        </div>
+        <span class="variants-banner-tag">${m.variants.length} ${lang === 'es' ? 'MODELOS REGISTRADOS' : 'LOGGED VARIANTS'}</span>
+      </div>
+
+      <div class="variant-selector-nav" id="variant-pills-nav">
+        ${m.variants.map((v, i) => `
+          <button class="variant-pill ${i === 0 ? 'active' : ''}" onclick="window.selectDossierVariant('${v.id}')" data-varid="${v.id}">
+            <span class="variant-pill-code">${v.model_code || v.id.toUpperCase()}</span>
+            <span>${v[`name_${lang}`] || v.name_en || v.model_code}</span>
+          </button>
+        `).join('')}
+      </div>
+
+      <div id="variant-card-container"></div>
+    </div>
+  `;
+
+  window.renderVariantDetailCard(m.variants[0]);
+}
+
+window.selectDossierVariant = function(varId) {
+  window.tacticalAudio?.hover();
+  window.currentSelectedVariantId = varId;
+  const list = window.currentDossierVariants || [];
+  const variant = list.find(v => v.id === varId) || list[0];
+  if (!variant) return;
+
+  document.querySelectorAll('#variant-pills-nav .variant-pill').forEach(pill => {
+    pill.classList.toggle('active', pill.dataset.varid === varId);
+  });
+
+  window.renderVariantDetailCard(variant);
+};
+
+window.renderVariantDetailCard = function(v) {
+  const lang = window.appState.lang;
+  const container = document.getElementById('variant-card-container');
+  if (!container || !v) return;
+
+  const vName = v[`name_${lang}`] || v.name_en || v.model_code;
+  const vRole = v[`role_${lang}`] || v.role_en || '';
+  const vCrew = v[`crew_${lang}`] || v.crew_en || (lang === 'es' ? '1 Piloto' : '1 Pilot');
+  const vDesc = v[`description_${lang}`] || v.description_en || '';
+  const lasersDesc = v.head_lasers?.[`description_${lang}`] || v.head_lasers?.description_en || '';
+  const laserCount = v.head_lasers?.count || 1;
+  const liveryName = v.color_scheme?.[`name_${lang}`] || v.color_scheme?.name_en || (lang === 'es' ? 'Esquema Estándar' : 'Standard Livery');
+  const primaryColor = v.color_scheme?.primary_color || '#8c6239';
+  const secondaryColor = v.color_scheme?.secondary_color || '#ffffff';
+  const pilotsList = v.pilots || [];
+
+  container.innerHTML = `
+    <div class="variant-detail-card">
+      <div class="variant-media-col">
+        <div class="variant-img-wrap" onclick="openLightbox('${v.image}', '${v.model_code} - ${vName}')" title="${lang === 'es' ? 'Click para ampliar en alta resolución' : 'Click to enlarge high resolution'}">
+          <img src="${v.image}" alt="${vName}" loading="lazy">
+          <span class="variant-zoom-tag">⌖ ${lang === 'es' ? 'AMPLIAR' : 'ZOOM'}</span>
+        </div>
+
+        <div class="variant-livery-box">
+          <div class="livery-swatch-duo">
+            <span class="livery-swatch-primary" style="background-color: ${primaryColor};" title="Color Primario: ${primaryColor}"></span>
+            <span class="livery-swatch-secondary" style="background-color: ${secondaryColor};" title="Color Secundario: ${secondaryColor}"></span>
+          </div>
+          <div class="livery-info">
+            <span class="livery-label">${lang === 'es' ? 'ESQUEMA DE PINTURA Y CAMUFLAJE' : 'LIVERY & CAMOUFLAGE'}</span>
+            <span class="livery-text">${liveryName}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="variant-info-col">
+        <div class="variant-header-group">
+          <div class="variant-badges-bar">
+            <span class="variant-code-badge">${v.model_code || 'VF-1'}</span>
+            ${vRole ? `<span class="variant-role-badge">${vRole}</span>` : ''}
+            <span class="variant-crew-badge">👤 ${vCrew}</span>
+          </div>
+          <h3 class="variant-title">${vName}</h3>
+        </div>
+
+        <div class="variant-lasers-box">
+          <div class="variant-lasers-title">
+            <span>⚡ ${lang === 'es' ? 'ARMAMENTO CRANEAL (TORRETA DE CABEZA)' : 'HEAD LASER TURRET CONFIGURATION'}</span>
+            <span class="variant-lasers-count-chip">${laserCount} ${laserCount > 1 ? (lang === 'es' ? 'LÁSERES' : 'LASERS') : (lang === 'es' ? 'LÁSER' : 'LASER')}</span>
+          </div>
+          <div class="variant-lasers-desc">
+            ${lasersDesc}
+          </div>
+        </div>
+
+        ${pilotsList.length > 0 ? `
+          <div class="variant-pilots-section">
+            <span class="variant-pilots-label">${lang === 'es' ? 'PILOTOS Y ASIGNACIONES RELEVANTES:' : 'NOTABLE PILOTS & SQUADRONS:'}</span>
+            <div class="variant-pilots-chips">
+              ${pilotsList.map(p => `<span class="variant-pilot-chip">${p}</span>`).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        <div class="variant-desc-box">
+          <strong>${lang === 'es' ? 'PERFIL OPERATIVO Y PROPÓSITO TÁCTICO' : 'OPERATIONAL PROFILE & TACTICAL PURPOSE'}</strong>
+          <p>${vDesc}</p>
+        </div>
+
+        <div class="variant-telemetry-grid">
+          <div class="variant-telemetry-item">
+            <span class="variant-telemetry-label">${lang === 'es' ? 'VELOCIDAD MÁX.' : 'TOP SPEED'}</span>
+            <span class="variant-telemetry-val">${v.speed || 'Mach 2.71'}</span>
+          </div>
+          <div class="variant-telemetry-item">
+            <span class="variant-telemetry-label">${lang === 'es' ? 'BLINDAJE' : 'ARMOR'}</span>
+            <span class="variant-telemetry-val">${v.armor || 'Estándar'}</span>
+          </div>
+          <div class="variant-telemetry-item">
+            <span class="variant-telemetry-label">${lang === 'es' ? 'POTENCIA DE FUEGO' : 'FIREPOWER'}</span>
+            <span class="variant-telemetry-val">${v.firepower || 'Estándar'}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+};
 
 // --------------------------------------------------------------------------
 // CAROUSEL CONTROLLER
@@ -842,13 +1086,20 @@ function setupLightbox() {
     lb.addEventListener('click', closeLightbox);
   }
 
-  // Soporte de teclas flecha izquierda/derecha para el carrusel
+  // Soporte de teclas flecha izquierda/derecha para el carrusel y Escape seguro
   document.addEventListener('keydown', (e) => {
+    const lb = document.getElementById('lightbox-backdrop');
+    if (lb && lb.style.display !== 'none') {
+      if (e.key === 'Escape') {
+        closeLightbox();
+        return;
+      }
+    }
     const dossierModal = document.getElementById('dossier-modal-backdrop');
     if (dossierModal && dossierModal.classList.contains('open')) {
       if (e.key === 'ArrowLeft') window.stepCarousel(-1);
       if (e.key === 'ArrowRight') window.stepCarousel(1);
-      if (e.key === 'Escape') closeDossier();
+      if (e.key === 'Escape') closeDossier(true);
     }
   });
 }

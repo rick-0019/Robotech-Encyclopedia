@@ -676,3 +676,448 @@ body::before {
   text-transform: uppercase;
 }
 
+/* ==========================================================================
+   SECCIÓN DE VARIANTES TÁCTICAS Y MODELOS DE PRODUCCIÓN
+   ========================================================================== */
+.variants-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.variants-section-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: rgba(0, 240, 255, 0.05);
+  border-left: 3px solid var(--un-cyan);
+  border-right: 1px solid rgba(0, 240, 255, 0.2);
+  border-top: 1px solid rgba(0, 240, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+  padding: 10px 16px;
+  border-radius: 0 4px 4px 0;
+}
+
+.variants-banner-title {
+  font-family: var(--font-hud);
+  font-size: 0.88rem;
+  color: var(--un-cyan);
+  letter-spacing: 1.5px;
+  margin: 0;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.variants-banner-tag {
+  font-family: var(--font-hud);
+  font-size: 0.7rem;
+  color: var(--skull-amber);
+  letter-spacing: 1px;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+/* Barra de selección de modelos / variantes (Pills) */
+.variant-selector-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.18);
+  padding-bottom: 12px;
+}
+
+.variant-pill {
+  background: rgba(6, 14, 28, 0.85);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  color: var(--text-dim);
+  font-family: var(--font-hud);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.variant-pill:hover {
+  background: rgba(0, 240, 255, 0.12);
+  border-color: var(--un-cyan);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.variant-pill.active {
+  background: rgba(0, 240, 255, 0.22);
+  border-color: var(--un-cyan);
+  color: var(--un-cyan);
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.35);
+}
+
+.variant-pill-code {
+  background: var(--un-cyan);
+  color: #000;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 2px;
+}
+
+.variant-pill.active .variant-pill-code {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 8px #fff;
+}
+
+/* Tarjeta de Detalle de la Variante Activa */
+.variant-detail-card {
+  background: rgba(8, 18, 36, 0.85);
+  border: 1px solid var(--border-tactical);
+  border-radius: 4px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 20px;
+  padding: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+@media (max-width: 920px) {
+  .variant-detail-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.variant-media-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.variant-img-wrap {
+  width: 100%;
+  height: 280px;
+  background: radial-gradient(circle at center, rgba(0, 45, 90, 0.4) 0%, rgba(2, 6, 16, 0.98) 100%);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.variant-img-wrap:hover {
+  border-color: var(--un-cyan);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.variant-img-wrap img {
+  max-width: 92%;
+  max-height: 92%;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.85));
+  transition: transform 0.25s ease;
+}
+
+.variant-img-wrap:hover img {
+  transform: scale(1.04);
+}
+
+.variant-zoom-tag {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(2, 6, 18, 0.9);
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  color: var(--un-cyan);
+  font-size: 0.65rem;
+  font-family: var(--font-hud);
+  padding: 3px 8px;
+  border-radius: 2px;
+  letter-spacing: 0.8px;
+  transition: all var(--transition-fast);
+}
+
+.variant-img-wrap:hover .variant-zoom-tag {
+  background: var(--un-cyan);
+  color: #000;
+  font-weight: 700;
+}
+
+/* Esquema de Color / Livery Box */
+.variant-livery-box {
+  background: rgba(4, 12, 26, 0.85);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  border-radius: 3px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.livery-swatch-duo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 44px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.livery-swatch-primary, .livery-swatch-secondary {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  box-shadow: 0 0 8px rgba(0,0,0,0.8);
+  position: absolute;
+  top: 2px;
+}
+
+.livery-swatch-primary {
+  left: 0;
+  z-index: 2;
+}
+
+.livery-swatch-secondary {
+  left: 16px;
+  z-index: 1;
+}
+
+.livery-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.livery-label {
+  font-family: var(--font-hud);
+  font-size: 0.65rem;
+  color: var(--skull-amber);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.livery-text {
+  font-size: 0.78rem;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+/* Columna de Datos de la Variante */
+.variant-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.variant-header-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+  padding-bottom: 10px;
+}
+
+.variant-badges-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.variant-code-badge {
+  font-family: var(--font-hud);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #000;
+  background: var(--un-cyan);
+  padding: 3px 10px;
+  border-radius: 2px;
+  letter-spacing: 1.5px;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+}
+
+.variant-role-badge {
+  font-family: var(--font-hud);
+  font-size: 0.7rem;
+  color: var(--skull-amber);
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 3px 8px;
+  border-radius: 2px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.variant-crew-badge {
+  font-family: var(--font-hud);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 3px 8px;
+  border-radius: 2px;
+  letter-spacing: 0.5px;
+}
+
+.variant-title {
+  font-family: var(--font-hud);
+  font-size: 1.25rem;
+  color: #fff;
+  letter-spacing: 1.5px;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+/* Armamento Craneal / Head Lasers */
+.variant-lasers-box {
+  background: rgba(6, 14, 28, 0.75);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-left: 3px solid var(--accent-red);
+  padding: 10px 14px;
+  border-radius: 0 3px 3px 0;
+}
+
+.variant-lasers-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-hud);
+  font-size: 0.72rem;
+  color: var(--accent-red);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.variant-lasers-count-chip {
+  background: var(--accent-red);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 2px;
+}
+
+.variant-lasers-desc {
+  font-size: 0.82rem;
+  color: var(--text-main);
+  line-height: 1.35;
+}
+
+/* Pilotos Destacados */
+.variant-pilots-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.variant-pilots-label {
+  font-family: var(--font-hud);
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.variant-pilots-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.variant-pilot-chip {
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  color: #e0f2fe;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.variant-pilot-chip::before {
+  content: '⌖';
+  color: var(--un-cyan);
+  font-size: 0.75rem;
+}
+
+/* Descripción / Lore de la Variante */
+.variant-desc-box {
+  background: rgba(3, 8, 20, 0.6);
+  border: 1px solid rgba(0, 240, 255, 0.12);
+  border-radius: 3px;
+  padding: 12px 14px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+
+.variant-desc-box strong {
+  color: var(--un-cyan);
+  font-family: var(--font-hud);
+  font-size: 0.7rem;
+  display: block;
+  margin-bottom: 4px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+/* Modificadores / Resumen Telemetría */
+.variant-telemetry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+  .variant-telemetry-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.variant-telemetry-item {
+  background: rgba(5, 12, 24, 0.8);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  border-radius: 3px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.variant-telemetry-label {
+  font-family: var(--font-hud);
+  font-size: 0.62rem;
+  color: var(--text-dim);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.variant-telemetry-val {
+  font-size: 0.74rem;
+  color: var(--skull-amber);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+

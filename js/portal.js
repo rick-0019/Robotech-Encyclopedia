@@ -40,12 +40,12 @@ const PORTAL_I18N = {
     col_03_btn: "INGRESAR AL REGISTRO NAVAL →",
 
     // Column 04: Historia
-    col_04_tag: "SECTOR 04 // ARCHIVADO",
+    col_04_tag: "SECTOR 04 // OPERATIVO",
     col_04_title: "HISTORIA & GUERRAS",
-    col_04_sub: "CRONOLOGÍA 1999-2044 · GUERRAS 1-3",
-    col_04_desc: "Línea temporal detallada: El impacto del Macross, la invasión de los Maestros de la Robotecnia y la ocupación Invid en la Nueva Generación.",
-    col_04_status: "ARCHIVO MAESTRO // EN DESARROLLO",
-    col_04_btn: "LÍNEA TEMPORAL 🔒",
+    col_04_sub: "1999-2044+ · TODAS LAS GUERRAS",
+    col_04_desc: "Línea de tiempo interactiva ultra-detallada: Desde la caída de la nave de Zor en la Tierra hasta el conflicto de Las Crónicas de las Sombras.",
+    col_04_status: "EN LÍNEA // CRONOLOGÍA COMPLETA",
+    col_04_btn: "EXPLORAR LÍNEA TEMPORAL →",
 
     // Toast
     toast_title: "ACCESO RESTRINGIDO // SECTOR EN PREPARACIÓN",
@@ -87,12 +87,12 @@ const PORTAL_I18N = {
     col_03_btn: "ENTER NAVAL REGISTRY →",
 
     // Column 04: Historia
-    col_04_tag: "SECTOR 04 // ARCHIVED",
+    col_04_tag: "SECTOR 04 // OPERATIONAL",
     col_04_title: "HISTORY & WARS",
-    col_04_sub: "TIMELINE 1999-2044 · WARS 1-3",
-    col_04_desc: "Detailed historical timeline: The crash of Macross, the invasion of the Robotech Masters, and the Invid occupation in the New Generation.",
-    col_04_status: "MASTER ARCHIVE // IN PROGRESS",
-    col_04_btn: "TIMELINE ARCHIVE 🔒",
+    col_04_sub: "1999-2044+ · ALL ROBOTECH WARS",
+    col_04_desc: "Ultra-detailed interactive timeline: From the crash of Zor's fortress on Earth to the climax of The Shadow Chronicles.",
+    col_04_status: "ONLINE // COMPLETE TIMELINE",
+    col_04_btn: "EXPLORE WAR TIMELINE →",
 
     // Toast
     toast_title: "RESTRICTED ACCESS // SECTOR IN PREPARATION",

@@ -3,6 +3,73 @@
   "name": "Raidar X",
   "alias": "Defender ADR-04-MKX",
   "category": "destroid",
+  "is_variable": true,
+  "has_variants": true,
+  "variants": [
+    {
+      "id": "vf-1",
+      "model_code": "VF-1",
+      "name_es": "VF-1",
+      "name_en": "VF-1",
+      "role_es": "",
+      "role_en": "",
+      "crew_es": "1 Piloto (Monoplaza)",
+      "crew_en": "1 Pilot (Single seat)",
+      "head_lasers": {
+        "count": 1,
+        "description_es": "",
+        "description_en": ""
+      },
+      "color_scheme": {
+        "name_es": "",
+        "name_en": "",
+        "primary_color": "#8c6239",
+        "secondary_color": "#ffffff"
+      },
+      "pilots": [],
+      "image": "",
+      "description_es": "",
+      "description_en": "",
+      "speed": "Mach 2.71 (3.870 km/h a 10.000m)",
+      "armor": "C.D.M. Estándar de Fábrica",
+      "firepower": "Estándar"
+    }
+  ],
+  "modes": {
+    "fighter": {
+      "name_es": "Modo Caza / Jet",
+      "name_en": "Fighter Mode / Jet",
+      "image": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
+      "length": "",
+      "wingspan": "",
+      "height": "",
+      "max_speed": "",
+      "notes_es": "",
+      "notes_en": ""
+    },
+    "guardian": {
+      "name_es": "Modo Guardián (Gerwalk)",
+      "name_en": "Guardian Mode (Gerwalk)",
+      "image": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
+      "length": "",
+      "wingspan": "",
+      "height": "",
+      "speed": "",
+      "notes_es": "",
+      "notes_en": ""
+    },
+    "battloid": {
+      "name_es": "Modo Battloid (Humanoide)",
+      "name_en": "Battloid Mode (Humanoid)",
+      "image": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
+      "height": "",
+      "width": "",
+      "depth": "",
+      "ground_speed": "",
+      "notes_es": "",
+      "notes_en": ""
+    }
+  },
   "series": {
     "es": "La Saga Macross (Primera Guerra Robotech)",
     "en": "The Macross Saga (First Robotech War)"
@@ -20,6 +87,7 @@
     "en": "Uno o dos (Piloto y Artillero/Operador de Radar)"
   },
   "thumbnail": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
   "images": [
     {
       "url": "assets/images/mechas/destroid_raidar_x/7928130e25ac9e4139805ac4c7cf66e7.jpg",
@@ -232,6 +300,5 @@
       "description_es": "Alcance: 1931 km (1200 millas); alcance indefinido mediante retransmisión por satélite.",
       "description_en": "Range: 1,200 miles (1,931 km); indefinite via satellite relay."
     }
-  ],
-  "faction_logo": "assets/images/ui/logo_UNSpacy.png"
+  ]
 }

@@ -40,6 +40,14 @@
       },
       "thumbnail": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
       "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "is_variable": true,
+      "has_variants": true,
+      "variants_count": 1,
+      "modes": {
+        "fighter": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
+        "guardian": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
+        "battloid": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg"
+      },
       "summary": {
         "es": "El Raidar X es un mecha no transformable utilizado como unidad antiaérea a bordo del SDF-1 por la U.N. SPACY y...",
         "en": "The Raidar X is a non-transformable mecha used as an anti-aircraft unit aboard the SDF-1, by the U.N. SPACY an..."
@@ -75,6 +83,8 @@
       "thumbnail": "assets/images/mechas/VF-1/cd7542498611aaee9cefa3fc17e710b9.jpg",
       "faction_logo": "assets/images/ui/logo_UNSpacy.png",
       "is_variable": true,
+      "has_variants": true,
+      "variants_count": 4,
       "modes": {
         "fighter": "assets/images/mechas/VF-1/cd7542498611aaee9cefa3fc17e710b9.jpg",
         "guardian": "assets/images/mechas/VF-1/fa092418fdb7296f0be73ed9085f4a04.jpg",

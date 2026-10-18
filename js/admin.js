@@ -12,6 +12,8 @@ let currentCharManifest = null;
 let currentCharData = null;
 let currentShipManifest = null;
 let currentShipData = null;
+let currentTimelineData = null;
+let currentTimelineEvent = null;
 let activeAdminModule = 'mechas';
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -21,6 +23,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     activeAdminModule = 'characters';
   } else if (modParam === 'naves' || modParam === 'ships' || modParam === 'nave' || modParam === 'flota') {
     activeAdminModule = 'ships';
+  } else if (modParam === 'historia' || modParam === 'timeline' || modParam === 'history' || modParam === 'guerras') {
+    activeAdminModule = 'timeline';
   } else {
     activeAdminModule = 'mechas';
   }
@@ -28,7 +32,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   setupModuleView(activeAdminModule);
   await loadTaxonomies();
 
-  if (activeAdminModule === 'ships') {
+  if (activeAdminModule === 'timeline') {
+    await loadAdminTimelineManifest();
+    setupTimelineEventListeners();
+    setupTimelineExportButtons();
+    updateLiveTimelinePreview();
+  } else if (activeAdminModule === 'ships') {
     await loadAdminShipManifest();
     setupShipEventListeners();
     setupShipExportButtons();
@@ -198,14 +207,252 @@ window.checkAutoVariableModes = function() {
 window.toggleVariableModes = function(forceState) {
   const checkbox = document.getElementById('m_is_variable');
   const section = document.getElementById('veritech-modes-section');
+  const varSection = document.getElementById('mecha-variants-section');
   if (!section) return;
 
   const active = typeof forceState === 'boolean' ? forceState : (checkbox ? checkbox.checked : false);
   if (checkbox) checkbox.checked = active;
 
   section.style.display = active ? 'block' : 'none';
+  if (varSection) {
+    varSection.style.display = active ? 'block' : 'none';
+  }
   updateLivePreview();
 };
+
+window.toggleVariantsSection = function(forceState) {
+  const checkbox = document.getElementById('m_has_variants');
+  const section = document.getElementById('mecha-variants-section');
+  if (!section) return;
+
+  const active = typeof forceState === 'boolean' ? forceState : (checkbox ? checkbox.checked : false);
+  if (checkbox) checkbox.checked = active;
+
+  section.style.display = active ? 'block' : 'none';
+  if (active && document.querySelectorAll('#mecha-variants-container .variant-admin-card').length === 0) {
+    addVariantRow();
+  }
+};
+
+window.openAssetBrowserForVariantRow = function(btn) {
+  const card = btn.closest('.variant-admin-card');
+  const input = card ? card.querySelector('.var-img-input') : null;
+  if (input) {
+    window.openAssetBrowser(input);
+  }
+};
+
+window.syncVariantRowThumb = function(inputEl) {
+  const card = inputEl.closest('.variant-admin-card');
+  const img = card ? card.querySelector('.var-img-preview') : null;
+  if (img) {
+    img.src = inputEl.value;
+    img.style.display = inputEl.value ? 'block' : 'none';
+  }
+};
+
+function addVariantRow(data = {}) {
+  const container = document.getElementById('mecha-variants-container');
+  if (!container) return;
+
+  const modelCode = data.model_code || 'VF-1';
+  const id = data.id || modelCode.toLowerCase().replace(/[^a-z0-9_-]/g, '-');
+  const nameEs = data.name_es || '';
+  const nameEn = data.name_en || '';
+  const roleEs = data.role_es || '';
+  const roleEn = data.role_en || '';
+  const crewEs = data.crew_es || '1 Piloto (Monoplaza)';
+  const crewEn = data.crew_en || '1 Pilot (Single seat)';
+  const laserCount = data.head_lasers?.count ?? 1;
+  const laserDescEs = data.head_lasers?.description_es || '';
+  const laserDescEn = data.head_lasers?.description_en || '';
+  const liveryNameEs = data.color_scheme?.name_es || '';
+  const liveryNameEn = data.color_scheme?.name_en || '';
+  const primaryColor = data.color_scheme?.primary_color || '#8c6239';
+  const secondaryColor = data.color_scheme?.secondary_color || '#ffffff';
+  const pilotsStr = Array.isArray(data.pilots) ? data.pilots.join(', ') : (data.pilots || '');
+  const imgUrl = data.image || '';
+  const descEs = data.description_es || '';
+  const descEn = data.description_en || '';
+  const speed = data.speed || 'Mach 2.71 (3.870 km/h a 10.000m)';
+  const armor = data.armor || 'C.D.M. Estándar de Fábrica';
+  const firepower = data.firepower || 'Estándar';
+
+  const card = document.createElement('div');
+  card.className = 'variant-admin-card';
+  card.innerHTML = `
+    <button type="button" class="dyn-list-remove" onclick="this.closest('.variant-admin-card').remove();" title="Eliminar Variante">✕</button>
+    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; border-bottom: 1px dashed rgba(0, 240, 255, 0.2); padding-bottom: 8px;">
+      <span style="font-family: var(--font-hud); font-size: 0.8rem; background: var(--un-cyan); color: #000; font-weight: bold; padding: 2px 8px; border-radius: 2px;">
+        VARIANTE // <span class="var-badge-preview">${modelCode}</span>
+      </span>
+      <span style="font-size: 0.75rem; color: var(--text-dim);">Expediente de producción y submodelo táctico</span>
+    </div>
+
+    <!-- Identificación y Render -->
+    <div class="form-grid-3" style="gap: 10px;">
+      <div class="form-group">
+        <label>Código de Modelo</label>
+        <input type="text" class="form-input var-model-code" value="${modelCode}" placeholder="ej: VF-1A" oninput="this.closest('.variant-admin-card').querySelector('.var-badge-preview').textContent = this.value || 'VARIANTE';">
+      </div>
+      <div class="form-group">
+        <label>ID Interno (Slug)</label>
+        <input type="text" class="form-input var-id" value="${id}" placeholder="ej: vf-1a">
+      </div>
+      <div class="form-group">
+        <label>Foto / Render de la Variante</label>
+        <div style="display: flex; gap: 6px;">
+          <input type="text" class="form-input var-img-input" value="${imgUrl}" placeholder="assets/images/mechas/... o URL" oninput="syncVariantRowThumb(this)">
+          <button type="button" class="btn-action-secondary" onclick="openAssetBrowserForVariantRow(this)" style="padding: 6px 10px; font-size: 0.72rem; white-space: nowrap;">📁 ELEGIR</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thumbnail Preview si hay imagen -->
+    <div style="margin-bottom: 12px;">
+      <img src="${imgUrl}" class="var-img-preview" alt="Preview" style="max-height: 100px; max-width: 180px; object-fit: contain; background: rgba(0,0,0,0.6); border: 1px solid rgba(0,240,255,0.2); border-radius: 2px; padding: 3px; display: ${imgUrl ? 'block' : 'none'};">
+    </div>
+
+    <!-- Nombres bilingües -->
+    <div class="form-grid-2" style="gap: 10px;">
+      <div class="form-group">
+        <label>Nombre de la Variante (ES)</label>
+        <input type="text" class="form-input var-name-es" value="${nameEs}" placeholder="ej: VF-1A Valkyrie (Modelo Estándar)">
+      </div>
+      <div class="form-group">
+        <label>Variant Name (EN)</label>
+        <input type="text" class="form-input var-name-en" value="${nameEn}" placeholder="ej: VF-1A Valkyrie (Standard Model)">
+      </div>
+    </div>
+
+    <!-- Rol y Dotación / Tripulación -->
+    <div class="form-grid-2" style="gap: 10px;">
+      <div class="form-group">
+        <label>Rol Táctico Operacional (ES)</label>
+        <input type="text" class="form-input var-role-es" value="${roleEs}" placeholder="ej: Caza Variable Estándar de Producción Masiva">
+      </div>
+      <div class="form-group">
+        <label>Tactical Role (EN)</label>
+        <input type="text" class="form-input var-role-en" value="${roleEn}" placeholder="ej: Standard Mass-Production Variable Fighter">
+      </div>
+    </div>
+
+    <div class="form-grid-2" style="gap: 10px;">
+      <div class="form-group">
+        <label>Dotación / Tripulación (ES)</label>
+        <input type="text" class="form-input var-crew-es" value="${crewEs}" placeholder="ej: 1 Piloto (Monoplaza)">
+      </div>
+      <div class="form-group">
+        <label>Crew (EN)</label>
+        <input type="text" class="form-input var-crew-en" value="${crewEn}" placeholder="ej: 1 Pilot (Single seat)">
+      </div>
+    </div>
+
+    <!-- Armamento Craneal / Head Lasers -->
+    <div style="background: rgba(4, 10, 22, 0.7); border: 1px solid rgba(239, 68, 68, 0.25); border-left: 3px solid var(--accent-red); padding: 10px; border-radius: 0 3px 3px 0; margin-bottom: 12px;">
+      <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 8px;">
+        <span style="font-family: var(--font-hud); font-size: 0.75rem; color: var(--accent-red); letter-spacing: 1px;">⚡ TORRETA CRANEAL // LÁSERES DE CABEZA</span>
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <label style="font-size: 0.7rem; color: #fff; margin:0;">Cantidad de Láseres:</label>
+          <input type="number" min="0" max="8" class="form-input var-lasers-count" value="${laserCount}" style="width: 65px; padding: 4px 8px; font-size: 0.8rem;">
+        </div>
+      </div>
+      <div class="form-grid-2" style="gap: 8px;">
+        <div class="form-group" style="margin-bottom:0;">
+          <label style="font-size:0.7rem;">Descripción de Armamento Craneal (ES)</label>
+          <input type="text" class="form-input var-lasers-desc-es" value="${laserDescEs}" placeholder="ej: 1 Cañón Láser Mauler RoV-20 montado en domo central">
+        </div>
+        <div class="form-group" style="margin-bottom:0;">
+          <label style="font-size:0.7rem;">Head Lasers Description (EN)</label>
+          <input type="text" class="form-input var-lasers-desc-en" value="${laserDescEn}" placeholder="ej: 1 Mauler RoV-20 Laser Cannon centrally mounted">
+        </div>
+      </div>
+    </div>
+
+    <!-- Esquema de Color / Livery -->
+    <div style="background: rgba(4, 10, 22, 0.7); border: 1px solid rgba(245, 158, 11, 0.25); border-left: 3px solid var(--skull-amber); padding: 10px; border-radius: 0 3px 3px 0; margin-bottom: 12px;">
+      <span style="font-family: var(--font-hud); font-size: 0.75rem; color: var(--skull-amber); letter-spacing: 1px; display: block; margin-bottom: 8px;">🎨 ESQUEMA DE PINTURA, CAMUFLAJE Y LIVERY</span>
+      <div class="form-grid-3" style="gap: 8px; align-items: flex-end;">
+        <div class="form-group" style="margin-bottom:0;">
+          <label style="font-size:0.7rem;">Nombre del Esquema (ES)</label>
+          <input type="text" class="form-input var-livery-es" value="${liveryNameEs}" placeholder="ej: Marrón Táctico / Blanco con gris">
+        </div>
+        <div class="form-group" style="margin-bottom:0;">
+          <label style="font-size:0.7rem;">Livery Name (EN)</label>
+          <input type="text" class="form-input var-livery-en" value="${liveryNameEn}" placeholder="ej: Standard Tactical Brown / White">
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <div class="form-group" style="margin-bottom:0; flex:1;">
+            <label style="font-size:0.7rem;">Color Primario</label>
+            <div style="display: flex; gap: 4px; align-items: center;">
+              <input type="color" class="var-color-primary" value="${primaryColor}" style="width: 30px; height: 32px; border: none; background: transparent; cursor: pointer;">
+              <input type="text" class="form-input var-color-primary-text" value="${primaryColor}" style="font-size: 0.75rem; padding: 4px;" oninput="this.previousElementSibling.value = this.value">
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom:0; flex:1;">
+            <label style="font-size:0.7rem;">Color Secundario</label>
+            <div style="display: flex; gap: 4px; align-items: center;">
+              <input type="color" class="var-color-secondary" value="${secondaryColor}" style="width: 30px; height: 32px; border: none; background: transparent; cursor: pointer;">
+              <input type="text" class="form-input var-color-secondary-text" value="${secondaryColor}" style="font-size: 0.75rem; padding: 4px;" oninput="this.previousElementSibling.value = this.value">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pilotos Notables -->
+    <div class="form-group" style="margin-bottom: 10px;">
+      <label>Pilotos y Asignaciones Notables (Separados por coma)</label>
+      <input type="text" class="form-input var-pilots" value="${pilotsStr}" placeholder="ej: Rick Hunter (Líder Vermilion), Max Sterling, Miriya Parina">
+    </div>
+
+    <!-- Modificadores de Telemetría -->
+    <div class="form-grid-3" style="gap: 8px; margin-bottom: 10px;">
+      <div class="form-group" style="margin-bottom:0;">
+        <label style="font-size:0.7rem;">Velocidad</label>
+        <input type="text" class="form-input var-speed" value="${speed}" placeholder="ej: Mach 2.71">
+      </div>
+      <div class="form-group" style="margin-bottom:0;">
+        <label style="font-size:0.7rem;">Blindaje C.D.M.</label>
+        <input type="text" class="form-input var-armor" value="${armor}" placeholder="ej: C.D.M. Reforzado">
+      </div>
+      <div class="form-group" style="margin-bottom:0;">
+        <label style="font-size:0.7rem;">Potencia Ofensiva</label>
+        <input type="text" class="form-input var-firepower" value="${firepower}" placeholder="ej: 2x Láser + GU-11">
+      </div>
+    </div>
+
+    <!-- Descripción / Lore de la Variante -->
+    <div class="form-grid-2" style="gap: 10px;">
+      <div class="form-group" style="margin-bottom:0;">
+        <label>Descripción Operacional y Lore (ES)</label>
+        <textarea class="form-textarea var-desc-es" rows="2" placeholder="ej: Variante de un solo asiento con mejoras en el armamento y sistemas...">${descEs}</textarea>
+      </div>
+      <div class="form-group" style="margin-bottom:0;">
+        <label>Operational Profile & Lore (EN)</label>
+        <textarea class="form-textarea var-desc-en" rows="2" placeholder="ej: Single-seat variant with upgraded avionics and twin head weaponry...">${descEn}</textarea>
+      </div>
+    </div>
+  `;
+
+  // Sincronizar selectores de color
+  const colPriInput = card.querySelector('.var-color-primary');
+  if (colPriInput) {
+    colPriInput.oninput = function() {
+      this.nextElementSibling.value = this.value;
+    };
+  }
+  const colSecInput = card.querySelector('.var-color-secondary');
+  if (colSecInput) {
+    colSecInput.oninput = function() {
+      this.nextElementSibling.value = this.value;
+    };
+  }
+
+  container.appendChild(card);
+}
+
+window.addVariantRow = addVariantRow;
 
 window.updateModePreview = function(mode) {
   const inp = document.getElementById(`m_mode_${mode}_img`);
@@ -435,6 +682,17 @@ async function loadMechaIntoForm(id) {
       }
     }
 
+    // Variantes Tácticas de Producción
+    const varContainer = document.getElementById('mecha-variants-container');
+    if (varContainer) varContainer.innerHTML = '';
+    const hasVariants = Boolean(data.has_variants || (data.variants && data.variants.length > 0));
+    const varCheckEl = document.getElementById('m_has_variants');
+    if (varCheckEl) varCheckEl.checked = hasVariants;
+    toggleVariantsSection(hasVariants || isVar);
+    if (data.variants && data.variants.length > 0) {
+      data.variants.forEach(v => addVariantRow(v));
+    }
+
     // Galería de Imágenes
     const galContainer = document.getElementById('gallery-items-container');
     galContainer.innerHTML = '';
@@ -458,6 +716,12 @@ function resetForm() {
   document.getElementById('mdc-items-container').innerHTML = '';
   document.getElementById('weapons-items-container').innerHTML = '';
   document.getElementById('gallery-items-container').innerHTML = '';
+
+  const varCheckEl = document.getElementById('m_has_variants');
+  if (varCheckEl) varCheckEl.checked = false;
+  const varContainer = document.getElementById('mecha-variants-container');
+  if (varContainer) varContainer.innerHTML = '';
+  toggleVariantsSection(false);
 
   const varCheck = document.getElementById('m_is_variable');
   if (varCheck) varCheck.checked = false;
@@ -834,12 +1098,75 @@ function buildCurrentMechaJSON() {
     }
   });
 
+  // Variantes de producción tácticas
+  const variantsList = [];
+  document.querySelectorAll('#mecha-variants-container .variant-admin-card').forEach(card => {
+    const code = card.querySelector('.var-model-code')?.value.trim() || '';
+    if (code) {
+      const vId = card.querySelector('.var-id')?.value.trim() || code.toLowerCase().replace(/[^a-z0-9_-]/g, '-');
+      const vNameEs = card.querySelector('.var-name-es')?.value.trim() || code;
+      const vNameEn = card.querySelector('.var-name-en')?.value.trim() || code;
+      const vRoleEs = card.querySelector('.var-role-es')?.value.trim() || '';
+      const vRoleEn = card.querySelector('.var-role-en')?.value.trim() || '';
+      const vCrewEs = card.querySelector('.var-crew-es')?.value.trim() || '1 Piloto';
+      const vCrewEn = card.querySelector('.var-crew-en')?.value.trim() || '1 Pilot';
+      const lCount = parseInt(card.querySelector('.var-lasers-count')?.value || '1');
+      const lDescEs = card.querySelector('.var-lasers-desc-es')?.value.trim() || '';
+      const lDescEn = card.querySelector('.var-lasers-desc-en')?.value.trim() || '';
+      const livEs = card.querySelector('.var-livery-es')?.value.trim() || '';
+      const livEn = card.querySelector('.var-livery-en')?.value.trim() || '';
+      const colPri = card.querySelector('.var-color-primary')?.value || '#8c6239';
+      const colSec = card.querySelector('.var-color-secondary')?.value || '#ffffff';
+      const pilotsRaw = card.querySelector('.var-pilots')?.value.trim() || '';
+      const pilotsArr = pilotsRaw ? pilotsRaw.split(',').map(p => p.trim()).filter(Boolean) : [];
+      const vImg = card.querySelector('.var-img-input')?.value.trim() || '';
+      const vDescEs = card.querySelector('.var-desc-es')?.value.trim() || '';
+      const vDescEn = card.querySelector('.var-desc-en')?.value.trim() || '';
+      const vSpeed = card.querySelector('.var-speed')?.value.trim() || '';
+      const vArmor = card.querySelector('.var-armor')?.value.trim() || '';
+      const vFirepower = card.querySelector('.var-firepower')?.value.trim() || '';
+
+      variantsList.push({
+        id: vId,
+        model_code: code,
+        name_es: vNameEs,
+        name_en: vNameEn,
+        role_es: vRoleEs,
+        role_en: vRoleEn,
+        crew_es: vCrewEs,
+        crew_en: vCrewEn,
+        head_lasers: {
+          count: lCount,
+          description_es: lDescEs,
+          description_en: lDescEn
+        },
+        color_scheme: {
+          name_es: livEs,
+          name_en: livEn,
+          primary_color: colPri,
+          secondary_color: colSec
+        },
+        pilots: pilotsArr,
+        image: vImg,
+        description_es: vDescEs,
+        description_en: vDescEn,
+        speed: vSpeed,
+        armor: vArmor,
+        firepower: vFirepower
+      });
+    }
+  });
+
+  const hasVariants = variantsList.length > 0 || Boolean(document.getElementById('m_has_variants')?.checked);
+
   return {
     id: id,
     name: name,
     alias: alias,
     category: category,
     is_variable: isVariable,
+    has_variants: hasVariants,
+    variants: variantsList,
     modes: modesData,
     series: { es: series_es, en: series_en },
     faction: { es: faction_es, en: faction_en },
@@ -1237,6 +1564,7 @@ window.selectAsset = function(path) {
     if (typeof syncCharRowThumb === 'function') syncCharRowThumb(currentAssetTarget);
     if (typeof syncShipRowThumb === 'function') syncShipRowThumb(currentAssetTarget);
     if (typeof syncRowThumb === 'function') syncRowThumb(currentAssetTarget);
+    if (typeof syncVariantRowThumb === 'function') syncVariantRowThumb(currentAssetTarget);
     updateLivePreview();
     updateLiveCharPreview();
     updateLiveShipPreview();
@@ -1323,19 +1651,53 @@ function setupModuleView(moduleName) {
   const layoutMechas = document.getElementById('admin-layout-mechas');
   const layoutChars = document.getElementById('admin-layout-characters');
   const layoutShips = document.getElementById('admin-layout-ships');
+  const layoutTimeline = document.getElementById('admin-layout-timeline');
   const topMechas = document.getElementById('top-mechas-controls');
   const topChars = document.getElementById('top-characters-controls');
   const topShips = document.getElementById('top-ships-controls');
+  const topTimeline = document.getElementById('top-timeline-controls');
   const titleBadge = document.getElementById('admin-title-badge');
   const subtitle = document.getElementById('admin-subtitle');
 
-  if (moduleName === 'ships') {
+  // Actualizar estilo activo de botones de pestañas superiores
+  ['mechas', 'characters', 'ships', 'timeline'].forEach(m => {
+    const btn = document.getElementById(`tab-btn-${m}`);
+    if (btn) {
+      if (m === moduleName) {
+        btn.style.background = 'var(--un-cyan)';
+        btn.style.color = '#000';
+        btn.style.fontWeight = 'bold';
+        btn.style.borderColor = 'var(--un-cyan)';
+      } else {
+        btn.style.background = 'rgba(0, 240, 255, 0.08)';
+        btn.style.color = 'var(--text-primary)';
+        btn.style.fontWeight = 'normal';
+        btn.style.borderColor = 'var(--border-tactical)';
+      }
+    }
+  });
+
+  if (moduleName === 'timeline') {
+    if (layoutMechas) layoutMechas.style.display = 'none';
+    if (layoutChars) layoutChars.style.display = 'none';
+    if (layoutShips) layoutShips.style.display = 'none';
+    if (layoutTimeline) layoutTimeline.style.display = 'grid';
+    if (topMechas) topMechas.style.display = 'none';
+    if (topChars) topChars.style.display = 'none';
+    if (topShips) topShips.style.display = 'none';
+    if (topTimeline) topTimeline.style.display = 'flex';
+    if (titleBadge) titleBadge.textContent = 'REGISTRO // HISTORIA & GUERRAS';
+    if (subtitle) subtitle.textContent = 'GESTIÓN CRUD DE LÍNEA DE TIEMPO INTERACTIVA Y GRANDES BATALLAS';
+    document.title = 'Robotech Admin Studio // Historia & Guerras';
+  } else if (moduleName === 'ships') {
     if (layoutMechas) layoutMechas.style.display = 'none';
     if (layoutChars) layoutChars.style.display = 'none';
     if (layoutShips) layoutShips.style.display = 'grid';
+    if (layoutTimeline) layoutTimeline.style.display = 'none';
     if (topMechas) topMechas.style.display = 'none';
     if (topChars) topChars.style.display = 'none';
     if (topShips) topShips.style.display = 'flex';
+    if (topTimeline) topTimeline.style.display = 'none';
     if (titleBadge) titleBadge.textContent = 'REGISTRO // NAVES CAPITALES';
     if (subtitle) subtitle.textContent = 'GESTIÓN CRUD DE FORTALEZAS Y FLOTAS DE COMBATE SDF';
     document.title = 'Robotech Admin Studio // Naves Capitales';
@@ -1343,18 +1705,22 @@ function setupModuleView(moduleName) {
     if (layoutMechas) layoutMechas.style.display = 'none';
     if (layoutChars) layoutChars.style.display = 'grid';
     if (layoutShips) layoutShips.style.display = 'none';
+    if (layoutTimeline) layoutTimeline.style.display = 'none';
     if (topMechas) topMechas.style.display = 'none';
     if (topChars) topChars.style.display = 'flex';
     if (topShips) topShips.style.display = 'none';
+    if (topTimeline) topTimeline.style.display = 'none';
     if (titleBadge) titleBadge.textContent = 'EXPEDIENTES // PERSONAJES';
     if (subtitle) subtitle.textContent = 'GESTIÓN CRUD DE PERSONAJES Y ASES MILITARES SDF-1';
     document.title = 'Robotech Admin Studio // Personajes';
   } else {
     if (layoutChars) layoutChars.style.display = 'none';
     if (layoutShips) layoutShips.style.display = 'none';
+    if (layoutTimeline) layoutTimeline.style.display = 'none';
     if (layoutMechas) layoutMechas.style.display = 'grid';
     if (topChars) topChars.style.display = 'none';
     if (topShips) topShips.style.display = 'none';
+    if (topTimeline) topTimeline.style.display = 'none';
     if (topMechas) topMechas.style.display = 'flex';
     if (titleBadge) titleBadge.textContent = 'CODEX // MECHAS';
     if (subtitle) subtitle.textContent = 'GESTIÓN CRUD DE MECHAS Y VEHÍCULOS DE COMBATE';
@@ -1364,7 +1730,17 @@ function setupModuleView(moduleName) {
 
 window.switchAdminModule = function(moduleName) {
   setupModuleView(moduleName);
-  if (moduleName === 'ships') {
+  if (moduleName === 'timeline') {
+    if (!currentTimelineData) {
+      loadAdminTimelineManifest().then(() => {
+        setupTimelineEventListeners();
+        setupTimelineExportButtons();
+        updateLiveTimelinePreview();
+      });
+    } else {
+      updateLiveTimelinePreview();
+    }
+  } else if (moduleName === 'ships') {
     if (!currentShipManifest) loadAdminShipManifest();
     updateLiveShipPreview();
   } else if (moduleName === 'characters') {
@@ -2924,6 +3300,522 @@ window.setAsShipThumbnail = setAsShipThumbnail;
 window.updateLiveShipPreview = updateLiveShipPreview;
 window.updateShipFactionLogoPreview = updateShipFactionLogoPreview;
 window.updateShipFactionFromSelect = updateShipFactionFromSelect;
+
+// ==========================================================================
+// 6. GESTIÓN DEL MÓDULO DE HISTORIA & LÍNEA DE TIEMPO (CRUD COMPLETO)
+// ==========================================================================
+
+async function loadAdminTimelineManifest() {
+  try {
+    const res = await fetch(`data/timeline.json?_t=${Date.now()}`, { cache: 'no-store' });
+    if (res.ok) {
+      currentTimelineData = await res.json();
+    } else {
+      console.warn("No se pudo cargar data/timeline.json");
+    }
+  } catch (err) {
+    console.error("Error al cargar timeline.json:", err);
+  }
+
+  if (!currentTimelineData || !currentTimelineData.events) {
+    currentTimelineData = {
+      system_version: "1.0.0",
+      eras: [],
+      events: []
+    };
+  }
+
+  const select = document.getElementById('select-event-to-edit');
+  if (!select) return;
+
+  select.innerHTML = '<option value="">-- SELECCIONAR EVENTO HISTÓRICO --</option>';
+  currentTimelineData.events.forEach(ev => {
+    const titleText = ev.title?.es || ev.title?.en || ev.id;
+    const yearText = ev.year || '';
+    const opt = document.createElement('option');
+    opt.value = ev.id;
+    opt.textContent = `[${yearText}] ${titleText}`;
+    select.appendChild(opt);
+  });
+
+  // Si no hay evento activo, seleccionar el primero por defecto
+  if (!currentTimelineEvent && currentTimelineData.events.length > 0) {
+    select.value = currentTimelineData.events[0].id;
+    populateTimelineForm(currentTimelineData.events[0]);
+  } else if (currentTimelineEvent) {
+    select.value = currentTimelineEvent.id;
+    populateTimelineForm(currentTimelineEvent);
+  }
+}
+
+function setupTimelineEventListeners() {
+  const select = document.getElementById('select-event-to-edit');
+  if (select) {
+    select.addEventListener('change', () => {
+      const evId = select.value;
+      if (!evId) {
+        resetTimelineFormForNew();
+        return;
+      }
+      const ev = (currentTimelineData?.events || []).find(e => e.id === evId);
+      if (ev) {
+        populateTimelineForm(ev);
+        window.tacticalAudio?.click();
+      }
+    });
+  }
+
+  const btnNew = document.getElementById('btn-new-event');
+  if (btnNew) {
+    btnNew.addEventListener('click', () => {
+      resetTimelineFormForNew();
+      window.tacticalAudio?.click();
+    });
+  }
+
+  // Inputs con actualización reactiva
+  const liveInputs = [
+    't_id', 't_era', 't_year', 't_date_es', 't_date_en', 't_defcon',
+    't_badge_es', 't_badge_en', 't_title_es', 't_title_en',
+    't_subtitle_es', 't_subtitle_en', 't_location_es', 't_location_en',
+    't_image', 't_key_figures', 't_summary_es', 't_summary_en',
+    't_f1_name_es', 't_f1_name_en', 't_f1_logo',
+    't_f2_name_es', 't_f2_name_en', 't_f2_logo',
+    't_tactical_report_es', 't_tactical_report_en',
+    't_outcomes_es', 't_outcomes_en', 't_technologies',
+    't_casualties_es', 't_casualties_en'
+  ];
+
+  liveInputs.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('input', () => {
+        if (id === 't_image') updateTimelineImagePreview();
+        updateLiveTimelinePreview();
+      });
+      el.addEventListener('change', () => {
+        if (id === 't_image') updateTimelineImagePreview();
+        updateLiveTimelinePreview();
+      });
+    }
+  });
+}
+
+function updateTimelineImagePreview() {
+  const inp = document.getElementById('t_image');
+  const prev = document.getElementById('timeline_image_preview');
+  const label = document.getElementById('timeline_image_path_label');
+  if (!inp || !prev) return;
+  const val = inp.value.trim() || 'assets/images/historia y guerras/portada_historia_y_guerras.jpg';
+  prev.src = val;
+  if (label) label.textContent = val;
+}
+
+function populateTimelineForm(ev) {
+  currentTimelineEvent = ev;
+  const setVal = (id, val) => {
+    const el = document.getElementById(id);
+    if (el) el.value = val !== undefined && val !== null ? val : '';
+  };
+
+  setVal('t_id', ev.id);
+  setVal('t_era', ev.era || 'first_war');
+  setVal('t_year', ev.year || '2009');
+  setVal('t_date_es', ev.date_display?.es || '');
+  setVal('t_date_en', ev.date_display?.en || '');
+  setVal('t_defcon', ev.defcon || 'DEFCON 1');
+  setVal('t_badge_es', ev.badge?.es || '');
+  setVal('t_badge_en', ev.badge?.en || '');
+
+  setVal('t_title_es', ev.title?.es || '');
+  setVal('t_title_en', ev.title?.en || '');
+  setVal('t_subtitle_es', ev.subtitle?.es || '');
+  setVal('t_subtitle_en', ev.subtitle?.en || '');
+  setVal('t_location_es', ev.location?.es || '');
+  setVal('t_location_en', ev.location?.en || '');
+
+  setVal('t_image', ev.image || 'assets/images/historia y guerras/portada_historia_y_guerras.jpg');
+
+  // Facciones
+  const f1 = ev.factions?.[0] || {};
+  setVal('t_f1_name_es', f1.name_es || f1.name || '');
+  setVal('t_f1_name_en', f1.name_en || f1.name || '');
+  setVal('t_f1_logo', f1.logo || 'assets/images/ui/logo_UNSpacy.png');
+
+  const f2 = ev.factions?.[1] || {};
+  setVal('t_f2_name_es', f2.name_es || f2.name || '');
+  setVal('t_f2_name_en', f2.name_en || f2.name || '');
+  setVal('t_f2_logo', f2.logo || 'assets/images/ui/logo_zentran.png');
+
+  setVal('t_key_figures', (ev.key_figures || []).join(', '));
+  setVal('t_summary_es', ev.summary?.es || '');
+  setVal('t_summary_en', ev.summary?.en || '');
+
+  setVal('t_tactical_report_es', ev.tactical_report?.es || '');
+  setVal('t_tactical_report_en', ev.tactical_report?.en || '');
+
+  setVal('t_outcomes_es', ev.outcomes?.es || '');
+  setVal('t_outcomes_en', ev.outcomes?.en || '');
+
+  setVal('t_technologies', (ev.technologies || []).join(', '));
+  setVal('t_casualties_es', ev.casualties?.es || '');
+  setVal('t_casualties_en', ev.casualties?.en || '');
+
+  updateTimelineImagePreview();
+  updateLiveTimelinePreview();
+}
+
+function resetTimelineFormForNew() {
+  currentTimelineEvent = null;
+  const newSlug = `evento_${Date.now()}`;
+  const sel = document.getElementById('select-event-to-edit');
+  if (sel) sel.value = '';
+
+  const setVal = (id, val) => {
+    const el = document.getElementById(id);
+    if (el) el.value = val;
+  };
+
+  setVal('t_id', newSlug);
+  setVal('t_era', 'first_war');
+  setVal('t_year', '2010');
+  setVal('t_date_es', '2010');
+  setVal('t_date_en', '2010');
+  setVal('t_defcon', 'DEFCON 1');
+  setVal('t_badge_es', 'INFORME DE BATALLA');
+  setVal('t_badge_en', 'BATTLE DOSSIER');
+
+  setVal('t_title_es', 'Nuevo Evento Histórico');
+  setVal('t_title_en', 'New Historical Event');
+  setVal('t_subtitle_es', 'Teatro de Operaciones');
+  setVal('t_subtitle_en', 'Theater of Operations');
+  setVal('t_location_es', 'Órbita Terrestre / Espacio Profundo');
+  setVal('t_location_en', 'Earth Orbit / Deep Space');
+
+  setVal('t_image', 'assets/images/historia y guerras/portada_historia_y_guerras.jpg');
+  setVal('t_f1_name_es', 'U.N. Spacy // Tierra Unificada');
+  setVal('t_f1_name_en', 'U.N. Spacy // United Earth Forces');
+  setVal('t_f1_logo', 'assets/images/ui/logo_UNSpacy.png');
+  setVal('t_f2_name_es', 'Fuerzas Opositoras');
+  setVal('t_f2_name_en', 'Opposing Forces');
+  setVal('t_f2_logo', 'assets/images/ui/logo_zentran.png');
+
+  setVal('t_key_figures', 'Rick Hunter, Lisa Hayes, Roy Fokker');
+  setVal('t_summary_es', 'Resumen operacional del combate o hito histórico...');
+  setVal('t_summary_en', 'Operational combat summary of the historical milestone...');
+  setVal('t_tactical_report_es', 'Informe táctico detallado para el expediente militar...');
+  setVal('t_tactical_report_en', 'Detailed tactical report for the military dossier...');
+  setVal('t_outcomes_es', 'Victoria estratégica de las fuerzas aliadas...');
+  setVal('t_outcomes_en', 'Strategic victory for allied forces...');
+  setVal('t_technologies', 'Robotecnología, Cazas Variables');
+  setVal('t_casualties_es', 'Bajas moderadas.');
+  setVal('t_casualties_en', 'Moderate casualties.');
+
+  updateTimelineImagePreview();
+  updateLiveTimelinePreview();
+}
+
+function buildCurrentTimelineEventJSON() {
+  const getVal = (id) => (document.getElementById(id)?.value || '').trim();
+
+  const id = getVal('t_id') || `evento_${Date.now()}`;
+  const year = getVal('t_year') || '2009';
+  const era = getVal('t_era') || 'first_war';
+  const defcon = getVal('t_defcon') || 'DEFCON 1';
+  const image = getVal('t_image') || 'assets/images/historia y guerras/portada_historia_y_guerras.jpg';
+
+  // Facciones
+  const factions = [];
+  const f1NameEs = getVal('t_f1_name_es');
+  if (f1NameEs) {
+    factions.push({
+      name_es: f1NameEs,
+      name_en: getVal('t_f1_name_en') || f1NameEs,
+      logo: getVal('t_f1_logo') || 'assets/images/ui/logo_UNSpacy.png'
+    });
+  }
+  const f2NameEs = getVal('t_f2_name_es');
+  if (f2NameEs) {
+    factions.push({
+      name_es: f2NameEs,
+      name_en: getVal('t_f2_name_en') || f2NameEs,
+      logo: getVal('t_f2_logo') || 'assets/images/ui/logo_zentran.png'
+    });
+  }
+
+  // Key figures
+  const keyFiguresRaw = getVal('t_key_figures');
+  const key_figures = keyFiguresRaw ? keyFiguresRaw.split(',').map(s => s.trim()).filter(Boolean) : [];
+
+  // Technologies
+  const techRaw = getVal('t_technologies');
+  const technologies = techRaw ? techRaw.split(',').map(s => s.trim()).filter(Boolean) : [];
+
+  return {
+    id,
+    year,
+    date_display: {
+      es: getVal('t_date_es') || year,
+      en: getVal('t_date_en') || year
+    },
+    era,
+    badge: {
+      es: getVal('t_badge_es') || 'INFORME DE BATALLA',
+      en: getVal('t_badge_en') || 'BATTLE DOSSIER'
+    },
+    defcon,
+    title: {
+      es: getVal('t_title_es') || 'Evento Histórico',
+      en: getVal('t_title_en') || 'Historical Event'
+    },
+    subtitle: {
+      es: getVal('t_subtitle_es') || '',
+      en: getVal('t_subtitle_en') || ''
+    },
+    location: {
+      es: getVal('t_location_es') || '',
+      en: getVal('t_location_en') || ''
+    },
+    factions,
+    key_figures,
+    summary: {
+      es: getVal('t_summary_es') || '',
+      en: getVal('t_summary_en') || ''
+    },
+    image,
+    tactical_report: {
+      es: getVal('t_tactical_report_es') || '',
+      en: getVal('t_tactical_report_en') || ''
+    },
+    outcomes: {
+      es: getVal('t_outcomes_es') || '',
+      en: getVal('t_outcomes_en') || ''
+    },
+    technologies,
+    casualties: {
+      es: getVal('t_casualties_es') || '',
+      en: getVal('t_casualties_en') || ''
+    }
+  };
+}
+
+function updateLiveTimelinePreview() {
+  const container = document.getElementById('admin-live-timeline-card');
+  if (!container) return;
+
+  const data = buildCurrentTimelineEventJSON();
+  const dateText = data.date_display.es || data.year;
+  const badgeText = data.badge.es || 'INFORME DE BATALLA';
+
+  container.innerHTML = `
+    <div class="timeline-card" style="cursor: default; max-width: 100%; box-sizing: border-box; background: rgba(9, 20, 38, 0.95); border: 1px solid var(--un-cyan); border-radius: 4px; padding: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.6);">
+      <div class="card-event-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
+        <div class="event-date-badge" style="font-family: var(--font-hud); font-size: 0.8rem; font-weight: 700; color: var(--skull-amber); background: rgba(255, 157, 0, 0.1); border: 1px solid var(--border-amber); padding: 3px 8px; border-radius: 2px;">
+          <span>📅</span>
+          <span>${dateText}</span>
+        </div>
+        <div class="event-defcon-tag" style="font-family: var(--font-hud); font-size: 0.68rem; letter-spacing: 1px; color: var(--veritech-red); background: rgba(255, 45, 85, 0.12); border: 1px solid rgba(255, 45, 85, 0.35); padding: 2px 7px; border-radius: 2px;">
+          ${data.defcon}
+        </div>
+      </div>
+
+      <div class="event-thumb-wrap" style="position: relative; width: 100%; height: 160px; border-radius: 2px; overflow: hidden; margin-bottom: 12px; border: 1px solid rgba(0, 240, 255, 0.2);">
+        <img src="${data.image}" class="event-thumb-img" alt="${data.title.es}" onerror="this.src='assets/images/historia y guerras/portada_historia_y_guerras.jpg'" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="event-badge-overlay" style="position: absolute; bottom: 8px; left: 8px; background: rgba(4, 9, 18, 0.88); border: 1px solid var(--un-cyan); padding: 3px 8px; font-family: var(--font-hud); font-size: 0.65rem; color: var(--un-cyan); letter-spacing: 1px; border-radius: 2px;">
+          ${badgeText}
+        </div>
+      </div>
+
+      <h3 class="event-card-title" style="font-family: var(--font-hud); font-size: 1.15rem; font-weight: 700; color: #fff; letter-spacing: 1.2px; margin-bottom: 6px; line-height: 1.35; word-break: break-word;">
+        ${data.title.es}
+      </h3>
+      <div class="event-card-subtitle" style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--hud-amber); margin-bottom: 8px; letter-spacing: 0.8px; word-break: break-word;">
+        ${data.subtitle.es}
+      </div>
+      <div class="event-card-location" style="font-size: 0.72rem; color: var(--text-dim); margin-bottom: 10px; display: flex; align-items: center; gap: 5px; word-break: break-word;">
+        <span>📍</span>
+        <span>${data.location.es}</span>
+      </div>
+
+      <p class="event-card-summary" style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 12px;">
+        ${data.summary.es || 'Sin resumen cargado.'}
+      </p>
+
+      <div class="event-tags-row" style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px;">
+        ${(data.key_figures || []).slice(0, 3).map(f => `<span class="figure-pill" style="font-size: 0.68rem; color: var(--un-cyan); background: rgba(0, 240, 255, 0.08); border: 1px solid rgba(0, 240, 255, 0.2); padding: 2px 7px; border-radius: 2px; font-family: var(--font-mono);">${f}</span>`).join('')}
+      </div>
+
+      <div class="btn-timeline-dossier" style="margin-top: 10px; background: rgba(0,240,255,0.12); border: 1px solid var(--un-cyan); color: var(--un-cyan); font-family: var(--font-hud); font-size: 0.75rem; letter-spacing: 1.5px; padding: 8px 12px; border-radius: 2px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <span>✦ DESCLASIFICAR EXPEDIENTE COMPLETO</span>
+        <span>→</span>
+      </div>
+    </div>
+  `;
+}
+
+function setupTimelineExportButtons() {
+  // 1. Guardar evento directo en disco
+  const btnSave = document.getElementById('btn-save-timeline-direct');
+  if (btnSave) {
+    btnSave.addEventListener('click', async () => {
+      const data = buildCurrentTimelineEventJSON();
+      const consoleBox = document.getElementById('git-status-console-timeline');
+      if (consoleBox) {
+        consoleBox.style.display = 'block';
+        consoleBox.innerHTML = '<span style="color:var(--un-cyan);">[*] Guardando evento histórico en data/timeline.json...</span>';
+      }
+
+      try {
+        const res = await fetch('/api/save-timeline', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ event: data })
+        });
+
+        if (res.ok) {
+          const result = await res.json();
+          window.tacticalAudio?.scan();
+          if (consoleBox) {
+            consoleBox.innerHTML = `
+              <span style="color: var(--radar-green); font-weight: bold;">✓ [ÉXITO] Evento histórico guardado en disco:</span>
+              <br>• data/timeline.json
+              <br><span style="color: var(--text-dim);">${result.message || ''}</span>
+            `;
+          }
+
+          // Refrescar selector y seleccionar el evento guardado
+          currentTimelineEvent = data;
+          await loadAdminTimelineManifest();
+          const select = document.getElementById('select-event-to-edit');
+          if (select) select.value = data.id;
+
+        } else {
+          throw new Error("El servidor local respondió con error.");
+        }
+      } catch (err) {
+        console.warn("Fallo guardado por API /api/save-timeline, usando fallback:", err);
+        if (consoleBox) {
+          consoleBox.innerHTML = '<span style="color: var(--skull-amber);">[!] Servidor API no disponible. Descargando archivo JSON manualmente...</span>';
+        }
+        downloadJSON(data, `${data.id}.json`);
+      }
+    });
+  }
+
+  // 2. Botón Subir a GitHub (Git Push)
+  const btnGitPush = document.getElementById('btn-git-push-timeline');
+  if (btnGitPush) {
+    btnGitPush.addEventListener('click', async () => {
+      const data = buildCurrentTimelineEventJSON();
+      const consoleBox = document.getElementById('git-status-console-timeline');
+      if (consoleBox) {
+        consoleBox.style.display = 'block';
+        consoleBox.innerHTML = '<span style="color: var(--skull-amber); font-weight: bold;">[*] Ejecutando protocolo militar Git: add, commit y push a GitHub...</span>\nPor favor espera unos segundos...';
+      }
+
+      btnGitPush.disabled = true;
+      btnGitPush.style.opacity = '0.5';
+
+      try {
+        const res = await fetch('/api/git-push', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            commitMessage: `Actualizacion de Cronologia Robotech: Evento ${data.title.es || data.id}`
+          })
+        });
+
+        const result = await res.json();
+        btnGitPush.disabled = false;
+        btnGitPush.style.opacity = '1';
+
+        if (result.success) {
+          window.tacticalAudio?.scan();
+          if (consoleBox) {
+            consoleBox.innerHTML = `
+              <span style="color: var(--radar-green); font-weight: bold;">✓ [ÉXITO] Cambios sincronizados y subidos a GitHub:</span>
+              <pre style="margin-top:6px; color:#a3e635; font-size:0.7rem;">${result.logs || 'Push exitoso.'}</pre>
+            `;
+          }
+        } else {
+          window.tacticalAudio?.alert();
+          if (consoleBox) {
+            consoleBox.innerHTML = `
+              <span style="color: var(--veritech-red); font-weight: bold;">✕ [AVISO / REPORTE GIT]:</span>
+              <pre style="margin-top:6px; color:#ff9999; font-size:0.7rem;">${result.error || result.logs || 'Verifica tus credenciales de Git o conexión.'}</pre>
+            `;
+          }
+        }
+      } catch (err) {
+        btnGitPush.disabled = false;
+        btnGitPush.style.opacity = '1';
+        window.tacticalAudio?.alert();
+        if (consoleBox) {
+          consoleBox.innerHTML = `<span style="color: var(--veritech-red);">✕ Error de comunicación con server.py: ${err.message}</span>`;
+        }
+      }
+    });
+  }
+
+  // 3. Botón Eliminar Evento
+  const btnDelete = document.getElementById('btn-delete-timeline-event');
+  if (btnDelete) {
+    btnDelete.addEventListener('click', async () => {
+      const id = document.getElementById('t_id')?.value.trim();
+      const title = document.getElementById('t_title_es')?.value.trim() || id;
+      if (!id) return;
+
+      if (!confirm(`¿Estás seguro de que deseas eliminar permanentemente el evento '${title}' de la cronología?`)) {
+        return;
+      }
+
+      const consoleBox = document.getElementById('git-status-console-timeline');
+      if (consoleBox) {
+        consoleBox.style.display = 'block';
+        consoleBox.innerHTML = `<span style="color:var(--veritech-red);">[*] Eliminando evento '${id}' de data/timeline.json...</span>`;
+      }
+
+      try {
+        const res = await fetch('/api/save-timeline', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ delete_id: id })
+        });
+
+        if (res.ok) {
+          const result = await res.json();
+          window.tacticalAudio?.alert();
+          if (consoleBox) {
+            consoleBox.innerHTML = `<span style="color:var(--radar-green); font-weight:bold;">✓ ${result.message || 'Evento eliminado.'}</span>`;
+          }
+          currentTimelineEvent = null;
+          await loadAdminTimelineManifest();
+        } else {
+          throw new Error("No se pudo eliminar el evento.");
+        }
+      } catch (err) {
+        if (consoleBox) {
+          consoleBox.innerHTML = `<span style="color:var(--veritech-red);">✕ Error al eliminar: ${err.message}</span>`;
+        }
+      }
+    });
+  }
+
+  // 4. Descarga manual opcional de backup
+  const btnDl = document.getElementById('btn-download-timeline-json');
+  if (btnDl) {
+    btnDl.addEventListener('click', () => {
+      if (currentTimelineData) {
+        downloadJSON(currentTimelineData, 'timeline.json');
+      }
+    });
+  }
+}
+
+window.updateTimelineImagePreview = updateTimelineImagePreview;
+window.updateLiveTimelinePreview = updateLiveTimelinePreview;
+window.resetTimelineFormForNew = resetTimelineFormForNew;
+
 
 
 

@@ -305,7 +305,7 @@ function renderCharacters() {
 // --------------------------------------------------------------------------
 // CARGA PEREZOSA (LAZY LOAD) DEL .JSON DETALLADO DEL PERSONAJE
 // --------------------------------------------------------------------------
-async function openCharDossier(charId) {
+async function openCharDossier(charId, pushHistory = true) {
   window.tacticalAudio?.openDossier();
 
   let charData = window.charState.cache[charId];
@@ -324,12 +324,26 @@ async function openCharDossier(charId) {
   populateCharModal(charData);
   const modalBackdrop = document.getElementById('char-dossier-modal-backdrop');
   if (modalBackdrop) modalBackdrop.classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  if (pushHistory) {
+    const newUrl = `${window.location.pathname}?char=${encodeURIComponent(charId)}`;
+    history.pushState({ modal: 'char-dossier', charId: charId, tab: 'pane-char-bio' }, '', newUrl);
+  }
 }
 
-function closeCharDossier() {
+function closeCharDossier(updateHistory = true) {
   window.tacticalAudio?.click();
   const modalBackdrop = document.getElementById('char-dossier-modal-backdrop');
   if (modalBackdrop) modalBackdrop.classList.remove('open');
+  document.body.style.overflow = '';
+
+  if (updateHistory) {
+    const cleanUrl = window.location.pathname;
+    if (history.state?.modal === 'char-dossier') {
+      history.pushState(null, '', cleanUrl);
+    }
+  }
 }
 
 function populateCharModal(c) {
@@ -593,25 +607,96 @@ function closeLightbox() {
 
 function setupModalEvents() {
   const closeBtn = document.getElementById('btn-close-char-dossier');
-  if (closeBtn) closeBtn.addEventListener('click', closeCharDossier);
-
   const backdrop = document.getElementById('char-dossier-modal-backdrop');
+  const modalBox = backdrop?.querySelector('.dossier-modal');
+
+  if (closeBtn) closeBtn.addEventListener('click', () => closeCharDossier(true));
+
+  if (modalBox) {
+    modalBox.addEventListener('click', (e) => e.stopPropagation());
+  }
+
   if (backdrop) {
+    let isBackdropMousedown = false;
+    backdrop.addEventListener('mousedown', (e) => {
+      isBackdropMousedown = (e.target === backdrop);
+    });
     backdrop.addEventListener('click', (e) => {
-      if (e.target === backdrop) closeCharDossier();
+      if (e.target === backdrop && isBackdropMousedown) {
+        closeCharDossier(true);
+      }
+      isBackdropMousedown = false;
     });
   }
 
   // Pestañas
   document.querySelectorAll('#char-dossier-modal-backdrop .dossier-tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const tabId = btn.dataset.tab;
+
       document.querySelectorAll('#char-dossier-modal-backdrop .dossier-tab-btn').forEach(b => b.classList.remove('active'));
       document.querySelectorAll('#char-dossier-modal-backdrop .tab-pane').forEach(p => p.classList.remove('active'));
       btn.classList.add('active');
-      const targetPane = document.getElementById(btn.dataset.tab);
+      const targetPane = document.getElementById(tabId);
       if (targetPane) targetPane.classList.add('active');
+
+      const scrollContainer = backdrop.querySelector('.dossier-content-scroll');
+      if (scrollContainer) scrollContainer.scrollTop = 0;
+
+      if (window.currentCharData) {
+        const tabClean = tabId.replace('pane-char-', '');
+        history.replaceState({ modal: 'char-dossier', charId: window.currentCharData.id, tab: tabId }, '', `?char=${encodeURIComponent(window.currentCharData.id)}&tab=${encodeURIComponent(tabClean)}`);
+      }
+
       window.tacticalAudio?.hover();
     });
+  });
+
+  // Manejo de historial con botón Atrás del navegador
+  window.addEventListener('popstate', (e) => {
+    const bd = document.getElementById('char-dossier-modal-backdrop');
+    if (e.state && e.state.modal === 'char-dossier') {
+      if (!bd?.classList.contains('open')) {
+        openCharDossier(e.state.charId, false).then(() => {
+          if (e.state.tab) {
+            const btn = document.querySelector(`#char-dossier-modal-backdrop .dossier-tab-btn[data-tab="${e.state.tab}"]`);
+            if (btn) btn.click();
+          }
+        });
+      }
+    } else {
+      if (bd?.classList.contains('open')) {
+        closeCharDossier(false);
+      }
+    }
+  });
+
+  // Apertura directa por URL (?char=rick_hunter)
+  const urlParams = new URLSearchParams(window.location.search);
+  const charParam = urlParams.get('char');
+  const tabParam = urlParams.get('tab');
+  if (charParam) {
+    openCharDossier(charParam, false).then(() => {
+      if (tabParam) {
+        const cleanTab = tabParam.startsWith('pane-char-') ? tabParam : `pane-char-${tabParam}`;
+        const btn = document.querySelector(`#char-dossier-modal-backdrop .dossier-tab-btn[data-tab="${cleanTab}"]`);
+        if (btn) btn.click();
+      }
+    });
+  }
+
+  // Escape key handling
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const lb = document.getElementById('lightbox-backdrop');
+      if (lb && lb.style.display === 'flex') {
+        lb.style.display = 'none';
+        return;
+      }
+      closeCharDossier(true);
+    }
   });
 
   const lb = document.getElementById('lightbox-backdrop');

@@ -40,6 +40,8 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
             self.handle_save_character()
         elif self.path == '/api/save-ship':
             self.handle_save_ship()
+        elif self.path == '/api/save-timeline':
+            self.handle_save_timeline()
         elif self.path == '/api/git-push':
             self.handle_git_push()
         elif self.path == '/api/upload-image':
@@ -289,6 +291,79 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
         }
         self.send_json_response(200, response)
 
+    def handle_save_timeline(self):
+        try:
+            content_length = int(self.headers.get('Content-Length', 0))
+            body = self.rfile.read(content_length).decode('utf-8')
+            payload = json.loads(body)
+            self.save_timeline_event_data(payload)
+        except Exception as e:
+            self.send_json_response(500, {"success": False, "error": str(e)})
+
+    def save_timeline_event_data(self, payload):
+        timeline_file = os.path.join(BASE_DIR, 'data', 'timeline.json')
+        if not os.path.exists(timeline_file):
+            raise FileNotFoundError("Archivo data/timeline.json no encontrado")
+
+        with open(timeline_file, 'r', encoding='utf-8') as f:
+            timeline_data = json.load(f)
+
+        if 'events' not in timeline_data:
+            timeline_data['events'] = []
+
+        from datetime import datetime
+
+        # 1. Comprobar si es solicitud de eliminación
+        delete_id = payload.get('delete_id')
+        if delete_id:
+            orig_len = len(timeline_data['events'])
+            timeline_data['events'] = [e for e in timeline_data['events'] if e.get('id') != delete_id]
+            if len(timeline_data['events']) == orig_len:
+                raise ValueError(f"No se encontró el evento con ID '{delete_id}' para eliminar")
+            
+            timeline_data['updated_at'] = datetime.now().strftime("%Y-%m-%d")
+
+            with open(timeline_file, 'w', encoding='utf-8') as f:
+                json.dump(timeline_data, f, indent=2, ensure_ascii=False)
+
+            self.send_json_response(200, {
+                "success": True,
+                "message": f"Evento histórico '{delete_id}' eliminado correctamente de timeline.json.",
+                "deleted_id": delete_id
+            })
+            return
+
+        # 2. Guardar o actualizar evento
+        ev = payload.get('event') or payload.get('timeline_event')
+        if not ev or not ev.get('id'):
+            raise ValueError("Datos de evento histórico o ID faltante")
+
+        ev_id = ev['id']
+        idx = -1
+        for i, existing in enumerate(timeline_data['events']):
+            if existing.get('id') == ev_id:
+                idx = i
+                break
+
+        if idx >= 0:
+            timeline_data['events'][idx] = ev
+        else:
+            timeline_data['events'].append(ev)
+
+        timeline_data['updated_at'] = datetime.now().strftime("%Y-%m-%d")
+
+        with open(timeline_file, 'w', encoding='utf-8') as f:
+            json.dump(timeline_data, f, indent=2, ensure_ascii=False)
+
+        event_name = ev.get('title', {}).get('es') or ev.get('title', {}).get('en') or ev_id
+        response = {
+            "success": True,
+            "message": f"Evento histórico '{event_name}' guardado correctamente en data/timeline.json.",
+            "event_id": ev_id,
+            "timeline_file": "data/timeline.json"
+        }
+        self.send_json_response(200, response)
+
     def handle_save(self):
         try:
             content_length = int(self.headers.get('Content-Length', 0))
@@ -301,6 +376,10 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
 
             if payload.get('ship'):
                 self.save_ship_data(payload)
+                return
+
+            if payload.get('event') or payload.get('timeline_event') or payload.get('delete_id'):
+                self.save_timeline_event_data(payload)
                 return
 
             mecha = payload.get('mecha')
@@ -337,6 +416,8 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
                 "thumbnail": mecha.get("thumbnail", ""),
                 "faction_logo": mecha.get("faction_logo") or ("assets/images/ui/Mars_Base.png" if "marte" in str(mecha.get("faction", "")).lower() or "mars" in str(mecha.get("faction", "")).lower() else ("assets/images/ui/logo_zentran.png" if mecha.get("category") == "zentraedi" or "zentraedi" in str(mecha.get("faction", "")).lower() else "assets/images/ui/logo_UNSpacy.png")),
                 "is_variable": bool(mecha.get("is_variable") or mecha.get("modes") or mecha.get("category") == "veritech" or "variable" in str(mecha.get("vehicle_type", "")).lower()),
+                "has_variants": bool(mecha.get("has_variants") or mecha.get("variants")),
+                "variants_count": len(mecha.get("variants", [])) if mecha.get("variants") else 0,
                 "modes": {
                     "fighter": mecha.get("modes", {}).get("fighter", {}).get("image", ""),
                     "guardian": mecha.get("modes", {}).get("guardian", {}).get("image", ""),

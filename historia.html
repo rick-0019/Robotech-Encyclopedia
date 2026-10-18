@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROBOTECH // CRONOLOGÍA INTERACTIVA & GUERRAS</title>
+  
+  <!-- Tipografías Oficiales HUD Táctico -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- Hojas de Estilos HUD con Cache Busting -->
+  <link rel="stylesheet" href="css/style.css?v=1.1.0">
+  <link rel="stylesheet" href="css/hud-components.css?v=1.1.0">
+  <link rel="stylesheet" href="css/timeline.css?v=1.1.0">
+</head>
+<body>
+  <!-- Borde Superior de Alerta -->
+  <div class="hud-border-top"></div>
+
+  <div class="container">
+    <!-- HEADER MILITAR TÁCTICO -->
+    <header class="tactical-header">
+      <div class="brand-section">
+        <div class="un-spacy-insignia">
+          <img src="assets/images/ui/logo_UNSpacy.png" alt="Robotech Defense Force Insignia" class="insignia-img">
+        </div>
+        <div class="brand-text">
+          <h1 data-i18n="system_title">ROBOTECH <span>HISTORICAL ARCHIVE</span></h1>
+          <div class="system-status">
+            <span class="status-dot"></span>
+            <span data-i18n="status_online">ONLINE // CRONOLOGÍA DE GUERRAS 1999-2044+</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Botón Volver al Portal de Inicio -->
+        <a href="index.html" class="portal-nav-btn" style="text-decoration: none; padding: 7px 14px; background: rgba(0,240,255,0.1); border: 1px solid var(--un-cyan); color: var(--un-cyan); font-family: var(--font-hud); font-size: 0.75rem; letter-spacing: 1.5px; border-radius: 2px; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition-fast);" onmouseover="this.style.background='var(--un-cyan)'; this.style.color='#000';" onmouseout="this.style.background='rgba(0,240,255,0.1)'; this.style.color='var(--un-cyan)';">⮌ INICIO</a>
+
+        <!-- Enlace a Mechas -->
+        <a href="mechas.html" class="portal-nav-btn" style="text-decoration: none; padding: 7px 14px; background: rgba(255,157,0,0.1); border: 1px solid var(--skull-amber); color: var(--skull-amber); font-family: var(--font-hud); font-size: 0.75rem; letter-spacing: 1.5px; border-radius: 2px; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition-fast);" onmouseover="this.style.background='var(--skull-amber)'; this.style.color='#000';" onmouseout="this.style.background='rgba(255,157,0,0.1)'; this.style.color='var(--skull-amber)';">⌖ CODEX MECHAS</a>
+
+        <!-- Enlace a Personajes -->
+        <a href="personajes.html" class="portal-nav-btn" style="text-decoration: none; padding: 7px 14px; background: rgba(0,240,255,0.1); border: 1px solid var(--un-cyan); color: var(--un-cyan); font-family: var(--font-hud); font-size: 0.75rem; letter-spacing: 1.5px; border-radius: 2px; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition-fast);" onmouseover="this.style.background='var(--un-cyan)'; this.style.color='#000';" onmouseout="this.style.background='rgba(0,240,255,0.1)'; this.style.color='var(--un-cyan)';">👤 PERSONAJES</a>
+
+        <!-- Enlace a Naves Capitales -->
+        <a href="naves.html" class="portal-nav-btn" style="text-decoration: none; padding: 7px 14px; background: rgba(16,185,129,0.1); border: 1px solid var(--radar-green); color: var(--radar-green); font-family: var(--font-hud); font-size: 0.75rem; letter-spacing: 1.5px; border-radius: 2px; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition-fast);" onmouseover="this.style.background='var(--radar-green)'; this.style.color='#000';" onmouseout="this.style.background='rgba(16,185,129,0.1)'; this.style.color='var(--radar-green)';">⚓ NAVES CAPITALES</a>
+
+        <!-- Selector Bilingüe ES / EN -->
+        <button class="lang-switch active" data-lang="es">ES</button>
+        <button class="lang-switch" data-lang="en">EN</button>
+        
+        <!-- Toggle Efectos de Sonido Web Audio API -->
+        <button class="audio-switch" id="audio-switch" data-i18n="sound_on">SFX: ON</button>
+        
+        <!-- Acceso al Gestor CRUD Local -->
+        <a href="admin.html?module=historia" id="admin-link-btn" class="admin-link-btn" data-i18n="admin_btn" style="display: none;">⚙ GESTIÓN CRUD LOCAL</a>
+      </div>
+    </header>
+
+    <!-- BANNER HERO DE LA CRONOLOGÍA MILITAR -->
+    <section class="timeline-hero">
+      <div class="timeline-hero-bg"></div>
+      <div class="timeline-hero-overlay"></div>
+      <div class="timeline-hero-content">
+        <div class="hero-text-block">
+          <div class="hero-classified-badge">
+            <span class="blink-dot"></span>
+            <span data-i18n="hero_badge">REGISTRO CLASIFICADO // RDF HISTORICAL DIVISION</span>
+          </div>
+          <h2 data-i18n="hero_title">CRONOLOGÍA & <span>GRANDES GUERRAS</span></h2>
+          <p data-i18n="hero_desc">
+            Línea de tiempo interactiva ultra-detallada que documenta la epopeya de la humanidad y la Robotecnología: desde el impacto de la nave alienígena de Zor en la Isla Macross (1999) hasta el asalto a Punto Réflex y el conflicto contra los Haydonitas en Las Crónicas de las Sombras (2044+).
+          </p>
+        </div>
+
+        <div class="hero-stats-panel">
+          <div class="hero-stat-box">
+            <div class="hero-stat-num" id="stat-num-events">18</div>
+            <div class="hero-stat-label" data-i18n="stat_total_events">HITOS HISTÓRICOS</div>
+          </div>
+          <div class="hero-stat-box">
+            <div class="hero-stat-num" id="stat-num-eras">6</div>
+            <div class="hero-stat-label" data-i18n="stat_eras">ERAS TÁCTICAS</div>
+          </div>
+          <div class="hero-stat-box">
+            <div class="hero-stat-num" id="stat-num-span">45+</div>
+            <div class="hero-stat-label" data-i18n="stat_span">AÑOS DOCUMENTADOS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCRUBBER INTERACTIVO DE ERAS (ACCESO RÁPIDO) -->
+    <nav class="era-scrubber-bar" id="era-scrubber-bar">
+      <!-- Inyectado dinámicamente por js/timeline.js -->
+    </nav>
+
+    <!-- CONTROLES: BÚSQUEDA Y SELECTOR DE VISTA -->
+    <section class="timeline-controls">
+      <div class="search-input-wrapper" style="position: relative; flex: 1; max-width: 480px;">
+        <span class="search-icon" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--un-cyan);">⌕</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Buscar batalla, planeta, personaje, nave, tecnología..." style="width: 100%; background: rgba(5,14,30,0.8); border: 1px solid var(--border-tactical); color: #fff; font-family: var(--font-mono); font-size: 0.85rem; padding: 10px 14px 10px 36px; border-radius: 2px; outline: none; transition: var(--transition-fast);" onfocus="this.style.borderColor='var(--un-cyan)'; this.style.boxShadow='0 0 10px var(--un-cyan-glow)';" onblur="this.style.borderColor='var(--border-tactical)'; this.style.boxShadow='none';">
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div style="font-family: var(--font-hud); font-size: 0.72rem; color: var(--text-dim); letter-spacing: 1.2px;">
+          <span data-i18n="records_count">EVENTOS EN PANTALLA:</span>
+          <strong id="results-count" style="color: var(--un-cyan); margin-left: 4px;">--</strong>
+        </div>
+
+        <div class="view-mode-group">
+          <button class="view-btn active" data-view="stream" data-i18n="view_stream">⚡ LÍNEA DE TIEMPO (STREAM)</button>
+          <button class="view-btn" data-view="grid" data-i18n="view_grid">⌖ MALLA TÁCTICA (GRID)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENEDOR DE LA LÍNEA DE TIEMPO CON ESPINA LÁSER -->
+    <main id="timeline-wrapper" class="timeline-container">
+      <div class="timeline-stream-container">
+        <!-- Espina dorsal láser vertical -->
+        <div class="timeline-spine"></div>
+
+        <!-- Flujo de eventos inyectado dinámicamente -->
+        <div id="timeline-stream">
+          <!-- Inyectado por js/timeline.js -->
+        </div>
+      </div>
+    </main>
+
+    <!-- PIE DE PÁGINA TÁCTICO -->
+    <footer class="tactical-footer">
+      <div class="footer-status">
+        <span class="status-indicator"></span>
+        <span data-i18n="footer_status">ESTADO DE TELEMETRÍA: ARCHIVO HISTÓRICO GLOBAL // MANDO SUPREMO RDF // TIERRA UNIFICADA</span>
+      </div>
+      <div class="footer-credits">
+        ROBOTECH HISTORICAL CHRONOLOGY MAINFRAME &bull; BASE DE DATOS DE COMBATE V1.0
+      </div>
+    </footer>
+  </div>
+
+  <!-- ========================================================================
+       MODAL DE EXPEDIENTE HISTÓRICO Y BATALLA MILITAR
+       ======================================================================== -->
+  <div id="timeline-modal-backdrop" class="timeline-modal-backdrop">
+    <div class="timeline-modal">
+      <div class="tmodal-header">
+        <div class="tmodal-header-text">
+          <h3 id="tmodal-title">NOMBRE DEL EVENTO HISTÓRICO</h3>
+          <span id="tmodal-sub">DESIGNACIÓN Y TEATRO DE OPERACIONES</span>
+        </div>
+        <button id="btn-close-tmodal" class="btn-close-modal" style="background: transparent; border: 1px solid var(--border-tactical); color: var(--un-cyan); font-size: 1.1rem; width: 34px; height: 34px; border-radius: 2px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--transition-fast);" onmouseover="this.style.background='var(--veritech-red)'; this.style.borderColor='var(--veritech-red)'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.borderColor='var(--border-tactical)'; this.style.color='var(--un-cyan)';">✕</button>
+      </div>
+
+      <!-- Banner de la Batalla con Zoom Lightbox -->
+      <div class="tmodal-banner">
+        <img id="tmodal-banner-img" src="" alt="Evento Histórico">
+        <div class="tmodal-banner-overlay"></div>
+        <div class="tmodal-banner-info">
+          <div class="tmodal-banner-title">
+            <div style="display: flex; gap: 8px; margin-bottom: 6px;">
+              <span id="tmodal-date" class="event-date-badge">1999</span>
+              <span id="tmodal-defcon" class="event-defcon-tag">DEFCON 1</span>
+            </div>
+            <p id="tmodal-location">Isla Macross, Pacífico Sur</p>
+          </div>
+          <button id="btn-tmodal-zoom" class="btn-zoom-card" style="background: rgba(0,240,255,0.15); border: 1px solid var(--un-cyan); color: var(--un-cyan); font-family: var(--font-hud); font-size: 0.72rem; letter-spacing: 1px; padding: 6px 12px; border-radius: 2px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition-fast);" onmouseover="this.style.background='var(--un-cyan)'; this.style.color='#000';" onmouseout="this.style.background='rgba(0,240,255,0.15)'; this.style.color='var(--un-cyan)';">
+            <span>🔍</span>
+            <span data-i18n="modal_zoom_btn">AMPLIAR EN ALTA RESOLUCIÓN</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Pestañas de Navegación del Expediente Militar -->
+      <nav class="tmodal-tabs">
+        <button class="tmodal-tab-btn active" data-pane="pane-tmodal-tactical" data-i18n="tab_tactical">INFORME MILITAR & DESARROLLO</button>
+        <button class="tmodal-tab-btn" data-pane="pane-tmodal-belligerents" data-i18n="tab_belligerents">BELIGERANTES & MANDOS</button>
+        <button class="tmodal-tab-btn" data-pane="pane-tmodal-tech" data-i18n="tab_tech">TECNOLOGÍAS ROBOTECH</button>
+        <button class="tmodal-tab-btn" data-pane="pane-tmodal-outcomes" data-i18n="tab_outcomes">CONSECUENCIAS & SALDO</button>
+      </nav>
+
+      <!-- Contenido Scrollable del Expediente -->
+      <div class="tmodal-content-scroll">
+        <div id="pane-tmodal-tactical" class="tmodal-pane active"></div>
+        <div id="pane-tmodal-belligerents" class="tmodal-pane"></div>
+        <div id="pane-tmodal-tech" class="tmodal-pane"></div>
+        <div id="pane-tmodal-outcomes" class="tmodal-pane"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISOR LIGHTBOX PARA AMPLIAR FOTOS EN ALTA RESOLUCIÓN -->
+  <div id="lightbox-backdrop" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.95); z-index:1200; align-items:center; justify-content:center; flex-direction:column; padding:20px; cursor:zoom-out;">
+    <img id="lightbox-image" src="" style="max-width:92vw; max-height:85vh; border:2px solid var(--un-cyan); border-radius:4px; box-shadow:0 0 30px rgba(0,240,255,0.4);" alt="Lightbox">
+    <div id="lightbox-caption" style="margin-top:14px; color:#fff; font-family:var(--font-hud); letter-spacing:1.5px; font-size:1rem; text-shadow:0 0 8px var(--un-cyan);"></div>
+  </div>
+
+  <!-- Motores JavaScript con Cache Busting -->
+  <script src="js/audio.js?v=1.1.0"></script>
+  <script src="js/timeline.js?v=1.1.0"></script>
+</body>
+</html>

@@ -285,6 +285,19 @@
       background: rgba(0, 240, 255, 0.1);
     }
 
+    .variant-admin-card {
+      background: rgba(6, 16, 32, 0.9);
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      border-radius: 4px;
+      padding: 16px;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .variant-admin-card:hover {
+      border-color: var(--un-cyan);
+    }
+
     .gallery-admin-row {
       display: flex;
       gap: 14px;
@@ -426,7 +439,15 @@
         </div>
       </div>
 
-      <!-- Controles Dinámicos según Módulo (Mechas o Personajes) -->
+      <!-- Selector Rápido de Módulos -->
+      <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+        <button type="button" class="btn-action-secondary" id="tab-btn-mechas" onclick="switchAdminModule('mechas')">⌖ MECHAS</button>
+        <button type="button" class="btn-action-secondary" id="tab-btn-characters" onclick="switchAdminModule('characters')">👤 PERSONAJES</button>
+        <button type="button" class="btn-action-secondary" id="tab-btn-ships" onclick="switchAdminModule('ships')">⚓ NAVES</button>
+        <button type="button" class="btn-action-secondary" id="tab-btn-timeline" onclick="switchAdminModule('timeline')">⚡ HISTORIA & GUERRAS</button>
+      </div>
+
+      <!-- Controles Dinámicos según Módulo (Mechas, Personajes, Naves, Historia) -->
       <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
         <!-- Controles Mechas (Solo visible al editar Mechas) -->
         <div id="top-mechas-controls" style="display: none; gap: 10px; align-items: center; flex-wrap: wrap;">
@@ -453,6 +474,15 @@
           </select>
           <button id="btn-new-ship" class="btn-action-secondary">+ NUEVA NAVE</button>
           <a href="naves.html" class="btn-action-secondary">◀ VOLVER A NAVES</a>
+        </div>
+
+        <!-- Controles Historia & Guerras (Solo visible al editar Historia) -->
+        <div id="top-timeline-controls" style="display: none; gap: 10px; align-items: center; flex-wrap: wrap;">
+          <select id="select-event-to-edit" class="form-select" style="min-width: 260px;">
+            <option value="">-- SELECCIONAR EVENTO HISTÓRICO --</option>
+          </select>
+          <button id="btn-new-event" class="btn-action-secondary">+ NUEVO EVENTO</button>
+          <a href="historia.html" class="btn-action-secondary">◀ VOLVER A HISTORIA</a>
         </div>
       </div>
     </div>
@@ -772,6 +802,28 @@
               </div>
 
             </div>
+          </div>
+        </div>
+
+        <!-- 3.2 VARIANTES DE PRODUCCIÓN Y MODELOS DE COMBATE -->
+        <div class="form-section" id="mecha-variants-section" style="border: 1px solid rgba(0, 240, 255, 0.4); background: rgba(0, 240, 255, 0.02); display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px dashed rgba(0, 240, 255, 0.3); padding-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+            <h3 style="color: var(--un-cyan); margin: 0;">⚡ VARIANTES TÁCTICAS Y MODELOS DE PRODUCCIÓN (VF-1A, VF-1J, VF-1S, VF-1D...)</h3>
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--un-cyan); cursor: pointer; background: rgba(0, 240, 255, 0.1); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(0,240,255,0.3);">
+              <input type="checkbox" id="m_has_variants" onchange="toggleVariantsSection()">
+              <strong>Habilitar Variantes de Producción</strong>
+            </label>
+          </div>
+          <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:14px;">
+            Define las diferentes variantes operacionales del mecha con sus armamentos craneales (número de láseres), dotación de tripulación, esquemas de color distintivos, pilotos notables y renders individuales.
+          </p>
+
+          <div id="mecha-variants-container"></div>
+
+          <div style="display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap;">
+            <button type="button" class="btn-action-primary" style="font-size:0.82rem; padding: 10px 18px;" onclick="addVariantRow()">
+              + AÑADIR VARIANTE DE PRODUCCIÓN
+            </button>
           </div>
         </div>
 
@@ -1544,6 +1596,292 @@
         </div>
       </aside>
     </div>
+
+    <!-- ====================================================================
+         LAYOUT 04: HISTORIA & CRONOLOGÍA DE GUERRAS
+         ==================================================================== -->
+    <div id="admin-layout-timeline" class="admin-layout" style="display: none;">
+      <!-- Formulario de Edición de Eventos Históricos -->
+      <form id="crud-form-timeline" class="form-panel" onsubmit="event.preventDefault();">
+        
+        <!-- 1. Identificación y Clasificación Cronológica -->
+        <div class="form-section">
+          <h3>1. IDENTIFICACIÓN Y CLASIFICACIÓN CRONOLÓGICA</h3>
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label>ID del Evento (Slug Único)</label>
+              <input type="text" id="t_id" class="form-input" placeholder="ej: 1999_fall_of_alien_ship" required>
+            </div>
+            <div class="form-group">
+              <label>Era / Época Robotech</label>
+              <select id="t_era" class="form-select">
+                <option value="genesis">1999-2008 // Génesis & Reconstrucción</option>
+                <option value="first_war">2009-2014 // Primera Guerra Robotech</option>
+                <option value="pioneer">2015-2028 // Misión Pionera REF</option>
+                <option value="second_war">2029-2030 // Segunda Guerra Robotech</option>
+                <option value="third_war">2031-2044 // Tercera Guerra Robotech</option>
+                <option value="shadow_chronicles">2044+ // Las Crónicas de las Sombras</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Año de Referencia</label>
+              <input type="text" id="t_year" class="form-input" placeholder="ej: 1999 o 2009-2010" required>
+            </div>
+          </div>
+
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label>Fecha en Pantalla (Español)</label>
+              <input type="text" id="t_date_es" class="form-input" placeholder="ej: Julio de 1999" required>
+            </div>
+            <div class="form-group">
+              <label>Display Date (English)</label>
+              <input type="text" id="t_date_en" class="form-input" placeholder="ej: July 1999" required>
+            </div>
+            <div class="form-group">
+              <label>Nivel de Amenaza DEFCON</label>
+              <select id="t_defcon" class="form-select">
+                <option value="DEFCON 1">DEFCON 1 (Extrema / Guerra Total)</option>
+                <option value="DEFCON 2">DEFCON 2 (Crítica / Asalto Planetario)</option>
+                <option value="DEFCON 3">DEFCON 3 (Severa / Movilización de Flota)</option>
+                <option value="DEFCON 4">DEFCON 4 (Moderada / Alerta de Patrulla)</option>
+                <option value="DEFCON 5">DEFCON 5 (Baja / Reconstrucción / Diplomacia)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Distintivo / Badge (Español)</label>
+              <input type="text" id="t_badge_es" class="form-input" placeholder="ej: IMPACTO CERO // GÉNESIS ROBOTECH">
+            </div>
+            <div class="form-group">
+              <label>Badge Tag (English)</label>
+              <input type="text" id="t_badge_en" class="form-input" placeholder="ej: GROUND ZERO // ROBOTECH GENESIS">
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Títulos y Teatro Operacional -->
+        <div class="form-section">
+          <h3>2. TÍTULOS Y TEATRO OPERACIONAL</h3>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Título del Evento (Español)</label>
+              <input type="text" id="t_title_es" class="form-input" placeholder="ej: La Caída de la Nave Alienígena en la Tierra" required>
+            </div>
+            <div class="form-group">
+              <label>Event Title (English)</label>
+              <input type="text" id="t_title_en" class="form-input" placeholder="ej: The Crash of the Alien Fortress on Earth" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Subtítulo / Teatro (Español)</label>
+              <input type="text" id="t_subtitle_es" class="form-input" placeholder="ej: El Impacto en la Isla Macross y el Fin de la Guerra Global">
+            </div>
+            <div class="form-group">
+              <label>Subtitle / Theater (English)</label>
+              <input type="text" id="t_subtitle_en" class="form-input" placeholder="ej: The Macross Island Crash and End of the Global Civil War">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Localización / Planeta / Sector (Español)</label>
+              <input type="text" id="t_location_es" class="form-input" placeholder="ej: Isla Macross, Pacífico Sur, Planeta Tierra">
+            </div>
+            <div class="form-group">
+              <label>Location / Theater (English)</label>
+              <input type="text" id="t_location_en" class="form-input" placeholder="ej: Macross Island, South Pacific, Planet Earth">
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Foto de Portada del Evento con Buscador Visual -->
+        <div class="form-section">
+          <h3>3. FOTO DE PORTADA / EVENTO (BUSCADOR VISUAL DE ARCHIVOS)</h3>
+          <div class="form-group">
+            <label>Ruta de la Imagen del Evento</label>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <input type="text" id="t_image" class="form-input" placeholder="assets/images/historia y guerras/... o URL" required style="flex: 1;" oninput="window.updateTimelineImagePreview?.()">
+              <button type="button" class="btn-action-primary" onclick="openAssetBrowser('t_image')" style="white-space: nowrap; padding: 8px 16px; background: var(--un-cyan); color: #000;">
+                📁 ELEGIR O SUBIR FOTO
+              </button>
+            </div>
+            <span style="font-size: 0.75rem; color: var(--text-dim); margin-top: 4px; display: block;">
+              Hacé clic en <strong>📁 ELEGIR O SUBIR FOTO</strong> para ver miniaturas de todas las imágenes de tu proyecto o subir imágenes de batallas directamente desde tu PC a <code>assets/images/historia y guerras/</code>.
+            </span>
+          </div>
+
+          <div style="margin-top: 12px; display: flex; align-items: center; gap: 16px; background: rgba(5,12,24,0.6); padding: 12px; border-radius: 4px; border: 1px solid rgba(0,240,255,0.2);">
+            <img id="timeline_image_preview" src="assets/images/historia y guerras/portada_historia_y_guerras.jpg" alt="Preview del Evento" style="width: 140px; height: 85px; object-fit: cover; border-radius: 3px; border: 1px solid var(--un-cyan); background: #000;">
+            <div>
+              <span style="font-family: var(--font-hud); font-size: 0.8rem; color: var(--un-cyan);">VISTA PREVIA DEL ASSET SELECCIONADO</span>
+              <p id="timeline_image_path_label" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin: 4px 0 0 0;">assets/images/historia y guerras/portada_historia_y_guerras.jpg</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Beligerantes, Facciones y Mandos Militares -->
+        <div class="form-section">
+          <h3>4. BELIGERANTES, FACCIONES Y MANDOS MILITARES</h3>
+          
+          <div class="form-grid-2">
+            <!-- Facción 1 -->
+            <div style="background: rgba(4,10,22,0.7); border: 1px solid rgba(0,240,255,0.2); padding: 12px; border-radius: 3px;">
+              <h4 style="font-family: var(--font-hud); font-size: 0.8rem; color: var(--un-cyan); margin-bottom: 8px;">FACCIÓN / FUERZA 1</h4>
+              <div class="form-group" style="margin-bottom: 8px;">
+                <label>Nombre en Español</label>
+                <input type="text" id="t_f1_name_es" class="form-input" placeholder="ej: Fuerzas de Defensa de la Tierra / U.N. Spacy" value="Fuerzas de Defensa de la Tierra / U.N. Spacy">
+              </div>
+              <div class="form-group" style="margin-bottom: 8px;">
+                <label>Nombre en Inglés</label>
+                <input type="text" id="t_f1_name_en" class="form-input" placeholder="ej: United Earth Defense Forces / U.N. Spacy" value="United Earth Defense Forces / U.N. Spacy">
+              </div>
+              <div class="form-group">
+                <label>Logo / Insignia</label>
+                <div style="display: flex; gap: 6px; align-items: center;">
+                  <input type="text" id="t_f1_logo" class="form-input" placeholder="assets/images/ui/logo_UNSpacy.png" value="assets/images/ui/logo_UNSpacy.png" style="flex: 1;">
+                  <button type="button" class="btn-action-secondary" onclick="openAssetBrowser('t_f1_logo')" style="padding: 6px 10px;">📁</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Facción 2 -->
+            <div style="background: rgba(4,10,22,0.7); border: 1px solid rgba(255,157,0,0.2); padding: 12px; border-radius: 3px;">
+              <h4 style="font-family: var(--font-hud); font-size: 0.8rem; color: var(--skull-amber); margin-bottom: 8px;">FACCIÓN / FUERZA 2</h4>
+              <div class="form-group" style="margin-bottom: 8px;">
+                <label>Nombre en Español</label>
+                <input type="text" id="t_f2_name_es" class="form-input" placeholder="ej: Armada Imperial Zentraedi (Boddole Zer)">
+              </div>
+              <div class="form-group" style="margin-bottom: 8px;">
+                <label>Nombre en Inglés</label>
+                <input type="text" id="t_f2_name_en" class="form-input" placeholder="ej: Zentraedi Imperial Fleet (Boddole Zer)">
+              </div>
+              <div class="form-group">
+                <label>Logo / Insignia</label>
+                <div style="display: flex; gap: 6px; align-items: center;">
+                  <input type="text" id="t_f2_logo" class="form-input" placeholder="assets/images/ui/logo_zentran.png" value="assets/images/ui/logo_zentran.png" style="flex: 1;">
+                  <button type="button" class="btn-action-secondary" onclick="openAssetBrowser('t_f2_logo')" style="padding: 6px 10px;">📁</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top: 14px;">
+            <label>Figuras Clave / Comandantes (Separados por coma)</label>
+            <input type="text" id="t_key_figures" class="form-input" placeholder="ej: Dr. Emil Lang, Roy Fokker, Senador Russo, Henry Gloval">
+          </div>
+        </div>
+
+        <!-- 5. Narrativa Histórica, Resumen y Reporte Táctico -->
+        <div class="form-section">
+          <h3>5. NARRATIVA HISTÓRICA, RESUMEN Y REPORTE TÁCTICO</h3>
+          
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Resumen Ejecutivo para la Tarjeta (Español)</label>
+              <textarea id="t_summary_es" class="form-textarea" rows="3" placeholder="Resumen conciso visible en la tarjeta de la línea de tiempo..."></textarea>
+            </div>
+            <div class="form-group">
+              <label>Card Executive Summary (English)</label>
+              <textarea id="t_summary_en" class="form-textarea" rows="3" placeholder="Concise summary visible on the timeline card..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Informe Táctico Completo / Desarrollo Operacional (Español)</label>
+              <textarea id="t_tactical_report_es" class="form-textarea" rows="6" placeholder="Informe detallado para el expediente modal. Separa párrafos con doble salto de línea..."></textarea>
+            </div>
+            <div class="form-group">
+              <label>Full Operational Battle Report (English)</label>
+              <textarea id="t_tactical_report_en" class="form-textarea" rows="6" placeholder="Detailed combat report for modal dossier. Separate paragraphs with double newline..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Consecuencias Estratégicas, Tecnologías y Saldo -->
+        <div class="form-section">
+          <h3>6. CONSECUENCIAS ESTRATÉGICAS, TECNOLOGÍAS Y SALDO</h3>
+          
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Resolución Estratégica & Consecuencias (Español)</label>
+              <textarea id="t_outcomes_es" class="form-textarea" rows="3" placeholder="Resolución de la batalla y consecuencias geopolíticas..."></textarea>
+            </div>
+            <div class="form-group">
+              <label>Strategic Resolution & Outcomes (English)</label>
+              <textarea id="t_outcomes_en" class="form-textarea" rows="3" placeholder="Battle resolution and galactic geopolitical consequences..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Tecnologías & Sistemas Introducidos (Separados por coma)</label>
+            <input type="text" id="t_technologies" class="form-input" placeholder="ej: Robotecnología, Motores de Pliegue Espacial, Sistemas de Barrera Omnidireccional">
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Evaluación de Bajas & Impacto Planetario (Español)</label>
+              <textarea id="t_casualties_es" class="form-textarea" rows="2" placeholder="ej: Destrucción de la infraestructura civil de la Isla Macross. Bajas moderadas."></textarea>
+            </div>
+            <div class="form-group">
+              <label>Casualties & Planetary Impact (English)</label>
+              <textarea id="t_casualties_en" class="form-textarea" rows="2" placeholder="ej: Total destruction of Macross Island civil infrastructure."></textarea>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!-- Sidebar Vista Previa y Guardado de Eventos -->
+      <aside class="preview-sidebar" id="preview-sidebar-timeline">
+        <div class="preview-box">
+          <h4>VISTA PREVIA EN VIVO DE LA TARJETA</h4>
+          <div id="admin-live-timeline-card"></div>
+        </div>
+
+        <div class="preview-box">
+          <h4>GESTIÓN DIRECTA EN DISCO</h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px;">
+            Guarda el evento directamente en tu disco local. Actualiza <code>data/timeline.json</code> de manera instantánea:
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <!-- Botón guardar en disco -->
+            <button id="btn-save-timeline-direct" class="btn-action-primary" style="background: var(--un-cyan); color: #000; box-shadow: 0 0 15px var(--un-cyan-glow);">
+              💾 GUARDAR EVENTO EN DISCO (1 CLIC)
+            </button>
+
+            <!-- Botón push a GitHub -->
+            <button id="btn-git-push-timeline" class="btn-action-primary" style="background: var(--skull-amber); color: #000;">
+              🚀 SUBIR A GITHUB (GIT PUSH)
+            </button>
+
+            <!-- Botón eliminar evento -->
+            <button id="btn-delete-timeline-event" class="btn-action-secondary" style="border-color: var(--veritech-red); color: var(--veritech-red);">
+              🗑 ELIMINAR ESTE EVENTO
+            </button>
+          </div>
+
+          <!-- Consola de estado / terminal militar para Eventos -->
+          <div id="git-status-console-timeline" style="display:none; margin-top:14px; background:rgba(0,0,0,0.85); border:1px solid var(--border-tactical); padding:10px; border-radius:2px; font-family:var(--font-mono); font-size:0.75rem; color:#fff; max-height:150px; overflow-y:auto; white-space:pre-wrap;"></div>
+
+          <div style="margin-top: 10px; text-align: right;">
+            <button type="button" id="btn-download-timeline-json" style="background:none; border:none; color:var(--text-dim); font-size:0.7rem; cursor:pointer; text-decoration:underline;">
+              ¿Descarga manual de backup timeline.json?
+            </button>
+          </div>
+
+          <div class="sync-note" style="margin-top: 14px;">
+            <strong>Línea de Tiempo Interactiva:</strong>
+            <br><span style="font-size:0.75rem; color:var(--text-dim);">Al guardar, los datos se integran en el archivo canónico <code>data/timeline.json</code>. La fecha, nivel DEFCON, insignias de beligerantes, imágenes y reporte táctico se actualizan en tiempo real tanto en la vista de flujo (stream) como en la cuadrícula y el visor lightbox.</span>
+          </div>
+        </div>
+      </aside>
+    </div>
   </div>
 
   <!-- MODAL PARA AÑADIR NUEVAS CATEGORÍAS/FACCIONES [+] -->
@@ -1624,7 +1962,7 @@
     </div>
   </div>
 
-  <script src="js/audio.js?v=1.0.9"></script>
-  <script src="js/admin.js?v=1.0.9"></script>
+  <script src="js/audio.js?v=1.1.0"></script>
+  <script src="js/admin.js?v=1.1.0"></script>
 </body>
 </html>
