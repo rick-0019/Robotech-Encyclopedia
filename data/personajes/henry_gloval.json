@@ -1,0 +1,165 @@
+{
+  "id": "henry_gloval",
+  "name": "Henry J. Gloval",
+  "japanese_name": "Bruno J. Global",
+  "callsign": "Macross-1 // Grand Captain",
+  "rank": {
+    "es": "Capitán de Navío // Almirante Comandante en Jefe (RDF)",
+    "en": "Ship Captain // Admiral & Commander-in-Chief (RDF)"
+  },
+  "role": {
+    "es": "Comandante de la Fortaleza Espacial SDF-1 Macross y Comandante Supremo de la RDF",
+    "en": "Commander of the SDF-1 Macross Space Fortress & Supreme Commander of RDF"
+  },
+  "category": "command",
+  "faction": {
+    "es": "U.N. Spacy - Mando Supremo de la Flota",
+    "en": "U.N. Spacy - Fleet High Command"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "assignment": {
+    "es": "SDF-1 Macross (Puente de Mando Principal)",
+    "en": "SDF-1 Macross (Main Command Bridge)"
+  },
+  "birth_date": "7 de Enero de 1956",
+  "birth_place": {
+    "es": "Vladivostok, Rusia (Tierra)",
+    "en": "Vladivostok, Russia (Earth)"
+  },
+  "blood_type": "A+",
+  "height": "1,88 m",
+  "weight": "92 kg",
+  "thumbnail": "assets/images/personajes/henry_gloval/gloval_card.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/henry_gloval/gloval_card.jpg",
+      "title_es": "Capitán Henry J. Gloval - Ficha Oficial SDF-1",
+      "title_en": "Captain Henry J. Gloval - SDF-1 Official File",
+      "type_es": "Retrato Táctico",
+      "type_en": "Tactical Portrait"
+    },
+    {
+      "url": "assets/images/personajes/henry_gloval/gloval_salute.jpg",
+      "title_es": "Saludo Naval en el Puente de Mando",
+      "title_en": "Naval Salute on the Main Command Bridge",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/henry_gloval/gloval_bridge.png",
+      "title_es": "Supervisando Operaciones de Sobreflexión y Vuelo Espacial",
+      "title_en": "Overseeing Space Fold Operations and Flight Path",
+      "type_es": "En Operación",
+      "type_en": "In Operation"
+    }
+  ],
+  "summary": {
+    "es": "El legendario capitán de la fortaleza espacial SDF-1 Macross. Un estratega naval veterano, paciente y bondadoso cuya serenidad y visión guiaron a la humanidad a través de su peor crisis cósmica.",
+    "en": "The legendary captain of the SDF-1 Macross battle fortress. A patient, compassionate, veteran naval strategist whose calm authority guided humanity through its darkest cosmic hour."
+  },
+  "lore": {
+    "overview_es": "Veterano curtido de la guerra submarina y los conflictos de las Guerras Globales, Henry J. Gloval fue nombrado comandante de la reconstrucción y botadura de la nave alienígena caída en la Isla Macross (el SDF-1). Cuando los sistemas automatizados de la nave abrieron fuego contra los exploradores Zentraedi, Gloval asumió la colosal responsabilidad de pilotar la fortaleza al espacio exterior para salvar a la Tierra, desatando una odisea de dos años a través del sistema solar para traer de regreso a los 70.000 civiles refugiados en su interior.",
+    "overview_en": "A hardened veteran of nuclear submarine warfare during the Global Civil Wars, Henry J. Gloval was chosen to oversee the reconstruction and maiden flight of the fallen alien spacecraft on Macross Island (the SDF-1). When the fortress's automated defenses fired on approaching Zentraedi scouts, Gloval made the fateful decision to execute an emergency space fold away from Earth, initiating a grueling two-year odyssey across the solar system to shepherd 70,000 civilian refugees back home.",
+    "tactical_analysis_es": "Gloval sobresalió por su maestría para la improvisación táctica y su negativa a sacrificar a los civiles ante la intransigencia del Alto Mando de la Tierra. Fue el arquitecto del uso defensivo de la 'Transformación Modular' del SDF-1 para acoplar el Cañón Principal, del 'Sistema de Ataque Daedalus' para perforar buques nodriza alienígenas desde el interior, y de la 'Barrera Omnidireccional'. En la batalla culminante contra los millones de naves de Dolza, coordinó la maniobra combinada entre la flota aliada de Breetai y el SDF-1, sacrificando su vida poco después en la reconstrucción para asegurar el nacimiento de la REF.",
+    "tactical_analysis_en": "Gloval demonstrated extraordinary genius in tactical improvisation while adamantly defending his civilian populace against the cold calculations of Earth High Command. He authorized the modular 'Transformation' mode to enable the SDF-1's main reflex cannon, pioneered the devastating 'Daedalus Attack' maneuver to breach alien flagships from within, and oversaw the omnidirectional barrier grid. In the apocalyptic clash against Dolza's armada, he orchestrated joint fleet strikes alongside Breetai's allied Zentradi, laying down his life during subsequent reconstruction to safeguard humanity's future in the stars."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 99,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Autoridad moral incuestionable; comandó la mayor fortaleza de combate de la historia humana."
+    },
+    "strategy": {
+      "value": 96,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Especialista en maniobras de evasión orbital, economía de fuego y guerra de desgaste espacial."
+    },
+    "resolve": {
+      "value": 97,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Mantuvo la serenidad fumando su pipa mientras el SDF-1 era bombardeado por flotas enteras."
+    },
+    "piloting": {
+      "value": 65,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Capitán de navío y acorazados estelares, no piloto de cazas de combate individuales."
+    }
+  },
+  "stats": {
+    "command": 99,
+    "strategy": 96,
+    "resolve": 97,
+    "piloting": 65
+  },
+  "service_record": [
+    {
+      "period": "1980 - 1999",
+      "assignment_es": "Oficial de la Marina en submarinos nucleares; comandante durante las Guerras Globales",
+      "assignment_en": "Naval Officer on nuclear submarines; commander during the Global Civil Wars"
+    },
+    {
+      "period": "2001 - 2008",
+      "assignment_es": "Superintendente militar del Proyecto de Reconstrucción del SDF-1 en la Isla Macross",
+      "assignment_en": "Military Superintendent of the SDF-1 Reconstruction Project on Macross Island"
+    },
+    {
+      "period": "2009 - 2011",
+      "assignment_es": "Comandante en Jefe del SDF-1 Macross; líder del repliegue espacial y la victoria sobre Dolza",
+      "assignment_en": "Commander-in-Chief of SDF-1 Macross; leader of deep-space voyage and victory over Dolza"
+    },
+    {
+      "period": "2012 - 2014",
+      "assignment_es": "Almirante Supremo de las Fuerzas de Defensa de la Tierra Unificada; impulsor de la REF",
+      "assignment_en": "Supreme Admiral of United Earth Defense Forces; pioneer architect of the REF"
+    },
+    {
+      "period": "2014",
+      "assignment_es": "Fallece defendiendo el puente del SDF-1 durante el ataque kamikaze de Khyron",
+      "assignment_en": "Killed defending the bridge of the SDF-1 during Khyron's final suicide assault"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Lisa Hayes",
+      "relation_es": "Su mano derecha en el puente de mando; la formó como su sucesora natural para el liderazgo estelar.",
+      "relation_en": "His right hand on the command deck; groomed her as his natural successor in naval command."
+    },
+    {
+      "character": "Claudia Grant",
+      "relation_es": "Oficial de puente indispensable, pilar de confianza en la navegación y el control táctico.",
+      "relation_en": "Indispensable bridge officer and trusted anchor in ship navigation and tactical telemetry."
+    },
+    {
+      "character": "Roy Fokker",
+      "relation_es": "Su as de confianza; compartían un profundo respeto mutuo forjado desde los primeros ensayos del Veritech.",
+      "relation_en": "His trusted frontline ace; shared profound mutual respect forged since early Veritech trials."
+    },
+    {
+      "character": "Comandante Breetai",
+      "relation_es": "Antiguo enemigo con quien forjó una alianza histórica basada en el honor militar y la dignidad de las especies.",
+      "relation_en": "Former adversary with whom he forged a historic alliance rooted in soldierly honor and mutual respect."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "¿Un capitán sin su tripulación? Esta nave es un hogar para 70.000 almas, y las llevaré a casa.",
+      "quote_en": "A captain without his crew? This ship is home to 70,000 souls, and I will bring them home.",
+      "context_es": "Respuesta al Estado Mayor terrestre al negarse a desembarcar a los civiles en bases aisladas.",
+      "context_en": "Reply to Earth High Command refusing to abandon the civilian refugees in remote bases."
+    },
+    {
+      "quote_es": "¡Oficiales, prepárense para la Maniobra Daedalus! Si no podemos evadirlos, entraremos por su puerta principal.",
+      "quote_en": "Officers, stand by for the Daedalus Attack! If we cannot evade them, we breach their front door.",
+      "context_es": "Orden táctica para penetrar el blindaje del crucero nodriza Zentraedi.",
+      "context_en": "Tactical command to puncture the hull of the Zentraedi dreadnought."
+    }
+  ]
+}

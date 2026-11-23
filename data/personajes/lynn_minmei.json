@@ -1,0 +1,184 @@
+{
+  "id": "lynn_minmei",
+  "name": "Lynn Minmei",
+  "japanese_name": "Lynn Minmay",
+  "callsign": "Miss Macross // Cultural Siren",
+  "rank": {
+    "es": "Ciudadana Civil // Agregada Cultural Honoraria RDF",
+    "en": "Civilian Citizen // Honorary RDF Cultural Attache"
+  },
+  "role": {
+    "es": "Vocalista Pop, Ícono Cultural y Factor Clave de Pacificación Psicológica",
+    "en": "Pop Vocalist, Cultural Icon & Key Psychological Pacification Asset"
+  },
+  "category": "scientists",
+  "faction": {
+    "es": "Población Civil de Macross City // Fuerzas de Defensa Robotech",
+    "en": "Macross City Civilian Population // Robotech Defense Force"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "assignment": {
+    "es": "SDF-1 Macross (Sector Cívico y Centro de Entretenimiento)",
+    "en": "SDF-1 Macross (Civic Sector & Entertainment Center)"
+  },
+  "birth_date": "10 de Octubre de 1993",
+  "birth_place": {
+    "es": "Yokohama, Japón (Tierra)",
+    "en": "Yokohama, Japan (Earth)"
+  },
+  "blood_type": "O+",
+  "height": "1,58 m",
+  "weight": "47 kg",
+  "thumbnail": "assets/images/personajes/lynn_minmei/minmei_movie.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/lynn_minmei/minmei_movie.jpg",
+      "title_es": "Lynn Minmei - Retrato de la Coronación Miss Macross",
+      "title_en": "Lynn Minmei - Miss Macross Coronation Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/lynn_minmei/minmei_red_dress.jpg",
+      "title_es": "En Concierto - El Legendario Vestido Rojo",
+      "title_en": "Live Concert - The Iconic Red Dress Performance",
+      "type_es": "Concierto Táctico",
+      "type_en": "Tactical Concert"
+    },
+    {
+      "url": "assets/images/personajes/lynn_minmei/minmei_from_the_stars.png",
+      "title_es": "Gira Galáctica - Retrato Clásico de Estudio",
+      "title_en": "Galactic Tour - Classic Studio Portrait",
+      "type_es": "Archivo Histórico",
+      "type_en": "Historical Archive"
+    },
+    {
+      "url": "assets/images/personajes/lynn_minmei/minmei_and_janice.jpg",
+      "title_es": "Dueto con Janice Em - Misión Pionera REF",
+      "title_en": "Duet with Janice Em - REF Pioneer Mission",
+      "type_es": "Expansión REF",
+      "type_en": "REF Era"
+    },
+    {
+      "url": "assets/images/personajes/lynn_minmei/minmei_robotech2.jpg",
+      "title_es": "Minmei - Era Robotech II: The Sentinels",
+      "title_en": "Minmei - Robotech II: The Sentinels Era",
+      "type_es": "Misión Sentinels",
+      "type_en": "Sentinels Mission"
+    }
+  ],
+  "summary": {
+    "es": "La voz que salvó a la humanidad de la extinción total. Su victoria como Miss Macross a bordo del SDF-1 impulsó una carrera musical que desarmó psicológicamente a la flota imperial Zentraedi.",
+    "en": "The voice that saved humanity from total annihilation. Crowned Miss Macross aboard the SDF-1, her musical career psychologically dismantled the Imperial Zentraedi armada."
+  },
+  "lore": {
+    "overview_es": "Lynn Minmei trabajaba como camarera en el restaurante Golden Dragon de su familia en la Isla Macross cuando la invasión Zentraedi estalló. Atrapada con el joven Rick Hunter en las bodegas del SDF-1 durante el salto hiperespacial accidental a Plutón, su relación inicial cimentó su evolución personal. Al ser elegida Miss Macross en el primer certamen de belleza espacial, se transformó en la mayor estrella del pop de la Tierra y en el ancla emocional de miles de refugiados civiles durante el largo regreso a casa.",
+    "overview_en": "Lynn Minmei was working as a waitress at her family's Golden Dragon restaurant on Macross Island when the sudden Zentraedi invasion erupted. Trapped alongside young civilian pilot Rick Hunter inside the subterranean folds of the SDF-1 during its accidental hyperspace jump to Pluto, their bond sparked her path. Crowned Miss Macross in the first spaceborne beauty pageant, she evolved into Earth's foremost pop sensation and the emotional beacon for tens of thousands of civilian refugees during the arduous voyage back to Earth.",
+    "tactical_analysis_es": "En términos de doctrina militar RDF, Minmei constituyó el activo de guerra psicológica no letal más devastador jamás desplegado. Debido a que la raza Zentraedi fue diseñada genéticamente para la guerra sin contacto con la música, el romance o el arte, las transmisiones de Minmei provocaron conmoción biológica, deserción en masa y la parálisis de los sistemas de comando alienígenas. En la batalla orbital contra la Gran Flota de Dolza, la 'Estrategia Minmei' (Minmei Attack) transmitió su voz a máxima potencia sobre todos los canales mientras el SDF-1 penetraba el corazón de la flota enemiga.",
+    "tactical_analysis_en": "From an RDF strategic doctrine perspective, Minmei represented the most lethal non-kinetic psychological warfare asset ever unleashed. Because the Zentraedi were genetically cloned exclusively for combat devoid of music, romance, or humanities, Minmei's broadcasts induced catastrophic cognitive shock, widespread mutiny, and doctrinal collapse across alien command nodes. In the climactic orbital engagement against Dolza's armada, the 'Minmei Attack' broadcast her voice at maximum signal amplification, paralyzing hostile firing coordination as the SDF-1 breached the core of the enemy fleet."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 45,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Sin formación militar formal; su liderazgo emana de su magnetismo mediático y carisma civil."
+    },
+    "strategy": {
+      "value": 55,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Comprensión intuitiva del impacto de sus canciones sobre las masas y la psicología del enemigo."
+    },
+    "resolve": {
+      "value": 90,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Cantó en vivo en el puente de mando mientras miles de naves enemigas disparaban sobre la nave."
+    },
+    "piloting": {
+      "value": 15,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Pasajera civil; no cuenta con instrucción de pilotaje aeroespacial ni mechas."
+    }
+  },
+  "stats": {
+    "command": 45,
+    "strategy": 55,
+    "resolve": 90,
+    "piloting": 15
+  },
+  "service_record": [
+    {
+      "period": "2009",
+      "assignment_es": "Superviviente del bombardeo de Macross; rescatada en bodegas del SDF-1",
+      "assignment_en": "Macross Island bombardment survivor; rescued inside SDF-1 maintenance holds"
+    },
+    {
+      "period": "2009",
+      "assignment_es": "Coronada Miss Macross en la primera transmisión de TV espacial de la historia",
+      "assignment_en": "Crowned Miss Macross during history's first deep-space broadcast"
+    },
+    {
+      "period": "2010",
+      "assignment_es": "Secuestrada por Breetai; introduce el concepto de 'cultura' y amor a los Zentraedi",
+      "assignment_en": "Captured by Breetai; introduces the concept of culture, kissing, and emotion to Zentraedi"
+    },
+    {
+      "period": "2011",
+      "assignment_es": "Ejecución del 'Minmei Attack' en la Batalla Orbital contra la Gran Flota de Dolza",
+      "assignment_en": "Execution of the 'Minmei Attack' in the Orbital Battle against Dolza's Grand Fleet"
+    },
+    {
+      "period": "2012 - 2014",
+      "assignment_es": "Gira de pacificación y reconstrucción terrestre en Macross City y Nuevo Tokio",
+      "assignment_en": "Earth pacification and cultural reconstruction tour across Macross City & New Tokyo"
+    },
+    {
+      "period": "2022+",
+      "assignment_es": "Se une a la Misión Pionera REF a bordo del SDF-3 rumbo a Tirol",
+      "assignment_en": "Enlists in REF Pioneer Mission aboard the SDF-3 departing for Tirol"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Rick Hunter",
+      "relation_es": "Amigo entrañable, primer amor y protector; vínculo marcado por la guerra y caminos divergentes.",
+      "relation_en": "Cherished friend, first love, and guardian; bond forever altered by warfare and divergent paths."
+    },
+    {
+      "character": "Lisa Hayes",
+      "relation_es": "Rival afectiva inicial que devino en respeto mutuo y gratitud histórica por la salvación de la Tierra.",
+      "relation_en": "Initial romantic rival evolving into deep mutual respect and gratitude for the salvation of Earth."
+    },
+    {
+      "character": "Lynn Kyle",
+      "relation_es": "Primo, manager y compañero de dueto; relación tormentosa por el pacifismo fanático de Kyle.",
+      "relation_en": "Cousin, manager, and stage partner; turbulent relationship strained by Kyle's fanatical pacifism."
+    },
+    {
+      "character": "Roy Fokker",
+      "relation_es": "Figura fraterna y protectora; la animó en sus primeros pasos como cantante en el SDF-1.",
+      "relation_en": "Protective older-brother figure who encouraged her early singing ambitions aboard the SDF-1."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "Mi novio es un piloto... pero mi música pertenece a todos los que miran a las estrellas.",
+      "quote_en": "My boyfriend is a pilot... but my music belongs to everyone looking at the stars.",
+      "context_es": "Concierto a bordo del SDF-1 durante la travesía desde Júpiter.",
+      "context_en": "Live concert aboard SDF-1 during the voyage inbound from Jupiter."
+    },
+    {
+      "quote_es": "¡Rick, por favor vuelve a salvo! Si tú no regresas, ¿para quién voy a cantar?",
+      "quote_en": "Rick, please come back safe! If you don't return, who am I going to sing for?",
+      "context_es": "Antes del despliegue del Escuadrón Skull en la batalla contra Bodolza.",
+      "context_en": "Prior to Skull Squadron's sortie in the climactic battle against Bodolza."
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "system_version": "1.0.0",
   "database_name": "ROBOTECH PERSONNEL ARCHIVE",
-  "updated_at": "2026-09-27",
+  "updated_at": "2026-11-22",
   "categories": [
     {
       "id": "all",
@@ -30,6 +30,45 @@
     }
   ],
   "characters": [
+    {
+      "id": "rick_hunter",
+      "name": "Rick Hunter",
+      "japanese_name": "Hikaru Ichijyo",
+      "category": "pilots",
+      "rank": {
+        "es": "Piloto Civil // Teniente (Escuadrón Vermilion) // Comandante (Escuadrón Skull) // Mayor General (REF)",
+        "en": "Civilian Pilot // Lieutenant (Vermilion Squadron) // Commander (Skull Squadron) // Major General (REF)"
+      },
+      "role": {
+        "es": "Comandante del Escuadrón Skull y As Supremo de Cazas Veritech",
+        "en": "Skull Squadron Commander & Supreme Veritech Fighter Ace"
+      },
+      "faction": {
+        "es": "U.N. Spacy - Escuadrón Skull",
+        "en": "U.N. Spacy - Skull Squadron"
+      },
+      "faction_logo": "assets/images/personajes/rick_hunter/rick_hunter_02.jpg",
+      "assignment": {
+        "es": "SDF-1 Macross // Escuadrón Skull (VF-1J / VF-1S Valkyrie)",
+        "en": "SDF-1 Macross // Skull Squadron (VF-1J / VF-1S Valkyrie)"
+      },
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/rick_hunter/rick_hunter_04.jpg",
+      "summary": {
+        "es": "As de caza supremo de la RDF y líder legendario del Escuadrón Skull tras la caída de Roy Fokker. Protagonista indiscutido de la Primera Guerra Robotec...",
+        "en": "Supreme RDF fighter ace and legendary Skull Squadron leader following the fall of Roy Fokker. Pivotal combat pilot of the First Robotech War and futur..."
+      },
+      "stats": {
+        "command": 88,
+        "strategy": 86,
+        "resolve": 94,
+        "piloting": 99
+      },
+      "dataFile": "data/personajes/rick_hunter.json"
+    },
     {
       "id": "lisa_hayes",
       "name": "Lisa Hayes",
@@ -70,43 +109,238 @@
       "dataFile": "data/personajes/lisa_hayes.json"
     },
     {
-      "id": "rick_hunter",
-      "name": "Rick Hunter",
-      "japanese_name": "Hikaru Ichijyo",
-      "category": "pilots",
+      "id": "lynn_minmei",
+      "name": "Lynn Minmei",
+      "japanese_name": "Lynn Minmay",
+      "category": "scientists",
       "rank": {
-        "es": "Piloto Civil // Teniente (Escuadrón Vermilion) // Comandante (Escuadrón Skull) // Mayor General (REF)",
-        "en": "Civilian Pilot // Lieutenant (Vermilion Squadron) // Commander (Skull Squadron) // Major General (REF)"
+        "es": "Ciudadana Civil // Agregada Cultural Honoraria RDF",
+        "en": "Civilian Citizen // Honorary RDF Cultural Attache"
       },
       "role": {
-        "es": "Comandante del Escuadrón Skull y As Supremo de Cazas Veritech",
-        "en": "Skull Squadron Commander & Supreme Veritech Fighter Ace"
+        "es": "Vocalista Pop, Ícono Cultural y Factor de Pacificación",
+        "en": "Pop Vocalist, Cultural Icon & Pacification Asset"
       },
       "faction": {
-        "es": "U.N. Spacy - Escuadrón Skull",
-        "en": "U.N. Spacy - Skull Squadron"
+        "es": "Población Civil de Macross City // RDF",
+        "en": "Macross City Civilians // RDF"
       },
-      "faction_logo": "assets/images/personajes/rick_hunter/rick_hunter_02.jpg",
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
       "assignment": {
-        "es": "SDF-1 Macross // Escuadrón Skull (VF-1J / VF-1S Valkyrie)",
-        "en": "SDF-1 Macross // Skull Squadron (VF-1J / VF-1S Valkyrie)"
+        "es": "SDF-1 Macross (Sector Cívico y Entretenimiento)",
+        "en": "SDF-1 Macross (Civic & Entertainment Sector)"
       },
       "series": {
         "es": "La Saga Macross (Primera Guerra Robotech)",
         "en": "The Macross Saga (First Robotech War)"
       },
-      "thumbnail": "assets/images/personajes/rick_hunter/rick_hunter_04.jpg",
+      "thumbnail": "assets/images/personajes/lynn_minmei/minmei_movie.jpg",
       "summary": {
-        "es": "As de caza supremo de la RDF y líder legendario del Escuadrón Skull tras la caída de Roy Fokker. Protagonista indiscutido de la Primera Guerra Robotec...",
-        "en": "Supreme RDF fighter ace and legendary Skull Squadron leader following the fall of Roy Fokker. Pivotal combat pilot of the First Robotech War and futur..."
+        "es": "La voz que salvó a la humanidad de la extinción total. Coronada Miss Macross a bordo del SDF-1, su canto desarmó psicológicamente a la flota imperial Zentraedi.",
+        "en": "The voice that saved humanity from total annihilation. Crowned Miss Macross aboard the SDF-1, her music psychologically dismantled the Imperial Zentraedi armada."
       },
       "stats": {
-        "command": 88,
-        "strategy": 86,
-        "resolve": 94,
-        "piloting": 99
+        "command": 45,
+        "strategy": 55,
+        "resolve": 90,
+        "piloting": 15
       },
-      "dataFile": "data/personajes/rick_hunter.json"
+      "dataFile": "data/personajes/lynn_minmei.json"
+    },
+    {
+      "id": "roy_fokker",
+      "name": "Roy Fokker",
+      "japanese_name": "Roy Focker",
+      "category": "pilots",
+      "rank": {
+        "es": "Teniente Comandante // Comandante del Ala Aérea del SDF-1",
+        "en": "Lieutenant Commander // SDF-1 Air Wing Commander"
+      },
+      "role": {
+        "es": "Líder Fundador del Escuadrón Skull y Piloto de Pruebas VF-1",
+        "en": "Founding Skull Squadron Leader & VF-1 Chief Test Pilot"
+      },
+      "faction": {
+        "es": "U.N. Spacy - Escuadrón Skull",
+        "en": "U.N. Spacy - Skull Squadron"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "SDF-1 Macross (VF-1S Valkyrie Skull Leader)",
+        "en": "SDF-1 Macross (VF-1S Valkyrie Skull Leader)"
+      },
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/roy_fokker/roy_fokker.png",
+      "summary": {
+        "es": "El as de combate aéreo legendario de la humanidad y primer comandante de Skull Leader. Mentor de Rick Hunter y corazón combativo del SDF-1.",
+        "en": "Humanity's legendary aerospace combat ace and first commander of Skull Leader. Mentor to Rick Hunter and warrior soul of the SDF-1."
+      },
+      "stats": {
+        "command": 94,
+        "strategy": 85,
+        "resolve": 98,
+        "piloting": 100
+      },
+      "dataFile": "data/personajes/roy_fokker.json"
+    },
+    {
+      "id": "henry_gloval",
+      "name": "Henry J. Gloval",
+      "japanese_name": "Bruno J. Global",
+      "category": "command",
+      "rank": {
+        "es": "Capitán de Navío // Almirante Comandante en Jefe (RDF)",
+        "en": "Ship Captain // Admiral & Commander-in-Chief (RDF)"
+      },
+      "role": {
+        "es": "Comandante de la Fortaleza Espacial SDF-1 Macross",
+        "en": "Commander of the SDF-1 Macross Space Fortress"
+      },
+      "faction": {
+        "es": "U.N. Spacy - Mando Supremo de la Flota",
+        "en": "U.N. Spacy - Fleet High Command"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "SDF-1 Macross (Puente de Mando Principal)",
+        "en": "SDF-1 Macross (Main Command Bridge)"
+      },
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/henry_gloval/gloval_card.jpg",
+      "summary": {
+        "es": "El legendario capitán de la fortaleza espacial SDF-1 Macross. Un veterano de serenidad inquebrantable que trajo a 70.000 refugiados civiles de vuelta a la Tierra.",
+        "en": "The legendary captain of the SDF-1 Macross. A steady, veteran strategist who shepherded 70,000 civilian refugees back home through deep space."
+      },
+      "stats": {
+        "command": 99,
+        "strategy": 96,
+        "resolve": 97,
+        "piloting": 65
+      },
+      "dataFile": "data/personajes/henry_gloval.json"
+    },
+    {
+      "id": "max_sterling",
+      "name": "Max Sterling",
+      "japanese_name": "Maximilian Jenius",
+      "category": "pilots",
+      "rank": {
+        "es": "Teniente (Escuadrón Vermilion) // Capitán (RDF) // Comandante de Ala (REF)",
+        "en": "Lieutenant (Vermilion Squadron) // Captain (RDF) // Wing Commander (REF)"
+      },
+      "role": {
+        "es": "As Prodigio Supremo del Escuadrón Skull (VF-1 Azul)",
+        "en": "Prodigious Supreme Ace of Skull Squadron (Blue VF-1)"
+      },
+      "faction": {
+        "es": "U.N. Spacy - Escuadrón Skull",
+        "en": "U.N. Spacy - Skull Squadron"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "SDF-1 Macross // Escuadrón Skull (VF-1A / VF-1J Azul)",
+        "en": "SDF-1 Macross // Skull Squadron (Blue VF-1A / VF-1J)"
+      },
+      "series": {
+        "es": "La Saga Macross & La Era REF",
+        "en": "The Macross Saga & The REF Era"
+      },
+      "thumbnail": "assets/images/personajes/max_sterling/max_card.jpg",
+      "summary": {
+        "es": "El piloto más dotado de la historia militar de la Tierra. Un genio del vuelo que jamás recibió un impacto en combate y esposo de Miriya Parina.",
+        "en": "The most innately gifted combat pilot in Earth history. An untouchable aerial genius and husband to Miriya Parina."
+      },
+      "stats": {
+        "command": 84,
+        "strategy": 91,
+        "resolve": 96,
+        "piloting": 100
+      },
+      "dataFile": "data/personajes/max_sterling.json"
+    },
+    {
+      "id": "miriya_sterling",
+      "name": "Miriya Parina Sterling",
+      "japanese_name": "Milia Fallyna Jenius",
+      "category": "zentraedi",
+      "rank": {
+        "es": "Comandante Meltrandi // Teniente RDF // Mayor REF",
+        "en": "Meltrandi Commander // RDF Lieutenant // REF Major"
+      },
+      "role": {
+        "es": "As de Asalto Zentraedi y Piloto del VF-1J Carmesí",
+        "en": "Elite Zentraedi Strike Ace & Crimson VF-1J Pilot"
+      },
+      "faction": {
+        "es": "Armada Zentraedi // U.N. Spacy (Escuadrón Skull)",
+        "en": "Zentraedi Armada // U.N. Spacy (Skull Squadron)"
+      },
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "assignment": {
+        "es": "SDF-1 Macross (Escuadrón Skull // VF-1J Rojo)",
+        "en": "SDF-1 Macross (Skull Squadron // Red VF-1J)"
+      },
+      "series": {
+        "es": "La Saga Macross & La Era REF",
+        "en": "The Macross Saga & The REF Era"
+      },
+      "thumbnail": "assets/images/personajes/miriya_sterling/miriya_rdf_card.jpg",
+      "summary": {
+        "es": "La guerrera más letal del Imperio Zentraedi. Tras infiltrarse en el SDF-1 para batirse en duelo con Max Sterling, descubrió el amor y fundó la primera familia mestiza estelar.",
+        "en": "The deadliest warrior of the Zentraedi Empire. Infiltrating the SDF-1 to duel Max Sterling, she embraced humanity and gave birth to the first blended family."
+      },
+      "stats": {
+        "command": 90,
+        "strategy": 87,
+        "resolve": 99,
+        "piloting": 100
+      },
+      "dataFile": "data/personajes/miriya_sterling.json"
+    },
+    {
+      "id": "breetai",
+      "name": "Comandante Breetai",
+      "japanese_name": "Vrlitwhai Kridanik",
+      "category": "zentraedi",
+      "rank": {
+        "es": "Comandante Supremo de Flota Imperial // General REF",
+        "en": "Imperial Fleet Supreme Commander // REF General"
+      },
+      "role": {
+        "es": "Comandante de Flota y Artífice de la Alianza Humano-Zentraedi",
+        "en": "Fleet Commander & Co-Architect of Human-Zentraedi Alliance"
+      },
+      "faction": {
+        "es": "Flota Imperial Zentraedi // Fuerza Expedicionaria Robotech",
+        "en": "Imperial Zentraedi Armada // Robotech Expeditionary Force"
+      },
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "assignment": {
+        "es": "Acorazado Insignia Nupetiet-Vergnitzs // Flota REF",
+        "en": "Nupetiet-Vergnitzs Flagship // REF Fleet"
+      },
+      "series": {
+        "es": "La Saga Macross & La Era REF",
+        "en": "The Macross Saga & The REF Era"
+      },
+      "thumbnail": "assets/images/personajes/breetai/breetai_card.jpg",
+      "summary": {
+        "es": "El colosal comandante de la flota Zentraedi que desafió la orden de exterminio de Dolza para unirse al SDF-1 y salvar a la humanidad.",
+        "en": "The colossal Zentraedi fleet commander who defied Dolza's extinction edict to ally with the SDF-1 and rescue humanity."
+      },
+      "stats": {
+        "command": 100,
+        "strategy": 95,
+        "resolve": 98,
+        "piloting": 80
+      },
+      "dataFile": "data/personajes/breetai.json"
     }
   ]
 }

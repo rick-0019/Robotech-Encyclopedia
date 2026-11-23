@@ -1,0 +1,172 @@
+{
+  "id": "roy_fokker",
+  "name": "Roy Fokker",
+  "japanese_name": "Roy Focker",
+  "callsign": "Skull-1 // Skull Leader Original",
+  "rank": {
+    "es": "Teniente Comandante // Comandante del Ala Aérea del SDF-1",
+    "en": "Lieutenant Commander // SDF-1 Air Wing Commander"
+  },
+  "role": {
+    "es": "Líder Fundador del Escuadrón Skull y Piloto de Pruebas del Programa VF-1 Valkyrie",
+    "en": "Founding Leader of Skull Squadron & Chief Test Pilot of the VF-1 Valkyrie Program"
+  },
+  "category": "pilots",
+  "faction": {
+    "es": "U.N. Spacy - Escuadrón Skull",
+    "en": "U.N. Spacy - Skull Squadron"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "assignment": {
+    "es": "SDF-1 Macross // Comandante de Grupo de Combate Aéreo (VF-1S Skull Leader)",
+    "en": "SDF-1 Macross // Air Group Commander (VF-1S Skull Leader)"
+  },
+  "birth_date": "6 de Junio de 1979",
+  "birth_place": {
+    "es": "Estados Unidos (Tierra)",
+    "en": "United States (Earth)"
+  },
+  "blood_type": "B+",
+  "height": "1,91 m",
+  "weight": "86 kg",
+  "thumbnail": "assets/images/personajes/roy_fokker/roy_fokker.png",
+  "images": [
+    {
+      "url": "assets/images/personajes/roy_fokker/roy_fokker.png",
+      "title_es": "Comandante Roy Fokker - Retrato Oficial de Servicio",
+      "title_en": "Commander Roy Fokker - Official Duty Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/roy_fokker/roy_in_veritech.png",
+      "title_es": "En la Cabina del VF-1S Valkyrie - Alerta Máxima",
+      "title_en": "In the Cockpit of VF-1S Valkyrie - Red Alert Sortie",
+      "type_es": "Misión Operativa",
+      "type_en": "Combat Sortie"
+    },
+    {
+      "url": "assets/images/personajes/roy_fokker/roy_fokker_young.jpg",
+      "title_es": "Roy Fokker - Días de las Guerras Globales",
+      "title_en": "Roy Fokker - Global Civil Wars Era",
+      "type_es": "Historial Temprano",
+      "type_en": "Early Career"
+    },
+    {
+      "url": "assets/images/personajes/roy_fokker/roy_and_rick.jpg",
+      "title_es": "Roy Fokker y Rick Hunter - Mentor y Hermano Menor",
+      "title_en": "Roy Fokker & Rick Hunter - Mentor and Younger Brother",
+      "type_es": "Registro Personal",
+      "type_en": "Personal Log"
+    }
+  ],
+  "summary": {
+    "es": "El héroe supremo de la aviación militar humana y primer comandante del legendario Escuadrón Skull. Veterano de las Guerras Globales, mentor de Rick Hunter y figura paterna para los pilotos del SDF-1.",
+    "en": "Supreme hero of human aerospace combat and the original commander of the legendary Skull Squadron. Global Civil War veteran, mentor to Rick Hunter, and father figure to the pilots of the SDF-1."
+  },
+  "lore": {
+    "overview_es": "Roy Fokker forjó su leyenda como piloto acrobático en el circo aéreo del padre de Rick Hunter antes de unirse a las fuerzas de combate durante las devastadoras Guerras Globales, donde acumuló más de 180 victorias en combate aéreo convencional. Al descubrirse el SDF-1 en la Isla Macross, fue reclutado por el Dr. Emil Lang y el Capitán Henry Gloval como el piloto de pruebas principal para el desarrollo secreto del Proyecto Veritech Valkyrie. En el día del primer asalto Zentraedi, Fokker guió el primer vuelo de combate con tecnología transformable en la historia.",
+    "overview_en": "Roy Fokker honed his legendary flying touch as an aerobatic barnstormer in Rick Hunter's father's air circus before joining combat forces in the cataclysmic Global Civil War, where he achieved over 180 confirmed air-to-air victories in conventional jets. Following the crash of the SDF-1 on Macross Island, he was recruited by Dr. Emil Lang and Captain Henry Gloval as chief test pilot for the top-secret Veritech Valkyrie Development Program. On the fateful day of the first Zentraedi assault, Fokker spearheaded history's very first variable mecha combat sortie.",
+    "tactical_analysis_es": "Fokker definió la doctrina operativa del combate Veritech moderno. Su estilo agresivo combinaba maniobras hiper-G con el cambio veloz entre los modos Caza (Fighter) y Guardián (GERWALK) para emboscar a formaciones Zentraedi numéricamente superiores. Al timón de su icónico caza blanco, negro y amarillo VF-1S con la calavera y tibias cruzadas, era el baluarte defensivo más confiable del SDF-1. Su trágica muerte en combate tras salvar a Macross City de un ataque masivo de Quamzin dejó un vacío imborrable, pasando su legado y su nave insignia a su discípulo Rick Hunter.",
+    "tactical_analysis_en": "Fokker authored the foundational combat doctrine of variable Veritech aerospace warfare. His aggressive dogfighting doctrine paired extreme-G maneuvers with instantaneous transitions between Fighter and Guardian modes to shatter numerically overwhelming Zentraedi interceptor screens. At the controls of his iconic white, black, and yellow VF-1S bearing the skull and crossbones insignia, he stood as the SDF-1's ultimate frontline shield. His tragic death defending Macross City against Khyron's blitz left an immortal void, transferring his mantle and flagship fighter to his protégé, Rick Hunter."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 94,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Líder nato respetado por subordinados y superiores; inspiraba valor en las situaciones más desesperadas."
+    },
+    "strategy": {
+      "value": 85,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Excelente criterio táctico para organizar patrones de intercepción aérea y defensa de portaaviones espaciales."
+    },
+    "resolve": {
+      "value": 98,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Luchó hasta el final incluso gravemente herido en combate para asegurar la supervivencia de sus compañeros."
+    },
+    "piloting": {
+      "value": 100,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "La cumbre del pilotaje de combate; considerado el mejor aviador que la Tierra produjo jamás."
+    }
+  },
+  "stats": {
+    "command": 94,
+    "strategy": 85,
+    "resolve": 98,
+    "piloting": 100
+  },
+  "service_record": [
+    {
+      "period": "1999 - 2005",
+      "assignment_es": "As de caza en las Guerras Globales; 180 victorias confirmadas en cazas a reacción",
+      "assignment_en": "Fighter Ace during Global Civil War; 180 confirmed air-to-air kills in jet fighters"
+    },
+    {
+      "period": "2005 - 2008",
+      "assignment_es": "Piloto de Pruebas Jefe del Proyecto Robotech VF-X / VF-1 Valkyrie en la Isla Macross",
+      "assignment_en": "Chief Test Pilot for VF-X / VF-1 Valkyrie Development Project on Macross Island"
+    },
+    {
+      "period": "2009",
+      "assignment_es": "Comandante de Grupo Aéreo del SDF-1; Lidera el Escuadrón Skull en el escape espacial",
+      "assignment_en": "SDF-1 Air Group Commander; leads Skull Squadron during the spaceborne breakout"
+    },
+    {
+      "period": "2009 - 2010",
+      "assignment_es": "Defensa estratégica en los anillos de Saturno y Base Marte; mentoría directa a Rick Hunter",
+      "assignment_en": "Strategic defense in Saturn's rings & Mars Base Sara; direct mentorship of Rick Hunter"
+    },
+    {
+      "period": "2010",
+      "assignment_es": "Caído en acción defendiendo Macross City del asalto de Khyron; condecorado póstumamente",
+      "assignment_en": "Killed in action repelling Khyron's surprise attack on Macross City; awarded post-mortem honors"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Claudia Grant",
+      "relation_es": "El gran amor de su vida; compañera, confidente y pilar emocional en la nave.",
+      "relation_en": "The love of his life; partner, confidante, and emotional anchor aboard the SDF-1."
+    },
+    {
+      "character": "Rick Hunter",
+      "relation_es": "Hermano menor adoptivo y protegido; lo convirtió en piloto militar y heredero de su legado.",
+      "relation_en": "Adoptive younger brother and protégé; molded him into a military aviator and heir to his legacy."
+    },
+    {
+      "character": "Henry Gloval",
+      "relation_es": "Comandante en jefe y figura paterna con quien compartió los secretos iniciales del SDF-1.",
+      "relation_en": "Commander-in-chief and mentor with whom he shared the early secrets of the SDF-1."
+    },
+    {
+      "character": "Max Sterling",
+      "relation_es": "Reclutó y reconoció de inmediato el genio sobrehumano de Max, integrándolo a la élite de combate.",
+      "relation_en": "Recognized and recruited Max's superhuman piloting instincts, elevating him into elite ranks."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "Volamos no porque sea seguro, sino porque el cielo no le pertenece al que tiene miedo.",
+      "quote_en": "We fly not because it's safe, but because the sky never belongs to the fearful.",
+      "context_es": "Instrucción de vuelo a los reclutas del Escuadrón Skull en el SDF-1.",
+      "context_en": "Flight briefing to Skull Squadron recruits aboard the SDF-1."
+    },
+    {
+      "quote_es": "No te preocupes, nena... solo necesito descansar un poco antes de esa ensalada de piña.",
+      "quote_en": "Don't worry, honey... I just need a little rest before having that pineapple salad.",
+      "context_es": "Últimas palabras a Claudia Grant en su camarote tras ocultar sus heridas de combate.",
+      "context_en": "Final words to Claudia Grant in their quarters, masking his fatal combat wounds."
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "id": "max_sterling",
+  "name": "Max Sterling",
+  "japanese_name": "Maximilian Jenius",
+  "callsign": "Blue Max // Skull-3 // Genius Ace",
+  "rank": {
+    "es": "Cabo // Teniente (Escuadrón Vermilion) // Capitán (RDF) // Comandante de Ala (REF)",
+    "en": "Corporal // Lieutenant (Vermilion Squadron) // Captain (RDF) // Wing Commander (REF)"
+  },
+  "role": {
+    "es": "As Prodigio Supremo del Escuadrón Skull y Especialista en Combate Cercano Mecha",
+    "en": "Prodigious Supreme Ace of Skull Squadron & Mecha Close-Quarters Specialist"
+  },
+  "category": "pilots",
+  "faction": {
+    "es": "U.N. Spacy - Escuadrón Skull / Vermilion",
+    "en": "U.N. Spacy - Skull / Vermilion Squadron"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross & La Era REF",
+    "en": "The Macross Saga & The REF Era"
+  },
+  "assignment": {
+    "es": "SDF-1 Macross // Escuadrón Skull (VF-1J / VF-1A Valkyrie Azul)",
+    "en": "SDF-1 Macross // Skull Squadron (Blue VF-1J / VF-1A Valkyrie)"
+  },
+  "birth_date": "13 de Septiembre de 1993",
+  "birth_place": {
+    "es": "Europa (Tierra)",
+    "en": "Europe (Earth)"
+  },
+  "blood_type": "AB+",
+  "height": "1,81 m",
+  "weight": "68 kg",
+  "thumbnail": "assets/images/personajes/max_sterling/max_card.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/max_sterling/max_card.jpg",
+      "title_es": "Max Sterling - As de Caza y Caza Azul VF-1",
+      "title_en": "Max Sterling - Fighter Ace & Blue VF-1 Valkyrie",
+      "type_es": "Retrato Táctico",
+      "type_en": "Tactical Portrait"
+    },
+    {
+      "url": "assets/images/personajes/max_sterling/max_portrait.jpg",
+      "title_es": "Teniente Sterling - Retrato de Perfil de Vuelo",
+      "title_en": "Lieutenant Sterling - Flight Profile Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/max_sterling/max_cockpit.jpg",
+      "title_es": "En Cabina con Casco y HUD Táctico Activado",
+      "title_en": "In Cockpit with Flight Helmet & Active HUD",
+      "type_es": "Misión Operativa",
+      "type_en": "Combat Sortie"
+    },
+    {
+      "url": "assets/images/personajes/max_sterling/vermilion_squadron.jpg",
+      "title_es": "Trío Histórico del Escuadrón Vermilion (Max, Ben y Rick)",
+      "title_en": "Historic Vermilion Squadron Trio (Max, Ben & Rick)",
+      "type_es": "Registro de Escuadrón",
+      "type_en": "Squadron Log"
+    },
+    {
+      "url": "assets/images/personajes/max_sterling/max_sterling_fandom.jpg",
+      "title_es": "Max Sterling - Traje de Gala Militar RDF",
+      "title_en": "Max Sterling - RDF Dress Uniform Portrait",
+      "type_es": "Archivo de Servicio",
+      "type_en": "Service Archive"
+    }
+  ],
+  "summary": {
+    "es": "El piloto con mayores dotes innatas de la historia militar de la Tierra. Un genio del vuelo que jamás recibió un impacto en combate, protagonista del primer matrimonio pacificador humano-alienígena con Miriya Parina.",
+    "en": "The most innately gifted pilot in human military history. A flying genius who never took a hit in combat, pivotal in the first historic human-alien pacifying marriage with Miriya Parina."
+  },
+  "lore": {
+    "overview_es": "Tranquilo, educado y con sus características gafas, Maximilian Sterling aparentaba ser un estudiante tímido cuando ingresó voluntariamente a las Fuerzas de Defensa Robotech en el SDF-1. Sin embargo, en el simulador de vuelo y en el espacio real demostró una sinapsis neurológica y un cálculo cinético que superaban los límites humanos. Asignado al Escuadrón Vermilion bajo el mando de Rick Hunter, Max no tardó en conseguir decenas de derribos sin sufrir un solo rasguño en el fuselaje de su Valkyrie azul.",
+    "overview_en": "Mild-mannered, bespectacled, and soft-spoken, Maximilian Sterling looked more like a scholar than a combat aviator when he enlisted in the Robotech Defense Force aboard the SDF-1. Yet, within simulation suites and true orbital dogfights, he revealed neural reaction times and kinetic trajectory calculations that pushed the boundaries of human physiology. Assigned to the Vermilion Squadron alongside Rick Hunter, Max accumulated scores of confirmed kills without ever taking a glancing hit to his blue Valkyrie.",
+    "tactical_analysis_es": "El estilo de combate de Max es sinónimo de perfección geométrica. Capaz de realizar micro-virajes vectoriales y transiciones Battloid a quemarropa que descolocaban por completo a los sensores enemigos, se convirtió en el blanco prioritario de la mejor piloto Zentraedi de la galaxia, Miriya Parina. Tras un mítico duelo aéreo en Macross City y un combate posterior con cuchillos en un centro de arcades, Max derrotó a Miriya y le propuso matrimonio, sellando el hito diplomático y biológico más trascendente de la Primera Guerra Robotech. Padre de Dana Sterling, continuaría como comandante de ala en la REF.",
+    "tactical_analysis_en": "Sterling's combat methodology represents flawless spatial geometry. Executing vector micro-burns and point-blank Battloid transformations that hopelessly scrambled hostile tracking telemetry, he drew the singular obsession of the greatest Zentraedi ace in the galaxy, Miriya Parina. Following an extraordinary dogfight within Macross City and a fateful knife duel in a video arcade, Max disarmed Miriya and proposed marriage, cementing the pivotal cultural and biological union of the First Robotech War. Father of Dana Sterling, he went on to serve as Wing Commander in the REF."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 84,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Liderazgo basado en el ejemplo supremo y la coordinación quirúrgica de sus compañeros de ala."
+    },
+    "strategy": {
+      "value": 91,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Cálculo instantáneo de trayectorias balísticas y vectores de intercepción a nivel sobrehumano."
+    },
+    "resolve": {
+      "value": 96,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Mantiene pulsaciones bajas y calma absoluta incluso rodeado de cientos de cápsulas de combate enemigas."
+    },
+    "piloting": {
+      "value": 100,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Considerado el mejor piloto Veritech de la galaxia; reflejos y precisión imposibles de igualar."
+    }
+  },
+  "stats": {
+    "command": 84,
+    "strategy": 91,
+    "resolve": 96,
+    "piloting": 100
+  },
+  "service_record": [
+    {
+      "period": "2009",
+      "assignment_es": "Ingreso a la RDF; puntajes perfectos en simulador de combate Veritech a bordo del SDF-1",
+      "assignment_en": "Enlists in RDF; logs perfect simulation scores for Veritech combat aboard SDF-1"
+    },
+    {
+      "period": "2009 - 2010",
+      "assignment_es": "Asignado al Escuadrón Vermilion (VF-1A azul); misiones de escolta en Saturno y Base Marte",
+      "assignment_en": "Assigned to Vermilion Squadron (Blue VF-1A); escort sorties at Saturn & Mars Base Sara"
+    },
+    {
+      "period": "2010",
+      "assignment_es": "Duelo aéreo con Miriya; matrimonio histórico televisado para toda la flota espacial",
+      "assignment_en": "Aerial duel with Miriya; historic wedding broadcast live across the fleet"
+    },
+    {
+      "period": "2011",
+      "assignment_es": "Infiltración en el crucero insignia de Bodolza combatiendo hombro a hombro con Miriya",
+      "assignment_en": "Infiltration of Bodolza's flagship, fighting shoulder-to-shoulder with Miriya"
+    },
+    {
+      "period": "2013 - 2022",
+      "assignment_es": "Comandante de Cazas de Élite en Macross City; nacimiento de su hija Dana Sterling",
+      "assignment_en": "Elite Fighter Commander in Macross City; birth of his daughter Dana Sterling"
+    },
+    {
+      "period": "2022+",
+      "assignment_es": "Se embarca como Comandante de Ala de la REF a bordo del SDF-3 Pioneer rumbo a Tirol",
+      "assignment_en": "Departs as REF Wing Commander aboard SDF-3 Pioneer destined for Tirol"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Miriya Parina Sterling",
+      "relation_es": "Su esposa, igual en combate y gran amor; la única piloto capaz de seguirle el ritmo de vuelo.",
+      "relation_en": "His wife, combat equal, and deep love; the only aviator capable of matching his aerial tempo."
+    },
+    {
+      "character": "Rick Hunter",
+      "relation_es": "Líder de escuadrón y amigo fraternal de toda la vida; respetaban mutuamente sus habilidades.",
+      "relation_en": "Squadron leader and lifelong brother-in-arms; held unwavering respect for each other."
+    },
+    {
+      "character": "Ben Dixon",
+      "relation_es": "Compañero de ala en Vermilion; su pérdida en la explosión de la barrera lo marcó profundamente.",
+      "relation_en": "Wingman in Vermilion; Dixon's death in the barrier overload struck him deeply."
+    },
+    {
+      "character": "Dana Sterling",
+      "relation_es": "Su primogénita, en quien reconoció el espíritu intrépido y los reflejos combinados de ambos mundos.",
+      "relation_en": "His firstborn daughter, possessing the fearless spirit and blended reflexes of two worlds."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "En el combate aéreo no se trata de velocidad bruta, sino de anticipar dónde estará el enemigo antes de que él mismo lo sepa.",
+      "quote_en": "Aerospace combat isn't about raw speed; it's about anticipating where the enemy will be before they know it themselves.",
+      "context_es": "Lección de táctica de intercepción a los cadetes del Escuadrón Skull.",
+      "context_en": "Briefing on interception vectors to Skull Squadron cadets."
+    },
+    {
+      "quote_es": "Miriya, eres la piloto más increíble que he visto jamás. Ya no quiero pelear contigo... quiero casarme contigo.",
+      "quote_en": "Miriya, you are the most incredible pilot I've ever seen. I don't want to fight you anymore... I want to marry you.",
+      "context_es": "Propuesta de matrimonio en el parque de Macross City tras desarmarla.",
+      "context_en": "Marriage proposal in Macross City park after disarming her in personal combat."
+    }
+  ]
+}

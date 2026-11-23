@@ -1,0 +1,177 @@
+{
+  "id": "miriya_sterling",
+  "name": "Miriya Parina Sterling",
+  "japanese_name": "Milia Fallyna Jenius",
+  "callsign": "Red Ace // Quadrono Leader // Skull Falcon",
+  "rank": {
+    "es": "Comandante de Asalto de la Flota Meltrandi // Teniente RDF // Mayor REF",
+    "en": "Meltrandi Assault Commander // RDF Lieutenant // REF Major"
+  },
+  "role": {
+    "es": "Líder de la Fuerza Aérea Femenina Meltrandi y As de Caza Veritech Rojo VF-1J",
+    "en": "Leader of Meltrandi Female Strike Forces & Red VF-1J Veritech Ace"
+  },
+  "category": "zentraedi",
+  "faction": {
+    "es": "Armada Imperial Zentraedi // U.N. Spacy (Escuadrón Skull)",
+    "en": "Imperial Zentraedi Armada // U.N. Spacy (Skull Squadron)"
+  },
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "series": {
+    "es": "La Saga Macross & La Era REF",
+    "en": "The Macross Saga & The REF Era"
+  },
+  "assignment": {
+    "es": "Crucero de Asalto Quadrono // SDF-1 Macross (VF-1J Valkyrie Carmesí)",
+    "en": "Quadrono Assault Cruiser // SDF-1 Macross (Crimson VF-1J Valkyrie)"
+  },
+  "birth_date": "Fecha Zentraedi Clasificada (Aprox. 1985 Terrestre)",
+  "birth_place": {
+    "es": "Fábrica de Clonación Zentraedi (Espacio Profundo)",
+    "en": "Zentraedi Bio-Cloning Complex (Deep Space)"
+  },
+  "blood_type": "Desconocido (Genética Zentraedi)",
+  "height": "8,55 m (Zentraedi) // 1,78 m (Miclonizada)",
+  "weight": "5.900 kg (Gigante) // 58 kg (Miclonizada)",
+  "thumbnail": "assets/images/personajes/miriya_sterling/miriya_rdf_card.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/miriya_sterling/miriya_rdf_card.jpg",
+      "title_es": "Miriya Sterling - Uniforme de Oficial RDF en la Tierra",
+      "title_en": "Miriya Sterling - Earth RDF Officer Uniform",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/miriya_sterling/miriya_zentraedi_card.jpg",
+      "title_es": "Comandante Parina - Armadura Meltrandi de Élite",
+      "title_en": "Commander Parina - Elite Meltrandi Uniform",
+      "type_es": "Retrato Zentraedi",
+      "type_en": "Zentraedi File"
+    },
+    {
+      "url": "assets/images/personajes/miriya_sterling/miriya_zentraedi_portrait.jpg",
+      "title_es": "Retrato Meltrandi - Mirada de Combate y Determinación",
+      "title_en": "Meltrandi Portrait - Tactical Focus and Combat Resolve",
+      "type_es": "Archivo Táctico",
+      "type_en": "Tactical File"
+    },
+    {
+      "url": "assets/images/personajes/miriya_sterling/miriya_portrait.jpg",
+      "title_es": "Miriya Miclonizada - Vida Civil y Adaptación Cultural",
+      "title_en": "Micronized Miriya - Civilian Life and Cultural Adaptation",
+      "type_es": "Registro Personal",
+      "type_en": "Personal Log"
+    }
+  ],
+  "summary": {
+    "es": "La guerrera más temida del Imperio Zentraedi. Tras infiltrarse en el SDF-1 para vengar su única derrota ante Max Sterling, descubrió la emoción, el amor y la cultura, convirtiéndose en el puente viviente entre ambas civilizaciones y madre de Dana Sterling.",
+    "en": "The most feared warrior in the Zentraedi Empire. Infiltrating the SDF-1 to avenge her sole aerial defeat against Max Sterling, she discovered human emotion, love, and culture, becoming the living bridge between two worlds and mother to Dana Sterling."
+  },
+  "lore": {
+    "overview_es": "Nacida y entrenada en los centros de clonación y combate de las fuerzas femeninas Quadrono, Miriya nunca conoció el miedo ni la derrota militar. Considerada invencible a los mandos de su armadura de combate Queadluun-Rau púrpura, su orgullo de guerrera quedó conmocionado cuando un misterioso caza transformable azul (Max Sterling) la superó en maniobrabilidad espacial durante el asedio al SDF-1. Obsesionada con recuperar su honor, se sometió al proceso de miclonización para infiltrarse como civil en Macross City y eliminar a su rival.",
+    "overview_en": "Cloned and battle-hardened within the elite Quadrono assault divisions of the female Meltrandi forces, Miriya possessed no concept of fear or military defeat. Renowned as invincible at the controls of her custom purple Queadluun-Rau power armor, her warrior pride was shattered when a mysterious blue variable fighter (Max Sterling) completely outmaneuvered her during orbital skirmishes against the SDF-1. Driven by obsession to reclaim her warrior honor, she underwent micronization to infiltrate Macross City as a spy and assassinate her nemesis.",
+    "tactical_analysis_es": "Miriya combina la agresividad innata y la resistencia física sobrehumana de la biología Zentraedi con una precisión de tiro milimétrica. Tras casarse con Max, adoptó el pilotaje de los cazas Veritech humanos, pintando su VF-1J de color rojo carmesí. En la ofensiva final contra la Gran Flota de Dolza, combatió en pareja simbiótica junto a Max, abriéndose paso a través de miles de naves enemigas e ingresando al centro neurálgico del acorazado alienígena. Su ejemplo demostró que los Zentraedi podían trascender su programación bélica y abrazar la paz.",
+    "tactical_analysis_en": "Miriya merges the superhuman reflexes and instinctive combat aggression of Zentraedi bio-conditioning with pinpoint gunnery accuracy. Following her marriage to Max, she adapted instantly to human Veritech control linkages, piloting a customized crimson VF-1J. In the grand orbital offensive against Dolza's armada, she flew in flawless tactical harmony alongside Max, carving through thousands of hostile screens to storm the nerve center of the alien supreme command. Her historic journey proved that the Zentradi could transcend their engineered warrior programming to embrace humanity."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 90,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Líder de escuadrones de asalto pesado; inspiraba devoción absoluta entre las guerreras Quadrono."
+    },
+    "strategy": {
+      "value": 87,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Especialista en tácticas de infiltración, emboscada a alta velocidad y combate cerrado."
+    },
+    "resolve": {
+      "value": 99,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Orgullo y coraje inquebrantables; dispuesta a sacrificar todo por el honor y la defensa de su nueva familia."
+    },
+    "piloting": {
+      "value": 100,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "La única piloto en toda la galaxia con reflejos capaces de igualar a Max Sterling en combate real."
+    }
+  },
+  "stats": {
+    "command": 90,
+    "strategy": 87,
+    "resolve": 99,
+    "piloting": 100
+  },
+  "service_record": [
+    {
+      "period": "2009",
+      "assignment_es": "Comandante de Ala de las Fuerzas Quadrono de la Flota Zentraedi de Azonia",
+      "assignment_en": "Wing Commander of Quadrono Elite Assault Wing under Azonia's Zentraedi Fleet"
+    },
+    {
+      "period": "2010",
+      "assignment_es": "Primer duelo aéreo contra el Caza Azul; infiltración miclonizada en el SDF-1",
+      "assignment_en": "First orbital dogfight against the Blue Fighter; micronized infiltration of the SDF-1"
+    },
+    {
+      "period": "2010",
+      "assignment_es": "Duelo a cuchillo en Macross Park; renuncia a la venganza y contrae matrimonio con Max",
+      "assignment_en": "Knife duel in Macross Park; abandons vengeance and weds Max Sterling"
+    },
+    {
+      "period": "2011",
+      "assignment_es": "Piloto de asalto en el Escuadrón Skull (VF-1J rojo); penetración del buque de Dolza",
+      "assignment_en": "Strike Pilot in Skull Squadron (Red VF-1J); spearheads breach of Dolza's flagship"
+    },
+    {
+      "period": "2013",
+      "assignment_es": "Nacimiento de su primogénita Dana Sterling; primera descendiente humana-zentraedi",
+      "assignment_en": "Birth of daughter Dana Sterling; first human-zentraedi child in history"
+    },
+    {
+      "period": "2022+",
+      "assignment_es": "Comandante de Caza y Enlace Interespecies en la REF rumbo al Mundo Natal de Zor",
+      "assignment_en": "Fighter Commander and Inter-Species Liaison for the REF journey to Tirol"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Max Sterling",
+      "relation_es": "Su esposo y alma gemela; el único hombre que logró derrotarla y conquistar su corazón.",
+      "relation_en": "Her husband and soulmate; the only warrior who ever defeated her and won her heart."
+    },
+    {
+      "character": "Dana Sterling",
+      "relation_es": "Su hija primogénita; heredó su espíritu de guerrera indomable y reflejos de combate.",
+      "relation_en": "Her firstborn daughter; inherited her indomitable warrior spirit and combat reflexes."
+    },
+    {
+      "character": "Azonia",
+      "relation_es": "Antigua comandante superior en la flota imperial Zentraedi; rompieron lazos al elegir Miriya la Tierra.",
+      "relation_en": "Former superior commander in Zentraedi fleet; severed ties when Miriya chose Earth."
+    },
+    {
+      "character": "Rick Hunter",
+      "relation_es": "Comandante de escuadrón y amigo de la familia; confió plenamente en su lealtad militar.",
+      "relation_en": "Squadron commander and family friend; placed absolute trust in her military loyalty."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "¡Nadie vence a Miriya! ¡Juro que encontraré a ese piloto del mecha azul aunque me cueste la vida!",
+      "quote_en": "Nobody defeats Miriya! I swear I will track down that blue mecha pilot even if it costs my life!",
+      "context_es": "Juramento de venganza a bordo de su crucero Quadrono tras su primer duelo con Max.",
+      "context_en": "Vow of vengeance aboard her Quadrono cruiser following her first skirmish with Max."
+    },
+    {
+      "quote_es": "En mi pueblo solo nos enseñaron a destruir... tú me enseñaste que la vida tiene un propósito más noble: proteger a quienes amas.",
+      "quote_en": "My people only taught us how to destroy... you showed me that life has a higher purpose: protecting those you love.",
+      "context_es": "Confesión a Max en la víspera de la gran ofensiva contra Dolza.",
+      "context_en": "Confession to Max on the eve of the grand offensive against Dolza."
+    }
+  ]
+}

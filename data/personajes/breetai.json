@@ -1,0 +1,170 @@
+{
+  "id": "breetai",
+  "name": "Comandante Breetai",
+  "japanese_name": "Vrlitwhai Kridanik",
+  "callsign": "Imperial Commander // Grand General Breetai",
+  "rank": {
+    "es": "Comandante Supremo de Flota Imperial Zentraedi // General de la REF",
+    "en": "Imperial Zentraedi Fleet Supreme Commander // REF General"
+  },
+  "role": {
+    "es": "Comandante de la Flota de Vanguardia Zentraedi y Arquitecto Militar de la Alianza Humano-Zentraedi",
+    "en": "Commander of Zentraedi Vanguard Fleet & Military Architect of Human-Zentraedi Alliance"
+  },
+  "category": "zentraedi",
+  "faction": {
+    "es": "Flota Imperial Zentraedi // Fuerza Expedicionaria Robotech (REF)",
+    "en": "Imperial Zentraedi Armada // Robotech Expeditionary Force (REF)"
+  },
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "series": {
+    "es": "La Saga Macross & La Era REF",
+    "en": "The Macross Saga & The REF Era"
+  },
+  "assignment": {
+    "es": "Acorazado Insignia Zentraedi de Clase Nupetiet-Vergnitzs // Buque Insignia REF",
+    "en": "Nupetiet-Vergnitzs Class Command Dreadnought // REF Fleet Flagship"
+  },
+  "birth_date": "Fecha Zentraedi Clasificada (Aprox. Siglo XX Terrestre)",
+  "birth_place": {
+    "es": "Complejo de Clonación Guerrera Zentraedi",
+    "en": "Zentraedi Bio-Warrior Cloning Complex"
+  },
+  "blood_type": "Desconocido (Genética Zentraedi)",
+  "height": "13,54 m (Zentraedi)",
+  "weight": "16.700 kg",
+  "thumbnail": "assets/images/personajes/breetai/breetai_card.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/breetai/breetai_card.jpg",
+      "title_es": "Comandante Breetai - Retrato Oficial y Emblema Imperial",
+      "title_en": "Commander Breetai - Official Portrait & Imperial Crest",
+      "type_es": "Retrato Táctico",
+      "type_en": "Tactical Portrait"
+    },
+    {
+      "url": "assets/images/personajes/breetai/breetai_portrait.jpg",
+      "title_es": "Breetai - Placa Craneal Cibernética y Mirada Estratégica",
+      "title_en": "Breetai - Cybernetic Cranial Plate & Strategic Gaze",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/breetai/breetai_command.jpg",
+      "title_es": "En el Puente de Mando del Acorazado Nupetiet-Vergnitzs",
+      "title_en": "On the Bridge of Nupetiet-Vergnitzs Dreadnought",
+      "type_es": "En Operación",
+      "type_en": "In Operation"
+    }
+  ],
+  "summary": {
+    "es": "El colosal comandante de la flota Zentraedi enviado originalmente a capturar el SDF-1. Fascinado por las emociones humanas y la música de Minmei, desafió la orden de exterminio de Dolza para forjar la alianza militar que salvó a la Tierra.",
+    "en": "The colossal Zentraedi fleet commander tasked with recapturing the SDF-1. Captivated by human emotion and Minmei's songs, he defied Dolza's extinction edict to forge the historic military alliance that saved Earth."
+  },
+  "lore": {
+    "overview_es": "Dotado de una imponente estatura física de más de 13 metros y portador de una placa facial cibernética tras sobrevivir a mortíferas campañas espaciales, Breetai era el comandante más respetado de la Armada Imperial Zentraedi. Recibió del Alto Mando Supremo de Dolza la misión prioritaria de recuperar intacto el SDF-1 y su Matriz de Protocultura. A lo largo de meses de combate táctico a través del sistema solar, Breetai descubrió que los humanos poseían algo desconocido para los clones guerreros: 'cultura', afecto y libre albedrío.",
+    "overview_en": "Standing at an imposing thirteen meters in height and bearing a distinctive cybernetic cranial plate earned in fierce space campaigns, Breetai was the most celebrated commander in the Imperial Zentraedi armada. Entrusted by Supreme Commander Dolza to retrieve the SDF-1 and its lost Protoculture Matrix intact, his months of relentless pursuit across the solar system exposed him to something unheard of in cloned warrior society: 'culture', genuine emotion, and free will.",
+    "tactical_analysis_es": "Breetai representa la cima de la estrategia militar Zentraedi: pragmático, observador y con un estricto código de honor que desprecia la carnicería sin sentido. Cuando Dolza ordenó la destrucción total de la Tierra y la ejecución de los propios Zentraedi 'contaminados' por la cultura humana, Breetai tomó la decisión más audaz de la guerra: unió su flota de millones de naves a las defensas de la Tierra y al SDF-1 del Capitán Gloval. En la batalla orbital final, lideró el fuego de barrera que abrió la brecha decisiva en la formación imperial, convirtiéndose más tarde en General de la Fuerza Expedicionaria Robotech.",
+    "tactical_analysis_en": "Breetai represents the pinnacle of Zentraedi naval strategy: analytical, measured, and bound by a soldierly honor that rejected pointless slaughter. When Supreme Commander Dolza decreed the total orbital bombardment of Earth and the liquidation of 'culturally contaminated' Zentraedi forces, Breetai executed the war's most courageous tactical realignment: he merged his armada of capital ships with Earth's surviving fleet and Captain Gloval's SDF-1. In the climactic battle, his fleet laid down the screening barrages that cracked Dolza's defenses, cementing his legacy as a future General in the Robotech Expeditionary Force."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 100,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Comandó armadas compuestas por más de un millón de acorazados estelares con disciplina de hierro."
+    },
+    "strategy": {
+      "value": 95,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Estratega maestro; supo escuchar los sabios consejos de Exedore para cambiar el curso de la historia galáctica."
+    },
+    "resolve": {
+      "value": 98,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Desafió abiertamente a su dios y comandante supremo Dolza para defender sus convicciones de justicia."
+    },
+    "piloting": {
+      "value": 80,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Capitán de naves capitanes y combate cuerpo a cuerpo; fuerza física descomunal capaz de resistir el vacío del espacio."
+    }
+  },
+  "stats": {
+    "command": 100,
+    "strategy": 95,
+    "resolve": 98,
+    "piloting": 80
+  },
+  "service_record": [
+    {
+      "period": "Siglos de Guerra Imperial",
+      "assignment_es": "Comandante de Flota de la Gran Armada Imperial Zentraedi en innumerables frentes galácticos",
+      "assignment_en": "Fleet Commander in the Grand Zentraedi Imperial Armada across countless galactic fronts"
+    },
+    {
+      "period": "2009",
+      "assignment_es": "Asignado por Dolza a la captura del SDF-1; inicio de la persecución a través del Sistema Solar",
+      "assignment_en": "Dispatched by Dolza to capture SDF-1; initiates system-wide pursuit across Solar System"
+    },
+    {
+      "period": "2010",
+      "assignment_es": "Captura e interrogatorio de Rick Hunter, Lisa Hayes y Minmei; primer contacto con la cultura",
+      "assignment_en": "Captures and interrogates Rick Hunter, Lisa Hayes & Minmei; first encounter with human culture"
+    },
+    {
+      "period": "2011",
+      "assignment_es": "Pacto militar con Henry Gloval; victoria decisiva en la Batalla de la Tierra contra Dolza",
+      "assignment_en": "Historic military truce with Henry Gloval; decisive victory against Dolza in Battle of Earth"
+    },
+    {
+      "period": "2012 - 2014",
+      "assignment_es": "Supervisión de la pacificación terrestre y captura de la Fábrica Satelital Robotech",
+      "assignment_en": "Oversees Earth pacification and successful seizure of the Robotech Factory Satellite"
+    },
+    {
+      "period": "2022+",
+      "assignment_es": "Nombrado General de la REF; comanda las fuerzas aliadas a bordo de la flota del SDF-3",
+      "assignment_en": "Appointed General of the REF; commands joint allied armada aboard the SDF-3 expedition"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Exedore Formo",
+      "relation_es": "Su asesor principal y confidente de toda la vida; confiaba ciegamente en sus deducciones intelectuales.",
+      "relation_en": "His chief advisor and lifelong confidant; placed complete trust in his analytical intellect."
+    },
+    {
+      "character": "Henry Gloval",
+      "relation_es": "Su homólogo humano; forjaron un pacto de caballeros militares que transformó la galaxia.",
+      "relation_en": "His human counterpart; forged a military pact of honor that transformed the galaxy."
+    },
+    {
+      "character": "Khyron",
+      "relation_es": "Comandante subordinado rebelde; despreciaba su indisciplina y sed de sangre incontrolable.",
+      "relation_en": "Rebellious subordinate commander; despised his insubordination and wanton bloodlust."
+    },
+    {
+      "character": "Rick Hunter",
+      "relation_es": "Primer piloto miclón que capturó; con el tiempo se convirtió en su aliado más leal en la REF.",
+      "relation_en": "First micron pilot he captured; in time became his most trusted comrade in the REF."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "¡Nosotros somos soldados, no exterminadores! Si Dolza exige quemar este planeta y nuestra dignidad, pelearemos junto a los micronianos.",
+      "quote_en": "We are soldiers, not butchers! If Dolza demands the incineration of this world and our honor, we fight beside the micronians.",
+      "context_es": "Proclama a su flota antes de romper filas con el Imperio de Dolza.",
+      "context_en": "Proclamation to his fleet before breaking ranks with Dolza's Imperial command."
+    },
+    {
+      "quote_es": "Exedore... esa canción que canta la pequeña humana... ¿por qué siento que arde en mi pecho?",
+      "quote_en": "Exedore... that melody the little human sings... why does it burn inside my chest?",
+      "context_es": "Primeras transmisiones de Lynn Minmei interceptadas por los sensores de su buque insignia.",
+      "context_en": "First Lynn Minmei broadcasts intercepted by the flagship's sensor arrays."
+    }
+  ]
+}
