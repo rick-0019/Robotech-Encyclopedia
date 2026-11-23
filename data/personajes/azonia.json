@@ -1,0 +1,165 @@
+{
+  "id": "azonia",
+  "name": "Comandante Azonia",
+  "japanese_name": "Lap Lamiz",
+  "callsign": "Meltrandi Sovereign // Crimson Empress",
+  "rank": {
+    "es": "Comandante Suprema de la Flota Femenina Zentraedi // Colíder Insurgente",
+    "en": "Supreme Commander of the Meltrandi Female Fleet // Insurgent Co-Leader"
+  },
+  "role": {
+    "es": "Comandante de las Fuerzas Espaciales Femeninas y Aliada Táctica de Khyron",
+    "en": "Commander of Female Space Forces & Tactical Ally to Khyron"
+  },
+  "category": "zentraedi",
+  "faction": {
+    "es": "Armada Zentraedi Femenina Meltrandi // Insurrección Rebelde de Khyron",
+    "en": "Meltrandi Female Zentraedi Armada // Khyron's Rebel Insurgency"
+  },
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "assignment": {
+    "es": "Acorazado Insignia Meltrandi // Crucero Rebelde Reconstruido",
+    "en": "Meltrandi Flagship Dreadnought // Rebuilt Rebel Warship"
+  },
+  "birth_date": "Fecha Zentraedi Ancestral",
+  "birth_place": {
+    "es": "Complejo de Clonación Guerrera Meltrandi",
+    "en": "Meltrandi Bio-Warrior Cloning Complex"
+  },
+  "blood_type": "Desconocido (Genética Meltrandi)",
+  "height": "12,60 m (Zentraedi)",
+  "weight": "14.200 kg",
+  "thumbnail": "assets/images/personajes/azonia/azonia_card.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/azonia/azonia_card.jpg",
+      "title_es": "Comandante Azonia - Ficha Táctica con Blasón Zentraedi",
+      "title_en": "Commander Azonia - Tactical Dossier with Zentraedi Insignia",
+      "type_es": "Retrato Táctico",
+      "type_en": "Tactical Portrait"
+    },
+    {
+      "url": "assets/images/personajes/azonia/azonia_portrait.png",
+      "title_es": "Azonia - Retrato Oficial de Mando Meltrandi",
+      "title_en": "Azonia - Official Meltrandi Command Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/azonia/azonia_breetai_exedore.jpg",
+      "title_es": "Conferencia de Mando Zentraedi: Azonia, Breetai y Exedore",
+      "title_en": "Zentraedi Command Council: Azonia, Breetai & Exedore",
+      "type_es": "Registro Histórico",
+      "type_en": "Historical Record"
+    }
+  ],
+  "summary": {
+    "es": "Comandante en jefe de las temibles legiones femeninas Zentraedi (Meltrandi). Enviada por Dolza para reemplazar a Breetai, su soberbia militar sucumbió al encanto de la cultura humana y finalmente se unió a la causa rebelde y suicida de Khyron.",
+    "en": "Commander-in-chief of the formidable female Zentraedi (Meltrandi) legions. Dispatched by Dolza to supersede Breetai, her martial pride succumbed to cultural fascination, ultimately bonding with Khyron in his doomed final rebellion."
+  },
+  "lore": {
+    "overview_es": "Criada en la casta superior de oficiales de la flota femenina, Azonia era reconocida por su porte aristocrático, su fría elegancia táctica y el control férreo de sus escuadrones de asalto Queadluun-Rau (liderados por Miriya Parina). Cuando los avances del Comandante Breetai en el Sistema Solar se estancaron por la influencia cultural terrestre, el Comandante Supremo Dolza ordenó a Azonia asumir el control operativo del teatro de guerra.",
+    "overview_en": "Engineered within the highest echelons of the Meltrandi female fleet, Azonia was celebrated for her aristocratic poise, cold tactical brilliance, and iron-fisted governance of elite Queadluun-Rau power armor wings (spearheaded by Miriya Parina). When Commander Breetai's campaign in the Solar System stalled under the insidious influence of human culture, Supreme Commander Dolza commissioned Azonia to assume supreme theater command.",
+    "tactical_analysis_es": "A pesar de su arrogancia inicial, Azonia no tardó en verse fascinada por la belleza, las canciones de Lynn Minmei y las emociones humanas que contagiaban a sus tropas. Durante la batalla orbital final, combatió del lado de Breetai y la RDF contra las fuerzas de Dolza. Sin embargo, en los difíciles años de la reconstrucción, incapaz de adaptarse a la humillante miclonización y a la vida civil en las ruinas de la Tierra, fue seducida por el carisma feroz de Khyron. Ambos formaron una alianza sentimental y de armas, tripulando juntos la nave de guerra que se estrelló deliberadamente contra el SDF-1.",
+    "tactical_analysis_en": "Despite her initial haughty condescension, Azonia proved just as susceptible to the intoxicating resonance of Lynn Minmei's melodies and human passion. In the climactic orbital Holocaust, she committed her armada alongside Breetai and the RDF against Dolza's fleet. Yet, in the harrowing reconstruction era, unable to reconcile her regal identity with micronization and mundane civilian life, she yielded to Khyron's magnetic savagery. Becoming his lover and co-commander, she stood at his side on the bridge during the fateful suicide ramming that pulverized the SDF-1."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 93,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Líder suprema de la flota Meltrandi; disciplina implacable y respeto absoluto entre sus guerreras."
+    },
+    "strategy": {
+      "value": 88,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Especialista en asaltos coordinados de alta velocidad y maniobras de cerco espacial."
+    },
+    "resolve": {
+      "value": 95,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Orgullo inquebrantable; eligió morir luchando junto a Khyron antes que someterse al orden humano."
+    },
+    "piloting": {
+      "value": 88,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Comandante de acorazados estelares y piloto de asalto Meltrandi experimentada."
+    }
+  },
+  "stats": {
+    "command": 93,
+    "strategy": 88,
+    "resolve": 95,
+    "piloting": 88
+  },
+  "service_record": [
+    {
+      "period": "Era Imperial",
+      "assignment_es": "Comandante en Jefe de la Flota Femenina Zentraedi Meltrandi",
+      "assignment_en": "Commander-in-Chief of the Meltrandi Female Zentraedi Armada"
+    },
+    {
+      "period": "2010",
+      "assignment_es": "Enviada por Dolza para relevar a Breetai y acelerar la captura del SDF-1",
+      "assignment_en": "Dispatched by Dolza to relieve Breetai and expedite capture of SDF-1"
+    },
+    {
+      "period": "2010",
+      "assignment_es": "Envía a su mejor as, Miriya Parina, a infiltrarse en el SDF-1; primer contacto cultural",
+      "assignment_en": "Dispatches prime ace Miriya Parina into SDF-1; first cultural exposure"
+    },
+    {
+      "period": "2011",
+      "assignment_es": "Une su armada a las fuerzas de Breetai y la Tierra en la victoria contra la flota de Dolza",
+      "assignment_en": "Unites her armada with Breetai and Earth in the historic victory over Dolza"
+    },
+    {
+      "period": "2012 - 2014",
+      "assignment_es": "Rebelión armada en las tierras yermas; asalto y colisión kamikaze final contra el SDF-1",
+      "assignment_en": "Wasteland armed insurgency; spearheads final suicide ramming of the SDF-1"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Khyron",
+      "relation_es": "Su compañero insurgente y amante; compartieron el mando rebelde y la muerte en el impacto final.",
+      "relation_en": "Her insurgent partner and lover; shared rebel command and death in the final impact."
+    },
+    {
+      "character": "Miriya Parina Sterling",
+      "relation_es": "Su mejor oficial y as de caza; consideró su boda con Max Sterling una afrenta antes de comprender el amor.",
+      "relation_en": "Her foremost ace; viewed her marriage to Max as an insult before comprehending love."
+    },
+    {
+      "character": "Comandante Breetai",
+      "relation_es": "Homólogo de mando con quien mantuvo una rivalidad profesional que se transformó en alianza temporal.",
+      "relation_en": "Command peer with whom she maintained professional rivalry that evolved into temporary truce."
+    },
+    {
+      "character": "Comandante Supremo Dolza",
+      "relation_es": "Su soberano original a quien juró lealtad ciega hasta que la música de Minmei quebró su mandato.",
+      "relation_en": "Her supreme sovereign whom she served until Minmei's music severed his mental grip."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "Breetai se ha vuelto blando con estos micronianos. Mis guerreras Meltrandi recuperarán la nave de Zor sin vacilación.",
+      "quote_en": "Breetai has grown soft confronting these micronians. My Meltrandi warriors will recover Zor's ship without hesitation.",
+      "context_es": "Al llegar al Sistema Solar y asumir el mando del asedio al SDF-1.",
+      "context_en": "Upon arriving in the Solar System to take operational command of the siege."
+    },
+    {
+      "quote_es": "Khyron... si este es el final, que sea en medio del fuego. ¡A toda potencia hacia el objetivo!",
+      "quote_en": "Khyron... if this is our end, let it be amidst the fire. Full thrust straight into the target!",
+      "context_es": "En el puente de mando junto a Khyron durante los últimos segundos del impacto contra el SDF-1.",
+      "context_en": "On the bridge beside Khyron in the final seconds before ramming the SDF-1."
+    }
+  ]
+}

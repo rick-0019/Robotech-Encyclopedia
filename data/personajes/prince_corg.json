@@ -1,0 +1,150 @@
+{
+  "id": "prince_corg",
+  "name": "Príncipe Corg",
+  "japanese_name": "Sorcie (ソルジィ)",
+  "callsign": "Crimson Scourge // Invid Warlord",
+  "rank": {
+    "es": "Príncipe Heredero de Punto Réflex // Comandante General de las Fuerzas Invid",
+    "en": "Crown Prince of Reflex Point // Commander General of Invid Royal Forces"
+  },
+  "role": {
+    "es": "Líder de Guerra Invid, As del Mecha Real Comandante y Némesis de Scott Bernard",
+    "en": "Invid Warlord, Royal Command Mecha Ace & Arch-Nemesis of Scott Bernard"
+  },
+  "category": "villains",
+  "faction": {
+    "es": "Imperio Biológico Invid // Guardia Pretoriana de la Regis",
+    "en": "Invid Biological Empire // Regess Praetorian Guard"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "assignment": {
+    "es": "Mecha Real Comandante Invid (Gosú Carmesí) // Defensas de Punto Réflex",
+    "en": "Invid Royal Command Mecha (Crimson Gamo) // Reflex Point Bastion"
+  },
+  "birth_date": "Año 2043 (Transmutación Fase Cinco)",
+  "birth_place": {
+    "es": "Cámara de Génesis Bio-Orgánica, Punto Réflex",
+    "en": "Bio-Organic Genesis Chamber, Reflex Point"
+  },
+  "blood_type": "Fluido de Protocultura Pura / Genoma Humano Transmutado",
+  "height": "1,88 m",
+  "weight": "84 kg",
+  "thumbnail": "assets/images/personajes/prince_corg/corg_portrait.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/prince_corg/corg_portrait.jpg",
+      "title_es": "Príncipe Corg - Retrato del Despiadado Señor de la Guerra Invid",
+      "title_en": "Prince Corg - Portrait of the Ruthless Invid Warlord",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/prince_corg/corg_combat.jpg",
+      "title_es": "Corg en Cabina de Mando - Asalto Feroz sobre Nueva York",
+      "title_en": "Corg in Command Cockpit - Ruthless Assault over New York",
+      "type_es": "Registro de Combate",
+      "type_en": "Combat Record"
+    }
+  ],
+  "summary": {
+    "es": "Creado por la Regis en la quinta fase evolutiva para liderar los ejércitos Invid contra la insurgencia terrestre y la flota de la REF. Al asumir la forma humana, Corg asimiló exclusivamente los instintos más oscuros, violentos y despiadados de la humanidad, careciendo por completo de compasión. Al mando de su mecha real rojo sangre, sembró el terror en la Tierra hasta ser abatido en un duelo aéreo a muerte por Scott Bernard en la batalla final de Punto Réflex.",
+    "en": "Transmuted by the Regess into the fifth evolutionary stage to marshal the Invid swarms against human guerrillas and the incoming REF assault armada. In adopting human biology, Corg absorbed only humanity's darkest impulses of cruelty, hatred, and unbridled sadism, devoid of empathy or conscience. Piloting his blood-red Royal Command Mecha, he terrorized Earth until being shot down in a climatic aerial dogfight by Scott Bernard during the siege of Reflex Point."
+  },
+  "lore": {
+    "overview_es": "Junto a su 'hermana' Sera, Corg representó el salto de la especie Invid hacia la cúspide humanoide concebida por la Regis. Sin embargo, mientras Sera comenzaba a experimentar dudas morales y empatía hacia los humanos, Corg abrazó una crueldad sin límites. Consideraba a los humanos como sabandijas destructivas que merecían la aniquilación total, persiguiendo con saña implacable a todo foco de resistencia y ejecutando a combatientes y civiles sin el menor remordimiento.",
+    "overview_en": "Alongside his 'sister' Sera, Corg represented the pinnacle of the fifth-stage humanoid evolution envisioned by the Regess. Yet while Sera questioned the slaughter and felt the stirrings of empathy, Corg reveled in genocidal bloodlust. Viewing humankind as parasitic vermin doomed for extinction, he hunted down resistance cells with psychopathic zeal, vaporizing military targets and civilian settlements alike with absolute disregard for mercy.",
+    "tactical_analysis_es": "Piloto de reflejos sobrehumanos gracias a su enlace psíquico con la mente colmena y la protocultura, Corg controlaba su Mecha Comandante Gosú con una ferocidad letal, disparando cañones de plasma dobles y coordinando oleadas de cazas Invid de manera casi simultánea. Durante el ataque a Ciudad de Nueva York y en el asalto a Punto Réflex, derribó decenas de cazas Alpha y Beta de la Flota Expedicionaria. Su obsesión ciega por exterminar a Scott Bernard lo llevó a desoír los llamados de prudencia de la Regis, cayendo finalmente ante la sincronización de misiles y el fuego a quemarropa del Alpha azul de Bernard.",
+    "tactical_analysis_en": "Endowed with supernatural reaction speeds through his telepathic link to the hive and pure protoculture, Corg piloted his Royal Command Gosu with lethal mastery, discharging high-yield twin plasma cannons and directing multi-vector swarm ambushes. During the massacre over New York and the cataclysmic perimeter battle at Reflex Point, he decimated scores of REF Alpha and Beta fighters. His blind hatred toward Scott Bernard proved his fatal undoing, outmaneuvered and vaporized by Scott's point-blank missile salvo."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 88,
+      "label_es": "Liderazgo Bélico y Furia de Enjambre",
+      "label_en": "Warlord Command & Swarm Coordination",
+      "description_es": "Coordina divisiones enteras de bio-mechas Invid con disciplina implacable y agresividad implacable.",
+      "description_en": "Commands vast Invid bio-mecha legions with iron discipline and relentless battlefield aggression."
+    },
+    "strategy": {
+      "value": 80,
+      "label_es": "Táctica Ofensiva de Choque y Aniquilación",
+      "label_en": "Shock Tactics & Total Extermination",
+      "description_es": "Especialista en tácticas de tierra quemada, emboscadas de saturación y erradicación total de defensas.",
+      "description_en": "Specialist in scorched-earth sweeps, saturation ambushes, and total eradication of entrenched targets."
+    },
+    "resolve": {
+      "value": 92,
+      "label_es": "Fanatismo Belicista Implacable",
+      "label_en": "Ruthless Fanatical Zeal",
+      "description_es": "Inmune a la duda o el temor; combate hasta el último aliento impulsado por un desprecio absoluto al enemigo.",
+      "description_en": "Impervious to doubt or fear; fights to the bitter end driven by unquenchable malice toward humanity."
+    },
+    "piloting": {
+      "value": 96,
+      "label_es": "Maestría en Mecha Real de Combate",
+      "label_en": "Royal Combat Mecha Mastery",
+      "description_es": "Uno de los pilotos más letales de la Tercera Guerra Robotech; agilidad bio-psíquica sin precedentes.",
+      "description_en": "Among the deadliest dogfighters of the Third Robotech War; peerless bio-psychic reflexes."
+    }
+  },
+  "timeline": [
+    {
+      "date": "2043",
+      "milestone_es": "Génesis y Asunción del Mando Supremo",
+      "milestone_en": "Genesis & Supreme Field Command",
+      "desc_es": "Emerge de la cámara evolutiva de Punto Réflex y toma el control de las operaciones militares de erradicación.",
+      "desc_en": "Emerges from the Reflex Point evolution chamber, seizing direct command of planetary pacification forces."
+    },
+    {
+      "date": "2044",
+      "milestone_es": "Masacre en los Sectores Urbanos",
+      "milestone_en": "Urban Sector Massacres",
+      "desc_es": "Lidera la aniquilación de la resistencia en las ruinas de las grandes metrópolis terrestres.",
+      "desc_en": "Leads the total extermination of resistance strongholds across major ruined metropolitan sectors."
+    },
+    {
+      "date": "2044",
+      "milestone_es": "Duelo Final en Punto Réflex y Muerte",
+      "milestone_en": "Final Duel at Reflex Point & Defeat",
+      "desc_es": "Enfrasca en un combate despiadado contra Scott Bernard; su mecha es destruido en una colosal explosión en la estratosfera.",
+      "desc_en": "Clashes in a vicious dogfight with Scott Bernard; his command mecha is blasted to smithereens in high orbit."
+    }
+  ],
+  "quotes": [
+    {
+      "text_es": "¡Los humanos son una plaga repugnante que solo sabe derramar sangre! ¡Y es mi sagrado deber purgar la faz de este planeta de su existencia!",
+      "text_en": "Humans are a repulsive contagion that knows only how to spill blood! It is my sacred duty to purge their existence from this world!",
+      "context_es": "Corg desatando una andanada de plasma sobre cazas de la resistencia",
+      "context_en": "Corg unleashing a lethal plasma barrage upon guerrilla fighters"
+    },
+    {
+      "text_es": "¡Nadie humilla a un Príncipe de la Colmena Invid! ¡Vas a morir aquí mismo, piloto terrestre!",
+      "text_en": "No one humiliates a Prince of the Invid Hive! You will die right here and now, Earth pilot!",
+      "context_es": "Corg en su combate a muerte contra Scott Bernard",
+      "context_en": "Corg during his fatal dogfight against Scott Bernard"
+    }
+  ],
+  "relationships": [
+    {
+      "character_id": "scott_bernard",
+      "name": "Scott Bernard",
+      "relation_es": "Archienemigo mortal y causante de su destrucción",
+      "relation_en": "Mortal arch-nemesis and author of his defeat"
+    },
+    {
+      "character_id": "regis_invid",
+      "name": "Regis Invid",
+      "relation_es": "Madre creadora y deidad cuyas órdenes de moderación ignoró",
+      "relation_en": "Creator mother and deity whose calls for restraint he rejected"
+    },
+    {
+      "character_id": "princess_sera",
+      "name": "Princesa Sera",
+      "relation_es": "Hermana simulagente a quien consideraba débil y traidora",
+      "relation_en": "Simulagent sister whom he deemed weak and treasonous"
+    }
+  ]
+}

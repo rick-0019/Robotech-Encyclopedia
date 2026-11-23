@@ -1,0 +1,157 @@
+{
+  "id": "lunk",
+  "name": "Jim \"Lunk\" Cooper",
+  "japanese_name": "Jim Austin (ジム・オースティン)",
+  "callsign": "Heavy Lifter // Wrench Bear",
+  "rank": {
+    "es": "Sargento Técnico de Bio-Mantenimiento REF // Conductor Blindado A.P.C.",
+    "en": "REF Bio-Maintenance Technical Sergeant // Armored APC Driver"
+  },
+  "role": {
+    "es": "Ingeniero Mecánico, Jefe de Logística y Protector del Escuadrón",
+    "en": "Mechanical Engineer, Squad Logistics Chief & Protector"
+  },
+  "category": "support",
+  "faction": {
+    "es": "Fuerzas Expedicionarias Robotech (REF) // Guerrilla Terrestre de Scott",
+    "en": "Robotech Expeditionary Force (REF) // Scott Bernard's Guerrilla Squad"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "assignment": {
+    "es": "Transporte Pesado Terrestre Blindado A.P.C. / Moto-Armadura Cyclone VR-052T",
+    "en": "Armored Personnel Carrier (APC) / VR-052T Cyclone Ride Armor"
+  },
+  "birth_date": "14 de Septiembre de 2017",
+  "birth_place": {
+    "es": "Colonia Espacial Tirol / Base REF Luna",
+    "en": "Tirol Space Colony / REF Lunar Base"
+  },
+  "blood_type": "O+",
+  "height": "1,98 m",
+  "weight": "112 kg",
+  "thumbnail": "assets/images/personajes/lunk/lunk_portrait.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/lunk/lunk_portrait.jpg",
+      "title_es": "Lunk - Retrato Oficial del Ingeniero de Combate",
+      "title_en": "Lunk - Combat Engineer Official Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/lunk/lunk_annie_ref.jpg",
+      "title_es": "Lunk y Annie - La Familia Improvisada de la Resistencia",
+      "title_en": "Lunk and Annie - The Guerrilla Surrogate Family",
+      "type_es": "Registro de Campo",
+      "type_en": "Field Record"
+    },
+    {
+      "url": "assets/images/personajes/lunk/lunk_jim_austin.png",
+      "title_es": "Lunk - Registro Clásico de Mantenimiento REF",
+      "title_en": "Lunk - Classic REF Maintenance Dossier",
+      "type_es": "Hoja de Servicio",
+      "type_en": "Service Sheet"
+    }
+  ],
+  "summary": {
+    "es": "Veterano técnico de bio-mantenimiento de la 10ª División de Asalto REF que sobrevivió al aniquilamiento de su contingente en la Tierra. Afectado por el trauma y el estigma de la deserción, Lunk recuperó su honor y valentía al unirse a Scott Bernard y Rand. Al mando del todoterreno blindado A.P.C., aseguró el abastecimiento de protocultura, reparó cazas Alpha y sirvió como figura paterna inquebrantable para la joven huérfana Annie LaBelle.",
+    "en": "A veteran bio-maintenance technician from the REF 10th Assault Division who survived the total destruction of his orbital drop unit on Earth. Burdened by trauma and survivor's guilt, Lunk reclaimed his honor and bravery after joining Scott Bernard and Rand. Behind the wheel of the squad's armored personnel carrier (APC), he safeguarded precious protoculture supplies, repaired Alpha fighters, and acted as an affectionate, stalwart guardian to young Annie LaBelle."
+  },
+  "lore": {
+    "overview_es": "Nacido en las colonias pioneras y enrolado en la Flota Expedicionaria como especialista en ingeniería pesada y reactores de protocultura, Jim Cooper formó parte de la primera oleada de reconquista planetaria enviada desde el espacio profundo contra las fuerzas de ocupación Invid. Su transporte fue derribado en pleno reingreso atmosférico, presenciando la carnicería de sus camaradas más cercanos. Refugiado en un asentamiento agrícola rural bajo el apodo despectivo de 'Lunk' (perezoso/torpe), se prometió no empuñar las armas nunca más hasta que la tiranía Invid y la audacia de Scott Bernard sacudieron su conciencia.",
+    "overview_en": "Born in pioneer colony space and enlisted in the Robotech Expeditionary Force as a heavy engineering and protoculture reactor specialist, Jim Cooper belonged to the ill-fated first assault wave sent from deep space to liberate Earth from the Invid. His landing vessel was blown apart during atmospheric descent, watching his closest friends perish. In hiding in a rural farming township under the self-deprecating moniker 'Lunk', he renounced violence until local Invid tyranny and Scott Bernard's indomitable defiance rekindled his soldier's oath.",
+    "tactical_analysis_es": "Aunque en combate cuerpo a cuerpo prefería la prudencia a la temeridad, Lunk fue la pieza de soporte técnico sin la cual el escuadrón jamás habría alcanzado Punto Réflex: reconstruyó cazas Alpha derribados con chatarra recuperada, sincronizó los propulsores Beta con los cazas de Scott y maniobró el pesado camión blindado esquivando bombardeos Invid masivos. Su devoción paternal hacia Annie LaBelle y su lealtad incondicional al equipo demostraron que el coraje reside en proteger a quienes no pueden luchar.",
+    "tactical_analysis_en": "While cautious and averse to unnecessary bloodshed, Lunk was the indispensable technical bedrock without whom Scott's squad would have perished in the wastelands: he restored battered Alpha fighters using scavenged parts, calibrated the complex docking mechanisms for the Beta Fighter, and piloted the heavily armored APC through blistering crossfire. His fatherly devotion to Annie LaBelle and steadfast loyalty proved that true heroism lies in preserving life and standing by one's comrades."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 68,
+      "label_es": "Liderazgo de Logística y Taller",
+      "label_en": "Logistics & Workshop Command",
+      "description_es": "Supervisa el convoy de suministros, racionamiento de protocultura y disciplina del personal civil en marcha.",
+      "description_en": "Oversees the supply convoy, protoculture rationing, and civilian welfare throughout hostile territory."
+    },
+    "strategy": {
+      "value": 74,
+      "label_es": "Ingeniería de Campo e Improvisación",
+      "label_en": "Field Engineering & Improvisation",
+      "description_es": "Capaz de reconstruir sistemas de armamento alienígenas y transformar vehículos civiles en fortalezas móviles.",
+      "description_en": "Mastery of field improvisations, retrofitting civilian vehicles and restoring wrecked combat mecha."
+    },
+    "resolve": {
+      "value": 85,
+      "label_es": "Resiliencia Emocional y Lealtad",
+      "label_en": "Emotional Resilience & Loyalty",
+      "description_es": "Superó la culpa del superviviente y protegió a su familia adoptiva con valentía heroica en el frente.",
+      "description_en": "Conquered survivor's trauma and shielded his adoptive guerrilla family with boundless personal courage."
+    },
+    "piloting": {
+      "value": 80,
+      "label_es": "Conducción Blindada Pesada y Cyclone",
+      "label_en": "Heavy Armored Driving & Cyclone Pilot",
+      "description_es": "Experto piloto de camiones blindados de combate en eriales y operador del Cyclone táctico VR-052T.",
+      "description_en": "Master driver of multi-terrain heavy combat transports and qualified pilot of the VR-052T Cyclone armor."
+    }
+  },
+  "timeline": [
+    {
+      "date": "2038",
+      "milestone_es": "Llegada con la Primera Ola de Ataque REF",
+      "milestone_en": "Arrival with REF First Attack Wave",
+      "desc_es": "Su unidad es destruida en el reingreso atmosférico; Lunk sobrevive y se oculta con el corazón roto por las pérdidas.",
+      "desc_en": "His drop ship is destroyed upon re-entry; Lunk survives and goes into hiding, crushed by survivor's guilt."
+    },
+    {
+      "date": "2043",
+      "milestone_es": "Unión al Escuadrón de Scott Bernard",
+      "milestone_en": "Enlistment in Scott Bernard's Squad",
+      "desc_es": "Acepta conducir el camión de suministros A.P.C. y asume la tutela y protección de la huérfana Annie.",
+      "desc_en": "Agrees to drive the squad's supply APC and assumes protective custody of the young orphan Annie."
+    },
+    {
+      "date": "2044",
+      "milestone_es": "Asalto a Punto Réflex y Retorno a la Paz",
+      "milestone_en": "Assault on Reflex Point & Return to Peace",
+      "desc_es": "Mantiene operativo el arsenal del escuadrón durante el clímax bélico y tras la victoria se establece como granjero y mecánico pacífico.",
+      "desc_en": "Keeps the squad's arsenal battle-ready during the final assault and settles down as a peaceful mechanic and farmer."
+    }
+  ],
+  "quotes": [
+    {
+      "text_es": "Pensé que ser soldado significaba solo ver morir a mis amigos... pero con ustedes entendí que significa mantenerlos con vida.",
+      "text_en": "I used to think being a soldier just meant watching your buddies die... but with you guys, I learned it means keeping them alive.",
+      "context_es": "Lunk explicando por qué decidió volver a la lucha junto a Scott",
+      "context_en": "Lunk explaining why he rejoined the fight alongside Scott"
+    },
+    {
+      "text_es": "¡Nadie toca a esa niña mientras yo tenga una llave inglesa y aire en mis pulmones!",
+      "text_en": "Nobody lays a finger on that kid as long as I have a wrench in my hand and air in my lungs!",
+      "context_es": "Lunk defendiendo a Annie ante atacantes en las ruinas",
+      "context_en": "Lunk shielding Annie against hostile scavengers"
+    }
+  ],
+  "relationships": [
+    {
+      "character_id": "annie_labelle",
+      "name": "Annie LaBelle",
+      "relation_es": "Hija adoptiva y protegida entrañable",
+      "relation_en": "Adoptive daughter and cherished charge"
+    },
+    {
+      "character_id": "scott_bernard",
+      "name": "Scott Bernard",
+      "relation_es": "Comandante táctico respetado y líder en la misión",
+      "relation_en": "Respected tactical commander and mission leader"
+    },
+    {
+      "character_id": "rand",
+      "name": "Rand",
+      "relation_es": "Compañero de guardia y confidente en la marcha",
+      "relation_en": "Guard partner and wasteland confidant"
+    }
+  ]
+}

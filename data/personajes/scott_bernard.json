@@ -1,0 +1,170 @@
+{
+  "id": "scott_bernard",
+  "name": "Scott Bernard",
+  "japanese_name": "Stig Bernard",
+  "callsign": "Mars-21 Leader // Commander Bernard",
+  "rank": {
+    "es": "Teniente Comandante (REF División Marte) // Comandante del Grupo de Resistencia",
+    "en": "Lieutenant Commander (REF Mars Division) // Resistance Group Commander"
+  },
+  "role": {
+    "es": "Líder de la Fuerza de Liberación Terrestre y As del VAF-6C Alpha Fighter y VR-052 Cyclone",
+    "en": "Leader of Earth Liberation Resistance & Ace of VAF-6C Alpha Fighter & VR-052 Cyclone"
+  },
+  "category": "pilots",
+  "faction": {
+    "es": "Fuerza Expedicionaria Robotech (REF 21ª División de Marte) // Resistencia Terrestre",
+    "en": "Robotech Expeditionary Force (REF 21st Mars Division) // Earth Resistance"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Nueva Generación & Las Crónicas de las Sombras",
+    "en": "The New Generation & The Shadow Chronicles"
+  },
+  "assignment": {
+    "es": "21ª División de Marte // Caza Alpha Azul // Moto-Armadura Cyclone VR-052F",
+    "en": "21st Mars Division // Blue Alpha Fighter // VR-052F Cyclone Ride Armor"
+  },
+  "birth_date": "17 de Marzo de 2023",
+  "birth_place": {
+    "es": "Colonia Espacial Base Marte (Espacio Profundo REF)",
+    "en": "Mars Base Space Colony (REF Deep Space)"
+  },
+  "blood_type": "O+",
+  "height": "1,79 m",
+  "weight": "71 kg",
+  "thumbnail": "assets/images/personajes/scott_bernard/scott_card.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/scott_bernard/scott_card.jpg",
+      "title_es": "Comandante Scott Bernard - Ficha Táctica Oficial",
+      "title_en": "Commander Scott Bernard - Official Tactical Dossier",
+      "type_es": "Retrato Táctico",
+      "type_en": "Tactical Portrait"
+    },
+    {
+      "url": "assets/images/personajes/scott_bernard/scott_pilot.png",
+      "title_es": "Scott Bernard - Traje de Vuelo de la 21ª División de Marte",
+      "title_en": "Scott Bernard - 21st Mars Division Flight Suit",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/scott_bernard/scott_ariel.png",
+      "title_es": "Scott Bernard y Ariel - Era Shadow Chronicles",
+      "title_en": "Scott Bernard & Ariel - Shadow Chronicles Era",
+      "type_es": "Expansión REF",
+      "type_en": "REF Era"
+    }
+  ],
+  "summary": {
+    "es": "Protagonista absoluto de la Tercera Guerra Robotech. Único oficial superviviente de la primera oleada de desembarco de la División de Marte, lideró una heterogénea banda de guerrilleros a través de continentes enteros hasta el asalto final al bastión de Punto Réflex, liberando a la Tierra del yugo Invid.",
+    "en": "Undisputed protagonist of the Third Robotech War. Sole surviving officer of the first Mars Division orbital strike, he rallied a band of freedom fighters across hostile continents to storm the Invid hive at Reflex Point, reclaiming Earth for humanity."
+  },
+  "lore": {
+    "overview_es": "Nacido en el espacio durante la gran travesía de la Fuerza Expedicionaria Robotech (REF) rumbo a las colonias de Marte, Scott Bernard creció con un ideal sagrado: regresar algún día para liberar a la Tierra, la mítica cuna de la humanidad que jamás había visto con sus propios ojos. Comprometido con la oficial de comunicaciones Marlene Rush, su mundo se hizo pedazos cuando la 21ª División de Marte fue aniquilada en la atmósfera terrestre por enjambres de cazas Invid en los primeros minutos del asalto.",
+    "overview_en": "Born in deep space within the REF Mars colonies, Scott Bernard was raised on a singular dream: returning to liberate Earth, the legendary cradle of humanity he had never set foot upon. Engaged to communications officer Marlene Rush, his world was shattered when the 21st Mars Division was obliterated in Earth's thermosphere by swarming Invid mecha in the opening minutes of orbital descent.",
+    "tactical_analysis_es": "Estrellado en el desierto con su caza transformable VAF-6C Alpha Fighter y un holograma de despedida de su prometida muerta, Scott juró continuar la misión hacia el corazón del poder Invid en Punto Réflex. En su camino reclutó a Rand, Rook Bartley, Lancer, Lunk y Annie, convirtiendo a un grupo dispar de marginados en una unidad de combate letal con moto-armaduras Cyclone y cazas Alpha/Beta. Su relación con Ariel (Marlene), una Invid transmutada en humana, transformó su odio ciego en sabiduría moral, evitando el bombardeo nuclear de la Tierra y asumiendo años después el liderazgo táctico de la flota en 'Las Crónicas de las Sombras' para buscar al Almirante Rick Hunter.",
+    "tactical_analysis_en": "Crashing into desolate badlands with his VAF-6C Alpha Fighter and a final holographic transmission from his lost love, Scott vowed to march alone to the Invid hive at Reflex Point. Along his overland crusade, he rallied Rand, Rook Bartley, Lancer, Lunk, and Annie into a feared guerrilla strike wing utilizing Cyclone ride armors and Alpha/Beta linkups. His bond with Ariel (Marlene), an Invid bio-transmuted into human form, tempered his bitter vengeance into moral resolve, aborting the apocalyptic Neutron-S nuclear bombardment of Earth and setting him on a quest into deep space to locate Admiral Rick Hunter."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 96,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Líder de resistencia indomable; mantuvo la disciplina y la esperanza en un mundo bajo ocupación total."
+    },
+    "strategy": {
+      "value": 92,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Doctrina de guerra de guerrillas, asalto a convoyes de Protocultura y coordinación de ataque a Punto Réflex."
+    },
+    "resolve": {
+      "value": 100,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Voluntad de hierro; jamás abandonó la misión a pesar de perder a sus compañeros y a su primer amor."
+    },
+    "piloting": {
+      "value": 99,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "As de vuelo de caza Alpha y combate terrestre con armadura Cyclone; reflejos de combate excepcionales."
+    }
+  },
+  "stats": {
+    "command": 96,
+    "strategy": 92,
+    "resolve": 100,
+    "piloting": 99
+  },
+  "service_record": [
+    {
+      "period": "2038 - 2041",
+      "assignment_es": "Piloto de Caza Alpha en la Base Marte de la REF; graduado con honores tácticos",
+      "assignment_en": "Alpha Fighter Pilot at REF Mars Base; graduated with top tactical honors"
+    },
+    {
+      "period": "2042",
+      "assignment_es": "Líder de Escuadrilla de la 21ª División de Marte; sobrevive al asalto orbital fallido a la Tierra",
+      "assignment_en": "Flight Leader in 21st Mars Division; sole survivor of failed orbital drop on Earth"
+    },
+    {
+      "period": "2042 - 2044",
+      "assignment_es": "Comandante de la guerrilla de resistencia terrestre; marcha continental hasta Punto Réflex",
+      "assignment_en": "Commander of Earth guerrilla resistance; cross-continental march to Reflex Point"
+    },
+    {
+      "period": "2044",
+      "assignment_es": "Victoria decisiva en la Batalla de Punto Réflex; liberación definitiva del planeta Tierra",
+      "assignment_en": "Decisive victory in Battle of Reflex Point; final liberation of planet Earth"
+    },
+    {
+      "period": "2044+",
+      "assignment_es": "Se reincorpora a la flota REF en 'The Shadow Chronicles'; lidera la búsqueda de Rick Hunter",
+      "assignment_en": "Rejoins REF fleet in 'The Shadow Chronicles'; leads deep space quest for Rick Hunter"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Marlene / Ariel",
+      "relation_es": "La mujer que sanó sus heridas del alma y a quien amó; descubrió su origen Invid y eligió protegerla.",
+      "relation_en": "The woman who healed his soul and whom he loved; embraced her despite discovering her Invid origin."
+    },
+    {
+      "character": "Rand",
+      "relation_es": "Su primer compañero en la Tierra y segundo al mando oficioso; hermano de armas leal e incondicional.",
+      "relation_en": "His first companion on Earth and de facto second-in-command; loyal brother-in-arms."
+    },
+    {
+      "character": "Rook Bartley",
+      "relation_es": "Combatiente de choque de la guerrilla; respetó profundamente su fiereza y valor en combate.",
+      "relation_en": "Shock fighter of the guerrilla band; deeply respected her combat ferocity and courage."
+    },
+    {
+      "character": "Lancer / Yellow Belmont",
+      "relation_es": "Camarada oficial de la REF; admiraba su versatilidad para alentar a los pueblos oprimidos.",
+      "relation_en": "Fellow REF officer comrade; admired his versatile ability to inspire oppressed populaces."
+    },
+    {
+      "character": "Marlene Rush",
+      "relation_es": "Su prometida caída en la atmósfera terrestre; su recuerdo fue la llama que encendió su cruzada.",
+      "relation_en": "His lost fiancée killed in Earth's atmosphere; her memory ignited his liberation crusade."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "Marlene... te prometo que llegaré a Punto Réflex. Aunque tenga que cruzar este infierno a pie, ¡liberaré a la Tierra!",
+      "quote_en": "Marlene... I promise you I will reach Reflex Point. Even if I have to walk through hell, I will free Earth!",
+      "context_es": "Juramento en solitario ante el holograma de su prometida en los restos de su Alpha.",
+      "context_en": "Solitary vow before the holographic locket of his fiancée at his crashed Alpha."
+    },
+    {
+      "quote_es": "¡Nuestra misión no es destruir, sino salvar lo que queda de nuestro hogar! ¡Escuadrón, sobremando a Punto Réflex!",
+      "quote_en": "Our mission is not to destroy, but to rescue what remains of our home! Squad, maximum burn to Reflex Point!",
+      "context_es": "Arenga a los guerrilleros antes del asalto final a la colmena Invid.",
+      "context_en": "Battle cry to his fighters before the final assault on the Invid hive."
+    }
+  ]
+}

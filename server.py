@@ -536,9 +536,9 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
         self.wfile.write(json.dumps(data, ensure_ascii=False).encode('utf-8'))
 
 if __name__ == '__main__':
-    # Permitir reutilización rápida del puerto
-    socketserver.TCPServer.allow_reuse_address = True
-    with socketserver.TCPServer(("", PORT), RobotechRequestHandler) as httpd:
+    # Permitir reutilización rápida del puerto y soporte multihilo
+    socketserver.ThreadingTCPServer.allow_reuse_address = True
+    with socketserver.ThreadingTCPServer(("", PORT), RobotechRequestHandler) as httpd:
         print(f"=======================================================================")
         print(f"[*] ROBOTECH CODEX - SERVIDOR LOCAL CON API ACTIVA EN PUERTO {PORT}")
         print(f"[*] Directorio: {BASE_DIR}")

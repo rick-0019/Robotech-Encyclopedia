@@ -1,0 +1,141 @@
+{
+  "id": "marie_crystal",
+  "name": "Marie Crystal",
+  "japanese_name": "Marie Angel",
+  "callsign": "Black Lion Leader // Valkyrie Ace",
+  "rank": {
+    "es": "Teniente // Comandante del Escuadrón Aeroespacial TASC Black Lions",
+    "en": "Lieutenant // Commander of TASC Black Lions Aerospace Squadron"
+  },
+  "role": {
+    "es": "As Supremo de Cazas Espaciales de la Cruz del Sur y Pareja de Sean Phillips",
+    "en": "Southern Cross Supreme Aerospace Fighter Ace & Partner to Sean Phillips"
+  },
+  "category": "pilots",
+  "faction": {
+    "es": "Ejército de la Cruz del Sur (Tactical Armored Space Corps - TASC)",
+    "en": "Army of the Southern Cross (Tactical Armored Space Corps - TASC)"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Robotech Masters (Second Robotech War)"
+  },
+  "assignment": {
+    "es": "Ala Aeroespacial TASC // Escuadrón Black Lions (VF-8 Logan / VFH-10 Auroran Ajax)",
+    "en": "TASC Aerospace Wing // Black Lions Squadron (VF-8 Logan / VFH-10 Auroran Ajax)"
+  },
+  "birth_date": "2 de Marzo de 2008",
+  "birth_place": {
+    "es": "Escandinavia / Europa del Norte (Tierra)",
+    "en": "Scandinavia / Northern Europe (Earth)"
+  },
+  "blood_type": "A+",
+  "height": "1,76 m",
+  "weight": "57 kg",
+  "thumbnail": "assets/images/personajes/marie_crystal/marie_portrait.png",
+  "images": [
+    {
+      "url": "assets/images/personajes/marie_crystal/marie_portrait.png",
+      "title_es": "Teniente Marie Crystal - Retrato Oficial de Mando TASC",
+      "title_en": "Lieutenant Marie Crystal - TASC Official Command Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    }
+  ],
+  "summary": {
+    "es": "Comandante de élite del escuadrón aeroespacial Black Lions (TASC). Disciplinada, severa y con un récord intachable de derribos, protagonizó una intensa rivalidad profesional con Dana Sterling y una apasionada historia de amor con el pícaro Sean Phillips.",
+    "en": "Elite commander of the Black Lions (TASC) aerospace fighter squadron. Disciplined, sharp, and possessing an unblemished aerial combat record, she shared a fierce professional rivalry with Dana Sterling and a passionate romance with rogue Sean Phillips."
+  },
+  "lore": {
+    "overview_es": "Rigurosa, implacable y con una devoción absoluta al deber militar, Marie Crystal ascendió rápidamente hasta convertirse en la comandante de la fuerza aeroespacial más prestigiosa de la Cruz del Sur: los Black Lions. A los mandos del veloz interceptor transformable VF-8 Logan y posteriormente del helicóptero-caza espacial VFH-10 Ajax, Marie era la vanguardia que interceptaba las incursiones de asalto de los Bioroids en la estratosfera.",
+    "overview_en": "Austere, relentless, and devoted to martial duty, Marie Crystal swiftly rose to command the most prestigious aerospace interceptor wing in the Southern Cross: the Black Lions. Piloting the high-speed VF-8 Logan variable fighter and later the heavily armed VFH-10 Auroran Ajax combat chopper/mecha, Marie served as the planetary vanguard repelling Bioroid orbital incursions in the upper stratosphere.",
+    "tactical_analysis_es": "A pesar de su inicial hostilidad hacia la indisciplina del 15º Escuadrón y las impertinencias galantes de Sean Phillips, el valor y sacrificio de este último durante una peligrosa misión en el interior de una nave nodriza de los Maestros conquistó su respeto y su corazón. Durante el bombardeo final de la Segunda Guerra Robotech, Marie lideró a los cazas Ajax en cobertura directa a los Hovertanks de Dana y Sean, derribando docenas de Bioroids y sobreviviendo a la guerra para apoyar la reconstrucción.",
+    "tactical_analysis_en": "Despite initial disdain for the 15th Squad's erratic operational conduct and Sean Phillips' persistent flirtations, Sean's heroism in extracting her from an alien mothership wreck won her heart. During the apocalyptic final clash of the Second Robotech War, Marie spearheaded Ajax interceptor screens directly covering Dana's and Sean's ground assault, destroying scores of alien Bioroids and surviving the conflict to aid postwar regrouping."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 90,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Líder de escuadrón aeroespacial de élite; coordinación precisa de formaciones de intercepción orbital."
+    },
+    "strategy": {
+      "value": 86,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Análisis de vectores de aproximación y cobertura de defensa aérea sobre bases planetarias."
+    },
+    "resolve": {
+      "value": 96,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Coraje implacable; combatió sola contra enjambres de Bioroids espaciales para proteger a sus subordinados."
+    },
+    "piloting": {
+      "value": 98,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "La mejor piloto aeroespacial de la Cruz del Sur; dominio perfecto del caza Logan y del mecha Ajax."
+    }
+  },
+  "stats": {
+    "command": 90,
+    "strategy": 86,
+    "resolve": 96,
+    "piloting": 98
+  },
+  "service_record": [
+    {
+      "period": "2027 - 2028",
+      "assignment_es": "Primera graduada de su promoción en TASC; asume el mando del Escuadrón Black Lions",
+      "assignment_en": "Top graduate in TASC; assumes command of the elite Black Lions Squadron"
+    },
+    {
+      "period": "2029",
+      "assignment_es": "Lidera la primera oleada de intercepción aérea contra las naves invasoras de los Maestros",
+      "assignment_en": "Leads first aerial interception sortie against the invading Masters fleet"
+    },
+    {
+      "period": "2029 - 2030",
+      "assignment_es": "Derribada en el espacio profundo; rescatada por Sean Phillips en la nave nodriza alienígena",
+      "assignment_en": "Shot down in deep space; rescued by Sean Phillips from alien mothership hull"
+    },
+    {
+      "period": "2030",
+      "assignment_es": "Comanda los cazas Ajax en la ofensiva espacial final de la Cruz del Sur; sobrevive a la guerra",
+      "assignment_en": "Commands Ajax air wings in final Southern Cross offensive; survives the war"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Sean Phillips",
+      "relation_es": "El amor de su vida; su relación comenzó con una tensa rivalidad y se transformó en devoción profunda.",
+      "relation_en": "The love of her life; dynamic shifted from abrasive rivalry into deep romantic devotion."
+    },
+    {
+      "character": "Dana Sterling",
+      "relation_es": "Rival profesional y compañera de armas; aprendieron a respetarse mutuamente como líderes de combate.",
+      "relation_en": "Professional rival and comrade-in-arms; forged mutual soldierly respect under fire."
+    },
+    {
+      "character": "General Rolf Emerson",
+      "relation_es": "Su mentor en el Estado Mayor, a quien admiraba por su ecuanimidad y sabiduría estratégica.",
+      "relation_en": "Her mentor on General Staff, admired for his strategic wisdom and measured restraint."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "¡Black Lions, mantengan formación de flecha! Esos Bioroids no cruzarán la ionosfera mientras yo respire.",
+      "quote_en": "Black Lions, hold delta formation! Those Bioroids will not cross the ionosphere while I draw breath.",
+      "context_es": "Orden radial durante una batalla de intercepción sobre la órbita terrestre.",
+      "context_en": "Radio command during orbital interception above Earth."
+    },
+    {
+      "quote_es": "Sean... creí que solo eras un payaso insoportable, pero eres el hombre más valiente que he conocido.",
+      "quote_en": "Sean... I thought you were merely an insufferable clown, but you are the bravest man I've ever known.",
+      "context_es": "Tras ser rescatada por Sean Phillips de los restos de un crucero alienígena.",
+      "context_en": "Following her rescue by Sean Phillips from an alien cruiser wreck."
+    }
+  ]
+}

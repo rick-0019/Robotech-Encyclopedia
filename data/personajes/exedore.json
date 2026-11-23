@@ -1,0 +1,165 @@
+{
+  "id": "exedore",
+  "name": "Exedore Formo",
+  "japanese_name": "Exsedol Folmo",
+  "callsign": "Prime Analyst // Master Chronicler",
+  "rank": {
+    "es": "Ministro Consejero Zentraedi // Asesor Científico Jefe de la REF",
+    "en": "Zentraedi Minister-Counselor // Chief Scientific Advisor to the REF"
+  },
+  "role": {
+    "es": "Consejero Intelectual del Comandante Breetai y Enlace Científico-Histórico Zentraedi",
+    "en": "Intellectual Counselor to Commander Breetai & Zentraedi Scientific-Historical Liaison"
+  },
+  "category": "zentraedi",
+  "faction": {
+    "es": "Flota Imperial Zentraedi // Fuerza Expedicionaria Robotech (REF)",
+    "en": "Imperial Zentraedi Armada // Robotech Expeditionary Force (REF)"
+  },
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "series": {
+    "es": "La Saga Macross & La Era REF",
+    "en": "The Macross Saga & The REF Era"
+  },
+  "assignment": {
+    "es": "Acorazado Nupetiet-Vergnitzs // SDF-1 Macross // SDF-3 Pioneer",
+    "en": "Nupetiet-Vergnitzs Dreadnought // SDF-1 Macross // SDF-3 Pioneer"
+  },
+  "birth_date": "Fecha Zentraedi Ancestral (Siglos antes del contacto)",
+  "birth_place": {
+    "es": "Complejo de Registros del Imperio de los Maestros Robotech",
+    "en": "Archive Biocenter of the Robotech Masters Empire"
+  },
+  "blood_type": "Desconocido (Genética de Clonación Intelectual)",
+  "height": "8,20 m (Zentraedi) // 1,45 m (Miclonizado en Macross) // Fenotipo Expandido (REF)",
+  "weight": "4.200 kg (Gigante) // 48 kg (Miclonizado)",
+  "thumbnail": "assets/images/personajes/exedore/exedore_card.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/exedore/exedore_card.jpg",
+      "title_es": "Exedore Formo - Retrato de Consejero Imperial",
+      "title_en": "Exedore Formo - Imperial Counselor Portrait",
+      "type_es": "Retrato Táctico",
+      "type_en": "Tactical Portrait"
+    },
+    {
+      "url": "assets/images/personajes/exedore/exedore_advisor.jpg",
+      "title_es": "Exedore en el Puente de Mando de Breetai",
+      "title_en": "Exedore on Breetai's Command Deck",
+      "type_es": "En Operación",
+      "type_en": "In Operation"
+    },
+    {
+      "url": "assets/images/personajes/exedore/exedore_sentinels.jpg",
+      "title_es": "Dr. Exedore - Asesor Científico de la REF (Era Pioneer)",
+      "title_en": "Dr. Exedore - REF Scientific Advisor (Pioneer Era)",
+      "type_es": "Expansión REF",
+      "type_en": "REF Era"
+    }
+  ],
+  "summary": {
+    "es": "El cerebro más brillante de la raza Zentraedi. Primer alienígena en comprender el peligro y el milagro de la cultura humana, convirtiéndose en el embajador de paz que negoció con el Capitán Gloval y salvó a ambas especies.",
+    "en": "The sharpest analytical mind of the Zentraedi race. The first alien to decipher the peril and miracle of human culture, serving as the historic peace ambassador who brokered the alliance with Captain Gloval."
+  },
+  "lore": {
+    "overview_es": "A diferencia de los millones de guerreros Zentraedi concebidos exclusivamente para el combate bruto, Exedore fue alterado genéticamente con una capacidad de almacenamiento de memoria mnemotécnica colosal. Encargado de preservar el saber tecnológico y los antiguos protocolos de los Maestros de la Robotech, actuó como el confidente indispensable del Comandante Breetai durante la persecución del SDF-1, deduciendo antes que nadie que los 'micronianos' poseían el secreto de la Protocultura.",
+    "overview_en": "Unlike millions of Zentraedi soldiers engineered strictly for physical combat, Exedore was bio-tailored with expansive mnemonic capacity and analytical cognition. Tasked with preserving tactical records and ancient operational protocols of the Robotech Masters, he served as Commander Breetai's indispensable strategist throughout the hunting of the SDF-1, deducing before anyone else that the 'micronians' held the elusive secret of Protoculture.",
+    "tactical_analysis_es": "Exedore fue el cerebro detrás de la capitulación ideológica de los Zentraedi. Al estudiar las costumbres humanas, el canto de Lynn Minmei y el concepto del beso, identificó que los Zentraedi no podían combatir la influencia psicológica de la cultura sin desmoronarse. Asumiendo un riesgo monumental, se sometió a la miclonización y se teletransportó desarmado al puente del SDF-1 como embajador de paz ante el Capitán Gloval. Su advertencia sobre el ataque inminente de Dolza permitió coordinar la defensa final. Años más tarde, viajó como asesor clave de Rick Hunter en el SDF-3.",
+    "tactical_analysis_en": "Exedore authored the doctrinal turning point that ended the war. Observing human emotion, Lynn Minmei's music, and affection, he realized Zentraedi warrior conditioning was powerless against the psychological resonance of culture. Taking an extraordinary personal gamble, he underwent micronization and warped unarmed directly onto the bridge of the SDF-1 as an envoy of peace to Captain Gloval. His tactical intelligence regarding Dolza's omnidirectional fleet strike enabled the joint survival strategy. Later, he served as Rick Hunter's chief advisor aboard the SDF-3."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 75,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "No comanda tropas de asalto; su liderazgo radica en su ascendencia moral y peso como asesor de estado mayor."
+    },
+    "strategy": {
+      "value": 100,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Mente enciclopédica; memoria fotográfica de todas las batallas, armas y directivas del Imperio."
+    },
+    "resolve": {
+      "value": 94,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Se ofreció como rehén diplomático voluntario en una nave enemiga para detener una masacre galáctica."
+    },
+    "piloting": {
+      "value": 30,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Científico y diplomático; no posee entrenamiento en pilotaje de cazas de combate."
+    }
+  },
+  "stats": {
+    "command": 75,
+    "strategy": 100,
+    "resolve": 94,
+    "piloting": 30
+  },
+  "service_record": [
+    {
+      "period": "Era Imperial",
+      "assignment_es": "Ministro de Registros y Asesor Estratégico de la Flota de Asalto de Breetai",
+      "assignment_en": "Minister of Records & Strategic Advisor to Breetai's Imperial Strike Fleet"
+    },
+    {
+      "period": "2009 - 2010",
+      "assignment_es": "Análisis científico de los micronianos y formulación de la hipótesis del impacto cultural",
+      "assignment_en": "Scientific analysis of micronians; articulates the cultural shock hypothesis"
+    },
+    {
+      "period": "2011",
+      "assignment_es": "Embajador de Paz en el SDF-1; negocia el armisticio militar con el Capitán Henry Gloval",
+      "assignment_en": "Peace Ambassador to the SDF-1; brokers historic armistice with Captain Henry Gloval"
+    },
+    {
+      "period": "2012 - 2022",
+      "assignment_es": "Asesor Científico del Ministerio de la Tierra Unificada; preservación de la tecnología de clonación",
+      "assignment_en": "Scientific Advisor to United Earth Ministry; oversees preservation of cloning archives"
+    },
+    {
+      "period": "2022+",
+      "assignment_es": "Consejero en jefe de la Fuerza Expedicionaria Robotech (REF) a bordo del SDF-3 Pioneer",
+      "assignment_en": "Chief Counselor of the Robotech Expeditionary Force (REF) aboard SDF-3 Pioneer"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Comandante Breetai",
+      "relation_es": "Su superior y protector; mantenían una relación de respeto casi simbiótica de fuerza y mente.",
+      "relation_en": "His superior and protector; shared a symbiotic bond of raw martial strength and intellect."
+    },
+    {
+      "character": "Henry Gloval",
+      "relation_es": "El primer líder humano con quien dialogó de igual a igual, forjando el tratado de paz.",
+      "relation_en": "The first human leader with whom he negotiated as an equal, forging the peace treaty."
+    },
+    {
+      "character": "Dr. Emil Lang",
+      "relation_es": "Colega intelectual terrestre; juntos descifraron los enigmas de la Matriz de Protocultura.",
+      "relation_en": "Earth intellectual counterpart; together unlocked the mysteries of the Protoculture Matrix."
+    },
+    {
+      "character": "Khyron",
+      "relation_es": "Antagonista zentraedi; advirtió tempranamente a Breetai sobre la inestabilidad homicida de Khyron.",
+      "relation_en": "Zentraedi antagonist; issued early warnings to Breetai regarding Khyron's murderous instability."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "Comandante Breetai, estos seres poseen un poder más devastador que cualquier arma de haz: se llama 'emoción' y está destruyendo la voluntad de lucha de nuestros soldados.",
+      "quote_en": "Commander Breetai, these beings wield a weapon far deadlier than any particle beam: it is called 'emotion', and it is dissolving our troops' will to fight.",
+      "context_es": "Informe táctico a Breetai tras las primeras deserciones provocadas por la música de Minmei.",
+      "context_en": "Tactical briefing to Breetai following the initial wave of cultural defections."
+    },
+    {
+      "quote_es": "Vengo desarmado y en son de paz. Si no unimos nuestras flotas hoy, el Comandante Supremo Dolza borrará a este mundo del mapa galáctico.",
+      "quote_en": "I come unarmed in peace. If our fleets do not stand together today, Supreme Commander Dolza will wipe this world from the galactic map.",
+      "context_es": "Primeras palabras pronunciadas en el puente del SDF-1 como embajador Zentraedi.",
+      "context_en": "First words spoken upon the bridge of the SDF-1 as Zentraedi peace ambassador."
+    }
+  ]
+}

@@ -273,7 +273,8 @@ body::before {
   flex-wrap: wrap;
 }
 
-.cat-btn {
+.cat-btn,
+.gen-btn {
   background: transparent;
   border: 1px solid transparent;
   color: var(--text-muted);
@@ -290,12 +291,14 @@ body::before {
   gap: 6px;
 }
 
-.cat-btn:hover {
+.cat-btn:hover,
+.gen-btn:hover {
   color: var(--un-cyan);
   background: rgba(0, 240, 255, 0.05);
 }
 
-.cat-btn.active {
+.cat-btn.active,
+.gen-btn.active {
   color: #fff;
   background: rgba(0, 240, 255, 0.15);
   border-color: var(--un-cyan);

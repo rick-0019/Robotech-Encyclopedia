@@ -1,0 +1,158 @@
+{
+  "id": "emil_lang",
+  "name": "Dr. Emil Lang",
+  "japanese_name": "Dr. Emil Lang",
+  "callsign": "Chief Robotechnologist // Architect",
+  "rank": {
+    "es": "Director Científico General (RDF) // Viceministro de Ciencia REF",
+    "en": "Chief Scientific Director (RDF) // Deputy Minister of Science (REF)"
+  },
+  "role": {
+    "es": "Padre de la Robotecnología Terrestre y Director de Ingeniería Inversa del SDF-1",
+    "en": "Father of Terrestrial Robotechnology & Director of SDF-1 Reverse Engineering"
+  },
+  "category": "scientists",
+  "faction": {
+    "es": "División de Investigación Científica RDF // Robotech Research Council",
+    "en": "RDF Scientific Research Division // Robotech Research Council"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross & La Era REF",
+    "en": "The Macross Saga & The REF Era"
+  },
+  "assignment": {
+    "es": "Laboratorios Centrales de la Isla Macross // Laboratorio de Protocultura del SDF-1",
+    "en": "Macross Island Central Labs // SDF-1 Protoculture Laboratory"
+  },
+  "birth_date": "29 de Agosto de 1968",
+  "birth_place": {
+    "es": "Friburgo, Alemania (Tierra)",
+    "en": "Freiburg, Germany (Earth)"
+  },
+  "blood_type": "AB+",
+  "height": "1,75 m",
+  "weight": "67 kg",
+  "thumbnail": "assets/images/personajes/emil_lang/lang_portrait.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/emil_lang/lang_portrait.jpg",
+      "title_es": "Dr. Emil Lang - Retrato Oficial de la División Científica",
+      "title_en": "Dr. Emil Lang - Scientific Division Official Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/emil_lang/lang_bridge.jpg",
+      "title_es": "Dr. Lang en la Consola Científica del Puente del SDF-1",
+      "title_en": "Dr. Lang at SDF-1 Bridge Science Station",
+      "type_es": "En Operación",
+      "type_en": "In Operation"
+    }
+  ],
+  "summary": {
+    "es": "La mente científica suprema detrás de la supervivencia humana. Pionero en descifrar los secretos de la nave alienígena de Zor, creador del escudo de barrera y visionario que adaptó la Protocultura a los sistemas de combate Veritech.",
+    "en": "The foremost scientific intellect behind humanity's survival. Pioneer in unlocking the mysteries of Zor's battle fortress, inventor of the pinpoint barrier shield, and visionary who harnessed Protoculture for Veritech systems."
+  },
+  "lore": {
+    "overview_es": "Físico cuántico de renombre mundial, el Dr. Emil Lang fue el primer científico en ingresar a los restos humeantes de la nave alienígena que impactó en la Isla Macross en julio de 1999. Durante la investigación inicial, una fuga de bioenergía de Protocultura le provocó una mutación ocular permanente que le confirió una percepción sensorial atípica de las radiaciones cuánticas. A partir de ese momento, dedicó su vida a liderar la ingeniería inversa del pecio, bautizando la nueva disciplina como 'Robotecnología'.",
+    "overview_en": "A world-renowned quantum physicist, Dr. Emil Lang was the first civilian scientist to enter the smoldering hull of the alien battle fortress that crashed on Macross Island in July 1999. During early exploratory triage, an uncontrolled Protoculture bio-energy flash permanently altered his ocular pigments, imparting an atypical sensory sensitivity to subatomic emissions. From that fateful moment, he spearheaded the grand reverse-engineering program, coining the term 'Robotechnology'.",
+    "tactical_analysis_es": "El genio del Dr. Lang salvó al SDF-1 en incontables crisis militares. Cuando los motores de pliegue hiperespacial desaparecieron en el salto a Plutón, improvisó el Sistema de Barrera Puntual (Pinpoint Barrier) y la posterior Barrera Omnidireccional canalizando energía de Protocultura condensada. Diseñó los sistemas de transformación estructural de los cazas VF-1 Valkyrie y los acoples de artillería del Destroid Tomahawk. Tras la guerra con Dolza, encabezó la construcción del SDF-3 Pioneer y la fundación de la REF para buscar el mundo natal de los Maestros Robotech en Tirol.",
+    "tactical_analysis_en": "Lang's scientific foresight repeatedly rescued the SDF-1 from tactical annihilation. Following the catastrophic loss of the hyperspace fold engines near Pluto, he engineered the breakthrough 'Pinpoint Barrier System' and later the Omnidirectional Barrier Grid by channeling condensed reflex protoculture currents. He refined the transformable linkages in the VF-1 Valkyrie series and modular Destroid platforms. Following the armistice with the Zentradi, he directed the construction of the SDF-3 Pioneer, initiating the REF quest to locate the Masters' homeworld on Tirol."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 80,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Comandó divisiones científicas y astilleros espaciales con autoridad técnica indiscutida."
+    },
+    "strategy": {
+      "value": 98,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Visionario tecnológico; predijo las amenazas alienígenas décadas antes de su llegada a la Tierra."
+    },
+    "resolve": {
+      "value": 95,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Calma científica imperturbable en el laboratorio mientras el fuselaje de la nave se colapsaba."
+    },
+    "piloting": {
+      "value": 25,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Científico teórico e ingeniero jefe, sin aptitudes de vuelo de combate táctico."
+    }
+  },
+  "stats": {
+    "command": 80,
+    "strategy": 98,
+    "resolve": 95,
+    "piloting": 25
+  },
+  "service_record": [
+    {
+      "period": "1999 - 2008",
+      "assignment_es": "Científico en Jefe del Proyecto SDF-1 Macross; desarrollo de la Robotecnología y el VF-X",
+      "assignment_en": "Chief Scientist of the SDF-1 Project; spearheads Robotechnology & VF-X program"
+    },
+    {
+      "period": "2009 - 2011",
+      "assignment_es": "Director de Investigación a bordo del SDF-1; inventor del Sistema de Barrera Puntual",
+      "assignment_en": "Director of R&D aboard the SDF-1; develops the breakthrough Pinpoint Barrier System"
+    },
+    {
+      "period": "2012 - 2014",
+      "assignment_es": "Supervisión científica de la Fábrica Satelital Robotech capturada en el espacio profundo",
+      "assignment_en": "Scientific superintendent of the captured Robotech Factory Satellite in deep space"
+    },
+    {
+      "period": "2015 - 2022",
+      "assignment_es": "Diseñador Jefe de la flota de la REF y de los acorazados estelares SDF-3 Pioneer y SDF-4",
+      "assignment_en": "Chief Naval Architect of REF armada including SDF-3 Pioneer & SDF-4 capital hulls"
+    },
+    {
+      "period": "2022+",
+      "assignment_es": "Director del Consejo Científico de la Misión Pionera REF en el espacio profundo de Tirol",
+      "assignment_en": "Director of the Scientific Council for the REF Pioneer Mission to deep Tirolian space"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Henry Gloval",
+      "relation_es": "Compañero de viaje y amigo de confianza; Gloval aportaba el mando naval y Lang el saber científico.",
+      "relation_en": "Close confidant and voyage partner; Gloval provided naval command while Lang supplied scientific mastery."
+    },
+    {
+      "character": "Roy Fokker",
+      "relation_es": "Trabajaron estrechamente durante los peligrosos vuelos de prueba del prototipo VF-1 en Macross.",
+      "relation_en": "Collaborated closely during the hazardous test flights of the early VF-1 prototypes on Macross."
+    },
+    {
+      "character": "Exedore Formo",
+      "relation_es": "Su homólogo alienígena; juntos desentrañaron los misterios de la Matriz de Protocultura de Zor.",
+      "relation_en": "Alien counterpart; together deciphered the deeper mysteries of Zor's Protoculture Matrix."
+    },
+    {
+      "character": "Janice Em",
+      "relation_es": "Creador y mentor del androide sintético musical dotado de tecnología bio-sensorial en la era REF.",
+      "relation_en": "Creator and mentor of the musical synthetic gynoid embedded with bio-sensory tech in the REF era."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "La Protocultura no es un simple combustible... es una forma de bioenergía viva que vincula la mente del piloto a su máquina.",
+      "quote_en": "Protoculture is no mere fuel... it is a living bio-energy that bonds the pilot's neural intent to the machine.",
+      "context_es": "Explicación del sistema de control mioeléctrico del Veritech al Capitán Gloval.",
+      "context_en": "Briefing Captain Gloval on the Veritech's myoelectric control interface."
+    },
+    {
+      "quote_es": "Nuestra ciencia no nació en la Tierra, pero será la ciencia que garantice que la Tierra sobreviva entre las estrellas.",
+      "quote_en": "Our science was not born on Earth, but it will be the science that ensures Earth endures among the stars.",
+      "context_es": "Discurso durante la puesta en grada de la quilla del SDF-3 Pioneer.",
+      "context_en": "Address during the keel-laying ceremony of the SDF-3 Pioneer."
+    }
+  ]
+}

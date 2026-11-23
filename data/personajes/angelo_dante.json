@@ -1,0 +1,141 @@
+{
+  "id": "angelo_dante",
+  "name": "Sargento Angelo Dante",
+  "japanese_name": "Andrzej Sławiński",
+  "callsign": "Iron Sergeant // Spartan-3",
+  "rank": {
+    "es": "Sargento Primero // Suboficial Mayor del 15º Escuadrón Táctico (ATAC)",
+    "en": "First Sergeant // Master Sergeant of 15th Tactical Armored Corps (ATAC)"
+  },
+  "role": {
+    "es": "Segundo al Mando Táctico, Instructor de Combate y Artillero Pesado del Escuadrón 15",
+    "en": "Tactical Second-in-Command, Drill Instructor & Heavy Gunner of 15th Squad"
+  },
+  "category": "pilots",
+  "faction": {
+    "es": "Ejército de la Cruz del Sur (15º Escuadrón ATAC)",
+    "en": "Army of the Southern Cross (15th ATAC Squad)"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Robotech Masters (Second Robotech War)"
+  },
+  "assignment": {
+    "es": "Cuartel General de la Cruz del Sur // 15º Escuadrón (VHT-1 Spartas Hovertank)",
+    "en": "Southern Cross Headquarters // 15th Squad (VHT-1 Spartas Hovertank)"
+  },
+  "birth_date": "4 de Noviembre de 1998",
+  "birth_place": {
+    "es": "Italia / Europa Central (Tierra)",
+    "en": "Italy / Central Europe (Earth)"
+  },
+  "blood_type": "B+",
+  "height": "1,88 m",
+  "weight": "96 kg",
+  "thumbnail": "assets/images/personajes/angelo_dante/dante_portrait.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/angelo_dante/dante_portrait.jpg",
+      "title_es": "Sargento Angelo Dante - Retrato Oficial de Servicio",
+      "title_en": "Sergeant Angelo Dante - Official Service Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    }
+  ],
+  "summary": {
+    "es": "El curtido y rudo sargento mayor del 15º Escuadrón Táctico Blindado (ATAC). Veterano de disciplina férrea, su escepticismo inicial hacia la juventud de Dana Sterling se transformó en una lealtad absoluta en el fragor de la guerra contra los Maestros Robotech.",
+    "en": "The battle-hardened first sergeant of the 15th ATAC Squad. A strict disciplinarian, his early skepticism of young Dana Sterling transformed into absolute combat loyalty amidst the crucible of the Second Robotech War."
+  },
+  "lore": {
+    "overview_es": "Formado en las duras academias militares de la posguerra terrestre, Angelo Dante es el arquetipo del suboficial veterano: brusco, estricto con el reglamento y con una voz atronadora que pone firmes a los reclutas. Cuando la novata e impulsiva Dana Sterling fue asignada como oficial al mando del 15º Escuadrón, Dante vio amenazado el orden tradicional de la unidad. Sin embargo, no tardó en reconocer que la intuición audaz de Dana salvaba vidas donde los manuales solo ofrecían bajas.",
+    "overview_en": "Hardened within the post-war Terran military academies, Angelo Dante represents the quintessential veteran non-commissioned officer: gruff, strictly by-the-book, with a commanding roar that snaps recruits to attention. When rookie and rebellious Dana Sterling was appointed commanding officer of the 15th Squad, Dante initially perceived her appointment as a recipe for disaster. Yet, he soon came to respect that Dana's brilliant combat audacity saved lives where standard manuals produced only body counts.",
+    "tactical_analysis_es": "En el campo de batalla, Dante es la columna vertebral y el ancla de contención del escuadrón. A bordo de su Hovertank VHT-1 Spartas, es un maestro del tiro balístico y la defensa de posiciones estáticas. Cuando Dana o Sean Phillips ejecutaban maniobras temerarias de ruptura de líneas enemigas, era Dante quien cubría los flancos y mantenía cohesionada a la infantería blindada. Defendió con fiereza a Zor Prime y a Musica de la policía militar, demostrando que bajo su caparazón rudo late un corazón noble guiado por la lealtad a sus camaradas.",
+    "tactical_analysis_en": "On the frontlines, Dante serves as the unyielding anchor of the squad. Piloting his VHT-1 Spartas Hovertank, he is a master of direct kinetic gunnery and fortified perimeter defense. While Dana or Sean Phillips executed flanking breaks through Bioroid screens, Dante held the line, providing suppressive barrages and keeping mechanized infantry intact. He defended Zor Prime and Musica against GMP arrest squads, revealing that underneath his iron exterior beat a fierce devotion to his fellow soldiers."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 86,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Mando directo de tropas terrestres; respeto ganado en el barro y el fuego cruzado."
+    },
+    "strategy": {
+      "value": 78,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Tácticas de combate de infantería mecanizada, asalto blindado y aseguramiento de perímetros."
+    },
+    "resolve": {
+      "value": 96,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Roca inamovible; jamás retrocede ante una orden de combate ni abandona a un soldado herido."
+    },
+    "piloting": {
+      "value": 88,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Manejo contundente del VHT-1 Spartas en modo Tanque Pesado y Gladiador de artillería."
+    }
+  },
+  "stats": {
+    "command": 86,
+    "strategy": 78,
+    "resolve": 96,
+    "piloting": 88
+  },
+  "service_record": [
+    {
+      "period": "2020 - 2028",
+      "assignment_es": "Instructor de Tropas Blindadas en la Fuerza de Autodefensa de la Cruz del Sur",
+      "assignment_en": "Armored Tactics Drill Instructor in Southern Cross Self-Defense Force"
+    },
+    {
+      "period": "2029",
+      "assignment_es": "Sargento Mayor del 15º Escuadrón ATAC; apoya la promoción de Dana Sterling como líder de unidad",
+      "assignment_en": "First Sergeant of 15th ATAC Squad; endorses Dana Sterling's battlefield command"
+    },
+    {
+      "period": "2029 - 2030",
+      "assignment_es": "Participación en todas las incursiones mayores contra las naves nodriza de los Maestros Robotech",
+      "assignment_en": "Combatant across all major orbital and ground assaults against the Masters' motherships"
+    },
+    {
+      "period": "2030",
+      "assignment_es": "Resiste la ofensiva final de los Bioroids en los restos de Macross; sobrevive a la guerra",
+      "assignment_en": "Holds defensive line during final Bioroid siege at Macross ruins; survives the war"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Dana Sterling",
+      "relation_es": "Su comandante; al principio la consideraba una insensata, pero terminó protegiéndola como a su propia hija.",
+      "relation_en": "His commanding officer; initially deemed her reckless, but grew to guard her like his own child."
+    },
+    {
+      "character": "Sean Phillips",
+      "relation_es": "Antiguo comandante de la unidad; Dante lo mantiene a raya con sarcasmo y disciplina militar.",
+      "relation_en": "Former unit commander; Dante keeps him in check with seasoned sarcasm and drill discipline."
+    },
+    {
+      "character": "Bowie Grant",
+      "relation_es": "El recluta artista; Dante renegaba de su piano pero arriesgó su pellejo para que Bowie fuera feliz con Musica.",
+      "relation_en": "The artist recruit; Dante grumbled at his music but laid his life on the line for Bowie's happiness."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "¡Atención Escuadrón 15! ¡Si no limpian esas orugas de Hovertank en dos minutos, les juro que los haré correr hasta Alaska!",
+      "quote_en": "Attention 15th Squad! If those Hovertank treads aren't spotless in two minutes, I'll have you marching to Alaska!",
+      "context_es": "Inspección de barracones matutina en el cuartel general de la Cruz del Sur.",
+      "context_en": "Morning barracks inspection at Southern Cross Headquarters."
+    },
+    {
+      "quote_es": "Teniente Sterling... puede que esté completamente chiflada, pero es la mejor oficial al mando que un soldado de infantería podría tener.",
+      "quote_en": "Lieutenant Sterling... you might be completely out of your mind, but you're the finest commander a grunt could ever follow.",
+      "context_es": "En la cabina del Hovertank tras repeler una oleada de Bioroids alienígenas.",
+      "context_en": "Inside the Hovertank cockpit after breaking an alien Bioroid onslaught."
+    }
+  ]
+}

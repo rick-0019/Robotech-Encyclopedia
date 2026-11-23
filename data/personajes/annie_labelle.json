@@ -1,0 +1,157 @@
+{
+  "id": "annie_labelle",
+  "name": "Annie \"Mint\" LaBelle",
+  "japanese_name": "Mint LaBelle (ミント・ラブル)",
+  "callsign": "Wasteland Wildcat // Little Miss Sunshine",
+  "rank": {
+    "es": "Exploradora Juvenil // Auxiliar de Reconocimiento y Apoyo Moral",
+    "en": "Youth Scout // Reconnaissance Auxiliary & Squad Morale Anchor"
+  },
+  "role": {
+    "es": "Exploradora Civil, Rastreadora de Suministros y Mascota Alegre de la Resistencia",
+    "en": "Civilian Scout, Supply Tracker & High-Spirited Heart of the Resistance"
+  },
+  "category": "support",
+  "faction": {
+    "es": "Resistencia Civil Terrestre // Escuadrón Guerrillero de Scott Bernard",
+    "en": "Earth Civilian Resistance // Scott Bernard's Guerrilla Squad"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "assignment": {
+    "es": "Vehículo de Transporte A.P.C. / Vigilancia de Perímetro y Exploración",
+    "en": "APC Transport Unit // Perimeter Watch & Field Scouting"
+  },
+  "birth_date": "10 de Octubre de 2030",
+  "birth_place": {
+    "es": "Pueblo Fronterizo, Eriales de Norteamérica",
+    "en": "Border Settlement, North American Wastelands"
+  },
+  "blood_type": "B+",
+  "height": "1,45 m",
+  "weight": "38 kg",
+  "thumbnail": "assets/images/personajes/annie_labelle/annie_portrait.png",
+  "images": [
+    {
+      "url": "assets/images/personajes/annie_labelle/annie_portrait.png",
+      "title_es": "Annie LaBelle - Retrato de la Joven Rebelde de los Eriales",
+      "title_en": "Annie LaBelle - Wasteland Rebel Youth Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/annie_labelle/annie_widget.png",
+      "title_es": "Annie y su Compañero Robot de Respaldo",
+      "title_en": "Annie with Support Companion Droid",
+      "type_es": "Registro de Campo",
+      "type_en": "Field Record"
+    },
+    {
+      "url": "assets/images/personajes/annie_labelle/annie_weapon.jpg",
+      "title_es": "Annie en Acción - Audacia con Armamento Pesado Inesperado",
+      "title_en": "Annie in Action - Daring with Heavy Firepower",
+      "type_es": "Acción Táctica",
+      "type_en": "Tactical Action"
+    }
+  ],
+  "summary": {
+    "es": "Adolescente huérfana de los eriales postapocalípticos, poseedora de una vivacidad desbordante, picardía callejera y un obsesivo anhelo por encontrar un 'esposo rico y apuesto' en cada poblado que cruza el escuadrón. A pesar de su juventud y actitud cómica, Annie aportó un agudo ingenio para el rastreo de recursos en pueblos desolados y se transformó en la chispa de esperanza que mantuvo unidos y humanos a Scott, Rand, Rook y Lunk.",
+    "en": "An irrepressible orphan girl raised in the post-apocalyptic wastelands, armed with street-smart wits, cheeky defiance, and an obsessive comedic quest to find a 'handsome, wealthy husband' in every settlement along the route. Beneath her youthful antics, Annie was a tireless resource tracker whose sheer innocence and exuberance became the emotional anchor keeping Scott, Rand, Rook, and Lunk grounded in their darkest hours."
+  },
+  "lore": {
+    "overview_es": "Quedó huérfana a muy temprana edad cuando las bio-fuerzas Invid arrasaron su comunidad natal en busca de depósitos de protocultura. Creció valiéndose por sí misma en un mundo desprovisto de leyes, desarrollando reflejos de supervivencia impecables, un desparpajo inquebrantable y un peculiar humor romántico para esquivar el dolor de la soledad. Se cruzó en el camino de Scott y Rand mientras huía de un matrimonio forzado en un pueblo minero, trepándose al camión de Lunk para jamás abandonarlos.",
+    "overview_en": "Orphaned in early childhood when Invid bio-swarms devastated her settlement searching for protoculture reserves, Annie grew up relying on her instincts in an anarchic world. She cultivated razor-sharp survival reflexes, an irrepressible spunky charm, and a romantic fixation as a coping shield against trauma. She collided with Scott and Rand while escaping an arranged town marriage, climbing into Lunk's APC and cementing her place in the guerrilla family.",
+    "tactical_analysis_es": "Si bien carece de entrenamiento militar formal, Annie demostró una habilidad insólita para infiltrarse en almacenes, detectar trampas enemigas en ruinas urbanas y empuñar armas pesadas cuando la supervivencia del escuadrón estuvo en juego. Su relación protectora con Lunk (a quien adoptó cariñosamente como figura paterna) y su lealtad hacia Lancer y Rook crearon el ambiente hogareño indispensable para que los combatientes mantuvieran la cordura antes del brutal enfrentamiento final en Punto Réflex.",
+    "tactical_analysis_en": "Though devoid of formal combat instruction, Annie repeatedly proved her mettle by scavenging crucial medical supplies, disarming perimeter booby-traps in ruins, and even picking up heavy anti-armor bazookas when squadmates were pinned down. Her surrogate father-daughter bond with Lunk and her protective admiration for Rook and Lancer formed the emotional glue that preserved the warriors' humanity through the horrors of the war."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 52,
+      "label_es": "Iniciativa y Audacia Callejera",
+      "label_en": "Initiative & Street Chutzpah",
+      "description_es": "Capaz de desafiar a forajidos y liderar evasiones civiles en pueblos controlados por colaboracionistas.",
+      "description_en": "Fearlessly confronts thugs and orchestrates daring escapes through collaborator-held towns."
+    },
+    "strategy": {
+      "value": 72,
+      "label_es": "Rastreo de Suministros y Supervivencia",
+      "label_en": "Scavenging & Wasteland Survival",
+      "description_es": "Olfato inigualable para encontrar comida, piezas de recambio, combustible y rutas secretas de escape.",
+      "description_en": "Unmatched instincts for locating rations, mechanical spare parts, fuel, and concealed alleys."
+    },
+    "resolve": {
+      "value": 90,
+      "label_es": "Optimismo Inquebrantable",
+      "label_en": "Unshakable Optimism & Heart",
+      "description_es": "Su espíritu indomable y alegría contagiosa impidieron que el escuadrón cayera en la desesperanza.",
+      "description_en": "Her radiant high spirits and fierce vitality barred despair from taking root among the guerrilla fighters."
+    },
+    "piloting": {
+      "value": 58,
+      "label_es": "Maniobras de Vehículos Ligeros",
+      "label_en": "Light Vehicle Maneuvering",
+      "description_es": "Capaz de conducir jeeps, motos todoterreno auxiliares y operar torretas manuales de defensa.",
+      "description_en": "Capable of operating light all-terrain scout buggies and manning defensive manual vehicle turrets."
+    }
+  },
+  "timeline": [
+    {
+      "date": "2031",
+      "milestone_es": "Superviviente de la Ocupación Invid",
+      "milestone_en": "Survivor of Invid Onslaught",
+      "desc_es": "Pierde a su familia y aprende a subsistir en los asentamientos mineros y eriales de la Tierra ocupada.",
+      "desc_en": "Loses her family and learns to scavenge throughout mining camps and ruins in occupied Earth."
+    },
+    {
+      "date": "2043",
+      "milestone_es": "Escape e Integración al Escuadrón",
+      "milestone_en": "Daring Escape & Joining the Guerrilla",
+      "desc_es": "Huye de un compromiso forzado y se une al contingente móvil de Scott, Rand, Rook y Lunk.",
+      "desc_en": "Escapes a forced marriage scheme and hitches a ride with Scott, Rand, Rook, and Lunk."
+    },
+    {
+      "date": "2044",
+      "milestone_es": "Liberación de la Tierra y Familia Encontrada",
+      "milestone_en": "Earth Liberation & A Found Family",
+      "desc_es": "Acompaña a la resistencia hasta la Colmena Central; tras la retirada Invid, celebra la victoria junto a Lunk y sus camaradas.",
+      "desc_en": "Journeys all the way to Reflex Point; celebrating global victory with her surrogate family by her side."
+    }
+  ],
+  "quotes": [
+    {
+      "text_es": "¡Oigan, señores soldados! ¡Si van a ir a Punto Réflex me llevan con ustedes, porque este pueblo es un aburrimiento total!",
+      "text_en": "Hey, soldier boys! If you're heading for Reflex Point you're taking me along, 'cause this town is totally boring!",
+      "context_es": "Annie irrumpiendo en el camión de Lunk para unirse a la marcha",
+      "context_en": "Annie sneaking aboard Lunk's APC to join the journey"
+    },
+    {
+      "text_es": "¡Lunk! ¡No te atrevas a rendirte ahora, grandulón! ¡Todavía tienes que verme en mi vestido de bodas!",
+      "text_en": "Lunk! Don't you dare give up now, you big lug! You still have to walk me down the aisle in my wedding dress!",
+      "context_es": "Annie animando a Lunk bajo fuego de artillería enemiga",
+      "context_en": "Annie rallying Lunk under heavy enemy artillery fire"
+    }
+  ],
+  "relationships": [
+    {
+      "character_id": "lunk",
+      "name": "Jim 'Lunk' Cooper",
+      "relation_es": "Figura paterna adoptiva y protector incondicional",
+      "relation_en": "Adoptive father figure and stalwart protector"
+    },
+    {
+      "character_id": "rand",
+      "name": "Rand",
+      "relation_es": "Hermano mayor travieso y cómplice de bromas",
+      "relation_en": "Mischievous big brother and prank partner"
+    },
+    {
+      "character_id": "lancer",
+      "name": "Lancer (Yellow Dancer)",
+      "relation_es": "Ídolo musical y confidente de aventuras románticas",
+      "relation_en": "Musical pop idol and confidant of romantic dreams"
+    }
+  ]
+}

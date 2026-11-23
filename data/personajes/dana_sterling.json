@@ -1,0 +1,165 @@
+{
+  "id": "dana_sterling",
+  "name": "Dana Sterling",
+  "japanese_name": "Jeanne Fránçaix",
+  "callsign": "Spartan Leader // 15th Squad Commander",
+  "rank": {
+    "es": "Subteniente // Teniente Comandante del 15º Escuadrón Táctico (ATAC)",
+    "en": "Second Lieutenant // Lieutenant Commander of 15th Tactical Armored Corps (ATAC)"
+  },
+  "role": {
+    "es": "Líder del 15º Escuadrón Blindado (ATAC) y Primera Nacida Humana-Zentraedi de la Historia",
+    "en": "Leader of 15th ATAC Squad & First Human-Zentraedi Born Child in History"
+  },
+  "category": "pilots",
+  "faction": {
+    "es": "Ejército de la Cruz del Sur (Armored Tactical Assault Corps - ATAC)",
+    "en": "Army of the Southern Cross (Armored Tactical Assault Corps - ATAC)"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Robotech Masters (Second Robotech War)"
+  },
+  "assignment": {
+    "es": "Cuartel General de la Cruz del Sur // 15º Escuadrón (VHT-1 Spartas Hovertank)",
+    "en": "Southern Cross Headquarters // 15th Squad (VHT-1 Spartas Hovertank)"
+  },
+  "birth_date": "18 de Mayo de 2013",
+  "birth_place": {
+    "es": "Macross City, Tierra (Sector Reconstruido)",
+    "en": "Macross City, Earth (Reconstructed Sector)"
+  },
+  "blood_type": "Mestizo Híbrido Genético",
+  "height": "1,74 m",
+  "weight": "54 kg",
+  "thumbnail": "assets/images/personajes/dana_sterling/dana_portrait.png",
+  "images": [
+    {
+      "url": "assets/images/personajes/dana_sterling/dana_portrait.png",
+      "title_es": "Teniente Dana Sterling - Retrato de Mando de la Cruz del Sur",
+      "title_en": "Lieutenant Dana Sterling - Southern Cross Command Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/dana_sterling/dana_armor.png",
+      "title_es": "Dana en Armadura de Combate Táctico ATAC",
+      "title_en": "Dana in ATAC Tactical Combat Armor",
+      "type_es": "Misión Operativa",
+      "type_en": "Field Armor"
+    },
+    {
+      "url": "assets/images/personajes/dana_sterling/dana_victory.jpg",
+      "title_es": "Primera Victoria contra el Bioroid de los Maestros",
+      "title_en": "First Confirmed Victory over Masters' Bioroid",
+      "type_es": "Archivo Táctico",
+      "type_en": "Combat Archive"
+    }
+  ],
+  "summary": {
+    "es": "Protagonista indiscutida de la Segunda Guerra Robotech. Hija de Max y Miriya Sterling, es la primera persona nacida de la unión entre un humano y una Zentraedi. Intrépida, insubordinada y con una intuición de combate sobrehumana, comanda el célebre 15º Escuadrón ATAC.",
+    "en": "The undisputed protagonist of the Second Robotech War. Daughter to Max and Miriya Sterling, she is history's first child born of human and Zentraedi parentage. Fearless, rebellious, and possessing superhuman combat intuition, she leads the famous 15th ATAC Squad."
+  },
+  "lore": {
+    "overview_es": "Nacida en los albores de la reconstrucción de la Tierra tras la Primera Guerra Robotech, Dana Sterling heredó los prodigiosos reflejos cinéticos de su padre Max y la ferocidad guerrera y resistencia física de su madre Zentraedi Miriya. Cuando sus padres partieron en la Misión Pionera de la REF rumbo a Tirol, Dana quedó en la Tierra bajo la tutela de su padrino, el General Rolf Emerson. Al ingresar a la Academia Militar de la Cruz del Sur, su espíritu indomable y su desprecio por el protocolo rígido la llevaron de arresto en arresto, hasta que su audacia táctica obligó al Alto Mando a ponerla al frente del 15º Escuadrón Blindado.",
+    "overview_en": "Born during Earth's reconstruction following the First Robotech War, Dana Sterling inherited the flawless kinetic reflexes of her father Max and the warrior tenacity and physical resilience of her Zentraedi mother Miriya. When her parents departed on the REF Pioneer Mission toward Tirol, Dana remained on Earth under the guardianship of General Rolf Emerson. Enlisting in the Army of the Southern Cross Academy, her free-spirited defiance of authoritarian protocol repeatedly landed her in the brig, until her undeniable combat genius forced High Command to grant her leadership of the 15th ATAC Squad.",
+    "tactical_analysis_es": "Al mando de su tanque transformable VHT-1 Spartas Hovertank, Dana desarrolló una doctrina de combate agresiva basada en transiciones instantáneas entre el modo Tanque de Alta Velocidad, el modo Guardián y el modo Gladiador bípedo. Fue la primera oficial terrestre en penetrar las naves nodriza de los Maestros Robotech y descifrar la tecnología de control biónico de los pilotos Bioroid. Su conexión empática con Zor Prime y su intuición para localizar los cúmulos de Flores de la Vida la convirtieron en el eje estratégico de la defensa planetaria, liderando la ofensiva final en las ruinas del SDF-1.",
+    "tactical_analysis_en": "Behind the controls of her VHT-1 Spartas Hovertank, Dana pioneered a blistering combat doctrine switching seamlessly between High-Speed Cruiser, Guardian Artillery, and bipedal Gladiator mode. She became the first Terran officer to breach the Motherships of the Robotech Masters and unravel the neural slave-link telemetry driving enemy Bioroids. Her profound empathic link with Zor Prime and instinctual tracking of Flower of Life reserves positioned her as the operational nexus of planetary defense, spearheading the final assault amidst the ruins of the SDF-1."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 91,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Liderazgo carismático e inspirador; el Escuadrón 15 la seguiría al corazón mismo de cualquier nave enemiga."
+    },
+    "strategy": {
+      "value": 88,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Improvisación intuitiva brillante; desafía la doctrina rígida para encontrar caminos no convencionales a la victoria."
+    },
+    "resolve": {
+      "value": 98,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Coraje legendario; no teme a los Maestros alienígenas ni a la corte marcial de sus propios superiores."
+    },
+    "piloting": {
+      "value": 99,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Reflejos híbridos extraordinarios heredados de Max y Miriya; domina el Hovertank con destreza inalcanzable."
+    }
+  },
+  "stats": {
+    "command": 91,
+    "strategy": 88,
+    "resolve": 98,
+    "piloting": 99
+  },
+  "service_record": [
+    {
+      "period": "2029",
+      "assignment_es": "Graduada de la Academia Militar de la Cruz del Sur; asignada al 15º Escuadrón Blindado (ATAC)",
+      "assignment_en": "Graduates from Southern Cross Military Academy; assigned to 15th ATAC Squad"
+    },
+    {
+      "period": "2029",
+      "assignment_es": "Promovida a Comandante del 15º Escuadrón tras repeler el primer asalto Bioroid alienígena",
+      "assignment_en": "Promoted to 15th Squad Commander after repelling the first alien Bioroid incursion"
+    },
+    {
+      "period": "2029 - 2030",
+      "assignment_es": "Infiltración en la Nave Nodriza de los Maestros; captura viva del piloto Bioroid Zor Prime",
+      "assignment_en": "Infiltration of the Masters' Mothership; live capture of Bioroid pilot Zor Prime"
+    },
+    {
+      "period": "2030",
+      "assignment_es": "Batalla final en los restos del SDF-1; victoria pírrica sobre la armada de los Maestros Robotech",
+      "assignment_en": "Climactic battle at SDF-1 ruins; costly victory shattering the Robotech Masters armada"
+    },
+    {
+      "period": "2031+",
+      "assignment_es": "Superviviente a la Invasión Invid; une fuerzas con remanentes de la REF para resistir",
+      "assignment_en": "Invid Invasion survivor; rallies surviving REF remanents to sustain resistance"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Bowie Grant",
+      "relation_es": "Su mejor amigo y casi hermano desde la infancia; confidente y segundo copiloto en el 15º Escuadrón.",
+      "relation_en": "Lifelong best friend and honorary brother; confidant and wingman within the 15th Squad."
+    },
+    {
+      "character": "Zor Prime",
+      "relation_es": "Vínculo empático profundo y trágico romance; vio la humanidad en él a pesar de ser un clon alienígena.",
+      "relation_en": "Profound empathic bond and tragic romance; recognized his humanity despite his alien clone origin."
+    },
+    {
+      "character": "Angelo Dante",
+      "relation_es": "Su rudo sargento mayor; de la desconfianza inicial pasaron a una lealtad militar indestructible.",
+      "relation_en": "Her rugged first sergeant; initial skepticism forged into unbreakable combat loyalty."
+    },
+    {
+      "character": "General Rolf Emerson",
+      "relation_es": "Su padrino y figura paterna protectora frente a los castigos del Comandante Supremo Leonard.",
+      "relation_en": "Her godfather and protective father figure against the wrath of Supreme Commander Leonard."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "¡El reglamento militar está muy bien en los libros, sargento, pero ahí afuera los Bioroids no leen manuales!",
+      "quote_en": "Military regulations look fine in books, Sergeant, but out there Bioroids don't read manuals!",
+      "context_es": "Respuesta a Angelo Dante durante su primera salida de combate en el Hovertank.",
+      "context_en": "Rejoinder to Angelo Dante during her first operational Hovertank sortie."
+    },
+    {
+      "quote_es": "Zor... sé quién eres realmente por dentro. No eres el títere de los Maestros, eres un hombre libre.",
+      "quote_en": "Zor... I know who you truly are inside. You are not the Masters' puppet; you are a free man.",
+      "context_es": "Encuentro con Zor Prime en el laboratorio de la Policía Militar Global.",
+      "context_en": "Encounter with Zor Prime inside the Global Military Police research facility."
+    }
+  ]
+}

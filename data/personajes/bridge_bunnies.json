@@ -1,0 +1,162 @@
+{
+  "id": "bridge_bunnies",
+  "name": "Trío del Puente SDF-1 (Vanessa, Kim y Sammie)",
+  "japanese_name": "Bridge Operators (Vanessa, Kim & Shammy)",
+  "callsign": "Bridge Bunnies // Ops Trio",
+  "rank": {
+    "es": "Subtenientes // Oficiales de Control de Sensores, Radar y Artillería (RDF)",
+    "en": "Sub-Lieutenants // Sensor, Radar & Weapons Control Officers (RDF)"
+  },
+  "role": {
+    "es": "Operadoras Tácticas Principales del Puente de Mando de la Fortaleza Espacial SDF-1",
+    "en": "Primary Tactical Bridge Operators of the SDF-1 Space Fortress Command Deck"
+  },
+  "category": "command",
+  "faction": {
+    "es": "U.N. Spacy - Tripulación de Puente del SDF-1",
+    "en": "U.N. Spacy - SDF-1 Bridge Crew"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "assignment": {
+    "es": "SDF-1 Macross (Estaciones de Radar, Artillería y Control de Vuelo)",
+    "en": "SDF-1 Macross (Radar, Weapons & Internal Flight Stations)"
+  },
+  "birth_date": "1991 - 1993 (Generación Macross)",
+  "birth_place": {
+    "es": "Estados Unidos, Asia y Europa (Tierra)",
+    "en": "United States, Asia & Europe (Earth)"
+  },
+  "blood_type": "Diversos (O+, A+, B+)",
+  "height": "1,62 m - 1,68 m",
+  "weight": "49 kg - 53 kg",
+  "thumbnail": "assets/images/personajes/bridge_bunnies/bridge_bunnies_card.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/bridge_bunnies/bridge_bunnies_card.jpg",
+      "title_es": "Las Operadoras del Puente - Ficha Táctica Oficial",
+      "title_en": "The Bridge Operators - Official Tactical File",
+      "type_es": "Retrato Táctico",
+      "type_en": "Tactical Portrait"
+    },
+    {
+      "url": "assets/images/personajes/bridge_bunnies/vanessa_leeds.png",
+      "title_es": "Vanessa Leeds - Jefa de Sensores y Adquisición de Blancos",
+      "title_en": "Vanessa Leeds - Chief of Sensors & Target Acquisition",
+      "type_es": "Oficial Individual",
+      "type_en": "Individual Officer"
+    },
+    {
+      "url": "assets/images/personajes/bridge_bunnies/kim_young.png",
+      "title_es": "Kim Young - Oficial de Radar, Telecomunicaciones y Telemetría",
+      "title_en": "Kim Young - Radar, Telecommunications & Telemetry Officer",
+      "type_es": "Oficial Individual",
+      "type_en": "Individual Officer"
+    },
+    {
+      "url": "assets/images/personajes/bridge_bunnies/sammie_porter.png",
+      "title_es": "Sammie Porter - Operadora de Control de Artillería y Barrera",
+      "title_en": "Sammie Porter - Weapons & Barrier Grid Control Operator",
+      "type_es": "Oficial Individual",
+      "type_en": "Individual Officer"
+    }
+  ],
+  "summary": {
+    "es": "El inseparable y vital trío de oficiales técnicas del puente de mando del SDF-1: Vanessa Leeds (sensores), Kim Young (radar) y Sammie Porter (artillería y navegación). Su profesionalismo y alegría mantuvieron operativa la nave durante dos años de odisea espacial.",
+    "en": "The inseparable and vital trio of bridge tactical operators on the SDF-1: Vanessa Leeds (sensors), Kim Young (radar), and Sammie Porter (weapons & navigation). Their precision and spirit kept the battle fortress alive across a two-year cosmic voyage."
+  },
+  "lore": {
+    "overview_es": "Cariñosamente conocidas en la cultura militar de la RDF como 'The Bridge Bunnies', Vanessa Leeds, Kim Young y Sammie Porter fueron reclutadas como cadetes de élite para operar las complejas terminales de la Robotecnología recién instaladas en el puente de mando de la Isla Macross. Atrapadas en el SDF-1 tras el salto espacial imprevisto a Plutón, maduraron vertiginosamente bajo el mando directo de la Capitana Lisa Hayes y la Teniente Comandante Claudia Grant.",
+    "overview_en": "Affectionately christened 'The Bridge Bunnies' within RDF service lore, Vanessa Leeds, Kim Young, and Sammie Porter were hand-picked as elite cadets to manage the newly integrated Robotechnology consoles on Macross Island. Thrust into deep space following the accidental fold jump to Pluto, they rapidly blossomed into veteran tactical controllers under the stern guidance of First Officer Lisa Hayes and Claudia Grant.",
+    "tactical_analysis_es": "El trío era el sistema nervioso viviente del SDF-1: Vanessa procesaba terabytes de telemetría de sensores de Protocultura para anticipar desdoblamientos hiperespaciales enemigos; Kim coordinaba los patrones de radar y enlace de datos con los cazas Veritech del Escuadrón Skull; y Sammie ejecutaba la asignación de energía para el Cañón Principal y el Sistema de Barrera Puntual. Sobrevivieron al ataque kamikaze de Khyron y continuaron como instructoras y oficiales superiores en la construcción de la flota de la REF.",
+    "tactical_analysis_en": "The trio formed the living central nervous system of the SDF-1: Vanessa interpreted exabytes of sensor feeds to detect hostile battlefold incursions; Kim maintained radar lock and real-time fighter telemetry with Skull Squadron sorties; and Sammie handled energy distribution for the main reflex cannon and pinpoint barrier grids. Surviving Khyron's terminal attack on Macross City, they transitioned to senior training cadres and administrative officers in the nascent REF."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 82,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Coordinación impecable en el puente; sincronización perfecta entre las tres consolas operativas."
+    },
+    "strategy": {
+      "value": 85,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Detección temprana de vectores de aproximación y cálculo instantáneo de trayectorias de fuego enemigo."
+    },
+    "resolve": {
+      "value": 91,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Permanecieron en sus puestos en el puente mientras la nave sufría impactos directos de cañones de partículas."
+    },
+    "piloting": {
+      "value": 45,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Operadoras técnicas y controladoras de tráfico aéreo, no pilotos de combate aeroespacial."
+    }
+  },
+  "stats": {
+    "command": 82,
+    "strategy": 85,
+    "resolve": 91,
+    "piloting": 45
+  },
+  "service_record": [
+    {
+      "period": "2008 - 2009",
+      "assignment_es": "Graduadas de la Academia Técnica RDF; asignadas al puente principal del SDF-1 en Macross",
+      "assignment_en": "Graduated from RDF Technical Academy; assigned to SDF-1 main bridge at Macross"
+    },
+    {
+      "period": "2009 - 2011",
+      "assignment_es": "Operadoras tácticas de combate durante toda la odisea espacial y la Batalla Final contra Dolza",
+      "assignment_en": "Tactical combat controllers throughout the deep-space odyssey and final victory over Dolza"
+    },
+    {
+      "period": "2012 - 2014",
+      "assignment_es": "Oficiales de enlace y coordinación en el cuartel general de la RDF en Macross City",
+      "assignment_en": "Liaison and coordination officers at RDF Headquarters in Macross City"
+    },
+    {
+      "period": "2014",
+      "assignment_es": "Sobreviven al bombardeo final de Khyron; asumen funciones en el Mando Logístico de la REF",
+      "assignment_en": "Survive Khyron's final suicide blitz; transfer to REF Logistical Command"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Lisa Hayes",
+      "relation_es": "Su respetada superior inmediata; admiraban su genio militar y aprendieron disciplina de su ejemplo.",
+      "relation_en": "Their respected immediate superior; admired her tactical brilliance and absorbed her iron discipline."
+    },
+    {
+      "character": "Claudia Grant",
+      "relation_es": "Figura hermana mayor y protectora en el puente; aliviaba la tensión con su calidez y sabiduría.",
+      "relation_en": "Protective older-sister figure on the bridge deck; smoothed combat stress with warmth and composure."
+    },
+    {
+      "character": "Henry Gloval",
+      "relation_es": "El respetado y paternal Capitán a quien cuidaban y obedecían con lealtad incondicional.",
+      "relation_en": "The beloved paternal Captain whom they served with absolute devotion through every crisis."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "¡Capitán! Múltiples firmas de sobreflexión detectadas en el cuadrante cuatro... ¡son cientos de naves enemigas!",
+      "quote_en": "Captain! Multiple spacefold signatures detected in quadrant four... hundreds of alien warships inbound!",
+      "context_es": "Alerta de intercepción general transmitida por Vanessa Leeds desde la consola de radar.",
+      "context_en": "General fleet alert broadcast by Vanessa Leeds from the sensor station."
+    },
+    {
+      "quote_es": "¡Barrera puntual energizada y anclada al vector de impacto! ¡Sosténganse todos!",
+      "quote_en": "Pinpoint barrier energized and locked onto impact vector! Brace for impact!",
+      "context_es": "Sammie Porter activando los escudos defensivos durante un bombardeo orbital.",
+      "context_en": "Sammie Porter locking defensive shield arrays during orbital bombardment."
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "id": "lancer",
+  "name": "Lancer / Yellow Belmont",
+  "japanese_name": "Yellow Belmont",
+  "callsign": "Yellow Dancer // Mirage Ace",
+  "rank": {
+    "es": "Teniente (Fuerzas Especiales REF) // Guerrillero Encubierto",
+    "en": "Lieutenant (REF Special Forces) // Covert Guerrilla Operative"
+  },
+  "role": {
+    "es": "Operativo de Infiltración, As de Caza Alpha Verde y Cantante Pop Encubierto",
+    "en": "Infiltration Operative, Green Alpha Fighter Ace & Covert Pop Sensation"
+  },
+  "category": "pilots",
+  "faction": {
+    "es": "Fuerza Expedicionaria Robotech (REF 10ª División) // Guerrilla de Resistencia",
+    "en": "Robotech Expeditionary Force (REF 10th Division) // Resistance Wing"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "assignment": {
+    "es": "10ª División REF // Caza Alpha VAF-6I Verde // Identidad Secreta: 'Yellow Dancer'",
+    "en": "10th REF Division // Green VAF-6I Alpha Fighter // Secret Identity: 'Yellow Dancer'"
+  },
+  "birth_date": "25 de Diciembre de 2021",
+  "birth_place": {
+    "es": "Colonia Espacial REF / Base Lunar",
+    "en": "REF Space Colony / Moon Base"
+  },
+  "blood_type": "AB+",
+  "height": "1,83 m",
+  "weight": "68 kg",
+  "thumbnail": "assets/images/personajes/lancer/lancer_portrait.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/lancer/lancer_portrait.jpg",
+      "title_es": "Teniente Lancer - Retrato Militar Oficial de la REF",
+      "title_en": "Lieutenant Lancer - Official REF Military Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/lancer/yellow_dancer.jpg",
+      "title_es": "Identidad Encubierta: 'Yellow Dancer' en Recital de Resistencia",
+      "title_en": "Covert Identity: 'Yellow Dancer' Live Resistance Concert",
+      "type_es": "Operativo Encubierto",
+      "type_en": "Covert Operation"
+    }
+  ],
+  "summary": {
+    "es": "Oficial veterano de la primera oleada de desembarco de la REF y formidable piloto de caza Alpha. Para operar tras las líneas enemigas sin ser detectado, adoptó la identidad andrógina de 'Yellow Dancer', una deslumbrante estrella del pop que llevaba esperanza a los pueblos oprimidos y organizaba la rebelión civil contra los Invid.",
+    "en": "Veteran officer of the first REF orbital drop and formidable Alpha fighter ace. Operating deep behind enemy lines, he adopted the androgynous persona of 'Yellow Dancer', a dazzling pop star who brought hope to oppressed towns while secretly coordinating civilian rebellion against the Invid."
+  },
+  "lore": {
+    "overview_es": "Llegado a la Tierra en la trágica primera tentativa de liberación de la 10ª División de la REF, el Teniente Lance Belmont vio cómo su escuadrón era pulverizado en la atmósfera. Oculto por una familia campesina que lo disfrazó de mujer para evitar que las patrullas Invid lo ejecutaran como militar, descubrió que podía usar el arte como un arma estratégica: creó la identidad de la cantante 'Yellow Dancer', logrando viajar de pueblo en pueblo sin despertar sospechas mientras transmitía mensajes en clave a la resistencia.",
+    "overview_en": "Arriving on Earth in the tragic initial liberation wave of the 10th REF Division, Lieutenant Lance Belmont witnessed his unit vaporized in the upper atmosphere. Sheltered by sympathetic townspeople who disguised him as a woman to evade Invid hunter-killer squads, he realized music could serve as a lethal strategic camouflage: crafting the persona of songstress 'Yellow Dancer', he toured occupied territories unsuspected while transmitting encoded coordinates to underground partisans.",
+    "tactical_analysis_es": "Al unirse a Scott Bernard, Lancer recuperó su caza Alpha verde VAF-6I y su moto Cyclone, convirtiéndose en el piloto más versátil del grupo. En combate aéreo y espacial, su estilo combina precisión quirúrgica con maniobras de engaño. Su impacto cultural alcanzó el clímax cuando su música y su encanto conmovieron a la Princesa Sera, la comandante guerrera Invid transmutada en humanoide: su vínculo despertó en ella la empatía y la compasión, quebrando la ferocidad militar de la corte de la Regis y permitiendo la evacuación pacífica de los Invid hacia la luz cósmica.",
+    "tactical_analysis_en": "Joining forces with Scott Bernard, Lancer retrieved his green VAF-6I Alpha Fighter and Cyclone armor, serving as the unit's most versatile aviator and tactician. In aerial dogfights, his methodology paired surgical marksmanship with deceptive maneuvers. His cultural impact peaked when his music captivated Princess Sera, the prime Invid royal warrior: their connection awakened empathy within her genetically engineered mind, fracturing the Regis's military resolve and enabling the Invid's peaceful cosmic departure."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 85,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Oficial superior sereno y reflexivo; el contrapeso sabio y templado a la impulsividad de Scott y Rand."
+    },
+    "strategy": {
+      "value": 94,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Maestro del disfraz, infiltración encubierta, guerra psicológica y manipulación mediática."
+    },
+    "resolve": {
+      "value": 96,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Sangre fría absoluta; capaz de actuar frente a guarniciones enemigas sin quebrar su tapadera."
+    },
+    "piloting": {
+      "value": 97,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "As consagrado de caza Alpha y Cyclone; maniobras elegantes y letalidad milimétrica."
+    }
+  },
+  "stats": {
+    "command": 85,
+    "strategy": 94,
+    "resolve": 96,
+    "piloting": 97
+  },
+  "service_record": [
+    {
+      "period": "2039 - 2041",
+      "assignment_es": "Oficial de Caza en la 10ª División de Desembarco de la REF; piloto de pruebas Alpha",
+      "assignment_en": "Fighter Officer in 10th REF Assault Division; Alpha test flight aviator"
+    },
+    {
+      "period": "2042",
+      "assignment_es": "Sobrevive al derribo orbital; crea la identidad de 'Yellow Dancer' para operar encubierto",
+      "assignment_en": "Survives orbital shoot-down; crafts 'Yellow Dancer' persona for covert operations"
+    },
+    {
+      "period": "2042 - 2044",
+      "assignment_es": "Piloto de Caza Alpha Verde en la guerrilla de Scott Bernard hacia Punto Réflex",
+      "assignment_en": "Green Alpha Fighter pilot in Scott Bernard's guerrilla wing toward Reflex Point"
+    },
+    {
+      "period": "2044",
+      "assignment_es": "Duelo aéreo con la Princesa Sera; despierta el amor y la compasión en la realeza Invid",
+      "assignment_en": "Aerial duel with Princess Sera; awakens love and compassion in Invid royalty"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Princesa Sera",
+      "relation_es": "La princesa guerrera Invid a quien redimió con su música y amor; trascendieron el odio entre especies.",
+      "relation_en": "The Invid warrior princess redeemed by his music and love; transcended inter-species hatred."
+    },
+    {
+      "character": "Scott Bernard",
+      "relation_es": "Camarada oficial de la REF; compartían la disciplina militar y un profundo respeto mutuo.",
+      "relation_en": "Fellow REF officer comrade; shared professional military discipline and deep mutual respect."
+    },
+    {
+      "character": "Rand y Rook",
+      "relation_es": "Hermanos de guerrilla; a menudo aconsejaba con sabiduría y humor sus turbulentos líos de pareja.",
+      "relation_en": "Guerrilla siblings; frequently advised their tumultuous romance with seasoned wisdom."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "La música es el único lenguaje que ningún invasor puede silenciar. Mientras sigamos cantando, la Tierra seguirá viva.",
+      "quote_en": "Music is the one language no invader can silence. As long as we sing, Earth remains alive.",
+      "context_es": "Palabras al público antes de un recital clandestino en un pueblo bajo patrullas Invid.",
+      "context_en": "Words to the crowd before a clandestine concert under alien Invid patrols."
+    },
+    {
+      "quote_es": "Sera, no eres una máquina creada para matar. Siente este latido... tú eres tan humana como cualquiera de nosotros.",
+      "quote_en": "Sera, you are no killing machine. Feel this heartbeat... you are as human as any of us.",
+      "context_es": "Encuentro en la catedral en ruinas donde abraza a la princesa alienígena.",
+      "context_en": "Encounter in the ruined cathedral embracing the alien princess."
+    }
+  ]
+}

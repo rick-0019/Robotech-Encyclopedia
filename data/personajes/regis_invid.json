@@ -1,0 +1,164 @@
+{
+  "id": "regis_invid",
+  "name": "Regis Invid (La Regess)",
+  "japanese_name": "Refress (レフレス)",
+  "callsign": "Hive-Mother // Genesis Matriarch",
+  "rank": {
+    "es": "Reina Soberana y Matriarca Suprema de la Especie Invid",
+    "en": "Sovereign Queen & Supreme Matriarch of the Invid Species"
+  },
+  "role": {
+    "es": "Guía Evolutiva Cósmica, Madre Colectiva y Guardiana de la Flor de la Vida",
+    "en": "Cosmic Evolutionary Guide, Collective Hive-Mother & Keeper of the Flower of Life"
+  },
+  "category": "commanders",
+  "faction": {
+    "es": "Imperio Biológico Invid // Mente Colmena de Punto Réflex",
+    "en": "Invid Biological Empire // Reflex Point Hive-Mind"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "assignment": {
+    "es": "Colmena Madre Génesis // Trono Biológico Central de Punto Réflex",
+    "en": "Genesis Mother Hive // Central Biological Throne of Reflex Point"
+  },
+  "birth_date": "Era Primordial de Optera (Milenios antes de la era moderna)",
+  "birth_place": {
+    "es": "Planeta Natal Optera (Sector Proxcima)",
+    "en": "Optera Homeworld (Proxcima Sector)"
+  },
+  "blood_type": "Esencia Cósmica Pura de Protocultura (Luz Viviente)",
+  "height": "Variable (Manifestación Bio-Colosal o Proyección Energética)",
+  "weight": "Inconmensurable (Entidad de Transmutación Biomolecular)",
+  "thumbnail": "assets/images/personajes/regis_invid/regis_portrait.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/regis_invid/regis_portrait.jpg",
+      "title_es": "La Regis - Retrato de la Soberana Suprema Invid",
+      "title_en": "The Regess - Portrait of the Invid Supreme Sovereign",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/regis_invid/regis_throne.jpg",
+      "title_es": "La Regis en su Trono de la Colmena Central",
+      "title_en": "The Regess on the Central Hive Throne",
+      "type_es": "Registro de Mando",
+      "type_en": "Command Record"
+    },
+    {
+      "url": "assets/images/personajes/regis_invid/regis_protoculture.jpg",
+      "title_es": "La Matriarca y el Corazón de la Flor de la Vida",
+      "title_en": "The Matriarch & the Heart of the Flower of Life",
+      "type_es": "Archivo de Archivo",
+      "type_en": "Archive Record"
+    },
+    {
+      "url": "assets/images/personajes/regis_invid/regis_shadow.jpg",
+      "title_es": "La Regis en Shadow Chronicles - Alerta Cósmica contra los Hijos de las Sombras",
+      "title_en": "The Regess in Shadow Chronicles - Cosmic Warning against the Children of the Shadow",
+      "type_es": "Registro Cinematográfico",
+      "type_en": "Cinematic Record"
+    }
+  ],
+  "summary": {
+    "es": "La matriarca cósmica y deidad viviente de la raza Invid. Tras la profanación y devastación de su planeta natal Optera a manos de Zor y los Maestros de la Robotecnología, guio el éxodo de su pueblo a través de las galaxias hasta la Tierra, donde florecieron las semillas de la Flor de la Vida. Obsesionada con la evolución perfecta de su especie, creó la quinta fase bio-humanoide, pero conmovida por las súplicas de su hija Ariel y ante la amenaza de la flota de aniquilación humana y los Hijos de las Sombras, transformó a toda su raza en un fénix de luz pura y ascendió a las estrellas, salvando a la Tierra de la destrucción.",
+    "en": "The cosmic matriarch and living deity of the Invid race. Following the defilement and ruin of their homeworld Optera by Zor and the Robotech Masters, she shepherded her people across interstellar space to Earth, where the spores of the Flower of Life had taken root. Dedicated to engineering the ultimate evolutionary state for her species, she created the humanoid fifth stage, but moved by the pleas of her daughter Ariel and facing the genocidal threat of the REF Shadow fleet and the Children of the Shadow, she elevated her race into a phoenix of pure light energy and ascended into deep space, sparing Earth from annihilation."
+  },
+  "lore": {
+    "overview_es": "Durante incontables generaciones, los Invid habitaron pacíficamente Optera nutriéndose de la Flor de la Vida, hasta que la traición de Zor desató la invasión destructiva de los Maestros de la Robotecnología, sumiendo a los Invid en la miseria y forzando una mutación guerrera. Mientras su consorte, el Regente (Invid Regent), optó por la conquista militar bárbara y la venganza despiadada en el espacio profundo, la Regis se concentró en la salvación biológica y la transmutación evolutiva de su estirpe. Guiada por el estallido de esporas tras la caída de los Maestros, llegó a la Tierra para reclamar su herencia botánica sagrada.",
+    "overview_en": "For untold eons, the Invid dwelt in Edenic serenity on Optera sustained by the sacred Flower of Life, until Zor's betrayal and the subsequent pillaging by the Robotech Masters reduced their world to a toxic wasteland, forcing a desperate militaristic mutation. While her consort, the Invid Regent, embraced vengeance and brutal conquests across the cosmos, the Regess focused entirely on biological preservation and transcendent evolution. Summoned by the global bloom of spores after the Masters fell, she descended upon Earth to reclaim the holy seed of their existence.",
+    "tactical_analysis_es": "La Regis posee control telepático absoluto sobre las miríadas de bio-mechas Invid (Scouts, Troopers, Shock Troopers, Enforcers y Overlords). En su colmena de Punto Réflex, manipuló la genética Invid hasta emular la fisonomía humana (creando a Ariel, Corg y Sera). Sin embargo, advirtió que la fisonomía humana conllevaba el virus de la codicia y el belicismo despiadado, visible en la furia homicida del príncipe Corg. Al comprender a través de Ariel que los humanos también albergan compasión y amor, y al percatarse de que los misiles Neutrón-S de la REF portaban tecnología de los traicioneros 'Hijos de las Sombras' (Haydonitas), la Regis consumió la protocultura restante, destruyó los misiles apocalípticos en la estratosfera y partió en busca de un nuevo comienzo cósmico.",
+    "tactical_analysis_en": "The Regess wields total telepathic dominion over the boundless swarms of Invid bio-mecha (Scouts, Shock Troopers, Enforcers, and Overlords). In her central genesis hive at Reflex Point, she manipulated Invid genomics to mirror humanity's physical form (giving rise to Ariel, Corg, and Sera). However, she observed with horror that human emotions spawned savage warmongering, epitomized by Prince Corg's bloodlust. Enlightened by Ariel's plea that humanity also nurtured love, and detecting that the REF's incoming Neutron-S missiles concealed sinister Haydonite Shadow technology, she gathered her children, vaporized the planetary-killing warheads, and soared into the cosmos as pure astral flame."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 100,
+      "label_es": "Consciencia Colectiva y Mando Soberano",
+      "label_en": "Hive Consciousness & Sovereign Command",
+      "description_es": "Gobierno absoluto y sin fisuras sobre cada mente, embrión y bio-célula de la raza Invid en la galaxia.",
+      "description_en": "Flawless psychic dominion over every mind, embryo, and bio-cell of the Invid race across star systems."
+    },
+    "strategy": {
+      "value": 94,
+      "label_es": "Ingeniería Evolutiva y Presciencia",
+      "label_en": "Evolutionary Engineering & Prescience",
+      "description_es": "Capaz de acelerar milenios de mutación biológica y anticipar los movimientos energéticos del cosmos.",
+      "description_en": "Capable of accelerating eons of biological mutation and anticipating cosmic energy shifts."
+    },
+    "resolve": {
+      "value": 98,
+      "label_es": "Trascendencia y Voluntad Maternal",
+      "label_en": "Transcendence & Maternal Will",
+      "description_es": "Dedicó su existencia milenaria a la supervivencia de sus hijos, eligiendo la ascensión espiritual sobre el exterminio mutuo.",
+      "description_en": "Dedicated her eternal existence to her children's salvation, choosing spiritual ascension over mutual holocaust."
+    },
+    "piloting": {
+      "value": 95,
+      "label_es": "Manifestación Astral y Control de Protocultura",
+      "label_en": "Astral Manifestation & Protoculture Dominion",
+      "description_es": "Canaliza cantidades estelares de energía de protocultura, manifestándose como un ave fénix de luz estelar.",
+      "description_en": "Channels stellar magnitudes of protoculture energy, manifesting as an interstellar phoenix of pure light."
+    }
+  },
+  "timeline": [
+    {
+      "date": "Milenios atrás",
+      "milestone_es": "Caída del Paraíso de Optera",
+      "milestone_en": "Fall of Optera's Paradise",
+      "desc_es": "Zor cosecha la Flor de la Vida; los Maestros bombardean Optera y la Regis inicia el éxodo de transmutación de los Invid.",
+      "desc_en": "Zor harvests the Flower of Life; Robotech Masters defile Optera and the Regess initiates the great exodus."
+    },
+    {
+      "date": "2031",
+      "milestone_es": "Invasión y Ocupación de la Tierra",
+      "milestone_en": "Earth Invasion & Occupation",
+      "desc_es": "Rastrea la floración global de esporas de protocultura y conquista la Tierra en días, estableciendo la colmena de Punto Réflex.",
+      "desc_en": "Tracks the global bloom of protoculture spores, subduing Earth in days and erecting Reflex Point."
+    },
+    {
+      "date": "2044",
+      "milestone_es": "Ascensión Cósmica y Purificación de la Tierra",
+      "milestone_en": "Cosmic Ascension & Earth Cleansing",
+      "desc_es": "Escucha las súplicas de Ariel, aniquila los misiles Neutrón-S de la REF y guía a su raza en forma de fénix de luz a otro plano existencial.",
+      "desc_en": "Heeds Ariel's plea, incinerates the incoming Neutron-S missiles, and elevates her race into astral light toward a new dawn."
+    }
+  ],
+  "quotes": [
+    {
+      "text_es": "Nuestra búsqueda por la plenitud biológica nos trajo a este mundo... mas los humanos han demostrado ser una plaga consumida por el odio y la destrucción.",
+      "text_en": "Our quest for biological completion guided us to this realm... yet humanity has proven to be a scourge devoured by hatred and destruction.",
+      "context_es": "La Regis evaluando la hostilidad de la resistencia humana",
+      "context_en": "The Regess assessing the violent hostility of human resistance"
+    },
+    {
+      "text_es": "¡Hijos míos, transmuten su ser! ¡Dejemos este cascarón de odio terrenal y ascendamos como pura luz viviente hacia las estrellas lejanas!",
+      "text_en": "My children, transmute your beings! Let us cast off this shell of terrestrial hatred and ascend as pure living light unto distant stars!",
+      "context_es": "La Regis proclamando la ascensión Invid durante la batalla final de Punto Réflex",
+      "context_en": "The Regess proclaiming the Invid ascension during the climax of Reflex Point"
+    }
+  ],
+  "relationships": [
+    {
+      "character_id": "ariel_marlene",
+      "name": "Ariel (Marlene)",
+      "relation_es": "Hija de transmutación cuya compasión salvó a la Tierra",
+      "relation_en": "Transmuted daughter whose compassion stayed her wrath and spared Earth"
+    },
+    {
+      "character_id": "prince_corg",
+      "name": "Príncipe Corg",
+      "relation_es": "Hijo guerrero consumido por la sed de sangre y el odio",
+      "relation_en": "Warrior son consumed by human warmongering and bloodlust"
+    },
+    {
+      "character_id": "princess_sera",
+      "name": "Princesa Sera",
+      "relation_es": "Hija comandante que descubrió el amor y la piedad",
+      "relation_en": "Commander daughter who discovered love and mercy"
+    }
+  ]
+}

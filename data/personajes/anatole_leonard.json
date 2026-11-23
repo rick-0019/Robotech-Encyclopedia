@@ -1,0 +1,148 @@
+{
+  "id": "anatole_leonard",
+  "name": "Comandante Supremo Anatole Leonard",
+  "japanese_name": "Claude Leon",
+  "callsign": "Supreme Commander // Iron Chancellor",
+  "rank": {
+    "es": "Comandante Supremo de los Ejércitos de la Cruz del Sur (ASC)",
+    "en": "Supreme Commander of the Armies of the Southern Cross (ASC)"
+  },
+  "role": {
+    "es": "Líder Supremo Militar y Dictador de Facto de la Tierra durante la Segunda Guerra Robotech",
+    "en": "Supreme Military Commander & De Facto Dictator of Earth during Second Robotech War"
+  },
+  "category": "command",
+  "faction": {
+    "es": "Mando Supremo de los Ejércitos de la Cruz del Sur",
+    "en": "Supreme Command of the Armies of the Southern Cross"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Robotech Masters (Second Robotech War)"
+  },
+  "assignment": {
+    "es": "Cuartel General de la Cruz del Sur (Monumento City) // Búnker Supremo",
+    "en": "Southern Cross Headquarters (Monument City) // Supreme Bunker"
+  },
+  "birth_date": "22 de Febrero de 1978",
+  "birth_place": {
+    "es": "Europa / Sudamérica (Tierra)",
+    "en": "Europe / South America (Earth)"
+  },
+  "blood_type": "O+",
+  "height": "1,87 m",
+  "weight": "89 kg",
+  "thumbnail": "assets/images/personajes/anatole_leonard/leonard_speech.png",
+  "images": [
+    {
+      "url": "assets/images/personajes/anatole_leonard/leonard_speech.png",
+      "title_es": "Comandante Supremo Leonard - Discurso de Guerra Total",
+      "title_en": "Supreme Commander Leonard - Total War Address",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/anatole_leonard/leonard_portrait.jpg",
+      "title_es": "Anatole Leonard - Retrato de Mando Supremo de la Cruz del Sur",
+      "title_en": "Anatole Leonard - Southern Cross Supreme Command Portrait",
+      "type_es": "Retrato Táctico",
+      "type_en": "Tactical Portrait"
+    }
+  ],
+  "summary": {
+    "es": "Comandante supremo absoluto de los Ejércitos de la Cruz del Sur. Militar intransigente, autoritario y despiadado, impuso una doctrina de guerra de desgaste frontal total contra los Maestros Robotech a costa de sacrificar flotas enteras de jóvenes soldados terrestres, pereciendo en su búnker durante el colapso final de Monument City.",
+    "en": "Absolute supreme commander of the Armies of the Southern Cross. Inflexible, authoritarian, and ruthless, he waged total war of attrition against the Robotech Masters at the cost of sacrificing entire space fleets of young Terran soldiers, dying in his command bunker during the fall of Monument City."
+  },
+  "lore": {
+    "overview_es": "Figura sombría y de una ambición marcial desmedida, Anatole Leonard ascendió a la cúspide del poder político y militar de la Tierra tras la partida de la Fuerza Expedicionaria Robotech (REF). Al mando de los quince ejércitos especializados de la Cruz del Sur, instauró un régimen militarista casi totalitario centrado en Monument City, convencido de que la debilidad y el pacifismo habían provocado la destrucción de la Tierra durante la invasión Zentraedi.",
+    "overview_en": "A grim and deeply ambitious militarist, Anatole Leonard seized supreme control over Earth's defensive infrastructure following the departure of the REF expedition. Commanding the fifteen specialized corps of the Southern Cross, he instituted a near-totalitarian martial regime centered at Monument City, convinced that weakness and pacifism were responsible for Earth's devastation during the First Robotech War.",
+    "tactical_analysis_es": "La doctrina bélica de Leonard era el asalto frontal inflexible: desestimó toda posibilidad de tregua o comunicación con los alienígenas, tildando de traidor a cualquiera que sugiriera la diplomacia. Ordenó sucesivas oleadas espaciales suicidas contra las naves nodriza que diezmaron las fuerzas aeroespaciales TASC y diezmaron al cuerpo de oficiales de Emerson. Aunque su tenacidad desgastó decisivamente a los Maestros Robotech, dejó a la Tierra militarmente vacía y vulnerable a la invasión inmediata de los Invid, muriendo aplastado en su búnker cuando la nave nodriza alienígena cayó sobre el cuartel general.",
+    "tactical_analysis_en": "Leonard's military doctrine was unyielding frontal attrition: rejecting all overtures of communication or truce with alien envoys, branding anyone who urged diplomacy as defeatist. He ordered wave after wave of suicidal orbital counter-offensives that bled the TASC aerospace wings dry and decimated Emerson's naval cadres. While his stubbornness exhausted the Masters' dying fuel supplies, it left Earth stripped of planetary defenses, rendering it helpless before the subsequent Invid onslaught. He died crushed within his command citadel when the alien flagship crashed directly onto Monument City."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 98,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Control total e indiscutido sobre todas las ramas armadas y policiales del Ejército de la Cruz del Sur."
+    },
+    "strategy": {
+      "value": 74,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Doctrina de choque frontal y desgaste numérico; nula apreciación por la diplomacia o maniobras indirectas."
+    },
+    "resolve": {
+      "value": 100,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Voluntad de hierro fanática; prefirió quemar cada nave terrestre antes que ceder un milímetro a los alienígenas."
+    },
+    "piloting": {
+      "value": 40,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Comandante supremo terrestre; no opera vehículos de combate individuales."
+    }
+  },
+  "stats": {
+    "command": 98,
+    "strategy": 74,
+    "resolve": 100,
+    "piloting": 40
+  },
+  "service_record": [
+    {
+      "period": "2015 - 2022",
+      "assignment_es": "Comandante de Reorganización de Seguridad Terrestre; funda las bases de la Cruz del Sur",
+      "assignment_en": "Commander of Terrestrial Defense Reorganization; lays foundations of Southern Cross"
+    },
+    {
+      "period": "2023 - 2028",
+      "assignment_es": "Nombrado Comandante Supremo de la Cruz del Sur; consolida el control sobre el Consejo Terrestre",
+      "assignment_en": "Appointed Supreme Commander of Southern Cross; consolidates rule over Earth Council"
+    },
+    {
+      "period": "2029 - 2030",
+      "assignment_es": "Dirige la guerra total contra los Maestros Robotech; ordena las oleadas espaciales de desgaste",
+      "assignment_en": "Directs total war against Robotech Masters; mandates planetary waves of orbital attrition"
+    },
+    {
+      "period": "2030",
+      "assignment_es": "Fallece en su puesto de mando al colapsar la nave nodriza de los Maestros sobre Monument City",
+      "assignment_en": "Killed in his command bunker when the Masters' flagship crashes onto Monument City"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "General Rolf Emerson",
+      "relation_es": "Su rival político y militar; despreciaba su moderación y lo desterró al frente espacial para silenciarlo.",
+      "relation_en": "His political and military rival; despised his moderation and exiled him to the orbital front."
+    },
+    {
+      "character": "Dana Sterling",
+      "relation_es": "La comandante rebelde a quien amenazó reiteradamente con consejo de guerra, reconociendo su éxito con amargura.",
+      "relation_en": "The rogue squad leader whom he repeatedly threatened with court-martial, begrudgingly using her victories."
+    },
+    {
+      "character": "Nova Satori",
+      "relation_es": "Su investigadora de la GMP a quien exigía fidelidad ciega para purgar disidentes políticos.",
+      "relation_en": "His GMP investigator from whom he demanded blind loyalty to purge political dissidents."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "¡Aquí no habrá negociaciones con invasores alienígenas! ¡La Tierra peleará hasta el último hombre, la última nave y el último cartucho!",
+      "quote_en": "There will be no negotiations with alien invaders! Earth will fight to the last man, the last ship, and the last round!",
+      "context_es": "Proclama marcial radiada a toda la población del planeta.",
+      "context_en": "Martial proclamation broadcast to the global population of Earth."
+    },
+    {
+      "quote_es": "Emerson cree en palabras bonitas... pero en esta galaxia el único lenguaje que entienden los monstruos es la aniquilación total.",
+      "quote_en": "Emerson believes in pleasant words... but in this galaxy the only language monsters comprehend is total annihilation.",
+      "context_es": "Justificación ante su Estado Mayor de la orden de ataque espacial.",
+      "context_en": "Justifying his deep-space counter-offensive before the General Staff."
+    }
+  ]
+}

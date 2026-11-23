@@ -1,0 +1,141 @@
+{
+  "id": "rook_bartley",
+  "name": "Rook Bartley",
+  "japanese_name": "Houquet et Rose",
+  "callsign": "Crimson Cyclone // Blue Fox",
+  "rank": {
+    "es": "Líder Guerrillera Urbana // As de Moto-Armadura Cyclone VR-038",
+    "en": "Urban Guerrilla Leader // VR-038 Cyclone Ride Armor Ace"
+  },
+  "role": {
+    "es": "Especialista en Combate Urbano, Artillera de Choque y Pareja de Rand",
+    "en": "Urban Combat Specialist, Shock Gunner & Partner to Rand"
+  },
+  "category": "pilots",
+  "faction": {
+    "es": "Resistencia Urbana Terrestre // Guerrilla de Scott Bernard",
+    "en": "Earth Urban Resistance // Scott Bernard's Guerrilla Wing"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "assignment": {
+    "es": "Guerrilla Terrestre // Moto-Armadura Cyclone VR-038-LL (Rojo/Blanco)",
+    "en": "Earth Guerrilla Wing // VR-038-LL Cyclone Ride Armor (Red/White)"
+  },
+  "birth_date": "28 de Enero de 2026",
+  "birth_place": {
+    "es": "Ciudad Ocupada, Eriales Terrestres",
+    "en": "Occupied City, Earth Wastelands"
+  },
+  "blood_type": "A+",
+  "height": "1,72 m",
+  "weight": "54 kg",
+  "thumbnail": "assets/images/personajes/rook_bartley/rook_portrait.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/rook_bartley/rook_portrait.jpg",
+      "title_es": "Rook Bartley - Retrato Oficial de la Guerrera de la Resistencia",
+      "title_en": "Rook Bartley - Resistance Fighter Official Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    }
+  ],
+  "summary": {
+    "es": "Feroz, solitaria y letal combatiente urbana de la resistencia terrestre. Antigua motociclista de pandilla traicionada en su pueblo natal, aprendió a confiar únicamente en sus armas y en su moto Cyclone VR-038 hasta que conoció a Rand y a Scott Bernard, convirtiéndose en el pilar combativo de la marcha a Punto Réflex.",
+    "en": "Fierce, solitary, and deadly urban resistance fighter. A former gang biker betrayed in her hometown, she trusted only her reflexes and her VR-038 Cyclone ride armor until she joined Rand and Scott Bernard, becoming the hardened combat backbone of the march to Reflex Point."
+  },
+  "lore": {
+    "overview_es": "Criada en la anarquía y la brutalidad de las ciudades ruinosas ocupadas por los Invid, Rook Bartley lideraba una banda juvenil de motociclistas de autodefensa frente a los colaboracionistas locales (los 'Blue Snakes'). Traicionada y dada por muerta tras una emboscada, Rook endureció su carácter, adoptó una soledad casi salvaje y se armó con una moto Cyclone VR-038 roja y blanca modificada para combate urbano y sigilo.",
+    "overview_en": "Raised in the anarchy and predatory lawlessness of ruined settlements under Invid dominion, Rook Bartley originally led a defensive motorcycle gang protecting her town against local collaborators ('The Blue Snakes'). Betrayed and left for dead in an ambush, Rook hardened her soul, adopting a fiercely independent lone-wolf survival ethos behind the handlebars of her customized red-and-white VR-038 Cyclone ride armor.",
+    "tactical_analysis_es": "Al encontrarse con Scott y Rand en un poblado hostil, Rook demostró una ferocidad en combate cerrado inigualable: su dominio del rifle láser y de las maniobras evasivas con la Cyclone la convirtieron en la punta de lanza táctica en incursiones dentro de colmenas Invid. Aunque al principio chocaba constantemente con el carácter bromista de Rand, su mutua devoción bajo el fuego enemigo forjó un romance profundo y auténtico, derribando sus corazas emocionales y guiando al escuadrón en la batalla de liberación final.",
+    "tactical_analysis_en": "Crossing paths with Scott and Rand during a shootout in a hostile border town, Rook showcased peerless close-quarters ferocity: her pinpoint laser rifle gunnery and lightning acrobatic maneuvers on her Cyclone turned her into the squad's deadliest point breacher into Invid hives. Though initially clashing with Rand's relentless teasing, their shared courage under heavy fire melted her defenses into profound romantic devotion, leading the charge in the final liberation assault."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 78,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Comandante de asalto urbano; instinto nato para coordinar fuego de cobertura y rupturas de cerco."
+    },
+    "strategy": {
+      "value": 82,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Conocimiento del terreno urbano, emboscadas en ruinas y detección de colaboracionistas."
+    },
+    "resolve": {
+      "value": 98,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Coraje legendario; no retrocede ante mechas Invid que triplican su tamaño."
+    },
+    "piloting": {
+      "value": 97,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "As de conducción de Cyclone y tiradora de élite sobre dos ruedas a máxima aceleración."
+    }
+  },
+  "stats": {
+    "command": 78,
+    "strategy": 82,
+    "resolve": 98,
+    "piloting": 97
+  },
+  "service_record": [
+    {
+      "period": "2039 - 2041",
+      "assignment_es": "Líder de autodefensa urbana contra pandillas colaboracionistas en ciudades ruinosas",
+      "assignment_en": "Urban defense leader against collaborator gangs in occupied ruined cities"
+    },
+    {
+      "period": "2042",
+      "assignment_es": "Se une a la guerrilla de Scott Bernard; salva al equipo en múltiples asaltos de emboscada",
+      "assignment_en": "Joins Scott Bernard's guerrilla unit; rescues team during multiple alien ambushes"
+    },
+    {
+      "period": "2042 - 2044",
+      "assignment_es": "Especialista de asalto en la marcha continental hacia Punto Réflex",
+      "assignment_en": "Assault breacher on the cross-continental march toward Reflex Point"
+    },
+    {
+      "period": "2044",
+      "assignment_es": "Asalto final a la Colmena de la Regis; celebra la liberación de la Tierra junto a Rand",
+      "assignment_en": "Final assault on the Regis's Hive; celebrates Earth's liberation alongside Rand"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Rand",
+      "relation_es": "El hombre que logró derribar sus barreras y a quien ama; formaron la pareja más icónica de la resistencia.",
+      "relation_en": "The man who dismantled her emotional walls and whom she loves; the iconic couple of the resistance."
+    },
+    {
+      "character": "Scott Bernard",
+      "relation_es": "Su respetado líder militar; admiraba su disciplina férrea y su negativa a rendirse ante la adversidad.",
+      "relation_en": "Her respected military commander; admired his discipline and unyielding refusal to surrender."
+    },
+    {
+      "character": "Annie Labelle",
+      "relation_es": "Hermana menor protectora; a menudo la reprendía por imprudente pero la cuidaba con su vida.",
+      "relation_en": "Protective older sister; scolded Annie's recklessness while guarding her life fiercely."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "En este mundo tienes dos opciones: o te sientas a llorar esperando que los Invid te aplasten, ¡o agarras un arma y les das pelea!",
+      "quote_en": "In this world you've got two choices: sit and cry waiting for the Invid to crush you, or grab a gun and fight back!",
+      "context_es": "Arenga a los habitantes de un pueblo oprimido por los Invid.",
+      "context_en": "Rallying townsfolk oppressed by alien Invid forces."
+    },
+    {
+      "quote_es": "¡Rand, idiota! Si crees que vas a lanzarte contra esa patrulla Invid sin mí, ¡estás muy equivocado!",
+      "quote_en": "Rand, you idiot! If you think you're charging that Invid patrol without me, you're dead wrong!",
+      "context_es": "Acelerando su Cyclone para cubrir la retaguardia de Rand en combate.",
+      "context_en": "Accelerating her Cyclone to cover Rand's flank in battle."
+    }
+  ]
+}

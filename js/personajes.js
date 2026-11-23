@@ -17,6 +17,10 @@ const CHAR_I18N = {
     cat_pilots: "PILOTOS Y ASES",
     cat_zentraedi: "LÍDERES ZENTRAEDI",
     cat_scientists: "CIENTÍFICOS Y CIVILES",
+    gen_all: "TODAS LAS GENERACIONES (40)",
+    gen_1: "1ª GEN: MACROSS (18)",
+    gen_2: "2ª GEN: MAESTROS (12)",
+    gen_3: "3ª GEN: INVASIÓN INVID (10)",
     search_placeholder: "Buscar por nombre, rango, asignación o saga...",
     records_label: "EXPEDIENTES ACTIVOS:",
     btn_dossier: "EXPEDIENTE MILITAR",
@@ -44,6 +48,10 @@ const CHAR_I18N = {
     cat_pilots: "PILOTS & ACES",
     cat_zentraedi: "ZENTRAEDI LEADERS",
     cat_scientists: "SCIENTISTS & CIVILIANS",
+    gen_all: "ALL GENERATIONS (40)",
+    gen_1: "1ST GEN: MACROSS (18)",
+    gen_2: "2ND GEN: MASTERS (12)",
+    gen_3: "3RD GEN: INVID INVASION (10)",
     search_placeholder: "Search by name, rank, assignment or saga...",
     records_label: "ACTIVE DOSSIERS:",
     btn_dossier: "MILITARY DOSSIER",
@@ -63,6 +71,7 @@ const CHAR_I18N = {
 
 window.charState = {
   lang: localStorage.getItem('robotech_lang') || 'es',
+  generation: 'all',
   category: 'all',
   searchQuery: '',
   manifest: null,
@@ -73,6 +82,7 @@ window.charState = {
 document.addEventListener('DOMContentLoaded', () => {
   initLanguage();
   initSoundToggle();
+  setupGenerationNav();
   setupCategoryNav();
   setupSearch();
   setupModalEvents();
@@ -161,9 +171,33 @@ async function loadManifest() {
   }
 }
 
-// --------------------------------------------------------------------------
-// FILTRADO Y BÚSQUEDA TÁCTICA
-// --------------------------------------------------------------------------
+const CATEGORY_MAP = {
+  command: ['command', 'commanders'],
+  pilots: ['pilots'],
+  zentraedi: ['zentraedi', 'villains', 'invid'],
+  scientists: ['scientists', 'support', 'civilians']
+};
+
+function matchesCategory(charCategory, selectedCategory) {
+  if (selectedCategory === 'all') return true;
+  const mapped = CATEGORY_MAP[selectedCategory];
+  if (mapped) {
+    return mapped.includes(charCategory) || charCategory === selectedCategory;
+  }
+  return charCategory === selectedCategory;
+}
+function setupGenerationNav() {
+  document.querySelectorAll('.gen-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.gen-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      window.charState.generation = btn.dataset.generation;
+      window.tacticalAudio?.hover();
+      renderCharacters();
+    });
+  });
+}
+
 function setupCategoryNav() {
   document.querySelectorAll('.cat-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -198,14 +232,16 @@ function renderCharacters() {
   const q = window.charState.searchQuery;
 
   const filtered = window.charState.manifest.characters.filter(c => {
-    if (cat !== 'all' && c.category !== cat) return false;
+    if (!matchesCategory(c.category, cat)) return false;
+    if (window.charState.generation && window.charState.generation !== 'all' && c.generation !== window.charState.generation) return false;
     if (q) {
       const name = (c.name || '').toLowerCase();
       const jp = (c.japanese_name || '').toLowerCase();
       const rank = ((c.rank?.[lang] || c.rank?.en || '')).toLowerCase();
       const assignment = ((c.assignment?.[lang] || c.assignment?.en || '')).toLowerCase();
       const summary = ((c.summary?.[lang] || c.summary?.en || '')).toLowerCase();
-      return name.includes(q) || jp.includes(q) || rank.includes(q) || assignment.includes(q) || summary.includes(q);
+      const series = ((c.series?.[lang] || c.series?.en || '')).toLowerCase();
+      return name.includes(q) || jp.includes(q) || rank.includes(q) || assignment.includes(q) || summary.includes(q) || series.includes(q);
     }
     return true;
   });

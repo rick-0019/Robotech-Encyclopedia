@@ -1,0 +1,157 @@
+{
+  "id": "princess_sera",
+  "name": "Princesa Sera",
+  "japanese_name": "Sera (セーラ)",
+  "callsign": "Lavender Valkyrie // Invid Princess",
+  "rank": {
+    "es": "Princesa Real de Punto Réflex // As de Mecha Comandante Real Invid",
+    "en": "Royal Princess of Reflex Point // Invid Royal Command Mecha Ace"
+  },
+  "role": {
+    "es": "Comandante Real Invid, Compañera de Lancer y Enlace Biológico entre Especies",
+    "en": "Invid Royal Commander, Partner to Lancer & Living Bridge Between Species"
+  },
+  "category": "pilots",
+  "faction": {
+    "es": "Imperio Biológico Invid // Alianza de Paz con la Resistencia Terrestre",
+    "en": "Invid Biological Empire // Peace Alliance with Earth Resistance"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "assignment": {
+    "es": "Mecha Real Comandante Invid (Gosú Lavanda) // Sector de Defensa Central",
+    "en": "Invid Royal Command Mecha (Lavender Gosu) // Central Defense Sector"
+  },
+  "birth_date": "Año 2043 (Transmutación Fase Cinco)",
+  "birth_place": {
+    "es": "Cámara de Génesis Bio-Orgánica, Punto Réflex",
+    "en": "Bio-Organic Genesis Chamber, Reflex Point"
+  },
+  "blood_type": "Genoma Humano Transmutado / Esencia de Flor de la Vida",
+  "height": "1,75 m",
+  "weight": "55 kg",
+  "thumbnail": "assets/images/personajes/princess_sera/sera_portrait.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/princess_sera/sera_portrait.jpg",
+      "title_es": "Princesa Sera - Retrato Oficial de la Comandante Invid",
+      "title_en": "Princess Sera - Official Portrait of Invid Commander",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/princess_sera/sera_mecha.jpg",
+      "title_es": "Sera y su Mecha Real Comandante Gosú",
+      "title_en": "Sera and her Royal Command Gosu Mecha",
+      "type_es": "Registro de Combate",
+      "type_en": "Combat Record"
+    },
+    {
+      "url": "assets/images/personajes/princess_sera/sera_lancer.jpg",
+      "title_es": "Sera y Lancer - El Milagro de la Unión y la Música",
+      "title_en": "Sera and Lancer - The Miracle of Union & Music",
+      "type_es": "Registro de Campo",
+      "type_en": "Field Record"
+    }
+  ],
+  "summary": {
+    "es": "Princesa Invid transmutada por la Regis a forma humanoide junto a su hermano Corg. Designada para erradicar las fuerzas de la resistencia humana, su vida cambió irrevocablemente al escuchar la música y el canto de Lancer (Yellow Dancer). Desgarrada entre la lealtad a su madre colmena y el despertar del amor y la compasión humana, Sera enfrentó a su sanguinario hermano Corg, convirtiéndose en el puente viviente entre humanos e Invid al engendrar la primera descendencia híbrida de ambas razas.",
+    "en": "Invid princess transmuted by the Regess into humanoid form alongside her brother Corg. Dispatched to crush human resistance legions, her destiny transformed completely upon experiencing the music and soulful songs of Lancer (Yellow Dancer). Torn between unquestioned loyalty to the hive-mother and the intoxicating awakening of human empathy and love, Sera took up arms against her genocidal brother Corg, becoming the living bridge between humanity and the Invid by carrying the first hybrid child of both species."
+  },
+  "lore": {
+    "overview_es": "Engendrada para dotar a las fuerzas Invid de liderazgo táctico avanzado con la agilidad e intuición propias de los humanoides, Sera recibió el mando de una legión aérea en su Mecha Real Gosú de tonalidades violáceas. Durante una incursión de ataque a una base de la resistencia, presenció una presentación clandestina de Yellow Dancer: la armonía, melodía y vulnerabilidad de la música humana sacudieron sus circuitos sinápticos y despertaron sentimientos que ningún Invid había experimentado jamás.",
+    "overview_en": "Bred to supply Invid forces with peerless battlefield leadership coupled with the intuition and agility of humanoid anatomy, Sera was granted command of an aerial fleet aboard her violet-hued Gosu Royal Command Mecha. During a tactical raid on a guerrilla bastion, she witnessed a secret performance by Yellow Dancer: the harmony, lyrical emotion, and raw humanity of the song resonated through her soul, awakening emotions never before felt by an Invid warrior.",
+    "tactical_analysis_es": "Piloto de destreza excepcional capaz de rivalizar con los mejores ases de caza de la REF, Sera combatió cara a cara contra Lancer en múltiples ocasiones, hasta que los combates se transformaron en encuentros de intimidad y diálogo. Al comprobar que Corg planeaba el exterminio total y la destrucción de la Tierra, Sera desafió los mandatos de la colmena, protegió a Lancer con su propia nave y suplicó junto a Ariel el perdón de la Regis. Al concluir la batalla, decidió permanecer en la Tierra para dar a luz al hijo de ambos en un mundo en reconstrucción.",
+    "tactical_analysis_en": "A virtuoso pilot whose dogfighting reflexes rivaled the elite aces of the REF, Sera clashed repeatedly against Lancer, encounters that gradually shifted from deadly firefights into profound intimacy and shared philosophy. Realizing that Corg was consumed by indiscriminate bloodlust, Sera openly defied hive orders, shielded Lancer with her own chassis, and pleaded with the Regess alongside Ariel for mercy. When the hive departed into the cosmos, she chose to remain on Earth, nurturing their unborn child as a beacon of harmony in a rebuilding world."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 85,
+      "label_es": "Liderazgo de Vanguardia y Nobleza",
+      "label_en": "Vanguard Command & Nobility",
+      "description_es": "Capaz de inspirar y comandar divisiones de cazas bio-Invid con honor, moderación y temple táctico.",
+      "description_en": "Commands bio-Invid aerial divisions with supreme tactical poise, nobility, and tactical restraint."
+    },
+    "strategy": {
+      "value": 82,
+      "label_es": "Comprensión Psico-Social y Conexión",
+      "label_en": "Psycho-Social Insight & Connection",
+      "description_es": "Primera líder Invid en descifrar el impacto de la cultura, la emoción y el arte en la motivación bélica.",
+      "description_en": "First Invid commander to comprehend the transformative power of art, music, and emotional resolve."
+    },
+    "resolve": {
+      "value": 94,
+      "label_es": "Coraje Redentor y Sacrificio",
+      "label_en": "Redemptive Courage & Self-Sacrifice",
+      "description_es": "Desafió el mandato genocida de su propia especie y arriesgó la aniquilación para salvar la vida de su amado.",
+      "description_en": "Defied her own species' genocidal imperative, braving annihilation to save her beloved."
+    },
+    "piloting": {
+      "value": 93,
+      "label_es": "As de Mecha Real Comandante",
+      "label_en": "Royal Command Mecha Ace",
+      "description_es": "Destreza aerotáctica formidable en combates supersónicos en gravedad y atmósfera terrestre.",
+      "description_en": "Peerless aerial agility and dogfight lethality within planetary atmospheric environments."
+    }
+  },
+  "timeline": [
+    {
+      "date": "2043",
+      "milestone_es": "Génesis y Asignación de Mando",
+      "milestone_en": "Genesis & Royal Command Assignment",
+      "desc_es": "Transmutada a la forma humana por la Regis para combatir a las células rebeldes terrestres.",
+      "desc_en": "Transmuted into humanoid form by the Regess to hunt and eliminate terrestrial resistance fighters."
+    },
+    {
+      "date": "2044",
+      "milestone_es": "Encuentro con Lancer y Despertar",
+      "milestone_en": "Encounter with Lancer & Emotional Awakening",
+      "desc_es": "Escucha la música de Yellow Dancer; descubre la compasión, el amor y la belleza del alma humana.",
+      "desc_en": "Hears Yellow Dancer's song; discovers compassion, romantic devotion, and human soulfulness."
+    },
+    {
+      "date": "2044",
+      "milestone_es": "Rebelión por Amor y Promesa de Futuro",
+      "milestone_en": "Rebellion for Love & Promise of Future",
+      "desc_es": "Lucha contra Corg, protege a Lancer y permanece en la Tierra como madre de la nueva era de paz interplanetaria.",
+      "desc_en": "Defies Corg, shields Lancer, and stays on Earth to birth the new dawn of interplanetary peace."
+    }
+  ],
+  "quotes": [
+    {
+      "text_es": "Tu música... penetró en un lugar dentro de mí que no sabía que existía. No puedo destruirte, porque al hacerlo destruiría mi propia alma.",
+      "text_en": "Your music... reached a place deep inside me I never knew existed. I cannot destroy you, for doing so would destroy my own soul.",
+      "context_es": "Sera revelando sus sentimientos a Lancer tras bajar sus armas",
+      "context_en": "Sera confessing her feelings to Lancer after lowering her weapons"
+    },
+    {
+      "text_es": "¡Hermano, detente! ¡El odio te está consumiendo! ¡La humanidad no debe ser destruida!",
+      "text_en": "Brother, stop! Hatred is devouring your reason! Humanity must not be destroyed!",
+      "context_es": "Sera interponiéndose entre el mecha de Corg y la resistencia",
+      "context_en": "Sera intervening between Corg's command mecha and the resistance"
+    }
+  ],
+  "relationships": [
+    {
+      "character_id": "lancer",
+      "name": "Lancer (Lance Belmont)",
+      "relation_es": "Amor redentor, devoción mutua y padre de su hijo",
+      "relation_en": "Redemptive love, mutual devotion, and father of her child"
+    },
+    {
+      "character_id": "regis_invid",
+      "name": "Regis Invid",
+      "relation_es": "Madre reina a quien suplicó compasión por la humanidad",
+      "relation_en": "Queen mother whom she implored for mercy toward humanity"
+    },
+    {
+      "character_id": "prince_corg",
+      "name": "Príncipe Corg",
+      "relation_es": "Hermano a quien enfrentó para detener el exterminio",
+      "relation_en": "Brother whom she opposed to prevent total genocide"
+    }
+  ]
+}

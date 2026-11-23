@@ -1,0 +1,148 @@
+{
+  "id": "louie_nichols",
+  "name": "Louie Nichols",
+  "japanese_name": "Bowie Nichols",
+  "callsign": "Tech Genius // Cyber-Eye",
+  "rank": {
+    "es": "Cabo (ATAC 15º Escuadrón) // Comandante / Asesor Científico Jefe (REF)",
+    "en": "Corporal (15th ATAC Squad) // Commander & Chief Scientific Advisor (REF)"
+  },
+  "role": {
+    "es": "Ingeniero Tecnológico del Escuadrón 15, Inventor del 'Pupil Pistol' y Científico de la REF",
+    "en": "15th Squad Technical Engineer, Inventor of the 'Pupil Pistol' & REF Lead Scientist"
+  },
+  "category": "scientists",
+  "faction": {
+    "es": "Ejército de la Cruz del Sur (15º Escuadrón ATAC) // Fuerza Expedicionaria Robotech (REF)",
+    "en": "Army of the Southern Cross (15th ATAC Squad) // Robotech Expeditionary Force (REF)"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "Los Maestros de la Robotech & Las Crónicas de las Sombras",
+    "en": "The Robotech Masters & The Shadow Chronicles"
+  },
+  "assignment": {
+    "es": "Cuartel General de la Cruz del Sur // 15º Escuadrón // Buque Insignia Icarus / SDF-4",
+    "en": "Southern Cross Headquarters // 15th Squad // Flagship Icarus / SDF-4"
+  },
+  "birth_date": "8 de Febrero de 2013",
+  "birth_place": {
+    "es": "Norteamérica (Tierra)",
+    "en": "North America (Earth)"
+  },
+  "blood_type": "B+",
+  "height": "1,69 m",
+  "weight": "56 kg",
+  "thumbnail": "assets/images/personajes/louie_nichols/louie_portrait.png",
+  "images": [
+    {
+      "url": "assets/images/personajes/louie_nichols/louie_portrait.png",
+      "title_es": "Louie Nichols - Genio Técnico del 15º Escuadrón ATAC",
+      "title_en": "Louie Nichols - 15th ATAC Squad Technical Genius",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/louie_nichols/louie_shadow.png",
+      "title_es": "Comandante Louie Nichols - Era Shadow Chronicles y Enlace con Janice Em",
+      "title_en": "Commander Louie Nichols - Shadow Chronicles Era & Link to Janice Em",
+      "type_es": "Expansión REF",
+      "type_en": "REF Era"
+    }
+  ],
+  "summary": {
+    "es": "El prodigio informático y mecánico del 15º Escuadrón. Inventor del visor de puntería bio-ocular 'Pupil Pistol', sufrió un dilema ético cuando el ejército militarizó su invento para armas letales. Años después, se convirtió en el científico jefe de la REF en 'Las Crónicas de las Sombras', descifrando la traición Haydonita.",
+    "en": "The mechanical and software prodigy of the 15th Squad. Inventor of the bio-ocular 'Pupil Pistol' targeting interface, he endured a crisis of conscience when the military weaponized it. Years later, he emerged as chief scientist of the REF in 'The Shadow Chronicles', uncovering the Haydonite conspiracy."
+  },
+  "lore": {
+    "overview_es": "Con una mente privilegiada para el software y la mecatrónica, Louie Nichols fue asignado al 15º Escuadrón Blindado (ATAC) de la Cruz del Sur como soporte técnico y piloto de Hovertank. Apasionado por los videojuegos y los interfaces hombre-máquina, diseñó en su tiempo libre un sistema de seguimiento pupilar que permitía apuntar cañones con solo mover los ojos: el célebre 'Pupil Pistol'. Su horror fue mayúsculo cuando los oficiales superiores confiscaron su invento para convertirlo en un visor de tiro automático letal para los mechas espaciales.",
+    "overview_en": "Endowed with an extraordinary intellect for cybernetics and mechatronics, Louie Nichols was assigned to the 15th ATAC Squad as technical support and Hovertank gunner. Obsessed with computing and human-machine telemetry, he engineered a neural-ocular tracking interface allowing gunners to aim heavy weapons using simple gaze vectoring: the famous 'Pupil Pistol'. His conscience was shaken when military brass requisitioned his interface to manufacture lethal automated targeting systems for aerospace mecha.",
+    "tactical_analysis_es": "Durante la Segunda Guerra Robotech, los análisis balísticos de Louie permitieron a Dana Sterling vulnerar los blindajes biónicos de los Bioroids. Tras la invasión Invid, Louie logró evacuar la Tierra y unirse a la Fuerza Expedicionaria Robotech (REF) en el espacio profundo, ascendiendo a Comandante y Director Científico a bordo del acorazado Icarus. En 'Las Crónicas de las Sombras' (2044), Louie colaboró con la androide Janice Em para desenmascarar el caballo de Troya de la 'Tecnología de las Sombras' suministrada por los Haydonitas, salvando a la flota humana de la aniquilación.",
+    "tactical_analysis_en": "Throughout the Second Robotech War, Louie's telemetry diagnostics enabled Dana Sterling to exploit micro-fractures in alien Bioroid hulls. Following the Invid Occupation, Louie evacuated into deep space, enlisting within the Robotech Expeditionary Force (REF) where he rose to Commander and Chief Scientist aboard the flagship Icarus. In 'The Shadow Chronicles' (2044), Louie partnered with synthetic gynoid Janice Em to unmask the Trojan horse embedded in the Haydonites' 'Shadow Technology', rescuing the human fleet from extinction."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 78,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Mando científico y tecnológico de laboratorio y soporte táctico en buques nodriza."
+    },
+    "strategy": {
+      "value": 98,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Mente analítica suprema; descifró códigos de computación cuántica alienígena y backdoors de los Haydonitas."
+    },
+    "resolve": {
+      "value": 91,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Ética inquebrantable; arriesgó su carrera militar para protestar contra el uso destructivo de sus inventos."
+    },
+    "piloting": {
+      "value": 80,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Piloto de Hovertank y soporte técnico en cabina; habilidad técnica antes que agresividad bruta."
+    }
+  },
+  "stats": {
+    "command": 78,
+    "strategy": 98,
+    "resolve": 91,
+    "piloting": 80
+  },
+  "service_record": [
+    {
+      "period": "2029",
+      "assignment_es": "Especialista técnico del 15º Escuadrón ATAC; desarrolla el prototipo de visor ocular 'Pupil Pistol'",
+      "assignment_en": "15th ATAC Squad technical specialist; invents the 'Pupil Pistol' optical targeting interface"
+    },
+    {
+      "period": "2029 - 2030",
+      "assignment_es": "Analista de datos bio-mecánicos de los Bioroids capturados; apoya la misión de Dana Sterling",
+      "assignment_en": "Bio-mechanical diagnostic analyst on captured Bioroids; supports Dana Sterling's squad"
+    },
+    {
+      "period": "2031 - 2043",
+      "assignment_es": "Evacúa la Tierra rumbo a la REF; asciende a Comandante Científico en el desarrollo de la flota",
+      "assignment_en": "Evacuates Earth joining the REF; rises to Scientific Commander in naval R&D"
+    },
+    {
+      "period": "2044+",
+      "assignment_es": "Científico Jefe a bordo del Icarus en 'The Shadow Chronicles'; descifra la traición Haydonita",
+      "assignment_en": "Chief Scientist aboard Icarus in 'The Shadow Chronicles'; exposes the Haydonite conspiracy"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Dana Sterling",
+      "relation_es": "Su respetada comandante en el 15º Escuadrón; siempre valoró su genio y lo protegió de los abusos de mando.",
+      "relation_en": "His respected squad commander in 15th ATAC; valued his intellect and defended him against brass abuse."
+    },
+    {
+      "character": "Bowie Grant",
+      "relation_es": "Compañero de barracón y amigo íntimo; compartían debates sobre arte, música y circuitos bioeléctricos.",
+      "relation_en": "Barracks mate and close friend; shared discussions linking art, music, and bioelectric circuits."
+    },
+    {
+      "character": "Janice Em",
+      "relation_es": "Colega cibernética en la REF; juntos descifraron la vulnerabilidad de las naves Haydonitas.",
+      "relation_en": "Cybernetic colleague in the REF; together uncovered the critical weakness of the Haydonite armada."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "Yo creé el Pupil Pistol para ayudar a las personas y hacer videojuegos... no para que los militares maten más eficientemente.",
+      "quote_en": "I created the Pupil Pistol to help people and make games... not for the military to slaughter with greater efficiency.",
+      "context_es": "Protesta a los oficiales de intendencia de la Cruz del Sur.",
+      "context_en": "Protest to Southern Cross ordnance officers upon the weaponization of his patent."
+    },
+    {
+      "quote_es": "¡Capitán Grant, la tecnología de las Sombras es una trampa! Si no purgamos estos generadores ahora mismo, los Haydonitas nos vaporizarán a todos.",
+      "quote_en": "Captain Grant, the Shadow Technology is a Trojan horse! If we don't purge these cloak drives right now, the Haydonites will vaporize us all.",
+      "context_es": "Alerta crítica transmitida en el puente del Icarus en 'The Shadow Chronicles'.",
+      "context_en": "Critical alert broadcast on the bridge of the Icarus in 'The Shadow Chronicles'."
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "id": "ben_dixon",
+  "name": "Ben Dixon",
+  "japanese_name": "Hayao Kakizaki",
+  "callsign": "Vermilion-3 // Big Ben",
+  "rank": {
+    "es": "Cabo // Teniente (Escuadrón Vermilion / Escuadrón Skull)",
+    "en": "Corporal // Lieutenant (Vermilion Squadron / Skull Squadron)"
+  },
+  "role": {
+    "es": "Piloto de Caza Veritech VF-1A y Miembro Fundador del Escuadrón Vermilion",
+    "en": "VF-1A Veritech Fighter Pilot & Founding Member of Vermilion Squadron"
+  },
+  "category": "pilots",
+  "faction": {
+    "es": "U.N. Spacy - Escuadrón Vermilion / Skull",
+    "en": "U.N. Spacy - Vermilion / Skull Squadron"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "assignment": {
+    "es": "SDF-1 Macross // Escuadrón Vermilion (VF-1A Valkyrie Castaño)",
+    "en": "SDF-1 Macross // Vermilion Squadron (Brown VF-1A Valkyrie)"
+  },
+  "birth_date": "18 de Agosto de 1993",
+  "birth_place": {
+    "es": "Texas, Estados Unidos (Tierra)",
+    "en": "Texas, United States (Earth)"
+  },
+  "blood_type": "O+",
+  "height": "1,85 m",
+  "weight": "95 kg",
+  "thumbnail": "assets/images/personajes/ben_dixon/ben_card.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/ben_dixon/ben_card.jpg",
+      "title_es": "Ben Dixon - Retrato Táctico con Emblema RDF",
+      "title_en": "Ben Dixon - Tactical Portrait with RDF Insignia",
+      "type_es": "Retrato Táctico",
+      "type_en": "Tactical Portrait"
+    },
+    {
+      "url": "assets/images/personajes/ben_dixon/ben_portrait.jpg",
+      "title_es": "Teniente Dixon - Retrato de Vuelo RDF",
+      "title_en": "Lieutenant Dixon - Official RDF Flight Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/ben_dixon/ben_cockpit.png",
+      "title_es": "En la Cabina del VF-1A Valkyrie en Combate",
+      "title_en": "In Cockpit of VF-1A Valkyrie During Engagement",
+      "type_es": "Misión Operativa",
+      "type_en": "Combat Sortie"
+    },
+    {
+      "url": "assets/images/personajes/ben_dixon/vermilion_trio.jpg",
+      "title_es": "El Escuadrón Vermilion: Max Sterling, Ben Dixon y Rick Hunter",
+      "title_en": "The Vermilion Squadron: Max Sterling, Ben Dixon & Rick Hunter",
+      "type_es": "Registro de Escuadrón",
+      "type_en": "Squadron Log"
+    }
+  ],
+  "summary": {
+    "es": "El leal, alegre e intrépido compañero de ala de Rick Hunter y Max Sterling en el Escuadrón Vermilion. De apetito voraz y corazón generoso, su valentía en combate y su heroico sacrificio dejaron una huella imborrable en la historia de la RDF.",
+    "en": "The fiercely loyal, jovial, and fearless wingman to Rick Hunter and Max Sterling in the Vermilion Squadron. Famous for his hearty appetite and generous heart, his valor and tragic sacrifice became etched in RDF lore."
+  },
+  "lore": {
+    "overview_es": "Robusto, entusiasta y de risa contagiosa, Ben Dixon ingresó a la academia de aviación de las Fuerzas de Defensa Robotech en el SDF-1 al mismo tiempo que Max Sterling. A pesar de que sus reflejos no alcanzaban la genialidad sobrehumana de Max, su resistencia física, su tenacidad bajo fuego y su lealtad absoluta a sus compañeros le valieron ser seleccionado por Roy Fokker para integrar el legendario Escuadrón Vermilion bajo el liderazgo del Teniente Rick Hunter.",
+    "overview_en": "Brawny, boisterous, and quick with a hearty laugh, Ben Dixon enlisted in the Robotech Defense Force aviation academy aboard the SDF-1 in the same cohort as Max Sterling. While lacking Sterling's pristine kinetic genius, Dixon's rugged resilience, sheer tenacity under heavy fire, and unwavering loyalty to his wingmen earned him selection by Roy Fokker to form the core of Vermilion Squadron under Lieutenant Rick Hunter.",
+    "tactical_analysis_es": "A los mandos de su caza Veritech VF-1A castaño y blanco, Ben era el soporte de fuego pesado y contención del escuadrón. A menudo absorbió fuego enemigo para permitir que Rick o Max maniobraran en los flancos de formaciones Zentraedi. Capturado junto a Rick, Lisa y Max por el Comandante Breetai en el espacio profundo, mantuvo el ánimo del grupo intacto. Durante la devastadora sobrecarga del Sistema de Barrera Omnidireccional en Norteamérica, su caza fue consumido por la onda expansiva mientras cubría la retirada civil, muriendo como un héroe condecorado.",
+    "tactical_analysis_en": "Piloting his brown-and-white standard VF-1A Veritech, Ben served as the squadron's resilient heavy anchor and covering gunner, frequently drawing enemy fire so Hunter or Sterling could exploit flanking vectors through Zentraedi Regult screens. Captured alongside Rick, Lisa, and Max by Commander Breetai in deep space, his irrepressible good humor kept crew morale afloat during interrogation. During the catastrophic overload of the Omnidirectional Barrier System over North America, his fighter was vaporized while shielding civilian zones, cementing his memory as a decorated hero."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 72,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Excelente piloto subordinado; cumplía órdenes al pie de la letra y cuidaba la retaguardia del escuadrón."
+    },
+    "strategy": {
+      "value": 70,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Estilo de combate directo y agresivo; priorizaba el fuego de cobertura y la protección de su líder."
+    },
+    "resolve": {
+      "value": 94,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Valentía a toda prueba; jamás vaciló en interponerse en la línea de fuego para salvar a un compañero."
+    },
+    "piloting": {
+      "value": 85,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Piloto de combate sólido y contundente, con excelente puntería en ráfagas de cañón GU-11."
+    }
+  },
+  "stats": {
+    "command": 72,
+    "strategy": 70,
+    "resolve": 94,
+    "piloting": 85
+  },
+  "service_record": [
+    {
+      "period": "2009",
+      "assignment_es": "Reclutamiento en la RDF en la Isla Macross; graduado con honores en vuelo Veritech a bordo del SDF-1",
+      "assignment_en": "Enlists in RDF on Macross Island; graduates with honors in Veritech flight aboard SDF-1"
+    },
+    {
+      "period": "2009 - 2010",
+      "assignment_es": "Piloto del Escuadrón Vermilion (VF-1A); misiones de escolta en Marte y los anillos de Saturno",
+      "assignment_en": "Vermilion Squadron pilot (VF-1A); escort sorties over Mars and Saturn's ring system"
+    },
+    {
+      "period": "2010",
+      "assignment_es": "Capturado junto a Rick Hunter y Lisa Hayes por Breetai; participa en la fuga de la nave Zentraedi",
+      "assignment_en": "Captured with Rick Hunter & Lisa Hayes by Breetai; assists in breakout from alien cruiser"
+    },
+    {
+      "period": "2010",
+      "assignment_es": "Promovido a Teniente del Escuadrón Skull tras la condecoración de la tripulación en la Tierra",
+      "assignment_en": "Promoted to Lieutenant in Skull Squadron following fleet commendation on Earth"
+    },
+    {
+      "period": "2010",
+      "assignment_es": "Caído en combate durante la explosión de sobrecarga de la barrera omnidireccional en Norteamérica",
+      "assignment_en": "Killed in action during catastrophic omnidirectional barrier overload over North America"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Rick Hunter",
+      "relation_es": "Su líder de escuadrón y amigo incondicional; Ben siempre cuidó las espaldas de Rick en combate.",
+      "relation_en": "Squadron leader and devoted friend; Ben always guarded Rick's six in high-intensity combat."
+    },
+    {
+      "character": "Max Sterling",
+      "relation_es": "Compañero de generación y polo opuesto; la precisión fría de Max contrastaba con la fuerza bruta de Ben.",
+      "relation_en": "Classmate and polar opposite; Max's cool precision perfectly balanced Ben's raw boisterous energy."
+    },
+    {
+      "character": "Roy Fokker",
+      "relation_es": "Su mentor y comandante, quien le enseñó la camaradería y el coraje que definen al Escuadrón Skull.",
+      "relation_en": "Mentor and commanding officer who instilled the brotherhood and valor of Skull Squadron."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "¡Jefe, déjamelos a mí! ¡Esos cabezas de cono Zentraedi van a aprender lo que es la artillería pesada de Texas!",
+      "quote_en": "Boss, leave them to me! Those Zentradi coneheads are about to learn what Texas heavy firepower is all about!",
+      "context_es": "Comunicaciones de cabina en intercepción sobre los anillos de Saturno.",
+      "context_en": "Cockpit radio comms during interception over Saturn's rings."
+    },
+    {
+      "quote_es": "¡Rick, cuida a Max y a los civiles! ¡Yo mantengo esta línea de defensa!",
+      "quote_en": "Rick, watch over Max and the civilians! I'll hold this defensive line!",
+      "context_es": "Última transmisión de radio antes del colapso de la barrera de energía en Norteamérica.",
+      "context_en": "Final radio transmission prior to the energy barrier overload collapse over North America."
+    }
+  ]
+}

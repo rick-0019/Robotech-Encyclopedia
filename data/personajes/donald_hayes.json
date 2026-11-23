@@ -1,0 +1,148 @@
+{
+  "id": "donald_hayes",
+  "name": "Almirante Donald Hayes",
+  "japanese_name": "Takashi Hayase",
+  "callsign": "Grand Admiral // Alaska Command",
+  "rank": {
+    "es": "Almirante de la Flota // Jefe del Estado Mayor Conjunto de la Tierra Unificada",
+    "en": "Fleet Admiral // Chairman of the United Earth Joint Chiefs of Staff"
+  },
+  "role": {
+    "es": "Comandante en Jefe del Alto Mando Militar Terrestre y Director del Gran Cañón de Alaska",
+    "en": "Commander-in-Chief of Earth Military High Command & Director of the Alaska Grand Cannon"
+  },
+  "category": "command",
+  "faction": {
+    "es": "Gobierno de la Tierra Unificada // Alto Mando de las Fuerzas de Defensa",
+    "en": "United Earth Government // Defense Forces High Command"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "assignment": {
+    "es": "Base Subterránea Sara de Alaska // Complejo Estratégico del Gran Cañón",
+    "en": "Alaska Subterranean Base Sara // Grand Cannon Strategic Complex"
+  },
+  "birth_date": "12 de Abril de 1952",
+  "birth_place": {
+    "es": "Washington D.C., Estados Unidos (Tierra)",
+    "en": "Washington D.C., United States (Earth)"
+  },
+  "blood_type": "A+",
+  "height": "1,83 m",
+  "weight": "84 kg",
+  "thumbnail": "assets/images/personajes/donald_hayes/donald_hayes_showdown.png",
+  "images": [
+    {
+      "url": "assets/images/personajes/donald_hayes/donald_hayes_showdown.png",
+      "title_es": "Almirante Donald Hayes - En la Sala de Control del Gran Cañón",
+      "title_en": "Admiral Donald Hayes - At Grand Cannon Strategic Center",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/donald_hayes/donald_hayes_lineart.webp",
+      "title_es": "Almirante Hayes - Uniforme de Gala del Estado Mayor Conjunto",
+      "title_en": "Admiral Hayes - Joint Chiefs Dress Uniform Lineart",
+      "type_es": "Archivo de Servicio",
+      "type_en": "Service Archive"
+    }
+  ],
+  "summary": {
+    "es": "Comandante supremo del Estado Mayor de la Tierra y padre de Lisa Hayes. Figura severa y obstinada, impulsó la construcción del titánico 'Gran Cañón' en Alaska como la máxima arma de defensa terrestre, sacrificando su vida para dispararlo contra la Gran Flota de Dolza.",
+    "en": "Supreme commander of the United Earth Joint Chiefs and father to Lisa Hayes. A stern and uncompromising leader, he spearheaded the subterranean 'Grand Cannon' in Alaska, laying down his life to discharge it against Dolza's armada."
+  },
+  "lore": {
+    "overview_es": "Proveniente de una distinguida estirpe militar, el Almirante Donald Hayes ascendió a la cúspide de las Fuerzas Armadas durante las convulsas Guerras Globales que precedieron a la caída de la nave alienígena en Macross. Convencido de que la Tierra debía defenderse con una superioridad de fuego abrumadora frente a cualquier amenaza cósmica, convenció al Gobierno Unificado de destinar billones de créditos al ultrasecreto Proyecto del Gran Cañón en Alaska: un acelerador de partículas subterráneo de 6 kilómetros capaz de aniquilar flotas orbitales enteras.",
+    "overview_en": "Hailing from an illustrious military dynasty, Admiral Donald Hayes rose to the apex of the armed forces during the tumultuous Global Civil Wars preceding the alien crash landing on Macross Island. Convinced that Earth's survival required overwhelming terrestrial firepower against cosmic adversaries, he championed the secret Grand Cannon Project in the permafrost of Alaska: a six-kilometer subterranean particle accelerator engineered to vaporize orbital invasion armadas with a single reflex blast.",
+    "tactical_analysis_es": "La relación de Hayes con su hija Lisa estuvo marcada por la rigidez del deber militar, viéndola como su continuadora dinástica pero negándose a retirar al SDF-1 del peligro cuando la nave regresó a la Tierra. Cuando la Gran Flota de Dolza desató el bombardeo orbital global, Hayes activó el Gran Cañón a máxima potencia, destruyendo en un solo disparo a más de 800.000 buques Zentraedi y salvando a la tripulación del SDF-1. Gravemente herido por el contraataque alienígena, logró evacuar a Lisa en una cápsula de supervivencia antes de que la base colapsara, redimiéndose como padre y comandante.",
+    "tactical_analysis_en": "Hayes' dynamic with his daughter Lisa was defined by austere military duty, grooming her as his operational heir while stubbornly refusing sanctuary to the SDF-1 upon its return to Earth to avoid drawing alien fleets to civilian sectors. When Dolza's armada initiated the orbital bombardment, Hayes ordered the Grand Cannon fired at maximum threshold, obliterating over 800,000 alien capital ships in a single titanic beam, cracking the enemy siege. Fatally wounded by the retaliatory orbital strike, he personally bundled Lisa into an escape pod, sealing his legacy as both a patriot and a devoted father."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 98,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Comandante supremo del Estado Mayor de la Tierra; máxima autoridad militar del planeta."
+    },
+    "strategy": {
+      "value": 92,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Planificador de megaproyectos defensivos globales y doctrina de disuasión estratégica masiva."
+    },
+    "resolve": {
+      "value": 99,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Disparó el Gran Cañón mientras el techo de la base subterránea se derretía bajo el fuego nuclear alienígena."
+    },
+    "piloting": {
+      "value": 40,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Estratega naval y terrestre de alto estado mayor, sin rol de aviador activo."
+    }
+  },
+  "stats": {
+    "command": 98,
+    "strategy": 92,
+    "resolve": 99,
+    "piloting": 40
+  },
+  "service_record": [
+    {
+      "period": "1975 - 1999",
+      "assignment_es": "Oficial General en las Guerras Globales; arquitecto del tratado de unificación militar terrestre",
+      "assignment_en": "General Officer in Global Civil Wars; architect of United Earth military unification"
+    },
+    {
+      "period": "2001 - 2008",
+      "assignment_es": "Jefe del Estado Mayor Conjunto; impulsor del Proyecto de Defensa Subterránea del Gran Cañón",
+      "assignment_en": "Chairman of Joint Chiefs; oversees construction of the Alaska Grand Cannon megastructure"
+    },
+    {
+      "period": "2009 - 2010",
+      "assignment_es": "Mando Supremo de la Tierra; gestiona la crisis del salto espacial del SDF-1 y la política de secretismo",
+      "assignment_en": "Earth Supreme Command; directs strategic secrecy and response to SDF-1's disappearance"
+    },
+    {
+      "period": "2011",
+      "assignment_es": "Dispara el Gran Cañón de Alaska aniquilando 800.000 naves de Dolza; muere en el colapso de la base",
+      "assignment_en": "Fires Alaska Grand Cannon destroying 800,000 ships of Dolza; killed in the collapse of Base Sara"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Lisa Hayes",
+      "relation_es": "Su amada hija única y mayor orgullo; su relación fue estricta pero culminó en su rescate heroico.",
+      "relation_en": "His beloved only daughter and proudest legacy; their austere dynamic ended in his heroic rescue of her."
+    },
+    {
+      "character": "Henry Gloval",
+      "relation_es": "Antiguo colega naval de armas; mantuvieron discrepancias sobre el destino de los refugiados del SDF-1.",
+      "relation_en": "Former naval comrade-in-arms; clashed over the tactical handling of SDF-1 civilian refugees."
+    },
+    {
+      "character": "Dr. Emil Lang",
+      "relation_es": "Consultor científico clave con quien colaboró en la ingeniería de disparo del Gran Cañón.",
+      "relation_en": "Key scientific consultant with whom he collaborated on Grand Cannon reflex gunnery."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "¡Carguen la energía de Protocultura al cien por ciento! Si la Tierra ha de arder hoy, ¡nos aseguraremos de que esta flota alienígena arda primero con nosotros!",
+      "quote_en": "Charge Protoculture grids to one hundred percent! If Earth must burn today, we will ensure this alien fleet burns with us first!",
+      "context_es": "Orden de disparo del Gran Cañón de Alaska frente a la Gran Flota de Dolza.",
+      "context_en": "Firing command for the Alaska Grand Cannon against Dolza's Grand Imperial Armada."
+    },
+    {
+      "quote_es": "Lisa... eres mi mayor orgullo y el futuro de nuestra raza. Entra en esa cápsula y vive.",
+      "quote_en": "Lisa... you are my proudest joy and the future of our people. Step inside that capsule and live.",
+      "context_es": "Últimas palabras a su hija antes de sellar la cápsula de escape de la Base Alaska.",
+      "context_en": "Final words to his daughter before sealing her into Base Sara's emergency escape pod."
+    }
+  ]
+}

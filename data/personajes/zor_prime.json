@@ -1,0 +1,153 @@
+{
+  "id": "zor_prime",
+  "name": "Zor Prime",
+  "japanese_name": "Seifriet Weiße",
+  "callsign": "Bioroid Leader // Red Bioroid Pilot",
+  "rank": {
+    "es": "Piloto Comandante Bioroid // Soldado de Primera Honorario del 15º Escuadrón",
+    "en": "Bioroid Commander Pilot // Honorary Private of 15th ATAC Squad"
+  },
+  "role": {
+    "es": "Clon del Creador Original de la Protocultura (Zor) y Enlace Neuronal con los Maestros",
+    "en": "Clone of the Original Creator of Protoculture (Zor) & Neural Link to the Masters"
+  },
+  "category": "scientists",
+  "faction": {
+    "es": "Imperio de los Maestros Robotech // Ejército de la Cruz del Sur (15º Escuadrón)",
+    "en": "Robotech Masters Empire // Army of the Southern Cross (15th ATAC Squad)"
+  },
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Robotech Masters (Second Robotech War)"
+  },
+  "assignment": {
+    "es": "Bioroid Rojo de Asalto de los Maestros // 15º Escuadrón (VHT-1 Spartas)",
+    "en": "Red Assault Bioroid // 15th ATAC Squad (VHT-1 Spartas Hovertank)"
+  },
+  "birth_date": "Fecha Tiroliana Clasificada (Bio-Clonación Tiroliana)",
+  "birth_place": {
+    "es": "Nave Matriz de los Maestros Robotech (Tirol)",
+    "en": "Mothership of the Robotech Masters (Tirol)"
+  },
+  "blood_type": "Desconocido (Genética de Clonación Tiroliana)",
+  "height": "1,84 m",
+  "weight": "72 kg",
+  "thumbnail": "assets/images/personajes/zor_prime/zor_uniform.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/zor_prime/zor_uniform.jpg",
+      "title_es": "Zor Prime - Uniforme Militar de la Cruz del Sur",
+      "title_en": "Zor Prime - Southern Cross Service Uniform",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/zor_prime/zor_armor.jpg",
+      "title_es": "Zor Prime en Armadura de Combate Táctico del 15º Escuadrón",
+      "title_en": "Zor Prime in 15th Squad Tactical Armor",
+      "type_es": "Misión Operativa",
+      "type_en": "Combat Armor"
+    }
+  ],
+  "summary": {
+    "es": "Clon del legendario científico Zor, el padre de la Protocultura. Creado por los Maestros Robotech como piloto de élite de su Bioroid rojo, fue capturado por Dana Sterling, recuperó la memoria de su vida anterior y se sacrificó heroicamente para destruir la nave nodriza de sus creadores.",
+    "en": "Clone of the legendary scientist Zor, discoverer of Protoculture. Bred by the Robotech Masters as the elite pilot of their Red Bioroid, he was captured by Dana Sterling, reawakened to his true memories, and sacrificed himself to destroy the Masters' flagship."
+  },
+  "lore": {
+    "overview_es": "Siglos después de que el científico original Zor enviara la fortaleza SDF-1 al espacio exterior para ocultar la Matriz de Protocultura de los tiránicos Maestros, estos últimos utilizaron células residuales de su cuerpo para clonar a un reemplazo: Zor Prime. Programado mentalmente como una máquina sin memoria para pilotar el Bioroid Rojo de Mando, fue arrojado al combate contra las fuerzas terrestres de la Cruz del Sur, hasta que su unidad fue derribada y capturada intacta por el 15º Escuadrón de Dana Sterling.",
+    "overview_en": "Centuries after the original scientist Zor cast the battle fortress SDF-1 into the cosmic expanse to hide the Protoculture Matrix from the despotic Masters, they used residual cellular tissue to breed a bio-clone: Zor Prime. Programmed with severe amnesia and mental blocks to pilot the apex Red Bioroid, he was deployed against Terran defenses until his machine was disabled and captured intact by Dana Sterling's 15th ATAC Squad.",
+    "tactical_analysis_es": "Zor Prime fue sometido a tortuosos interrogatorios por la Policía Militar Global (GMP), que intentaba descifrar el enlace biónico que conectaba a los pilotos Bioroid con las naves nodriza. Dana Sterling abogó por su humanidad y logró que fuera asignado como soldado raso a su escuadrón. A medida que interactuaba con la Tierra, las barreras psíquicas de los Maestros se derrumbaron, desatando recuerdos milenarios de la traición de su especie y la flor de la vida. En la batalla final, Zor Prime asesinó a los Tres Maestros y detonó los reactores de la nave nodriza en un acto redentor supremo, esparciendo las esporas de la Flor de la Vida por la Tierra.",
+    "tactical_analysis_en": "Zor Prime endured harsh interrogations by the Global Military Police (GMP) seeking to crack the bio-neural cybernetic link between Bioroid pilots and their command motherships. Dana Sterling championed his humanity, securing his transfer into the 15th Squad. Immersed in Terran culture, the Masters' mnemonic blocks fractured, flooding his mind with ancestral memories of Protoculture's tragic genesis. In the climactic assault, Zor executed the triumvirate of Masters and detonated the flagship's main drive in a redemptive sacrifice, scattering Flower of Life spores across Earth."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 85,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Líder de escuadras Bioroid de élite; capacidad innata de coordinar máquinas de guerra a nivel mental."
+    },
+    "strategy": {
+      "value": 96,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Conocimiento enciclopédico de la tecnología de los Maestros y de la física cuántica de la Protocultura."
+    },
+    "resolve": {
+      "value": 98,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Soportó el tormento del control mental alienígena y eligió la muerte para salvar al mundo de Dana."
+    },
+    "piloting": {
+      "value": 97,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Piloto supremo del Bioroid rojo de los Maestros; reflejos bio-neurológicos casi imbatibles."
+    }
+  },
+  "stats": {
+    "command": 85,
+    "strategy": 96,
+    "resolve": 98,
+    "piloting": 97
+  },
+  "service_record": [
+    {
+      "period": "Era de los Maestros",
+      "assignment_es": "Piloto de Bioroid Rojo de Mando de la Flota Invasora de los Maestros Robotech",
+      "assignment_en": "Apex Red Bioroid Command Pilot of the Robotech Masters Invasion Armada"
+    },
+    {
+      "period": "2029",
+      "assignment_es": "Derribado en órbita terrestre y capturado por el 15º Escuadrón ATAC de Dana Sterling",
+      "assignment_en": "Shot down in Earth orbit and captured by Dana Sterling's 15th ATAC Squad"
+    },
+    {
+      "period": "2030",
+      "assignment_es": "Asignado como recluta al 15º Escuadrón de la Cruz del Sur; recupera progresivamente la memoria",
+      "assignment_en": "Assigned as recruit to 15th Southern Cross Squad; progressively reclaims memories"
+    },
+    {
+      "period": "2030",
+      "assignment_es": "Asalto final a la nave insignia alienígena; ajusticia a los Tres Maestros y detona la fortaleza",
+      "assignment_en": "Final assault on alien flagship; slays the Three Masters and detonates the fortress"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Dana Sterling",
+      "relation_es": "La mujer que lo liberó del control mental y a quien amó profundamente; su vínculo fue el eje de la guerra.",
+      "relation_en": "The woman who shattered his neural shackles and whom he loved; their bond shaped the war."
+    },
+    {
+      "character": "Los Maestros Robotech",
+      "relation_es": "Sus creadores y opresores genéticos; los despreció por prostituir su ciencia original para la tiranía.",
+      "relation_en": "His creators and genetic masters; despised them for corrupting his original science into tyranny."
+    },
+    {
+      "character": "Bowie Grant",
+      "relation_es": "Compañero de escuadrón a quien ayudó a proteger a Musica de la intolerancia militar terrestre.",
+      "relation_en": "Squad mate whom he assisted in shielding Musica from military xenophobia."
+    },
+    {
+      "character": "Musica",
+      "relation_es": "Hermana cultural de la civilización tiroliana; la alentó a buscar su propia libertad en la Tierra.",
+      "relation_en": "Cultural sister from Tirolian society; encouraged her to pursue her own freedom on Earth."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "¿Quién soy yo? ¿Un soldado... un científico... o solo un fantasma creado para matar en nombre de amos crueles?",
+      "quote_en": "Who am I? A soldier... a scientist... or merely a ghost cloned to kill in the name of cruel masters?",
+      "context_es": "Crisis de identidad en el laboratorio de la Policía Militar Global.",
+      "context_en": "Identity breakdown inside the Global Military Police examination lab."
+    },
+    {
+      "quote_es": "Dana, ¡vete ahora! Este es mi destino y mi penitencia por haber descubierto la Protocultura. ¡Vence a la oscuridad y vive!",
+      "quote_en": "Dana, get out now! This is my destiny and my penance for uncovering Protoculture. Conquer the dark and live!",
+      "context_es": "Últimas palabras antes de detonar el generador reflex de la nave nodriza de los Maestros.",
+      "context_en": "Final words before detonating the reflex drive of the Masters' flagship."
+    }
+  ]
+}

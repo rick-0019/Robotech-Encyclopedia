@@ -1,0 +1,141 @@
+{
+  "id": "rand",
+  "name": "Rand",
+  "japanese_name": "Ray",
+  "callsign": "Wasteland Rider // Cyclone Scout",
+  "rank": {
+    "es": "Explorador de la Resistencia // Especialista de Moto-Armadura Cyclone VR-052",
+    "en": "Resistance Scout // VR-052 Cyclone Ride Armor Specialist"
+  },
+  "role": {
+    "es": "Explorador de Vanguardia, Narrador del Diario de Viaje y Pareja de Rook Bartley",
+    "en": "Vanguard Scout, Expedition Diarist & Partner to Rook Bartley"
+  },
+  "category": "pilots",
+  "faction": {
+    "es": "Población Civil de la Tierra // Guerrilla de Resistencia de Scott Bernard",
+    "en": "Earth Civilian Population // Scott Bernard's Resistance Wing"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "assignment": {
+    "es": "Guerrilla Terrestre // Moto-Armadura Cyclone VR-052T / VR-038",
+    "en": "Earth Guerrilla Wing // VR-052T / VR-038 Cyclone Ride Armor"
+  },
+  "birth_date": "2 de Mayo de 2026",
+  "birth_place": {
+    "es": "Eriales de Norteamérica (Tierra Ocupada por los Invid)",
+    "en": "North American Wasteland (Invid-Occupied Earth)"
+  },
+  "blood_type": "O+",
+  "height": "1,75 m",
+  "weight": "65 kg",
+  "thumbnail": "assets/images/personajes/rand/rand_portrait.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/rand/rand_portrait.jpg",
+      "title_es": "Rand - Retrato Oficial del Explorador de la Resistencia",
+      "title_en": "Rand - Resistance Scout Official Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    }
+  ],
+  "summary": {
+    "es": "Muchacho libre, rebelde y carismático que creció bajo la tiranía Invid. Primer humano en unirse a Scott Bernard tras encontrar una moto Cyclone abandonada, convirtió su diario de viaje en la crónica viva de la liberación de la Tierra y conquistó el corazón de la solitaria Rook Bartley.",
+    "en": "A free-spirited, resourceful young nomad born under Invid oppression. The first human to join Scott Bernard after salvaging an abandoned Cyclone armor, his travel journal chronicled Earth's liberation as he won the heart of the fiercely independent Rook Bartley."
+  },
+  "lore": {
+    "overview_es": "Nacido poco antes de que los invasores Invid descendieran sobre la Tierra, Rand nunca conoció ciudades intactas ni civilizaciones en paz; su hogar eran los eriales desérticos, los pueblos diezmados y las ruinas de autopistas. Sobrevivía como un chatarrero solitario e ingenioso hasta que tropezó con una cápsula militar caída de la REF y aprendió por su cuenta a pilotar la moto-armadura transformable Cyclone VR-052.",
+    "overview_en": "Born on the eve of the Invid invasion, Rand never knew intact cities or a world at peace; his playground was the radioactive badlands, dusty frontier townships, and abandoned highway ruins. Surviving as a scavenging lone wanderer, his fortune turned when he salvaged an abandoned REF military crate, teaching himself to handle the transformative VR-052 Cyclone ride armor.",
+    "tactical_analysis_es": "Al rescatar a Scott Bernard de un enjambre de Invid Scouts, su vida dio un vuelco: el joven cínico y vagabundo encontró una causa noble por la que arriesgar el pellejo. Rand se convirtió en el explorador de vanguardia del grupo, usando la velocidad y ligereza de su Cyclone para flanquear patrullas enemigas y recopilar inteligencia de terreno. Su romance apasionado y lleno de disputas con Rook Bartley humanizó la dureza del viaje, redactando un diario que capturó el coraje y la esperanza de la resistencia.",
+    "tactical_analysis_en": "Stumbling upon crashed pilot Scott Bernard under Invid attack, Rand's life took a momentous turn: the cynical scavenger found a noble crusade worth dying for. Rand served as the unit's frontline scout, leveraging the nimbleness and terrain flexibility of his Cyclone ride armor to outrun alien patrols and gather combat telemetry. His spirited, banter-fueled romance with Rook Bartley provided the emotional heartbeat of the caravan, penning a journal that preserved humanity's spirit in dark times."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 74,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Líder de patrullas de reconocimiento ligero; excelente intuición de supervivencia en terreno hostil."
+    },
+    "strategy": {
+      "value": 85,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Ingenio callejero; maestro del camuflaje, emboscadas sobre ruedas y evasión de sensores Invid."
+    },
+    "resolve": {
+      "value": 95,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Coraje optimista contagioso; nunca pierde el sentido del humor ni la fe en sus amigos."
+    },
+    "piloting": {
+      "value": 96,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "As de conducción de la moto Cyclone; acrobacias y disparos en movimiento a alta velocidad."
+    }
+  },
+  "stats": {
+    "command": 74,
+    "strategy": 85,
+    "resolve": 95,
+    "piloting": 96
+  },
+  "service_record": [
+    {
+      "period": "2038 - 2041",
+      "assignment_es": "Chatarrero y explorador nómada en los eriales de Norteamérica bajo control Invid",
+      "assignment_en": "Nomadic scavenger and scout across North American Invid-controlled badlands"
+    },
+    {
+      "period": "2042",
+      "assignment_es": "Encuentra la moto Cyclone VR-052; rescata a Scott Bernard y se une a la causa de liberación",
+      "assignment_en": "Recovers VR-052 Cyclone; rescues Scott Bernard and joins the liberation crusade"
+    },
+    {
+      "period": "2042 - 2044",
+      "assignment_es": "Explorador de vanguardia en todas las escaramuzas hasta la colmena de Punto Réflex",
+      "assignment_en": "Point scout across every guerrilla skirmish leading to the Reflex Point hive"
+    },
+    {
+      "period": "2044",
+      "assignment_es": "Participa en el asalto final a la Colmena Central; sobrevive junto a Rook Bartley",
+      "assignment_en": "Participates in the final hive breach; survives the war alongside Rook Bartley"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Rook Bartley",
+      "relation_es": "El gran amor de su vida; su relación comenzó con burlas y rivalidad hasta convertirse en devoción indestructible.",
+      "relation_en": "The love of his life; their bond evolved from bickering rivalry into unbreakable devotion."
+    },
+    {
+      "character": "Scott Bernard",
+      "relation_es": "Su comandante y mejor amigo; Scott le enseñó disciplina militar y Rand le devolvió las ganas de vivir.",
+      "relation_en": "His commander and best friend; Scott taught him discipline while Rand restored his will to live."
+    },
+    {
+      "character": "Annie Labelle",
+      "relation_es": "Hermana menor adoptiva; la protegió de los peligros del camino y de sus locuras amorosas.",
+      "relation_en": "Adoptive younger sister; constantly shielded her from roadside dangers and impulsive antics."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "En los libros antiguos dicen que la Tierra era un paraíso de árboles verdes y mares azules... Scott, ¡te prometo que veremos ese mundo de nuevo!",
+      "quote_en": "Old books say Earth was once a paradise of green trees and blue oceans... Scott, I promise we'll see that world again!",
+      "context_es": "Conversación nocturna junto a la fogata en el desierto.",
+      "context_en": "Nighttime conversation beside the campfire in the desert."
+    },
+    {
+      "quote_es": "¡Oye Rook! ¡Deja de dispararle a todos los Invid del cuadrante o no me vas a dejar nada para presumir!",
+      "quote_en": "Hey Rook! Stop blasting every Invid in the sector or you won't leave any for me to brag about!",
+      "context_es": "Bromeando con Rook Bartley en plena persecución sobre sus motos Cyclone.",
+      "context_en": "Bantering with Rook Bartley during a high-speed Cyclone chase."
+    }
+  ]
+}

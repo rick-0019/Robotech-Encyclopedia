@@ -1,0 +1,153 @@
+{
+  "id": "lynn_kyle",
+  "name": "Lynn Kyle",
+  "japanese_name": "Lynn Kaifun",
+  "callsign": "The Pacifist Voice // Golden Dragon Champion",
+  "rank": {
+    "es": "Líder Civil Antibélico // Maestro de Artes Marciales",
+    "en": "Anti-War Civilian Leader // Martial Arts Master"
+  },
+  "role": {
+    "es": "Activista Pacifista Radical, Manager y Coprotagonista de Lynn Minmei",
+    "en": "Radical Pacifist Activist, Manager & Co-Star to Lynn Minmei"
+  },
+  "category": "scientists",
+  "faction": {
+    "es": "Movimiento Pacifista Civil de Macross City // Población Civil",
+    "en": "Macross City Civilian Pacifist Movement // Civilian Population"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "assignment": {
+    "es": "SDF-1 Macross (Sector Cívico) // Macross City",
+    "en": "SDF-1 Macross (Civic Sector) // Macross City"
+  },
+  "birth_date": "23 de Mayo de 1989",
+  "birth_place": {
+    "es": "Yokohama, Japón (Tierra)",
+    "en": "Yokohama, Japan (Earth)"
+  },
+  "blood_type": "A+",
+  "height": "1,82 m",
+  "weight": "74 kg",
+  "thumbnail": "assets/images/personajes/lynn_kyle/kyle_portrait.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/lynn_kyle/kyle_portrait.jpg",
+      "title_es": "Lynn Kyle - Retrato Oficial y Activista",
+      "title_en": "Lynn Kyle - Official Portrait & Activist",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/lynn_kyle/kyle_minmei.jpg",
+      "title_es": "Lynn Kyle y Lynn Minmei - Días de Conciertos y Disputas",
+      "title_en": "Lynn Kyle & Lynn Minmei - Concert Era & Tensions",
+      "type_es": "Registro Personal",
+      "type_en": "Personal Log"
+    }
+  ],
+  "summary": {
+    "es": "Primo y protector de Lynn Minmei, maestro de kung fu y ardiente opositor a todo conflicto bélico. Su pacifismo radical y su desprecio por las Fuerzas Armadas lo enfrentaron constantemente a Rick Hunter y al mando del SDF-1.",
+    "en": "Cousin and guardian to Lynn Minmei, martial arts master, and ardent opponent of all military violence. His radical pacifism and disdain for the armed forces put him in fierce opposition to Rick Hunter and SDF-1 leadership."
+  },
+  "lore": {
+    "overview_es": "Lynn Kyle creció en Japón y se convirtió en un talentoso practicante de artes marciales chinas tradicionales. Cuando el SDF-1 regresó al espacio terrestre tras meses desaparecido, Kyle y sus padres abordaron la fortaleza para reunirse con Minmei. Traumatizado por la devastación bélica de las Guerras Globales, desarrolló una profunda aversión contra la institución militar, culpando tanto a los humanos de la RDF como a los Zentraedi por perpetuar la violencia.",
+    "overview_en": "Raised in Japan, Lynn Kyle became a formidable master of traditional Chinese martial arts. When the SDF-1 returned to Earth airspace after months missing in deep space, Kyle and his family boarded the battle fortress to reunite with Minmei. Scarred by the planetary devastation of the Global Civil Wars, he harbored an intense bitterness toward all military hierarchies, blaming both the RDF and the Zentradi for perpetuating endless bloodshed.",
+    "tactical_analysis_es": "Aunque civil sin instrucción castrense, Kyle demostró destreza física excepcional en combate sin armas, llegando a desarmar a soldados miclonizados Zentraedi con técnicas de kung fu durante secuestros en el SDF-1. Asumió la representación artística de Minmei y co-protagonizó junto a ella la película 'Shao Pai Long'. Sin embargo, su intransigencia ideológica, su cinismo político y su creciente alcoholismo durante los años de reconstrucción fracturaron su relación con Minmei, apartándolo de la escena pública antes de la partida de la REF.",
+    "tactical_analysis_en": "Though a civilian lacking military training, Kyle demonstrated remarkable close-quarters hand-to-hand skill, disarming micronized Zentraedi infiltrators using kung-fu techniques during crises on the SDF-1. He took over Minmei's management and co-starred in the cinematic release 'Shao Pai Long'. However, his uncompromising self-righteousness, caustic political cynicism, and descent into alcoholism during the reconstruction era shattered his relationship with Minmei, leading to his self-imposed departure before the REF mission."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 58,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Líder de asambleas civiles y mítines pacifistas; retórica persuasiva pero divisiva."
+    },
+    "strategy": {
+      "value": 60,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Análisis político y mediático; nulo conocimiento de tácticas de intercepción armada."
+    },
+    "resolve": {
+      "value": 82,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Valentía física indiscutida en reyertas cuerpo a cuerpo, aunque propenso a desbordes emocionales."
+    },
+    "piloting": {
+      "value": 10,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Totalmente ajeno a la aviación o tecnología mecha; rechaza categóricamente las armas."
+    }
+  },
+  "stats": {
+    "command": 58,
+    "strategy": 60,
+    "resolve": 82,
+    "piloting": 10
+  },
+  "service_record": [
+    {
+      "period": "1999 - 2008",
+      "assignment_es": "Entrenamiento en artes marciales en Asia; oposición civil a la reconstrucción bélica de Macross",
+      "assignment_en": "Martial arts training in Asia; civilian opposition to military reconstruction on Macross"
+    },
+    {
+      "period": "2010",
+      "assignment_es": "Aborda el SDF-1 en órbita terrestre; asume como manager y protector de Lynn Minmei",
+      "assignment_en": "Boards SDF-1 in Earth orbit; assumes role as manager and protector to Lynn Minmei"
+    },
+    {
+      "period": "2010",
+      "assignment_es": "Coprotagonista del largometraje 'Shao Pai Long' filmado en los estudios del SDF-1",
+      "assignment_en": "Co-stars in feature film 'Shao Pai Long' produced within the SDF-1 studios"
+    },
+    {
+      "period": "2011 - 2013",
+      "assignment_es": "Líder del movimiento pacifista de Macross City; organiza protestas contra la militarización de la RDF",
+      "assignment_en": "Leader of Macross City pacifist movement; leads protests against RDF remilitarization"
+    },
+    {
+      "period": "2014",
+      "assignment_es": "Ruptura definitiva con Lynn Minmei; abandona Macross City rumbo a comunidades agrícolas aisladas",
+      "assignment_en": "Final parting with Lynn Minmei; leaves Macross City for isolated agrarian townships"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Lynn Minmei",
+      "relation_es": "Prima, protegida y socia artística; vínculo posesivo y tenso que terminó en distanciamiento irreconciliable.",
+      "relation_en": "Cousin, protégé, and stage partner; possessive, strained dynamic ending in permanent estrangement."
+    },
+    {
+      "character": "Rick Hunter",
+      "relation_es": "Rival directo en el afecto de Minmei; despreciaba el uniforme militar de Rick y su rol como piloto.",
+      "relation_en": "Direct rival for Minmei's affection; scorned Rick's military uniform and fighter pilot status."
+    },
+    {
+      "character": "Henry Gloval",
+      "relation_es": "Crítico frontal del Capitán Gloval, a quien acusaba de arrastrar a civiles a un holocausto cósmico.",
+      "relation_en": "Outspoken critic of Captain Gloval, accusing him of dragging civilians into cosmic holocaust."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "¡Ustedes los militares solo saben disparar! Creen que los cañones traen la paz, pero solo traen cementerios más grandes.",
+      "quote_en": "You military men only know how to shoot! You think guns bring peace, but they only dig bigger cemeteries.",
+      "context_es": "Enfrentamiento verbal con Rick Hunter en los pasillos cívicos del SDF-1.",
+      "context_en": "Heated argument with Rick Hunter in the civilian concourse of the SDF-1."
+    },
+    {
+      "quote_es": "Minmei, la música no debe servir a los generales ni a sus misiles. Te están usando como una sirena de guerra.",
+      "quote_en": "Minmei, music shouldn't serve generals and their missiles. They're turning you into a siren of war.",
+      "context_es": "Intentando persuadir a Minmei de cancelar su participación en la batalla contra Bodolza.",
+      "context_en": "Attempting to persuade Minmei to boycott the military operation against Bodolza."
+    }
+  ]
+}

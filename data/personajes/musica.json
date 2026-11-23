@@ -1,0 +1,158 @@
+{
+  "id": "musica",
+  "name": "Musica",
+  "japanese_name": "Musica",
+  "callsign": "Cosmic Harpist // Siren of the Flowers",
+  "rank": {
+    "es": "Sacerdotisa del Triunvirato Sagrado de la Flor de la Vida // Refugiada",
+    "en": "Priestess of the Sacred Flower of Life Triumvirate // Refugee"
+  },
+  "role": {
+    "es": "Músico Sagrada del Arpa Cósmica, Custodia de las Flores de la Vida y Pareja de Bowie Grant",
+    "en": "Sacred Cosmic Harpist, Custodian of the Flowers of Life & Partner to Bowie Grant"
+  },
+  "category": "scientists",
+  "faction": {
+    "es": "Civilización de los Maestros Robotech (Tirol) // Refugiados en la Tierra",
+    "en": "Robotech Masters Civilization (Tirol) // Earth Refugees"
+  },
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Robotech Masters (Second Robotech War)"
+  },
+  "assignment": {
+    "es": "Cámara Bio-Armónica de la Nave Nodriza // Santuario Civil Terrestre",
+    "en": "Bio-Harmonic Chamber of Masters' Flagship // Earth Civilian Sanctuary"
+  },
+  "birth_date": "Fecha Tiroliana Ancestral (Clonación Tríada)",
+  "birth_place": {
+    "es": "Cámara Sagrada de los Maestros Robotech (Tirol)",
+    "en": "Sacred Chamber of the Robotech Masters (Tirol)"
+  },
+  "blood_type": "Desconocido (Genética Tiroliana Tríada)",
+  "height": "1,67 m",
+  "weight": "51 kg",
+  "thumbnail": "assets/images/personajes/musica/musica_crisis.png",
+  "images": [
+    {
+      "url": "assets/images/personajes/musica/musica_crisis.png",
+      "title_es": "Musica - Sacerdotisa Sagrada del Arpa Cósmica",
+      "title_en": "Musica - Sacred Priestess of the Cosmic Harp",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/musica/musica_portrait.png",
+      "title_es": "Musica - Retrato en la Tierra tras su Deserción",
+      "title_en": "Musica - Portrait on Earth following her Defection",
+      "type_es": "Retrato Personal",
+      "type_en": "Personal Portrait"
+    }
+  ],
+  "summary": {
+    "es": "Sacerdotisa y músico cósmica del triunvirato sagrado de los Maestros Robotech. Encargada de modular el crecimiento de las Flores de la Vida con su arpa, su encuentro y romance con Bowie Grant la llevó a cuestionar el dogma alienígena y desertar a la Tierra, fracturando el control social de su pueblo.",
+    "en": "Cosmic harpist and priestess of the Robotech Masters' sacred triumvirate. Tasked with harmonizing the Flower of Life bio-chambers, her romance with Bowie Grant compelled her to defect to Earth, triggering the ideological collapse of alien society."
+  },
+  "lore": {
+    "overview_es": "Creada como parte de una tríada genética idéntica junto a sus hermanas Allegra y Octavia, Musica fue educada exclusivamente para mantener en calma a la población tiroliana y estimular la germinación de las Flores de la Vida mediante las vibraciones de su arpa cósmica bioeléctrica. En la sociedad estéril y desprovista de individualidad de los Maestros Robotech, Musica jamás conoció el afecto, la elección propia ni el amor romántico hasta que el 15º Escuadrón asaltó la nave nodriza.",
+    "overview_en": "Bred as one element of an identical genetic triumvirate alongside sisters Allegra and Octavia, Musica was trained exclusively to soothe the Tirolian populace and stimulate the bio-energetic growth of the Flower of Life through the resonance of her cosmic harp. Within the sterile, emotionless conformity dictated by the Robotech Masters, Musica had never known affection, autonomy, or love until the 15th Squad infiltrated the flagship.",
+    "tactical_analysis_es": "El encuentro fortuito entre Musica y Bowie Grant provocó una conmoción que desarticuló la cohesión de la civilización alienígena. Bowie le enseñó que la música era expresión del alma y no una herramienta de subyugación. Cuando Musica huyó a la Tierra con Bowie, los Maestros perdieron la armonía de sus bio-cámaras, acelerando la agonía de sus reservas de Protocultura. Perseguida tanto por los soldados Bioroid como por la Policía Militar Global (GMP) de Nova Satori, Musica fue protegida por Dana Sterling, sobreviviendo a la guerra para integrarse en la humanidad.",
+    "tactical_analysis_en": "The fateful encounter between Musica and Bowie Grant dealt a psychological blow that severed the cohesion of the alien caste system. Bowie demonstrated that music is born of soul and passion rather than psychic conditioning. Defecting to Earth alongside Bowie, her departure destabilized the bio-energetic resonance within the Masters' chambers, precipitating the terminal collapse of their Protoculture reserves. Hunted by both Bioroid kill-teams and the Terran GMP, she was defended by Dana Sterling, surviving to build a peaceful future on Earth."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 50,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Sacerdotisa espiritual; su liderazgo proviene de su estatura moral y su decisión de elegir la libertad."
+    },
+    "strategy": {
+      "value": 75,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Conocimiento intuitivo de la biología de la Flor de la Vida y la manipulación de ondas acústicas."
+    },
+    "resolve": {
+      "value": 92,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Desafió el mandato sagrado de toda su civilización y cruzó el abismo del espacio por amor a Bowie."
+    },
+    "piloting": {
+      "value": 15,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Civil tiroliana y sacerdotisa mística; no posee formación en combate ni aviación militar."
+    }
+  },
+  "stats": {
+    "command": 50,
+    "strategy": 75,
+    "resolve": 92,
+    "piloting": 15
+  },
+  "service_record": [
+    {
+      "period": "Era de los Maestros",
+      "assignment_es": "Arpista Suprema del Triunvirato de Bio-Cultivo de las Flores de la Vida en Tirol",
+      "assignment_en": "Supreme Harpist of the Flower of Life Triumvirate Bio-Complex on Tirol"
+    },
+    {
+      "period": "2029",
+      "assignment_es": "Llegada al Sistema Solar a bordo de la Gran Nave Nodriza de los Maestros Robotech",
+      "assignment_en": "Arrival in Solar System aboard the Robotech Masters Command Flagship"
+    },
+    {
+      "period": "2030",
+      "assignment_es": "Primer encuentro con Bowie Grant en la nave nodriza; descubrimiento de la individualidad",
+      "assignment_en": "Fateful encounter with Bowie Grant inside flagship; discovers individuality"
+    },
+    {
+      "period": "2030",
+      "assignment_es": "Deserción histórica a la Tierra; protegida por el 15º Escuadrón frente a la persecución de la GMP",
+      "assignment_en": "Historic defection to Earth; protected by 15th Squad against GMP persecution"
+    },
+    {
+      "period": "2030",
+      "assignment_es": "Sobrevive al holocausto final de la nave de los Maestros; inicia una nueva vida junto a Bowie",
+      "assignment_en": "Survives final destruction of Masters' fleet; starts a new peaceful life with Bowie"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Bowie Grant",
+      "relation_es": "Su alma gemela y protector; su amor mutuo fue el puente de reconciliación entre ambas especies.",
+      "relation_en": "Her soulmate and guardian; their mutual love built a bridge of peace between species."
+    },
+    {
+      "character": "Dana Sterling",
+      "relation_es": "Su protectora militar; arriesgó su propia carrera y rango para impedir que la entregaran a la GMP.",
+      "relation_en": "Her military protector; risked her rank and command to prevent her capture by the GMP."
+    },
+    {
+      "character": "Allegra y Octavia",
+      "relation_es": "Sus dos hermanas de clonación sagrada de las que tuvo que separarse al desertar a la Tierra.",
+      "relation_en": "Her genetic clone triad sisters from whom she had to part upon defecting to Earth."
+    },
+    {
+      "character": "Zor Prime",
+      "relation_es": "Hermano tiroliano de destino con quien compartió el sufrimiento de la opresión de los Maestros.",
+      "relation_en": "Tirolian brother of destiny sharing the agony of the Masters' cold subjugation."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "En mi mundo nunca existió una palabra como 'amor'... pero cuando escuché tu música, supe que existía.",
+      "quote_en": "On my world a word like 'love' never existed... but when I heard your music, I knew it was real.",
+      "context_es": "Confesión a Bowie Grant durante su huida a través de Macross City.",
+      "context_en": "Confession to Bowie Grant during their flight across Macross City."
+    },
+    {
+      "quote_es": "Las Flores de la Vida no pertenecen a los Maestros para hacer la guerra. Su canto debe florecer para todos los que sienten paz.",
+      "quote_en": "The Flowers of Life do not belong to the Masters for war. Their song must bloom for all who cherish peace.",
+      "context_es": "Explicación del misterio de la Protocultura a los oficiales del 15º Escuadrón.",
+      "context_en": "Explaining the mystery of Protoculture to the officers of the 15th Squad."
+    }
+  ]
+}

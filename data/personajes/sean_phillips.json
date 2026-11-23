@@ -1,0 +1,141 @@
+{
+  "id": "sean_phillips",
+  "name": "Sean Phillips",
+  "japanese_name": "Charles De L'Étoile",
+  "callsign": "Charming Rogue // Spartan-4",
+  "rank": {
+    "es": "Teniente // Soldado Raso (Degradado por Disciplina) // Cabo Honorario (ATAC)",
+    "en": "Lieutenant // Private (Demoted for Conduct) // Honorary Corporal (ATAC)"
+  },
+  "role": {
+    "es": "As de Combate Blindado, Especialista en Infiltración y Pareja de Marie Crystal",
+    "en": "Armored Combat Ace, Infiltration Specialist & Partner to Marie Crystal"
+  },
+  "category": "pilots",
+  "faction": {
+    "es": "Ejército de la Cruz del Sur (15º Escuadrón ATAC)",
+    "en": "Army of the Southern Cross (15th ATAC Squad)"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Robotech Masters (Second Robotech War)"
+  },
+  "assignment": {
+    "es": "Cuartel General de la Cruz del Sur // 15º Escuadrón (VHT-1 Spartas Hovertank)",
+    "en": "Southern Cross Headquarters // 15th Squad (VHT-1 Spartas Hovertank)"
+  },
+  "birth_date": "11 de Julio de 2006",
+  "birth_place": {
+    "es": "Francia / Europa Occidental (Tierra)",
+    "en": "France / Western Europe (Earth)"
+  },
+  "blood_type": "A+",
+  "height": "1,82 m",
+  "weight": "75 kg",
+  "thumbnail": "assets/images/personajes/sean_phillips/sean_portrait.png",
+  "images": [
+    {
+      "url": "assets/images/personajes/sean_phillips/sean_portrait.png",
+      "title_es": "Sean Phillips - Retrato Oficial en la Cruz del Sur",
+      "title_en": "Sean Phillips - Southern Cross Official Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    }
+  ],
+  "summary": {
+    "es": "Ex-comandante del 15º Escuadrón degradado a soldado raso por sus constantes líos de faldas y desacato al protocolo. Piloto prodigioso y maestro del combate cuerpo a cuerpo, su desenfado esconde un coraje letal y un romance apasionado con la teniente Marie Crystal.",
+    "en": "Former 15th Squad commander busted down to private over chronic romantic entanglements and protocol violations. A brilliant pilot and hand-to-hand combatant, his flippant charm masks lethal courage and a fiery romance with Lieutenant Marie Crystal."
+  },
+  "lore": {
+    "overview_es": "Atractivo, sofisticado y con un encanto francés irresistible, Sean Phillips era el comandante original del 15º Escuadrón Blindado de la Cruz del Sur. Sin embargo, su debilidad incorregible por seducir a las hijas y esposas de oficiales superiores del Estado Mayor provocó un escándalo que culminó en su degradación fulminante a soldado raso y en el nombramiento de la recién graduada Dana Sterling en su reemplazo.",
+    "overview_en": "Suave, handsome, and armed with irresistible charm, Sean Phillips was the original commanding lieutenant of the 15th ATAC Squad. However, his incorrigible penchant for romancing daughters and consorts of high-ranking general staff triggered a major disciplinary scandal, resulting in his immediate demotion to private and the appointment of fresh academy graduate Dana Sterling in his stead.",
+    "tactical_analysis_es": "Lejos de guardar rencor, Sean aceptó a Dana con una sonrisa y se convirtió en su recurso táctico más letal. En combate aéreo y urbano a los mandos del Spartas Hovertank, Sean posee una agilidad casi acrobática y una asombrosa habilidad en esgrima y combate cuerpo a cuerpo. Su relación tormentosa y competitiva con la implacable líder del escuadrón de cazas Black Lions, Marie Crystal, lo llevó a arriesgar su vida repetidas veces para rescatarla de las naves alienígenas de los Maestros, ganándose su amor y el respeto eterno del escuadrón.",
+    "tactical_analysis_en": "Harboring no resentment, Sean accepted Dana's promotion with characteristic grace, becoming her deadliest field asset. Maneuvering his Spartas Hovertank through urban rubble and orbital corridors, Sean displayed acrobatic evasion and formidable fencing reflexes in melee combat. His stormy, competitive romance with the fierce commander of the Black Lions aerospace wing, Marie Crystal, drove him to execute suicidal boarding actions to extract her from hostile alien hulks, earning both her devotion and the squad's absolute respect."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 80,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Ex-oficial de mando; capaz de asumir el liderazgo táctico de campo cuando la situación lo requiere."
+    },
+    "strategy": {
+      "value": 82,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Especialista en infiltración en territorio hostil, guerra relámpago y distracción táctica."
+    },
+    "resolve": {
+      "value": 94,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Inquebrantable sentido del deber bajo su fachada displicente; nunca titubea ante el peligro."
+    },
+    "piloting": {
+      "value": 96,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Piloto de élite del VHT-1 Spartas; maniobras acrobáticas y puntería de cañón formidable."
+    }
+  },
+  "stats": {
+    "command": 80,
+    "strategy": 82,
+    "resolve": 94,
+    "piloting": 96
+  },
+  "service_record": [
+    {
+      "period": "2026 - 2028",
+      "assignment_es": "Teniente Comandante del 15º Escuadrón ATAC; condecorado por excelencia táctica",
+      "assignment_en": "Lieutenant Commander of 15th ATAC Squad; commended for tactical excellence"
+    },
+    {
+      "period": "2029",
+      "assignment_es": "Degradado a Soldado Raso por faltas graves a la disciplina; subordinado a Dana Sterling",
+      "assignment_en": "Demoted to Private for conduct violations; serves under Dana Sterling"
+    },
+    {
+      "period": "2029 - 2030",
+      "assignment_es": "Participa en la infiltración de la nave nodriza alienígena y el rescate de la Teniente Marie Crystal",
+      "assignment_en": "Spearheads mothership boarding action and the extraction of Lieutenant Marie Crystal"
+    },
+    {
+      "period": "2030",
+      "assignment_es": "Combate en la defensa final de la Tierra contra los Bioroids; sobrevive junto a Marie Crystal",
+      "assignment_en": "Fights in the final planetary defense against Bioroids; survives alongside Marie Crystal"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Marie Crystal",
+      "relation_es": "El verdadero amor de su vida; su relación comenzó como un duelo de egos y terminó en devoción absoluta.",
+      "relation_en": "The true love of his life; their romance began as an intense duel of egos and matured into devotion."
+    },
+    {
+      "character": "Dana Sterling",
+      "relation_es": "Su comandante y cómplice; disfrutaba de su audacia y la apoyó sin resentimiento por haber ocupado su puesto.",
+      "relation_en": "His squad commander and partner-in-crime; admired her audacity and backed her loyally."
+    },
+    {
+      "character": "Angelo Dante",
+      "relation_es": "Su sargento mayor y némesis disciplinario en el cuartel; compartían un profundo respeto en combate.",
+      "relation_en": "His drill sergeant and barracks foil; shared unspoken soldierly respect under fire."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "Comandante Sterling, ser degradado es un pequeño precio a pagar por mantener mi libertad... y tener a la jefa más divertida de la galaxia.",
+      "quote_en": "Commander Sterling, losing rank is a minor price to pay for my freedom... and serving under the most entertaining boss in the galaxy.",
+      "context_es": "Conversación con Dana Sterling tras ser reincorporado al 15º Escuadrón.",
+      "context_en": "Banter with Dana Sterling after his reassignment into the 15th Squad."
+    },
+    {
+      "quote_es": "Marie, puedes derribar cazas alienígenas todo el día, pero no vas a escapar de mí tan fácilmente.",
+      "quote_en": "Marie, you can shoot down alien fighters all day long, but you're not getting away from me that easily.",
+      "context_es": "Galanteo a Marie Crystal en la pista de despegue de los Black Lions.",
+      "context_en": "Flirting with Marie Crystal on the Black Lions flight apron."
+    }
+  ]
+}

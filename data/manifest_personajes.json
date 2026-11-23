@@ -1,7 +1,7 @@
 {
   "system_version": "1.0.0",
   "database_name": "ROBOTECH PERSONNEL ARCHIVE",
-  "updated_at": "2026-11-22",
+  "updated_at": "2026-11-23",
   "categories": [
     {
       "id": "all",
@@ -58,8 +58,8 @@
       },
       "thumbnail": "assets/images/personajes/rick_hunter/rick_hunter_04.jpg",
       "summary": {
-        "es": "As de caza supremo de la RDF y líder legendario del Escuadrón Skull tras la caída de Roy Fokker. Protagonista indiscutido de la Primera Guerra Robotec...",
-        "en": "Supreme RDF fighter ace and legendary Skull Squadron leader following the fall of Roy Fokker. Pivotal combat pilot of the First Robotech War and futur..."
+        "es": "As de caza supremo de la RDF y líder legendario del Escuadrón Skull tras la caída de Roy Fokker. Protagonista indiscutido de la Primera Guerra Robotech y futuro Comandante de la REF.",
+        "en": "Supreme RDF fighter ace and legendary Skull Squadron leader following the fall of Roy Fokker. Pivotal combat pilot of the First Robotech War and future REF Commander."
       },
       "stats": {
         "command": 88,
@@ -67,7 +67,8 @@
         "resolve": 94,
         "piloting": 99
       },
-      "dataFile": "data/personajes/rick_hunter.json"
+      "dataFile": "data/personajes/rick_hunter.json",
+      "generation": "gen1"
     },
     {
       "id": "lisa_hayes",
@@ -97,8 +98,8 @@
       },
       "thumbnail": "assets/images/personajes/lisa_hayes/lisa_puente.webp",
       "summary": {
-        "es": "Lisa Hayes es la mente táctica más brillante de la Fuerza de Defensa Robotech durante la Primera Guerra Robotech. Hija del almirante Donald Hayes, cre...",
-        "en": "Lisa Hayes is the sharpest tactical mind within the Robotech Defense Force during the First Robotech War. Daughter of Admiral Donald Hayes, she grew u..."
+        "es": "Lisa Hayes es la mente táctica más brillante de la Fuerza de Defensa Robotech durante la Primera Guerra Robotech. Hija del almirante Donald Hayes, creció inmers...",
+        "en": "Lisa Hayes is the sharpest tactical mind within the Robotech Defense Force during the First Robotech War. Daughter of Admiral Donald Hayes, she grew up steeped ..."
       },
       "stats": {
         "command": 96,
@@ -106,7 +107,8 @@
         "resolve": 92,
         "piloting": 68
       },
-      "dataFile": "data/personajes/lisa_hayes.json"
+      "dataFile": "data/personajes/lisa_hayes.json",
+      "generation": "gen1"
     },
     {
       "id": "lynn_minmei",
@@ -118,17 +120,17 @@
         "en": "Civilian Citizen // Honorary RDF Cultural Attache"
       },
       "role": {
-        "es": "Vocalista Pop, Ícono Cultural y Factor de Pacificación",
-        "en": "Pop Vocalist, Cultural Icon & Pacification Asset"
+        "es": "Vocalista Pop, Ícono Cultural y Factor Clave de Pacificación Psicológica",
+        "en": "Pop Vocalist, Cultural Icon & Key Psychological Pacification Asset"
       },
       "faction": {
-        "es": "Población Civil de Macross City // RDF",
-        "en": "Macross City Civilians // RDF"
+        "es": "Población Civil de Macross City // Fuerzas de Defensa Robotech",
+        "en": "Macross City Civilian Population // Robotech Defense Force"
       },
       "faction_logo": "assets/images/ui/logo_UNSpacy.png",
       "assignment": {
-        "es": "SDF-1 Macross (Sector Cívico y Entretenimiento)",
-        "en": "SDF-1 Macross (Civic & Entertainment Sector)"
+        "es": "SDF-1 Macross (Sector Cívico y Centro de Entretenimiento)",
+        "en": "SDF-1 Macross (Civic Sector & Entertainment Center)"
       },
       "series": {
         "es": "La Saga Macross (Primera Guerra Robotech)",
@@ -136,8 +138,8 @@
       },
       "thumbnail": "assets/images/personajes/lynn_minmei/minmei_movie.jpg",
       "summary": {
-        "es": "La voz que salvó a la humanidad de la extinción total. Coronada Miss Macross a bordo del SDF-1, su canto desarmó psicológicamente a la flota imperial Zentraedi.",
-        "en": "The voice that saved humanity from total annihilation. Crowned Miss Macross aboard the SDF-1, her music psychologically dismantled the Imperial Zentraedi armada."
+        "es": "La voz que salvó a la humanidad de la extinción total. Su victoria como Miss Macross a bordo del SDF-1 impulsó una carrera musical que desarmó psicológicamente a la flota imperial Zentraedi.",
+        "en": "The voice that saved humanity from total annihilation. Crowned Miss Macross aboard the SDF-1, her musical career psychologically dismantled the Imperial Zentraedi armada."
       },
       "stats": {
         "command": 45,
@@ -145,7 +147,8 @@
         "resolve": 90,
         "piloting": 15
       },
-      "dataFile": "data/personajes/lynn_minmei.json"
+      "dataFile": "data/personajes/lynn_minmei.json",
+      "generation": "gen1"
     },
     {
       "id": "roy_fokker",
@@ -157,8 +160,8 @@
         "en": "Lieutenant Commander // SDF-1 Air Wing Commander"
       },
       "role": {
-        "es": "Líder Fundador del Escuadrón Skull y Piloto de Pruebas VF-1",
-        "en": "Founding Skull Squadron Leader & VF-1 Chief Test Pilot"
+        "es": "Líder Fundador del Escuadrón Skull y Piloto de Pruebas del Programa VF-1 Valkyrie",
+        "en": "Founding Leader of Skull Squadron & Chief Test Pilot of the VF-1 Valkyrie Program"
       },
       "faction": {
         "es": "U.N. Spacy - Escuadrón Skull",
@@ -166,8 +169,8 @@
       },
       "faction_logo": "assets/images/ui/logo_UNSpacy.png",
       "assignment": {
-        "es": "SDF-1 Macross (VF-1S Valkyrie Skull Leader)",
-        "en": "SDF-1 Macross (VF-1S Valkyrie Skull Leader)"
+        "es": "SDF-1 Macross // Comandante de Grupo de Combate Aéreo (VF-1S Skull Leader)",
+        "en": "SDF-1 Macross // Air Group Commander (VF-1S Skull Leader)"
       },
       "series": {
         "es": "La Saga Macross (Primera Guerra Robotech)",
@@ -175,8 +178,8 @@
       },
       "thumbnail": "assets/images/personajes/roy_fokker/roy_fokker.png",
       "summary": {
-        "es": "El as de combate aéreo legendario de la humanidad y primer comandante de Skull Leader. Mentor de Rick Hunter y corazón combativo del SDF-1.",
-        "en": "Humanity's legendary aerospace combat ace and first commander of Skull Leader. Mentor to Rick Hunter and warrior soul of the SDF-1."
+        "es": "El héroe supremo de la aviación militar humana y primer comandante del legendario Escuadrón Skull. Veterano de las Guerras Globales, mentor de Rick Hunter y figura paterna para los pilotos del SDF-1.",
+        "en": "Supreme hero of human aerospace combat and the original commander of the legendary Skull Squadron. Global Civil War veteran, mentor to Rick Hunter, and father figure to the pilots of the SDF-1."
       },
       "stats": {
         "command": 94,
@@ -184,7 +187,8 @@
         "resolve": 98,
         "piloting": 100
       },
-      "dataFile": "data/personajes/roy_fokker.json"
+      "dataFile": "data/personajes/roy_fokker.json",
+      "generation": "gen1"
     },
     {
       "id": "henry_gloval",
@@ -196,8 +200,8 @@
         "en": "Ship Captain // Admiral & Commander-in-Chief (RDF)"
       },
       "role": {
-        "es": "Comandante de la Fortaleza Espacial SDF-1 Macross",
-        "en": "Commander of the SDF-1 Macross Space Fortress"
+        "es": "Comandante de la Fortaleza Espacial SDF-1 Macross y Comandante Supremo de la RDF",
+        "en": "Commander of the SDF-1 Macross Space Fortress & Supreme Commander of RDF"
       },
       "faction": {
         "es": "U.N. Spacy - Mando Supremo de la Flota",
@@ -214,8 +218,8 @@
       },
       "thumbnail": "assets/images/personajes/henry_gloval/gloval_card.jpg",
       "summary": {
-        "es": "El legendario capitán de la fortaleza espacial SDF-1 Macross. Un veterano de serenidad inquebrantable que trajo a 70.000 refugiados civiles de vuelta a la Tierra.",
-        "en": "The legendary captain of the SDF-1 Macross. A steady, veteran strategist who shepherded 70,000 civilian refugees back home through deep space."
+        "es": "El legendario capitán de la fortaleza espacial SDF-1 Macross. Un estratega naval veterano, paciente y bondadoso cuya serenidad y visión guiaron a la humanidad a través de su peor crisis cósmica.",
+        "en": "The legendary captain of the SDF-1 Macross battle fortress. A patient, compassionate, veteran naval strategist whose calm authority guided humanity through its darkest cosmic hour."
       },
       "stats": {
         "command": 99,
@@ -223,7 +227,8 @@
         "resolve": 97,
         "piloting": 65
       },
-      "dataFile": "data/personajes/henry_gloval.json"
+      "dataFile": "data/personajes/henry_gloval.json",
+      "generation": "gen1"
     },
     {
       "id": "max_sterling",
@@ -231,21 +236,21 @@
       "japanese_name": "Maximilian Jenius",
       "category": "pilots",
       "rank": {
-        "es": "Teniente (Escuadrón Vermilion) // Capitán (RDF) // Comandante de Ala (REF)",
-        "en": "Lieutenant (Vermilion Squadron) // Captain (RDF) // Wing Commander (REF)"
+        "es": "Cabo // Teniente (Escuadrón Vermilion) // Capitán (RDF) // Comandante de Ala (REF)",
+        "en": "Corporal // Lieutenant (Vermilion Squadron) // Captain (RDF) // Wing Commander (REF)"
       },
       "role": {
-        "es": "As Prodigio Supremo del Escuadrón Skull (VF-1 Azul)",
-        "en": "Prodigious Supreme Ace of Skull Squadron (Blue VF-1)"
+        "es": "As Prodigio Supremo del Escuadrón Skull y Especialista en Combate Cercano Mecha",
+        "en": "Prodigious Supreme Ace of Skull Squadron & Mecha Close-Quarters Specialist"
       },
       "faction": {
-        "es": "U.N. Spacy - Escuadrón Skull",
-        "en": "U.N. Spacy - Skull Squadron"
+        "es": "U.N. Spacy - Escuadrón Skull / Vermilion",
+        "en": "U.N. Spacy - Skull / Vermilion Squadron"
       },
       "faction_logo": "assets/images/ui/logo_UNSpacy.png",
       "assignment": {
-        "es": "SDF-1 Macross // Escuadrón Skull (VF-1A / VF-1J Azul)",
-        "en": "SDF-1 Macross // Skull Squadron (Blue VF-1A / VF-1J)"
+        "es": "SDF-1 Macross // Escuadrón Skull (VF-1J / VF-1A Valkyrie Azul)",
+        "en": "SDF-1 Macross // Skull Squadron (Blue VF-1J / VF-1A Valkyrie)"
       },
       "series": {
         "es": "La Saga Macross & La Era REF",
@@ -253,8 +258,8 @@
       },
       "thumbnail": "assets/images/personajes/max_sterling/max_card.jpg",
       "summary": {
-        "es": "El piloto más dotado de la historia militar de la Tierra. Un genio del vuelo que jamás recibió un impacto en combate y esposo de Miriya Parina.",
-        "en": "The most innately gifted combat pilot in Earth history. An untouchable aerial genius and husband to Miriya Parina."
+        "es": "El piloto con mayores dotes innatas de la historia militar de la Tierra. Un genio del vuelo que jamás recibió un impacto en combate, protagonista del primer matrimonio pacificador humano-alienígena con Miriya Parina.",
+        "en": "The most innately gifted pilot in human military history. A flying genius who never took a hit in combat, pivotal in the first historic human-alien pacifying marriage with Miriya Parina."
       },
       "stats": {
         "command": 84,
@@ -262,7 +267,8 @@
         "resolve": 96,
         "piloting": 100
       },
-      "dataFile": "data/personajes/max_sterling.json"
+      "dataFile": "data/personajes/max_sterling.json",
+      "generation": "gen1"
     },
     {
       "id": "miriya_sterling",
@@ -270,21 +276,21 @@
       "japanese_name": "Milia Fallyna Jenius",
       "category": "zentraedi",
       "rank": {
-        "es": "Comandante Meltrandi // Teniente RDF // Mayor REF",
-        "en": "Meltrandi Commander // RDF Lieutenant // REF Major"
+        "es": "Comandante de Asalto de la Flota Meltrandi // Teniente RDF // Mayor REF",
+        "en": "Meltrandi Assault Commander // RDF Lieutenant // REF Major"
       },
       "role": {
-        "es": "As de Asalto Zentraedi y Piloto del VF-1J Carmesí",
-        "en": "Elite Zentraedi Strike Ace & Crimson VF-1J Pilot"
+        "es": "Líder de la Fuerza Aérea Femenina Meltrandi y As de Caza Veritech Rojo VF-1J",
+        "en": "Leader of Meltrandi Female Strike Forces & Red VF-1J Veritech Ace"
       },
       "faction": {
-        "es": "Armada Zentraedi // U.N. Spacy (Escuadrón Skull)",
-        "en": "Zentraedi Armada // U.N. Spacy (Skull Squadron)"
+        "es": "Armada Imperial Zentraedi // U.N. Spacy (Escuadrón Skull)",
+        "en": "Imperial Zentraedi Armada // U.N. Spacy (Skull Squadron)"
       },
       "faction_logo": "assets/images/ui/logo_zentran.png",
       "assignment": {
-        "es": "SDF-1 Macross (Escuadrón Skull // VF-1J Rojo)",
-        "en": "SDF-1 Macross (Skull Squadron // Red VF-1J)"
+        "es": "Crucero de Asalto Quadrono // SDF-1 Macross (VF-1J Valkyrie Carmesí)",
+        "en": "Quadrono Assault Cruiser // SDF-1 Macross (Crimson VF-1J Valkyrie)"
       },
       "series": {
         "es": "La Saga Macross & La Era REF",
@@ -292,8 +298,8 @@
       },
       "thumbnail": "assets/images/personajes/miriya_sterling/miriya_rdf_card.jpg",
       "summary": {
-        "es": "La guerrera más letal del Imperio Zentraedi. Tras infiltrarse en el SDF-1 para batirse en duelo con Max Sterling, descubrió el amor y fundó la primera familia mestiza estelar.",
-        "en": "The deadliest warrior of the Zentraedi Empire. Infiltrating the SDF-1 to duel Max Sterling, she embraced humanity and gave birth to the first blended family."
+        "es": "La guerrera más temida del Imperio Zentraedi. Tras infiltrarse en el SDF-1 para vengar su única derrota ante Max Sterling, descubrió la emoción, el amor y la cultura, convirtiéndose en el puente viviente entre ambas civilizaciones y madre de Dana Sterling.",
+        "en": "The most feared warrior in the Zentraedi Empire. Infiltrating the SDF-1 to avenge her sole aerial defeat against Max Sterling, she discovered human emotion, love, and culture, becoming the living bridge between two worlds and mother to Dana Sterling."
       },
       "stats": {
         "command": 90,
@@ -301,7 +307,8 @@
         "resolve": 99,
         "piloting": 100
       },
-      "dataFile": "data/personajes/miriya_sterling.json"
+      "dataFile": "data/personajes/miriya_sterling.json",
+      "generation": "gen1"
     },
     {
       "id": "breetai",
@@ -309,21 +316,21 @@
       "japanese_name": "Vrlitwhai Kridanik",
       "category": "zentraedi",
       "rank": {
-        "es": "Comandante Supremo de Flota Imperial // General REF",
-        "en": "Imperial Fleet Supreme Commander // REF General"
+        "es": "Comandante Supremo de Flota Imperial Zentraedi // General de la REF",
+        "en": "Imperial Zentraedi Fleet Supreme Commander // REF General"
       },
       "role": {
-        "es": "Comandante de Flota y Artífice de la Alianza Humano-Zentraedi",
-        "en": "Fleet Commander & Co-Architect of Human-Zentraedi Alliance"
+        "es": "Comandante de la Flota de Vanguardia Zentraedi y Arquitecto Militar de la Alianza Humano-Zentraedi",
+        "en": "Commander of Zentraedi Vanguard Fleet & Military Architect of Human-Zentraedi Alliance"
       },
       "faction": {
-        "es": "Flota Imperial Zentraedi // Fuerza Expedicionaria Robotech",
-        "en": "Imperial Zentraedi Armada // Robotech Expeditionary Force"
+        "es": "Flota Imperial Zentraedi // Fuerza Expedicionaria Robotech (REF)",
+        "en": "Imperial Zentraedi Armada // Robotech Expeditionary Force (REF)"
       },
       "faction_logo": "assets/images/ui/logo_zentran.png",
       "assignment": {
-        "es": "Acorazado Insignia Nupetiet-Vergnitzs // Flota REF",
-        "en": "Nupetiet-Vergnitzs Flagship // REF Fleet"
+        "es": "Acorazado Insignia Zentraedi de Clase Nupetiet-Vergnitzs // Buque Insignia REF",
+        "en": "Nupetiet-Vergnitzs Class Command Dreadnought // REF Fleet Flagship"
       },
       "series": {
         "es": "La Saga Macross & La Era REF",
@@ -331,8 +338,8 @@
       },
       "thumbnail": "assets/images/personajes/breetai/breetai_card.jpg",
       "summary": {
-        "es": "El colosal comandante de la flota Zentraedi que desafió la orden de exterminio de Dolza para unirse al SDF-1 y salvar a la humanidad.",
-        "en": "The colossal Zentraedi fleet commander who defied Dolza's extinction edict to ally with the SDF-1 and rescue humanity."
+        "es": "El colosal comandante de la flota Zentraedi enviado originalmente a capturar el SDF-1. Fascinado por las emociones humanas y la música de Minmei, desafió la orden de exterminio de Dolza para forjar la alianza militar que salvó a la Tierra.",
+        "en": "The colossal Zentraedi fleet commander tasked with recapturing the SDF-1. Captivated by human emotion and Minmei's songs, he defied Dolza's extinction edict to forge the historic military alliance that saved Earth."
       },
       "stats": {
         "command": 100,
@@ -340,7 +347,1288 @@
         "resolve": 98,
         "piloting": 80
       },
-      "dataFile": "data/personajes/breetai.json"
+      "dataFile": "data/personajes/breetai.json",
+      "generation": "gen1"
+    },
+    {
+      "id": "claudia_grant",
+      "name": "Claudia Grant",
+      "japanese_name": "Claudia LaSalle",
+      "category": "command",
+      "rank": {
+        "es": "Teniente Comandante // Oficial Superior de Comunicaciones y Enlace",
+        "en": "Lieutenant Commander // Senior Communications & Liaison Officer"
+      },
+      "role": {
+        "es": "Jefa de Comunicaciones, Coordinación de Vuelo y Navegación del SDF-1",
+        "en": "Chief of Communications, Flight Coordination & Navigation of the SDF-1"
+      },
+      "faction": {
+        "es": "U.N. Spacy - Mando de Puente del SDF-1",
+        "en": "U.N. Spacy - SDF-1 Bridge Command"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "SDF-1 Macross (Consola Principal de Comunicaciones y Radar)",
+        "en": "SDF-1 Macross (Main Communications & Radar Console)"
+      },
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/claudia_grant/claudia_card.jpg",
+      "summary": {
+        "es": "Oficial superior de comunicaciones del SDF-1 y pilar indispensable del puente de mando. Pareja de Roy Fokker y mejor amiga de Lisa Hayes, su madurez y templanza mantuvieron unida a la tripulación en sus horas más oscuras.",
+        "en": "Senior communications officer of the SDF-1 and indispensable pillar on the bridge. Partner to Roy Fokker and best friend to Lisa Hayes, her poise and wisdom anchored the crew in their darkest hours."
+      },
+      "stats": {
+        "command": 92,
+        "strategy": 89,
+        "resolve": 98,
+        "piloting": 50
+      },
+      "dataFile": "data/personajes/claudia_grant.json",
+      "generation": "gen1"
+    },
+    {
+      "id": "exedore",
+      "name": "Exedore Formo",
+      "japanese_name": "Exsedol Folmo",
+      "category": "zentraedi",
+      "rank": {
+        "es": "Ministro Consejero Zentraedi // Asesor Científico Jefe de la REF",
+        "en": "Zentraedi Minister-Counselor // Chief Scientific Advisor to the REF"
+      },
+      "role": {
+        "es": "Consejero Intelectual del Comandante Breetai y Enlace Científico-Histórico Zentraedi",
+        "en": "Intellectual Counselor to Commander Breetai & Zentraedi Scientific-Historical Liaison"
+      },
+      "faction": {
+        "es": "Flota Imperial Zentraedi // Fuerza Expedicionaria Robotech (REF)",
+        "en": "Imperial Zentraedi Armada // Robotech Expeditionary Force (REF)"
+      },
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "assignment": {
+        "es": "Acorazado Nupetiet-Vergnitzs // SDF-1 Macross // SDF-3 Pioneer",
+        "en": "Nupetiet-Vergnitzs Dreadnought // SDF-1 Macross // SDF-3 Pioneer"
+      },
+      "series": {
+        "es": "La Saga Macross & La Era REF",
+        "en": "The Macross Saga & The REF Era"
+      },
+      "thumbnail": "assets/images/personajes/exedore/exedore_card.jpg",
+      "summary": {
+        "es": "El cerebro más brillante de la raza Zentraedi. Primer alienígena en comprender el peligro y el milagro de la cultura humana, convirtiéndose en el embajador de paz que negoció con el Capitán Gloval y salvó a ambas especies.",
+        "en": "The sharpest analytical mind of the Zentraedi race. The first alien to decipher the peril and miracle of human culture, serving as the historic peace ambassador who brokered the alliance with Captain Gloval."
+      },
+      "stats": {
+        "command": 75,
+        "strategy": 100,
+        "resolve": 94,
+        "piloting": 30
+      },
+      "dataFile": "data/personajes/exedore.json",
+      "generation": "gen1"
+    },
+    {
+      "id": "khyron",
+      "name": "Khyron",
+      "japanese_name": "Quamzin Kravshera",
+      "category": "zentraedi",
+      "rank": {
+        "es": "Comandante de Asalto del 7º Batallón Mecanizado Zentraedi // Líder Insurgente",
+        "en": "Assault Commander of the 7th Zentraedi Mechanized Battalion // Insurgent Leader"
+      },
+      "role": {
+        "es": "Líder de la Facción Rebelde Zentraedi y Asesino de Macross City",
+        "en": "Leader of the Zentraedi Insurgent Faction & Slayer of Macross City"
+      },
+      "faction": {
+        "es": "7º Batallón Mecanizado Zentraedi // Resistencia Rebelde Anti-Tierra",
+        "en": "7th Zentraedi Mechanized Battalion // Anti-Earth Rebel Resistance"
+      },
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "assignment": {
+        "es": "Cápsula Glaug de Oficial de Combate // Acorazado Rebelde Reconstruido",
+        "en": "Glaug Officer Battlepod // Reconstructed Rebel Warship"
+      },
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/khyron/khyron_card.jpg",
+      "summary": {
+        "es": "Apodado 'El Traidor' (The Backstabber), fue el comandante Zentraedi más feroz, impredecible y sanguinario. Se negó a aceptar la paz con los humanos y lideró la rebelión armada que culminó en el asalto kamikaze final contra el SDF-1.",
+        "en": "Known as 'The Backstabber', he was the most ferocious, unstable, and bloodthirsty Zentraedi commander. Rejecting peace with humanity, he led the rebel uprising culminating in the devastating suicide ramming of the SDF-1."
+      },
+      "stats": {
+        "command": 85,
+        "strategy": 78,
+        "resolve": 99,
+        "piloting": 97
+      },
+      "dataFile": "data/personajes/khyron.json",
+      "generation": "gen1"
+    },
+    {
+      "id": "lynn_kyle",
+      "name": "Lynn Kyle",
+      "japanese_name": "Lynn Kaifun",
+      "category": "scientists",
+      "rank": {
+        "es": "Líder Civil Antibélico // Maestro de Artes Marciales",
+        "en": "Anti-War Civilian Leader // Martial Arts Master"
+      },
+      "role": {
+        "es": "Activista Pacifista Radical, Manager y Coprotagonista de Lynn Minmei",
+        "en": "Radical Pacifist Activist, Manager & Co-Star to Lynn Minmei"
+      },
+      "faction": {
+        "es": "Movimiento Pacifista Civil de Macross City // Población Civil",
+        "en": "Macross City Civilian Pacifist Movement // Civilian Population"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "SDF-1 Macross (Sector Cívico) // Macross City",
+        "en": "SDF-1 Macross (Civic Sector) // Macross City"
+      },
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/lynn_kyle/kyle_portrait.jpg",
+      "summary": {
+        "es": "Primo y protector de Lynn Minmei, maestro de kung fu y ardiente opositor a todo conflicto bélico. Su pacifismo radical y su desprecio por las Fuerzas Armadas lo enfrentaron constantemente a Rick Hunter y al mando del SDF-1.",
+        "en": "Cousin and guardian to Lynn Minmei, martial arts master, and ardent opponent of all military violence. His radical pacifism and disdain for the armed forces put him in fierce opposition to Rick Hunter and SDF-1 leadership."
+      },
+      "stats": {
+        "command": 58,
+        "strategy": 60,
+        "resolve": 82,
+        "piloting": 10
+      },
+      "dataFile": "data/personajes/lynn_kyle.json",
+      "generation": "gen1"
+    },
+    {
+      "id": "emil_lang",
+      "name": "Dr. Emil Lang",
+      "japanese_name": "Dr. Emil Lang",
+      "category": "scientists",
+      "rank": {
+        "es": "Director Científico General (RDF) // Viceministro de Ciencia REF",
+        "en": "Chief Scientific Director (RDF) // Deputy Minister of Science (REF)"
+      },
+      "role": {
+        "es": "Padre de la Robotecnología Terrestre y Director de Ingeniería Inversa del SDF-1",
+        "en": "Father of Terrestrial Robotechnology & Director of SDF-1 Reverse Engineering"
+      },
+      "faction": {
+        "es": "División de Investigación Científica RDF // Robotech Research Council",
+        "en": "RDF Scientific Research Division // Robotech Research Council"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Laboratorios Centrales de la Isla Macross // Laboratorio de Protocultura del SDF-1",
+        "en": "Macross Island Central Labs // SDF-1 Protoculture Laboratory"
+      },
+      "series": {
+        "es": "La Saga Macross & La Era REF",
+        "en": "The Macross Saga & The REF Era"
+      },
+      "thumbnail": "assets/images/personajes/emil_lang/lang_portrait.jpg",
+      "summary": {
+        "es": "La mente científica suprema detrás de la supervivencia humana. Pionero en descifrar los secretos de la nave alienígena de Zor, creador del escudo de barrera y visionario que adaptó la Protocultura a los sistemas de combate Veritech.",
+        "en": "The foremost scientific intellect behind humanity's survival. Pioneer in unlocking the mysteries of Zor's battle fortress, inventor of the pinpoint barrier shield, and visionary who harnessed Protoculture for Veritech systems."
+      },
+      "stats": {
+        "command": 80,
+        "strategy": 98,
+        "resolve": 95,
+        "piloting": 25
+      },
+      "dataFile": "data/personajes/emil_lang.json",
+      "generation": "gen1"
+    },
+    {
+      "id": "ben_dixon",
+      "name": "Ben Dixon",
+      "japanese_name": "Hayao Kakizaki",
+      "category": "pilots",
+      "rank": {
+        "es": "Cabo // Teniente (Escuadrón Vermilion / Escuadrón Skull)",
+        "en": "Corporal // Lieutenant (Vermilion Squadron / Skull Squadron)"
+      },
+      "role": {
+        "es": "Piloto de Caza Veritech VF-1A y Miembro Fundador del Escuadrón Vermilion",
+        "en": "VF-1A Veritech Fighter Pilot & Founding Member of Vermilion Squadron"
+      },
+      "faction": {
+        "es": "U.N. Spacy - Escuadrón Vermilion / Skull",
+        "en": "U.N. Spacy - Vermilion / Skull Squadron"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "SDF-1 Macross // Escuadrón Vermilion (VF-1A Valkyrie Castaño)",
+        "en": "SDF-1 Macross // Vermilion Squadron (Brown VF-1A Valkyrie)"
+      },
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/ben_dixon/ben_card.jpg",
+      "summary": {
+        "es": "El leal, alegre e intrépido compañero de ala de Rick Hunter y Max Sterling en el Escuadrón Vermilion. De apetito voraz y corazón generoso, su valentía en combate y su heroico sacrificio dejaron una huella imborrable en la historia de la RDF.",
+        "en": "The fiercely loyal, jovial, and fearless wingman to Rick Hunter and Max Sterling in the Vermilion Squadron. Famous for his hearty appetite and generous heart, his valor and tragic sacrifice became etched in RDF lore."
+      },
+      "stats": {
+        "command": 72,
+        "strategy": 70,
+        "resolve": 94,
+        "piloting": 85
+      },
+      "dataFile": "data/personajes/ben_dixon.json",
+      "generation": "gen1"
+    },
+    {
+      "id": "dolza",
+      "name": "Comandante Supremo Dolza",
+      "japanese_name": "Gorg Boddole Zer",
+      "category": "zentraedi",
+      "rank": {
+        "es": "Comandante Supremo de la Gran Flota Imperial Zentraedi",
+        "en": "Supreme Commander of the Grand Zentraedi Imperial Armada"
+      },
+      "role": {
+        "es": "Líder Absoluto de los Ejércitos Zentraedi y Custodio de la Doctrina de los Maestros",
+        "en": "Absolute Sovereign of Zentraedi Armadas & Custodian of the Masters' Doctrine"
+      },
+      "faction": {
+        "es": "Gran Armada Imperial Zentraedi (Flota de los Cuatro Millones)",
+        "en": "Grand Zentraedi Imperial Armada (Four-Million Ship Fleet)"
+      },
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "assignment": {
+        "es": "Base Satelital Insignia Fulbtzs-Berrentzs (Fortaleza Central de 600 km)",
+        "en": "Fulbtzs-Berrentzs Mobile Command Base (600-kilometer Planetary Fortress)"
+      },
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/dolza/dolza_close_up.png",
+      "summary": {
+        "es": "El gobernante absoluto y supremo comandante militar de la raza Zentraedi. Al mando de una armada de más de 4,8 millones de naves de guerra, ordenó la aniquilación de la superficie terrestre tras considerar a la cultura humana una amenaza biológica irreversible.",
+        "en": "The absolute sovereign and supreme commander of the Zentraedi race. In command of an armada exceeding 4.8 million warships, he decreed the planetary incineration of Earth after deeming human culture an irreversible biological contagion."
+      },
+      "stats": {
+        "command": 100,
+        "strategy": 90,
+        "resolve": 100,
+        "piloting": 60
+      },
+      "dataFile": "data/personajes/dolza.json",
+      "generation": "gen1"
+    },
+    {
+      "id": "azonia",
+      "name": "Comandante Azonia",
+      "japanese_name": "Lap Lamiz",
+      "category": "zentraedi",
+      "rank": {
+        "es": "Comandante Suprema de la Flota Femenina Zentraedi // Colíder Insurgente",
+        "en": "Supreme Commander of the Meltrandi Female Fleet // Insurgent Co-Leader"
+      },
+      "role": {
+        "es": "Comandante de las Fuerzas Espaciales Femeninas y Aliada Táctica de Khyron",
+        "en": "Commander of Female Space Forces & Tactical Ally to Khyron"
+      },
+      "faction": {
+        "es": "Armada Zentraedi Femenina Meltrandi // Insurrección Rebelde de Khyron",
+        "en": "Meltrandi Female Zentraedi Armada // Khyron's Rebel Insurgency"
+      },
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "assignment": {
+        "es": "Acorazado Insignia Meltrandi // Crucero Rebelde Reconstruido",
+        "en": "Meltrandi Flagship Dreadnought // Rebuilt Rebel Warship"
+      },
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/azonia/azonia_card.jpg",
+      "summary": {
+        "es": "Comandante en jefe de las temibles legiones femeninas Zentraedi (Meltrandi). Enviada por Dolza para reemplazar a Breetai, su soberbia militar sucumbió al encanto de la cultura humana y finalmente se unió a la causa rebelde y suicida de Khyron.",
+        "en": "Commander-in-chief of the formidable female Zentraedi (Meltrandi) legions. Dispatched by Dolza to supersede Breetai, her martial pride succumbed to cultural fascination, ultimately bonding with Khyron in his doomed final rebellion."
+      },
+      "stats": {
+        "command": 93,
+        "strategy": 88,
+        "resolve": 95,
+        "piloting": 88
+      },
+      "dataFile": "data/personajes/azonia.json",
+      "generation": "gen1"
+    },
+    {
+      "id": "bridge_bunnies",
+      "name": "Trío del Puente SDF-1 (Vanessa, Kim y Sammie)",
+      "japanese_name": "Bridge Operators (Vanessa, Kim & Shammy)",
+      "category": "command",
+      "rank": {
+        "es": "Subtenientes // Oficiales de Control de Sensores, Radar y Artillería (RDF)",
+        "en": "Sub-Lieutenants // Sensor, Radar & Weapons Control Officers (RDF)"
+      },
+      "role": {
+        "es": "Operadoras Tácticas Principales del Puente de Mando de la Fortaleza Espacial SDF-1",
+        "en": "Primary Tactical Bridge Operators of the SDF-1 Space Fortress Command Deck"
+      },
+      "faction": {
+        "es": "U.N. Spacy - Tripulación de Puente del SDF-1",
+        "en": "U.N. Spacy - SDF-1 Bridge Crew"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "SDF-1 Macross (Estaciones de Radar, Artillería y Control de Vuelo)",
+        "en": "SDF-1 Macross (Radar, Weapons & Internal Flight Stations)"
+      },
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/bridge_bunnies/bridge_bunnies_card.jpg",
+      "summary": {
+        "es": "El inseparable y vital trío de oficiales técnicas del puente de mando del SDF-1: Vanessa Leeds (sensores), Kim Young (radar) y Sammie Porter (artillería y navegación). Su profesionalismo y alegría mantuvieron operativa la nave durante dos años de odisea espacial.",
+        "en": "The inseparable and vital trio of bridge tactical operators on the SDF-1: Vanessa Leeds (sensors), Kim Young (radar), and Sammie Porter (weapons & navigation). Their precision and spirit kept the battle fortress alive across a two-year cosmic voyage."
+      },
+      "stats": {
+        "command": 82,
+        "strategy": 85,
+        "resolve": 91,
+        "piloting": 45
+      },
+      "dataFile": "data/personajes/bridge_bunnies.json",
+      "generation": "gen1"
+    },
+    {
+      "id": "donald_hayes",
+      "name": "Almirante Donald Hayes",
+      "japanese_name": "Takashi Hayase",
+      "category": "command",
+      "rank": {
+        "es": "Almirante de la Flota // Jefe del Estado Mayor Conjunto de la Tierra Unificada",
+        "en": "Fleet Admiral // Chairman of the United Earth Joint Chiefs of Staff"
+      },
+      "role": {
+        "es": "Comandante en Jefe del Alto Mando Militar Terrestre y Director del Gran Cañón de Alaska",
+        "en": "Commander-in-Chief of Earth Military High Command & Director of the Alaska Grand Cannon"
+      },
+      "faction": {
+        "es": "Gobierno de la Tierra Unificada // Alto Mando de las Fuerzas de Defensa",
+        "en": "United Earth Government // Defense Forces High Command"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Base Subterránea Sara de Alaska // Complejo Estratégico del Gran Cañón",
+        "en": "Alaska Subterranean Base Sara // Grand Cannon Strategic Complex"
+      },
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/donald_hayes/donald_hayes_showdown.png",
+      "summary": {
+        "es": "Comandante supremo del Estado Mayor de la Tierra y padre de Lisa Hayes. Figura severa y obstinada, impulsó la construcción del titánico 'Gran Cañón' en Alaska como la máxima arma de defensa terrestre, sacrificando su vida para dispararlo contra la Gran Flota de Dolza.",
+        "en": "Supreme commander of the United Earth Joint Chiefs and father to Lisa Hayes. A stern and uncompromising leader, he spearheaded the subterranean 'Grand Cannon' in Alaska, laying down his life to discharge it against Dolza's armada."
+      },
+      "stats": {
+        "command": 98,
+        "strategy": 92,
+        "resolve": 99,
+        "piloting": 40
+      },
+      "dataFile": "data/personajes/donald_hayes.json",
+      "generation": "gen1"
+    },
+    {
+      "id": "dana_sterling",
+      "name": "Dana Sterling",
+      "japanese_name": "Jeanne Fránçaix",
+      "category": "pilots",
+      "rank": {
+        "es": "Subteniente // Teniente Comandante del 15º Escuadrón Táctico (ATAC)",
+        "en": "Second Lieutenant // Lieutenant Commander of 15th Tactical Armored Corps (ATAC)"
+      },
+      "role": {
+        "es": "Líder del 15º Escuadrón Blindado (ATAC) y Primera Nacida Humana-Zentraedi de la Historia",
+        "en": "Leader of 15th ATAC Squad & First Human-Zentraedi Born Child in History"
+      },
+      "faction": {
+        "es": "Ejército de la Cruz del Sur (Armored Tactical Assault Corps - ATAC)",
+        "en": "Army of the Southern Cross (Armored Tactical Assault Corps - ATAC)"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Cuartel General de la Cruz del Sur // 15º Escuadrón (VHT-1 Spartas Hovertank)",
+        "en": "Southern Cross Headquarters // 15th Squad (VHT-1 Spartas Hovertank)"
+      },
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Robotech Masters (Second Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/dana_sterling/dana_portrait.png",
+      "summary": {
+        "es": "Protagonista indiscutida de la Segunda Guerra Robotech. Hija de Max y Miriya Sterling, es la primera persona nacida de la unión entre un humano y una Zentraedi. Intrépida, insubordinada y con una intuición de combate sobrehumana, comanda el célebre 15º Escuadrón ATAC.",
+        "en": "The undisputed protagonist of the Second Robotech War. Daughter to Max and Miriya Sterling, she is history's first child born of human and Zentraedi parentage. Fearless, rebellious, and possessing superhuman combat intuition, she leads the famous 15th ATAC Squad."
+      },
+      "stats": {
+        "command": 91,
+        "strategy": 88,
+        "resolve": 98,
+        "piloting": 99
+      },
+      "dataFile": "data/personajes/dana_sterling.json",
+      "generation": "gen2"
+    },
+    {
+      "id": "bowie_grant",
+      "name": "Bowie Grant",
+      "japanese_name": "Bowie Emerson",
+      "category": "pilots",
+      "rank": {
+        "es": "Cabo // Soldado de Primera del 15º Escuadrón Táctico (ATAC)",
+        "en": "Corporal // Private First Class of 15th Tactical Armored Corps (ATAC)"
+      },
+      "role": {
+        "es": "Piloto de Hovertank, Músico Pianista y Enlace Sentimental con Musica",
+        "en": "Hovertank Pilot, Concert Pianist & Emotional Link to Musica"
+      },
+      "faction": {
+        "es": "Ejército de la Cruz del Sur (15º Escuadrón ATAC)",
+        "en": "Army of the Southern Cross (15th ATAC Squad)"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Cuartel General de la Cruz del Sur // 15º Escuadrón (VHT-1 Spartas Hovertank)",
+        "en": "Southern Cross Headquarters // 15th Squad (VHT-1 Spartas Hovertank)"
+      },
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Robotech Masters (Second Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/bowie_grant/bowie_portrait.png",
+      "summary": {
+        "es": "Hijo de Vince y Jean Grant y sobrino de Claudia Grant. Joven pianista de alma sensible obligado a vestir el uniforme militar, compañero inseparable de Dana Sterling y coprotagonista del romance que resquebrajó la sociedad de los Maestros Robotech al unirse a Musica.",
+        "en": "Son of Vince and Jean Grant and nephew to Claudia Grant. A sensitive concert pianist compelled into military service, inseparable companion to Dana Sterling, and co-protagonist of the romance with Musica that fractured the Masters' society."
+      },
+      "stats": {
+        "command": 68,
+        "strategy": 72,
+        "resolve": 90,
+        "piloting": 82
+      },
+      "dataFile": "data/personajes/bowie_grant.json",
+      "generation": "gen2"
+    },
+    {
+      "id": "zor_prime",
+      "name": "Zor Prime",
+      "japanese_name": "Seifriet Weiße",
+      "category": "scientists",
+      "rank": {
+        "es": "Piloto Comandante Bioroid // Soldado de Primera Honorario del 15º Escuadrón",
+        "en": "Bioroid Commander Pilot // Honorary Private of 15th ATAC Squad"
+      },
+      "role": {
+        "es": "Clon del Creador Original de la Protocultura (Zor) y Enlace Neuronal con los Maestros",
+        "en": "Clone of the Original Creator of Protoculture (Zor) & Neural Link to the Masters"
+      },
+      "faction": {
+        "es": "Imperio de los Maestros Robotech // Ejército de la Cruz del Sur (15º Escuadrón)",
+        "en": "Robotech Masters Empire // Army of the Southern Cross (15th ATAC Squad)"
+      },
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "assignment": {
+        "es": "Bioroid Rojo de Asalto de los Maestros // 15º Escuadrón (VHT-1 Spartas)",
+        "en": "Red Assault Bioroid // 15th ATAC Squad (VHT-1 Spartas Hovertank)"
+      },
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Robotech Masters (Second Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/zor_prime/zor_uniform.jpg",
+      "summary": {
+        "es": "Clon del legendario científico Zor, el padre de la Protocultura. Creado por los Maestros Robotech como piloto de élite de su Bioroid rojo, fue capturado por Dana Sterling, recuperó la memoria de su vida anterior y se sacrificó heroicamente para destruir la nave nodriza de sus creadores.",
+        "en": "Clone of the legendary scientist Zor, discoverer of Protoculture. Bred by the Robotech Masters as the elite pilot of their Red Bioroid, he was captured by Dana Sterling, reawakened to his true memories, and sacrificed himself to destroy the Masters' flagship."
+      },
+      "stats": {
+        "command": 85,
+        "strategy": 96,
+        "resolve": 98,
+        "piloting": 97
+      },
+      "dataFile": "data/personajes/zor_prime.json",
+      "generation": "gen2"
+    },
+    {
+      "id": "musica",
+      "name": "Musica",
+      "japanese_name": "Musica",
+      "category": "scientists",
+      "rank": {
+        "es": "Sacerdotisa del Triunvirato Sagrado de la Flor de la Vida // Refugiada",
+        "en": "Priestess of the Sacred Flower of Life Triumvirate // Refugee"
+      },
+      "role": {
+        "es": "Músico Sagrada del Arpa Cósmica, Custodia de las Flores de la Vida y Pareja de Bowie Grant",
+        "en": "Sacred Cosmic Harpist, Custodian of the Flowers of Life & Partner to Bowie Grant"
+      },
+      "faction": {
+        "es": "Civilización de los Maestros Robotech (Tirol) // Refugiados en la Tierra",
+        "en": "Robotech Masters Civilization (Tirol) // Earth Refugees"
+      },
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "assignment": {
+        "es": "Cámara Bio-Armónica de la Nave Nodriza // Santuario Civil Terrestre",
+        "en": "Bio-Harmonic Chamber of Masters' Flagship // Earth Civilian Sanctuary"
+      },
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Robotech Masters (Second Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/musica/musica_crisis.png",
+      "summary": {
+        "es": "Sacerdotisa y músico cósmica del triunvirato sagrado de los Maestros Robotech. Encargada de modular el crecimiento de las Flores de la Vida con su arpa, su encuentro y romance con Bowie Grant la llevó a cuestionar el dogma alienígena y desertar a la Tierra, fracturando el control social de su pueblo.",
+        "en": "Cosmic harpist and priestess of the Robotech Masters' sacred triumvirate. Tasked with harmonizing the Flower of Life bio-chambers, her romance with Bowie Grant compelled her to defect to Earth, triggering the ideological collapse of alien society."
+      },
+      "stats": {
+        "command": 50,
+        "strategy": 75,
+        "resolve": 92,
+        "piloting": 15
+      },
+      "dataFile": "data/personajes/musica.json",
+      "generation": "gen2"
+    },
+    {
+      "id": "angelo_dante",
+      "name": "Sargento Angelo Dante",
+      "japanese_name": "Andrzej Sławiński",
+      "category": "pilots",
+      "rank": {
+        "es": "Sargento Primero // Suboficial Mayor del 15º Escuadrón Táctico (ATAC)",
+        "en": "First Sergeant // Master Sergeant of 15th Tactical Armored Corps (ATAC)"
+      },
+      "role": {
+        "es": "Segundo al Mando Táctico, Instructor de Combate y Artillero Pesado del Escuadrón 15",
+        "en": "Tactical Second-in-Command, Drill Instructor & Heavy Gunner of 15th Squad"
+      },
+      "faction": {
+        "es": "Ejército de la Cruz del Sur (15º Escuadrón ATAC)",
+        "en": "Army of the Southern Cross (15th ATAC Squad)"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Cuartel General de la Cruz del Sur // 15º Escuadrón (VHT-1 Spartas Hovertank)",
+        "en": "Southern Cross Headquarters // 15th Squad (VHT-1 Spartas Hovertank)"
+      },
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Robotech Masters (Second Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/angelo_dante/dante_portrait.jpg",
+      "summary": {
+        "es": "El curtido y rudo sargento mayor del 15º Escuadrón Táctico Blindado (ATAC). Veterano de disciplina férrea, su escepticismo inicial hacia la juventud de Dana Sterling se transformó en una lealtad absoluta en el fragor de la guerra contra los Maestros Robotech.",
+        "en": "The battle-hardened first sergeant of the 15th ATAC Squad. A strict disciplinarian, his early skepticism of young Dana Sterling transformed into absolute combat loyalty amidst the crucible of the Second Robotech War."
+      },
+      "stats": {
+        "command": 86,
+        "strategy": 78,
+        "resolve": 96,
+        "piloting": 88
+      },
+      "dataFile": "data/personajes/angelo_dante.json",
+      "generation": "gen2"
+    },
+    {
+      "id": "sean_phillips",
+      "name": "Sean Phillips",
+      "japanese_name": "Charles De L'Étoile",
+      "category": "pilots",
+      "rank": {
+        "es": "Teniente // Soldado Raso (Degradado por Disciplina) // Cabo Honorario (ATAC)",
+        "en": "Lieutenant // Private (Demoted for Conduct) // Honorary Corporal (ATAC)"
+      },
+      "role": {
+        "es": "As de Combate Blindado, Especialista en Infiltración y Pareja de Marie Crystal",
+        "en": "Armored Combat Ace, Infiltration Specialist & Partner to Marie Crystal"
+      },
+      "faction": {
+        "es": "Ejército de la Cruz del Sur (15º Escuadrón ATAC)",
+        "en": "Army of the Southern Cross (15th ATAC Squad)"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Cuartel General de la Cruz del Sur // 15º Escuadrón (VHT-1 Spartas Hovertank)",
+        "en": "Southern Cross Headquarters // 15th Squad (VHT-1 Spartas Hovertank)"
+      },
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Robotech Masters (Second Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/sean_phillips/sean_portrait.png",
+      "summary": {
+        "es": "Ex-comandante del 15º Escuadrón degradado a soldado raso por sus constantes líos de faldas y desacato al protocolo. Piloto prodigioso y maestro del combate cuerpo a cuerpo, su desenfado esconde un coraje letal y un romance apasionado con la teniente Marie Crystal.",
+        "en": "Former 15th Squad commander busted down to private over chronic romantic entanglements and protocol violations. A brilliant pilot and hand-to-hand combatant, his flippant charm masks lethal courage and a fiery romance with Lieutenant Marie Crystal."
+      },
+      "stats": {
+        "command": 80,
+        "strategy": 82,
+        "resolve": 94,
+        "piloting": 96
+      },
+      "dataFile": "data/personajes/sean_phillips.json",
+      "generation": "gen2"
+    },
+    {
+      "id": "marie_crystal",
+      "name": "Marie Crystal",
+      "japanese_name": "Marie Angel",
+      "category": "pilots",
+      "rank": {
+        "es": "Teniente // Comandante del Escuadrón Aeroespacial TASC Black Lions",
+        "en": "Lieutenant // Commander of TASC Black Lions Aerospace Squadron"
+      },
+      "role": {
+        "es": "As Supremo de Cazas Espaciales de la Cruz del Sur y Pareja de Sean Phillips",
+        "en": "Southern Cross Supreme Aerospace Fighter Ace & Partner to Sean Phillips"
+      },
+      "faction": {
+        "es": "Ejército de la Cruz del Sur (Tactical Armored Space Corps - TASC)",
+        "en": "Army of the Southern Cross (Tactical Armored Space Corps - TASC)"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Ala Aeroespacial TASC // Escuadrón Black Lions (VF-8 Logan / VFH-10 Auroran Ajax)",
+        "en": "TASC Aerospace Wing // Black Lions Squadron (VF-8 Logan / VFH-10 Auroran Ajax)"
+      },
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Robotech Masters (Second Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/marie_crystal/marie_portrait.png",
+      "summary": {
+        "es": "Comandante de élite del escuadrón aeroespacial Black Lions (TASC). Disciplinada, severa y con un récord intachable de derribos, protagonizó una intensa rivalidad profesional con Dana Sterling y una apasionada historia de amor con el pícaro Sean Phillips.",
+        "en": "Elite commander of the Black Lions (TASC) aerospace fighter squadron. Disciplined, sharp, and possessing an unblemished aerial combat record, she shared a fierce professional rivalry with Dana Sterling and a passionate romance with rogue Sean Phillips."
+      },
+      "stats": {
+        "command": 90,
+        "strategy": 86,
+        "resolve": 96,
+        "piloting": 98
+      },
+      "dataFile": "data/personajes/marie_crystal.json",
+      "generation": "gen2"
+    },
+    {
+      "id": "nova_satori",
+      "name": "Nova Satori",
+      "japanese_name": "Nova Satori",
+      "category": "command",
+      "rank": {
+        "es": "Teniente // Oficial Investigadora Superior de la Policía Militar Global (GMP)",
+        "en": "Lieutenant // Senior Investigating Officer of Global Military Police (GMP)"
+      },
+      "role": {
+        "es": "Jefa de Inteligencia y Seguridad Interna de la Cruz del Sur y Custodia de la Ley Marcial",
+        "en": "Head of Southern Cross Counter-Intelligence & Internal Security, Martial Law Custodian"
+      },
+      "faction": {
+        "es": "Policía Militar Global (Global Military Police - GMP)",
+        "en": "Global Military Police (GMP)"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "División de Inteligencia y Seguridad de la GMP // Cuartel General de la Cruz del Sur",
+        "en": "GMP Intelligence & Internal Security Division // Southern Cross Headquarters"
+      },
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Robotech Masters (Second Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/nova_satori/nova_portrait.jpg",
+      "summary": {
+        "es": "Joven, perspicaz e incorruptible oficial investigadora de la Policía Militar Global (GMP). Encargada de supervisar al rebelde 15º Escuadrón e interrogar a Zor Prime y Musica, su sentido del deber y la justicia la llevaron a desafiar la paranoia autoritaria del Comandante Supremo Leonard.",
+        "en": "Sharp, young, and incorruptible intelligence officer of the Global Military Police (GMP). Tasked with surveilling the rogue 15th Squad and interrogating Zor Prime and Musica, her moral compass led her to reject Supreme Commander Leonard's authoritarian paranoia."
+      },
+      "stats": {
+        "command": 87,
+        "strategy": 94,
+        "resolve": 92,
+        "piloting": 65
+      },
+      "dataFile": "data/personajes/nova_satori.json",
+      "generation": "gen2"
+    },
+    {
+      "id": "rolf_emerson",
+      "name": "General Rolf Emerson",
+      "japanese_name": "Rolf Emerson",
+      "category": "command",
+      "rank": {
+        "es": "General de División // Jefe de Estado Mayor Conjunto de la Cruz del Sur",
+        "en": "Major General // Chairman of Southern Cross Joint Staff"
+      },
+      "role": {
+        "es": "Jefe de Estado Mayor, Padrino de Dana Sterling y Bowie Grant y Comandante de la Flota Espacial",
+        "en": "Chief of Staff, Godfather to Dana Sterling & Bowie Grant & Space Fleet Commander"
+      },
+      "faction": {
+        "es": "Ejército de la Cruz del Sur (Estado Mayor Conjunto) // Flota Espacial",
+        "en": "Army of the Southern Cross (Joint Staff) // Deep Space Fleet"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Estado Mayor de la Cruz del Sur // Acorazado Insignia Tristar (Flota Orbital)",
+        "en": "Southern Cross General Staff // Tristar Class Flagship (Orbital Fleet)"
+      },
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Robotech Masters (Second Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/rolf_emerson/emerson_command.png",
+      "summary": {
+        "es": "Jefe de Estado Mayor de la Cruz del Sur, tutor y padrino de Dana Sterling y Bowie Grant. La voz de la sensatez, la diplomacia y el honor militar frente al despotismo del Comandante Supremo Leonard, murió heroicamente en órbita liderando la flota espacial.",
+        "en": "Chief of Staff of the Southern Cross, guardian and godfather to Dana Sterling and Bowie Grant. The voice of reason, diplomacy, and soldierly honor against Leonard's fanaticism, he gave his life heroically commanding the orbital fleet."
+      },
+      "stats": {
+        "command": 97,
+        "strategy": 95,
+        "resolve": 99,
+        "piloting": 60
+      },
+      "dataFile": "data/personajes/rolf_emerson.json",
+      "generation": "gen2"
+    },
+    {
+      "id": "anatole_leonard",
+      "name": "Comandante Supremo Anatole Leonard",
+      "japanese_name": "Claude Leon",
+      "category": "command",
+      "rank": {
+        "es": "Comandante Supremo de los Ejércitos de la Cruz del Sur (ASC)",
+        "en": "Supreme Commander of the Armies of the Southern Cross (ASC)"
+      },
+      "role": {
+        "es": "Líder Supremo Militar y Dictador de Facto de la Tierra durante la Segunda Guerra Robotech",
+        "en": "Supreme Military Commander & De Facto Dictator of Earth during Second Robotech War"
+      },
+      "faction": {
+        "es": "Mando Supremo de los Ejércitos de la Cruz del Sur",
+        "en": "Supreme Command of the Armies of the Southern Cross"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Cuartel General de la Cruz del Sur (Monumento City) // Búnker Supremo",
+        "en": "Southern Cross Headquarters (Monument City) // Supreme Bunker"
+      },
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Robotech Masters (Second Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/anatole_leonard/leonard_speech.png",
+      "summary": {
+        "es": "Comandante supremo absoluto de los Ejércitos de la Cruz del Sur. Militar intransigente, autoritario y despiadado, impuso una doctrina de guerra de desgaste frontal total contra los Maestros Robotech a costa de sacrificar flotas enteras de jóvenes soldados terrestres, pereciendo en su búnker durante el colapso final de Monument City.",
+        "en": "Absolute supreme commander of the Armies of the Southern Cross. Inflexible, authoritarian, and ruthless, he waged total war of attrition against the Robotech Masters at the cost of sacrificing entire space fleets of young Terran soldiers, dying in his command bunker during the fall of Monument City."
+      },
+      "stats": {
+        "command": 98,
+        "strategy": 74,
+        "resolve": 100,
+        "piloting": 40
+      },
+      "dataFile": "data/personajes/anatole_leonard.json",
+      "generation": "gen2"
+    },
+    {
+      "id": "robotech_masters",
+      "name": "Los Maestros Robotech",
+      "japanese_name": "The Robotech Masters (Triumvirate)",
+      "category": "zentraedi",
+      "rank": {
+        "es": "Triunvirato Supremo Imperial // Soberanos de la Protocultura",
+        "en": "Supreme Imperial Triumvirate // Sovereigns of Protoculture"
+      },
+      "role": {
+        "es": "Gobernantes de la Civilización Tiroliana y Creadores de la Casta Guerrera Zentraedi",
+        "en": "Rulers of the Tirolian Civilization & Creators of the Zentraedi Warrior Caste"
+      },
+      "faction": {
+        "es": "Imperio de los Maestros Robotech (Tirol)",
+        "en": "Robotech Masters Empire (Tirol)"
+      },
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "assignment": {
+        "es": "Flota de Naves Nodriza Bio-Mecánicas de los Maestros // Cámara de Mando Suprema",
+        "en": "Bio-Mechanical Command Motherships // Supreme Command Chamber"
+      },
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Robotech Masters (Second Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/robotech_masters/masters_triumvirate.jpg",
+      "summary": {
+        "es": "Los gobernantes alienígenas y creadores del imperio de la Protocultura. Organizados en tríadas clónicas inmutables (como Shaizan, Dag y Bowkaz), viajaron a la Tierra en sus gigantescas naves nodriza bio-mecánicas para recuperar la Matriz de Protocultura oculta en los restos del SDF-1 antes de que la Inquisición Invid consumiera su civilización moribunda.",
+        "en": "The alien rulers and bio-engineers of the Protoculture empire. Structured in immutable clone triads (Shaizan, Dag, and Bowkaz), they journeyed across the stars in bio-mechanical motherships to unearth the Protoculture Matrix inside the SDF-1 ruins before the Invid consumed their dying society."
+      },
+      "stats": {
+        "command": 99,
+        "strategy": 96,
+        "resolve": 97,
+        "piloting": 45
+      },
+      "dataFile": "data/personajes/robotech_masters.json",
+      "generation": "gen2"
+    },
+    {
+      "id": "louie_nichols",
+      "name": "Louie Nichols",
+      "japanese_name": "Bowie Nichols",
+      "category": "scientists",
+      "rank": {
+        "es": "Cabo (ATAC 15º Escuadrón) // Comandante / Asesor Científico Jefe (REF)",
+        "en": "Corporal (15th ATAC Squad) // Commander & Chief Scientific Advisor (REF)"
+      },
+      "role": {
+        "es": "Ingeniero Tecnológico del Escuadrón 15, Inventor del 'Pupil Pistol' y Científico de la REF",
+        "en": "15th Squad Technical Engineer, Inventor of the 'Pupil Pistol' & REF Lead Scientist"
+      },
+      "faction": {
+        "es": "Ejército de la Cruz del Sur (15º Escuadrón ATAC) // Fuerza Expedicionaria Robotech (REF)",
+        "en": "Army of the Southern Cross (15th ATAC Squad) // Robotech Expeditionary Force (REF)"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Cuartel General de la Cruz del Sur // 15º Escuadrón // Buque Insignia Icarus / SDF-4",
+        "en": "Southern Cross Headquarters // 15th Squad // Flagship Icarus / SDF-4"
+      },
+      "series": {
+        "es": "Los Maestros de la Robotech & Las Crónicas de las Sombras",
+        "en": "The Robotech Masters & The Shadow Chronicles"
+      },
+      "thumbnail": "assets/images/personajes/louie_nichols/louie_portrait.png",
+      "summary": {
+        "es": "El prodigio informático y mecánico del 15º Escuadrón. Inventor del visor de puntería bio-ocular 'Pupil Pistol', sufrió un dilema ético cuando el ejército militarizó su invento para armas letales. Años después, se convirtió en el científico jefe de la REF en 'Las Crónicas de las Sombras', descifrando la traición Haydonita.",
+        "en": "The mechanical and software prodigy of the 15th Squad. Inventor of the bio-ocular 'Pupil Pistol' targeting interface, he endured a crisis of conscience when the military weaponized it. Years later, he emerged as chief scientist of the REF in 'The Shadow Chronicles', uncovering the Haydonite conspiracy."
+      },
+      "stats": {
+        "command": 78,
+        "strategy": 98,
+        "resolve": 91,
+        "piloting": 80
+      },
+      "dataFile": "data/personajes/louie_nichols.json",
+      "generation": "gen2"
+    },
+    {
+      "id": "scott_bernard",
+      "name": "Scott Bernard",
+      "japanese_name": "Stig Bernard",
+      "category": "pilots",
+      "rank": {
+        "es": "Teniente Comandante (REF División Marte) // Comandante del Grupo de Resistencia",
+        "en": "Lieutenant Commander (REF Mars Division) // Resistance Group Commander"
+      },
+      "role": {
+        "es": "Líder de la Fuerza de Liberación Terrestre y As del VAF-6C Alpha Fighter y VR-052 Cyclone",
+        "en": "Leader of Earth Liberation Resistance & Ace of VAF-6C Alpha Fighter & VR-052 Cyclone"
+      },
+      "faction": {
+        "es": "Fuerza Expedicionaria Robotech (REF 21ª División de Marte) // Resistencia Terrestre",
+        "en": "Robotech Expeditionary Force (REF 21st Mars Division) // Earth Resistance"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "21ª División de Marte // Caza Alpha Azul // Moto-Armadura Cyclone VR-052F",
+        "en": "21st Mars Division // Blue Alpha Fighter // VR-052F Cyclone Ride Armor"
+      },
+      "series": {
+        "es": "La Nueva Generación & Las Crónicas de las Sombras",
+        "en": "The New Generation & The Shadow Chronicles"
+      },
+      "thumbnail": "assets/images/personajes/scott_bernard/scott_card.jpg",
+      "summary": {
+        "es": "Protagonista absoluto de la Tercera Guerra Robotech. Único oficial superviviente de la primera oleada de desembarco de la División de Marte, lideró una heterogénea banda de guerrilleros a través de continentes enteros hasta el asalto final al bastión de Punto Réflex, liberando a la Tierra del yugo Invid.",
+        "en": "Undisputed protagonist of the Third Robotech War. Sole surviving officer of the first Mars Division orbital strike, he rallied a band of freedom fighters across hostile continents to storm the Invid hive at Reflex Point, reclaiming Earth for humanity."
+      },
+      "stats": {
+        "command": 96,
+        "strategy": 92,
+        "resolve": 100,
+        "piloting": 99
+      },
+      "dataFile": "data/personajes/scott_bernard.json",
+      "generation": "gen3"
+    },
+    {
+      "id": "rand",
+      "name": "Rand",
+      "japanese_name": "Ray",
+      "category": "pilots",
+      "rank": {
+        "es": "Explorador de la Resistencia // Especialista de Moto-Armadura Cyclone VR-052",
+        "en": "Resistance Scout // VR-052 Cyclone Ride Armor Specialist"
+      },
+      "role": {
+        "es": "Explorador de Vanguardia, Narrador del Diario de Viaje y Pareja de Rook Bartley",
+        "en": "Vanguard Scout, Expedition Diarist & Partner to Rook Bartley"
+      },
+      "faction": {
+        "es": "Población Civil de la Tierra // Guerrilla de Resistencia de Scott Bernard",
+        "en": "Earth Civilian Population // Scott Bernard's Resistance Wing"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Guerrilla Terrestre // Moto-Armadura Cyclone VR-052T / VR-038",
+        "en": "Earth Guerrilla Wing // VR-052T / VR-038 Cyclone Ride Armor"
+      },
+      "series": {
+        "es": "La Nueva Generación (Tercera Guerra Robotech)",
+        "en": "The New Generation (Third Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/rand/rand_portrait.jpg",
+      "summary": {
+        "es": "Muchacho libre, rebelde y carismático que creció bajo la tiranía Invid. Primer humano en unirse a Scott Bernard tras encontrar una moto Cyclone abandonada, convirtió su diario de viaje en la crónica viva de la liberación de la Tierra y conquistó el corazón de la solitaria Rook Bartley.",
+        "en": "A free-spirited, resourceful young nomad born under Invid oppression. The first human to join Scott Bernard after salvaging an abandoned Cyclone armor, his travel journal chronicled Earth's liberation as he won the heart of the fiercely independent Rook Bartley."
+      },
+      "stats": {
+        "command": 74,
+        "strategy": 85,
+        "resolve": 95,
+        "piloting": 96
+      },
+      "dataFile": "data/personajes/rand.json",
+      "generation": "gen3"
+    },
+    {
+      "id": "rook_bartley",
+      "name": "Rook Bartley",
+      "japanese_name": "Houquet et Rose",
+      "category": "pilots",
+      "rank": {
+        "es": "Líder Guerrillera Urbana // As de Moto-Armadura Cyclone VR-038",
+        "en": "Urban Guerrilla Leader // VR-038 Cyclone Ride Armor Ace"
+      },
+      "role": {
+        "es": "Especialista en Combate Urbano, Artillera de Choque y Pareja de Rand",
+        "en": "Urban Combat Specialist, Shock Gunner & Partner to Rand"
+      },
+      "faction": {
+        "es": "Resistencia Urbana Terrestre // Guerrilla de Scott Bernard",
+        "en": "Earth Urban Resistance // Scott Bernard's Guerrilla Wing"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Guerrilla Terrestre // Moto-Armadura Cyclone VR-038-LL (Rojo/Blanco)",
+        "en": "Earth Guerrilla Wing // VR-038-LL Cyclone Ride Armor (Red/White)"
+      },
+      "series": {
+        "es": "La Nueva Generación (Tercera Guerra Robotech)",
+        "en": "The New Generation (Third Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/rook_bartley/rook_portrait.jpg",
+      "summary": {
+        "es": "Feroz, solitaria y letal combatiente urbana de la resistencia terrestre. Antigua motociclista de pandilla traicionada en su pueblo natal, aprendió a confiar únicamente en sus armas y en su moto Cyclone VR-038 hasta que conoció a Rand y a Scott Bernard, convirtiéndose en el pilar combativo de la marcha a Punto Réflex.",
+        "en": "Fierce, solitary, and deadly urban resistance fighter. A former gang biker betrayed in her hometown, she trusted only her reflexes and her VR-038 Cyclone ride armor until she joined Rand and Scott Bernard, becoming the hardened combat backbone of the march to Reflex Point."
+      },
+      "stats": {
+        "command": 78,
+        "strategy": 82,
+        "resolve": 98,
+        "piloting": 97
+      },
+      "dataFile": "data/personajes/rook_bartley.json",
+      "generation": "gen3"
+    },
+    {
+      "id": "lancer",
+      "name": "Lancer / Yellow Belmont",
+      "japanese_name": "Yellow Belmont",
+      "category": "pilots",
+      "rank": {
+        "es": "Teniente (Fuerzas Especiales REF) // Guerrillero Encubierto",
+        "en": "Lieutenant (REF Special Forces) // Covert Guerrilla Operative"
+      },
+      "role": {
+        "es": "Operativo de Infiltración, As de Caza Alpha Verde y Cantante Pop Encubierto",
+        "en": "Infiltration Operative, Green Alpha Fighter Ace & Covert Pop Sensation"
+      },
+      "faction": {
+        "es": "Fuerza Expedicionaria Robotech (REF 10ª División) // Guerrilla de Resistencia",
+        "en": "Robotech Expeditionary Force (REF 10th Division) // Resistance Wing"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "10ª División REF // Caza Alpha VAF-6I Verde // Identidad Secreta: 'Yellow Dancer'",
+        "en": "10th REF Division // Green VAF-6I Alpha Fighter // Secret Identity: 'Yellow Dancer'"
+      },
+      "series": {
+        "es": "La Nueva Generación (Tercera Guerra Robotech)",
+        "en": "The New Generation (Third Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/lancer/lancer_portrait.jpg",
+      "summary": {
+        "es": "Oficial veterano de la primera oleada de desembarco de la REF y formidable piloto de caza Alpha. Para operar tras las líneas enemigas sin ser detectado, adoptó la identidad andrógina de 'Yellow Dancer', una deslumbrante estrella del pop que llevaba esperanza a los pueblos oprimidos y organizaba la rebelión civil contra los Invid.",
+        "en": "Veteran officer of the first REF orbital drop and formidable Alpha fighter ace. Operating deep behind enemy lines, he adopted the androgynous persona of 'Yellow Dancer', a dazzling pop star who brought hope to oppressed towns while secretly coordinating civilian rebellion against the Invid."
+      },
+      "stats": {
+        "command": 85,
+        "strategy": 94,
+        "resolve": 96,
+        "piloting": 97
+      },
+      "dataFile": "data/personajes/lancer.json",
+      "generation": "gen3"
+    },
+    {
+      "id": "ariel_marlene",
+      "name": "Ariel (Marlene)",
+      "japanese_name": "Aisha (アイシャ)",
+      "category": "commanders",
+      "rank": {
+        "es": "Princesa Invid // Agente Bio-Humana de la Regis // Enlace de Paz",
+        "en": "Invid Princess // Regess Humanoid Simulagent // Ambassador of Peace"
+      },
+      "role": {
+        "es": "Sonda de Exploración Biológica Invid, Compañera de Scott Bernard y Pacificadora",
+        "en": "Invid Biological Scout, Companion to Scott Bernard & Peacemaker"
+      },
+      "faction": {
+        "es": "Imperio Invid // Escuadrón de Resistencia de Scott Bernard",
+        "en": "Invid Empire // Scott Bernard's Earth Resistance Squad"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Vanguardia de la Regis // Guía Espiritual de la Resistencia a Punto Réflex",
+        "en": "Regess Vanguard Envoy // Spiritual Guide of Earth Resistance to Reflex Point"
+      },
+      "series": {
+        "es": "La Nueva Generación (Tercera Guerra Robotech)",
+        "en": "The New Generation (Third Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/ariel_marlene/ariel_portrait.jpg",
+      "summary": {
+        "es": "El primer ser Invid transmutado por la Regis en una forma biológica idéntica a la humana. Encontrada desnuda y amnésica entre escombros por Scott Bernard y su escuadrón, fue bautizada 'Marlene' por el asombroso parecido con la difunta prometida de Scott. Convertida en el corazón empático del grupo, su despertar psíquico y su amor por Scott fueron la clave para convencer a la Regis de abandonar la Tierra en paz en lugar de destruirla.",
+        "en": "The first Invid lifeform transmuted by the Regess into a biologically identical human form. Discovered naked and amnesiac amidst ruins by Scott Bernard's squad, she was christened 'Marlene' due to her striking resemblance to Scott's lost fiancée. Becoming the squad's empathic heart, her psychic awakening and love for Scott proved crucial in convincing the Regess to depart Earth in peace rather than exterminating humanity."
+      },
+      "stats": {
+        "command": 70,
+        "strategy": 85,
+        "resolve": 96,
+        "piloting": 45
+      },
+      "dataFile": "data/personajes/ariel_marlene.json",
+      "generation": "gen3"
+    },
+    {
+      "id": "lunk",
+      "name": "Jim \"Lunk\" Cooper",
+      "japanese_name": "Jim Austin (ジム・オースティン)",
+      "category": "support",
+      "rank": {
+        "es": "Sargento Técnico de Bio-Mantenimiento REF // Conductor Blindado A.P.C.",
+        "en": "REF Bio-Maintenance Technical Sergeant // Armored APC Driver"
+      },
+      "role": {
+        "es": "Ingeniero Mecánico, Jefe de Logística y Protector del Escuadrón",
+        "en": "Mechanical Engineer, Squad Logistics Chief & Protector"
+      },
+      "faction": {
+        "es": "Fuerzas Expedicionarias Robotech (REF) // Guerrilla Terrestre de Scott",
+        "en": "Robotech Expeditionary Force (REF) // Scott Bernard's Guerrilla Squad"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Transporte Pesado Terrestre Blindado A.P.C. / Moto-Armadura Cyclone VR-052T",
+        "en": "Armored Personnel Carrier (APC) / VR-052T Cyclone Ride Armor"
+      },
+      "series": {
+        "es": "La Nueva Generación (Tercera Guerra Robotech)",
+        "en": "The New Generation (Third Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/lunk/lunk_portrait.jpg",
+      "summary": {
+        "es": "Veterano técnico de bio-mantenimiento de la 10ª División de Asalto REF que sobrevivió al aniquilamiento de su contingente en la Tierra. Afectado por el trauma y el estigma de la deserción, Lunk recuperó su honor y valentía al unirse a Scott Bernard y Rand. Al mando del todoterreno blindado A.P.C., aseguró el abastecimiento de protocultura, reparó cazas Alpha y sirvió como figura paterna inquebrantable para la joven huérfana Annie LaBelle.",
+        "en": "A veteran bio-maintenance technician from the REF 10th Assault Division who survived the total destruction of his orbital drop unit on Earth. Burdened by trauma and survivor's guilt, Lunk reclaimed his honor and bravery after joining Scott Bernard and Rand. Behind the wheel of the squad's armored personnel carrier (APC), he safeguarded precious protoculture supplies, repaired Alpha fighters, and acted as an affectionate, stalwart guardian to young Annie LaBelle."
+      },
+      "stats": {
+        "command": 68,
+        "strategy": 74,
+        "resolve": 85,
+        "piloting": 80
+      },
+      "dataFile": "data/personajes/lunk.json",
+      "generation": "gen3"
+    },
+    {
+      "id": "annie_labelle",
+      "name": "Annie \"Mint\" LaBelle",
+      "japanese_name": "Mint LaBelle (ミント・ラブル)",
+      "category": "support",
+      "rank": {
+        "es": "Exploradora Juvenil // Auxiliar de Reconocimiento y Apoyo Moral",
+        "en": "Youth Scout // Reconnaissance Auxiliary & Squad Morale Anchor"
+      },
+      "role": {
+        "es": "Exploradora Civil, Rastreadora de Suministros y Mascota Alegre de la Resistencia",
+        "en": "Civilian Scout, Supply Tracker & High-Spirited Heart of the Resistance"
+      },
+      "faction": {
+        "es": "Resistencia Civil Terrestre // Escuadrón Guerrillero de Scott Bernard",
+        "en": "Earth Civilian Resistance // Scott Bernard's Guerrilla Squad"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Vehículo de Transporte A.P.C. / Vigilancia de Perímetro y Exploración",
+        "en": "APC Transport Unit // Perimeter Watch & Field Scouting"
+      },
+      "series": {
+        "es": "La Nueva Generación (Tercera Guerra Robotech)",
+        "en": "The New Generation (Third Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/annie_labelle/annie_portrait.png",
+      "summary": {
+        "es": "Adolescente huérfana de los eriales postapocalípticos, poseedora de una vivacidad desbordante, picardía callejera y un obsesivo anhelo por encontrar un 'esposo rico y apuesto' en cada poblado que cruza el escuadrón. A pesar de su juventud y actitud cómica, Annie aportó un agudo ingenio para el rastreo de recursos en pueblos desolados y se transformó en la chispa de esperanza que mantuvo unidos y humanos a Scott, Rand, Rook y Lunk.",
+        "en": "An irrepressible orphan girl raised in the post-apocalyptic wastelands, armed with street-smart wits, cheeky defiance, and an obsessive comedic quest to find a 'handsome, wealthy husband' in every settlement along the route. Beneath her youthful antics, Annie was a tireless resource tracker whose sheer innocence and exuberance became the emotional anchor keeping Scott, Rand, Rook, and Lunk grounded in their darkest hours."
+      },
+      "stats": {
+        "command": 52,
+        "strategy": 72,
+        "resolve": 90,
+        "piloting": 58
+      },
+      "dataFile": "data/personajes/annie_labelle.json",
+      "generation": "gen3"
+    },
+    {
+      "id": "regis_invid",
+      "name": "Regis Invid (La Regess)",
+      "japanese_name": "Refress (レフレス)",
+      "category": "commanders",
+      "rank": {
+        "es": "Reina Soberana y Matriarca Suprema de la Especie Invid",
+        "en": "Sovereign Queen & Supreme Matriarch of the Invid Species"
+      },
+      "role": {
+        "es": "Guía Evolutiva Cósmica, Madre Colectiva y Guardiana de la Flor de la Vida",
+        "en": "Cosmic Evolutionary Guide, Collective Hive-Mother & Keeper of the Flower of Life"
+      },
+      "faction": {
+        "es": "Imperio Biológico Invid // Mente Colmena de Punto Réflex",
+        "en": "Invid Biological Empire // Reflex Point Hive-Mind"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Colmena Madre Génesis // Trono Biológico Central de Punto Réflex",
+        "en": "Genesis Mother Hive // Central Biological Throne of Reflex Point"
+      },
+      "series": {
+        "es": "La Nueva Generación (Tercera Guerra Robotech)",
+        "en": "The New Generation (Third Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/regis_invid/regis_portrait.jpg",
+      "summary": {
+        "es": "La matriarca cósmica y deidad viviente de la raza Invid. Tras la profanación y devastación de su planeta natal Optera a manos de Zor y los Maestros de la Robotecnología, guio el éxodo de su pueblo a través de las galaxias hasta la Tierra, donde florecieron las semillas de la Flor de la Vida. Obsesionada con la evolución perfecta de su especie, creó la quinta fase bio-humanoide, pero conmovida por las súplicas de su hija Ariel y ante la amenaza de la flota de aniquilación humana y los Hijos de las Sombras, transformó a toda su raza en un fénix de luz pura y ascendió a las estrellas, salvando a la Tierra de la destrucción.",
+        "en": "The cosmic matriarch and living deity of the Invid race. Following the defilement and ruin of their homeworld Optera by Zor and the Robotech Masters, she shepherded her people across interstellar space to Earth, where the spores of the Flower of Life had taken root. Dedicated to engineering the ultimate evolutionary state for her species, she created the humanoid fifth stage, but moved by the pleas of her daughter Ariel and facing the genocidal threat of the REF Shadow fleet and the Children of the Shadow, she elevated her race into a phoenix of pure light energy and ascended into deep space, sparing Earth from annihilation."
+      },
+      "stats": {
+        "command": 100,
+        "strategy": 94,
+        "resolve": 98,
+        "piloting": 95
+      },
+      "dataFile": "data/personajes/regis_invid.json",
+      "generation": "gen3"
+    },
+    {
+      "id": "prince_corg",
+      "name": "Príncipe Corg",
+      "japanese_name": "Sorcie (ソルジィ)",
+      "category": "villains",
+      "rank": {
+        "es": "Príncipe Heredero de Punto Réflex // Comandante General de las Fuerzas Invid",
+        "en": "Crown Prince of Reflex Point // Commander General of Invid Royal Forces"
+      },
+      "role": {
+        "es": "Líder de Guerra Invid, As del Mecha Real Comandante y Némesis de Scott Bernard",
+        "en": "Invid Warlord, Royal Command Mecha Ace & Arch-Nemesis of Scott Bernard"
+      },
+      "faction": {
+        "es": "Imperio Biológico Invid // Guardia Pretoriana de la Regis",
+        "en": "Invid Biological Empire // Regess Praetorian Guard"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Mecha Real Comandante Invid (Gosú Carmesí) // Defensas de Punto Réflex",
+        "en": "Invid Royal Command Mecha (Crimson Gamo) // Reflex Point Bastion"
+      },
+      "series": {
+        "es": "La Nueva Generación (Tercera Guerra Robotech)",
+        "en": "The New Generation (Third Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/prince_corg/corg_portrait.jpg",
+      "summary": {
+        "es": "Creado por la Regis en la quinta fase evolutiva para liderar los ejércitos Invid contra la insurgencia terrestre y la flota de la REF. Al asumir la forma humana, Corg asimiló exclusivamente los instintos más oscuros, violentos y despiadados de la humanidad, careciendo por completo de compasión. Al mando de su mecha real rojo sangre, sembró el terror en la Tierra hasta ser abatido en un duelo aéreo a muerte por Scott Bernard en la batalla final de Punto Réflex.",
+        "en": "Transmuted by the Regess into the fifth evolutionary stage to marshal the Invid swarms against human guerrillas and the incoming REF assault armada. In adopting human biology, Corg absorbed only humanity's darkest impulses of cruelty, hatred, and unbridled sadism, devoid of empathy or conscience. Piloting his blood-red Royal Command Mecha, he terrorized Earth until being shot down in a climatic aerial dogfight by Scott Bernard during the siege of Reflex Point."
+      },
+      "stats": {
+        "command": 88,
+        "strategy": 80,
+        "resolve": 92,
+        "piloting": 96
+      },
+      "dataFile": "data/personajes/prince_corg.json",
+      "generation": "gen3"
+    },
+    {
+      "id": "princess_sera",
+      "name": "Princesa Sera",
+      "japanese_name": "Sera (セーラ)",
+      "category": "pilots",
+      "rank": {
+        "es": "Princesa Real de Punto Réflex // As de Mecha Comandante Real Invid",
+        "en": "Royal Princess of Reflex Point // Invid Royal Command Mecha Ace"
+      },
+      "role": {
+        "es": "Comandante Real Invid, Compañera de Lancer y Enlace Biológico entre Especies",
+        "en": "Invid Royal Commander, Partner to Lancer & Living Bridge Between Species"
+      },
+      "faction": {
+        "es": "Imperio Biológico Invid // Alianza de Paz con la Resistencia Terrestre",
+        "en": "Invid Biological Empire // Peace Alliance with Earth Resistance"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {
+        "es": "Mecha Real Comandante Invid (Gosú Lavanda) // Sector de Defensa Central",
+        "en": "Invid Royal Command Mecha (Lavender Gosu) // Central Defense Sector"
+      },
+      "series": {
+        "es": "La Nueva Generación (Tercera Guerra Robotech)",
+        "en": "The New Generation (Third Robotech War)"
+      },
+      "thumbnail": "assets/images/personajes/princess_sera/sera_portrait.jpg",
+      "summary": {
+        "es": "Princesa Invid transmutada por la Regis a forma humanoide junto a su hermano Corg. Designada para erradicar las fuerzas de la resistencia humana, su vida cambió irrevocablemente al escuchar la música y el canto de Lancer (Yellow Dancer). Desgarrada entre la lealtad a su madre colmena y el despertar del amor y la compasión humana, Sera enfrentó a su sanguinario hermano Corg, convirtiéndose en el puente viviente entre humanos e Invid al engendrar la primera descendencia híbrida de ambas razas.",
+        "en": "Invid princess transmuted by the Regess into humanoid form alongside her brother Corg. Dispatched to crush human resistance legions, her destiny transformed completely upon experiencing the music and soulful songs of Lancer (Yellow Dancer). Torn between unquestioned loyalty to the hive-mother and the intoxicating awakening of human empathy and love, Sera took up arms against her genocidal brother Corg, becoming the living bridge between humanity and the Invid by carrying the first hybrid child of both species."
+      },
+      "stats": {
+        "command": 85,
+        "strategy": 82,
+        "resolve": 94,
+        "piloting": 93
+      },
+      "dataFile": "data/personajes/princess_sera.json",
+      "generation": "gen3"
     }
   ]
 }

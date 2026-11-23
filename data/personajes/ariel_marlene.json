@@ -1,0 +1,157 @@
+{
+  "id": "ariel_marlene",
+  "name": "Ariel (Marlene)",
+  "japanese_name": "Aisha (アイシャ)",
+  "callsign": "Humanoid Invid Simulagent // Marlene",
+  "rank": {
+    "es": "Princesa Invid // Agente Bio-Humana de la Regis // Enlace de Paz",
+    "en": "Invid Princess // Regess Humanoid Simulagent // Ambassador of Peace"
+  },
+  "role": {
+    "es": "Sonda de Exploración Biológica Invid, Compañera de Scott Bernard y Pacificadora",
+    "en": "Invid Biological Scout, Companion to Scott Bernard & Peacemaker"
+  },
+  "category": "commanders",
+  "faction": {
+    "es": "Imperio Invid // Escuadrón de Resistencia de Scott Bernard",
+    "en": "Invid Empire // Scott Bernard's Earth Resistance Squad"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "assignment": {
+    "es": "Vanguardia de la Regis // Guía Espiritual de la Resistencia a Punto Réflex",
+    "en": "Regess Vanguard Envoy // Spiritual Guide of Earth Resistance to Reflex Point"
+  },
+  "birth_date": "Año 2042 (Génesis Biológica)",
+  "birth_place": {
+    "es": "Cámara de Transmutación de la Colmena Invid Génesis",
+    "en": "Invid Genesis Hive Transmutation Chamber"
+  },
+  "blood_type": "Fluido Basado en Protocultura / Genoma Humano Transmutado",
+  "height": "1,68 m",
+  "weight": "51 kg",
+  "thumbnail": "assets/images/personajes/ariel_marlene/ariel_portrait.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/ariel_marlene/ariel_portrait.jpg",
+      "title_es": "Ariel (Marlene) - Retrato Humanoide Invid",
+      "title_en": "Ariel (Marlene) - Humanoid Invid Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/ariel_marlene/marlene_invid.jpg",
+      "title_es": "Marlene - Resonancia Telépata y Vínculo con la Regis",
+      "title_en": "Marlene - Telepathic Resonance & Hive Mind Connection",
+      "type_es": "Registro de Campo",
+      "type_en": "Field Record"
+    },
+    {
+      "url": "assets/images/personajes/ariel_marlene/ariel_uniform.png",
+      "title_es": "Ariel - Atuendo de Resistencia y Enlace Espiritual",
+      "title_en": "Ariel - Resistance Garb & Empathic Guide",
+      "type_es": "Diseño de Personaje",
+      "type_en": "Character Design"
+    }
+  ],
+  "summary": {
+    "es": "El primer ser Invid transmutado por la Regis en una forma biológica idéntica a la humana. Encontrada desnuda y amnésica entre escombros por Scott Bernard y su escuadrón, fue bautizada 'Marlene' por el asombroso parecido con la difunta prometida de Scott. Convertida en el corazón empático del grupo, su despertar psíquico y su amor por Scott fueron la clave para convencer a la Regis de abandonar la Tierra en paz en lugar de destruirla.",
+    "en": "The first Invid lifeform transmuted by the Regess into a biologically identical human form. Discovered naked and amnesiac amidst ruins by Scott Bernard's squad, she was christened 'Marlene' due to her striking resemblance to Scott's lost fiancée. Becoming the squad's empathic heart, her psychic awakening and love for Scott proved crucial in convincing the Regess to depart Earth in peace rather than exterminating humanity."
+  },
+  "lore": {
+    "overview_es": "Creada como el primer prototipo de la quinta fase evolutiva Invid, Ariel fue enviada a la superficie terrestre por la Regis para observar el comportamiento, la psique y los impulsos afectivos de los humanos. Sufriendo de amnesia tras su nacimiento biológico, fue acogida con ternura por el escuadrón guerrillero. Scott, atormentado por la muerte de su prometida Marlene en la caída del 21º Escuadrón, proyectó en ella su dolor y esperanza.",
+    "overview_en": "Engineered as the pioneering prototype of the Invid fifth stage of evolution, Ariel was dispatched to Earth's surface by the Regess to assimilate human psychology, emotional drives, and culture. Suffering acute amnesia upon materialization, she was sheltered by the guerrilla group. Scott Bernard, traumatized by the demise of his fiancée Marlene during the 21st Division disaster, found bittersweet solace in her presence.",
+    "tactical_analysis_es": "Poseedora de un sexto sentido telepático innato, Marlene experimentaba punzadas agudas de dolor de cabeza cada vez que mechas Invid patrullaban cerca, convirtiéndose involuntariamente en el sistema de alerta temprana más infalible del grupo. Al descubrirse su verdadera naturaleza extraterrestre, Scott enfrentó una tormenta emocional devastadora, pero el valor compasivo de Ariel disipó su odio ciego. En la batalla final dentro de la Colmena Colmena de Punto Réflex, Ariel intercedió directamente ante su creadora, exponiendo que la humanidad no era una plaga a erradicar, sino seres con alma capaces de convivir en armonía.",
+    "tactical_analysis_en": "Possessing latent empathic telepathy, Marlene suffered severe migraines whenever Invid mecha approached, unintentionally serving as the squad's infallible early warning radar. When her extraterrestrial alien nature was unveiled, Scott endured agonizing inner turmoil, yet Ariel's boundless compassion extinguished his vengeful hatred. In the decisive confrontation within Reflex Point, Ariel confronted the Regess directly, demonstrating that humans possessed empathy and beauty worthy of preservation."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 70,
+      "label_es": "Ascendencia Diplomática y Espiritual",
+      "label_en": "Diplomatic & Spiritual Leadership",
+      "description_es": "Capaz de desafiar a la Regis Invid cara a cara y alterar el destino de toda su raza cósmica mediante convicción moral pura.",
+      "description_en": "Capable of standing before the Regess Invid and altering the fate of her entire cosmic race through unwavering moral conviction."
+    },
+    "strategy": {
+      "value": 85,
+      "label_es": "Percepción Psíquica y Clarividencia",
+      "label_en": "Psychic Perception & Clairvoyance",
+      "description_es": "Conexión directa con la mente colmena Invid y detección hipersensible de pulsos de protocultura a nivel planetario.",
+      "description_en": "Direct resonance with the Invid hive-mind and hypersensitive detection of protoculture emissions across planetary scales."
+    },
+    "resolve": {
+      "value": 96,
+      "label_es": "Pureza Emocional y Coraje Trascendente",
+      "label_en": "Emotional Purity & Transcendent Courage",
+      "description_es": "Superó la crisis existencial de ser un clon/simulagente alienígena y arriesgó su propia vida para detener el holocausto de la Tierra.",
+      "description_en": "Overcame the existential trauma of being an alien simulagent, selflessly risking destruction to halt Earth's annihilation."
+    },
+    "piloting": {
+      "value": 45,
+      "label_es": "Simbiosis Bio-Energética",
+      "label_en": "Bio-Energetic Symbiosis",
+      "description_es": "No pilota mechas convencionales terrestres, pero posee control instintivo sobre la resonancia vital y la Flor de la Vida.",
+      "description_en": "Does not pilot conventional Earth mecha, but exercises innate control over life resonance and the Flower of Life."
+    }
+  },
+  "timeline": [
+    {
+      "date": "2042",
+      "milestone_es": "Génesis en la Colmena Invid",
+      "milestone_en": "Genesis in Invid Hive",
+      "desc_es": "La Regis crea el primer simulagente humanoide para estudiar a la humanidad y descifrar el poder del amor y las emociones.",
+      "desc_en": "The Regess crafts the first humanoid simulagent to observe humanity and decipher the nature of emotions."
+    },
+    {
+      "date": "2043",
+      "milestone_es": "Encuentro en las Ruinas y Vínculo con Scott",
+      "milestone_en": "Encounter in Ruins & Bond with Scott",
+      "desc_es": "Rescatada por el escuadrón de Scott Bernard, es nombrada Marlene y se integra como un miembro entrañable de la marcha.",
+      "desc_en": "Rescued by Scott Bernard's squad, she is named Marlene and becomes an indispensable, tender member of the journey."
+    },
+    {
+      "date": "2044",
+      "milestone_es": "Revelación en Punto Réflex y Salvación de la Tierra",
+      "milestone_en": "Reflex Point Revelation & Earth Salvation",
+      "desc_es": "Revela su identidad Invid, desafía al príncipe Corg y persuade a la Regis de marcharse hacia las estrellas como pura luz de energía.",
+      "desc_en": "Reveals her Invid identity, confronts Prince Corg, and persuades the Regess to ascend into cosmic energy, saving Earth."
+    }
+  ],
+  "quotes": [
+    {
+      "text_es": "No quiero que nadie más muera... Ni humanos, ni los de mi pueblo. ¡Debe existir otra forma de vivir!",
+      "text_en": "I don't want anyone else to die... Not humans, not my people. There has to be another way to live!",
+      "context_es": "Ariel suplicando el cese al fuego ante Scott y la Regis",
+      "context_en": "Ariel pleading for peace between Scott and the Regess"
+    },
+    {
+      "text_es": "Scott... mi cuerpo puede ser Invid, pero mi corazón aprendió a sentir como el tuyo.",
+      "text_en": "Scott... my body may be Invid, but my heart learned to feel just like yours.",
+      "context_es": "Marlene confesando sus sentimientos tras el despertar de sus recuerdos",
+      "context_en": "Marlene confessing her emotions after regaining her true identity"
+    }
+  ],
+  "relationships": [
+    {
+      "character_id": "scott_bernard",
+      "name": "Scott Bernard",
+      "relation_es": "Amor protector, redención y vínculo trascendente",
+      "relation_en": "Protective love, redemption and transcendent bond"
+    },
+    {
+      "character_id": "regis_invid",
+      "name": "Regis Invid (Regess)",
+      "relation_es": "Madre creadora y reina a quien desafió por compasión",
+      "relation_en": "Creator mother and queen whom she confronted out of compassion"
+    },
+    {
+      "character_id": "princess_sera",
+      "name": "Princesa Sera",
+      "relation_es": "Hermana simulagente Invid; ambas alcanzaron la empatía humana",
+      "relation_en": "Invid sister simulagent; both attained human empathy"
+    }
+  ]
+}

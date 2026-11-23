@@ -1,0 +1,151 @@
+{
+  "id": "dolza",
+  "name": "Comandante Supremo Dolza",
+  "japanese_name": "Gorg Boddole Zer",
+  "callsign": "Supreme Commander // Grand Fleet Sovereign",
+  "rank": {
+    "es": "Comandante Supremo de la Gran Flota Imperial Zentraedi",
+    "en": "Supreme Commander of the Grand Zentraedi Imperial Armada"
+  },
+  "role": {
+    "es": "Líder Absoluto de los Ejércitos Zentraedi y Custodio de la Doctrina de los Maestros",
+    "en": "Absolute Sovereign of Zentraedi Armadas & Custodian of the Masters' Doctrine"
+  },
+  "category": "zentraedi",
+  "faction": {
+    "es": "Gran Armada Imperial Zentraedi (Flota de los Cuatro Millones)",
+    "en": "Grand Zentraedi Imperial Armada (Four-Million Ship Fleet)"
+  },
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "assignment": {
+    "es": "Base Satelital Insignia Fulbtzs-Berrentzs (Fortaleza Central de 600 km)",
+    "en": "Fulbtzs-Berrentzs Mobile Command Base (600-kilometer Planetary Fortress)"
+  },
+  "birth_date": "Fecha Zentraedi Ancestral (Clonación de Primera Dinastía)",
+  "birth_place": {
+    "es": "Mundo Matriz de los Maestros Robotech (Tirol)",
+    "en": "Homeworld Matrix of the Robotech Masters (Tirol)"
+  },
+  "blood_type": "Desconocido (Genética Imperial Zentraedi)",
+  "height": "16,40 m (Zentraedi)",
+  "weight": "24.500 kg",
+  "thumbnail": "assets/images/personajes/dolza/dolza_close_up.png",
+  "images": [
+    {
+      "url": "assets/images/personajes/dolza/dolza_close_up.png",
+      "title_es": "Comandante Supremo Dolza - Mirada Imperial Inquebrantable",
+      "title_en": "Supreme Commander Dolza - Unyielding Imperial Gaze",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    }
+  ],
+  "summary": {
+    "es": "El gobernante absoluto y supremo comandante militar de la raza Zentraedi. Al mando de una armada de más de 4,8 millones de naves de guerra, ordenó la aniquilación de la superficie terrestre tras considerar a la cultura humana una amenaza biológica irreversible.",
+    "en": "The absolute sovereign and supreme commander of the Zentraedi race. In command of an armada exceeding 4.8 million warships, he decreed the planetary incineration of Earth after deeming human culture an irreversible biological contagion."
+  },
+  "lore": {
+    "overview_es": "Creado por los Maestros de la Robotech como la cúspide genética de la casta de mando Zentraedi, Dolza fue investido con autoridad indiscutible sobre miles de flotas repartidas por la galaxia. Su lealtad programada hacia los Maestros Robotech le exigía recuperar a cualquier precio la Matriz de Protocultura oculta a bordo del SDF-1 de Zor. Cuando los informes de Breetai y Exedore revelaron que las tropas alienígenas estaban siendo subyugadas psicológicamente por la música y el romance, Dolza catalogó a la especie humana como un virus infeccioso que debía ser purgado.",
+    "overview_en": "Engineered by the Robotech Masters as the apex of Zentraedi supreme command genetics, Dolza was vested with unquestioned authority over myriad battle fleets spanning the cosmos. His bio-coded directives compelled him to recover the lost Protoculture Matrix encased within Zor's SDF-1 at all costs. When field telemetry from Breetai and Exedore confirmed his warriors were succumbing to cognitive shock through music and romance, Dolza classified humanity as an existential contagion requiring total planetary sterilization.",
+    "tactical_analysis_es": "Dolza comandaba la mayor concentración de poder destructivo jamás reunida en la historia bélica: una flota de más de cuatro millones de naves de combate agrupadas alrededor de su colosal base móvil con forma de domo de 600 kilómetros de diámetro. En cuestión de minutos, su bombardeo orbital convirtió en cenizas el 95% de la superficie de la Tierra. Sin embargo, su incapacidad para procesar la guerra psicológica facilitó su perdición: la 'Estrategia Minmei' transmitida por el SDF-1 desorganizó sus redes de tiro, permitiendo al crucero penetrar las compuertas de su domo y detonar su Cañón Principal y su sobrecarga de barrera en su núcleo, desintegrando a Dolza y quebrando para siempre el Imperio Zentraedi.",
+    "tactical_analysis_en": "Dolza commanded the largest concentration of kinetic annihilation in military annals: over 4.8 million capital warships enveloping his colossal 600-kilometer spherical mobile fortress. In mere minutes, his synchronized saturation bombardment charred 95% of Earth's crust into glass. Yet, his total inability to comprehend psychological warfare precipitated his demise: the 'Minmei Attack' paralyzed fleet communications, enabling the SDF-1 to breach the core dome of his flagship and detonate its Reflex Cannon and omnidirectional shield overload within his nerve center, destroying Dolza and shattering the Zentraedi Empire forever."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 100,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Comandante supremo absoluto; control indiscutido sobre millones de naves capitales y billones de soldados clonados."
+    },
+    "strategy": {
+      "value": 90,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Doctrina de aniquilación por saturación matemática masiva; nula flexibilidad ante factores culturales o psicológicos."
+    },
+    "resolve": {
+      "value": 100,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Determinación implacable; no vaciló en ordenar el bombardeo conjunto de flotas enemigas y aliadas rebeldes."
+    },
+    "piloting": {
+      "value": 60,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Soberano estelar y estratega de bases móviles colosales, ajeno al combate táctico individual."
+    }
+  },
+  "stats": {
+    "command": 100,
+    "strategy": 90,
+    "resolve": 100,
+    "piloting": 60
+  },
+  "service_record": [
+    {
+      "period": "Siglos de Conquista Espacial",
+      "assignment_es": "Comandante Supremo de la Gran Armada Imperial Zentraedi al servicio de los Maestros",
+      "assignment_en": "Supreme Commander of Grand Zentraedi Imperial Armada serving the Robotech Masters"
+    },
+    {
+      "period": "2009",
+      "assignment_es": "Ordena la expedición militar hacia el cuadrante terrestre para recuperar la fortaleza de Zor",
+      "assignment_en": "Orders military expedition to the Terran quadrant to retrieve Zor's battle fortress"
+    },
+    {
+      "period": "2010",
+      "assignment_es": "Convoca la flota de reserva de Azonia tras los retrasos tácticos de Breetai en el Sistema Solar",
+      "assignment_en": "Summons Azonia's reserve fleet following Breetai's tactical delays across Solar System"
+    },
+    {
+      "period": "2011",
+      "assignment_es": "Moviliza la Gran Flota Imperial de 4.800.000 buques; inicia la 'Lluvia de Muerte' sobre la Tierra",
+      "assignment_en": "Mobilizes 4.8 million-ship Grand Fleet; commences the 'Rain of Death' upon Earth"
+    },
+    {
+      "period": "2011",
+      "assignment_es": "Muere en la desintegración de su fortaleza Fulbtzs-Berrentzs al penetrar el SDF-1 en su núcleo",
+      "assignment_en": "Killed in the destruction of his Fulbtzs-Berrentzs fortress as SDF-1 breaches its core"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Comandante Breetai",
+      "relation_es": "Su comandante de campo de confianza; lo sentenció a muerte al descubrir su 'infección' cultural humana.",
+      "relation_en": "His trusted field commander; marked him for execution upon discovering his cultural infection."
+    },
+    {
+      "character": "Exedore Formo",
+      "relation_es": "Su antiguo ministro mnemotécnico; ignoró sus advertencias sobre el poder liberador de las emociones.",
+      "relation_en": "His former mnemonic minister; dismissed his warnings regarding the subversive power of emotion."
+    },
+    {
+      "character": "Henry Gloval",
+      "relation_es": "El capitán humano que osó desafiar a su armada y cuya nave atravesó el vientre de su fortaleza.",
+      "relation_en": "The human captain who dared defy his fleet and whose ship impaled his command fortress."
+    },
+    {
+      "character": "Lynn Minmei",
+      "relation_es": "La cantante civil que consideró la amenaza biológica más peligrosa jamás engendrada en la galaxia.",
+      "relation_en": "The civilian vocalist he branded as the deadliest biological hazard ever spawned in the galaxy."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "¡Los micronianos han contaminado a nuestros soldados con su 'cultura'! ¡Este planeta debe ser purificado hasta que solo quede ceniza y roca!",
+      "quote_en": "The micronians have contaminated our warriors with their 'culture'! This planet must be purged until nothing remains but ash and stone!",
+      "context_es": "Orden a la Gran Flota Imperial antes de iniciar la 'Lluvia de Muerte' sobre la Tierra.",
+      "context_en": "Edict to the Grand Imperial Armada initiating the planetary 'Rain of Death' on Earth."
+    },
+    {
+      "quote_es": "¡Disparen todas las baterías primarias! ¡Que no quede rastro ni de la Tierra ni de los traidores de Breetai!",
+      "quote_en": "Fire all primary batteries! Obliterate both Earth and Breetai's traitorous fleet!",
+      "context_es": "Órdenes finales desde su trono en el corazón de la fortaleza móvil Fulbtzs-Berrentzs.",
+      "context_en": "Final commands from his throne deep within the Fulbtzs-Berrentzs command citadel."
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "id": "robotech_masters",
+  "name": "Los Maestros Robotech",
+  "japanese_name": "The Robotech Masters (Triumvirate)",
+  "callsign": "The Elders // Tirolian Triumvirate",
+  "rank": {
+    "es": "Triunvirato Supremo Imperial // Soberanos de la Protocultura",
+    "en": "Supreme Imperial Triumvirate // Sovereigns of Protoculture"
+  },
+  "role": {
+    "es": "Gobernantes de la Civilización Tiroliana y Creadores de la Casta Guerrera Zentraedi",
+    "en": "Rulers of the Tirolian Civilization & Creators of the Zentraedi Warrior Caste"
+  },
+  "category": "zentraedi",
+  "faction": {
+    "es": "Imperio de los Maestros Robotech (Tirol)",
+    "en": "Robotech Masters Empire (Tirol)"
+  },
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Robotech Masters (Second Robotech War)"
+  },
+  "assignment": {
+    "es": "Flota de Naves Nodriza Bio-Mecánicas de los Maestros // Cámara de Mando Suprema",
+    "en": "Bio-Mechanical Command Motherships // Supreme Command Chamber"
+  },
+  "birth_date": "Fecha Tiroliana Ancestral (Múltiples Ciclos de Reclonación Tríada)",
+  "birth_place": {
+    "es": "Templo Central de la Ciudad de Tiresia (Planeta Tirol)",
+    "en": "Central Temple of Tiresia City (Planet Tirol)"
+  },
+  "blood_type": "Desconocido (Genética Tríada Clónica)",
+  "height": "1,90 m (Casta Tiroliana Primaria)",
+  "weight": "78 kg",
+  "thumbnail": "assets/images/personajes/robotech_masters/masters_triumvirate.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/robotech_masters/masters_triumvirate.jpg",
+      "title_es": "El Triunvirato de los Maestros Robotech (Shaizan, Dag y Bowkaz)",
+      "title_en": "The Robotech Masters Triumvirate (Shaizan, Dag & Bowkaz)",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    }
+  ],
+  "summary": {
+    "es": "Los gobernantes alienígenas y creadores del imperio de la Protocultura. Organizados en tríadas clónicas inmutables (como Shaizan, Dag y Bowkaz), viajaron a la Tierra en sus gigantescas naves nodriza bio-mecánicas para recuperar la Matriz de Protocultura oculta en los restos del SDF-1 antes de que la Inquisición Invid consumiera su civilización moribunda.",
+    "en": "The alien rulers and bio-engineers of the Protoculture empire. Structured in immutable clone triads (Shaizan, Dag, and Bowkaz), they journeyed across the stars in bio-mechanical motherships to unearth the Protoculture Matrix inside the SDF-1 ruins before the Invid consumed their dying society."
+  },
+  "lore": {
+    "overview_es": "Surgidos en el mundo de Tirol como una élite científica y filosófica, los Maestros Robotech industrializaron el hallazgo original del científico Zor: la energía cuántica de la Flor de la Vida, rebautizada como Protocultura. Con ella construyeron un imperio cósmico subyugado mediante la creación de la raza esclava gigante de los Zentraedi. Para garantizar la estabilidad social, dividieron a su propia población en 'triunviratos' genéticos clónicos e indivisibles de tres individuos que pensaban, actuaban y gobernaban como una sola mente colectiva.",
+    "overview_en": "Ascending on the homeworld of Tirol as an aristocratic scientific elite, the Robotech Masters industrialized the breakthrough discovery of the pioneer Zor: the bio-energy of the Flower of Life, termed Protoculture. With it, they forged a stellar empire enforced through the genetic creation of the giant Zentraedi slave legions. To guarantee permanent social conformity, they stratified their civilization into identical clone 'triumvirates' of three beings operating in seamless psychic synchrony.",
+    "tactical_analysis_es": "Cuando Zor envió el SDF-1 con la última Matriz de Protocultura a la Tierra, la civilización de los Maestros entró en agonía biológica, mientras sus mundos caían ante la implacable cruzada de la Horda Invid. Aislados en el espacio con sus reservas de energía al borde del colapso, los Maestros arribaron a la Tierra en 2029 con sus colosales naves nodriza fortificadas y enjambres de Bioroids bio-enlazados. Incapaces de comprender las emociones humanas o negociar la paz, desataron una guerra fratricida contra la Cruz del Sur que culminó con su exterminio a manos de Zor Prime y la dispersión incontrolada de las esporas de la Flor de la Vida sobre la Tierra.",
+    "tactical_analysis_en": "When Zor jettisoned the SDF-1 encasing the sole remaining Protoculture Matrix to Earth, the Masters' bio-civilization entered a terminal death spiral, their outer colonies falling to the vengeful Invid Horde. Stranded in the void with depleted power cells, the Masters reached Earth in 2029 aboard colossal monolithic motherships screening swarms of cybernetically enslaved Bioroids. Incapable of emotional resonance or genuine diplomacy, they waged an attritional holocaust against the Southern Cross that ended with their execution by Zor Prime and the uncontrolled dispersal of the Flower of Life across Earth."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 99,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Gobernantes supremos del imperio; control psíquico y mental absoluto sobre castas clónicas de Bioroids."
+    },
+    "strategy": {
+      "value": 96,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Maestros milenarios de la ingeniería bio-mecánica, la clonación cuántica y la guerra psicológica."
+    },
+    "resolve": {
+      "value": 97,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Fanatismo dinástico despiadado; prefirieron la aniquilación mutua antes que la pérdida de su casta."
+    },
+    "piloting": {
+      "value": 45,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Soberanos mentales; comandan flotas a través de enlaces telepáticos, sin combate físico."
+    }
+  },
+  "stats": {
+    "command": 99,
+    "strategy": 96,
+    "resolve": 97,
+    "piloting": 45
+  },
+  "service_record": [
+    {
+      "period": "Siglos de Imperio Tiroliano",
+      "assignment_es": "Soberanos Supremos de la Civilización de la Protocultura y Creadores de la Flota Zentraedi",
+      "assignment_en": "Supreme Sovereigns of the Protoculture Empire & Creators of the Zentraedi Fleet"
+    },
+    {
+      "period": "2029",
+      "assignment_es": "Arribo de la Flota de Naves Nodriza a la órbita de la Tierra en busca de la Matriz de Zor",
+      "assignment_en": "Arrival of Mothership Armada in Earth orbit to extract Zor's hidden Matrix"
+    },
+    {
+      "period": "2029 - 2030",
+      "assignment_es": "Guerra de desgaste contra los Ejércitos de la Cruz del Sur; pérdida progresiva del control bio-mental",
+      "assignment_en": "War of attrition against Southern Cross; progressive collapse of bio-mental hegemony"
+    },
+    {
+      "period": "2030",
+      "assignment_es": "Ajusticiados por el clon Zor Prime en el puente de su nave nodriza antes del impacto contra la Tierra",
+      "assignment_en": "Executed by clone Zor Prime on their bridge before terminal crash onto Earth"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Zor Prime",
+      "relation_es": "Su bio-clon esclavo; subestimaron el despertar de su conciencia individual, lo que causó su perdición.",
+      "relation_en": "Their enslaved bio-clone; underestimated his reawakened individuality, which proved their doom."
+    },
+    {
+      "character": "Musica",
+      "relation_es": "Su sacerdotisa sagrada; su deserción a la Tierra privó a sus cámaras de la armonía de la Flor de la Vida.",
+      "relation_en": "Their sacred harpist; her defection to Earth starved their chambers of bio-harmonic resonance."
+    },
+    {
+      "character": "Comandante Supremo Anatole Leonard",
+      "relation_es": "Su némesis terrestre; dos doctrinas fanáticas e inflexibles que se consumieron en un choque frontal.",
+      "relation_en": "Their Terran nemesis; two fanatical, uncompromising doctrines that ground each other to dust."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "Los micronianos no comprenden el valor de la Protocultura. Son salvajes primitivos que deben ser neutralizados antes de que los Invid detecten sus emisiones.",
+      "quote_en": "The micronians do not comprehend the sacred value of Protoculture. They are primitives who must be neutralized before the Invid detect their emissions.",
+      "context_es": "Deliberación del Triunvirato en la sala de mando de la nave nodriza.",
+      "context_en": "Deliberation of the Triumvirate within the flagship command chamber."
+    },
+    {
+      "quote_es": "Sin la Matriz del SDF-1, nuestra raza perecerá. ¡Avancen los Bioroids! ¡Recuperen la semilla sagrada de Zor a cualquier costo!",
+      "quote_en": "Without the SDF-1 Matrix, our species will perish. Advance the Bioroids! Reclaim Zor's sacred seed at any cost!",
+      "context_es": "Orden de asalto terrestre sobre las ruinas de Macross City.",
+      "context_en": "Order for the grand ground blitz over the ruins of Macross City."
+    }
+  ]
+}

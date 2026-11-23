@@ -1,0 +1,158 @@
+{
+  "id": "bowie_grant",
+  "name": "Bowie Grant",
+  "japanese_name": "Bowie Emerson",
+  "callsign": "Spartan-2 // Maestro",
+  "rank": {
+    "es": "Cabo // Soldado de Primera del 15º Escuadrón Táctico (ATAC)",
+    "en": "Corporal // Private First Class of 15th Tactical Armored Corps (ATAC)"
+  },
+  "role": {
+    "es": "Piloto de Hovertank, Músico Pianista y Enlace Sentimental con Musica",
+    "en": "Hovertank Pilot, Concert Pianist & Emotional Link to Musica"
+  },
+  "category": "pilots",
+  "faction": {
+    "es": "Ejército de la Cruz del Sur (15º Escuadrón ATAC)",
+    "en": "Army of the Southern Cross (15th ATAC Squad)"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Robotech Masters (Second Robotech War)"
+  },
+  "assignment": {
+    "es": "Cuartel General de la Cruz del Sur // 15º Escuadrón (VHT-1 Spartas Hovertank)",
+    "en": "Southern Cross Headquarters // 15th Squad (VHT-1 Spartas Hovertank)"
+  },
+  "birth_date": "14 de Diciembre de 2012",
+  "birth_place": {
+    "es": "Macross City, Tierra",
+    "en": "Macross City, Earth"
+  },
+  "blood_type": "O+",
+  "height": "1,72 m",
+  "weight": "58 kg",
+  "thumbnail": "assets/images/personajes/bowie_grant/bowie_portrait.png",
+  "images": [
+    {
+      "url": "assets/images/personajes/bowie_grant/bowie_portrait.png",
+      "title_es": "Bowie Grant - Retrato Oficial en la Cruz del Sur",
+      "title_en": "Bowie Grant - Official Southern Cross Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/bowie_grant/bowie_musica.png",
+      "title_es": "El Primer Encuentro Cósmico: Bowie Grant y Musica",
+      "title_en": "The Fateful Meeting: Bowie Grant & Musica",
+      "type_es": "Registro Personal",
+      "type_en": "Personal Log"
+    }
+  ],
+  "summary": {
+    "es": "Hijo de Vince y Jean Grant y sobrino de Claudia Grant. Joven pianista de alma sensible obligado a vestir el uniforme militar, compañero inseparable de Dana Sterling y coprotagonista del romance que resquebrajó la sociedad de los Maestros Robotech al unirse a Musica.",
+    "en": "Son of Vince and Jean Grant and nephew to Claudia Grant. A sensitive concert pianist compelled into military service, inseparable companion to Dana Sterling, and co-protagonist of the romance with Musica that fractured the Masters' society."
+  },
+  "lore": {
+    "overview_es": "Bowie nació con el alma de un artista en una dinastía militar legendaria: su padre Vince Grant y su tía Claudia eran veteranos venerados de la Primera Guerra Robotech. Al partir sus padres hacia el espacio profundo con la Fuerza Expedicionaria Robotech (REF), quedó al cuidado de su padrino, el General Rolf Emerson, junto a su inseparable amiga de la infancia Dana Sterling. Presionado para ingresar a la milicia, Bowie encontró en su piano y su sintetizador un refugio contra la rigidez marcial de la Cruz del Sur.",
+    "overview_en": "Bowie was born with an artist's soul into a legendary military bloodline: his father Vince Grant and aunt Claudia were revered icons of the First Robotech War. When his parents embarked into deep space aboard the REF Pioneer Mission, Bowie was placed under the guardianship of General Rolf Emerson alongside his lifelong childhood friend, Dana Sterling. Pressured into enrolling in the military academy, Bowie sought sanctuary in his piano and synthesizer against the brutal conformity of the Southern Cross.",
+    "tactical_analysis_es": "Asignado como artillero y copiloto en el 15º Escuadrón Blindado (ATAC), Bowie demostró notable sincronización motriz operando las armas del VHT-1 Spartas junto a Dana. Su destino cambió irrevocablemente durante la infiltración en la nave nodriza de los Maestros, donde escuchó el arpa cósmica de Musica, la sacerdotisa del triunvirato sagrado de las Flores de la Vida. Su amor instantáneo y mutuo llevó a Musica a desertar a la Tierra, desatando una cacería implacable por parte de la Policía Militar Global (GMP) y obligando a Bowie a rebelarse contra su propio ejército para protegerla.",
+    "tactical_analysis_en": "Serving as tactical gunner and wingman within the 15th ATAC Squad, Bowie displayed exceptional rhythmic coordination handling the weaponry of the VHT-1 Spartas alongside Dana. His destiny shifted forever during the dangerous infiltration of the Masters' command mothership, where he encountered Musica playing the cosmic harp for the sacred Flower of Life triumvirate. Their immediate love led Musica to defect to Earth, triggering a ruthless manhunt by the Global Military Police (GMP) and compelling Bowie to defy martial orders to protect her."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 68,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Prefiere seguir a Dana que ejercer el mando; liderazgo moral guiado por la empatía y la compasión."
+    },
+    "strategy": {
+      "value": 72,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Excelente oído armónico y análisis de señales acústicas y frecuencias de Protocultura."
+    },
+    "resolve": {
+      "value": 90,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Capaz de desafiar a toda la jerarquía militar y empuñar las armas para salvar a la mujer que ama."
+    },
+    "piloting": {
+      "value": 82,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Piloto de Hovertank competente y ágil artillero de torreta bajo el liderazgo de Dana."
+    }
+  },
+  "stats": {
+    "command": 68,
+    "strategy": 72,
+    "resolve": 90,
+    "piloting": 82
+  },
+  "service_record": [
+    {
+      "period": "2029",
+      "assignment_es": "Reclutado en la Escuela Militar de la Cruz del Sur; asignado al 15º Escuadrón Blindado (ATAC)",
+      "assignment_en": "Enlisted in Southern Cross Military School; assigned to 15th ATAC Squad"
+    },
+    {
+      "period": "2029",
+      "assignment_es": "Copiloto y artillero en las primeras escaramuzas contra los Bioroids en órbita terrestre",
+      "assignment_en": "Gunner and co-pilot during early orbital skirmishes against alien Bioroids"
+    },
+    {
+      "period": "2030",
+      "assignment_es": "Infiltración en la nave nodriza alienígena; primer contacto y rescate de la sacerdotisa Musica",
+      "assignment_en": "Mothership infiltration; first contact and extraction of priestess Musica"
+    },
+    {
+      "period": "2030",
+      "assignment_es": "Perseguido por la Policía Militar Global (GMP); ayuda a liberar a Musica y a Zor Prime",
+      "assignment_en": "Pursued by the GMP; aids in liberating Musica and safeguarding Zor Prime"
+    },
+    {
+      "period": "2030",
+      "assignment_es": "Sobrevive a la caída de los Maestros Robotech; huye con Musica a los valles seguros de la Tierra",
+      "assignment_en": "Survives fall of the Robotech Masters; escapes with Musica to sanctuary valleys"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Musica",
+      "relation_es": "El gran amor de su vida; su música y afecto rompieron los condicionamientos mentales de los Maestros.",
+      "relation_en": "The love of his life; their musical and emotional bond broke the Masters' psychic enslavement."
+    },
+    {
+      "character": "Dana Sterling",
+      "relation_es": "Su hermana de corazón y protectora; siempre acudió en su ayuda en cada crisis y arresto.",
+      "relation_en": "His honorary sister and guardian; always shielded him through military arrests and combat."
+    },
+    {
+      "character": "General Rolf Emerson",
+      "relation_es": "Su padrino; una figura comprensiva que intentó proteger su vocación artística de la rigidez de Leonard.",
+      "relation_en": "His godfather; a compassionate mentor who tried to shield his art from Leonard's authoritarianism."
+    },
+    {
+      "character": "Angelo Dante",
+      "relation_es": "Su sargento; a menudo exasperado por la distracción musical de Bowie, pero paternalmente protector.",
+      "relation_en": "His drill sergeant; frequently exasperated by Bowie's music but fiercely protective in battle."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "Yo no pedí este uniforme ni esta guerra. Lo único que realmente quiero es tocar mi piano en paz.",
+      "quote_en": "I never asked for this uniform or this war. All I ever truly wanted was to play my piano in peace.",
+      "context_es": "Confesión a Dana Sterling en el hangar de mantenimiento de Hovertanks.",
+      "context_en": "Confession to Dana Sterling in the Hovertank maintenance bay."
+    },
+    {
+      "quote_es": "Musica, tu arpa toca la misma melodía que hay en mi corazón. No permitiré que nadie te haga daño.",
+      "quote_en": "Musica, your harp plays the very song living inside my heart. I won't let anyone harm you.",
+      "context_es": "Promesa a Musica al ocultarla en las ruinas de Macross City.",
+      "context_en": "Pledge to Musica while hiding her inside the ruins of Macross City."
+    }
+  ]
+}

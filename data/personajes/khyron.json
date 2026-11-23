@@ -1,0 +1,165 @@
+{
+  "id": "khyron",
+  "name": "Khyron",
+  "japanese_name": "Quamzin Kravshera",
+  "callsign": "The Backstabber // Lord Khyron",
+  "rank": {
+    "es": "Comandante de Asalto del 7º Batallón Mecanizado Zentraedi // Líder Insurgente",
+    "en": "Assault Commander of the 7th Zentraedi Mechanized Battalion // Insurgent Leader"
+  },
+  "role": {
+    "es": "Líder de la Facción Rebelde Zentraedi y Asesino de Macross City",
+    "en": "Leader of the Zentraedi Insurgent Faction & Slayer of Macross City"
+  },
+  "category": "zentraedi",
+  "faction": {
+    "es": "7º Batallón Mecanizado Zentraedi // Resistencia Rebelde Anti-Tierra",
+    "en": "7th Zentraedi Mechanized Battalion // Anti-Earth Rebel Resistance"
+  },
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "assignment": {
+    "es": "Cápsula Glaug de Oficial de Combate // Acorazado Rebelde Reconstruido",
+    "en": "Glaug Officer Battlepod // Reconstructed Rebel Warship"
+  },
+  "birth_date": "Fecha Zentraedi Clasificada",
+  "birth_place": {
+    "es": "Cámara de Clonación de Tropas de Choque",
+    "en": "Shock Trooper Bio-Cloning Complex"
+  },
+  "blood_type": "Desconocido (Genética Zentraedi Inestable)",
+  "height": "11,80 m (Zentraedi)",
+  "weight": "12.400 kg",
+  "thumbnail": "assets/images/personajes/khyron/khyron_card.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/khyron/khyron_card.jpg",
+      "title_es": "Khyron - Retrato Táctico con Emblema Zentraedi",
+      "title_en": "Khyron - Tactical Portrait with Zentraedi Insignia",
+      "type_es": "Retrato Táctico",
+      "type_en": "Tactical Portrait"
+    },
+    {
+      "url": "assets/images/personajes/khyron/khyron_portrait.jpg",
+      "title_es": "Comandante Khyron - Retrato Oficial de Batallón",
+      "title_en": "Commander Khyron - Official Battalion Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/khyron/khyron_rage.png",
+      "title_es": "Khyron en Furia - Desafío Abierto a Breetai",
+      "title_en": "Khyron in Rage - Open Defiance to Breetai",
+      "type_es": "En Operación",
+      "type_en": "In Operation"
+    }
+  ],
+  "summary": {
+    "es": "Apodado 'El Traidor' (The Backstabber), fue el comandante Zentraedi más feroz, impredecible y sanguinario. Se negó a aceptar la paz con los humanos y lideró la rebelión armada que culminó en el asalto kamikaze final contra el SDF-1.",
+    "en": "Known as 'The Backstabber', he was the most ferocious, unstable, and bloodthirsty Zentraedi commander. Rejecting peace with humanity, he led the rebel uprising culminating in the devastating suicide ramming of the SDF-1."
+  },
+  "lore": {
+    "overview_es": "Líder del temido 7º Batallón Mecanizado Zentraedi, Khyron se ganó el mote de 'El Traidor' no por traicionar al Imperio, sino por su hábito de sacrificar sin remordimiento a sus propios soldados y subordinados para alzarse con la victoria. Despreciado por oficiales tradicionales como Breetai debido a su indisciplina y sed insaciable de violencia, fue convocado por su ferocidad suicida para romper el estancamiento del asedio contra la fortaleza espacial SDF-1.",
+    "overview_en": "Commander of the dreaded 7th Zentraedi Mechanized Battalion, Khyron earned his infamous moniker 'The Backstabber' not from betraying the Empire, but from his ruthless willingness to sacrifice his own troops and fire through friendly lines to secure victory. Despised by conventional commanders like Breetai for his brazen insubordination, he was repeatedly deployed specifically because his psychotic audacity could break tactical stalemates against the SDF-1.",
+    "tactical_analysis_es": "En combate aéreo y terrestre a los mandos de su Cápsula de Oficial Glaug, Khyron era una fuerza de la naturaleza: letal, veloz y capaz de ejecutar emboscadas a quemarropa. Cuando la flota de Dolza fue destruida y los Zentraedi firmaron la paz, Khyron se ocultó en los eriales radioactivos de la Tierra, reuniendo a los descontentos y capturando una cámara de Protocultura. Aliado con Azonia, reactivó un acorazado estelar alienígena semidestruido y lanzó una embestida kamikaze contra Macross City, destruyendo el SDF-1 y el SDF-2 en un último acto de aniquilación mutua.",
+    "tactical_analysis_en": "At the controls of his Glaug Officer's Battlepod, Khyron was an unrelenting terror: razor-sharp, blisteringly fast, and capable of brutal ambush tactics. When Dolza's fleet disintegrated and mainstream Zentraedi integrated into human society, Khyron retreated into the planetary wasteland, rallying malcontents and seizing a Protoculture matrix. Forging a pact with Azonia, he restored a derelict alien gunship and executed a terminal suicide ramming against Macross City, obliterating both the SDF-1 and SDF-2 in a final cataclysm of mutual destruction."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 85,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Liderazgo fanático basado en el terror, la agresión desmedida y la promesa de sangre y gloria."
+    },
+    "strategy": {
+      "value": 78,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Tácticas de guerrilla, sabotaje nocturno y asaltos sorpresa; nula paciencia para la diplomacia."
+    },
+    "resolve": {
+      "value": 99,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Fanatismo suicida; prefirió inmolarse en una colisión frontal antes que rendirse a la paz humana."
+    },
+    "piloting": {
+      "value": 97,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Piloto de cápsula de oficial formidable; pocos ases humanos podían sobrevivir a un enfrentamiento cara a cara con él."
+    }
+  },
+  "stats": {
+    "command": 85,
+    "strategy": 78,
+    "resolve": 99,
+    "piloting": 97
+  },
+  "service_record": [
+    {
+      "period": "Era Imperial",
+      "assignment_es": "Comandante en Jefe del 7º Batallón Mecanizado Zentraedi de Asalto",
+      "assignment_en": "Commander-in-Chief of the 7th Zentraedi Mechanized Assault Battalion"
+    },
+    {
+      "period": "2009 - 2010",
+      "assignment_es": "Múltiples asaltos frontales contra el SDF-1; incursión destructiva en la Isla Macross",
+      "assignment_en": "Multiple direct assaults on the SDF-1; devastating raid upon Macross Island"
+    },
+    {
+      "period": "2010",
+      "assignment_es": "Asalto nocturno a Macross City; responsable directo del ataque que causó la muerte de Roy Fokker",
+      "assignment_en": "Night blitz on Macross City; directly responsible for the strike that killed Roy Fokker"
+    },
+    {
+      "period": "2012 - 2013",
+      "assignment_es": "Líder de la insurrección en las tierras baldías; robo de la Cámara de Matriz de Protocultura",
+      "assignment_en": "Leader of the wasteland insurgency; steals the last Protoculture Matrix chamber"
+    },
+    {
+      "period": "2014",
+      "assignment_es": "Ataque kamikaze contra el SDF-1 y SDF-2; muere en la colisión terminal en Macross City",
+      "assignment_en": "Suicide ramming of the SDF-1 and SDF-2; killed in terminal collision at Macross City"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Azonia",
+      "relation_es": "Su aliada sentimental y de combate; compartieron el mando insurgente y el destino final en la nave.",
+      "relation_en": "His combat partner and paramour; shared command of the insurgency and the final suicide run."
+    },
+    {
+      "character": "Comandante Breetai",
+      "relation_es": "Su superior original a quien traicionó e insultó al negarse a deponer las armas ante los micronianos.",
+      "relation_en": "His former superior whom he defied and betrayed, refusing to surrender to micronian peace."
+    },
+    {
+      "character": "Roy Fokker",
+      "relation_es": "Su némesis aérea; el bombardeo de sus fuerzas en Macross City causó la caída del líder de Skull.",
+      "relation_en": "His aerial nemesis; his squadron's blitz on Macross City caused the fall of Skull Leader."
+    },
+    {
+      "character": "Rick Hunter",
+      "relation_es": "Su rival mortal humano en los cielos de la Tierra durante los años de la reconstrucción.",
+      "relation_en": "His mortal human rival across Earth's skies throughout the turbulent reconstruction years."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "¡Nacimos para la guerra, no para cantar canciones ni vivir como debiluchos! ¡Si caigo, me llevaré a este planeta maldito conmigo!",
+      "quote_en": "We were bred for war, not to sing melodies or live like weaklings! If I go down, I'm taking this cursed world with me!",
+      "context_es": "Alocución a sus tropas rebeldes al rechazar el tratado de paz de Breetai.",
+      "context_en": "Speech to his rebel troops rejecting Breetai's peace treaty."
+    },
+    {
+      "quote_es": "¡Rumbo de colisión directo al puente del SDF-1! ¡Que la galaxia recuerde cómo muere un verdadero guerrero Zentraedi!",
+      "quote_en": "Set collision course straight for the SDF-1 bridge! Let the galaxy remember how a true Zentraedi warrior dies!",
+      "context_es": "Última orden a Azonia antes de estrellar su crucero contra la fortaleza humana.",
+      "context_en": "Final command to Azonia before ramming their warship into the battle fortress."
+    }
+  ]
+}

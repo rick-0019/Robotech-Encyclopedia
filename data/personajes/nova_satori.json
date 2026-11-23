@@ -1,0 +1,141 @@
+{
+  "id": "nova_satori",
+  "name": "Nova Satori",
+  "japanese_name": "Nova Satori",
+  "callsign": "GMP-1 // Iron Eye",
+  "rank": {
+    "es": "Teniente // Oficial Investigadora Superior de la Policía Militar Global (GMP)",
+    "en": "Lieutenant // Senior Investigating Officer of Global Military Police (GMP)"
+  },
+  "role": {
+    "es": "Jefa de Inteligencia y Seguridad Interna de la Cruz del Sur y Custodia de la Ley Marcial",
+    "en": "Head of Southern Cross Counter-Intelligence & Internal Security, Martial Law Custodian"
+  },
+  "category": "command",
+  "faction": {
+    "es": "Policía Militar Global (Global Military Police - GMP)",
+    "en": "Global Military Police (GMP)"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Robotech Masters (Second Robotech War)"
+  },
+  "assignment": {
+    "es": "División de Inteligencia y Seguridad de la GMP // Cuartel General de la Cruz del Sur",
+    "en": "GMP Intelligence & Internal Security Division // Southern Cross Headquarters"
+  },
+  "birth_date": "19 de Septiembre de 2010",
+  "birth_place": {
+    "es": "Sector Este de la Tierra Unificada",
+    "en": "Eastern Sector, United Earth"
+  },
+  "blood_type": "AB+",
+  "height": "1,70 m",
+  "weight": "53 kg",
+  "thumbnail": "assets/images/personajes/nova_satori/nova_portrait.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/nova_satori/nova_portrait.jpg",
+      "title_es": "Teniente Nova Satori - Oficial de la Policía Militar Global (GMP)",
+      "title_en": "Lieutenant Nova Satori - Global Military Police (GMP) Officer",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    }
+  ],
+  "summary": {
+    "es": "Joven, perspicaz e incorruptible oficial investigadora de la Policía Militar Global (GMP). Encargada de supervisar al rebelde 15º Escuadrón e interrogar a Zor Prime y Musica, su sentido del deber y la justicia la llevaron a desafiar la paranoia autoritaria del Comandante Supremo Leonard.",
+    "en": "Sharp, young, and incorruptible intelligence officer of the Global Military Police (GMP). Tasked with surveilling the rogue 15th Squad and interrogating Zor Prime and Musica, her moral compass led her to reject Supreme Commander Leonard's authoritarian paranoia."
+  },
+  "lore": {
+    "overview_es": "Brillante graduada de la división de contrainteligencia de la Policía Militar Global (GMP), Nova Satori personificaba la eficiencia, el apego estricto a las ordenanzas y la vigilancia de la seguridad terrestre en la tensa era de la Cruz del Sur. Asignada para monitorear las constantes indisciplinas y arrestos de Dana Sterling, pronto se vio envuelta en las conspiraciones políticas y los experimentos de bio-enlace que rodeaban a los prisioneros alienígenas capturados.",
+    "overview_en": "A stellar graduate of the Global Military Police (GMP) counter-intelligence academy, Nova Satori embodied procedural precision, unwavering adherence to military statutes, and strict surveillance in the authoritarian climate of the Southern Cross. Assigned to investigate Dana Sterling's constant breaches of protocol, she was thrust into internal conspiracies surrounding captured alien pilot Zor Prime and defector priestess Musica.",
+    "tactical_analysis_es": "A pesar de su imagen severa y su rol como inquisidora militar, Nova poseía una honestidad intelectual inquebrantable. Al interrogar a Zor Prime y descubrir la bondad inocente de Musica, comprendió que los alienígenas no eran monstruos desalmados sino víctimas de una sociedad totalitaria. Cuando el Comandante Supremo Leonard ordenó la ejecución o encarcelamiento despiadado de los desertores, Nova decidió deliberadamente mirar hacia otro lado y facilitar que el Escuadrón 15 actuara, anteponiendo la dignidad humana a la tiranía marcial.",
+    "tactical_analysis_en": "Despite her austere persona as a military inquisitor, Nova possessed deep moral clarity. Conducting interrogations of Zor Prime and observing Musica's genuine innocence, she realized the Tirolian refugees were victims of totalitarian cloning rather than savage monsters. When Supreme Commander Leonard demanded ruthless purges and court-martials, Nova deliberately exercised discretion, granting Dana's squad leeway to resolve the crisis and prioritizing human conscience over blind tyranny."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 87,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Autoridad de policía militar y mando sobre destacamentos de seguridad e inteligencia."
+    },
+    "strategy": {
+      "value": 94,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Maestría en análisis conductual, contrainteligencia, descifrado de interrogatorios y seguridad de base."
+    },
+    "resolve": {
+      "value": 92,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Firmeza ética para desafiar directivas autoritarias ilegales emitidas por el Mando Supremo."
+    },
+    "piloting": {
+      "value": 65,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Oficial de inteligencia y seguridad armada terrestre; pilotaje vehicular táctico estándar."
+    }
+  },
+  "stats": {
+    "command": 87,
+    "strategy": 94,
+    "resolve": 92,
+    "piloting": 65
+  },
+  "service_record": [
+    {
+      "period": "2028",
+      "assignment_es": "Egresa con honores de la Academia de la Policía Militar Global (GMP)",
+      "assignment_en": "Graduates with honors from the Global Military Police (GMP) Academy"
+    },
+    {
+      "period": "2029",
+      "assignment_es": "Oficial Investigadora a cargo de la vigilancia interna del Cuartel General de la Cruz del Sur",
+      "assignment_en": "Investigative Officer assigned to internal security at Southern Cross Headquarters"
+    },
+    {
+      "period": "2029 - 2030",
+      "assignment_es": "Supervisa los interrogatorios de seguridad de Zor Prime y el caso de deserción de Musica",
+      "assignment_en": "Directs security debriefings of Zor Prime and the high-profile Musica defection case"
+    },
+    {
+      "period": "2030",
+      "assignment_es": "Facilita la misión del Escuadrón 15 y sobrevive al colapso de la fortaleza de los Maestros",
+      "assignment_en": "Aids 15th Squad's final sortie and survives the collapse of the Masters' flagship"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Dana Sterling",
+      "relation_es": "Su permanente dolor de cabeza disciplinario; de enemiga inquisidora pasó a ser su aliada encubierta.",
+      "relation_en": "Her constant disciplinary headache; evolved from by-the-book inquisitor to trusted ally."
+    },
+    {
+      "character": "Comandante Supremo Anatole Leonard",
+      "relation_es": "Su superior supremo; Nova cuestionó su dogmatismo ciego y su desprecio por las vidas de sus soldados.",
+      "relation_en": "Her supreme superior; questioned his militarism and cold disregard for soldier casualties."
+    },
+    {
+      "character": "Musica",
+      "relation_es": "La refugiada alienígena que interrogó; su dulzura convenció a Nova de que la paz era posible.",
+      "relation_en": "The alien refugee she debriefed; Musica's innocence convinced Nova that peace was real."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "El deber de la Policía Militar es proteger la ley, pero la ley pierde todo sentido si no protege la humanidad y la justicia.",
+      "quote_en": "The duty of Military Police is to uphold the law, but law becomes meaningless if it fails justice and conscience.",
+      "context_es": "Decisión de encubrir la huida de Bowie Grant y Musica ante el Alto Mando.",
+      "context_en": "Deciding to cover for Bowie Grant and Musica's flight from High Command."
+    },
+    {
+      "quote_es": "Teniente Sterling, si vuelve a meterse en problemas disciplinarios hoy, ¡le aseguro que su siguiente uniforme será el mono de la prisión militar!",
+      "quote_en": "Lieutenant Sterling, if you land in disciplinary trouble once more today, I assure you your next uniform will be a brig jumpsuit!",
+      "context_es": "Amonestación verbal a Dana Sterling en los pasillos del cuartel.",
+      "context_en": "Formal reprimand to Dana Sterling in the base corridors."
+    }
+  ]
+}

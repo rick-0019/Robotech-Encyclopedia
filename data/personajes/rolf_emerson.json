@@ -1,0 +1,148 @@
+{
+  "id": "rolf_emerson",
+  "name": "General Rolf Emerson",
+  "japanese_name": "Rolf Emerson",
+  "callsign": "Staff Marshal // Guardian General",
+  "rank": {
+    "es": "General de División // Jefe de Estado Mayor Conjunto de la Cruz del Sur",
+    "en": "Major General // Chairman of Southern Cross Joint Staff"
+  },
+  "role": {
+    "es": "Jefe de Estado Mayor, Padrino de Dana Sterling y Bowie Grant y Comandante de la Flota Espacial",
+    "en": "Chief of Staff, Godfather to Dana Sterling & Bowie Grant & Space Fleet Commander"
+  },
+  "category": "command",
+  "faction": {
+    "es": "Ejército de la Cruz del Sur (Estado Mayor Conjunto) // Flota Espacial",
+    "en": "Army of the Southern Cross (Joint Staff) // Deep Space Fleet"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Robotech Masters (Second Robotech War)"
+  },
+  "assignment": {
+    "es": "Estado Mayor de la Cruz del Sur // Acorazado Insignia Tristar (Flota Orbital)",
+    "en": "Southern Cross General Staff // Tristar Class Flagship (Orbital Fleet)"
+  },
+  "birth_date": "15 de Agosto de 1985",
+  "birth_place": {
+    "es": "Europa / Alemania (Tierra)",
+    "en": "Europe / Germany (Earth)"
+  },
+  "blood_type": "A+",
+  "height": "1,85 m",
+  "weight": "83 kg",
+  "thumbnail": "assets/images/personajes/rolf_emerson/emerson_command.png",
+  "images": [
+    {
+      "url": "assets/images/personajes/rolf_emerson/emerson_command.png",
+      "title_es": "General Rolf Emerson - Retrato Oficial de Mando de Estado Mayor",
+      "title_en": "General Rolf Emerson - Joint Staff Official Command Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/rolf_emerson/emerson_portrait.jpg",
+      "title_es": "General Emerson en el Puente del Acorazado Tristar",
+      "title_en": "General Emerson on Bridge of Battleship Tristar",
+      "type_es": "En Operación",
+      "type_en": "In Operation"
+    }
+  ],
+  "summary": {
+    "es": "Jefe de Estado Mayor de la Cruz del Sur, tutor y padrino de Dana Sterling y Bowie Grant. La voz de la sensatez, la diplomacia y el honor militar frente al despotismo del Comandante Supremo Leonard, murió heroicamente en órbita liderando la flota espacial.",
+    "en": "Chief of Staff of the Southern Cross, guardian and godfather to Dana Sterling and Bowie Grant. The voice of reason, diplomacy, and soldierly honor against Leonard's fanaticism, he gave his life heroically commanding the orbital fleet."
+  },
+  "lore": {
+    "overview_es": "Veterano respetado y estratega de moral impecable, el General Rolf Emerson asumió la tutela legal y afectiva de Dana Sterling y Bowie Grant cuando sus padres partieron con la Fuerza Expedicionaria Robotech (REF) hacia el espacio profundo. Como Jefe de Estado Mayor del Ejército de la Cruz del Sur, Emerson abogó incansablemente por el diálogo, la diplomacia y la exploración de un armisticio cuando las naves nodriza de los Maestros Robotech arribaron a la órbita de la Tierra.",
+    "overview_en": "A revered veteran and strategist of impeccable integrity, General Rolf Emerson became legal guardian and surrogate father to Dana Sterling and Bowie Grant when their parents departed on the REF Pioneer Mission into the galactic deep. As Chief of Staff of the Army of the Southern Cross, Emerson tirelessly championed diplomatic engagement and communication when the armada of the Robotech Masters entered Earth orbit.",
+    "tactical_analysis_es": "Su postura moderada y su rechazo a las tácticas suicidas de desgaste le valieron la enemistad del Comandante Supremo Anatole Leonard, quien para deshacerse de su influencia política lo relevó de su cargo en tierra y lo envió al frente de batalla espacial más peligroso al mando de la flota orbital. A bordo del acorazado Tristar, Emerson condujo a sus fuerzas con valentía sobrehumana, rescatando a tripulaciones náufragas y sacrificando su vida en combate directo contra las naves nodriza para abrir una ventana de salvación para el 15º Escuadrón de Dana.",
+    "tactical_analysis_en": "His measured counsel and outspoken refusal to squander troops in suicidal frontal charges earned him the bitter enmity of Supreme Commander Anatole Leonard, who politically neutralized him by reassigning him to the hazardous deep-space frontline commanding the orbital armada. Aboard his flagship Tristar, Emerson conducted fleet maneuvers with extraordinary valor, rescuing stranded crews and ultimately sacrificing his life in direct engagement against the alien flagship to buy time for Dana's squad."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 97,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Líder naval y de estado mayor supremo; venerado por sus oficiales por su dignidad y cuidado de la tropa."
+    },
+    "strategy": {
+      "value": 95,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Visión estratégica global y diplomática; comprendió que el conflicto con los Maestros era evitable."
+    },
+    "resolve": {
+      "value": 99,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Aceptó una misión espacial prácticamente suicida con la cabeza alta para proteger a la Tierra y a sus protegidos."
+    },
+    "piloting": {
+      "value": 60,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Comandante de flotas y acorazados clase Tristar; estratega naval, no piloto de cazas individuales."
+    }
+  },
+  "stats": {
+    "command": 97,
+    "strategy": 95,
+    "resolve": 99,
+    "piloting": 60
+  },
+  "service_record": [
+    {
+      "period": "2015 - 2022",
+      "assignment_es": "Comandante de Reorganización Militar Terrestre tras la partida de la flota REF",
+      "assignment_en": "Commander of Terrestrial Military Realignment following the departure of the REF"
+    },
+    {
+      "period": "2023 - 2028",
+      "assignment_es": "Jefe de Estado Mayor Conjunto del Ejército de la Cruz del Sur; mentor de Dana y Bowie",
+      "assignment_en": "Chairman of Joint Staff of Southern Cross; guardian to Dana Sterling and Bowie Grant"
+    },
+    {
+      "period": "2029",
+      "assignment_es": "Aboga por la diplomacia ante la llegada de los Maestros; relevado por Leonard al mando espacial",
+      "assignment_en": "Advocates diplomatic truce upon Masters' arrival; reassigned by Leonard to space command"
+    },
+    {
+      "period": "2030",
+      "assignment_es": "Comanda la flota orbital a bordo del Tristar; cae heroicamente en combate espacial",
+      "assignment_en": "Commands orbital fleet aboard flagship Tristar; dies heroically in deep space combat"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Dana Sterling",
+      "relation_es": "Su ahijada y orgullo; vio en ella el espíritu luminoso de Max y Miriya y la protegió de Leonard.",
+      "relation_en": "His goddaughter and pride; recognized Max and Miriya's spirit in her and shielded her from Leonard."
+    },
+    {
+      "character": "Bowie Grant",
+      "relation_es": "Su ahijado; respetó su sensibilidad artística y comprendió su amor por Musica.",
+      "relation_en": "His godson; respected his artistic soul and understood his profound love for Musica."
+    },
+    {
+      "character": "Comandante Supremo Anatole Leonard",
+      "relation_es": "Su rival doctrinal e institucional; repudiaba la ceguera fanática y el desprecio por la vida de Leonard.",
+      "relation_en": "His institutional and doctrinal rival; condemned Leonard's fanatical militarism and waste of human life."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "La victoria no se mide por la cantidad de enemigos que destruimos, sino por cuántas vidas inocentes logramos preservar.",
+      "quote_en": "Victory is not measured by the count of enemies we destroy, but by how many innocent lives we manage to preserve.",
+      "context_es": "Intervención ante el Consejo de Defensa de la Cruz del Sur.",
+      "context_en": "Address before the Southern Cross Defense Council."
+    },
+    {
+      "quote_es": "Dana, Bowie... he cumplido mi promesa a sus padres. Sean fuertes y mantengan viva la esperanza de la Tierra.",
+      "quote_en": "Dana, Bowie... I have kept my promise to your parents. Stay strong and keep Earth's hope alive.",
+      "context_es": "Última transmisión de radio desde el puente del Tristar antes de sucumbir al fuego alienígena.",
+      "context_en": "Final radio transmission from the bridge of the Tristar before succumbing to alien fire."
+    }
+  ]
+}

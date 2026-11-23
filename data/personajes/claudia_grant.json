@@ -1,0 +1,160 @@
+{
+  "id": "claudia_grant",
+  "name": "Claudia Grant",
+  "japanese_name": "Claudia LaSalle",
+  "callsign": "Macross Ops // Bridge-2",
+  "rank": {
+    "es": "Teniente Comandante // Oficial Superior de Comunicaciones y Enlace",
+    "en": "Lieutenant Commander // Senior Communications & Liaison Officer"
+  },
+  "role": {
+    "es": "Jefa de Comunicaciones, Coordinación de Vuelo y Navegación del SDF-1",
+    "en": "Chief of Communications, Flight Coordination & Navigation of the SDF-1"
+  },
+  "category": "command",
+  "faction": {
+    "es": "U.N. Spacy - Mando de Puente del SDF-1",
+    "en": "U.N. Spacy - SDF-1 Bridge Command"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "assignment": {
+    "es": "SDF-1 Macross (Consola Principal de Comunicaciones y Radar)",
+    "en": "SDF-1 Macross (Main Communications & Radar Console)"
+  },
+  "birth_date": "14 de Febrero de 1989",
+  "birth_place": {
+    "es": "Atlanta, Estados Unidos (Tierra)",
+    "en": "Atlanta, United States (Earth)"
+  },
+  "blood_type": "O+",
+  "height": "1,77 m",
+  "weight": "58 kg",
+  "thumbnail": "assets/images/personajes/claudia_grant/claudia_card.jpg",
+  "images": [
+    {
+      "url": "assets/images/personajes/claudia_grant/claudia_card.jpg",
+      "title_es": "Claudia Grant - Oficial Superior de Puente",
+      "title_en": "Claudia Grant - Senior Bridge Officer",
+      "type_es": "Retrato Táctico",
+      "type_en": "Tactical Portrait"
+    },
+    {
+      "url": "assets/images/personajes/claudia_grant/claudia_portrait.png",
+      "title_es": "Teniente Comandante Grant - Retrato Oficial",
+      "title_en": "Lieutenant Commander Grant - Official Portrait",
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
+    },
+    {
+      "url": "assets/images/personajes/claudia_grant/claudia_uniform.jpg",
+      "title_es": "En Consola de Enlace del SDF-1 - Monitoreo de Escuadrones",
+      "title_en": "At SDF-1 Relay Console - Squadron Telemetry Monitoring",
+      "type_es": "En Operación",
+      "type_en": "In Operation"
+    }
+  ],
+  "summary": {
+    "es": "Oficial superior de comunicaciones del SDF-1 y pilar indispensable del puente de mando. Pareja de Roy Fokker y mejor amiga de Lisa Hayes, su madurez y templanza mantuvieron unida a la tripulación en sus horas más oscuras.",
+    "en": "Senior communications officer of the SDF-1 and indispensable pillar on the bridge. Partner to Roy Fokker and best friend to Lisa Hayes, her poise and wisdom anchored the crew in their darkest hours."
+  },
+  "lore": {
+    "overview_es": "Brillante, perspicaz y con una serenidad a prueba de fuego, Claudia Grant ingresó a las Fuerzas de Defensa Robotech tras destacar en logística de comunicaciones satelitales durante las Guerras Globales. En la base de la Isla Macross conoció al as de caza Roy Fokker, iniciando una apasionada y madura historia de amor. Asignada como tercera al mando en la jerarquía del puente del SDF-1 junto al Capitán Gloval y Lisa Hayes, coordinó todas las comunicaciones de escuadrones y enlaces de radar durante el repliegue por el sistema solar.",
+    "overview_en": "Brilliant, insightful, and possessing unshakable poise under fire, Claudia Grant rose through the Robotech Defense Force ranks after distinguishing herself in satellite communication logistics during the Global Civil Wars. On Macross Island Base, she met fighter ace Roy Fokker, igniting a passionate and mature bond. Serving as third-in-command on the SDF-1 bridge alongside Captain Gloval and Lisa Hayes, she orchestrated all fighter wing comms and sensor telemetry throughout the deep-space voyage.",
+    "tactical_analysis_es": "La función operativa de Claudia era vital para la supervivencia del SDF-1: filtrar millones de terabytes de interferencia electrónica enemiga y mantener el enlace radial en tiempo real con las patrullas del Escuadrón Skull en combate hiper-cinético. Cuando Roy Fokker murió en acción, Claudia soportó el dolor en silencio y continuó operando su estación en el puente sin perder la compostura, guiando el fuego de defensa y sirviendo de sostén psicológico a Lisa Hayes y Rick Hunter. Tras la guerra, lideró la integración cívica de los refugiados en Macross City.",
+    "tactical_analysis_en": "Claudia's operational role was pivotal to the fortress's survival: cutting through millions of gigabits of alien electronic jamming to preserve real-time command loops with Skull Squadron sorties during intense dogfights. When Roy Fokker was fatally wounded in action, Claudia bore the grief with remarkable inner strength, remaining at her station without missing a transmission, guiding defensive fire, and anchoring Lisa Hayes and Rick Hunter emotionally. Following the war, she spearheaded civic integration in reconstructed Macross City."
+  },
+  "aptitudes": {
+    "command": {
+      "value": 92,
+      "label_es": "Mando y Liderazgo Táctico",
+      "label_en": "Command & Tactical Leadership",
+      "desc_es": "Autoridad natural en el puente; coordinó el despliegue aéreo de cientos de cazas y transportes."
+    },
+    "strategy": {
+      "value": 89,
+      "label_es": "Estrategia e Inteligencia Militar",
+      "label_en": "Strategic Intelligence & Planning",
+      "desc_es": "Maestría en guerra electrónica, cifrado de transmisiones y anticipación de bloqueos de señal."
+    },
+    "resolve": {
+      "value": 98,
+      "label_es": "Resolución y Templanza bajo Fuego",
+      "label_en": "Poise & Crisis Resolution",
+      "desc_es": "Inquebrantable fortaleza anímica; mantuvo el control del puente aun tras la pérdida de su gran amor."
+    },
+    "piloting": {
+      "value": 50,
+      "label_es": "Habilidad de Vuelo y Pilotaje",
+      "label_en": "Flight & Piloting Proficiency",
+      "desc_es": "Oficial naval de puente y navegación global, no piloto de intercepción activa."
+    }
+  },
+  "stats": {
+    "command": 92,
+    "strategy": 89,
+    "resolve": 98,
+    "piloting": 50
+  },
+  "service_record": [
+    {
+      "period": "2005 - 2008",
+      "assignment_es": "Especialista en redes de telecomunicación de defensa en el Proyecto SDF-1 en Isla Macross",
+      "assignment_en": "Defense telecommunications specialist on the SDF-1 Project at Macross Island"
+    },
+    {
+      "period": "2009 - 2011",
+      "assignment_es": "Jefa de Comunicaciones del SDF-1; supervisa el enlace táctico en la victoria sobre Dolza",
+      "assignment_en": "Chief of Communications on SDF-1; maintains tactical link in the victory over Dolza"
+    },
+    {
+      "period": "2012 - 2014",
+      "assignment_es": "Directora de Asuntos de Reconstrucción de Macross City y enlace con el Alto Mando de la Tierra",
+      "assignment_en": "Director of Macross City Reconstruction Affairs and liaison to Earth High Command"
+    },
+    {
+      "period": "2014",
+      "assignment_es": "Sobrevive al asalto final de Khyron; ayuda a Lisa y Rick a planificar la partida de la REF",
+      "assignment_en": "Survives Khyron's suicide assault; assists Lisa & Rick in formulating the REF expedition"
+    }
+  ],
+  "relationships": [
+    {
+      "character": "Roy Fokker",
+      "relation_es": "El amor de su vida; su complicidad y cariño mutuo eran la envidia de toda la oficialidad.",
+      "relation_en": "The love of her life; their enduring warmth and bond inspired the entire officer corps."
+    },
+    {
+      "character": "Lisa Hayes",
+      "relation_es": "Mejor amiga, confidente y consejera sentimental; la impulsó a abrir su corazón a Rick Hunter.",
+      "relation_en": "Best friend, confidante, and emotional mentor; urged her to open her heart to Rick Hunter."
+    },
+    {
+      "character": "Henry Gloval",
+      "relation_es": "Comandante supremo a quien respaldó incondicionalmente en cada decisión estratégica.",
+      "relation_en": "Supreme commander whom she backed unconditionally through every strategic crisis."
+    },
+    {
+      "character": "Vince Grant",
+      "relation_es": "Su hermano menor; futuro comandante de combate de la REF y padre de Bowie Grant.",
+      "relation_en": "Her younger brother; future REF battle commander and father of Bowie Grant."
+    }
+  ],
+  "key_quotes": [
+    {
+      "quote_es": "Lisa, en la guerra puedes perder una nave o una posición, pero si cierras tu corazón a la vida, ya has perdido todo.",
+      "quote_en": "Lisa, in war you might lose a ship or a position, but if you close your heart to life, you've already lost everything.",
+      "context_es": "Consejo a Lisa Hayes en su camarote del SDF-1.",
+      "context_en": "Counsel to Lisa Hayes in their quarters aboard the SDF-1."
+    },
+    {
+      "quote_es": "Todos los canales de transmisión al máximo. Hagamos que cada zentraedi en esta galaxia escuche la voz de la Tierra.",
+      "quote_en": "All broadcast arrays to full power. Let every Zentradi in this galaxy hear the voice of Earth.",
+      "context_es": "Activando el relé de telecomunicaciones para el 'Minmei Attack' en el puente de mando.",
+      "context_en": "Powering the telecommunication grid for the 'Minmei Attack' on the bridge deck."
+    }
+  ]
+}
