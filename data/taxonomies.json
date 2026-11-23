@@ -88,7 +88,7 @@
       "id": "invid_swarm",
       "name_es": "Horda Invid (Regis / Regiss)",
       "name_en": "Invid Swarm (Regis / Regiss)",
-      "logo": "assets/images/ui/logo_UNSpacy.png"
+      "logo": "assets/images/ui/logo_invid.png"
     },
     {
       "id": "ref_pioneer",
@@ -101,6 +101,12 @@
       "name_es": "REF - División Marte (Mars Base)",
       "name_en": "REF - Mars Base Division",
       "logo": "assets/images/ui/Mars_Base.png"
+    },
+    {
+      "id": "invids",
+      "name_es": "Invids",
+      "name_en": "Invid",
+      "logo": "assets/images/ui/logo_invid.png"
     }
   ],
   "vehicle_types": [

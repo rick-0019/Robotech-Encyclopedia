@@ -13,10 +13,10 @@
   },
   "category": "commanders",
   "faction": {
-    "es": "Imperio Biológico Invid // Mente Colmena de Punto Réflex",
-    "en": "Invid Biological Empire // Reflex Point Hive-Mind"
+    "es": "Invids",
+    "en": "Invid"
   },
-  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "faction_logo": "assets/images/ui/logo_invid.png",
   "series": {
     "es": "La Nueva Generación (Tercera Guerra Robotech)",
     "en": "The New Generation (Third Robotech War)"

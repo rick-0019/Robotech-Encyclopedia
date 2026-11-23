@@ -52,7 +52,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupFormListeners();
     setupExportButtons();
     const select = document.getElementById('select-mecha-to-edit');
-    if (select && select.options.length > 1) {
+    const targetMechaId = params.get('id') || params.get('mecha') || params.get('load');
+    if (select && targetMechaId && Array.from(select.options).some(o => o.value === targetMechaId)) {
+      select.value = targetMechaId;
+      select.dispatchEvent(new Event('change'));
+    } else if (select && select.options.length > 1) {
       select.selectedIndex = 1;
       select.dispatchEvent(new Event('change'));
     }
@@ -91,7 +95,8 @@ async function loadTaxonomies() {
         { id: "skull_squadron", name_es: "U.N. Spacy - Escuadrón Skull", name_en: "U.N. Spacy - Skull Squadron", logo: "assets/images/ui/logo_UNSpacy.png" },
         { id: "zentraedi_main", name_es: "Flota Principal Zentraedi (Boddole Zer)", name_en: "Zentraedi Main Fleet", logo: "assets/images/ui/logo_zentran.png" },
         { id: "ref_pioneer", name_es: "Fuerza Expedicionaria Robotech (REF / Pioneer)", name_en: "Robotech Expeditionary Force (REF)", logo: "assets/images/ui/Mars_Base.png" },
-        { id: "mars_base_division", name_es: "REF - División Marte (Mars Base)", name_en: "REF - Mars Base Division", logo: "assets/images/ui/Mars_Base.png" }
+        { id: "mars_base_division", name_es: "REF - División Marte (Mars Base)", name_en: "REF - Mars Base Division", logo: "assets/images/ui/Mars_Base.png" },
+        { id: "invids", name_es: "Invids", name_en: "Invid", logo: "assets/images/ui/logo_invid.png" }
       ],
       vehicle_types: [
         { name_es: "Destroid Antiaéreo No Transformable", name_en: "Non-Transformable Anti-Aircraft Destroid" },
@@ -145,6 +150,8 @@ function populateTaxonomySelects() {
             logoInp.value = 'assets/images/ui/Mars_Base.png';
           } else if (txt.includes('zentraedi') || txt.includes('zentran') || txt.includes('meltrandi')) {
             logoInp.value = 'assets/images/ui/logo_zentran.png';
+          } else if (txt.includes('invid')) {
+            logoInp.value = 'assets/images/ui/logo_invid.png';
           } else {
             logoInp.value = 'assets/images/ui/logo_UNSpacy.png';
           }
@@ -162,6 +169,7 @@ function populateTaxonomySelects() {
     knownLogos.set('assets/images/ui/logo_UNSpacy.png', 'Robotech Defense Force / U.N. Spacy');
     knownLogos.set('assets/images/ui/logo_zentran.png', 'Fuerzas Zentraedi / Meltrandi');
     knownLogos.set('assets/images/ui/Mars_Base.png', 'REF - División Marte (Mars Base)');
+    knownLogos.set('assets/images/ui/logo_invid.png', 'Invids (Scout Violeta y Amarillo)');
     
     (currentTaxonomies.factions || []).forEach(f => {
       if (f.logo) knownLogos.set(f.logo, f.name_es);
@@ -1793,7 +1801,19 @@ function populateCharSelect() {
     };
   }
 
-  // Preseleccionar primer personaje (ej: Lisa Hayes)
+  // Soporte para enlace directo con parámetro ?id=<character_id> o ?load=<id>
+  const urlParams = new URLSearchParams(window.location.search);
+  const requestedId = urlParams.get('id') || urlParams.get('char_id') || urlParams.get('character') || urlParams.get('load');
+  if (requestedId) {
+    const matchingOption = Array.from(select.options).find(opt => opt.value === requestedId);
+    if (matchingOption) {
+      select.value = requestedId;
+      loadCharacterIntoForm(requestedId);
+      return;
+    }
+  }
+
+  // Preseleccionar primer personaje por defecto si no se especificó ID
   if (select.options.length > 1 && !currentCharData) {
     select.selectedIndex = 1;
     loadCharacterIntoForm(select.value);
@@ -2129,6 +2149,8 @@ window.updateCharFactionFromSelect = function() {
       logoInp.value = 'assets/images/ui/Mars_Base.png';
     } else if (val.includes('zentraedi') || val.includes('zentran')) {
       logoInp.value = 'assets/images/ui/logo_zentran.png';
+    } else if (val.includes('invid')) {
+      logoInp.value = 'assets/images/ui/logo_invid.png';
     } else {
       logoInp.value = 'assets/images/ui/logo_UNSpacy.png';
     }
@@ -2569,7 +2591,19 @@ function populateShipSelect() {
     };
   }
 
-  // Preseleccionar primera nave (ej: SDF-1 Macross)
+  // Soporte para enlace directo con parámetro ?id=<ship_id> o ?load=<id>
+  const urlParams = new URLSearchParams(window.location.search);
+  const requestedShipId = urlParams.get('id') || urlParams.get('ship_id') || urlParams.get('ship') || urlParams.get('load');
+  if (requestedShipId) {
+    const matchingOption = Array.from(select.options).find(opt => opt.value === requestedShipId);
+    if (matchingOption) {
+      select.value = requestedShipId;
+      loadShipIntoForm(requestedShipId);
+      return;
+    }
+  }
+
+  // Preseleccionar primera nave por defecto si no se especificó ID
   if (select.options.length > 1 && !currentShipData) {
     select.selectedIndex = 1;
     loadShipIntoForm(select.value);

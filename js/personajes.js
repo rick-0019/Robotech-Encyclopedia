@@ -15,7 +15,7 @@ const CHAR_I18N = {
     cat_all: "TODOS LOS EXPEDIENTES",
     cat_command: "OFICIALES Y MANDO",
     cat_pilots: "PILOTOS Y ASES",
-    cat_zentraedi: "LÍDERES ZENTRAEDI",
+    cat_zentraedi: "LÍDERES ALIENÍGENAS (INVID / ZENTRAEDI)",
     cat_scientists: "CIENTÍFICOS Y CIVILES",
     gen_all: "TODAS LAS GENERACIONES (40)",
     gen_1: "1ª GEN: MACROSS (18)",
@@ -46,7 +46,7 @@ const CHAR_I18N = {
     cat_all: "ALL DOSSIERS",
     cat_command: "COMMAND & OFFICERS",
     cat_pilots: "PILOTS & ACES",
-    cat_zentraedi: "ZENTRAEDI LEADERS",
+    cat_zentraedi: "ALIEN LEADERS (INVID / ZENTRAEDI)",
     cat_scientists: "SCIENTISTS & CIVILIANS",
     gen_all: "ALL GENERATIONS (40)",
     gen_1: "1ST GEN: MACROSS (18)",
@@ -230,6 +230,7 @@ function renderCharacters() {
   const lang = window.charState.lang;
   const cat = window.charState.category;
   const q = window.charState.searchQuery;
+  const isLocal = ['localhost', '127.0.0.1', '0.0.0.0', ''].includes(window.location.hostname) || window.location.protocol === 'file:';
 
   const filtered = window.charState.manifest.characters.filter(c => {
     if (!matchesCategory(c.category, cat)) return false;
@@ -327,10 +328,15 @@ function renderCharacters() {
             </div>
           </div>
 
-          <div class="card-actions">
-            <button class="btn-dossier" onclick="openCharDossier('${c.id}')">
+          <div class="card-actions" style="display: flex; gap: 8px;">
+            <button class="btn-dossier" onclick="openCharDossier('${c.id}')" style="flex: 1;">
               <span>⌖</span> ${CHAR_I18N[lang].btn_dossier}
             </button>
+            ${isLocal ? `
+              <a href="admin.html?module=personajes&id=${encodeURIComponent(c.id)}" target="_blank" class="btn-card-edit" title="${lang === 'es' ? 'Editar en CRUD local' : 'Edit in local CRUD'}" style="display: inline-flex; align-items: center; justify-content: center; padding: 0 12px; background: rgba(0, 240, 255, 0.1); border: 1px solid var(--un-cyan); color: var(--un-cyan); text-decoration: none; border-radius: 2px; font-size: 0.85rem; transition: var(--transition-fast);" onmouseover="this.style.background='var(--un-cyan)'; this.style.color='#000';" onmouseout="this.style.background='rgba(0, 240, 255, 0.1)'; this.style.color='var(--un-cyan)';">
+                ⚙
+              </a>
+            ` : ''}
           </div>
         </div>
       </div>
@@ -395,6 +401,18 @@ function populateCharModal(c) {
   }
   document.getElementById('char-dossier-name').textContent = c.name;
   document.getElementById('char-dossier-rank').textContent = `${c.rank?.[lang] || c.rank?.en} // ${c.assignment?.[lang] || c.assignment?.en}`;
+
+  // Acceso directo al CRUD local si estamos en localhost
+  const isLocal = ['localhost', '127.0.0.1', '0.0.0.0', ''].includes(window.location.hostname) || window.location.protocol === 'file:';
+  const editBtn = document.getElementById('char-dossier-edit-btn');
+  if (editBtn) {
+    if (isLocal) {
+      editBtn.href = `admin.html?module=personajes&id=${encodeURIComponent(c.id)}`;
+      editBtn.style.display = 'inline-flex';
+    } else {
+      editBtn.style.display = 'none';
+    }
+  }
 
   // Reset a primera pestaña
   document.querySelectorAll('#char-dossier-modal-backdrop .dossier-tab-btn').forEach((b, idx) => b.classList.toggle('active', idx === 0));

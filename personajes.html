@@ -73,7 +73,7 @@
         <button class="cat-btn active" data-category="all" data-i18n="cat_all">TODOS LOS EXPEDIENTES</button>
         <button class="cat-btn" data-category="command" data-i18n="cat_command">OFICIALES Y MANDO</button>
         <button class="cat-btn" data-category="pilots" data-i18n="cat_pilots">PILOTOS Y ASES</button>
-        <button class="cat-btn" data-category="zentraedi" data-i18n="cat_zentraedi">LÍDERES ZENTRAEDI</button>
+        <button class="cat-btn" data-category="zentraedi" data-i18n="cat_zentraedi">LÍDERES ALIENÍGENAS (INVID / ZENTRAEDI)</button>
         <button class="cat-btn" data-category="scientists" data-i18n="cat_scientists">CIENTÍFICOS Y CIVILES</button>
       </div>
 
@@ -121,7 +121,12 @@
             <span id="char-dossier-rank">RANGO MILITAR // ASIGNACIÓN</span>
           </div>
         </div>
-        <button id="btn-close-char-dossier" class="btn-close-modal">✕</button>
+        <div class="dossier-header-actions" style="display: flex; align-items: center; gap: 12px;">
+          <a id="char-dossier-edit-btn" href="#" target="_blank" class="dossier-edit-crud-btn" style="display: none; align-items: center; gap: 6px; padding: 6px 14px; background: rgba(0, 240, 255, 0.12); border: 1px solid var(--un-cyan); color: var(--un-cyan); font-family: var(--font-hud); font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; border-radius: 2px; text-decoration: none; cursor: pointer; transition: var(--transition-fast);" onmouseover="this.style.background='var(--un-cyan)'; this.style.color='#000'; this.style.boxShadow='0 0 10px var(--un-cyan-glow)';" onmouseout="this.style.background='rgba(0, 240, 255, 0.12)'; this.style.color='var(--un-cyan)'; this.style.boxShadow='none';">
+            ⚙ EDITAR EN CRUD
+          </a>
+          <button id="btn-close-char-dossier" class="btn-close-modal">✕</button>
+        </div>
       </div>
 
       <!-- Pestañas de Navegación del Expediente -->

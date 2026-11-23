@@ -13,10 +13,10 @@
   },
   "category": "villains",
   "faction": {
-    "es": "Imperio Biológico Invid // Guardia Pretoriana de la Regis",
-    "en": "Invid Biological Empire // Regess Praetorian Guard"
+    "es": "Invids",
+    "en": "Invid"
   },
-  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "faction_logo": "assets/images/ui/logo_invid.png",
   "series": {
     "es": "La Nueva Generación (Tercera Guerra Robotech)",
     "en": "The New Generation (Third Robotech War)"

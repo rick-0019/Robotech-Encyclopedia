@@ -13,10 +13,10 @@
   },
   "category": "commanders",
   "faction": {
-    "es": "Imperio Invid // Escuadrón de Resistencia de Scott Bernard",
-    "en": "Invid Empire // Scott Bernard's Earth Resistance Squad"
+    "es": "Invids",
+    "en": "Invid"
   },
-  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "faction_logo": "assets/images/ui/logo_invid.png",
   "series": {
     "es": "La Nueva Generación (Tercera Guerra Robotech)",
     "en": "The New Generation (Third Robotech War)"

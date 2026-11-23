@@ -47,7 +47,7 @@
         "es": "U.N. Spacy - Escuadrón Skull",
         "en": "U.N. Spacy - Skull Squadron"
       },
-      "faction_logo": "assets/images/personajes/rick_hunter/rick_hunter_02.jpg",
+      "faction_logo": "assets/images/ui/logo.png",
       "assignment": {
         "es": "SDF-1 Macross // Escuadrón Skull (VF-1J / VF-1S Valkyrie)",
         "en": "SDF-1 Macross // Skull Squadron (VF-1J / VF-1S Valkyrie)"
@@ -58,8 +58,8 @@
       },
       "thumbnail": "assets/images/personajes/rick_hunter/rick_hunter_04.jpg",
       "summary": {
-        "es": "As de caza supremo de la RDF y líder legendario del Escuadrón Skull tras la caída de Roy Fokker. Protagonista indiscutido de la Primera Guerra Robotech y futuro Comandante de la REF.",
-        "en": "Supreme RDF fighter ace and legendary Skull Squadron leader following the fall of Roy Fokker. Pivotal combat pilot of the First Robotech War and future REF Commander."
+        "es": "As de caza supremo de la RDF y líder legendario del Escuadrón Skull tras la caída de Roy Fokker. Protagonista indiscutido de la Primera Guerra Robotec...",
+        "en": "Supreme RDF fighter ace and legendary Skull Squadron leader following the fall of Roy Fokker. Pivotal combat pilot of the First Robotech War and futur..."
       },
       "stats": {
         "command": 88,
@@ -67,8 +67,7 @@
         "resolve": 94,
         "piloting": 99
       },
-      "dataFile": "data/personajes/rick_hunter.json",
-      "generation": "gen1"
+      "dataFile": "data/personajes/rick_hunter.json"
     },
     {
       "id": "lisa_hayes",
@@ -1404,10 +1403,10 @@
         "en": "Invid Biological Scout, Companion to Scott Bernard & Peacemaker"
       },
       "faction": {
-        "es": "Imperio Invid // Escuadrón de Resistencia de Scott Bernard",
-        "en": "Invid Empire // Scott Bernard's Earth Resistance Squad"
+        "es": "Invids",
+        "en": "Invid"
       },
-      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "faction_logo": "assets/images/ui/logo_invid.png",
       "assignment": {
         "es": "Vanguardia de la Regis // Guía Espiritual de la Resistencia a Punto Réflex",
         "en": "Regess Vanguard Envoy // Spiritual Guide of Earth Resistance to Reflex Point"
@@ -1524,10 +1523,10 @@
         "en": "Cosmic Evolutionary Guide, Collective Hive-Mother & Keeper of the Flower of Life"
       },
       "faction": {
-        "es": "Imperio Biológico Invid // Mente Colmena de Punto Réflex",
-        "en": "Invid Biological Empire // Reflex Point Hive-Mind"
+        "es": "Invids",
+        "en": "Invid"
       },
-      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "faction_logo": "assets/images/ui/logo_invid.png",
       "assignment": {
         "es": "Colmena Madre Génesis // Trono Biológico Central de Punto Réflex",
         "en": "Genesis Mother Hive // Central Biological Throne of Reflex Point"
@@ -1564,10 +1563,10 @@
         "en": "Invid Warlord, Royal Command Mecha Ace & Arch-Nemesis of Scott Bernard"
       },
       "faction": {
-        "es": "Imperio Biológico Invid // Guardia Pretoriana de la Regis",
-        "en": "Invid Biological Empire // Regess Praetorian Guard"
+        "es": "Invids",
+        "en": "Invid"
       },
-      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "faction_logo": "assets/images/ui/logo_invid.png",
       "assignment": {
         "es": "Mecha Real Comandante Invid (Gosú Carmesí) // Defensas de Punto Réflex",
         "en": "Invid Royal Command Mecha (Crimson Gamo) // Reflex Point Bastion"
@@ -1604,10 +1603,10 @@
         "en": "Invid Royal Commander, Partner to Lancer & Living Bridge Between Species"
       },
       "faction": {
-        "es": "Imperio Biológico Invid // Alianza de Paz con la Resistencia Terrestre",
-        "en": "Invid Biological Empire // Peace Alliance with Earth Resistance"
+        "es": "Invids",
+        "en": "Invid"
       },
-      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "faction_logo": "assets/images/ui/logo_invid.png",
       "assignment": {
         "es": "Mecha Real Comandante Invid (Gosú Lavanda) // Sector de Defensa Central",
         "en": "Invid Royal Command Mecha (Lavender Gosu) // Central Defense Sector"
