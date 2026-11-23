@@ -1,0 +1,151 @@
+{
+  "id": "dolza_flagship",
+  "name": "Base Fortaleza Móvil de Dolza",
+  "class_name": {
+    "es": "Fortaleza Móvil y Centro de Mando Supremo Imperial Clase Fulbtzs-Berrentzs",
+    "en": "Fulbtzs-Berrentzs-Class Mobile Fortress & Supreme Imperial Flagship"
+  },
+  "category": "fortress",
+  "faction": {
+    "es": "Gran Armada Imperial Zentraedi (Flota de Dolza)",
+    "en": "Grand Imperial Zentraedi Armada (Dolza's Grand Fleet)"
+  },
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "commissioned": "Era Milenaria de los Maestros de la Robotech (Sector Espacial Tirolés)",
+  "commanding_officer": {
+    "es": "Comandante Supremo Dolza (Boddole Zer) // Consejo Supremo Zentraedi",
+    "en": "Supreme Commander Dolza (Boddole Zer) // Supreme Zentraedi High Command"
+  },
+  "complement": {
+    "es": "Dotación Militar: Millones de guerreros Zentraedi gigantes clonados, oficiales tácticos y técnicos",
+    "en": "Military Complement: Millions of cloned giant Zentraedi warriors, tactical staff, and technicians"
+  },
+  "air_group": {
+    "es": "Centenares de miles de cápsulas de asalto Regult, cazas aeroespaciales Gnerl, mechas pesados Glaug y transporte de tropas",
+    "en": "Hundreds of thousands of Regult combat pods, Gnerl aerospace fighters, Glaug officer mecha, and landing transports"
+  },
+  "docked_vessels": {
+    "es": "Bahías internas colosales capaces de albergar y reabastecer docenas de acorazados de 4 km y cientos de cruceros Thuverl-Salan simultáneamente",
+    "en": "Internal docking chasms capable of harboring scores of 4km battleships and hundreds of Thuverl-Salan cruisers simultaneously"
+  },
+  "thumbnail": "assets/images/naves/dolza_flagship/dolza_fortress.png",
+  "dimensions": {
+    "length": "1.400.000 m (1.400 km de envergadura)",
+    "width": "600.000 m (600 km)",
+    "height": "500.000 m (500 km)",
+    "mass": "Inconmensurable (Masa a escala planetaria)"
+  },
+  "propulsion": {
+    "engines_es": "Matrices de Propulsión Hipergravitacional Primordial y reactores cósmicos de protocultura refinada",
+    "engines_en": "Primordial Hypergravitational Drive Arrays & Refined Protoculture Cosmic Reactors",
+    "fold_system_es": "Sistema de Salto Hiperespacial Fold Supermasivo de Nivel Armada",
+    "fold_system_en": "Supermassive Armada-Scale Space Fold Trans-Orbital System"
+  },
+  "defenses": {
+    "armor_es": "Blindaje superacorazado de aleación biometálica alienígena de grosor kilométrico (10.000.000+ C.D.M.)",
+    "armor_en": "Kilometers-thick alien biometallic alloy super-armor (10,000,000+ MDC)",
+    "shields_es": "Campo deflector hiperespacial omnidireccional capaz de desviar bombardeos masivos de flotas completas",
+    "shields_en": "Omnidirectional hyperspace deflector shield capable of shrugging off fleet-wide planetary barrages"
+  },
+  "stats": {
+    "firepower": 100,
+    "armor": 100,
+    "capacity": 100,
+    "range": 100
+  },
+  "stats_detail": {
+    "firepower": {
+      "value": 100,
+      "label_es": "Potencia de Fuego Planetaria",
+      "label_en": "Planetary Devastation Firepower",
+      "desc_es": "Capaz de desintegrar la superficie de planetas completos y aniquilar flotas enemigas en un solo ciclo de disparo."
+    },
+    "armor": {
+      "value": 100,
+      "label_es": "Integridad Estructural de Escala Lunar",
+      "label_en": "Moon-Scale Structural Integrity",
+      "desc_es": "Inmune al fuego convencional de naves de guerra exteriores; impenetrable salvo por infiltración interna directa."
+    },
+    "capacity": {
+      "value": 100,
+      "label_es": "Capacidad de Ejército y Flotas",
+      "label_en": "Army & Fleet Holding Capacity",
+      "desc_es": "Una verdadera estación-mundo capaz de albergar una armada imperial de más de cuatro millones de naves de guerra."
+    },
+    "range": {
+      "value": 100,
+      "label_es": "Autonomía Galáctica Infinita",
+      "label_en": "Intergalactic Operational Endurance",
+      "desc_es": "Almacenes inagotables de protocultura, factorías de clonación y astilleros de reparación integrados."
+    }
+  },
+  "weapons": [
+    {
+      "name_es": "Supercañón de Partículas Primario de Dispersión Molecular Planetaria",
+      "name_en": "Primary Planetary Molecular Dispersal Particle Cannon",
+      "damage": "Destrucción Planetaria Total / Desintegración de Mundos",
+      "range": "500.000 km",
+      "desc_es": "Arma suprema de exterminio instalada en el vórtice central de la megafortaleza, capaz de incinerar la corteza de un planeta en segundos.",
+      "desc_en": "Supreme annihilation weapon mounted in the megafortress central vortex, incinerating planetary crusts within seconds."
+    },
+    {
+      "name_es": "Red de Miles de Baterías de Haz de Partículas Pesadas Zentraedi",
+      "name_en": "Network of Thousands of Heavy Zentraedi Particle Beam Batteries",
+      "damage": "10.000 C.D.M. por andanada concentrada",
+      "range": "200.000 km",
+      "desc_es": "Arreglos de torretas de plasma distribuidas por toda la superficie exterior para barridos defensivos masivos.",
+      "desc_en": "Plasma turret arrays studded across the outer hull providing crushing defensive saturation fire."
+    },
+    {
+      "name_es": "Centenares de Silos de Torpedos de Plasma de Fusión Hiperespacial",
+      "name_en": "Hundreds of Hyperspace Fusion Plasma Torpedo Silos",
+      "damage": "50.000 C.D.M. por salva masiva",
+      "range": "1.000.000 km",
+      "desc_es": "Proyectiles balísticos de largo alcance para aniquilar formaciones navales completas a distancias interplanetarias.",
+      "desc_en": "Long-range standoff munitions designed to vaporize entire naval battlegroups at interplanetary distances."
+    }
+  ],
+  "internal_sections": [
+    {
+      "name_es": "Cúpula de Mando Supremo y Trono de Dolza",
+      "name_en": "Supreme Command Dome & Dolza's Throne Room",
+      "desc_es": "El epicentro de mando del Comandante Supremo Dolza, con pantallas panorámicas holográficas que coordinan los movimientos de 4 millones de naves.",
+      "desc_en": "The supreme command nexus of Commander Dolza, boasting spherical holographic telemetries coordinating 4 million warships."
+    },
+    {
+      "name_es": "Cámara del Núcleo Central de Reacción de Protocultura",
+      "name_en": "Central Protoculture Core Vault",
+      "desc_es": "El corazón energético vital de la fortaleza donde el SDF-1 penetró con su escudo de barrera para detonar sus armas en el desenlace de la Primera Guerra.",
+      "desc_en": "The vital energetic heart of the fortress breached by the SDF-1, detonating all munitions to end the First War."
+    },
+    {
+      "name_es": "Megaciudadelas de Clonación y Factorías de Mechas",
+      "name_en": "Megacity Cloning Chambers & Mecha Assembly Foundries",
+      "desc_es": "Complejos industriales automatizados que producen millones de soldados clónicos Zentraedi y miles de cápsulas Regult continuamente.",
+      "desc_en": "Automated industrial complexes producing millions of cloned Zentraedi soldiers and endless waves of Regult mecha."
+    }
+  ],
+  "lore": {
+    "overview_es": "La Base Fortaleza de Dolza (designación técnica imperial *Fulbtzs-Berrentzs*) fue la cúspide del poderío militar de la Gran Flota Zentraedi y el trono móvil del Comandante Supremo Dolza. Con una envergadura colosal de aproximadamente 1.400 kilómetros, esta fortaleza de escala planetaria servía como cuartel general de los 4,8 millones de naves de combate que constituían la armada imperial encargada de mantener el dominio de los Maestros de la Robotech a través del universo conocido.",
+    "overview_en": "Dolza's Mobile Base Fortress (imperial designation *Fulbtzs-Berrentzs*) was the ultimate zenith of Grand Fleet Zentraedi military supremacy and the mobile throne world of Supreme Commander Dolza. Spanning an astonishing 1,400 kilometers in width, this moon-sized fortress served as supreme command headquarters for the 4.8 million warships enforcing the Robotech Masters' dominion across the known universe.",
+    "tactical_analysis_es": "En la batalla climática por la supervivencia de la Tierra (10 de febrero de 2011), Dolza desplegó su inmensa armada en formación esférica envolvente y desató un bombardeo orbital masivo que devastó la superficie terrestre. Sin embargo, el SDF-1, respaldado por la flota aliada de Breetai y coordinado con el impacto psicosocial del 'Ataque Minmei', perforó la pantalla defensiva exterior. En una maniobra suicida legendaria, el Capitán Gloval ordenó al SDF-1 penetrar directamente en el interior de la fortaleza de Dolza, descargando su Cañón Principal y sobrecargando la Barrera Omnidireccional en el núcleo central, desintegrando a Dolza y aniquilando a la nave nodriza en una apocalíptica supernova cósmica.",
+    "tactical_analysis_en": "In the cataclysmic battle for Earth's survival (February 10, 2011), Dolza arrayed his immense armada in a spherical envelopment, raining planetary bombardment that scorched 95% of Earth's surface. However, the SDF-1, supported by Breetai's rebel allied fleet and the cultural psychological shock of the 'Minmei Attack', shattered the perimeter. In a legendary gambit, Captain Gloval rammed the SDF-1 directly into the heart of Dolza's fortress, unleashing the Main Gun and detonating the Omnidirectional Barrier at the core, incinerating Dolza and annihilating the mother base in a titanic cosmic supernova."
+  },
+  "summary": {
+    "es": "La colosal fortaleza móvil de 1.400 km de Dolza y centro de mando de la armada imperial de 4.8 millones de naves Zentraedi. Destruida por el SDF-1 desde su núcleo interno en el clímax de la Primera Guerra Robotech.",
+    "en": "Dolza's titanic 1,400km mobile base fortress and supreme command hub for the 4.8 million Zentraedi Grand Fleet armada. Obliterated from the inside out by the SDF-1 during the climax of the First Robotech War."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/dolza_flagship/dolza_fortress.png",
+      "title_es": "Base Fortaleza de Dolza - Registro Táctico de Escala Cósmica",
+      "title_en": "Dolza's Base Fortress - Cosmic-Scale Tactical Record",
+      "type_es": "Registro Visual",
+      "type_en": "Visual Record"
+    }
+  ]
+}

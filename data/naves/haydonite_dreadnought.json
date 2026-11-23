@@ -1,0 +1,97 @@
+{
+  "id": "haydonite_dreadnought",
+  "name": "Acorazado Estelar Haydonita",
+  "class_name": {
+    "es": "Acorazado Estelar Cibernético y Plataforma Furtiva de la Orden de Haydon",
+    "en": "Haydonite Cybernetic Stealth Dreadnought"
+  },
+  "category": "alien",
+  "faction": {
+    "es": "Hijos de la Sombra // Orden Haydonita",
+    "en": "Children of the Shadow // Haydonite Order"
+  },
+  "faction_logo": "assets/images/ui/Mars_Base.png",
+  "series": {
+    "es": "Robotech: The Shadow Chronicles",
+    "en": "Robotech: The Shadow Chronicles"
+  },
+  "commissioned": "2044",
+  "commanding_officer": "Janice Em (pre-rebelión) // Mando de la Conciencia Cibernética Haydonita",
+  "complement": "Entidad 100% cibernética automatizada (Sin tripulación orgánica)",
+  "air_group": "Enjambres de cazas automatizados no tripulados e interceptores cibernéticos de sigilo",
+  "docked_vessels": "Drones de infiltración y sondas espaciales de dispersión de singularidades",
+  "thumbnail": "assets/images/naves/haydonite_dreadnought/haydonite_cruiser.jpg",
+  "dimensions": {
+    "length": "680 m",
+    "width": "290 m",
+    "height": "180 m",
+    "mass": "1,800,000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines": "Motores de distorsión cuántica de energía oscura de emisión nula",
+    "fold_system": "Trans-salto hiperdimensional instantáneo Haydonite Fold System",
+    "reactor": "Matriz cuántica de energía de punto cero (Zero-Point Energy Matrix)"
+  },
+  "defenses": {
+    "armor": "Coraza de hiperaleación cristalina reflectante de absorción electromagnética",
+    "shields": "Escudo cuántico de inversión de fase inmune a armamento convencional y cañones sincrónicos"
+  },
+  "stats": {
+    "firepower": 99,
+    "armor": 95,
+    "capacity": 92,
+    "range": 100
+  },
+  "stats_detail": {
+    "velocity": "Mach 6.0 en cualquier medio fluido / 0.30c en espacio interplanetario",
+    "sensors": "Omnisensórica cuántica omnidireccional con rastreo a escala subatómica",
+    "hangar_capacity": "Bahías internas automatizadas con líneas de ensamblaje cibernético directo"
+  },
+  "weapons": [
+    {
+      "name": "Cañón Principal de Singularidad Oscura y Desintegración Molecular",
+      "type": "Haz de distorsión gravitacional de alta intensidad que colapsa materia estelar",
+      "range": "350,000 km",
+      "purpose": "Destrucción fulminante de superfortalezas y acorazados pesados"
+    },
+    {
+      "name": "Dispositivo de Apagado Remoto Haydonita (Shadow Backdoor)",
+      "type": "Emisor taquiónico capaz de desactivar cualquier tecnología Shadow concedida a humanos",
+      "range": "500,000 km",
+      "purpose": "Neutralización instantánea de cazas Alpha, destructores y cañones sincronizados"
+    },
+    {
+      "name": "Baterías de Haz de Energía Cuántica Perimetrales",
+      "type": "Puntos de descarga energética guiados por ordenador cibernético",
+      "range": "60,000 km",
+      "purpose": "Aniquilación simultánea de múltiples objetivos en 360 grados"
+    }
+  ],
+  "internal_sections": [
+    {
+      "name": "Matriz Neuronal Central y Núcleo de la Mente Colmena Cibernética",
+      "description": "Supercomputador cuántico autónomo que procesaba tácticas bélicas a millones de operaciones por segundo sin compasión orgánica."
+    },
+    {
+      "name": "Generador de Singularidad y Celdas de Energía Oscura",
+      "description": "Corazón motriz de la nave que alteraba las constantes físicas locales para generar invisibilidad total."
+    }
+  ],
+  "lore": "Los aterradores e insondables buques de guerra de los \"Hijos de la Sombra\". Desprovistos de tripulación biológica y guiados por una fría lógica de erradicación contra cualquier especie que manipule la Protocultura, estos acorazados ejecutaron la traición más devastadora contra la REF durante la Batalla de Reflex Point, apagando las armas de la flota humana para consumar su exterminio.",
+  "summary": {
+    "es": "Acorazado cibernético automatizado de casi 700 m dotado de generadores de singularidad y armas de apagado remoto. La nueva y letal amenaza alienígena de The Shadow Chronicles.",
+    "en": "Automated cybernetic dreadnought of nearly 700m armed with dark singularity cannons and remote shutdown codes. The lethal new alien adversary of The Shadow Chronicles."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/haydonite_dreadnought/haydonite_cruiser.jpg",
+      "caption": "Acorazado Estelar Haydonita emergiendo del espacio profundo",
+      "type": "profile"
+    },
+    {
+      "url": "assets/images/naves/haydonite_dreadnought/haydonite_cannon.jpg",
+      "caption": "Apertura del cañón principal de energía oscura en posición de tiro",
+      "type": "weapon"
+    }
+  ]
+}

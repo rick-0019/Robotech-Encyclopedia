@@ -1,0 +1,180 @@
+{
+  "id": "sdf2_megaroad",
+  "name": "SDF-2 Megaroad",
+  "class_name": {
+    "es": "Fortaleza Superdimensional de Batalla y Nave de Misión Profunda Clase Megaroad",
+    "en": "Megaroad-Class Super Dimensional Battle Fortress & Deep-Space Flagship"
+  },
+  "category": "fortress",
+  "faction": {
+    "es": "U.N. Spacy // Tierra Unificada",
+    "en": "U.N. Spacy // United Earth Government"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "commissioned": "Año 2014 (Sector de Reconstrucción de New Macross City)",
+  "commanding_officer": {
+    "es": "Comandante Lisa Hayes (Designada para el viaje a Tirol) // Almirante Henry J. Gloval",
+    "en": "Commander Lisa Hayes (Designated for Tirol Mission) // Admiral Henry J. Gloval"
+  },
+  "complement": {
+    "es": "Tripulación Militar y Científica: ~25.000 oficiales // Capacidad de colonos: ~80.000 civiles",
+    "en": "Military & Scientific Crew: ~25,000 officers // Colonist Capacity: ~80,000 civilians"
+  },
+  "air_group": {
+    "es": "450+ Cazas Veritech avanzados (VF-1 Super Valkyrie, primeros prototipos de la serie Alpha), 150+ Destroids y transporte modular de expedición",
+    "en": "450+ Advanced Veritech Fighters (VF-1 Super Valkyries, early Alpha prototypes), 150+ Destroids, and modular expedition shuttles"
+  },
+  "docked_vessels": {
+    "es": "Dos portanaves espaciales integrados de diseño nativo en los flancos (reemplazando la necesidad de navíos marinos improvisados)",
+    "en": "Two integrated native space carriers docked on the flanks (eliminating the need for makeshift naval ships)"
+  },
+  "thumbnail": "assets/images/naves/sdf2_megaroad/sdf2_rick_hunter.png",
+  "dimensions": {
+    "length": "1.620 m (1,62 km)",
+    "width": "520 m",
+    "height": "380 m",
+    "mass": "25.000.000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines_es": "6 Motores Termonucleares Principales Robotech de Segunda Generación con sistema de estabilidad de flujo de protocultura",
+    "engines_en": "6 Second-Generation Robotech Main Thermonuclear Engines with protoculture flux dampening",
+    "fold_system_es": "Generador Hiperespacial Fold Drive Rediseñado (Construido con tecnología Zentraedi asimilada)",
+    "fold_system_en": "Redesigned Space Fold Drive Generator (Built using integrated Zentraedi technology)"
+  },
+  "defenses": {
+    "armor_es": "Superaleación de blindaje espacial reforzado con nanoplacas ablativas (420.000 C.D.M.)",
+    "armor_en": "Reinforced space alloy with ablative nanoplating (420,000 MDC)",
+    "shields_es": "Sistema de Barrera Puntual Integrado y Escudo de Redirección Térmica de 360°",
+    "shields_en": "Integrated Pin-Point Barrier & 360-degree Thermal Redirection Shield"
+  },
+  "stats": {
+    "firepower": 100,
+    "armor": 96,
+    "capacity": 98,
+    "range": 95
+  },
+  "stats_detail": {
+    "firepower": {
+      "value": 100,
+      "label_es": "Potencia de Fuego Absoluta de Segunda Generación",
+      "label_en": "Second-Generation Absolute Firepower",
+      "desc_es": "Cañón Principal rediseñado capaz de disparar sin necesidad de transformación corporal compleja."
+    },
+    "armor": {
+      "value": 96,
+      "label_es": "Blindaje Espacial Integral Avanzado",
+      "label_en": "Advanced Integral Space Armor",
+      "desc_es": "Estructura optimizada desde su origen para el combate en el vacío espacial profundo."
+    },
+    "capacity": {
+      "value": 98,
+      "label_es": "Capacidad de Colonos, Tropas y Cazas",
+      "label_en": "Colony, Troop & Fighter Capacity",
+      "desc_es": "Almacenes masivos, biodomos habitacionales y múltiples cubiertas de hangares automatizados."
+    },
+    "range": {
+      "value": 95,
+      "label_es": "Autonomía de Misión Interestelar",
+      "label_en": "Interstellar Mission Range",
+      "desc_es": "Concebida para navegar hacia los confines de la galaxia en busca del planeta natal de los Maestros de la Robotech."
+    }
+  },
+  "weapons": [
+    {
+      "name_es": "Cañón Principal de Haz Robotech de Disparo Directo",
+      "name_en": "Direct-Fire Main Robotech Particle Beam Cannon",
+      "damage": "Destrucción Masiva a Nivel de Flota",
+      "range": "150.000 km",
+      "desc_es": "Rediseñado por el Dr. Emil Lang para disparar directamente desde la proa sin requerir la transformación 'Attack Mode' del casco.",
+      "desc_en": "Redesigned by Dr. Emil Lang to fire directly along the spinal axis without requiring bodily hull transformation."
+    },
+    {
+      "name_es": "12 Baterías de Cañones de Riel Electromagnéticos Pesados Triples",
+      "name_en": "12 Triple Heavy Electromagnetic Railgun Batteries",
+      "damage": "4.200 C.D.M. por salva",
+      "range": "600 km",
+      "desc_es": "Artillería pesada naval distribuida en los cuadrantes dorsales y ventrales para cobertura omnidireccional.",
+      "desc_en": "Heavy naval artillery positioned across dorsal and ventral quadrants for omnidirectional coverage."
+    },
+    {
+      "name_es": "24 Torretas Láser de Haz Doble de Alta Cadencia",
+      "name_en": "24 High-Rate Twin Laser Beam Turrets",
+      "damage": "1.500 C.D.M. por disparo",
+      "range": "250 km",
+      "desc_es": "Baterías defensivas secundarias antibuque y antiaéreas asistidas por computadoras de tiro Robotech.",
+      "desc_en": "Secondary anti-ship and air defense batteries directed by Robotech targeting computers."
+    },
+    {
+      "name_es": "Matriz de Silos de Misiles Espaciales de Saturación (1.600 Tubos)",
+      "name_en": "Saturation Spatial Missile Silo Arrays (1,600 Tubes)",
+      "damage": "Variable / Ojivas de Fusión y Pulso de Protocultura",
+      "range": "2.000 km",
+      "desc_es": "Capaz de desplegar andanadas de misiles de intercepción masiva para neutralizar flotas enemigas completas.",
+      "desc_en": "Capable of blanketing spatial sectors with guided warheads to saturate hostile fleets."
+    }
+  ],
+  "internal_sections": [
+    {
+      "name_es": "Puente de Mando Supremo de Nueva Generación",
+      "name_en": "Next-Gen Supreme Command Bridge",
+      "desc_es": "Puesto de mando avanzado diseñado para la Comandante Lisa Hayes, equipado con interfaces holográficas de telemetría y enlace neural.",
+      "desc_en": "Advanced command bridge built for Commander Lisa Hayes, featuring holographic telemetry interfaces."
+    },
+    {
+      "name_es": "Metrópolis de Colonización Interestelar",
+      "name_en": "Interstellar Colonization Habitat City",
+      "desc_es": "Complejo urbano presurizado con soporte vital autosuficiente, áreas residenciales, laboratorios botánicos y escuelas.",
+      "desc_en": "Self-sustaining pressurized urban habitat complete with residential sectors, hydroponic bays, and academies."
+    },
+    {
+      "name_es": "Bahías de Lanzamiento Aeronaval Gemelas de Diseño Nativo",
+      "name_en": "Native Twin Aerospace Launch Flanks",
+      "desc_es": "Hangares y pistas espaciales integrados en la estructura blindada del casco, superando el diseño improvisado del SDF-1.",
+      "desc_en": "Hangars and flight decks integrated seamlessly into the armored hull, surpassing the SDF-1's retrofitted design."
+    }
+  ],
+  "lore": {
+    "overview_es": "El SDF-2 Megaroad fue el ambicioso proyecto de la Tierra Unificada tras el final de la Primera Guerra Robotech: construir una segunda fortaleza superdimensional, completamente de manufactura humana pero incorporando todas las lecciones y tecnologías alienígenas aprendidas del SDF-1 y los Zentraedi aliados. Erigida en los astilleros de New Macross City directamente detrás de la proa del SDF-1, su misión primordial era liderar una misión diplomática y expedicionaria hacia el planeta natal de los Maestros de la Robotech (Tirol) bajo el mando de Lisa Hayes.",
+    "overview_en": "The SDF-2 Megaroad was the United Earth Government's grandest post-war ambition: to construct a second Super Dimensional Fortress, entirely built by human hands while integrating the full technological harvest of the SDF-1 and allied Zentraedi. Erected in New Macross City directly behind the stern of the SDF-1, its mission was to lead a deep-space diplomatic armada to Tirol under the command of Lisa Hayes.",
+    "tactical_analysis_es": "En enero de 2014, cuando la nave estaba a punto de ser terminada y comisionada, el comandante insurgente Zentraedi Khyron y la comandante Azonia lanzaron un ataque suicida final con su crucero de batalla dañado. Al verse superados por el fuego defensivo, Khyron embistió a toda velocidad su nave contra el complejo donde descansaban el SDF-1 y el SDF-2. El cataclismo destruyó ambas fortalezas en una gigantesca conflagración. Gloval salvó a Lisa Hayes encerrándola en la cápsula de escape de la torre. El legado y los planos del SDF-2 sirvieron de base directa para la construcción del posterior SDF-3 Pioneer y la fundación de la Fuerza Expedicionaria Robotech (REF).",
+    "tactical_analysis_en": "In January 2014, as the vessel neared completion, rogue Zentraedi commander Khyron and Azonia launched a desperate suicide assault with their battered battlecruiser. Driven by fanatical hatred, Khyron piloted his plunging warship directly into the base where both SDF-1 and SDF-2 lay anchored. The catastrophic impact and detonation obliterated both fortresses. Admiral Gloval saved Lisa Hayes by sealing her into an escape capsule. The plans, lessons, and dream of the SDF-2 formed the direct blueprint for the SDF-3 Pioneer and the Robotech Expeditionary Force (REF)."
+  },
+  "summary": {
+    "es": "Segunda fortaleza superdimensional construida en la Tierra para viajar hacia las estrellas bajo el mando de Lisa Hayes. Trágicamente destruida en New Macross City por la embestida suicida de Khyron, sus planos dieron origen al SDF-3 Pioneer.",
+    "en": "Second super dimensional fortress built on Earth to journey to deep space under Commander Lisa Hayes. Tragically destroyed in New Macross City by Khyron's suicide ramming, its design birthed the SDF-3 Pioneer."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/sdf2_megaroad/sdf2_rick_hunter.png",
+      "title_es": "SDF-2 Megaroad y Rick Hunter - Archivo Conmemorativo",
+      "title_en": "SDF-2 Megaroad & Rick Hunter - Commemorative Archive",
+      "type_es": "Pintura Oficial",
+      "type_en": "Official Art"
+    },
+    {
+      "url": "assets/images/naves/sdf2_megaroad/sdf2_construction.jpg",
+      "title_es": "Fase de Construcción en New Macross City",
+      "title_en": "Construction Phase in New Macross City",
+      "type_es": "Registro Visual",
+      "type_en": "Visual Record"
+    },
+    {
+      "url": "assets/images/naves/sdf2_megaroad/sdf2_bridge.jpg",
+      "title_es": "Detalle del Puente de Mando y Mástil de Comunicaciones",
+      "title_en": "Command Bridge Detail & Sensor Mast",
+      "type_es": "Captura de Archivo",
+      "type_en": "Archive Still"
+    },
+    {
+      "url": "assets/images/naves/sdf2_megaroad/sdf2_destruction.png",
+      "title_es": "La Batalla Final de New Macross City",
+      "title_en": "The Final Battle of New Macross City",
+      "type_es": "Registro de Combate",
+      "type_en": "Combat Record"
+    }
+  ]
+}

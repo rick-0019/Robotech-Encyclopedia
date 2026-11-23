@@ -1,0 +1,106 @@
+{
+  "id": "tirolian_mothership",
+  "name": "Nave Nodriza de los Maestros de la Robotech",
+  "class_name": {
+    "es": "Fortaleza Urbana Biosférica y Ciudad Espacial de los Maestros de Tirol",
+    "en": "Tirolian Mothership & Biogenic City Fortress"
+  },
+  "category": "alien",
+  "faction": {
+    "es": "Maestros de la Robotech (Tiroleses)",
+    "en": "Robotech Masters (Tirolians)"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Masters Saga (Second Robotech War)"
+  },
+  "commissioned": "Era del Imperio Tiroliano (Siglos de antigüedad)",
+  "commanding_officer": "El Triunvirato Supremo de los Maestros de la Robotech",
+  "complement": "Aproximadamente 250,000 clones civiles y militares tiroleses + legiones Bioroid",
+  "air_group": "Miles de Bioroids de combate (Invid Fighter, Bioroid Trooper, Bioroid Commander) y Hovercrafts",
+  "docked_vessels": "Decenas de corbetas pesadas de desembarco y transportes auxiliares",
+  "thumbnail": "assets/images/naves/tirolian_mothership/mothership_orbit.jpg",
+  "dimensions": {
+    "length": "6,500 m (6.5 km)",
+    "width": "2,800 m",
+    "height": "2,200 m",
+    "mass": "125,000,000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines": "Motores de distorsión espacio-temporal Protocultura Gravitic Drive",
+    "fold_system": "Sistema de trans-salto dimensional hiperespacial masivo",
+    "reactor": "Cámara matriz de Protocultura (en estado crítico de agotamiento durante la guerra)"
+  },
+  "defenses": {
+    "armor": "Casco biometálico autorregenerativo con blindaje refractario molecular",
+    "shields": "Escudo deflector de disrupción dimensional capaz de absorber salvas nucleares y láseres espaciales"
+  },
+  "stats": {
+    "firepower": 98,
+    "armor": 99,
+    "capacity": 100,
+    "range": 96
+  },
+  "stats_detail": {
+    "velocity": "Inercia gravitatoria cero / Desplazamiento orbital controlado",
+    "sensors": "Sistemas telepáticos y sensores biogenéticos de resonancia Protocultura",
+    "hangar_capacity": "Bahías hexagonales masivas capaces de albergar ciudades enteras y miles de mechas"
+  },
+  "weapons": [
+    {
+      "name": "Cañones de Pulso de Desintegración Atómica",
+      "type": "Armas primarias pesadas de haz concentrado",
+      "range": "300,000 km",
+      "purpose": "Destrucción fulminante de acorazados y flotas enteras de un solo impacto"
+    },
+    {
+      "name": "Red Defensiva de Proyectores de Plasma Hexagonales",
+      "type": "Cientos de nodos de energía distribuidos en la superficie",
+      "range": "50,000 km",
+      "purpose": "Barrera perimetral infranqueable para cazas y proyectiles cinéticos"
+    },
+    {
+      "name": "Rayos Tractores de Parálisis Gravitacional",
+      "type": "Emisores de campos gravitatorios concentrados",
+      "range": "80,000 km",
+      "purpose": "Captura y desmantelamiento de naves enemigas"
+    }
+  ],
+  "internal_sections": [
+    {
+      "name": "Cámara del Triunvirato y Núcleo de Biocontrol",
+      "description": "Sala sacra donde los ancianos gobernaban la mente de la población clonada y coordinaban las legiones."
+    },
+    {
+      "name": "Ciudad Biosférica Interior",
+      "description": "Colosal entorno artificial que recreaba la vida civil de la lejana Tirol para los clones sirvientes."
+    },
+    {
+      "name": "Cámara de las Flores de la Vida de Zor",
+      "description": "Sagrario donde los Maestros custodiaban las últimas semillas antes de intentar apoderarse del montículo del SDF-1."
+    }
+  ],
+  "lore": "La cumbre científica y monumental de la civilización de los Maestros de la Robotech. Más que un buque de guerra, cada una de estas moles era una ciudad-estado flotante autosuficiente con cientos de miles de ciudadanos clones. Viajaron a través del abismo galáctico desde su planeta natal Tirol hasta la Tierra cuando sus reservas de Protocultura tocaron fondo, buscando desesperadamente desenterrar los secretos biogenéticos que Zor ocultó dentro de los restos del SDF-1 en la Tierra.",
+  "summary": {
+    "es": "Colosal ciudad-nave de más de 6 km de longitud y fortaleza suprema de los Maestros de la Robotech. Viajó por el cosmos hasta la Tierra para reclamar la matriz de Protocultura de Zor antes de la llegada de los Invid.",
+    "en": "Colossal 6km city-ship and supreme fortress of the Robotech Masters. Journeyed across the stars to Earth to seize Zor's Protoculture matrix before the arrival of the Invid."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/tirolian_mothership/mothership_orbit.jpg",
+      "caption": "La Nave Nodriza de los Maestros dominando la órbita terrestre",
+      "type": "profile"
+    },
+    {
+      "url": "assets/images/naves/tirolian_mothership/mothership_attack.jpg",
+      "caption": "Despliegue del rayo desintegrador principal contra las flotas defensoras",
+      "type": "combat"
+    },
+    {
+      "url": "assets/images/naves/tirolian_mothership/mothership_shield.jpg",
+      "caption": "Activación de la barrera de distorsión defensiva perimetral",
+      "type": "defense"
+    }
+  ]
+}

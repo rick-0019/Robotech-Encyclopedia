@@ -1,0 +1,163 @@
+{
+  "id": "thuverl_salan",
+  "name": "Acorazado de Asalto Clase Thuverl-Salan",
+  "class_name": {
+    "es": "Acorazado Estándar de Asalto y Destructor de Línea Zentraedi Clase Thuverl-Salan",
+    "en": "Thuverl-Salan-Class Standard Assault Battleship & Line Destroyer"
+  },
+  "category": "alien",
+  "faction": {
+    "es": "Gran Armada Imperial Zentraedi // Flotas de Combate de Línea",
+    "en": "Grand Zentraedi Imperial Armada // Frontline Battlefleets"
+  },
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "commissioned": "Era Milenaria de Expansión Zentraedi",
+  "commanding_officer": {
+    "es": "Comandantes de División Zentraedi (Población masiva en todas las flotas de asalto)",
+    "en": "Zentraedi Division Commanders (Mass-produced line battleship of all imperial fleets)"
+  },
+  "complement": {
+    "es": "Tripulación Zentraedi Gigante: ~3.800 soldados y artilleros",
+    "en": "Giant Zentraedi Crew: ~3,800 cloned warriors and gunners"
+  },
+  "air_group": {
+    "es": "600+ Cápsulas de combate Regult (estándar, misiles ligeros y pesados), cazas Gnerl y cápsulas de exploración",
+    "en": "600+ Regult combat pods (standard, light & heavy missile variants), Gnerl fighters, and scout craft"
+  },
+  "docked_vessels": {
+    "es": "2 Naves de transporte de asalto orbital y desembarco de infantería gigante",
+    "en": "2 Orbital assault drop-ships and giant infantry transports"
+  },
+  "thumbnail": "assets/images/naves/thuverl_salan/thuverl_destroyer.jpg",
+  "dimensions": {
+    "length": "2.000 m (2,0 km)",
+    "width": "340 m",
+    "height": "280 m",
+    "mass": "90.000.000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines_es": "Sistema de Impulsores Hipergravitacionales Zentraedi y reactores de fusión de protocultura",
+    "engines_en": "Zentraedi Hypergravitational Drive Arrays & Protoculture Fusion Reactors"
+  },
+  "defenses": {
+    "armor_es": "Casco biometálico orgánico de doble capa con absorción de calor (110.000 C.D.M.)",
+    "armor_en": "Dual-layer organic biometallic hull with thermal dispersion plating (110,000 MDC)",
+    "shields_es": "Pantallas de deflexión electromagnética perimetral",
+    "shields_en": "Perimeter electromagnetic deflection screens"
+  },
+  "stats": {
+    "firepower": 90,
+    "armor": 88,
+    "capacity": 86,
+    "range": 92
+  },
+  "stats_detail": {
+    "firepower": {
+      "value": 90,
+      "label_es": "Potencia de Fuego de Bombardeo Naval",
+      "label_en": "Fleet Bombardment Firepower",
+      "desc_es": "Cañones pesados de partículas proeles y baterías continuas de plasma lateral."
+    },
+    "armor": {
+      "value": 88,
+      "label_es": "Blindaje de Combate Prolongado",
+      "label_en": "Sustained Combat Armor",
+      "desc_es": "Diseñado para resistir fuego cruzado sostenido en batallas espaciales masivas de flota."
+    },
+    "capacity": {
+      "value": 86,
+      "label_es": "Capacidad de Cápsulas de Asalto",
+      "label_en": "Assault Pod Capacity",
+      "desc_es": "Bahías de lanzamiento masivas en el vientre para oleadas ininterrumpidas de Mechas Regult."
+    },
+    "range": {
+      "value": 92,
+      "label_es": "Autonomía de Operaciones Espaciales",
+      "label_en": "Deep-Space Endurance",
+      "desc_es": "Capaz de navegar en formación durante siglos a través de los sectores galácticos."
+    }
+  },
+  "weapons": [
+    {
+      "name_es": "Cañón de Partículas Pesado de Proa en Línea Central",
+      "name_en": "Centerline Spinal Heavy Particle Beam Cannon",
+      "damage": "22.000 C.D.M. por disparo concentrado",
+      "range": "160.000 km",
+      "desc_es": "Arma primaria capaz de perforar el blindaje de cualquier crucero terrestre de un solo impacto.",
+      "desc_en": "Primary spinal weapon capable of piercing capital ship armor with a single direct hit."
+    },
+    {
+      "name_es": "14 Baterías Dobles de Plasma de Andanada Lateral",
+      "name_en": "14 Twin Heavy Plasma Broadside Batteries",
+      "damage": "2.200 C.D.M. por salva",
+      "range": "65.000 km",
+      "desc_es": "Baterías montadas a lo largo de los flancos para tácticas de barrido naval en formación.",
+      "desc_en": "Flank-mounted batteries delivering coordinated broadside saturation in line formations."
+    },
+    {
+      "name_es": "24 Lanzadores de Misiles Zentraedi de Saturación",
+      "name_en": "24 Zentraedi Saturation Missile Launchers",
+      "damage": "1.400 C.D.M. por salva",
+      "range": "100.000 km",
+      "desc_es": "Cortinas de misiles guiados para saturar las defensas de cazas Veritech y plataformas orbitales.",
+      "desc_en": "Guided missile curtains designed to saturate point defenses of interceptor wings."
+    }
+  ],
+  "internal_sections": [
+    {
+      "name_es": "Puente de Mando Táctico Elevado",
+      "name_en": "Elevated Tactical Command Bridge",
+      "desc_es": "Módulo de control acorazado con consolas Zentraedi cilíndricas y visor orbital directo.",
+      "desc_en": "Armored control hub featuring cylindrical Zentraedi sensor consoles and direct orbital viewports."
+    },
+    {
+      "name_es": "Cubierta Inferior de Salida Rápida de Mechas Regult",
+      "name_en": "Ventral Rapid Regult Deployment Chutes",
+      "desc_es": "Múltiples escotillas ventrales presurizadas desde donde se arrojan centenares de cápsulas de combate al espacio.",
+      "desc_en": "Multiple pressurized ventral hatches ejecting hundreds of combat walkers into open space."
+    },
+    {
+      "name_es": "Bahía de Reserva de Municiones y Baterías de Energía",
+      "name_en": "Munitions Reserve & Power Storage Bays",
+      "desc_es": "Depósitos masivos de plasma y proyectiles balísticos para abastecer a las dotaciones de Destroids y Regult.",
+      "desc_en": "Massive plasma reserves and kinetic munitions supplying Regult and mecha arsenals."
+    }
+  ],
+  "lore": {
+    "overview_es": "El acorazado Clase Thuverl-Salan es el caballo de batalla indiscutido de las armadas Zentraedi. Con una eslora de dos kilómetros y una silueta abombada con crestas dorsales y vientre bulboso, esta nave fue producida en cientos de miles de unidades por las factorías automatizadas de los Maestros de la Robotech para servir como buque de línea de primera clase.",
+    "overview_en": "The Thuverl-Salan-class battleship is the undisputed workhorse of the Zentraedi armadas. Spanning two kilometers in length with a distinctive arched spine and bulbous ventral staging bays, hundreds of thousands of these warships were churned out by automated Tirolian foundries to anchor frontline battlefleets.",
+    "tactical_analysis_es": "En la Primera Guerra Robotech, las formaciones de ataque de Breetai y Dolza estaban compuestas principalmente por escuadrones de naves Thuverl-Salan. Su resistencia formidable y su capacidad para arrojar cientos de cápsulas Regult en minutos pusieron al SDF-1 contra las cuerdas en el espacio profundo y formaron el grueso de la flota que desató el devastador bombardeo orbital sobre la Tierra.",
+    "tactical_analysis_en": "Throughout the First Robotech War, Breetai's and Dolza's attack wings were comprised primarily of Thuverl-Salan battle groups. Their formidable armor and ability to deploy hundreds of Regult pods within minutes pushed the SDF-1 to the brink in deep space and formed the primary executioners of the catastrophic planetary bombardment of Earth."
+  },
+  "summary": {
+    "es": "El acorazado de línea de 2 km más numeroso y destructivo de la flota Zentraedi. Columna vertebral artillera del imperio, desplegaba cientos de cápsulas Regult en combate.",
+    "en": "The most numerous and destructive 2km frontline battleship of the Zentraedi empire. Formed the artillery backbone of the armada, deploying hundreds of Regult pods in combat."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/thuverl_salan/thuverl_destroyer.jpg",
+      "title_es": "Acorazado Clase Thuverl-Salan - Vista Táctica",
+      "title_en": "Thuverl-Salan-Class Battleship - Tactical View",
+      "type_es": "Registro Visual",
+      "type_en": "Visual Record"
+    },
+    {
+      "url": "assets/images/naves/thuverl_salan/thuverl_combat.jpg",
+      "title_es": "Thuverl-Salan en Formación de Fuego Orbital",
+      "title_en": "Thuverl-Salan in Orbital Firing Formation",
+      "type_es": "Captura de Archivo",
+      "type_en": "Archive Still"
+    },
+    {
+      "url": "assets/images/naves/thuverl_salan/thuverl_earth.png",
+      "title_es": "Flota de Acorazados Zentraedi Asediando la Tierra",
+      "title_en": "Zentraedi Battleship Fleet Besieging Earth",
+      "type_es": "Registro de Combate",
+      "type_en": "Combat Record"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "pulsar_cruiser",
+  "name": "Crucero Ligero Clase Pulsar",
+  "class_name": {
+    "es": "Crucero Ligero de Escolta Rápida e Intercepción Clase Pulsar",
+    "en": "Pulsar-Class Fast Escort Light Cruiser"
+  },
+  "category": "cruisers",
+  "faction": {
+    "es": "Ejército de la Cruz del Sur // Escuadrones de Intercepción Orbital",
+    "en": "Army of the Southern Cross // Orbital Interception Fleets"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Masters Saga (Second Robotech War)"
+  },
+  "commissioned": "2027",
+  "commanding_officer": "Capitanes de Fragata del Ejército de la Cruz del Sur",
+  "complement": "280 oficiales y tripulantes + 30 pilotos",
+  "air_group": "20 cazas tácticos Logan",
+  "docked_vessels": "1 lanzadera de enlace",
+  "thumbnail": "assets/images/naves/pulsar_cruiser/pulsar_cruiser.jpeg",
+  "dimensions": {
+    "length": "260 m",
+    "width": "75 m",
+    "height": "60 m",
+    "mass": "180,000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines": "2x Propulsores iónicos compactos de alta aceleración angular",
+    "fold_system": "No equipado",
+    "reactor": "Reactor termonuclear de fusión compacta"
+  },
+  "defenses": {
+    "armor": "Casco ligero de aleación espacial al titanio",
+    "shields": "Generadores de interferencia electrónica antimisil (ECM)"
+  },
+  "stats": {
+    "firepower": 74,
+    "armor": 72,
+    "capacity": 68,
+    "range": 75
+  },
+  "stats_detail": {
+    "velocity": "Mach 3.5 en capa superior / 0.22c en espacio",
+    "sensors": "Escáneres electromagnéticos de alta velocidad de barrido",
+    "hangar_capacity": "Hangar centralizado compacto con rampa de despegue rápido"
+  },
+  "weapons": [
+    {
+      "name": "Baterías Láser de Pulso Rápido",
+      "type": "Láseres gemelos de recarga ultrarrápida",
+      "range": "60,000 km",
+      "purpose": "Intercepción de corbetas enemigas y cápsulas voladoras Bioroid"
+    },
+    {
+      "name": "Tubos Lanzatorpedos de Plasma de Proa",
+      "type": "Torpedos pesados de energía concentrada",
+      "range": "80,000 km",
+      "purpose": "Ataques rápidos a quemarropa contra buques capitales"
+    }
+  ],
+  "internal_sections": [
+    {
+      "name": "Bahía de Cazas Rápidos",
+      "description": "Área de alistamiento inmediato para intercepción."
+    },
+    {
+      "name": "Puente Compacto de Maniobras",
+      "description": "Diseñado para respuestas evasivas de alta g."
+    }
+  ],
+  "lore": "Construidos para garantizar la superioridad en maniobrabilidad frente a naves alienígenas de mayor tonelaje, los cruceros ligeros de la clase Pulsar formaron la vanguardia de las patrullas orbitales de la Tierra durante la invasión de los Maestros. Su alta velocidad les permitía flanquear a las formaciones de corbetas enemigas y desplegar cazas en tiempo récord.",
+  "summary": {
+    "es": "Crucero ligero y ágil de escolta del Ejército de la Cruz del Sur, especializado en intercepción a gran velocidad y defensa de convoyes orbitales.",
+    "en": "Fast and agile escort light cruiser of the Southern Cross, specialized in high-speed orbital interception and fleet defense."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/pulsar_cruiser/pulsar_cruiser.jpeg",
+      "caption": "Crucero Ligero Clase Pulsar en patrulla orbital",
+      "type": "profile"
+    },
+    {
+      "url": "assets/images/naves/pulsar_cruiser/pulsar_orbit.png",
+      "caption": "Unidad de la clase en maniobra de aproximación a estación espacial",
+      "type": "mission"
+    }
+  ]
+}

@@ -267,6 +267,7 @@ function renderMechas() {
   const countEl = document.getElementById('results-count');
   if (!grid || !window.appState.manifest) return;
 
+  const isLocal = ['localhost', '127.0.0.1', '0.0.0.0', ''].includes(window.location.hostname) || window.location.protocol === 'file:';
   const lang = window.appState.lang;
   const category = window.appState.category;
   const q = window.appState.searchQuery;
@@ -392,6 +393,11 @@ function renderMechas() {
                     onclick="window.mechaComparator.toggleMecha('${m.id}')">
               ${isCompared ? `✓ ${I18N[lang].compare_ready}` : `⚔ ${I18N[lang].compare_btn}`}
             </button>
+            ${isLocal ? `
+              <a href="admin.html?module=mechas&id=${encodeURIComponent(m.id)}" target="_blank" class="btn-card-edit" title="${lang === 'es' ? 'Editar en CRUD local' : 'Edit in local CRUD'}" style="display: inline-flex; align-items: center; justify-content: center; padding: 0 10px; background: rgba(0, 240, 255, 0.1); border: 1px solid var(--un-cyan); color: var(--un-cyan); text-decoration: none; border-radius: 2px; font-size: 0.85rem; transition: var(--transition-fast);" onmouseover="this.style.background='var(--un-cyan)'; this.style.color='#000';" onmouseout="this.style.background='rgba(0, 240, 255, 0.1)'; this.style.color='var(--un-cyan)';">
+                ⚙
+              </a>
+            ` : ''}
           </div>
         </div>
       </div>
@@ -565,6 +571,19 @@ function populateDossierModal(m) {
   }
   document.getElementById('dossier-mecha-name').textContent = m.name;
   document.getElementById('dossier-mecha-alias').textContent = `${m.alias} // ${m.faction[lang] || m.faction.en}`;
+
+  // Acceso directo al CRUD local si estamos en entorno local
+  const isLocal = ['localhost', '127.0.0.1', '0.0.0.0', ''].includes(window.location.hostname) || window.location.protocol === 'file:';
+  const editBtn = document.getElementById('mecha-dossier-edit-btn');
+  if (editBtn) {
+    if (isLocal) {
+      editBtn.href = `admin.html?module=mechas&id=${encodeURIComponent(m.id)}`;
+      editBtn.style.display = 'inline-flex';
+      editBtn.title = lang === 'es' ? `Editar '${m.name}' en Gestor CRUD` : `Edit '${m.name}' in CRUD Studio`;
+    } else {
+      editBtn.style.display = 'none';
+    }
+  }
 
   // Reset a la primera pestaña
   document.querySelectorAll('.dossier-tab-btn').forEach((b, idx) => b.classList.toggle('active', idx === 0));

@@ -1,0 +1,102 @@
+{
+  "id": "shimakaze",
+  "name": "Acorazado Clase Shimakaze (UES Icarus)",
+  "class_name": {
+    "es": "Acorazado Espacial Pesado con Tecnología Furtiva Shadow Clase Shimakaze",
+    "en": "Shimakaze-Class Heavy Shadow Battleship (UES Icarus)"
+  },
+  "category": "cruisers",
+  "faction": {
+    "es": "Fuerza Expedicionaria Robotech // Flota de Operaciones Especiales",
+    "en": "Robotech Expeditionary Force // Special Operations Fleet"
+  },
+  "faction_logo": "assets/images/ui/Mars_Base.png",
+  "series": {
+    "es": "Robotech: The Shadow Chronicles",
+    "en": "Robotech: The Shadow Chronicles"
+  },
+  "commissioned": "2044",
+  "commanding_officer": "Mayor Vince Grant (UES Icarus)",
+  "complement": "620 oficiales y especialistas de combate",
+  "air_group": "48 cazas avanzados Shadow Alpha / Beta Fighters equipados con generadores de invisibilidad sincrónica",
+  "docked_vessels": "2 lanzaderas de asalto furtivo",
+  "thumbnail": "assets/images/naves/shimakaze/shimakaze_icarus.jpg",
+  "dimensions": {
+    "length": "410 m",
+    "width": "120 m",
+    "height": "92 m",
+    "mass": "460,000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines": "3x Motores de plasma de alta densidad con supresión de firma térmica",
+    "fold_system": "Sistema de salto hiperespacial mejorado Shadow Fold Drive",
+    "reactor": "Planta motriz mixta de fusión Protocultura y celdas de energía sincrónica"
+  },
+  "defenses": {
+    "armor": "Blindaje compuesto de nanocarbono con revestimiento absorbente de radar y protocultura",
+    "shields": "Generador de camuflaje cuántico Shadow Cloaking Device (invisibilidad ante radares y sensores de Protocultura Invid)"
+  },
+  "stats": {
+    "firepower": 94,
+    "armor": 90,
+    "capacity": 88,
+    "range": 94
+  },
+  "stats_detail": {
+    "velocity": "Mach 3.5 en atmósferas densas / 0.22c en espacio",
+    "sensors": "Escáneres cuánticos pasivos y matriz de detección de singularidades dimensionales",
+    "hangar_capacity": "Cubierta de lanzamiento presurizada con amortiguadores electromagnéticos sigilosos"
+  },
+  "weapons": [
+    {
+      "name": "2 Cañones Principales de Haz Sincrónico Shadow",
+      "type": "Artillería de energía de tecnología Haydonita de altísima potencia",
+      "range": "200,000 km",
+      "purpose": "Aniquilación de buques enemigos sin emitir firma de detección previa"
+    },
+    {
+      "name": "12 Torretas de Haz Láser Secundario de Alta Precisión",
+      "type": "Sistemas automatizados de fuego rápido",
+      "range": "45,000 km",
+      "purpose": "Defensa puntual y neutralización de objetivos maniobrables"
+    },
+    {
+      "name": "Bancos de Misiles Furtivos de Hipervelocidad",
+      "type": "Misiles antibuque con propulsión fría",
+      "range": "150,000 km",
+      "purpose": "Ataques por sorpresa a distancias extremas"
+    }
+  ],
+  "internal_sections": [
+    {
+      "name": "Puente de Mando Táctico del Mayor Vince Grant",
+      "description": "Puesto neurálgico donde se coordinaron las misiones de rescate del SDF-3 y el descubrimiento de la conspiración de los Niños de la Sombra."
+    },
+    {
+      "name": "Cámara del Generador de Camuflaje Shadow",
+      "description": "Módulo de invisibilidad que ocultaba la nave de los sensores biológicos Invid."
+    }
+  ],
+  "lore": "El buque de combate más sofisticado desarrollado en el cenit de la alianza entre la REF y los misteriosos Haydonitas. El UES Icarus, capitaneado por el Mayor Vince Grant, se distinguió por su audacia en la Batalla de Reflex Point y por ser la primera nave en purgar el software de traición instalado por los Haydonitas, convirtiéndose en la nave insignia de la resistencia humana contra esta nueva amenaza galáctica.",
+  "summary": {
+    "es": "Acorazado pesado de última generación dotado de tecnología furtiva Shadow y cañones sincrónicos. El UES Icarus del Mayor Vince Grant lideró la investigación del misterio del SDF-3 y la resistencia ante la traición Haydonita.",
+    "en": "Next-generation heavy battleship equipped with Shadow cloaking and synchro cannons. Major Vince Grant's UES Icarus led the search for the missing SDF-3 and broke the Haydonite ambush."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/shimakaze/shimakaze_icarus.jpg",
+      "caption": "El UES Icarus en vuelo espacial con sus sistemas de camuflaje activados",
+      "type": "profile"
+    },
+    {
+      "url": "assets/images/naves/shimakaze/shimakaze_battle.jpg",
+      "caption": "Fuego de cañones sincrónicos durante el combate espacial contra la flota de la Sombra",
+      "type": "combat"
+    },
+    {
+      "url": "assets/images/naves/shimakaze/shimakaze_dock.jpg",
+      "caption": "El UES Icarus saliendo del dique seco de la estación espacial Space Station Liberty",
+      "type": "dock"
+    }
+  ]
+}

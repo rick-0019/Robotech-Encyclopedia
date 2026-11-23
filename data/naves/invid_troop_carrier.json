@@ -1,0 +1,96 @@
+{
+  "id": "invid_troop_carrier",
+  "name": "Transporte de Tropas Invid",
+  "class_name": {
+    "es": "Nave de Desembarco Espacial y Portatropas Biomecánico Invid",
+    "en": "Invid Heavy Troop Carrier & Biomechanical Dropship"
+  },
+  "category": "alien",
+  "faction": {
+    "es": "Horda Invid (Regis / Regiss)",
+    "en": "Invid Swarm (Regis / Regiss)"
+  },
+  "faction_logo": "assets/images/ui/logo_invid.png",
+  "series": {
+    "es": "La Nueva Generación // The Sentinels",
+    "en": "The New Generation // The Sentinels"
+  },
+  "commissioned": "Era de la Invasión Invid",
+  "commanding_officer": "Comandantes Bio-Cibernéticos de Colmena Invid",
+  "complement": "80 operadores biomecánicos Invid",
+  "air_group": "120 mechas Invid (Invid Scout e Invid Shock Troopers)",
+  "docked_vessels": "No aplicable",
+  "thumbnail": "assets/images/naves/invid_troop_carrier/invid_carrier_classic.jpg",
+  "dimensions": {
+    "length": "320 m",
+    "width": "145 m",
+    "height": "110 m",
+    "mass": "320,000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines": "Propulsión gravitatoria biológica silenciosa y toberas de plasma orgánico",
+    "fold_system": "Trans-salto espacial guiado por resonancia mental de la Reina",
+    "reactor": "Bionúcleo alimentado por nutrientes de Flor de la Vida"
+  },
+  "defenses": {
+    "armor": "Coraza bio-orgánica quitinosa endurecida con propiedades refractarias",
+    "shields": "Campo deflector bioplasmático perimetral"
+  },
+  "stats": {
+    "firepower": 84,
+    "armor": 86,
+    "capacity": 94,
+    "range": 88
+  },
+  "stats_detail": {
+    "velocity": "Mach 4.0 en caída de reentrada / 0.18c en espacio",
+    "sensors": "Órganos sensoriales bioeléctricos de alta sensibilidad para rastreo de protocultura",
+    "hangar_capacity": "Alvéolos biológicos de suspensión vertical para descarga masiva de tropas"
+  },
+  "weapons": [
+    {
+      "name": "2 Cañones Gemelos de Plasma Ácido Bioenergético",
+      "type": "Artillería de bio-plasma de alta corrosión y calor térmico",
+      "range": "60,000 km",
+      "purpose": "Apertura de fuego sobre zonas de desembarco y defensa contra cazas de intercepción"
+    },
+    {
+      "name": "Dispersores de Esporas de Interferencia Sensorial",
+      "type": "Emanaciones biológicas que ciegan los radares enemigos",
+      "range": "20,000 km",
+      "purpose": "Camuflaje táctico durante el descenso planetario"
+    }
+  ],
+  "internal_sections": [
+    {
+      "name": "Alvéolos de Suspensión de Shock Troopers",
+      "description": "Cámaras celulares donde los mechas descansaban en fluido nutritivo hasta el instante de la eyección."
+    },
+    {
+      "name": "Centro Neuronal de Conducción Biológica",
+      "description": "Puesto de mando biológico enlazado psíquicamente a la red mental de la colmena."
+    }
+  ],
+  "lore": "La nave de asalto planetario por excelencia empleada por la Reina Regis y el Regente Invid para trasladar regimientos de invasión entre mundos. Su estructura quitinosa y diseño que recuerda a un organismo abisal le otorgaban una asombrosa capacidad para absorber impactos cinéticos y descargas láser que destruirían a una nave convencional.",
+  "summary": {
+    "es": "Nave de asalto y transporte de tropas de más de 300 m, utilizada por los Invid para trasladar y desplegar más de un centenar de Shock Troopers en planetas bajo conquista.",
+    "en": "Over 300m organic assault dropship used by the Invid to ferry and rapidly deploy over a hundred Shock Troopers onto conquered worlds."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/invid_troop_carrier/invid_carrier_classic.jpg",
+      "caption": "Transporte Invid de Asalto en aproximación a un planeta ocupado",
+      "type": "profile"
+    },
+    {
+      "url": "assets/images/naves/invid_troop_carrier/invid_carrier_shadow.jpg",
+      "caption": "Variante modernizada en operaciones espaciales en The Shadow Chronicles",
+      "type": "mission"
+    },
+    {
+      "url": "assets/images/naves/invid_troop_carrier/invid_carrier_sentinels.jpg",
+      "caption": "Transportes de tropas Invid durante las campañas de los Centinelas",
+      "type": "fleet"
+    }
+  ]
+}

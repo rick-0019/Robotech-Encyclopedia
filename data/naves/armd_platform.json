@@ -1,0 +1,165 @@
+{
+  "id": "armd_platform",
+  "name": "Plataforma Espacial Clase ARMD",
+  "class_name": {
+    "es": "Plataforma Aeroespacial de Defensa Orbital y Portanaves Clase ARMD",
+    "en": "ARMD-Class Armored Space Defense Platform & Carrier"
+  },
+  "category": "carriers",
+  "faction": {
+    "es": "U.N. Spacy // Fuerzas de Defensa Terrestre (RDF)",
+    "en": "U.N. Spacy // Robotech Defense Force (RDF)"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "commissioned": "Año 2008 (Órbita Baja Terrestre - Complejo L-5)",
+  "commanding_officer": {
+    "es": "Comandantes de Flota Orbital U.N. Spacy (ARMD-01 al ARMD-08)",
+    "en": "U.N. Spacy Orbital Defense Fleet Commanders (ARMD-01 through ARMD-08)"
+  },
+  "complement": {
+    "es": "Tripulación Especializada Espacial: ~1.200 oficiales, técnicos y pilotos",
+    "en": "Spatial Crew & Flight Specialists: ~1,200 officers, technicians, and pilots"
+  },
+  "air_group": {
+    "es": "260+ Cazas Veritech VF-1 Valkyrie (incluidos modelos con Super Pack de armadura espacial FAST Pack), naves de enlace y lanzaderas de reconocimiento",
+    "en": "260+ VF-1 Valkyrie Veritech Fighters (including space FAST Pack variants), liaison shuttles, and scout craft"
+  },
+  "docked_vessels": {
+    "es": "Diseñadas originalmente para acoplarse como los brazos definitivos del SDF-1 (misión frustrada por el ataque Zentraedi en la botadura)",
+    "en": "Originally designed to dock as modular arms of the SDF-1 (aborted during initial Zentraedi surprise assault)"
+  },
+  "thumbnail": "assets/images/naves/armd_platform/armd_orbit.jpg",
+  "dimensions": {
+    "length": "430 m",
+    "width": "120 m",
+    "height": "70 m",
+    "mass": "175.000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines_es": "4 Propulsores de Fusión Termonuclear de Impulso Espacial Puro + Red de Empujadores de Reacción RCS",
+    "engines_en": "4 Pure Vacuum Thermonuclear Fusion Thrusters + High-Precision Reaction Control Thrusters (RCS)",
+    "fold_system_es": "Sin motor hiperespacial Fold (Defensa orbital circumterrestre)",
+    "fold_system_en": "No Fold Drive (Planetary orbital defense stationing)"
+  },
+  "defenses": {
+    "armor_es": "Casco exterior de blindaje multicapa de aleación espacial Robotech con dispersión de calor ablativa (52.000 C.D.M.)",
+    "armor_en": "Multilayer Robotech space alloy outer hull with ablative heat shielding (52,000 MDC)",
+    "shields_es": "Generadores de campos deflectores magnéticos antibalísticos",
+    "shields_en": "Anti-ballistic magnetic deflector field generators"
+  },
+  "stats": {
+    "firepower": 80,
+    "armor": 85,
+    "capacity": 92,
+    "range": 72
+  },
+  "stats_detail": {
+    "firepower": {
+      "value": 80,
+      "label_es": "Potencia de Fuego de Defensa Orbital",
+      "label_en": "Orbital Defense Firepower",
+      "desc_es": "Baterías pesadas de cañones de haz de partículas y salvas masivas de misiles antibuque."
+    },
+    "armor": {
+      "value": 85,
+      "label_es": "Blindaje Espacial Reforzado",
+      "label_en": "Heavy Space Armor",
+      "desc_es": "Estructura diseñada para soportar impactos de artillería Zentraedi y bombardeos cinéticos."
+    },
+    "capacity": {
+      "value": 92,
+      "label_es": "Capacidad de Cazas Veritech Espaciales",
+      "label_en": "Space Veritech Fighter Capacity",
+      "desc_es": "Grandes bahías de almacenamiento y catapultas electromagnéticas presurizadas de alta velocidad."
+    },
+    "range": {
+      "value": 72,
+      "label_es": "Autonomía de Patrulla Orbital",
+      "label_en": "Orbital Patrol Endurance",
+      "desc_es": "Optimizado para misiones prolongadas en órbita geoestacionaria y puntos de Lagrange."
+    }
+  },
+  "weapons": [
+    {
+      "name_es": "5 Cañones Pesados de Haz de Partículas de Doble Tubo",
+      "name_en": "5 Twin Heavy Particle Beam Cannons",
+      "damage": "1.800 C.D.M. por disparo",
+      "range": "180 km",
+      "desc_es": "Torretas dorsales y ventrales de alta energía para combate antibuque contra destructores alienígenas.",
+      "desc_en": "Dorsal and ventral high-energy turrets designed for anti-ship engagements against alien warships."
+    },
+    {
+      "name_es": "6 Baterías de Misiles Espaciales Antibuque de Largo Alcance",
+      "name_en": "6 Long-Range Anti-Ship Space Missile Launchers",
+      "damage": "2.400 C.D.M. por salva",
+      "range": "500 km",
+      "desc_es": "Misiles pesados con ojivas nucleares y de impacto concentrado para intercepción en espacio profundo.",
+      "desc_en": "Heavy space missiles with nuclear warheads for deep-space interception."
+    },
+    {
+      "name_es": "16 Cañones Automáticos de Defensa Antiaérea Láser de Tiro Rápido",
+      "name_en": "16 Rapid-Fire Point-Defense Laser Cannons",
+      "damage": "220 C.D.M. por disparo",
+      "range": "15 km",
+      "desc_es": "Red perimetral automatizada para neutralizar cápsulas Regult y misiles entrantes.",
+      "desc_en": "Automated perimeter network to neutralize incoming Regult pods and missiles."
+    }
+  ],
+  "internal_sections": [
+    {
+      "name_es": "Bahías de Catapultas Electromagnéticas Superiores e Inferiores",
+      "name_en": "Upper & Lower Electromagnetic Launch Bays",
+      "desc_es": "Rieles magnéticos capaces de lanzar simultáneamente escuadrones completos de cazas Veritech equipados con FAST Pack.",
+      "desc_en": "Magnetic rails capable of scrambling full squadrons of FAST Pack-equipped Veritech fighters simultaneously."
+    },
+    {
+      "name_es": "Puente de Mando Blindado y Centro C4I",
+      "name_en": "Armored Command Bridge & C4I Hub",
+      "desc_es": "Centro neurálgico de radar y telemetría que coordina la defensa orbital y alerta temprana de la Tierra.",
+      "desc_en": "Radar and telemetry hub coordinating orbital planetary defense and early warning sweeps."
+    },
+    {
+      "name_es": "Muelle de Acople Modular Universal",
+      "name_en": "Universal Modular Docking Hardpoints",
+      "desc_es": "Conectores de alta resistencia estructural diseñados para enlazarse a la fortaleza SDF-1 o naves nodriza de abastecimiento.",
+      "desc_en": "Heavy-duty structural latches designed to dock with the SDF-1 fortress or supply motherships."
+    }
+  ],
+  "lore": {
+    "overview_es": "Las plataformas de la Clase ARMD (Armored Space Defense Platforms) fueron construidas en órbita terrestre durante la reconstrucción del SDF-1 como el primer componente de combate espacial puro de la humanidad. El plan militar original contemplaba que dos de estas plataformas (ARMD-01 y ARMD-02) se acoplaran a los costados del SDF-1 como sus brazos y bahías principales de combate.",
+    "overview_en": "The ARMD-class platforms (Armored Space Defense Platforms) were constructed in Earth orbit during the rebuilding of the SDF-1 as humanity's premier dedicated space combat vessels. The original naval strategy called for two of these platforms (ARMD-01 and ARMD-02) to dock on either side of the SDF-1, serving as its primary aerospace arms and flight decks.",
+    "tactical_analysis_es": "Cuando la flota Zentraedi del Comandante Breetai atacó por sorpresa en 2009, el ARMD-01 y el ARMD-02 acudieron de inmediato para interceptar a las naves enemigas en órbita. Sin embargo, ante el poder abrumador de los acorazados Zentraedi, ambas plataformas sufrieron graves daños y no pudieron encontrarse con el SDF-1 antes de su salto hiperespacial accidental a Plutón (razón por la cual Gloval debió utilizar al Prometheus y al Daedalus en su lugar). Las plataformas ARMD restantes (ARMD-03 a ARMD-08) formaron la primera línea de defensa del perímetro terrestre hasta el bombardeo masivo de Dolza.",
+    "tactical_analysis_en": "When Commander Breetai's Zentraedi fleet launched their surprise attack in 2009, ARMD-01 and ARMD-02 immediately scrambled to engage the alien warships in orbit. Outgunned by massive Zentraedi battlecruisers, both platforms suffered heavy casualties and were unable to rendezvous with the SDF-1 prior to its accidental hyperspace fold to Pluto (forcing Gloval to salvage Prometheus and Daedalus instead). The surviving ARMD platforms (ARMD-03 through ARMD-08) formed Earth's outer defensive perimeter until Dolza's planetary bombardment."
+  },
+  "summary": {
+    "es": "Plataforma espacial de asalto y portanaves orbital de la RDF. Diseñadas originalmente para ser los brazos del SDF-1, formaron la principal barrera de defensa orbital de la Tierra durante la Primera Guerra Robotech.",
+    "en": "RDF orbital strike carrier and space defense platform. Originally engineered to serve as the SDF-1's arms, they formed Earth's front-line orbital defense shield during the First Robotech War."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/armd_platform/armd_orbit.jpg",
+      "title_es": "ARMD-01 en Órbita Baja Terrestre",
+      "title_en": "ARMD-01 in Low Earth Orbit",
+      "type_es": "Registro Visual",
+      "type_en": "Visual Record"
+    },
+    {
+      "url": "assets/images/naves/armd_platform/armd_profile.png",
+      "title_es": "Perfil Táctico y Catapultas de Cazas",
+      "title_en": "Tactical Profile & Fighter Catapults",
+      "type_es": "Pintura Oficial",
+      "type_en": "Official Art"
+    },
+    {
+      "url": "assets/images/naves/armd_platform/armd_combat.png",
+      "title_es": "ARMD-02 en Combate Orbital",
+      "title_en": "ARMD-02 in Orbital Combat",
+      "type_es": "Registro de Combate",
+      "type_en": "Combat Record"
+    }
+  ]
+}

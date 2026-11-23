@@ -1,0 +1,165 @@
+{
+  "id": "prometheus",
+  "name": "CVS-101 Prometheus",
+  "class_name": {
+    "es": "Superportaaviones Semi-Sumergible de Asalto Aeroespacial Clase Prometheus",
+    "en": "Prometheus-Class Submersible Aerospace Strike Carrier"
+  },
+  "category": "carriers",
+  "faction": {
+    "es": "U.N. Spacy // Fuerzas de Defensa Terrestre (RDF)",
+    "en": "U.N. Spacy // Robotech Defense Force (RDF)"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "commissioned": "Año 2007 (Astilleros Navales de la Isla Macross)",
+  "commanding_officer": {
+    "es": "Capitán de Navío Bruno J. Global // Comandante Roy Fokker (Grupo Aéreo Skull)",
+    "en": "Captain Bruno J. Global // Commander Roy Fokker (Skull Air Group)"
+  },
+  "complement": {
+    "es": "Tripulación Naval y Operaciones de Vuelo: ~1.850 oficiales y especialistas",
+    "en": "Naval Crew & Flight Operations: ~1,850 officers and specialists"
+  },
+  "air_group": {
+    "es": "150+ Cazas Veritech VF-1 Valkyrie (Escuadrones Skull, Vermilion, Blue Angels), cazas convencionales F-203 Dragon II y aviones radar Cat's Eye",
+    "en": "150+ VF-1 Valkyrie Veritech Fighters (Skull, Vermilion Squadrons), F-203 Dragon II fighters, and Cat's Eye reconnaissance aircraft"
+  },
+  "docked_vessels": {
+    "es": "Integrado como Brazo Babor (Izquierdo) del SDF-1 Macross tras el salto hiperespacial a Plutón",
+    "en": "Docked as Port (Left) Arm of SDF-1 Macross following emergency fold to Pluto"
+  },
+  "thumbnail": "assets/images/naves/prometheus/prometheus_anime.jpg",
+  "dimensions": {
+    "length": "512 m",
+    "width": "180 m",
+    "height": "86 m",
+    "mass": "145.000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines_es": "Turbinas Nucleares Marinas Híbridas adaptadas con toberas de empuje vectorial gravitacional para maniobras espaciales",
+    "engines_en": "Hybrid Marine Nuclear Turbines retrofitted with gravitational vector thrusters for spatial operation",
+    "fold_system_es": "Sin propulsor Fold propio (Dependiente del SDF-1)",
+    "fold_system_en": "No native Fold Drive (Dependent on SDF-1)"
+  },
+  "defenses": {
+    "armor_es": "Blindaje naval compuesto de aleación de titanio-acero presurizado con sellado al vacío espacial (45.000 C.D.M.)",
+    "armor_en": "Pressurized titanium-steel composite naval armor with vacuum seals (45,000 MDC)",
+    "shields_es": "Cobertura bajo la Barrera Puntual proyectada por el SDF-1 Macross",
+    "shields_en": "Covered under SDF-1 Pin-Point Barrier coverage"
+  },
+  "stats": {
+    "firepower": 75,
+    "armor": 82,
+    "capacity": 94,
+    "range": 80
+  },
+  "stats_detail": {
+    "firepower": {
+      "value": 75,
+      "label_es": "Potencia de Fuego y Artillería",
+      "label_en": "Firepower & Battery Output",
+      "desc_es": "Baterías antiaéreas CIWS, misiles defensivos de intercepción y cañones de salva naval."
+    },
+    "armor": {
+      "value": 82,
+      "label_es": "Resistencia de Casco Presurizado",
+      "label_en": "Pressurized Hull Integrity",
+      "desc_es": "Casco naval altamente reforzado con compartimentación estanca y sellado hermético contra descompresión."
+    },
+    "capacity": {
+      "value": 94,
+      "label_es": "Capacidad de Cazas y Hangares",
+      "label_en": "Hangar & Fighter Staging Capacity",
+      "desc_es": "Múltiples cubiertas de hangares automatizados capaces de abastecer y desplegar oleadas de cazas Veritech."
+    },
+    "range": {
+      "value": 80,
+      "label_es": "Autonomía y Resistencia Logística",
+      "label_en": "Operational Endurance & Range",
+      "desc_es": "Almacenes masivos de combustible de reacción, piezas de repuesto de Veritech y munición."
+    }
+  },
+  "weapons": [
+    {
+      "name_es": "8 Sistemas de Misiles de Defensa de Punto Sea Sparrow / Arrow",
+      "name_en": "8 Sea Sparrow / Arrow Point-Defense Missile Launchers",
+      "damage": "450 C.D.M. por andanada",
+      "range": "65 km",
+      "desc_es": "Silos octuples retráctiles con guía infrarroja y radar para neutralizar misiles y cápsulas de combate enemigas.",
+      "desc_en": "Retractable octuple silos with radar guidance for intercepting enemy missiles and combat pods."
+    },
+    {
+      "name_es": "4 Montajes de Cañones Navales Dobles de 127 mm de Doble Propósito",
+      "name_en": "4 Twin 127mm Dual-Purpose Naval Gun Mounts",
+      "damage": "600 C.D.M. por disparo",
+      "range": "40 km",
+      "desc_es": "Cañones de tiro rápido automáticos modificados para fuego cinético en atmósfera y órbita baja.",
+      "desc_en": "Automated rapid-fire cannons modified for kinetic fire in atmosphere and low orbit."
+    },
+    {
+      "name_es": "12 Sistemas de Artillería Antiaérea Rotativa Phalanx CIWS de 20 mm",
+      "name_en": "12 Phalanx 20mm Rotary CIWS Gatling Turrets",
+      "damage": "250 C.D.M. por ráfaga",
+      "range": "8 km",
+      "desc_es": "Cañones Vulcan rotativos de altísima cadencia para defensa terminal de corta distancia contra cápsulas Regult.",
+      "desc_en": "High rate-of-fire rotary Vulcan cannons for terminal close-in defense against Regult pods."
+    }
+  ],
+  "internal_sections": [
+    {
+      "name_es": "Cubierta de Vuelo Principal y Catapultas Espaciales",
+      "name_en": "Main Flight Deck & Spatial Catapults",
+      "desc_es": "Pistas de apontaje angular y catapultas magnéticas presurizadas desde donde despegan los VF-1 del Escuadrón Skull al vacío exterior.",
+      "desc_en": "Angled landing deck and pressurized magnetic catapults launching Skull Squadron VF-1s into space."
+    },
+    {
+      "name_es": "Hangares Subterráneos de Mantenimiento Veritech",
+      "name_en": "Sub-Deck Veritech Maintenance Bays",
+      "desc_es": "Talleres mecánicos modulares de dos niveles donde los equipos de tierra rearman y reparan los Valkyries entre salidas de combate.",
+      "desc_en": "Two-tier modular maintenance workshops where deck crews rearm and repair Valkyries between sorties."
+    },
+    {
+      "name_es": "Torre Isla de Control de Tráfico Aéreo (PRI-FLY)",
+      "name_en": "Island Flight Control Tower (PRI-FLY)",
+      "desc_es": "Puesto de control aéreo de estribor que coordina las aproximaciones, aterrizajes y patrullas de combate aéreo en tiempo real.",
+      "desc_en": "Starboard flight control tower coordinating approach trajectories, landings, and combat air patrols."
+    }
+  ],
+  "lore": {
+    "overview_es": "El CVS-101 Prometheus fue diseñado originalmente por la Marina de la Tierra Unificada como la cúspide de los portaaviones semi-sumergibles pesados, concebido para operar bajo el agua y emerger para proyectar poder aeronaval con la nueva generación de cazas Veritech. Sin embargo, su destino cambió para siempre el día del ataque Zentraedi a la Isla Macross: el SDF-1 realizó un salto hiperespacial de emergencia accidental arrastrando consigo al Prometheus y a la nave Daedalus que se encontraban anclados en la bahía de la isla hacia la órbita de Plutón.",
+    "overview_en": "The CVS-101 Prometheus was conceived by the Unified Earth Navy as the pinnacle of submersible heavy aircraft carriers, engineered to dive beneath oceans and surface to project strike power with the new generation of Veritech fighters. However, during the surprise Zentraedi assault on Macross Island, the SDF-1 executed an accidental emergency space fold that swept the Prometheus and the Daedalus from the island's harbor into deep space near Pluto.",
+    "tactical_analysis_es": "Aislados a millones de kilómetros de la Tierra, los ingenieros navales del Dr. Emil Lang y el Capitán Gloval acoplaron de forma permanente el Prometheus al flanco de babor del SDF-1, presurizando sus hangares y convirtiéndolo en la cubierta de lanzamiento aeroespacial primaria de la fortaleza. Durante toda la travesía de regreso a través del Sistema Solar, el Prometheus resistió incontables andanadas zentraedi, siendo el hogar de combate de Roy Fokker, Rick Hunter y Max Sterling hasta la batalla final contra la flota de Boddole Zer.",
+    "tactical_analysis_en": "Stranded millions of kilometers from Earth, naval engineers under Dr. Emil Lang and Captain Gloval permanently mated the Prometheus to the SDF-1's port flank, vacuum-sealing its hangars and transforming it into the fortress's primary aerospace flight deck. Throughout the harrowing journey back across the Solar System, the Prometheus weathered relentless Zentraedi assaults, serving as the combat home of Roy Fokker, Rick Hunter, and Max Sterling until the final battle against Boddole Zer's armada."
+  },
+  "summary": {
+    "es": "Superportaaviones de asalto de la RDF que, tras ser arrastrado al espacio por el salto accidental del SDF-1, fue adaptado como su brazo babor y principal cubierta de vuelo para los cazas Veritech durante toda la Primera Guerra Robotech.",
+    "en": "RDF heavy strike carrier that, after being swept into deep space by the SDF-1's accidental fold, was mated as its port arm and primary flight deck for Veritech fighter wings throughout the First Robotech War."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/prometheus/prometheus_anime.jpg",
+      "title_es": "CVS-101 Prometheus - Vista Operativa en Combate",
+      "title_en": "CVS-101 Prometheus - Operational Combat View",
+      "type_es": "Captura de Archivo",
+      "type_en": "Archive Still"
+    },
+    {
+      "url": "assets/images/naves/prometheus/prometheus_schematic.gif",
+      "title_es": "Prometheus - Esquema Técnico y Perfil Longitudinal",
+      "title_en": "Prometheus - Technical Schematic & Profile",
+      "type_es": "Esquema Técnico",
+      "type_en": "Technical Schematic"
+    },
+    {
+      "url": "assets/images/naves/prometheus/prometheus_profile.jpg",
+      "title_es": "Perfil de Cubierta y Torre de Mando Naval",
+      "title_en": "Flight Deck Profile & Naval Island Tower",
+      "type_es": "Registro Visual",
+      "type_en": "Visual Record"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "horizon_t",
+  "name": "Nave de Desembarco Clase Horizon-T",
+  "class_name": {
+    "es": "Transporte Táctico de Asalto y Nave de Desembarco Orbital Clase Horizon-T",
+    "en": "Horizon-T-Class Tactical Assault Dropship"
+  },
+  "category": "carriers",
+  "faction": {
+    "es": "Fuerza Expedicionaria Robotech // División Marte (Mars Base)",
+    "en": "Robotech Expeditionary Force // Mars Base Division"
+  },
+  "faction_logo": "assets/images/ui/Mars_Base.png",
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "commissioned": "2036",
+  "commanding_officer": "Tenientes Comandantes y Oficiales de Asalto Terrestre (Escuadrón de Scott Bernard)",
+  "complement": "24 tripulantes y mecánicos de vuelo + hasta 80 soldados acorazados",
+  "air_group": "Capacidad para 4 cazas transformables Alpha Fighters VFA-6 o contenedores de suministros y motos Cyclone",
+  "docked_vessels": "No aplicable (se acopla a cruceros Garfish e Ikazuchi)",
+  "thumbnail": "assets/images/naves/horizon_t/horizon_profile.jpg",
+  "dimensions": {
+    "length": "78 m",
+    "width": "42 m",
+    "height": "28 m",
+    "mass": "14,000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines": "4x Propulsores termonucleares VTOL de despegue y aterrizaje vertical",
+    "fold_system": "No equipado (dependiente de naves nodriza)",
+    "reactor": "Reactor compacto de fusión Protocultura de alta resistencia"
+  },
+  "defenses": {
+    "armor": "Escudo térmico cerámico ablativo de reentrada atmosférica y mamparos blindados",
+    "shields": "Dispensadores de contramedidas térmicas (flares) y dispersión de chaff electromagnético"
+  },
+  "stats": {
+    "firepower": 68,
+    "armor": 76,
+    "capacity": 86,
+    "range": 82
+  },
+  "stats_detail": {
+    "velocity": "Mach 4.2 en reentrada balística / Mach 1.5 en vuelo atmosférico bajo",
+    "sensors": "Radar de seguimiento del terreno, altímetro láser y escáner de aproximación a tierra",
+    "hangar_capacity": "Bahía de carga ventral modular con compuertas de descarga rápida en rampa"
+  },
+  "weapons": [
+    {
+      "name": "2 Cañones Láser de Autodefensa de Proa",
+      "type": "Láseres dobles de tiro rápido",
+      "range": "25,000 km",
+      "purpose": "Limpieza inmediata del corredor de aterrizaje y defensa contra cazas ligeros"
+    },
+    {
+      "name": "4 Lanzadores de Micromisiles Antiaéreos",
+      "type": "Cápsulas de misiles guiados por calor",
+      "range": "15,000 km",
+      "purpose": "Intercepción de mechas Invid durante el descenso"
+    }
+  ],
+  "internal_sections": [
+    {
+      "name": "Bahía Modular de Carga y Despliegue de Mechas",
+      "description": "Compartimiento versátil donde se estibaban los Alpha Fighters o los contenedores con motocicletas transformables Cyclone."
+    },
+    {
+      "name": "Cabina Blindada de Vuelo y Navegación de Asalto",
+      "description": "Puesto para piloto, copiloto y oficial de desembarco con aviónica asistida para aterrizajes en combate."
+    }
+  ],
+  "lore": "El caballo de batalla indiscutible para las fuerzas de superficie de la REF. Diseñadas para ser transportadas por los cruceros Garfish o dentro de los hangares de los Ikazuchi, estas naves de desembarco soportaban las peores condiciones de fuego antiaéreo en su caída libre hacia la Tierra ocupada. El inicio de la misión de Scott Bernard tras la aniquilación de la 21ª División Marte consagró al Horizon-T en la memoria de los combatientes.",
+  "summary": {
+    "es": "Nave táctica de desembarco y transporte de asalto orbital, capaz de desplegar cazas Alpha, motos Cyclone y tropas en el corazón de territorios dominados por los Invid.",
+    "en": "Tactical dropship and orbital assault transporter capable of deploying Alpha Fighters, Cyclone armor units, and assault troops directly into Invid combat zones."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/horizon_t/horizon_profile.jpg",
+      "caption": "Silueta y esquema táctico de la nave de desembarco Clase Horizon-T",
+      "type": "profile"
+    },
+    {
+      "url": "assets/images/naves/horizon_t/horizon_drop.jpg",
+      "caption": "Lanzadera Horizon-T en plena maniobra de reentrada atmosférica de combate",
+      "type": "mission"
+    },
+    {
+      "url": "assets/images/naves/horizon_t/horizon_type.jpg",
+      "caption": "Detalle de la cabina y propulsores VTOL de sustentación vertical",
+      "type": "schematic"
+    }
+  ]
+}

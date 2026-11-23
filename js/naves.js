@@ -303,6 +303,7 @@ function renderShips() {
   const dict = SHIP_I18N[lang] || SHIP_I18N.es;
   const cat = window.shipState.category;
   const q = window.shipState.searchQuery;
+  const isLocal = ['localhost', '127.0.0.1', '0.0.0.0', ''].includes(window.location.hostname) || window.location.protocol === 'file:';
 
   const filtered = window.shipState.manifest.ships.filter(s => {
     if (cat !== 'all' && s.category !== cat) return false;
@@ -399,15 +400,21 @@ function renderShips() {
             </div>
           </div>
 
-          <div class="card-actions">
-            <button class="btn-dossier" onclick="openShipDossier('${s.id}')">
+          <div class="card-actions" style="display: flex; gap: 6px;">
+            <button class="btn-dossier" onclick="openShipDossier('${s.id}')" style="flex: 1;">
               <span>⌖</span> ${dict.btn_dossier}
             </button>
             <button class="btn-compare-toggle ${window.shipComparator && window.shipComparator.isSelected(s.id) ? 'active' : ''}" 
                     data-id="${s.id}" 
-                    onclick="window.shipComparator && window.shipComparator.toggleShip('${s.id}')">
+                    onclick="window.shipComparator && window.shipComparator.toggleShip('${s.id}')"
+                    style="flex: 1;">
               ${window.shipComparator && window.shipComparator.isSelected(s.id) ? `✓ ${dict.btn_compare_ready}` : `⚔ ${dict.btn_compare}`}
             </button>
+            ${isLocal ? `
+              <a href="admin.html?module=naves&id=${encodeURIComponent(s.id)}" target="_blank" class="btn-card-edit" title="${lang === 'es' ? 'Editar en CRUD local' : 'Edit in local CRUD'}" style="display: inline-flex; align-items: center; justify-content: center; padding: 0 10px; background: rgba(0, 240, 255, 0.1); border: 1px solid var(--un-cyan); color: var(--un-cyan); text-decoration: none; border-radius: 2px; font-size: 0.85rem; transition: var(--transition-fast);" onmouseover="this.style.background='var(--un-cyan)'; this.style.color='#000';" onmouseout="this.style.background='rgba(0, 240, 255, 0.1)'; this.style.color='var(--un-cyan)';">
+                ⚙
+              </a>
+            ` : ''}
           </div>
         </div>
       </div>
@@ -510,6 +517,18 @@ function populateShipModal(s) {
       logoEl.style.display = 'block';
     } else {
       logoEl.style.display = 'none';
+    }
+  }
+
+  // Acceso directo al CRUD local si estamos en localhost
+  const isLocal = ['localhost', '127.0.0.1', '0.0.0.0', ''].includes(window.location.hostname) || window.location.protocol === 'file:';
+  const editBtn = document.getElementById('ship-dossier-edit-btn');
+  if (editBtn) {
+    if (isLocal) {
+      editBtn.href = `admin.html?module=naves&id=${encodeURIComponent(s.id)}`;
+      editBtn.style.display = 'inline-flex';
+    } else {
+      editBtn.style.display = 'none';
     }
   }
 

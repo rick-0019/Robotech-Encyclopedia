@@ -1,0 +1,91 @@
+{
+  "id": "triumvirate_flagship",
+  "name": "Crucero Pesado del Triunvirato de Tirol",
+  "class_name": {
+    "es": "Crucero Pesado de Mando Táctico y Conducción Psíquica del Triunvirato",
+    "en": "Tirolian Triumvirate Heavy Command Battleship"
+  },
+  "category": "alien",
+  "faction": {
+    "es": "Maestros de la Robotech (Tiroleses)",
+    "en": "Robotech Masters (Tirolians)"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Masters Saga (Second Robotech War)"
+  },
+  "commissioned": "Era Imperial Tiroliana",
+  "commanding_officer": "Triunviratos Militares Superiores de los Maestros",
+  "complement": "1,800 clones de élite y operadores biocibernéticos",
+  "air_group": "240 Bioroids pesados y escoltas voladores",
+  "docked_vessels": "8 transportes de asalto rápido",
+  "thumbnail": "assets/images/naves/triumvirate_flagship/flagship_profile.png",
+  "dimensions": {
+    "length": "1,850 m",
+    "width": "720 m",
+    "height": "480 m",
+    "mass": "8,500,000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines": "Motores gravitatorios de flujo de energía Protocultura",
+    "fold_system": "Sistema de salto hiperespacial tándem acoplado a nave nodriza",
+    "reactor": "Cámaras de fisión catalítica Protocultura"
+  },
+  "defenses": {
+    "armor": "Coraza biocerámica reflectante inmune al fuego láser estándar",
+    "shields": "Generador de campo de absorción de partículas"
+  },
+  "stats": {
+    "firepower": 94,
+    "armor": 95,
+    "capacity": 90,
+    "range": 92
+  },
+  "stats_detail": {
+    "velocity": "Mach 4.5 en vuelo exoatmosférico / 0.20c en vacío",
+    "sensors": "Sistemas telepáticos de inducción neuronal clon y telemetría biocibernética",
+    "hangar_capacity": "Bahías de compresión molecular para almacenamiento masivo de Bioroids"
+  },
+  "weapons": [
+    {
+      "name": "Cañones Tri-Fásicos de Haz Pesado",
+      "type": "Artillería de pulso triple sincronizada",
+      "range": "220,000 km",
+      "purpose": "Destrucción de cruceros terrestres a larga distancia"
+    },
+    {
+      "name": "Emisores de Disrupción Psíquica y Biocontrol",
+      "type": "Generadores de pulso bio-resonante",
+      "range": "100,000 km",
+      "purpose": "Interferencia mental y parálisis sobre sistemas biológicos enemigos"
+    }
+  ],
+  "internal_sections": [
+    {
+      "name": "Cámara de Interrogatorio y Condicionamiento Mental",
+      "description": "Instalación donde Zor Prime fue condicionado psíquicamente como espía involuntario."
+    },
+    {
+      "name": "Bahía de Ensamblaje Bioroid",
+      "description": "Puestos de sincronización neuronal donde los pilotos clones se acoplaban a sus mechas."
+    }
+  ],
+  "lore": "Embarcación de combate pesado que operaba como el brazo ejecutor táctico de las naves nodrizas. Con casi 2 kilómetros de envergadura, el Crucero del Triunvirato actuaba como nodo de enlace psíquico, amplificando la señal de biocontrol que mantenía a los pilotos Bioroids en un estado de obediencia absoluta y coordinación militar perfecta.",
+  "summary": {
+    "es": "Crucero pesado de mando táctico de casi 2 km de largo, utilizado por los Triunviratos de los Maestros para coordinar el biocontrol de los Bioroids y pulverizar a los cruceros terrestres.",
+    "en": "Tirolian heavy command battleship nearly 2 km long, utilized by the Masters' Triumvirates to coordinate Bioroid mind-control and obliterate Earth cruisers."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/triumvirate_flagship/flagship_profile.png",
+      "caption": "Crucero Pesado del Triunvirato en perfil operativo",
+      "type": "profile"
+    },
+    {
+      "url": "assets/images/naves/triumvirate_flagship/flagship_flight.png",
+      "caption": "Vuelo en formación sobre la atmósfera terrestre",
+      "type": "flight"
+    }
+  ]
+}

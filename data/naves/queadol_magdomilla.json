@@ -1,0 +1,165 @@
+{
+  "id": "queadol_magdomilla",
+  "name": "Crucero de Asalto Clase Queadol-Magdomilla",
+  "class_name": {
+    "es": "Crucero Pesado de Batalla y Asalto Modular Clase Queadol-Magdomilla (Nave de Khyron)",
+    "en": "Queadol-Magdomilla-Class Heavy Assault Strike Cruiser (Khyron's Flagship)"
+  },
+  "category": "alien",
+  "faction": {
+    "es": "7º Batallón Experimental Zentraedi // Fuerzas Rebeldes de Khyron",
+    "en": "7th Experimental Zentraedi Division // Khyron's Rebel Legion"
+  },
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "commissioned": "Era de Guerra Robotech Zentraedi (Frente Colonial)",
+  "commanding_officer": {
+    "es": "Comandante Khyron (\"El Traidor\" / Quamzin Kravshera) // Comandante Azonia",
+    "en": "Commander Khyron (\"The Backstabber\" / Quamzin Kravshera) // Commander Azonia"
+  },
+  "complement": {
+    "es": "Tripulación Zentraedi Agresiva: ~6.200 soldados veteranos y fanáticos del 7º Batallón",
+    "en": "Aggressive Zentraedi Crew: ~6,200 veteran warriors of the 7th Division"
+  },
+  "air_group": {
+    "es": "800+ Mechas de combate (Cápsulas Regult de asalto, mechas de fuego pesado Glaug, cazas Gnerl y cápsulas de asalto orbital)",
+    "en": "800+ Combat mecha (Regult assault pods, Glaug heavy fire mecha, Gnerl fighters, and drop pods)"
+  },
+  "docked_vessels": {
+    "es": "Módulo Frontal de Proa Desmontable: El tercio anterior de la nave puede separarse del casco principal y operar como una cañonera atmosférica autónoma",
+    "en": "Detachable Bow Assault Module: Forward third of the hull can disengage and operate as an autonomous atmospheric gunship"
+  },
+  "thumbnail": "assets/images/naves/queadol_magdomilla/queadol_fortress.jpg",
+  "dimensions": {
+    "length": "3.000 m (3,0 km)",
+    "width": "450 m",
+    "height": "380 m",
+    "mass": "130.000.000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines_es": "Turbinas Gravitacionales de Asalto Rápido de Alta Potencia y Aceleradores de Plasma Dobles",
+    "engines_en": "High-Output Rapid Strike Gravitational Thrusters & Twin Plasma Afterburners",
+    "fold_system_es": "Generador Hiperespacial Fold de Inserción Táctica Zentraedi",
+    "fold_system_en": "Zentraedi Tactical Insertion Space Fold Drive"
+  },
+  "defenses": {
+    "armor_es": "Casco exterior blindado con aleación biometálica carmesí-verdosa de alta densidad (140.000 C.D.M.)",
+    "armor_en": "Heavy biometallic hull with high-density crimson-green armor (140,000 MDC)",
+    "shields_es": "Deflectores cinéticos y pantallas de dispersión de haz frontal",
+    "shields_en": "Kinetic deflectors and frontal beam-dispersion screens"
+  },
+  "stats": {
+    "firepower": 94,
+    "armor": 90,
+    "capacity": 88,
+    "range": 90
+  },
+  "stats_detail": {
+    "firepower": {
+      "value": 94,
+      "label_es": "Potencia de Fuego de Choque Frontal",
+      "label_en": "Frontal Shock Firepower",
+      "desc_es": "Cañones gemelos de haz convergente ubicados en las pinzas bifurcadas de la proa."
+    },
+    "armor": {
+      "value": 90,
+      "label_es": "Resistencia de Casco Táctico",
+      "label_en": "Tactical Hull Resilience",
+      "desc_es": "Capaz de soportar fuego concentrado de destructores terrestres y sobrecargas de reactor."
+    },
+    "capacity": {
+      "value": 88,
+      "label_es": "Capacidad de Mechas de Desembarco",
+      "label_en": "Assault Mecha Capacity",
+      "desc_es": "Bahías de eyección frontal que lanzan escuadrones de cápsulas Regult en pleno vuelo rasante."
+    },
+    "range": {
+      "value": 90,
+      "label_es": "Velocidad y Agresividad de Asalto",
+      "label_en": "Assault Speed & Acceleration",
+      "desc_es": "Mayor aceleración y agilidad angular que los acorazados pesados de la flota de Breetai."
+    }
+  },
+  "weapons": [
+    {
+      "name_es": "Cañón Pesado de Haz Convergente Gemelo en Pinzas de Proa",
+      "name_en": "Twin Convergent Heavy Beam Cannons (Prow Mandibles)",
+      "damage": "28.000 C.D.M. por disparo frontal",
+      "range": "180.000 km",
+      "desc_es": "Las dos proas gemelas proyectan arcos de energía que colisionan en un rayo unificado devastador.",
+      "desc_en": "Twin forward mandibles channel energy arcs that fuse into a single devastating particle lance."
+    },
+    {
+      "name_es": "12 Baterías de Artillería de Plasma Zentraedi Pesadas",
+      "name_en": "12 Heavy Zentraedi Plasma Artillery Batteries",
+      "damage": "2.800 C.D.M. por andanada",
+      "range": "60.000 km",
+      "desc_es": "Torretas esféricas de fuego cruzado para aniquilar defensas de tierra y naves en combate cercano.",
+      "desc_en": "Spherical turrets delivering blistering crossfire against ground defenses and escort craft."
+    },
+    {
+      "name_es": "20 Silos de Torpedos Guiados de Penetración Suborbital",
+      "name_en": "20 Sub-Orbital Penetration Guided Torpedo Silos",
+      "damage": "1.800 C.D.M. por salva",
+      "range": "120.000 km",
+      "desc_es": "Misiles teledirigidos para bombardeos de precisión contra bases militares terrestres.",
+      "desc_en": "Guided torpedoes designed for precision strikes against fortified planetary targets."
+    }
+  ],
+  "internal_sections": [
+    {
+      "name_es": "Puente de Mando Caótico de Khyron",
+      "name_en": "Khyron's Chaotic Command Bridge",
+      "desc_es": "Puesto de pilotaje donde Khyron dirigía sus emboscadas despiadadas, despreciando las órdenes de retirada de Breetai.",
+      "desc_en": "Command deck where Khyron coordinated merciless raids, routinely defying Breetai's orders to disengage."
+    },
+    {
+      "name_es": "Mecanismo de Desacople Modular de la Proa",
+      "name_en": "Bow Modular Separation Mechanism",
+      "desc_es": "Abrazaderas pirotécnicas e impulsores independientes que permiten al módulo proel descender a planetas por separado.",
+      "desc_en": "Pyrotechnic explosive latches and thrusters allowing the bow module to conduct independent atmospheric descents."
+    },
+    {
+      "name_es": "Cámara del Reactor de Fusión de Sobrecarga",
+      "name_en": "Overload Fusion Core Chamber",
+      "desc_es": "El reactor principal que Khyron forzó al límite absoluto durante su embestida kamikaze contra las fortalezas en New Macross City.",
+      "desc_en": "The main reactor redlined by Khyron during his fatal kamikaze ramming run into New Macross City."
+    }
+  ],
+  "lore": {
+    "overview_es": "El crucero de batalla Clase Queadol-Magdomilla es el terrorífico buque de mando del comandante renegado Khyron (\"El Traidor\"). Con una longitud de tres kilómetros y una proa en forma de horquilla o pinza, se distinguió por su diseño modular: su tercio frontal podía desacoplarse del resto de la nave para operar como una cañonera de asalto atmosférico en la superficie de los planetas.",
+    "overview_en": "The Queadol-Magdomilla-class battlecruiser is the feared flagship of rogue Zentraedi warlord Khyron (\"The Backstabber\"). Measuring three kilometers in length with a distinctive tuning-fork prow, its standout feature was its modularity: the forward third could detach from the aft hull to function as an independent atmospheric strike gunship.",
+    "tactical_analysis_es": "Khyron utilizó la nave para sembrar el caos: emboscó al SDF-1 en la base de Marte, atacó el puerto espacial de la Tierra y, tras la derrota de Dolza, ocultó el crucero en las profundidades de la selva brasileña mientras preparaba su insurrección. En enero de 2014, junto a Azonia, reactivó el crucero con una matriz de protocultura robada y lanzó un asalto frontal definitivo contra New Macross City. Tras recibir daño crítico del fuego concentrado del SDF-1, Khyron apagó los controles de seguridad y estrelló deliberadamente su nave contra el SDF-1 y el nuevo SDF-2, destruyendo las tres naves en una histórica explosión apocalíptica.",
+    "tactical_analysis_en": "Khyron used this warship to unleash terror throughout the war: ambushing the SDF-1 at Mars Base Sara, bombarding Earth spaceports, and later concealing the battered hull deep in the jungles of Brazil following Dolza's fall. In January 2014, joined by Azonia, he reactivated the vessel with stolen protoculture and launched a suicidal assault on New Macross City. Mortally damaged by the SDF-1's point-blank barrage, Khyron overridden engine limiters and rammed his flaming battlecruiser directly into the SDF-1 and the newly erected SDF-2, annihilating all three vessels in a legendary cataclysm."
+  },
+  "summary": {
+    "es": "Crucero de asalto pesado de 3 km con proa desmontable comandado por Khyron. Célebre por sus despiadadas emboscadas y por la embestida suicida final que destruyó tanto al SDF-1 como al SDF-2 en New Macross City.",
+    "en": "Khyron's 3km heavy assault cruiser featuring a detachable bow strike gunship. Renowned for ruthless ambushes and the suicidal ramming run that destroyed both the SDF-1 and SDF-2 in New Macross City."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/queadol_magdomilla/queadol_fortress.jpg",
+      "title_es": "Crucero Queadol-Magdomilla - Perfil de Combate Táctico",
+      "title_en": "Queadol-Magdomilla Cruiser - Tactical Combat Profile",
+      "type_es": "Registro Visual",
+      "type_en": "Visual Record"
+    },
+    {
+      "url": "assets/images/naves/queadol_magdomilla/queadol_mars.png",
+      "title_es": "Nave de Khyron en la Emboscada de Base Marte",
+      "title_en": "Khyron's Ship in the Mars Base Ambush",
+      "type_es": "Captura de Archivo",
+      "type_en": "Archive Still"
+    },
+    {
+      "url": "assets/images/naves/queadol_magdomilla/queadol_africa.jpg",
+      "title_es": "Crucero de Khyron Oculto en la Selva",
+      "title_en": "Khyron's Cruiser Concealed in the Jungle",
+      "type_es": "Registro de Campo",
+      "type_en": "Field Record"
+    }
+  ]
+}

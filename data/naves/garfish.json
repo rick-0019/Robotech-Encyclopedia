@@ -1,0 +1,102 @@
+{
+  "id": "garfish",
+  "name": "Crucero Ligero de Asalto Clase Garfish",
+  "class_name": {
+    "es": "Crucero Ligero de Ataque Rápido y Escolta de Desembarco Clase Garfish",
+    "en": "Garfish-Class Fast Attack & Escort Light Cruiser"
+  },
+  "category": "cruisers",
+  "faction": {
+    "es": "Fuerza Expedicionaria Robotech // Flota de Asalto",
+    "en": "Robotech Expeditionary Force // Strike Fleet"
+  },
+  "faction_logo": "assets/images/ui/Mars_Base.png",
+  "series": {
+    "es": "La Nueva Generación // The Shadow Chronicles",
+    "en": "The New Generation // The Shadow Chronicles"
+  },
+  "commissioned": "2035",
+  "commanding_officer": "Capitanes de Escuadrón de la Flota REF",
+  "complement": "180 oficiales y tripulantes + 40 efectivos de desembarco",
+  "air_group": "12 cazas Alpha Fighters VFA-6 + 1 lanzadera Horizon ventral acoplada",
+  "docked_vessels": "Punto de anclaje ventral para 1 nave de descenso táctico Horizon",
+  "thumbnail": "assets/images/naves/garfish/garfish_profile.jpg",
+  "dimensions": {
+    "length": "245 m",
+    "width": "68 m",
+    "height": "52 m",
+    "mass": "160,000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines": "2x Toberas termonucleares de empuje vectorial de plasma",
+    "fold_system": "Sistema de salto hiperespacial tándem / autónomo de corto alcance",
+    "reactor": "Reactor compacto de fusión catalizado por Protocultura"
+  },
+  "defenses": {
+    "armor": "Casco hidrodinámico reforzado con aleación de titanio-boro",
+    "shields": "Generador de campo deflector térmico de reentrada"
+  },
+  "stats": {
+    "firepower": 82,
+    "armor": 78,
+    "capacity": 72,
+    "range": 88
+  },
+  "stats_detail": {
+    "velocity": "Mach 3.8 en atmósfera / 0.22c en crucero espacial",
+    "sensors": "Bancos de escáneres multiespectrales y detección de emanaciones de protocultura",
+    "hangar_capacity": "Hangar axial interno para cazas Alpha y anclaje ventral para transportes"
+  },
+  "weapons": [
+    {
+      "name": "Cañón de Haz Proel Superpesado de Tubo Completo",
+      "type": "Artillería de aceleración de haz de partículas axial que recorre el casco",
+      "range": "140,000 km",
+      "purpose": "Disparo de apertura devastador para perforar buques enemigos y colmenas"
+    },
+    {
+      "name": "6 Torretas Láser de Defensa Puntual Antimisil",
+      "type": "Baterías automatizadas de alta cadencia",
+      "range": "30,000 km",
+      "purpose": "Protección cercana contra cazas enemigos y proyectiles cinéticos"
+    },
+    {
+      "name": "8 Silos de Misiles Tácticos Antibuque",
+      "type": "Celdas verticales de recarga rápida",
+      "range": "90,000 km",
+      "purpose": "Fuego de apoyo durante misiones de inserción planetaria"
+    }
+  ],
+  "internal_sections": [
+    {
+      "name": "Canal del Cañón Principal Axial",
+      "description": "Conducto electromagnético superconductor que atraviesa la proa hasta la recámara central."
+    },
+    {
+      "name": "Muelle Ventral de Acoplamiento Horizon",
+      "description": "Mecanismo de amarre que transportaba una lanzadera Horizon lista para despegar."
+    }
+  ],
+  "lore": "Construido con una silueta afilada inspirada en un pez aguja, el crucero ligero de la clase Garfish fue el escolta por excelencia en las ofensivas de la REF. Su tremendo cañón de proa le confería una pegada desproporcionada para su tamaño, permitiéndole encabezar incursiones relámpago y asegurar corredores de desembarco para las tropas de tierra.",
+  "summary": {
+    "es": "Crucero ligero rápido de escolta y apoyo de fuego con un cañón principal de haz axial superpesado, vital para la escolta de convoyes y asaltos de desembarco en la Tercera Guerra.",
+    "en": "Fast light escort cruiser built around a massive axial particle beam cannon, essential for fleet convoy escort and atmospheric drop missions."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/garfish/garfish_profile.jpg",
+      "caption": "Crucero Ligero Clase Garfish en vista de perfil de combate",
+      "type": "profile"
+    },
+    {
+      "url": "assets/images/naves/garfish/garfish_escort.jpg",
+      "caption": "Maniobra de escolta orbital junto a transportes de desembarco",
+      "type": "mission"
+    },
+    {
+      "url": "assets/images/naves/garfish/garfish_cannon.jpg",
+      "caption": "Detalle del cañón de partículas axial proel en posición de fuego",
+      "type": "weapon"
+    }
+  ]
+}

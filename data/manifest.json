@@ -42,7 +42,7 @@
       "faction_logo": "assets/images/ui/logo_UNSpacy.png",
       "is_variable": true,
       "has_variants": true,
-      "variants_count": 3,
+      "variants_count": 1,
       "modes": {
         "fighter": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
         "guardian": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",

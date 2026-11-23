@@ -1,0 +1,106 @@
+{
+  "id": "ikazuchi",
+  "name": "Superportanaves Clase Ikazuchi",
+  "class_name": {
+    "es": "Superportanaves de Batalla y Asalto Aeroespacial Clase Ikazuchi",
+    "en": "Ikazuchi-Class Heavy Aerospace Battlecarrier"
+  },
+  "category": "carriers",
+  "faction": {
+    "es": "Fuerza Expedicionaria Robotech // Fuerzas de Reconquista Terrestre",
+    "en": "Robotech Expeditionary Force // Earth Reclamation Fleet"
+  },
+  "faction_logo": "assets/images/ui/Mars_Base.png",
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "commissioned": "2038",
+  "commanding_officer": "Comandantes de División de la Flota de Liberación REF",
+  "complement": "1,450 oficiales y tripulantes + 600 pilotos y personal técnico",
+  "air_group": "144 cazas Alpha Fighters montados en 6 bahías colmenas externas de eyección rápida + 36 Beta Fighters + 24 naves Horizon-T",
+  "docked_vessels": "Hasta 6 naves de desembarco táctico Horizon en bahías ventrales protegidas",
+  "thumbnail": "assets/images/naves/ikazuchi/ikazuchi_profile.png",
+  "dimensions": {
+    "length": "710 m",
+    "width": "180 m",
+    "height": "135 m",
+    "mass": "1,250,000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines": "4x Toberas termonucleares principales de propulsión a chorro de plasma",
+    "fold_system": "Sistema de salto hiperespacial estándar REF Fold Drive",
+    "reactor": "Plantas gemelas de fusión de Protocultura de alta potencia"
+  },
+  "defenses": {
+    "armor": "Blindaje compuesto cerámico-titanio y escudos térmicos de desvío de fuego láser",
+    "shields": "Generador perimetral de campo deflector de plasma"
+  },
+  "stats": {
+    "firepower": 92,
+    "armor": 90,
+    "capacity": 98,
+    "range": 92
+  },
+  "stats_detail": {
+    "velocity": "Mach 3.0 en vuelo de aproximación orbital / 0.20c en espacio interplanetario",
+    "sensors": "Radares de exploración tridimensional y sistemas de alerta temprana antimisil",
+    "hangar_capacity": "6 bahías cilíndricas modulares de eyección rápida de cazas (Quick-Launch Bays)"
+  },
+  "weapons": [
+    {
+      "name": "2 Cañones Principales de Haz Pesado Ventral",
+      "type": "Artillería de partículas subatómicas de alta concentración",
+      "range": "160,000 km",
+      "purpose": "Fuego de penetración contra buques nodriza y naves de asalto"
+    },
+    {
+      "name": "18 Baterías de Láser de Pulso Rápido Antimisi",
+      "type": "Torretas dobles automatizadas de defensa de punto",
+      "range": "35,000 km",
+      "purpose": "Intercepción de enjambres de cazas Invid y proyectiles guiados"
+    },
+    {
+      "name": "36 Celdas de Lanzamiento de Misiles de Racimo Antibuque",
+      "type": "Misiles pesados de fragmentación espacial",
+      "range": "120,000 km",
+      "purpose": "Fuego de saturación masivo en asaltos orbitales"
+    }
+  ],
+  "internal_sections": [
+    {
+      "name": "Bahías Cilíndricas Modulares de Cazas Alpha",
+      "description": "Módulos exteriores desmontables que permitían lanzar escuadrones completos en cuestión de segundos."
+    },
+    {
+      "name": "Cubiertas de Atraque de Naves Horizon-T",
+      "description": "Hangares ventrales profundos para transporte y despliegue de tropas mecanizadas."
+    },
+    {
+      "name": "Puesto de Mando Acorazado y Control de Vuelo",
+      "description": "Complejo cibernético central de dirección de batalla aeroespacial."
+    }
+  ],
+  "lore": "La columna vertebral de las flotas de reconquista terrestre enviadas por la Fuerza Expedicionaria para liberar el planeta de la ocupación Invid. Famoso por sus seis bahías exteriores de eyección rápida que podían descargar un enjambre de más de un centenar de cazas Alpha en una única salva táctica, el Ikazuchi fue el símbolo de la contraofensiva de la humanidad.",
+  "summary": {
+    "es": "Superportanaves nodriza de más de 700 m y pilar de las flotas de reconquista enviadas a la Tierra para erradicar a las hordas Invid en la Tercera Guerra Robotech.",
+    "en": "Over 700m flagship battlecarrier and backbone of the Earth reclamation fleets sent to purge the Invid invaders during the Third Robotech War."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/ikazuchi/ikazuchi_profile.png",
+      "caption": "Silueta y bahías modulares de la Clase Ikazuchi",
+      "type": "profile"
+    },
+    {
+      "url": "assets/images/naves/ikazuchi/ikazuchi_battle.jpeg",
+      "caption": "Unidad de la clase Ikazuchi bajo intenso fuego de defensa antiaérea Invid",
+      "type": "combat"
+    },
+    {
+      "url": "assets/images/naves/ikazuchi/ikazuchi_fleet.jpeg",
+      "caption": "Formación de portaaviones Ikazuchi aproximándose a la órbita terrestre",
+      "type": "fleet"
+    }
+  ]
+}

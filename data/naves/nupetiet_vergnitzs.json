@@ -1,0 +1,165 @@
+{
+  "id": "nupetiet_vergnitzs",
+  "name": "Acorazado Insignia Clase Nupetiet-Vergnitzs",
+  "class_name": {
+    "es": "Acorazado Insignia de Mando de Flota Clase Nupetiet-Vergnitzs (Nave de Breetai)",
+    "en": "Nupetiet-Vergnitzs-Class Fleet Command Battleship (Breetai's Flagship)"
+  },
+  "category": "alien",
+  "faction": {
+    "es": "Flota Imperial Zentraedi // Flota Aliada de Breetai",
+    "en": "Zentraedi Imperial Fleet // Breetai's Allied Fleet"
+  },
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "commissioned": "Era de Expansión Zentraedi (Milenios antes de la era moderna)",
+  "commanding_officer": {
+    "es": "Comandante de Flota Breetai // Ministro Analítico Exedore Formo",
+    "en": "Fleet Commander Breetai // Chief Minister Exedore Formo"
+  },
+  "complement": {
+    "es": "Tripulación Zentraedi Gigante: ~8.500 soldados clonados y oficiales",
+    "en": "Giant Zentraedi Crew: ~8,500 cloned warriors and officers"
+  },
+  "air_group": {
+    "es": "1.200+ Mechas de combate espacial (Cápsulas Regult de asalto y artillería, cazas Gnerl y Mechas de mando Glaug)",
+    "en": "1,200+ Spatial combat mecha (Regult tactical & artillery pods, Gnerl fighters, and Glaug officer mecha)"
+  },
+  "docked_vessels": {
+    "es": "4 Naves de desembarco y transporte pesado de tropas en bahías interiores selladas",
+    "en": "4 Heavy troop landing and transport craft in internal pressurized bays"
+  },
+  "thumbnail": "assets/images/naves/nupetiet_vergnitzs/nupetiet_profile.png",
+  "dimensions": {
+    "length": "4.000 m (4,0 km)",
+    "width": "600 m",
+    "height": "500 m",
+    "mass": "170.000.000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines_es": "Sistema de Impulsores Hipergravitacionales Zentraedi con reactores de protocultura líquida",
+    "engines_en": "Zentraedi Hypergravitational Thruster Arrays with liquid protoculture reactors",
+    "fold_system_es": "Generador Hiperespacial Fold Zentraedi de Cuarta Generación de Alcance Intergaláctico",
+    "fold_system_en": "Fourth-Generation Intergalactic Zentraedi Space Fold Drive"
+  },
+  "defenses": {
+    "armor_es": "Casco biometálico orgánico pesado Zentraedi con recubrimiento de dispersión térmica (180.000 C.D.M.)",
+    "armor_en": "Heavy organic biometallic Zentraedi hull with thermal dispersion coating (180,000 MDC)",
+    "shields_es": "Red de deflectores magnéticos y pantallas energéticas de absorción",
+    "shields_en": "Magnetic deflector arrays and energy absorption screens"
+  },
+  "stats": {
+    "firepower": 95,
+    "armor": 94,
+    "capacity": 96,
+    "range": 98
+  },
+  "stats_detail": {
+    "firepower": {
+      "value": 95,
+      "label_es": "Potencia de Fuego de Bombardeo Pesado",
+      "label_en": "Heavy Bombardment Firepower",
+      "desc_es": "Baterías múltiples de rayos de partículas de energía ultra-pesada capaces de pulverizar naves capitales a gran distancia."
+    },
+    "armor": {
+      "value": 94,
+      "label_es": "Blindaje Orgánico Pesado",
+      "label_en": "Heavy Organic Armor",
+      "desc_es": "Casco colosal de 4 kilómetros de longitud diseñado para liderar formaciones de asalto en primera línea."
+    },
+    "capacity": {
+      "value": 96,
+      "label_es": "Capacidad de Mechas y Tropas",
+      "label_en": "Mecha & Troop Capacity",
+      "desc_es": "Almacenes cavernosos para más de mil cápsulas de combate Regult y legiones completas de guerreros gigantes."
+    },
+    "range": {
+      "value": 98,
+      "label_es": "Alcance de Navegación Intergaláctica",
+      "label_en": "Intergalactic Cruise Range",
+      "desc_es": "Autonomía de crucero estelar sin reabastecimiento durante siglos de campañas militares espaciales."
+    }
+  },
+  "weapons": [
+    {
+      "name_es": "Cañón de Partículas Superpesado de Proa de Destrucción Masiva",
+      "name_en": "Spinal Heavy Particle Beam Annihilation Cannon",
+      "damage": "45.000 C.D.M. por disparo concentrado",
+      "range": "250.000 km",
+      "desc_es": "Arma primaria instalada en el morro proel para combate a distancia extrema contra naves capitales enemigas.",
+      "desc_en": "Spinal heavy cannon mounted in the prow for extreme-range bombardment against hostile capital ships."
+    },
+    {
+      "name_es": "18 Baterías Pesadas de Haz Doble de Plasma Zentraedi",
+      "name_en": "18 Twin Heavy Zentraedi Plasma Beam Batteries",
+      "damage": "3.800 C.D.M. por andanada",
+      "range": "80.000 km",
+      "desc_es": "Torretas hemisféricas distribuidas a lo largo de los flancos dorsal y ventral para fuego de costado devastador.",
+      "desc_en": "Hemispherical turrets arrayed along dorsal and ventral flanks providing punishing broadside fire."
+    },
+    {
+      "name_es": "32 Lanzadores de Torpedos Espaciales de Saturación Zentraedi",
+      "name_en": "32 Zentraedi Saturation Spatial Torpedo Launchers",
+      "damage": "2.200 C.D.M. por salva",
+      "range": "150.000 km",
+      "desc_es": "Torpedos bio-energéticos guiados que envuelven los blancos enemigos en tormentas de metralla de plasma.",
+      "desc_en": "Guided bio-energetic torpedoes blanketing hostile targets in devastating plasma shrapnel."
+    }
+  ],
+  "internal_sections": [
+    {
+      "name_es": "Puente de Mando Panorámico del Comandante Breetai",
+      "name_en": "Commander Breetai's Panoramic Command Bridge",
+      "desc_es": "Cámara de mando colosal adaptada para gigantes Zentraedi, con el estrado de Breetai y la consola analítica de Exedore.",
+      "desc_en": "Colossal bridge tailored for giant Zentraedi, featuring Breetai's dais and Exedore's analytical console."
+    },
+    {
+      "name_es": "Cámaras Cavernosas de Lanzamiento de Cápsulas Regult",
+      "name_en": "Cavernous Regult Launch Chutes & Staging Decks",
+      "desc_es": "Enormes pozos verticales y horizontales de eyección rápida que disparan enjambres de cápsulas de combate al espacio.",
+      "desc_en": "Enormous vertical and horizontal rapid-ejection chutes deploying swarms of combat pods into battle."
+    },
+    {
+      "name_es": "Cámara de Negociaciones y Tratado de Paz con la Tierra",
+      "name_en": "Alliance & Parley Chamber",
+      "desc_es": "Sector diplomático donde Breetai, Exedore y los emisarios del SDF-1 acordaron la tregua histórica y la alianza contra Dolza.",
+      "desc_en": "Diplomatic sector where Breetai, Exedore, and SDF-1 envoys forged the historic truce and alliance against Dolza."
+    }
+  ],
+  "lore": {
+    "overview_es": "El acorazado Nupetiet-Vergnitzs es la nave insignia de 4 kilómetros de eslora del Comandante de Flota Breetai. Con su inconfundible silueta biológica verde, corazas segmentadas y mástiles sensoriales curvados, fue la primera nave alienígena que interceptó a la humanidad en febrero de 2009 al rastrear el disparo accidental del cañón del SDF-1 en la Isla Macross.",
+    "overview_en": "The Nupetiet-Vergnitzs-class battleship is Fleet Commander Breetai's 4-kilometer-long flagship. With its unmistakable olive-green organic carapace, segmented armor, and curved sensor masts, it was the first alien vessel to make contact with humanity in February 2009 after detecting the SDF-1's accidental cannon discharge on Macross Island.",
+    "tactical_analysis_es": "A lo largo de toda la Primera Guerra Robotech, la nave insignia de Breetai lideró la persecución del SDF-1 a través del Sistema Solar, desde Plutón hasta los anillos de Saturno y la base marciana. Sin embargo, a medida que Breetai y su ministro Exedore comprendían el poder transformador de la cultura y la música humana, la tripulación experimentó una metamorfosis ideológica. En el clímax de la guerra, Breetai puso su acorazado al servicio de la Tierra, combatiendo codo a codo con el SDF-1 y coordinando la flota aliada Zentraedi para perforar el escudo de la fortaleza de Dolza.",
+    "tactical_analysis_en": "Throughout the First Robotech War, Breetai's flagship spearheaded the relentless pursuit of the SDF-1 across the Solar System, from Pluto to Saturn's rings and Mars. However, as Breetai and Minister Exedore uncovered the transformative power of human culture, emotions, and music, the crew underwent a revolutionary awakening. In the war's climax, Breetai allied his flagship with Earth, fighting shoulder-to-shoulder with the SDF-1 and leading allied Zentraedi formations to shatter Dolza's perimeter."
+  },
+  "summary": {
+    "es": "Acorazado insignia de 4 km del Comandante Breetai y Exedore. Persiguió al SDF-1 por todo el Sistema Solar antes de sellar la alianza histórica con la humanidad para destruir la flota de Dolza.",
+    "en": "Commander Breetai's 4km-long flagship. Pursued the SDF-1 across the Solar System before forging the historic peace alliance with humanity to annihilate Dolza's armada."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/nupetiet_vergnitzs/nupetiet_profile.png",
+      "title_es": "Acorazado Clase Nupetiet-Vergnitzs - Perfil Táctico",
+      "title_en": "Nupetiet-Vergnitzs-Class Battleship - Tactical Profile",
+      "type_es": "Pintura Oficial",
+      "type_en": "Official Art"
+    },
+    {
+      "url": "assets/images/naves/nupetiet_vergnitzs/nupetiet_fleet.png",
+      "title_es": "La Nave de Breetai Liderando la Flota Imperial",
+      "title_en": "Breetai's Flagship Leading the Imperial Fleet",
+      "type_es": "Captura de Archivo",
+      "type_en": "Archive Still"
+    },
+    {
+      "url": "assets/images/naves/nupetiet_vergnitzs/nupetiet_orbit.png",
+      "title_es": "Acorazado de Breetai en Órbita Lunar",
+      "title_en": "Breetai's Battleship in Lunar Orbit",
+      "type_es": "Registro Visual",
+      "type_en": "Visual Record"
+    }
+  ]
+}

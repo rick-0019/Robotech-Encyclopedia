@@ -1,0 +1,106 @@
+{
+  "id": "sdf3_pioneer",
+  "name": "SDF-3 Pioneer",
+  "class_name": {
+    "es": "Fortaleza Superdimensional de Batalla y Exploración Clase Pioneer",
+    "en": "Super Dimensional Fortress Pioneer-Class"
+  },
+  "category": "fortress",
+  "faction": {
+    "es": "Fuerza Expedicionaria Robotech (REF / Pioneer)",
+    "en": "Robotech Expeditionary Force (REF / Pioneer)"
+  },
+  "faction_logo": "assets/images/ui/Mars_Base.png",
+  "series": {
+    "es": "La Fuerza Expedicionaria // Robotech II: Los Centinelas",
+    "en": "Robotech Expeditionary Force // The Sentinels"
+  },
+  "commissioned": "2022",
+  "commanding_officer": "Almirante Rick Hunter // Vicealmirante Lisa Hayes",
+  "complement": "3,500 tripulantes militares + 12,000 colonos, científicos y diplomáticos",
+  "air_group": "Más de 400 cazas y mechas de combate (Alpha Fighters VFA-6, Beta Fighters VFB-9, Destroids REF)",
+  "docked_vessels": "2 cruceros de escolta acoplados, múltiples módulos científicos y transportes Horizon",
+  "thumbnail": "assets/images/naves/sdf3_pioneer/sdf3_profile.png",
+  "dimensions": {
+    "length": "1,220 m",
+    "width": "420 m",
+    "height": "360 m",
+    "mass": "18,000,000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines": "4x Motores principales sublumínicos de plasma iónico de alta potencia",
+    "fold_system": "Sistema de salto hiperespacial de ultra largo alcance REF Space Fold Drive",
+    "reactor": "Cámaras de fusión Protocultura de ciclo cerrado de alta eficiencia"
+  },
+  "defenses": {
+    "armor": "Blindaje compuesto de aleación espacial reforzada chobham con capas cerámicas térmicas",
+    "shields": "Sistema de barrera puntual omnidireccional y escudos deflectores hiperfásicos"
+  },
+  "stats": {
+    "firepower": 98,
+    "armor": 96,
+    "capacity": 98,
+    "range": 100
+  },
+  "stats_detail": {
+    "velocity": "Mach 4.0 en escape planetario / 0.25c en crucero estelar",
+    "sensors": "Bancos de radar taquiónico, sensores gravitacionales cuánticos y analizadores biológicos",
+    "hangar_capacity": "Múltiples cubiertas de hangares presurizados con catapultas electromagnéticas"
+  },
+  "weapons": [
+    {
+      "name": "Cañón Principal de Convergencia Protocultura",
+      "type": "Superarma axial de haz de partículas de energía extrema",
+      "range": "400,000 km",
+      "purpose": "Destrucción de fortalezas enemigas y bombardeo antibuque estelar"
+    },
+    {
+      "name": "12 Baterías Pesadas de Haz de Partículas en Torretas Retráctiles",
+      "type": "Cañones pesados de tiro angular libre",
+      "range": "180,000 km",
+      "purpose": "Combate naval contra naves de línea y flotas enemigas"
+    },
+    {
+      "name": "48 Silos de Lanzamiento Vertical de Misiles de Crucero Espacial",
+      "type": "Misiles pesados con guiado automatizado",
+      "range": "250,000 km",
+      "purpose": "Ataques masivos de saturación antibuque"
+    }
+  ],
+  "internal_sections": [
+    {
+      "name": "Puente Central de Mando y Estado Mayor del Almirantazgo",
+      "description": "Centro de comando supremo donde Rick Hunter y Lisa Hayes coordinaron la Flota Expedicionaria y el tratado de los Centinelas."
+    },
+    {
+      "name": "Ciudad Espacial Interior y Laboratorios de Protocultura",
+      "description": "Módulos habitacionales completos para tripulantes y familias, con soporte vital de larga duración."
+    },
+    {
+      "name": "Complejo de Hangares Alpha y Beta",
+      "description": "Instalaciones de ensamblaje y acoplamiento tándem para los cazas transformables VFA-6 y VFB-9."
+    }
+  ],
+  "lore": "El buque insignia más representativo de la Fuerza Expedicionaria Robotech (REF). Botado con la trascendental misión diplomática y militar de viajar hasta el planeta natal de los Maestros de la Robotech (Tirol) para prevenir futuros ataques contra la Tierra, el SDF-3 se convirtió en el faro de libertad para múltiples razas alienígenas oprimidas que conformaron la Alianza de los Centinelas.",
+  "summary": {
+    "es": "Superfortaleza dimensional insignia de la Fuerza Expedicionaria Robotech comandada por el Almirante Rick Hunter y Lisa Hayes en su épica campaña estelar hacia el planeta Tirol y las guerras de los Centinelas.",
+    "en": "Super Dimensional Fortress flagship of the Robotech Expeditionary Force commanded by Admiral Rick Hunter and Lisa Hayes during their epic deep-space campaign to Tirol."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/sdf3_pioneer/sdf3_profile.png",
+      "caption": "Silueta y perfil del SDF-3 Pioneer en espacio profundo",
+      "type": "profile"
+    },
+    {
+      "url": "assets/images/naves/sdf3_pioneer/sdf3_space.jpeg",
+      "caption": "El SDF-3 encabezando el salto hiperespacial de la Flota Expedicionaria",
+      "type": "flight"
+    },
+    {
+      "url": "assets/images/naves/sdf3_pioneer/sdf3_bridge.jpeg",
+      "caption": "Vista interior del puente de mando del Almirante Rick Hunter",
+      "type": "interior"
+    }
+  ]
+}

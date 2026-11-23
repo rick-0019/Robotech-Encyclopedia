@@ -1,0 +1,91 @@
+{
+  "id": "binary_cruiser",
+  "name": "Crucero de Batalla Clase Binary",
+  "class_name": {
+    "es": "Crucero de Batalla Pesado y Fuego Artillero Clase Binary",
+    "en": "Binary-Class Heavy Strike Battlecruiser"
+  },
+  "category": "cruisers",
+  "faction": {
+    "es": "Ejército de la Cruz del Sur // Fuerzas de Defensa Orbital",
+    "en": "Army of the Southern Cross // Orbital Defense Fleet"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Masters Saga (Second Robotech War)"
+  },
+  "commissioned": "2028",
+  "commanding_officer": "Comandantes de Escuadra del Ejército de la Cruz del Sur",
+  "complement": "520 oficiales y tripulantes + 60 pilotos",
+  "air_group": "36 mechas transformables (VF-8 Logan / AGACS)",
+  "docked_vessels": "2 transportes de personal de enlace",
+  "thumbnail": "assets/images/naves/binary_cruiser/binary_cruiser.png",
+  "dimensions": {
+    "length": "380 m",
+    "width": "110 m",
+    "height": "85 m",
+    "mass": "390,000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines": "3x Propulsores termonucleares de pulso iónico",
+    "fold_system": "No equipado (unidad dependiente de base orbital)",
+    "reactor": "Reactor nuclear de fusión pesada"
+  },
+  "defenses": {
+    "armor": "Casco reforzado con blindaje térmico refractario y mamparos antichoque",
+    "shields": "Generador de campo electromagnético frontal"
+  },
+  "stats": {
+    "firepower": 82,
+    "armor": 80,
+    "capacity": 75,
+    "range": 78
+  },
+  "stats_detail": {
+    "velocity": "Mach 3.0 en vuelo suborbital / 0.16c en vacío espacial",
+    "sensors": "Bancos de radar óptico-electrónico y telemetría por radioenlace",
+    "hangar_capacity": "Bahía ventral protegida para despliegue de escuadrones Logan"
+  },
+  "weapons": [
+    {
+      "name": "4 Cañones de Haz Electromagnético Concentrado",
+      "type": "Artillería energética de aceleración lineal montada en batería fija proel",
+      "range": "140,000 km",
+      "purpose": "Perforación de blindajes alienígenas en aproximación frontal"
+    },
+    {
+      "name": "12 Lanzadores Múltiples de Misiles Antibuque",
+      "type": "Celdas verticales con recarga automatizada",
+      "range": "100,000 km",
+      "purpose": "Fuego de cobertura y apoyo táctico a naves insignia"
+    }
+  ],
+  "internal_sections": [
+    {
+      "name": "Baterías de Artillería Frontal",
+      "description": "Mecanismos de alineación y acumuladores de energía de descarga rápida."
+    },
+    {
+      "name": "Puente de Navegación y Combate",
+      "description": "Puesto de operaciones tácticas blindado dentro del núcleo de proa."
+    }
+  ],
+  "lore": "El Crucero Clase Binary constituyó la espina dorsal artillera de las flotas del Ejército de la Cruz del Sur durante los choques con las naves de desembarco de los Maestros. Diseñados con una silueta robusta y un enfoque primordial en la potencia de fuego frontal, estos buques operaban en formaciones cerradas para proyectar una barrera impenetrable de haces electromagnéticos.",
+  "summary": {
+    "es": "Crucero pesado de línea artillera del Ejército de la Cruz del Sur, clave en las formaciones de defensa orbital y apoyo de fuego contra las naves alienígenas de los Maestros.",
+    "en": "Southern Cross heavy line battlecruiser, critical in orbital defensive formations and heavy artillery support against the Tirolian warships."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/binary_cruiser/binary_cruiser.png",
+      "caption": "Crucero de Batalla Clase Binary en vista de perfil de combate",
+      "type": "profile"
+    },
+    {
+      "url": "assets/images/naves/binary_cruiser/binary_blastoff.png",
+      "caption": "Cruceros de la Cruz del Sur despegando rumbo a la órbita de combate",
+      "type": "launch"
+    }
+  ]
+}

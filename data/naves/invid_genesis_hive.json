@@ -1,0 +1,106 @@
+{
+  "id": "invid_genesis_hive",
+  "name": "Colmena Génesis / Reflex Point",
+  "class_name": {
+    "es": "Fortaleza Colmena Planetaria y Biotemplo de la Flor de la Vida (Reflex Point)",
+    "en": "Invid Planetary Genesis Hive & Reflex Point Stronghold"
+  },
+  "category": "alien",
+  "faction": {
+    "es": "Horda Invid (Regis / Regiss)",
+    "en": "Invid Swarm (Regis / Regiss)"
+  },
+  "faction_logo": "assets/images/ui/logo_invid.png",
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "commissioned": "2031 (Inicio de la Ocupación Invid)",
+  "commanding_officer": "La Reina Regis de los Invid // Príncipes Corg y Sera",
+  "complement": "Millones de obreros, larvas y guerreros Invid organizados en conciencia telepática unificada",
+  "air_group": "Centenares de miles de mechas Invid (Invid Scout, Shock Trooper, Pincer, Invid Enforcer, Cazas de Comandante)",
+  "docked_vessels": "Decenas de naves de transporte de tropas y cápsulas de descenso orbital",
+  "thumbnail": "assets/images/naves/invid_genesis_hive/invid_reflex_point.jpg",
+  "dimensions": {
+    "length": "12,000 m (12 km - diámetro de la cúpula central)",
+    "width": "12,000 m",
+    "height": "4,500 m",
+    "mass": "Incalculable (Estructura Geobiológica orgánica y cristalina masiva)"
+  },
+  "propulsion": {
+    "engines": "Capacidad de transmutación y ascensión a energía pura de Protocultura (maniobra de partida cósmica)",
+    "fold_system": "Transmutación dimensional en masa guiada por la Reina Regis",
+    "reactor": "La Matriz de la Flor de la Vida de Zor en plena floración"
+  },
+  "defenses": {
+    "armor": "Casco biopolimérico cristalino con autorreparación celular instantánea",
+    "shields": "Escudo biosférico de fuerza Protocultura inmune al bombardeo convencional de acorazados"
+  },
+  "stats": {
+    "firepower": 100,
+    "armor": 100,
+    "capacity": 100,
+    "range": 95
+  },
+  "stats_detail": {
+    "velocity": "Estructura planetaria enraizada / Ascensión espacial a la velocidad de la luz en forma de fénix de energía",
+    "sensors": "Percepción sensorial telepática global y detección inmediata de cualquier generador de protocultura en la Tierra",
+    "hangar_capacity": "Cámaras de gestación biomecánica y colmenas verticales con capacidad ilimitada de mechas"
+  },
+  "weapons": [
+    {
+      "name": "Escudo Biosférico Planetario de Protocultura",
+      "type": "Barrera de energía viva capaz de desintegrar proyectiles de crucero y bombardeo orbital",
+      "range": "100,000 km",
+      "purpose": "Inmunidad total frente a ofensivas de flotas espaciales"
+    },
+    {
+      "name": "Proyectores de Haz Bioplasmático de Aniquilación",
+      "type": "Emanaciones de plasma concentrado disparadas desde las cúpulas superiores",
+      "range": "250,000 km",
+      "purpose": "Destrucción de cruceros y portaaviones en la órbita baja"
+    },
+    {
+      "name": "Oleadas Infinitas de Mechas de Enjambre Telepático",
+      "type": "Despliegue coordinado de cientos de miles de guerreros sin temor ni vacilación",
+      "range": "50,000 km",
+      "purpose": "Saturación y aniquilación biológica de cualquier fuerza invasora"
+    }
+  ],
+  "internal_sections": [
+    {
+      "name": "Cámara Sacra de la Reina Regis",
+      "description": "Templo bioluminiscente desde donde la Reina Regis guiaba la evolución de su raza y transmutaba a sus hijos en humanoides."
+    },
+    {
+      "name": "Los Pozos del Génesis (Genesis Pits)",
+      "description": "Laboratorios geobiológicos subterráneos donde se clonaban y probaban formas de vida prehistóricas y mutaciones adaptativas."
+    },
+    {
+      "name": "Campos Sagrados de la Flor de la Vida",
+      "description": "Vastas extensiones de cultivos de la planta sagrada traída por Zor, fuente suprema de energía biológica."
+    }
+  ],
+  "lore": "El epicentro y santuario supremo del dominio Invid en la Tierra. Erigido en América del Norte sobre las ruinas de la civilización humana, Reflex Point fue la meca hacia la que convergieron todos los rebeldes, desde la resistencia de Scott Bernard hasta la colosal Armada de Liberación de la REF. Albergaba la sabiduría, la esencia y los secretos de la evolución biológica de la especie Invid.",
+  "summary": {
+    "es": "Colosal fortaleza colmena orgánica de 12 km de diámetro y cuartel general supremo de la Reina Regis en la Tierra. Epicentro de los Pozos del Génesis y meta final de toda la Tercera Guerra Robotech.",
+    "en": "Colossal 12km organic hive fortress and supreme planetary sanctum of the Invid Regis on Earth. Epicenter of the Genesis Pits and final destination of the Third Robotech War."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/invid_genesis_hive/invid_reflex_point.jpg",
+      "caption": "Vista panorámica de la colosal estructura de Reflex Point dominando el horizonte",
+      "type": "profile"
+    },
+    {
+      "url": "assets/images/naves/invid_genesis_hive/invid_hive_exterior.jpg",
+      "caption": "Cúpulas bioluminiscentes y enjambres de patrullas Scout protegiendo el perímetro",
+      "type": "exterior"
+    },
+    {
+      "url": "assets/images/naves/invid_genesis_hive/invid_hive_comic.png",
+      "caption": "Esquema anatómico y geobiológico de los niveles subterráneos de una Colmena Invid",
+      "type": "interior"
+    }
+  ]
+}

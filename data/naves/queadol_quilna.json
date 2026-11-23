@@ -1,0 +1,151 @@
+{
+  "id": "queadol_quilna",
+  "name": "Acorazado Meltrandi Clase Queadol-Quilna",
+  "class_name": {
+    "es": "Acorazado Insignia de Combate Meltrandi Clase Queadol-Quilna (Nave de Azonia)",
+    "en": "Queadol-Quilna-Class Meltrandi Heavy Assault Battleship (Azonia's Flagship)"
+  },
+  "category": "alien",
+  "faction": {
+    "es": "Flota de Combate Femenina Meltrandi // Escuadrón de Azonia",
+    "en": "Meltrandi Female Battlefleet // Azonia's Command Division"
+  },
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "commissioned": "Era de las Guerras Coloniales Zentraedi",
+  "commanding_officer": {
+    "es": "Comandante Azonia (Lap'Lamiz) // As Suprema Miriya Parina (Previa a su deserción)",
+    "en": "Commander Azonia (Lap'Lamiz) // Ace Commander Miriya Parina (Prior to defection)"
+  },
+  "complement": {
+    "es": "Tripulación Meltrandi Femenina de Élite: ~7.200 guerreras gigantes hiper-entrenadas",
+    "en": "Elite Female Meltrandi Crew: ~7,200 hyper-disciplined giant warriors"
+  },
+  "air_group": {
+    "es": "950+ Armaduras de combate de alta maniobrabilidad Queadluun-Rau (la cúspide de la mecha Meltrandi), cazas Gnerl y cápsulas de intercepción",
+    "en": "950+ Queadluun-Rau high-mobility power armor suits (the apex of Meltrandi mecha), Gnerl fighters, and interceptor pods"
+  },
+  "docked_vessels": {
+    "es": "3 Bahías de eyección rápida para escuadrones de choque Queadluun-Rau y lanzaderas de inserción",
+    "en": "3 Rapid-ejection launch bays for Queadluun-Rau strike wings and insertion craft"
+  },
+  "thumbnail": "assets/images/naves/queadol_quilna/queadol_quilna_fleet.png",
+  "dimensions": {
+    "length": "3.300 m (3,3 km)",
+    "width": "520 m",
+    "height": "410 m",
+    "mass": "145.000.000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines_es": "Turbinas Hipergravitacionales de Salto Rápido Meltrandi con aceleradores de protocultura concentrada",
+    "engines_en": "Meltrandi Rapid-Spool Hypergravitational Drives with concentrated protoculture boosters",
+    "fold_system_es": "Generador Hiperespacial Fold Táctico Meltrandi de Alta Precisión",
+    "fold_system_en": "High-Precision Meltrandi Tactical Space Fold Drive"
+  },
+  "defenses": {
+    "armor_es": "Blindaje biometálico con aleaciones púrpuras reforzadas con disipadores de impacto cinético (160.000 C.D.M.)",
+    "armor_en": "Purple-finished biometallic armor reinforced with kinetic impact dampeners (160,000 MDC)",
+    "shields_es": "Barreras magnéticas vectoriales de absorción de radiación",
+    "shields_en": "Vectorial magnetic radiation absorption barriers"
+  },
+  "stats": {
+    "firepower": 96,
+    "armor": 92,
+    "capacity": 94,
+    "range": 94
+  },
+  "stats_detail": {
+    "firepower": {
+      "value": 96,
+      "label_es": "Potencia de Fuego de Ataque Meltrandi",
+      "label_en": "Meltrandi Attack Firepower",
+      "desc_es": "Baterías pesadas de partículas de alta aceleración y salvas de micromisiles de saturación."
+    },
+    "armor": {
+      "value": 92,
+      "label_es": "Blindaje Reforzado de Asalto",
+      "label_en": "Reinforced Assault Armor",
+      "desc_es": "Estructura optimizada para combate aéreo y espacial a distancias cerradas."
+    },
+    "capacity": {
+      "value": 94,
+      "label_es": "Capacidad de Mechas Queadluun-Rau",
+      "label_en": "Queadluun-Rau Mecha Staging",
+      "desc_es": "Hangares presurizados automatizados dedicados a la infantería mecanizada más letal de la galaxia."
+    },
+    "range": {
+      "value": 94,
+      "label_es": "Agilidad y Velocidad Angular",
+      "label_en": "Agility & Angular Velocity",
+      "desc_es": "Mayor maniobrabilidad y aceleración lateral que los cruceros Zentraedi masculinos convencionales."
+    }
+  },
+  "weapons": [
+    {
+      "name_es": "Cañón Pesado de Haz de Partículas de Proa Doble",
+      "name_en": "Twin Bow-Mounted Heavy Particle Beam Cannon",
+      "damage": "32.000 C.D.M. por disparo concentrado",
+      "range": "200.000 km",
+      "desc_es": "Armamento frontal de choque diseñado para abrir brechas en acorazados enemigos antes del asalto de Mechas.",
+      "desc_en": "Spinal shock battery designed to breach hostile battlecruisers prior to power armor deployment."
+    },
+    {
+      "name_es": "16 Baterías de Plasma Meltrandi de Alta Frecuencia",
+      "name_en": "16 High-Frequency Meltrandi Plasma Batteries",
+      "damage": "3.200 C.D.M. por andanada",
+      "range": "75.000 km",
+      "desc_es": "Torretas hemisféricas de tiro continuo que generan barreras de plasma letal contra formaciones navales.",
+      "desc_en": "Continuous-fire hemispherical turrets throwing lethal plasma curtains against enemy formations."
+    },
+    {
+      "name_es": "28 Silos de Micromisiles de Saturación Extrema",
+      "name_en": "28 Extreme Saturation Micromissile Silos",
+      "damage": "1.600 C.D.M. por salva masiva",
+      "range": "110.000 km",
+      "desc_es": "Nubes densas de proyectiles guiados coordinados con las andanadas de las armaduras Queadluun-Rau.",
+      "desc_en": "Dense clouds of smart-guided munitions synchronized with Queadluun-Rau power armor strikes."
+    }
+  ],
+  "internal_sections": [
+    {
+      "name_es": "Puente de Mando Disciplinado de Azonia",
+      "name_en": "Azonia's High-Discipline Command Deck",
+      "desc_es": "Centro táctico de la flota femenina, caracterizado por una disciplina marcial feroz y telemetría de combate en tiempo real.",
+      "desc_en": "Female fleet tactical center marked by ruthless martial discipline and real-time sensory feeds."
+    },
+    {
+      "name_es": "Bahía de Catapultas de la Guardia de Élite Queadluun-Rau",
+      "name_en": "Queadluun-Rau Elite Guard Staging Bays",
+      "desc_es": "Hangares donde Miriya Parina comandaba a sus escuadrones de cazadoras antes de lanzarse a la velocidad del sonido contra el SDF-1.",
+      "desc_en": "Hangar decks where Miriya Parina marshaled her ace squadrons before launching sonic-speed raids on the SDF-1."
+    },
+    {
+      "name_es": "Cámara de Clonación y Condicionamiento de Guerra",
+      "name_en": "Cloning & Combat Conditioning Vault",
+      "desc_es": "Instalación donde las guerreras Meltrandi eran instruidas exclusivamente para el combate, sin noción de emociones ni familia.",
+      "desc_en": "Facility where Meltrandi warriors were conditioned solely for warfare, innocent of emotions or family."
+    }
+  ],
+  "lore": {
+    "overview_es": "El acorazado Clase Queadol-Quilna es la nave insignia de 3,3 kilómetros de la temible flota femenina Meltrandi comandada por la Comandante Azonia. Enviada por el Comandante Supremo Dolza para relevar y disciplinar a Breetai tras sus repetidos fracasos en capturar intacto el SDF-1, esta nave representaba la cúspide de la ferocidad militar y el orgullo de combate de las guerreras Zentraedi.",
+    "overview_en": "The Queadol-Quilna-class battleship is the 3.3-kilometer flagship of the fearsome female Meltrandi battlefleet commanded by Commander Azonia. Dispatched by Supreme Commander Dolza to supersede and discipline Breetai following his inability to capture the SDF-1 intact, this warship epitomized the military ferocity and martial pride of Meltrandi warrior society.",
+    "tactical_analysis_es": "Transportando a bordo al as de combate supremo Miriya Parina y a sus legiones de armaduras de combate Queadluun-Rau, el acorazado de Azonia desató los ataques más feroces y veloces que el SDF-1 enfrentó durante la guerra. Sin embargo, la exposición a la cultura humana y la derrota y posterior deserción de Miriya tras enamorarse de Max Sterling fracturaron la convicción de Azonia. Finalmente, Azonia unió su flota a la de Breetai y al SDF-1 para rebelarse contra Dolza, sacrificándose años después junto a Khyron en la batalla final de New Macross City.",
+    "tactical_analysis_en": "Housing top ace pilot Miriya Parina and her legions of Queadluun-Rau power armor, Azonia's flagship mounted the fastest and most devastating ambushes the SDF-1 ever weathered. However, exposure to human culture and Miriya's shocking defection after falling in love with human ace Max Sterling eroded Azonia's rigid indoctrination. Azonia ultimately allied her fleet with Breetai and the SDF-1 to overthrow Dolza, later meeting her tragic fate alongside Khyron in the final assault on New Macross City."
+  },
+  "summary": {
+    "es": "Acorazado insignia de 3,3 km de la flota femenina Meltrandi comandado por Azonia. Base de operaciones de las armaduras Queadluun-Rau de Miriya Parina, combatió al SDF-1 antes de unirse a la alianza contra Dolza.",
+    "en": "Commander Azonia's 3.3km flagship of the female Meltrandi fleet. Staging base for Miriya Parina's Queadluun-Rau power armor, it fought the SDF-1 before joining the allied fleet against Dolza."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/queadol_quilna/queadol_quilna_fleet.png",
+      "title_es": "Acorazado Meltrandi en Formación de Ataque",
+      "title_en": "Meltrandi Battleship in Strike Formation",
+      "type_es": "Pintura Oficial",
+      "type_en": "Official Art"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "tokugawa",
+  "name": "Superportanaves Clase Tokugawa",
+  "class_name": {
+    "es": "Superportanaves de Batalla Aeroespacial Clase Tokugawa (UES Hannibal / UES Tokugawa)",
+    "en": "Tokugawa-Class Heavy Aerospace Battlecarrier (UES Hannibal / UES Tokugawa)"
+  },
+  "category": "carriers",
+  "faction": {
+    "es": "Fuerza Expedicionaria Robotech (REF) // Ejército de la Cruz del Sur",
+    "en": "Robotech Expeditionary Force (REF) // Army of the Southern Cross"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "Los Maestros de la Robotech // La Saga de los Centinelas",
+    "en": "The Masters Saga // The Sentinels"
+  },
+  "commissioned": "2022",
+  "commanding_officer": "Mayor Carpenter (UES Hannibal)",
+  "complement": "1,200 oficiales y tripulantes + 320 especialistas aeronáuticos",
+  "air_group": "150 mechas y cazas (VF-1R Valkyrie, VF-8 Logan, Alpha Fighters en variantes posteriores)",
+  "docked_vessels": "6 lanzaderas de desembarco pesado",
+  "thumbnail": "assets/images/naves/tokugawa/tokugawa_profile.png",
+  "dimensions": {
+    "length": "550 m",
+    "width": "140 m",
+    "height": "110 m",
+    "mass": "620,000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines": "4x Motores termonucleares principales de propulsión de plasma",
+    "fold_system": "Hipermotor de trans-salto dimensional de largo alcance REF Fold Drive",
+    "reactor": "Planta motriz de fusión alimentada con matrices de Protocultura enriquecida"
+  },
+  "defenses": {
+    "armor": "Blindaje multicapa de titanio-cerámica reforzado con nano-compuestos refractarios",
+    "shields": "Escudo electromagnético perimetral de disipación calórica"
+  },
+  "stats": {
+    "firepower": 86,
+    "armor": 88,
+    "capacity": 95,
+    "range": 90
+  },
+  "stats_detail": {
+    "velocity": "Mach 2.8 en reentrada / 0.20c en espacio interplanetario",
+    "sensors": "Sensores cuántecos de rastreo gravitatorio y radar taquiónico de largo alcance",
+    "hangar_capacity": "Doble cubierta de vuelo con 4 catapultas magnéticas frontales y 2 pistas de aterrizaje blindadas"
+  },
+  "weapons": [
+    {
+      "name": "Cañones de Haz de Partículas Pesadas de Cubierta",
+      "type": "Baterías de energía de alta penetración montadas en torres axiales",
+      "range": "150,000 km",
+      "purpose": "Fuego de supresión y perforación de blindajes pesados"
+    },
+    {
+      "name": "24 Lanzadores de Misiles Espaciales de Medio y Largo Alcance",
+      "type": "Baterías de misiles guiados con ojivas perforantes",
+      "range": "120,000 km",
+      "purpose": "Protección del grupo de batalla y fuego de saturación"
+    },
+    {
+      "name": "Red de Torretas Antiaéreas Láser CIWS",
+      "type": "Sistemas automatizados de defensa de punto",
+      "range": "25,000 km",
+      "purpose": "Intercepción de proyectiles y cazas entrantes"
+    }
+  ],
+  "internal_sections": [
+    {
+      "name": "Hangares Principales y Talleres de Mantenimiento",
+      "description": "Espacio integral para reparar, reabastecer y rearmar más de un centenar de Veritechs simultáneamente."
+    },
+    {
+      "name": "Cámara del Motor Fold Espacial",
+      "description": "Módulo de salto hiperespacial que permitió a la UES Hannibal regresar a la Tierra desde el espacio profundo."
+    },
+    {
+      "name": "Torre del Puente de Vuelo y Operaciones",
+      "description": "Estructura de control de tráfico aéreo y dirección de fuego táctico."
+    }
+  ],
+  "lore": "Construido inicialmente para la Flota de la Fuerza Expedicionaria Robotech (REF), el diseño de la clase Tokugawa combinaba la capacidad de un portaaviones pesado con la potencia artillera de un crucero de línea. Su hazaña más célebre ocurrió durante la Segunda Guerra Robotech, cuando el UES Hannibal, comandado por el Mayor Carpenter, regresó en un dramático trans-salto desde la flota lejana de Rick Hunter para brindar auxilio a la sitiada Tierra, lanzando un asalto frontal contra las naves nodrizas de los Maestros.",
+  "summary": {
+    "es": "Superportanaves de batalla de la Flota Expedicionaria que regresó a la Tierra comandado por el Mayor Carpenter (UES Hannibal) para librar un heroico y desesperado asalto contra los Maestros de la Robotech.",
+    "en": "REF heavy battlecarrier that returned to Earth under Major Carpenter (UES Hannibal) to execute a heroic and desperate strike against the Robotech Masters."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/tokugawa/tokugawa_profile.png",
+      "caption": "Silueta y esquema táctico de la Clase Tokugawa",
+      "type": "profile"
+    },
+    {
+      "url": "assets/images/naves/tokugawa/tokugawa_optera.jpg",
+      "caption": "Unidad de la clase Tokugawa aproximándose al planeta Optera durante las misiones de la REF",
+      "type": "mission"
+    },
+    {
+      "url": "assets/images/naves/tokugawa/tokugawa_refit.png",
+      "caption": "Configuración de reensamblaje y blindaje adicional modernizado",
+      "type": "schematic"
+    }
+  ]
+}

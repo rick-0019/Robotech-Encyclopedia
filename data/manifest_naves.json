@@ -1,7 +1,7 @@
 {
   "system_version": "1.0.0",
   "database_name": "ROBOTECH CAPITAL FLEET ARCHIVE",
-  "updated_at": "2026-09-28",
+  "updated_at": "2026-11-23",
   "categories": [
     {
       "id": "all",
@@ -48,6 +48,7 @@
         "es": "La Saga Macross (Primera Guerra Robotech)",
         "en": "La Saga Macross (Primera Guerra Robotech)"
       },
+      "generation": "gen1",
       "thumbnail": "assets/images/naves/SDF-1/b5dfd69b7c4162e32ee76112044fdb3d.jpg",
       "summary": {
         "es": "El SDF-1 Macross (Super Dimension Fortress One) es el artefacto tecnológico más trascendental en la historia de la civilización humana y el bastión indiscutido ...",
@@ -59,8 +60,871 @@
         "capacity": 96,
         "range": 92
       },
-      "is_modular": true,
       "dataFile": "data/naves/sdf1_macross.json"
+    },
+    {
+      "id": "prometheus",
+      "name": "CVS-101 Prometheus",
+      "class_name": {
+        "es": "Superportaaviones Semi-Sumergible de Asalto Aeroespacial Clase Prometheus",
+        "en": "Prometheus-Class Submersible Aerospace Strike Carrier"
+      },
+      "category": "carriers",
+      "faction": {
+        "es": "U.N. Spacy // Fuerzas de Defensa Terrestre (RDF)",
+        "en": "U.N. Spacy // Robotech Defense Force (RDF)"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {},
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "generation": "gen1",
+      "thumbnail": "assets/images/naves/prometheus/prometheus_anime.jpg",
+      "summary": {
+        "es": "Superportaaviones de asalto de la RDF que, tras ser arrastrado al espacio por el salto accidental del SDF-1, fue adaptado como su brazo babor y principal cubierta de vuelo para los cazas Veritech durante toda la Primera Guerra Robotech.",
+        "en": "RDF heavy strike carrier that, after being swept into deep space by the SDF-1's accidental fold, was mated as its port arm and primary flight deck for Veritech fighter wings throughout the First Robotech War."
+      },
+      "stats": {
+        "firepower": 75,
+        "armor": 82,
+        "capacity": 94,
+        "range": 80
+      },
+      "dataFile": "data/naves/prometheus.json"
+    },
+    {
+      "id": "daedalus",
+      "name": "SLV-111 Daedalus",
+      "class_name": {
+        "es": "Buque de Desembarco y Asalto Anfibio Pesado Clase Daedalus",
+        "en": "Daedalus-Class Heavy Amphibious Landing Assault Ship"
+      },
+      "category": "carriers",
+      "faction": {
+        "es": "U.N. Spacy // Fuerzas de Defensa Terrestre (RDF)",
+        "en": "U.N. Spacy // Robotech Defense Force (RDF)"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {},
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "generation": "gen1",
+      "thumbnail": "assets/images/naves/daedalus/daedalus_profile.jpg",
+      "summary": {
+        "es": "Nave de asalto anfibio de la RDF adaptada como brazo estribor del SDF-1 Macross. Célebre por el devastador 'Ataque Daedalus', donde su proa acorazada embestía naves enemigas para disparar decenas de Destroids a quemarropa en su interior.",
+        "en": "RDF amphibious assault ship adapted as the starboard arm of the SDF-1 Macross. World-renowned for the devastating 'Daedalus Attack', ramming enemy ships to fire scores of Destroid cannons directly into their hulls."
+      },
+      "stats": {
+        "firepower": 92,
+        "armor": 88,
+        "capacity": 85,
+        "range": 78
+      },
+      "dataFile": "data/naves/daedalus.json"
+    },
+    {
+      "id": "armd_platform",
+      "name": "Plataforma Espacial Clase ARMD",
+      "class_name": {
+        "es": "Plataforma Aeroespacial de Defensa Orbital y Portanaves Clase ARMD",
+        "en": "ARMD-Class Armored Space Defense Platform & Carrier"
+      },
+      "category": "carriers",
+      "faction": {
+        "es": "U.N. Spacy // Fuerzas de Defensa Terrestre (RDF)",
+        "en": "U.N. Spacy // Robotech Defense Force (RDF)"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {},
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "generation": "gen1",
+      "thumbnail": "assets/images/naves/armd_platform/armd_orbit.jpg",
+      "summary": {
+        "es": "Plataforma espacial de asalto y portanaves orbital de la RDF. Diseñadas originalmente para ser los brazos del SDF-1, formaron la principal barrera de defensa orbital de la Tierra durante la Primera Guerra Robotech.",
+        "en": "RDF orbital strike carrier and space defense platform. Originally engineered to serve as the SDF-1's arms, they formed Earth's front-line orbital defense shield during the First Robotech War."
+      },
+      "stats": {
+        "firepower": 80,
+        "armor": 85,
+        "capacity": 92,
+        "range": 72
+      },
+      "dataFile": "data/naves/armd_platform.json"
+    },
+    {
+      "id": "oberth_destroyer",
+      "name": "Destructor Clase Oberth",
+      "class_name": {
+        "es": "Destructor Espacial Ligero y Crucero de Patrulla Clase Oberth",
+        "en": "Oberth-Class Light Space Destroyer & Patrol Cruiser"
+      },
+      "category": "cruisers",
+      "faction": {
+        "es": "U.N. Spacy // Fuerzas de Defensa Terrestre (RDF)",
+        "en": "U.N. Spacy // Robotech Defense Force (RDF)"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {},
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "generation": "gen1",
+      "thumbnail": "assets/images/naves/oberth_destroyer/oberth_profile.jpg",
+      "summary": {
+        "es": "Destructor espacial ligero y crucero de patrulla de la RDF. La primera generación de naves de combate espacial humanas que defendió valientemente el perímetro lunar y marciano durante la Primera Guerra Robotech.",
+        "en": "RDF light space destroyer and patrol cruiser. Humanity's first generation of space combat vessels that valiantly defended the lunar and Martian perimeters during the First Robotech War."
+      },
+      "stats": {
+        "firepower": 65,
+        "armor": 60,
+        "capacity": 45,
+        "range": 68
+      },
+      "dataFile": "data/naves/oberth_destroyer.json"
+    },
+    {
+      "id": "sdf2_megaroad",
+      "name": "SDF-2 Megaroad",
+      "class_name": {
+        "es": "Fortaleza Superdimensional de Batalla y Nave de Misión Profunda Clase Megaroad",
+        "en": "Megaroad-Class Super Dimensional Battle Fortress & Deep-Space Flagship"
+      },
+      "category": "fortress",
+      "faction": {
+        "es": "U.N. Spacy // Tierra Unificada",
+        "en": "U.N. Spacy // United Earth Government"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {},
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "generation": "gen1",
+      "thumbnail": "assets/images/naves/sdf2_megaroad/sdf2_rick_hunter.png",
+      "summary": {
+        "es": "Segunda fortaleza superdimensional construida en la Tierra para viajar hacia las estrellas bajo el mando de Lisa Hayes. Trágicamente destruida en New Macross City por la embestida suicida de Khyron, sus planos dieron origen al SDF-3 Pioneer.",
+        "en": "Second super dimensional fortress built on Earth to journey to deep space under Commander Lisa Hayes. Tragically destroyed in New Macross City by Khyron's suicide ramming, its design birthed the SDF-3 Pioneer."
+      },
+      "stats": {
+        "firepower": 100,
+        "armor": 96,
+        "capacity": 98,
+        "range": 95
+      },
+      "dataFile": "data/naves/sdf2_megaroad.json"
+    },
+    {
+      "id": "dolza_flagship",
+      "name": "Base Fortaleza Móvil de Dolza",
+      "class_name": {
+        "es": "Fortaleza Móvil y Centro de Mando Supremo Imperial Clase Fulbtzs-Berrentzs",
+        "en": "Fulbtzs-Berrentzs-Class Mobile Fortress & Supreme Imperial Flagship"
+      },
+      "category": "fortress",
+      "faction": {
+        "es": "Gran Armada Imperial Zentraedi (Flota de Dolza)",
+        "en": "Grand Imperial Zentraedi Armada (Dolza's Grand Fleet)"
+      },
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "assignment": {},
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "generation": "gen1",
+      "thumbnail": "assets/images/naves/dolza_flagship/dolza_fortress.png",
+      "summary": {
+        "es": "La colosal fortaleza móvil de 1.400 km de Dolza y centro de mando de la armada imperial de 4.8 millones de naves Zentraedi. Destruida por el SDF-1 desde su núcleo interno en el clímax de la Primera Guerra Robotech.",
+        "en": "Dolza's titanic 1,400km mobile base fortress and supreme command hub for the 4.8 million Zentraedi Grand Fleet armada. Obliterated from the inside out by the SDF-1 during the climax of the First Robotech War."
+      },
+      "stats": {
+        "firepower": 100,
+        "armor": 100,
+        "capacity": 100,
+        "range": 100
+      },
+      "dataFile": "data/naves/dolza_flagship.json"
+    },
+    {
+      "id": "nupetiet_vergnitzs",
+      "name": "Acorazado Insignia Clase Nupetiet-Vergnitzs",
+      "class_name": {
+        "es": "Acorazado Insignia de Mando de Flota Clase Nupetiet-Vergnitzs (Nave de Breetai)",
+        "en": "Nupetiet-Vergnitzs-Class Fleet Command Battleship (Breetai's Flagship)"
+      },
+      "category": "alien",
+      "faction": {
+        "es": "Flota Imperial Zentraedi // Flota Aliada de Breetai",
+        "en": "Zentraedi Imperial Fleet // Breetai's Allied Fleet"
+      },
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "assignment": {},
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "generation": "gen1",
+      "thumbnail": "assets/images/naves/nupetiet_vergnitzs/nupetiet_profile.png",
+      "summary": {
+        "es": "Acorazado insignia de 4 km del Comandante Breetai y Exedore. Persiguió al SDF-1 por todo el Sistema Solar antes de sellar la alianza histórica con la humanidad para destruir la flota de Dolza.",
+        "en": "Commander Breetai's 4km-long flagship. Pursued the SDF-1 across the Solar System before forging the historic peace alliance with humanity to annihilate Dolza's armada."
+      },
+      "stats": {
+        "firepower": 95,
+        "armor": 94,
+        "capacity": 96,
+        "range": 98
+      },
+      "dataFile": "data/naves/nupetiet_vergnitzs.json"
+    },
+    {
+      "id": "queadol_magdomilla",
+      "name": "Crucero de Asalto Clase Queadol-Magdomilla",
+      "class_name": {
+        "es": "Crucero Pesado de Batalla y Asalto Modular Clase Queadol-Magdomilla (Nave de Khyron)",
+        "en": "Queadol-Magdomilla-Class Heavy Assault Strike Cruiser (Khyron's Flagship)"
+      },
+      "category": "alien",
+      "faction": {
+        "es": "7º Batallón Experimental Zentraedi // Fuerzas Rebeldes de Khyron",
+        "en": "7th Experimental Zentraedi Division // Khyron's Rebel Legion"
+      },
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "assignment": {},
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "generation": "gen1",
+      "thumbnail": "assets/images/naves/queadol_magdomilla/queadol_fortress.jpg",
+      "summary": {
+        "es": "Crucero de asalto pesado de 3 km con proa desmontable comandado por Khyron. Célebre por sus despiadadas emboscadas y por la embestida suicida final que destruyó tanto al SDF-1 como al SDF-2 en New Macross City.",
+        "en": "Khyron's 3km heavy assault cruiser featuring a detachable bow strike gunship. Renowned for ruthless ambushes and the suicidal ramming run that destroyed both the SDF-1 and SDF-2 in New Macross City."
+      },
+      "stats": {
+        "firepower": 94,
+        "armor": 90,
+        "capacity": 88,
+        "range": 90
+      },
+      "dataFile": "data/naves/queadol_magdomilla.json"
+    },
+    {
+      "id": "thuverl_salan",
+      "name": "Acorazado de Asalto Clase Thuverl-Salan",
+      "class_name": {
+        "es": "Acorazado Estándar de Asalto y Destructor de Línea Zentraedi Clase Thuverl-Salan",
+        "en": "Thuverl-Salan-Class Standard Assault Battleship & Line Destroyer"
+      },
+      "category": "alien",
+      "faction": {
+        "es": "Gran Armada Imperial Zentraedi // Flotas de Combate de Línea",
+        "en": "Grand Zentraedi Imperial Armada // Frontline Battlefleets"
+      },
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "assignment": {},
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "generation": "gen1",
+      "thumbnail": "assets/images/naves/thuverl_salan/thuverl_destroyer.jpg",
+      "summary": {
+        "es": "El acorazado de línea de 2 km más numeroso y destructivo de la flota Zentraedi. Columna vertebral artillera del imperio, desplegaba cientos de cápsulas Regult en combate.",
+        "en": "The most numerous and destructive 2km frontline battleship of the Zentraedi empire. Formed the artillery backbone of the armada, deploying hundreds of Regult pods in combat."
+      },
+      "stats": {
+        "firepower": 90,
+        "armor": 88,
+        "capacity": 86,
+        "range": 92
+      },
+      "dataFile": "data/naves/thuverl_salan.json"
+    },
+    {
+      "id": "chul_gautsn",
+      "name": "Fragata de Reconocimiento Clase Chul-Gautsn",
+      "class_name": {
+        "es": "Fragata de Exploración Profunda y Vigilancia de Sensores Clase Chul-Gautsn",
+        "en": "Chul-Gautsn-Class Deep-Space Scout & Reconnaissance Frigate"
+      },
+      "category": "alien",
+      "faction": {
+        "es": "Flota Imperial Zentraedi // Escuadrones de Reconocimiento Avanzado",
+        "en": "Zentraedi Imperial Fleet // Advanced Reconnaissance Squadrons"
+      },
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "assignment": {},
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "generation": "gen1",
+      "thumbnail": "assets/images/naves/chul_gautsn/chul_scout.jpg",
+      "summary": {
+        "es": "Nave de exploración y espionaje de 500 m de la flota Zentraedi. Rastreó al SDF-1 por el sistema solar y albergó la cámara de micronización de los tres espías que descubrieron la cultura humana.",
+        "en": "Zentraedi 500m reconnaissance and scout frigate. Tracked the SDF-1 across the solar system and housed the micronization chamber for the three spies who discovered human culture."
+      },
+      "stats": {
+        "firepower": 55,
+        "armor": 65,
+        "capacity": 50,
+        "range": 95
+      },
+      "dataFile": "data/naves/chul_gautsn.json"
+    },
+    {
+      "id": "queadol_quilna",
+      "name": "Acorazado Meltrandi Clase Queadol-Quilna",
+      "class_name": {
+        "es": "Acorazado Insignia de Combate Meltrandi Clase Queadol-Quilna (Nave de Azonia)",
+        "en": "Queadol-Quilna-Class Meltrandi Heavy Assault Battleship (Azonia's Flagship)"
+      },
+      "category": "alien",
+      "faction": {
+        "es": "Flota de Combate Femenina Meltrandi // Escuadrón de Azonia",
+        "en": "Meltrandi Female Battlefleet // Azonia's Command Division"
+      },
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "assignment": {},
+      "series": {
+        "es": "La Saga Macross (Primera Guerra Robotech)",
+        "en": "The Macross Saga (First Robotech War)"
+      },
+      "generation": "gen1",
+      "thumbnail": "assets/images/naves/queadol_quilna/queadol_quilna_fleet.png",
+      "summary": {
+        "es": "Acorazado insignia de 3,3 km de la flota femenina Meltrandi comandado por Azonia. Base de operaciones de las armaduras Queadluun-Rau de Miriya Parina, combatió al SDF-1 antes de unirse a la alianza contra Dolza.",
+        "en": "Commander Azonia's 3.3km flagship of the female Meltrandi fleet. Staging base for Miriya Parina's Queadluun-Rau power armor, it fought the SDF-1 before joining the allied fleet against Dolza."
+      },
+      "stats": {
+        "firepower": 96,
+        "armor": 92,
+        "capacity": 94,
+        "range": 94
+      },
+      "dataFile": "data/naves/queadol_quilna.json"
+    },
+    {
+      "id": "tristar",
+      "name": "Acorazado Insignia Clase Tristar",
+      "class_name": {
+        "es": "Supercrucero de Batalla Insignia Clase Tristar (UES Tristar / UES Mount Olympus)",
+        "en": "Tristar-Class Flagship Super Battleship (UES Tristar / UES Mount Olympus)"
+      },
+      "category": "cruisers",
+      "faction": {
+        "es": "Ejército de la Cruz del Sur // Flota Táctica Espacial (TASC)",
+        "en": "Army of the Southern Cross // Tactical Armored Space Corps"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {},
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Masters Saga (Second Robotech War)"
+      },
+      "generation": "gen2",
+      "thumbnail": "assets/images/naves/tristar/tristar_profile.jpg",
+      "summary": {
+        "es": "Supercrucero insignia del Ejército de la Cruz del Sur y buque de mando del General Rolf Emerson. Punta de lanza de las ofensivas orbitales terrestres contra la flota de los Maestros de la Robotech.",
+        "en": "Flagship super cruiser of the Army of the Southern Cross and command ship of General Rolf Emerson. Spearhead of Earth orbital counteroffensives against the Robotech Masters armada."
+      },
+      "stats": {
+        "firepower": 88,
+        "armor": 85,
+        "capacity": 82,
+        "range": 80
+      },
+      "dataFile": "data/naves/tristar.json"
+    },
+    {
+      "id": "tokugawa",
+      "name": "Superportanaves Clase Tokugawa",
+      "class_name": {
+        "es": "Superportanaves de Batalla Aeroespacial Clase Tokugawa (UES Hannibal / UES Tokugawa)",
+        "en": "Tokugawa-Class Heavy Aerospace Battlecarrier (UES Hannibal / UES Tokugawa)"
+      },
+      "category": "carriers",
+      "faction": {
+        "es": "Fuerza Expedicionaria Robotech (REF) // Ejército de la Cruz del Sur",
+        "en": "Robotech Expeditionary Force (REF) // Army of the Southern Cross"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {},
+      "series": {
+        "es": "Los Maestros de la Robotech // La Saga de los Centinelas",
+        "en": "The Masters Saga // The Sentinels"
+      },
+      "generation": "gen2",
+      "thumbnail": "assets/images/naves/tokugawa/tokugawa_profile.png",
+      "summary": {
+        "es": "Superportanaves de batalla de la Flota Expedicionaria que regresó a la Tierra comandado por el Mayor Carpenter (UES Hannibal) para librar un heroico y desesperado asalto contra los Maestros de la Robotech.",
+        "en": "REF heavy battlecarrier that returned to Earth under Major Carpenter (UES Hannibal) to execute a heroic and desperate strike against the Robotech Masters."
+      },
+      "stats": {
+        "firepower": 86,
+        "armor": 88,
+        "capacity": 95,
+        "range": 90
+      },
+      "dataFile": "data/naves/tokugawa.json"
+    },
+    {
+      "id": "binary_cruiser",
+      "name": "Crucero de Batalla Clase Binary",
+      "class_name": {
+        "es": "Crucero de Batalla Pesado y Fuego Artillero Clase Binary",
+        "en": "Binary-Class Heavy Strike Battlecruiser"
+      },
+      "category": "cruisers",
+      "faction": {
+        "es": "Ejército de la Cruz del Sur // Fuerzas de Defensa Orbital",
+        "en": "Army of the Southern Cross // Orbital Defense Fleet"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {},
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Masters Saga (Second Robotech War)"
+      },
+      "generation": "gen2",
+      "thumbnail": "assets/images/naves/binary_cruiser/binary_cruiser.png",
+      "summary": {
+        "es": "Crucero pesado de línea artillera del Ejército de la Cruz del Sur, clave en las formaciones de defensa orbital y apoyo de fuego contra las naves alienígenas de los Maestros.",
+        "en": "Southern Cross heavy line battlecruiser, critical in orbital defensive formations and heavy artillery support against the Tirolian warships."
+      },
+      "stats": {
+        "firepower": 82,
+        "armor": 80,
+        "capacity": 75,
+        "range": 78
+      },
+      "dataFile": "data/naves/binary_cruiser.json"
+    },
+    {
+      "id": "pulsar_cruiser",
+      "name": "Crucero Ligero Clase Pulsar",
+      "class_name": {
+        "es": "Crucero Ligero de Escolta Rápida e Intercepción Clase Pulsar",
+        "en": "Pulsar-Class Fast Escort Light Cruiser"
+      },
+      "category": "cruisers",
+      "faction": {
+        "es": "Ejército de la Cruz del Sur // Escuadrones de Intercepción Orbital",
+        "en": "Army of the Southern Cross // Orbital Interception Fleets"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {},
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Masters Saga (Second Robotech War)"
+      },
+      "generation": "gen2",
+      "thumbnail": "assets/images/naves/pulsar_cruiser/pulsar_cruiser.jpeg",
+      "summary": {
+        "es": "Crucero ligero y ágil de escolta del Ejército de la Cruz del Sur, especializado en intercepción a gran velocidad y defensa de convoyes orbitales.",
+        "en": "Fast and agile escort light cruiser of the Southern Cross, specialized in high-speed orbital interception and fleet defense."
+      },
+      "stats": {
+        "firepower": 74,
+        "armor": 72,
+        "capacity": 68,
+        "range": 75
+      },
+      "dataFile": "data/naves/pulsar_cruiser.json"
+    },
+    {
+      "id": "tirolian_mothership",
+      "name": "Nave Nodriza de los Maestros de la Robotech",
+      "class_name": {
+        "es": "Fortaleza Urbana Biosférica y Ciudad Espacial de los Maestros de Tirol",
+        "en": "Tirolian Mothership & Biogenic City Fortress"
+      },
+      "category": "alien",
+      "faction": {
+        "es": "Maestros de la Robotech (Tiroleses)",
+        "en": "Robotech Masters (Tirolians)"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {},
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Masters Saga (Second Robotech War)"
+      },
+      "generation": "gen2",
+      "thumbnail": "assets/images/naves/tirolian_mothership/mothership_orbit.jpg",
+      "summary": {
+        "es": "Colosal ciudad-nave de más de 6 km de longitud y fortaleza suprema de los Maestros de la Robotech. Viajó por el cosmos hasta la Tierra para reclamar la matriz de Protocultura de Zor antes de la llegada de los Invid.",
+        "en": "Colossal 6km city-ship and supreme fortress of the Robotech Masters. Journeyed across the stars to Earth to seize Zor's Protoculture matrix before the arrival of the Invid."
+      },
+      "stats": {
+        "firepower": 98,
+        "armor": 99,
+        "capacity": 100,
+        "range": 96
+      },
+      "dataFile": "data/naves/tirolian_mothership.json"
+    },
+    {
+      "id": "triumvirate_flagship",
+      "name": "Crucero Pesado del Triunvirato de Tirol",
+      "class_name": {
+        "es": "Crucero Pesado de Mando Táctico y Conducción Psíquica del Triunvirato",
+        "en": "Tirolian Triumvirate Heavy Command Battleship"
+      },
+      "category": "alien",
+      "faction": {
+        "es": "Maestros de la Robotech (Tiroleses)",
+        "en": "Robotech Masters (Tirolians)"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {},
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Masters Saga (Second Robotech War)"
+      },
+      "generation": "gen2",
+      "thumbnail": "assets/images/naves/triumvirate_flagship/flagship_profile.png",
+      "summary": {
+        "es": "Crucero pesado de mando táctico de casi 2 km de largo, utilizado por los Triunviratos de los Maestros para coordinar el biocontrol de los Bioroids y pulverizar a los cruceros terrestres.",
+        "en": "Tirolian heavy command battleship nearly 2 km long, utilized by the Masters' Triumvirates to coordinate Bioroid mind-control and obliterate Earth cruisers."
+      },
+      "stats": {
+        "firepower": 94,
+        "armor": 95,
+        "capacity": 90,
+        "range": 92
+      },
+      "dataFile": "data/naves/triumvirate_flagship.json"
+    },
+    {
+      "id": "bioroid_assault_carrier",
+      "name": "Transporte de Asalto Bioroid",
+      "class_name": {
+        "es": "Corbeta Pesada de Desembarco Planetario y Portatropas Bioroid",
+        "en": "Tirolian Heavy Landing Corvette & Bioroid Assault Carrier"
+      },
+      "category": "alien",
+      "faction": {
+        "es": "Maestros de la Robotech (Tiroleses)",
+        "en": "Robotech Masters (Tirolians)"
+      },
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "assignment": {},
+      "series": {
+        "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+        "en": "The Masters Saga (Second Robotech War)"
+      },
+      "generation": "gen2",
+      "thumbnail": "assets/images/naves/bioroid_assault_carrier/bioroid_carrier_combat.jpg",
+      "summary": {
+        "es": "Corbeta de desembarco y asalto planetario de 480 m empleada por los Maestros para penetrar la atmósfera y desplegar oleadas de Bioroids sobre las ciudades terrestres.",
+        "en": "Tirolian 480m planetary assault corvette used by the Masters to penetrate Earth atmosphere and drop waves of Bioroid mechas onto terrestrial targets."
+      },
+      "stats": {
+        "firepower": 85,
+        "armor": 88,
+        "capacity": 92,
+        "range": 85
+      },
+      "dataFile": "data/naves/bioroid_assault_carrier.json"
+    },
+    {
+      "id": "sdf3_pioneer",
+      "name": "SDF-3 Pioneer",
+      "class_name": {
+        "es": "Fortaleza Superdimensional de Batalla y Exploración Clase Pioneer",
+        "en": "Super Dimensional Fortress Pioneer-Class"
+      },
+      "category": "fortress",
+      "faction": {
+        "es": "Fuerza Expedicionaria Robotech (REF / Pioneer)",
+        "en": "Robotech Expeditionary Force (REF / Pioneer)"
+      },
+      "faction_logo": "assets/images/ui/Mars_Base.png",
+      "assignment": {},
+      "series": {
+        "es": "La Fuerza Expedicionaria // Robotech II: Los Centinelas",
+        "en": "Robotech Expeditionary Force // The Sentinels"
+      },
+      "generation": "gen3",
+      "thumbnail": "assets/images/naves/sdf3_pioneer/sdf3_profile.png",
+      "summary": {
+        "es": "Superfortaleza dimensional insignia de la Fuerza Expedicionaria Robotech comandada por el Almirante Rick Hunter y Lisa Hayes en su épica campaña estelar hacia el planeta Tirol y las guerras de los Centinelas.",
+        "en": "Super Dimensional Fortress flagship of the Robotech Expeditionary Force commanded by Admiral Rick Hunter and Lisa Hayes during their epic deep-space campaign to Tirol."
+      },
+      "stats": {
+        "firepower": 98,
+        "armor": 96,
+        "capacity": 98,
+        "range": 100
+      },
+      "dataFile": "data/naves/sdf3_pioneer.json"
+    },
+    {
+      "id": "ikazuchi",
+      "name": "Superportanaves Clase Ikazuchi",
+      "class_name": {
+        "es": "Superportanaves de Batalla y Asalto Aeroespacial Clase Ikazuchi",
+        "en": "Ikazuchi-Class Heavy Aerospace Battlecarrier"
+      },
+      "category": "carriers",
+      "faction": {
+        "es": "Fuerza Expedicionaria Robotech // Fuerzas de Reconquista Terrestre",
+        "en": "Robotech Expeditionary Force // Earth Reclamation Fleet"
+      },
+      "faction_logo": "assets/images/ui/Mars_Base.png",
+      "assignment": {},
+      "series": {
+        "es": "La Nueva Generación (Tercera Guerra Robotech)",
+        "en": "The New Generation (Third Robotech War)"
+      },
+      "generation": "gen3",
+      "thumbnail": "assets/images/naves/ikazuchi/ikazuchi_profile.png",
+      "summary": {
+        "es": "Superportanaves nodriza de más de 700 m y pilar de las flotas de reconquista enviadas a la Tierra para erradicar a las hordas Invid en la Tercera Guerra Robotech.",
+        "en": "Over 700m flagship battlecarrier and backbone of the Earth reclamation fleets sent to purge the Invid invaders during the Third Robotech War."
+      },
+      "stats": {
+        "firepower": 92,
+        "armor": 90,
+        "capacity": 98,
+        "range": 92
+      },
+      "dataFile": "data/naves/ikazuchi.json"
+    },
+    {
+      "id": "garfish",
+      "name": "Crucero Ligero de Asalto Clase Garfish",
+      "class_name": {
+        "es": "Crucero Ligero de Ataque Rápido y Escolta de Desembarco Clase Garfish",
+        "en": "Garfish-Class Fast Attack & Escort Light Cruiser"
+      },
+      "category": "cruisers",
+      "faction": {
+        "es": "Fuerza Expedicionaria Robotech // Flota de Asalto",
+        "en": "Robotech Expeditionary Force // Strike Fleet"
+      },
+      "faction_logo": "assets/images/ui/Mars_Base.png",
+      "assignment": {},
+      "series": {
+        "es": "La Nueva Generación // The Shadow Chronicles",
+        "en": "The New Generation // The Shadow Chronicles"
+      },
+      "generation": "gen3",
+      "thumbnail": "assets/images/naves/garfish/garfish_profile.jpg",
+      "summary": {
+        "es": "Crucero ligero rápido de escolta y apoyo de fuego con un cañón principal de haz axial superpesado, vital para la escolta de convoyes y asaltos de desembarco en la Tercera Guerra.",
+        "en": "Fast light escort cruiser built around a massive axial particle beam cannon, essential for fleet convoy escort and atmospheric drop missions."
+      },
+      "stats": {
+        "firepower": 82,
+        "armor": 78,
+        "capacity": 72,
+        "range": 88
+      },
+      "dataFile": "data/naves/garfish.json"
+    },
+    {
+      "id": "shimakaze",
+      "name": "Acorazado Clase Shimakaze (UES Icarus)",
+      "class_name": {
+        "es": "Acorazado Espacial Pesado con Tecnología Furtiva Shadow Clase Shimakaze",
+        "en": "Shimakaze-Class Heavy Shadow Battleship (UES Icarus)"
+      },
+      "category": "cruisers",
+      "faction": {
+        "es": "Fuerza Expedicionaria Robotech // Flota de Operaciones Especiales",
+        "en": "Robotech Expeditionary Force // Special Operations Fleet"
+      },
+      "faction_logo": "assets/images/ui/Mars_Base.png",
+      "assignment": {},
+      "series": {
+        "es": "Robotech: The Shadow Chronicles",
+        "en": "Robotech: The Shadow Chronicles"
+      },
+      "generation": "gen3",
+      "thumbnail": "assets/images/naves/shimakaze/shimakaze_icarus.jpg",
+      "summary": {
+        "es": "Acorazado pesado de última generación dotado de tecnología furtiva Shadow y cañones sincrónicos. El UES Icarus del Mayor Vince Grant lideró la investigación del misterio del SDF-3 y la resistencia ante la traición Haydonita.",
+        "en": "Next-generation heavy battleship equipped with Shadow cloaking and synchro cannons. Major Vince Grant's UES Icarus led the search for the missing SDF-3 and broke the Haydonite ambush."
+      },
+      "stats": {
+        "firepower": 94,
+        "armor": 90,
+        "capacity": 88,
+        "range": 94
+      },
+      "dataFile": "data/naves/shimakaze.json"
+    },
+    {
+      "id": "sdf4_liberator",
+      "name": "SDF-4 Liberator",
+      "class_name": {
+        "es": "Superfortaleza Dimensional de Batalla Clase Liberator",
+        "en": "Super Dimensional Fortress Liberator-Class"
+      },
+      "category": "fortress",
+      "faction": {
+        "es": "Fuerza Expedicionaria Robotech // Flota de Asalto Final",
+        "en": "Robotech Expeditionary Force // Final Assault Fleet"
+      },
+      "faction_logo": "assets/images/ui/Mars_Base.png",
+      "assignment": {},
+      "series": {
+        "es": "La Nueva Generación // The Shadow Chronicles",
+        "en": "The New Generation // The Shadow Chronicles"
+      },
+      "generation": "gen3",
+      "thumbnail": "assets/images/naves/sdf4_liberator/sdf4_profile.png",
+      "summary": {
+        "es": "Superfortaleza dimensional de 1.350 m armada con cuatro cañones sincrónicos y el temible arsenal de misiles Neutrón-S. Buque insignia de la Flota de Ataque Final en la Batalla de Reflex Point.",
+        "en": "Colossal 1,350m super fortress armed with four synchro cannons and the cataclysmic Neutron-S missile payload. Supreme flagship of the Final Assault Fleet at Reflex Point."
+      },
+      "stats": {
+        "firepower": 100,
+        "armor": 98,
+        "capacity": 96,
+        "range": 98
+      },
+      "dataFile": "data/naves/sdf4_liberator.json"
+    },
+    {
+      "id": "horizon_t",
+      "name": "Nave de Desembarco Clase Horizon-T",
+      "class_name": {
+        "es": "Transporte Táctico de Asalto y Nave de Desembarco Orbital Clase Horizon-T",
+        "en": "Horizon-T-Class Tactical Assault Dropship"
+      },
+      "category": "carriers",
+      "faction": {
+        "es": "Fuerza Expedicionaria Robotech // División Marte (Mars Base)",
+        "en": "Robotech Expeditionary Force // Mars Base Division"
+      },
+      "faction_logo": "assets/images/ui/Mars_Base.png",
+      "assignment": {},
+      "series": {
+        "es": "La Nueva Generación (Tercera Guerra Robotech)",
+        "en": "The New Generation (Third Robotech War)"
+      },
+      "generation": "gen3",
+      "thumbnail": "assets/images/naves/horizon_t/horizon_profile.jpg",
+      "summary": {
+        "es": "Nave táctica de desembarco y transporte de asalto orbital, capaz de desplegar cazas Alpha, motos Cyclone y tropas en el corazón de territorios dominados por los Invid.",
+        "en": "Tactical dropship and orbital assault transporter capable of deploying Alpha Fighters, Cyclone armor units, and assault troops directly into Invid combat zones."
+      },
+      "stats": {
+        "firepower": 68,
+        "armor": 76,
+        "capacity": 86,
+        "range": 82
+      },
+      "dataFile": "data/naves/horizon_t.json"
+    },
+    {
+      "id": "invid_genesis_hive",
+      "name": "Colmena Génesis / Reflex Point",
+      "class_name": {
+        "es": "Fortaleza Colmena Planetaria y Biotemplo de la Flor de la Vida (Reflex Point)",
+        "en": "Invid Planetary Genesis Hive & Reflex Point Stronghold"
+      },
+      "category": "alien",
+      "faction": {
+        "es": "Horda Invid (Regis / Regiss)",
+        "en": "Invid Swarm (Regis / Regiss)"
+      },
+      "faction_logo": "assets/images/ui/logo_invid.png",
+      "assignment": {},
+      "series": {
+        "es": "La Nueva Generación (Tercera Guerra Robotech)",
+        "en": "The New Generation (Third Robotech War)"
+      },
+      "generation": "gen3",
+      "thumbnail": "assets/images/naves/invid_genesis_hive/invid_reflex_point.jpg",
+      "summary": {
+        "es": "Colosal fortaleza colmena orgánica de 12 km de diámetro y cuartel general supremo de la Reina Regis en la Tierra. Epicentro de los Pozos del Génesis y meta final de toda la Tercera Guerra Robotech.",
+        "en": "Colossal 12km organic hive fortress and supreme planetary sanctum of the Invid Regis on Earth. Epicenter of the Genesis Pits and final destination of the Third Robotech War."
+      },
+      "stats": {
+        "firepower": 100,
+        "armor": 100,
+        "capacity": 100,
+        "range": 95
+      },
+      "dataFile": "data/naves/invid_genesis_hive.json"
+    },
+    {
+      "id": "invid_troop_carrier",
+      "name": "Transporte de Tropas Invid",
+      "class_name": {
+        "es": "Nave de Desembarco Espacial y Portatropas Biomecánico Invid",
+        "en": "Invid Heavy Troop Carrier & Biomechanical Dropship"
+      },
+      "category": "alien",
+      "faction": {
+        "es": "Horda Invid (Regis / Regiss)",
+        "en": "Invid Swarm (Regis / Regiss)"
+      },
+      "faction_logo": "assets/images/ui/logo_invid.png",
+      "assignment": {},
+      "series": {
+        "es": "La Nueva Generación // The Sentinels",
+        "en": "The New Generation // The Sentinels"
+      },
+      "generation": "gen3",
+      "thumbnail": "assets/images/naves/invid_troop_carrier/invid_carrier_classic.jpg",
+      "summary": {
+        "es": "Nave de asalto y transporte de tropas de más de 300 m, utilizada por los Invid para trasladar y desplegar más de un centenar de Shock Troopers en planetas bajo conquista.",
+        "en": "Over 300m organic assault dropship used by the Invid to ferry and rapidly deploy over a hundred Shock Troopers onto conquered worlds."
+      },
+      "stats": {
+        "firepower": 84,
+        "armor": 86,
+        "capacity": 94,
+        "range": 88
+      },
+      "dataFile": "data/naves/invid_troop_carrier.json"
+    },
+    {
+      "id": "haydonite_dreadnought",
+      "name": "Acorazado Estelar Haydonita",
+      "class_name": {
+        "es": "Acorazado Estelar Cibernético y Plataforma Furtiva de la Orden de Haydon",
+        "en": "Haydonite Cybernetic Stealth Dreadnought"
+      },
+      "category": "alien",
+      "faction": {
+        "es": "Hijos de la Sombra // Orden Haydonita",
+        "en": "Children of the Shadow // Haydonite Order"
+      },
+      "faction_logo": "assets/images/ui/Mars_Base.png",
+      "assignment": {},
+      "series": {
+        "es": "Robotech: The Shadow Chronicles",
+        "en": "Robotech: The Shadow Chronicles"
+      },
+      "generation": "gen3",
+      "thumbnail": "assets/images/naves/haydonite_dreadnought/haydonite_cruiser.jpg",
+      "summary": {
+        "es": "Acorazado cibernético automatizado de casi 700 m dotado de generadores de singularidad y armas de apagado remoto. La nueva y letal amenaza alienígena de The Shadow Chronicles.",
+        "en": "Automated cybernetic dreadnought of nearly 700m armed with dark singularity cannons and remote shutdown codes. The lethal new alien adversary of The Shadow Chronicles."
+      },
+      "stats": {
+        "firepower": 99,
+        "armor": 95,
+        "capacity": 92,
+        "range": 100
+      },
+      "dataFile": "data/naves/haydonite_dreadnought.json"
     }
   ]
 }

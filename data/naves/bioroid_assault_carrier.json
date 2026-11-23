@@ -1,0 +1,96 @@
+{
+  "id": "bioroid_assault_carrier",
+  "name": "Transporte de Asalto Bioroid",
+  "class_name": {
+    "es": "Corbeta Pesada de Desembarco Planetario y Portatropas Bioroid",
+    "en": "Tirolian Heavy Landing Corvette & Bioroid Assault Carrier"
+  },
+  "category": "alien",
+  "faction": {
+    "es": "Maestros de la Robotech (Tiroleses)",
+    "en": "Robotech Masters (Tirolians)"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Masters Saga (Second Robotech War)"
+  },
+  "commissioned": "Era Imperial Tiroliana",
+  "commanding_officer": "Comandantes Clones Bioroid de Campo",
+  "complement": "120 clones tripulantes + 80 pilotos Bioroid",
+  "air_group": "60 Bioroids en trineos voladores Hovercraft",
+  "docked_vessels": "No aplicable",
+  "thumbnail": "assets/images/naves/bioroid_assault_carrier/bioroid_carrier_combat.jpg",
+  "dimensions": {
+    "length": "480 m",
+    "width": "210 m",
+    "height": "140 m",
+    "mass": "680,000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines": "Motores de antigravedad planetaria y retropropulsión de plasma",
+    "fold_system": "No equipado (transportada por las naves nodrizas)",
+    "reactor": "Celda de Protocultura de alto rendimiento para asalto rápido"
+  },
+  "defenses": {
+    "armor": "Blindaje curvo con perfil disipador de impactos de artillería",
+    "shields": "Generador de campo electromagnético de proa"
+  },
+  "stats": {
+    "firepower": 85,
+    "armor": 88,
+    "capacity": 92,
+    "range": 85
+  },
+  "stats_detail": {
+    "velocity": "Mach 5.0 en descenso orbital vertical / Mach 2.2 en vuelo rasante",
+    "sensors": "Escáneres geológicos y biológicos de corto y medio alcance",
+    "hangar_capacity": "Bahías inferiores gemelas con compuertas de descarga por gravedad cero"
+  },
+  "weapons": [
+    {
+      "name": "4 Cañones de Plasma Pesado en Torretas Proeles",
+      "type": "Artillería de plasma térmico concentrado",
+      "range": "50,000 km",
+      "purpose": "Limpieza de zonas de desembarco y destrucción de defensas antiaéreas"
+    },
+    {
+      "name": "Baterías de Descarga Iónica Ventral",
+      "type": "Cañones de dispersión iónica de área amplia",
+      "range": "15,000 km",
+      "purpose": "Supresión de blindados y tropas terrestres"
+    }
+  ],
+  "internal_sections": [
+    {
+      "name": "Bahías de Lanzamiento Rápido de Bioroids",
+      "description": "Conductos verticales presurizados que eyectaban Bioroids a velocidad terminal hacia el campo de batalla."
+    },
+    {
+      "name": "Puesto de Mando y Telemetría de Asalto",
+      "description": "Cabina biocibernética donde el comandante coordinaba las tácticas de las tropas en tierra."
+    }
+  ],
+  "lore": "El caballo de batalla de los Maestros para todas las operaciones en la superficie terrestre. Estas corbetas descendían de manera imponente desde la órbita a través de las nubes de fuego antiaéreo, abriendo sus compuertas para desplegar a los temibles Bioroids sobre sus deslizadores aéreos, capturando ciudades enteras y recolectando especímenes humanos para el estudio genético.",
+  "summary": {
+    "es": "Corbeta de desembarco y asalto planetario de 480 m empleada por los Maestros para penetrar la atmósfera y desplegar oleadas de Bioroids sobre las ciudades terrestres.",
+    "en": "Tirolian 480m planetary assault corvette used by the Masters to penetrate Earth atmosphere and drop waves of Bioroid mechas onto terrestrial targets."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/bioroid_assault_carrier/bioroid_carrier_combat.jpg",
+      "caption": "Corbeta de Asalto Bioroid en aproximación de combate rasante",
+      "type": "combat"
+    },
+    {
+      "url": "assets/images/naves/bioroid_assault_carrier/bioroid_carrier_fleet.jpg",
+      "caption": "Escuadrilla de transporte escoltando a la fuerza expedicionaria tirolesa",
+      "type": "fleet"
+    },
+    {
+      "url": "assets/images/naves/bioroid_assault_carrier/bioroid_carrier_rear.jpg",
+      "caption": "Vista posterior de los propulsores gravitatorios y toberas de escape",
+      "type": "propulsion"
+    }
+  ]
+}

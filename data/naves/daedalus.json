@@ -1,0 +1,158 @@
+{
+  "id": "daedalus",
+  "name": "SLV-111 Daedalus",
+  "class_name": {
+    "es": "Buque de Desembarco y Asalto Anfibio Pesado Clase Daedalus",
+    "en": "Daedalus-Class Heavy Amphibious Landing Assault Ship"
+  },
+  "category": "carriers",
+  "faction": {
+    "es": "U.N. Spacy // Fuerzas de Defensa Terrestre (RDF)",
+    "en": "U.N. Spacy // Robotech Defense Force (RDF)"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "commissioned": "Año 2008 (Astilleros Navales de la Isla Macross)",
+  "commanding_officer": {
+    "es": "Comandante de Batallón de Asalto Terrestre // Primer Oficial Lisa Hayes (Táctica Daedalus)",
+    "en": "Ground Assault Battalion Commander // First Officer Lisa Hayes (Tactical Architect)"
+  },
+  "complement": {
+    "es": "Tripulación Naval y Unidades Mecanizadas Destroid: ~1.400 soldados y artilleros",
+    "en": "Naval Crew & Destroid Mechanized Units: ~1,400 soldiers and gunners"
+  },
+  "air_group": {
+    "es": "120+ Mechas Destroid pesados (MBR-04 Tomahawk, ADR-04 Defender, MBR-07 Spartan, SDR-04 Raidar X) y dos supercañones autopropulsados HWR-00 Monster",
+    "en": "120+ Heavy Destroid mecha (MBR-04 Tomahawk, ADR-04 Defender, MBR-07 Spartan, SDR-04 Raidar X) and two HWR-00 Monster super-heavy artillery mecha"
+  },
+  "docked_vessels": {
+    "es": "Integrado como Brazo Estribor (Derecho) del SDF-1 Macross",
+    "en": "Docked as Starboard (Right) Arm of SDF-1 Macross"
+  },
+  "thumbnail": "assets/images/naves/daedalus/daedalus_profile.jpg",
+  "dimensions": {
+    "length": "488 m",
+    "width": "120 m",
+    "height": "78 m",
+    "mass": "120.000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines_es": "Motores Marinos Nucleares de Alta Potencia reacondicionados con propulsores de maniobra vernier para el vacío espacial",
+    "engines_en": "High-Output Nuclear Marine Turbines retrofitted with vernier reaction thrusters for vacuum operation",
+    "fold_system_es": "Sin propulsor Fold propio (Dependiente del SDF-1)",
+    "fold_system_en": "No native Fold Drive (Dependent on SDF-1)"
+  },
+  "defenses": {
+    "armor_es": "Compuerta de Proa Ultrablindada de Choque con aleación de carburo de tungsteno reforzado con Robomateriales (65.000 C.D.M.)",
+    "armor_en": "Ultra-Reinforced Ramming Bow Gate with tungsten-carbide Robomaterial plating (65,000 MDC)",
+    "shields_es": "Punta de lanza de la Barrera Puntual (Pin-Point Barrier) del SDF-1 durante la embestida",
+    "shields_en": "Focus point for the SDF-1 Pin-Point Barrier during ramming maneuvers"
+  },
+  "stats": {
+    "firepower": 92,
+    "armor": 88,
+    "capacity": 85,
+    "range": 78
+  },
+  "stats_detail": {
+    "firepower": {
+      "value": 92,
+      "label_es": "Potencia de Fuego de Choque y Asalto",
+      "label_en": "Shock Assault Firepower",
+      "desc_es": "Capacidad destructiva interna devastadora mediante la descarga coordinada de batallones Destroid a quemarropa."
+    },
+    "armor": {
+      "value": 88,
+      "label_es": "Blindaje Frontal de Embestida",
+      "label_en": "Ramming Bow Armor",
+      "desc_es": "Proa maciza diseñada para perforar blindajes de naves capitales extraterrestres sin fractura estructural."
+    },
+    "capacity": {
+      "value": 85,
+      "label_es": "Capacidad de Destroids y Artillería",
+      "label_en": "Destroid & Artillery Staging",
+      "desc_es": "Grandes bodegas frontales de apertura rápida capaces de alinear decenas de Destroids en línea de fuego."
+    },
+    "range": {
+      "value": 78,
+      "label_es": "Autonomía de Combate",
+      "label_en": "Combat Endurance & Range",
+      "desc_es": "Suministros de munición pesada, proyectiles balísticos para Destroids y reactores de recarga."
+    }
+  },
+  "weapons": [
+    {
+      "name_es": "Maniobra Táctica Exclusiva: Ataque Daedalus (Daedalus Attack)",
+      "name_en": "Exclusive Tactical Maneuver: Daedalus Attack",
+      "damage": "Aniquilación Catastrófica Interna",
+      "range": "Contacto Físico Directo (Embestida)",
+      "desc_es": "Concebido por Lisa Hayes: el SDF-1 concentra su Barrera Puntual en la proa blindada del Daedalus, perfora el casco de una nave capital Zentraedi, abre sus compuertas proeles y desata una andanada masiva de misiles y cañones de Destroids directamente en el interior alienígena.",
+      "desc_en": "Devised by Lisa Hayes: the SDF-1 focuses its Pin-Point Barrier on Daedalus's reinforced prow, punches through an alien warship's hull, swings open its bow gates, and unloads a point-blank barrage of Destroid cannons and missiles into the enemy interior."
+    },
+    {
+      "name_es": "Batería de Artillería HWR-00 Monster (4 Cañones de 406 mm)",
+      "name_en": "HWR-00 Monster Heavy Battery (4x 406mm Cannons)",
+      "damage": "4.800 C.D.M. por salva",
+      "range": "150 km",
+      "desc_es": "Los titánicos cañones de campaña montados en los Destroid Monster disparan proyectiles pesados de penetración antiblindaje desde la rampa proel.",
+      "desc_en": "Titanic field cannons mounted on Monster Destroids firing armor-piercing kinetic rounds from the open bow ramp."
+    },
+    {
+      "name_es": "8 Cañones Automáticos Antiaéreos dobles de 88 mm",
+      "name_en": "8 Twin 88mm Anti-Aircraft Dual Mounts",
+      "damage": "350 C.D.M. por andanada",
+      "range": "25 km",
+      "desc_es": "Baterías defensivas de cubierta contra cazas de ataque y misiles de crucero.",
+      "desc_en": "Deck defensive batteries against strike fighters and cruise missiles."
+    }
+  ],
+  "internal_sections": [
+    {
+      "name_es": "Compuerta de Desembarco Proel y Rampa de Salva",
+      "name_en": "Bow Clamshell Assault Gates & Firing Ramp",
+      "desc_es": "Enormes compuertas acorazadas articuladas que se abren como mandíbulas mecánicas revelando las hileras de cañones de los Tomahawks y Spartans.",
+      "desc_en": "Massive articulated armored clamshell gates that open to unveil firing lines of Tomahawk and Spartan Destroids."
+    },
+    {
+      "name_es": "Bahía de Estacionamiento y Municionamiento de Destroids",
+      "name_en": "Destroid Staging & Munitions Bay",
+      "desc_es": "Cubierta reforzada con rieles magnéticos que fijan los pesados Mechas de combate terrestre contra la gravedad cero.",
+      "desc_en": "Reinforced deck with magnetic floor clamps securing heavy Destroid combat walkers against zero-G recoil."
+    },
+    {
+      "name_es": "Puesto de Control de Operaciones Blindadas",
+      "name_en": "Armored Operations Control Center",
+      "desc_es": "Centro táctico de mando de combate terrestre y sincronización de disparo durante la maniobra Daedalus.",
+      "desc_en": "Tactical command hub synchronizing Destroid firing salvos during the Daedalus assault maneuver."
+    }
+  ],
+  "lore": {
+    "overview_es": "El SLV-111 Daedalus fue construido como un buque de desembarco anfibio pesado para transportar ejércitos enteros de tropas y blindados Destroids a través de los océanos terrestres. Atrapado en la misma catástrofe del salto hiperespacial accidental junto al SDF-1 y el Prometheus, fue recuperado de las aguas heladas de la Isla Macross transportada a Plutón y reconvertido como el brazo derecho de la fortaleza espacial.",
+    "overview_en": "The SLV-111 Daedalus was engineered as a heavy amphibious landing vessel designed to transport entire Destroid mechanized divisions across Earth's oceans. Swept into deep space by the SDF-1's accidental fold maneuver along with Prometheus, it was salvaged from the frozen waters of transported Macross Island and refitted as the space fortress's starboard arm.",
+    "tactical_analysis_es": "Cuando la pérdida del sistema de transformación del SDF-1 inhabilitó el uso convencional del Cañón Principal, la Primera Oficial Lisa Hayes ideó la maniobra más audaz de la Primera Guerra Robotech: el 'Ataque Daedalus'. Utilizando el escudo de Barrera Puntual para convertir la proa del Daedalus en un ariete invulnerable, el SDF-1 embestía las naves zentraedi abriendo sus compuertas y aniquilándolas desde sus entrañas. Esta táctica diezmó escuadrones enteros del enemigo y salvó a la tripulación en numerosas ocasiones.",
+    "tactical_analysis_en": "When the loss of the SDF-1's transformation fold links disabled normal operation of the Main Cannon, First Officer Lisa Hayes conceived the most audacious tactic of the First Robotech War: the 'Daedalus Attack'. Channeling the Pin-Point Barrier to turn the Daedalus's bow into an impervious battering ram, the SDF-1 rammed alien capital ships, swung open the bow doors, and obliterated them from the inside. This tactic devastated numerous Zentraedi warships and saved the crew on countless occasions."
+  },
+  "summary": {
+    "es": "Nave de asalto anfibio de la RDF adaptada como brazo estribor del SDF-1 Macross. Célebre por el devastador 'Ataque Daedalus', donde su proa acorazada embestía naves enemigas para disparar decenas de Destroids a quemarropa en su interior.",
+    "en": "RDF amphibious assault ship adapted as the starboard arm of the SDF-1 Macross. World-renowned for the devastating 'Daedalus Attack', ramming enemy ships to fire scores of Destroid cannons directly into their hulls."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/daedalus/daedalus_profile.jpg",
+      "title_es": "SLV-111 Daedalus - Registro Oficial de Campo",
+      "title_en": "SLV-111 Daedalus - Official Field Record",
+      "type_es": "Registro Visual",
+      "type_en": "Visual Record"
+    },
+    {
+      "url": "assets/images/naves/daedalus/daedalus_schematic.gif",
+      "title_es": "Daedalus - Esquema Técnico y Perfil Longitudinal",
+      "title_en": "Daedalus - Technical Schematic & Profile",
+      "type_es": "Esquema Técnico",
+      "type_en": "Technical Schematic"
+    }
+  ]
+}

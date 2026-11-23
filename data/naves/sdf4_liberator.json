@@ -1,0 +1,102 @@
+{
+  "id": "sdf4_liberator",
+  "name": "SDF-4 Liberator",
+  "class_name": {
+    "es": "Superfortaleza Dimensional de Batalla Clase Liberator",
+    "en": "Super Dimensional Fortress Liberator-Class"
+  },
+  "category": "fortress",
+  "faction": {
+    "es": "Fuerza Expedicionaria Robotech // Flota de Asalto Final",
+    "en": "Robotech Expeditionary Force // Final Assault Fleet"
+  },
+  "faction_logo": "assets/images/ui/Mars_Base.png",
+  "series": {
+    "es": "La Nueva Generación // The Shadow Chronicles",
+    "en": "The New Generation // The Shadow Chronicles"
+  },
+  "commissioned": "2043",
+  "commanding_officer": "General T.R. Edwards (originalmente) // Alto Mando de la Flota de Liberación",
+  "complement": "2,800 oficiales y especialistas navales + regimientos de asalto",
+  "air_group": "Más de 350 cazas de combate Shadow Alpha/Beta y divisiones de Destroids tácticos",
+  "docked_vessels": "4 cruceros Garfish integrados en bahías de soporte y múltiples transportes Horizon",
+  "thumbnail": "assets/images/naves/sdf4_liberator/sdf4_profile.png",
+  "dimensions": {
+    "length": "1,350 m",
+    "width": "460 m",
+    "height": "380 m",
+    "mass": "22,000,000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines": "6x Motores de plasma hipertermal de fusión de Protocultura pesada",
+    "fold_system": "Generador de salto dimensional hiperespacial masivo",
+    "reactor": "Matriz cuádruple de reactores nucleares de fusión catalizados por Protocultura"
+  },
+  "defenses": {
+    "armor": "Coraza multicapa reforzada con aleaciones pesadas refractarias y mamparos antichoque",
+    "shields": "Escudo deflector de energía de punto y barrera de absorción cuántica"
+  },
+  "stats": {
+    "firepower": 100,
+    "armor": 98,
+    "capacity": 96,
+    "range": 98
+  },
+  "stats_detail": {
+    "velocity": "Mach 3.5 en órbita / 0.22c en crucero estelar profundo",
+    "sensors": "Complejo de radar multiespectral, detección de resonancia de protocultura y telemetría de flota",
+    "hangar_capacity": "Gigantescas cubiertas internas de hangares con múltiples catapultas simultáneas"
+  },
+  "weapons": [
+    {
+      "name": "4 Cañones Sincrónicos Cuánticos de Capacidad Planetaria",
+      "type": "Superarmas de energía de aniquilación basadas en tecnología Shadow",
+      "range": "500,000 km",
+      "purpose": "Destrucción de fortalezas nodriza y aniquilación de colmenas enteras"
+    },
+    {
+      "name": "Bancos de Lanzamiento de Misiles de Reacción Neutrónica (Neutron-S)",
+      "type": "Ojivas de aniquilación molecular de destrucción masiva planetaria",
+      "range": "1,000,000 km",
+      "purpose": "Arma apocalíptica de último recurso para erradicar la presencia Invid en la Tierra"
+    },
+    {
+      "name": "Baterías Secundarias de Haz Pesado y Red Antiaérea Láser",
+      "type": "Decenas de cañones distribuidos por toda la superestructura",
+      "range": "80,000 km",
+      "purpose": "Defensa perimetral cerrada contra asaltos masivos"
+    }
+  ],
+  "internal_sections": [
+    {
+      "name": "Puente de Mando Supremo y Centro de Mando Táctico Global",
+      "description": "Plataforma acorazada desde donde el Alto Mando ordenó la ofensiva final y la preparación del ataque de los misiles Neutrón S."
+    },
+    {
+      "name": "Silos Blindados de Almacenamiento de Misiles Neutrón S",
+      "description": "Cámaras reforzadas con protocolos de seguridad nuclear extrema para el despliegue del arsenal de aniquilación."
+    }
+  ],
+  "lore": "El buque de guerra más colosal y aterrador jamás construido por la civilización humana. Diseñado como la fortaleza definitiva de reconquista para la Batalla de Reflex Point, el SDF-4 Liberator representaba el poderío militar absoluto de la Tierra. Fue la plataforma encargada de transportar los misiles de reacción Neutrón-S, una fuerza de aniquilación planetaria concebida para destruir a la Reina Invid incluso al costo de sacrificar el propio planeta.",
+  "summary": {
+    "es": "Superfortaleza dimensional de 1.350 m armada con cuatro cañones sincrónicos y el temible arsenal de misiles Neutrón-S. Buque insignia de la Flota de Ataque Final en la Batalla de Reflex Point.",
+    "en": "Colossal 1,350m super fortress armed with four synchro cannons and the cataclysmic Neutron-S missile payload. Supreme flagship of the Final Assault Fleet at Reflex Point."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/sdf4_liberator/sdf4_profile.png",
+      "caption": "Silueta y perfil del SDF-4 Liberator en preparación para el combate",
+      "type": "profile"
+    },
+    {
+      "url": "assets/images/naves/sdf4_liberator/sdf4_synchro.jpg",
+      "caption": "Disparo devastador de los cañones sincrónicos cuánticos en la batalla final",
+      "type": "combat"
+    },
+    {
+      "url": "assets/images/naves/sdf4_liberator/sdf4_fleet.jpg",
+      "caption": "El SDF-4 liderando la inmensa armada de la Flota Expedicionaria frente a la Tierra",
+      "type": "fleet"
+    }
+  ]
+}

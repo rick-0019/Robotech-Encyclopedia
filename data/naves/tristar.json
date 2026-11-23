@@ -1,0 +1,106 @@
+{
+  "id": "tristar",
+  "name": "Acorazado Insignia Clase Tristar",
+  "class_name": {
+    "es": "Supercrucero de Batalla Insignia Clase Tristar (UES Tristar / UES Mount Olympus)",
+    "en": "Tristar-Class Flagship Super Battleship (UES Tristar / UES Mount Olympus)"
+  },
+  "category": "cruisers",
+  "faction": {
+    "es": "Ejército de la Cruz del Sur // Flota Táctica Espacial (TASC)",
+    "en": "Army of the Southern Cross // Tactical Armored Space Corps"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Masters Saga (Second Robotech War)"
+  },
+  "commissioned": "2029",
+  "commanding_officer": "General Rolf Emerson // Comandante Supremo Anatole Leonard",
+  "complement": "850 oficiales y tripulantes + 180 pilotos y especialistas de combate espacial",
+  "air_group": "96 mechas y cazas espaciales (VF-8 Logan, VFH-10 Auroran / AGACS)",
+  "docked_vessels": "4 lanzaderas de asalto táctico suborbital",
+  "thumbnail": "assets/images/naves/tristar/tristar_profile.jpg",
+  "dimensions": {
+    "length": "450 m",
+    "width": "125 m",
+    "height": "98 m",
+    "mass": "480,000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines": "4x Motores sublumínicos de plasma iónico de alta potencia",
+    "fold_system": "Sistema de salto espacial de corto alcance Protocultura Fold Drive (inoperativo o limitado en órbita)",
+    "reactor": "Generadores gemelos de fusión termo-nuclear asistidos por celdas Protocultura"
+  },
+  "defenses": {
+    "armor": "Blindaje compuesto de aleación pesada refractaria chobham-espacial y blindaje térmico de reentrada",
+    "shields": "Generadores de campo deflector cinético localizado de proa"
+  },
+  "stats": {
+    "firepower": 88,
+    "armor": 85,
+    "capacity": 82,
+    "range": 80
+  },
+  "stats_detail": {
+    "velocity": "Mach 3.2 en atmósfera superior / 0.18c en espacio profundo",
+    "sensors": "Matriz de radar pasivo / activo hiperfrecuencia con detección infrarroja y de emisión protocultura",
+    "hangar_capacity": "2 cubiertas longitudinales de hangares con catapultas presurizadas de lanzamiento rápido"
+  },
+  "weapons": [
+    {
+      "name": "Batería Principal de Haz de Partículas Gemelas Pesadas",
+      "type": "Cañones pesados de energía de largo alcance montados en torretas blindadas de proa",
+      "range": "180,000 km",
+      "purpose": "Bombardeo antibuque contra cruceros y fortalezas alienígenas"
+    },
+    {
+      "name": "8 Torretas Láser Secundarias de Doble Tubo",
+      "type": "Láseres de alta cadencia de disparo con seguimiento computarizado",
+      "range": "40,000 km",
+      "purpose": "Defensa perimetral contra cazas enemigos, corbetas y cápsulas Bioroid"
+    },
+    {
+      "name": "16 Silos de Lanzamiento Vertical de Misiles de Crucero Espacial",
+      "type": "Misiles nucleares tácticos antibuque con guiado autónomo",
+      "range": "250,000 km",
+      "purpose": "Ataques masivos de saturación a distancia extrema"
+    }
+  ],
+  "internal_sections": [
+    {
+      "name": "Puente de Mando Táctico y C&C de Flota",
+      "description": "Centro neurálgico acorazado desde donde el General Emerson dirigió los tres asaltos mayores contra las fortalezas de los Maestros."
+    },
+    {
+      "name": "Hangares Dorsales y Catapultas AGACS",
+      "description": "Bahías con rieles magnéticos de eyección inmediata para los transformables VFH-10 Auroran (AGACS)."
+    },
+    {
+      "name": "Sala de Maquinaria y Reactores de Plasma",
+      "description": "Complejo de contención energética reforzado en el núcleo inferior de la nave."
+    }
+  ],
+  "lore": "El buque insignia definitivo de las Fuerzas de Defensa de la Tierra durante la Segunda Guerra Robotech. Diseñado específicamente para defender la órbita baja y la luna terrestre, el UES Tristar simbolizó el coraje indomable de la humanidad frente al avance tecnológico alienígena. Bajo el mando del General Rolf Emerson, el Tristar lideró ofensivas suicidas para romper el cerco gravitacional de los Maestros de la Robotech, soportando un castigo titánico antes de sucumbir heroicamente en los combates finales de la guerra.",
+  "summary": {
+    "es": "Supercrucero insignia del Ejército de la Cruz del Sur y buque de mando del General Rolf Emerson. Punta de lanza de las ofensivas orbitales terrestres contra la flota de los Maestros de la Robotech.",
+    "en": "Flagship super cruiser of the Army of the Southern Cross and command ship of General Rolf Emerson. Spearhead of Earth orbital counteroffensives against the Robotech Masters armada."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/tristar/tristar_profile.jpg",
+      "caption": "Perfil esquemático del Acorazado Clase Tristar",
+      "type": "profile"
+    },
+    {
+      "url": "assets/images/naves/tristar/tristar_fleet.jpg",
+      "caption": "El UES Tristar liderando la formación de batalla orbital",
+      "type": "combat"
+    },
+    {
+      "url": "assets/images/naves/tristar/tristar_launch.jpg",
+      "caption": "Maniobra de eyección y salida a velocidad de combate",
+      "type": "launch"
+    }
+  ]
+}

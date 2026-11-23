@@ -1,0 +1,150 @@
+{
+  "id": "chul_gautsn",
+  "name": "Fragata de Reconocimiento Clase Chul-Gautsn",
+  "class_name": {
+    "es": "Fragata de Exploración Profunda y Vigilancia de Sensores Clase Chul-Gautsn",
+    "en": "Chul-Gautsn-Class Deep-Space Scout & Reconnaissance Frigate"
+  },
+  "category": "alien",
+  "faction": {
+    "es": "Flota Imperial Zentraedi // Escuadrones de Reconocimiento Avanzado",
+    "en": "Zentraedi Imperial Fleet // Advanced Reconnaissance Squadrons"
+  },
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "commissioned": "Era Milenaria de Expansión Zentraedi",
+  "commanding_officer": {
+    "es": "Oficiales de Exploración Zentraedi // Unidad de Infiltración de Rico, Konda y Bron",
+    "en": "Zentraedi Scout Officers // Rico, Konda, and Bron Infiltration Unit"
+  },
+  "complement": {
+    "es": "Tripulación Zentraedi Especializada: ~220 oficiales de inteligencia y exploradores",
+    "en": "Specialized Zentraedi Crew: ~220 intelligence officers and scouts"
+  },
+  "air_group": {
+    "es": "24 Mechas de reconocimiento (Cápsulas Regult de sensores, cazas Gnerl de sigilo y cápsulas de descenso)",
+    "en": "24 Reconnaissance mecha (Sensor-equipped Regult pods, Gnerl scout fighters, and landing capsules)"
+  },
+  "docked_vessels": {
+    "es": "Cápsula de infiltración orbital y cámaras de miniaturización 'Micronian' a bordo",
+    "en": "Orbital infiltration pod and onboard 'Micronian' size-reduction chambers"
+  },
+  "thumbnail": "assets/images/naves/chul_gautsn/chul_scout.jpg",
+  "dimensions": {
+    "length": "500 m",
+    "width": "110 m",
+    "height": "95 m",
+    "mass": "1.200.000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines_es": "Motores Hipergravitacionales de Alta Aceleración Silenciosa y baja firma térmica",
+    "engines_en": "High-Acceleration Low-Thermal Signature Zentraedi Thrusters",
+    "fold_system_es": "Generador Hiperespacial Fold Zentraedi de Micro-Salto Táctico",
+    "fold_system_en": "Zentraedi Tactical Micro-Jump Space Fold Drive"
+  },
+  "defenses": {
+    "armor_es": "Casco biometálico con placas difusoras de radar y absorción de firmas de protocultura (32.000 C.D.M.)",
+    "armor_en": "Biometallic hull with radar-diffusing and protoculture-dampening stealth coating (32,000 MDC)",
+    "shields_es": "Generadores de contramedidas electrónicas (ECM) y pantallas de interferencia",
+    "shields_en": "Electronic countermeasure (ECM) generators and jamming screens"
+  },
+  "stats": {
+    "firepower": 55,
+    "armor": 65,
+    "capacity": 50,
+    "range": 95
+  },
+  "stats_detail": {
+    "firepower": {
+      "value": 55,
+      "label_es": "Potencia de Fuego Defensiva",
+      "label_en": "Defensive Firepower",
+      "desc_es": "Cañones ligeros de haz de partículas diseñados para autodefensa y escape rápido."
+    },
+    "armor": {
+      "value": 65,
+      "label_es": "Blindaje Ligero y Sigilo",
+      "label_en": "Light Armor & Stealth",
+      "desc_es": "Estructura estilizada orientada a la baja detectabilidad y evasión a alta velocidad."
+    },
+    "capacity": {
+      "value": 50,
+      "label_es": "Capacidad de Sensores y Espías",
+      "label_en": "Sensors & Infiltration Gear",
+      "desc_es": "Laboratorios de análisis biológico, cámaras de miniaturización y sondas espaciales."
+    },
+    "range": {
+      "value": 95,
+      "label_es": "Autonomía y Velocidad de Exploración",
+      "label_en": "Scout Range & Velocity",
+      "desc_es": "La nave más veloz y maniobrable de la flota Zentraedi, ideal para incursiones en territorio hostil."
+    }
+  },
+  "weapons": [
+    {
+      "name_es": "2 Cañones Gemelos Ligeros de Haz de Partículas",
+      "name_en": "2 Twin Light Particle Beam Cannons",
+      "damage": "850 C.D.M. por disparo",
+      "range": "45.000 km",
+      "desc_es": "Armas de defensa perimetral para repeler cazas y neutralizar satélites de vigilancia enemigos.",
+      "desc_en": "Perimeter defense weapons intended to repel strike fighters and disable surveillance satellites."
+    },
+    {
+      "name_es": "6 Baterías Antiaéreas de Plasma de Tiro Rápido",
+      "name_en": "6 Rapid-Fire Point-Defense Plasma Turrets",
+      "damage": "300 C.D.M. por andanada",
+      "range": "15.000 km",
+      "desc_es": "Torretas automatizadas para derribar misiles entrantes durante maniobras de escape.",
+      "desc_en": "Automated point-defense mounts intercepting incoming missiles during high-G evasions."
+    }
+  ],
+  "internal_sections": [
+    {
+      "name_es": "Mástil y Cúpula Sensorial Telescópica Cuántica",
+      "name_en": "Quantum Telescopic Sensor Array & Mast",
+      "desc_es": "Conjunto de antenas de barrido bio-energético capaces de detectar emisiones de protocultura a años luz.",
+      "desc_en": "Bio-energetic scanning antennas capable of detecting protoculture emissions light-years away."
+    },
+    {
+      "name_es": "Cámara de Micronización Zentraedi",
+      "name_en": "Zentraedi Micronization Chamber",
+      "desc_es": "Cámara médica donde Rico, Konda y Bron redujeron su tamaño a escala humana para infiltrarse en Macross City.",
+      "desc_en": "Medical genetic vault where Rico, Konda, and Bron shrank to human size to infiltrate Macross City."
+    },
+    {
+      "name_es": "Bahía de Lanzamiento de Sondas Hiperespaciales",
+      "name_en": "Hyperspace Probe Deployment Bay",
+      "desc_es": "Lanzadores neumáticos de boyas sensoriales para rastrear los saltos de naves enemigas.",
+      "desc_en": "Pneumatic launchers deploying sensor buoys to track enemy fold trajectories."
+    }
+  ],
+  "lore": {
+    "overview_es": "La fragata Clase Chul-Gautsn (comúnmente llamada nave exploradora Zentraedi) es una estilizada nave de 500 metros diseñada exclusivamente para misiones de reconocimiento furtivo, espionaje y detección a larga distancia. Con su perfil aerodinámico de insectoide cósmico, es la unidad más veloz y escurridiza de la flota Zentraedi.",
+    "overview_en": "The Chul-Gautsn-class frigate (commonly known as the Zentraedi Scoutship) is a sleek 500-meter vessel engineered specifically for stealth reconnaissance, intelligence gathering, and long-range tracking. Featuring an aerodynamic, insectoid silhouette, it is the fastest and most elusive unit in the Zentraedi armada.",
+    "tactical_analysis_es": "Durante la Primera Guerra Robotech, estas naves desempeñaron un papel histórico: fueron las que rastrearon al SDF-1 hasta Saturno y la Tierra, interceptaron las primeras transmisiones de televisión civil y transportaron a los tres espías Zentraedi (Rico, Konda y Bron) tras su micronización. Su reporte de que los humanos eran seres biológicos desprovistos de instinto guerrero natural que vivían abrazando el amor, la música y la cultura sacudió para siempre los cimientos del imperio Zentraedi.",
+    "tactical_analysis_en": "During the First Robotech War, these scoutships played an extraordinary historical role: tracking the SDF-1 to Saturn and Earth, intercepting the first civilian television broadcasts, and staging the micronized insertion of the three famous spies (Rico, Konda, and Bron). Their shocking report that humans were joyful cultural beings who embraced music, love, and emotion irrevocably shattered the Zentraedi worldview and catalyzed the peace movement."
+  },
+  "summary": {
+    "es": "Nave de exploración y espionaje de 500 m de la flota Zentraedi. Rastreó al SDF-1 por el sistema solar y albergó la cámara de micronización de los tres espías que descubrieron la cultura humana.",
+    "en": "Zentraedi 500m reconnaissance and scout frigate. Tracked the SDF-1 across the solar system and housed the micronization chamber for the three spies who discovered human culture."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/chul_gautsn/chul_scout.jpg",
+      "title_es": "Fragata Chul-Gautsn - Registro de Reconocimiento",
+      "title_en": "Chul-Gautsn Frigate - Reconnaissance Record",
+      "type_es": "Registro Visual",
+      "type_en": "Visual Record"
+    },
+    {
+      "url": "assets/images/naves/chul_gautsn/chul_schematic.png",
+      "title_es": "Esquema Técnico y Líneas de Sensores",
+      "title_en": "Technical Schematic & Sensor Arrays",
+      "type_es": "Esquema Técnico",
+      "type_en": "Technical Schematic"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "id": "oberth_destroyer",
+  "name": "Destructor Clase Oberth",
+  "class_name": {
+    "es": "Destructor Espacial Ligero y Crucero de Patrulla Clase Oberth",
+    "en": "Oberth-Class Light Space Destroyer & Patrol Cruiser"
+  },
+  "category": "cruisers",
+  "faction": {
+    "es": "U.N. Spacy // Fuerzas de Defensa Terrestre (RDF)",
+    "en": "U.N. Spacy // Robotech Defense Force (RDF)"
+  },
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "commissioned": "Año 2005 (Astilleros Navales de la Base Lunar y Órbita Terrestre)",
+  "commanding_officer": {
+    "es": "Comandantes de División de Destructores U.N. Spacy (Naves destacadas: Oberth, Achilles, Odysseus)",
+    "en": "U.N. Spacy Destroyer Division Commanders (Notable vessels: Oberth, Achilles, Odysseus)"
+  },
+  "complement": {
+    "es": "Tripulación Militar: ~85 oficiales y marineros espaciales",
+    "en": "Military Crew: ~85 space naval officers and crewmen"
+  },
+  "air_group": {
+    "es": "8 a 12 Cazas espaciales de patrulla (cazas convencionales F-203 o primeros prototipos de VF-1 Valkyrie) y lanzaderas auxiliares",
+    "en": "8 to 12 Spatial patrol fighters (F-203 variants or early VF-1 prototypes) and auxiliary shuttles"
+  },
+  "docked_vessels": {
+    "es": "Lanzadera de enlace y rescate biplaza en bahía ventral",
+    "en": "Two-seat liaison and rescue shuttle in ventral bay"
+  },
+  "thumbnail": "assets/images/naves/oberth_destroyer/oberth_profile.jpg",
+  "dimensions": {
+    "length": "254 m",
+    "width": "48 m",
+    "height": "44 m",
+    "mass": "48.000 toneladas métricas"
+  },
+  "propulsion": {
+    "engines_es": "2 Motores de Fusión Termonuclear de Impulso Vectorial y Sistema de Toberas Vernier",
+    "engines_en": "2 Thermonuclear Vector Fusion Engines & Vernier Reaction Thrusters",
+    "fold_system_es": "Sin propulsor Fold (Sistemas de tránsito sub-luz interplanetario en el Sistema Solar interior)",
+    "fold_system_en": "No Fold Drive (Sub-light interplanetary transit within inner Solar System)"
+  },
+  "defenses": {
+    "armor_es": "Casco de blindaje de aleación compuesta de titanio y cerámica espacial ligera (18.000 C.D.M.)",
+    "armor_en": "Lightweight space ceramic and titanium alloy composite hull (18,000 MDC)",
+    "shields_es": "Sin sistemas de barrera energética activa",
+    "shields_en": "No active energy barrier shielding"
+  },
+  "stats": {
+    "firepower": 65,
+    "armor": 60,
+    "capacity": 45,
+    "range": 68
+  },
+  "stats_detail": {
+    "firepower": {
+      "value": 65,
+      "label_es": "Potencia de Fuego de Ataque Rápido",
+      "label_en": "Rapid Attack Firepower",
+      "desc_es": "Cañones de partículas frontales de alta penetración y torpedos espaciales."
+    },
+    "armor": {
+      "value": 60,
+      "label_es": "Resistencia de Casco Ligero",
+      "label_en": "Lightweight Hull Resilience",
+      "desc_es": "Diseñado para velocidad y maniobrabilidad, vulnerable a salvas pesadas Zentraedi."
+    },
+    "capacity": {
+      "value": 45,
+      "label_es": "Capacidad de Dotación y Cazas",
+      "label_en": "Complement & Fighter Bay",
+      "desc_es": "Hangar compacto para un escuadrón reducido de cazas de intercepción."
+    },
+    "range": {
+      "value": 68,
+      "label_es": "Velocidad y Agilidad Táctica",
+      "label_en": "Tactical Speed & Agility",
+      "desc_es": "Excelente relación empuje-peso para patrulla rápida entre la Tierra, la Luna y Marte."
+    }
+  },
+  "weapons": [
+    {
+      "name_es": "2 Cañones de Haz de Partículas de Proa de Alta Energía",
+      "name_en": "2 Bow-Mounted High-Energy Particle Beam Cannons",
+      "damage": "1.200 C.D.M. por disparo frontal",
+      "range": "120 km",
+      "desc_es": "Armamento principal en línea de crujía integrado en la proa para fuego de persecución y combate de flota.",
+      "desc_en": "Centerline spinal weaponry mounted in the bow for pursuit fire and fleet combat."
+    },
+    {
+      "name_es": "4 Lanzadores de Torpedos Espaciales de Fusión Antibuque",
+      "name_en": "4 Anti-Ship Spatial Fusion Torpedo Tubes",
+      "damage": "1.800 C.D.M. por torpedo",
+      "range": "300 km",
+      "desc_es": "Torpedos teledirigidos de alto poder explosivo para hostigar a las naves nodriza enemigas.",
+      "desc_en": "Guided high-yield torpedoes for standoff bombardment against enemy vessels."
+    },
+    {
+      "name_es": "8 Torretas Láser Secundarias de Defensa Antiaérea",
+      "name_en": "8 Point-Defense Secondary Laser Turrets",
+      "damage": "150 C.D.M. por disparo",
+      "range": "12 km",
+      "desc_es": "Baterías automatizadas perimetrales para intercepción de cápsulas de asalto y cazas ligeros.",
+      "desc_en": "Automated perimeter turrets intercepting assault pods and light strike craft."
+    }
+  ],
+  "internal_sections": [
+    {
+      "name_es": "Puente de Mando Esférico Integrado",
+      "name_en": "Integrated Spherical Command Bridge",
+      "desc_es": "Cabina de pilotaje y control táctico con cúpula blindada y pantallas holográficas de tiro.",
+      "desc_en": "Armored command cupola and tactical control station with holographic targeting displays."
+    },
+    {
+      "name_es": "Bahía de Despliegue Rápido de Cazas Ventral",
+      "name_en": "Ventral Rapid Fighter Launch Bay",
+      "desc_es": "Hangar inferior con compuertas de expulsión rápida para lanzar cazas de reconocimiento e intercepción.",
+      "desc_en": "Lower hangar deck with rapid-ejection bay doors launching interceptor and scout craft."
+    },
+    {
+      "name_es": "Cámara de Reactores de Fusión y Toberas de Empuje",
+      "name_en": "Fusion Reactor Vault & Thrust Nozzles",
+      "desc_es": "Sector de popa que alberga los sistemas termonucleares que proporcionan su alta aceleración lineal.",
+      "desc_en": "Aft engineering bay housing thermonuclear systems that provide its high linear acceleration."
+    }
+  ],
+  "lore": {
+    "overview_es": "La Clase Oberth representó la primera generación de buques de combate espacial construidos por la humanidad antes de que los avances de la Robotecnología alienígena fueran plenamente asimilados. Diseñados para asegurar las rutas de navegación entre la Tierra, las colonias de la Luna y la Base Marte Sara, estos destructores compactos eran veloces, ágiles y fiables.",
+    "overview_en": "The Oberth-class represented humanity's inaugural generation of dedicated space warships constructed prior to the full assimilation of alien Robotechnology. Designed to safeguard transit routes linking Earth, lunar outposts, and Mars Base Sara, these compact destroyers were fast, agile, and dependable patrol craft.",
+    "tactical_analysis_es": "Durante la Primera Guerra Robotech, los destructores de la Clase Oberth combatieron con extraordinario heroísmo a pesar de su abrumadora desventaja tecnológica frente a las gigantescas naves Zentraedi. Destructores como el *Achilles* y el *Odysseus* intentaron emboscar a los cruceros de Khyron en la órbita de Marte y cubrieron las estaciones de alerta temprana, sacrificándose en tácticas de contención para comprar tiempo valioso para el SDF-1 y la defensa de la Tierra.",
+    "tactical_analysis_en": "During the First Robotech War, Oberth-class destroyers fought with extraordinary valor despite their immense technological disadvantage against titanic Zentraedi warships. Vessels like the *Achilles* and *Odysseus* mounted daring ambushes against Khyron's battlecruisers in Martian orbit and guarded early-warning stations, sacrificing themselves in delaying actions to buy precious time for the SDF-1 and Earth's defense."
+  },
+  "summary": {
+    "es": "Destructor espacial ligero y crucero de patrulla de la RDF. La primera generación de naves de combate espacial humanas que defendió valientemente el perímetro lunar y marciano durante la Primera Guerra Robotech.",
+    "en": "RDF light space destroyer and patrol cruiser. Humanity's first generation of space combat vessels that valiantly defended the lunar and Martian perimeters during the First Robotech War."
+  },
+  "images": [
+    {
+      "url": "assets/images/naves/oberth_destroyer/oberth_profile.jpg",
+      "title_es": "Destructor Clase Oberth - Registro Táctico Oficial",
+      "title_en": "Oberth-Class Destroyer - Official Tactical Record",
+      "type_es": "Registro Visual",
+      "type_en": "Visual Record"
+    },
+    {
+      "url": "assets/images/naves/oberth_destroyer/oberth_achilles.png",
+      "title_es": "UES Achilles en Misión de Intercepción Espacial",
+      "title_en": "UES Achilles on Spatial Interception Mission",
+      "type_es": "Pintura Oficial",
+      "type_en": "Official Art"
+    },
+    {
+      "url": "assets/images/naves/oberth_destroyer/oberth_mars.png",
+      "title_es": "UES Odysseus en Órbita de Base Marte Sara",
+      "title_en": "UES Odysseus in Orbit above Mars Base Sara",
+      "type_es": "Pintura Oficial",
+      "type_en": "Official Art"
+    }
+  ]
+}
