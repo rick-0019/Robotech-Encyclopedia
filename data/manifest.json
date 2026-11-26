@@ -168,43 +168,11 @@
       },
       "thumbnail": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
       "faction_logo": "assets/images/ui/logo_UNSpacy.png",
-      "is_variable": true,
-      "has_variants": true,
-      "variants_count": 1,
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
       "modes": {
-        "fighter": {
-          "name_es": "Modo Caza / Jet",
-          "name_en": "Fighter Mode / Jet",
-          "image": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
-          "length": "",
-          "wingspan": "",
-          "height": "",
-          "max_speed": "",
-          "notes_es": "",
-          "notes_en": ""
-        },
-        "guardian": {
-          "name_es": "Modo Guardián (Gerwalk)",
-          "name_en": "Guardian Mode (Gerwalk)",
-          "image": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
-          "length": "",
-          "wingspan": "",
-          "height": "",
-          "speed": "",
-          "notes_es": "",
-          "notes_en": ""
-        },
-        "battloid": {
-          "name_es": "Modo Battloid (Humanoide)",
-          "name_en": "Battloid Mode (Humanoid)",
-          "image": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
-          "height": "",
-          "width": "",
-          "depth": "",
-          "ground_speed": "",
-          "notes_es": "",
-          "notes_en": ""
-        }
+        "battloid": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg"
       },
       "summary": {
         "es": "El Raidar X es un mecha no transformable utilizado como unidad antiaérea a bordo del SDF-1 por la U.N. SPACY y los gobiernos terrestres locales. El Raidar X es ...",
@@ -322,12 +290,10 @@
       },
       "thumbnail": "assets/images/mechas/destroid_monster/MEC_15_1_7893_366_275_s.jpg",
       "faction_logo": "assets/images/ui/logo_UNSpacy.png",
-      "is_variable": true,
-      "has_variants": true,
-      "variants_count": 4,
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
       "modes": {
-        "fighter": "assets/images/mechas/destroid_monster/monster_profile.png",
-        "guardian": "assets/images/mechas/destroid_monster/monster_profile.png",
         "battloid": "assets/images/mechas/destroid_monster/monster_profile.png"
       },
       "summary": {

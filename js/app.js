@@ -501,9 +501,13 @@ function setupDossierModal() {
     }
   });
 
-  // Apertura directa si viene con parámetros (?mecha=vf1s_valkyrie&tab=variants)
+  // Apertura directa si viene con parámetros (?mecha=vf1s_valkyrie o ?id=vf1s_valkyrie&tab=variants)
   const urlParams = new URLSearchParams(window.location.search);
-  const mechaParam = urlParams.get('mecha');
+  const fromEpParam = urlParams.get('from_ep');
+  const returnTabParam = urlParams.get('return_tab');
+  if (fromEpParam) sessionStorage.setItem('robotech_active_episode', fromEpParam);
+  if (returnTabParam) sessionStorage.setItem('robotech_active_tab', returnTabParam);
+  const mechaParam = urlParams.get('mecha') || urlParams.get('id');
   const tabParam = urlParams.get('tab');
   if (mechaParam) {
     openDossier(mechaParam, false).then(() => {
@@ -526,10 +530,17 @@ window.switchDossierTab = function(tabId, updateHistory = true) {
     p.classList.toggle('active', p.id === tabId);
   });
 
-  // Reiniciar suavemente el scroll para que el contenido comience desde arriba sin saltos
+  // Control dinámico de scroll: en galería se ajusta al viewport sin barras innecesarias
   const scrollContainer = document.querySelector('.dossier-content-scroll');
   if (scrollContainer) {
     scrollContainer.scrollTop = 0;
+    if (tabId === 'pane-gallery') {
+      scrollContainer.style.overflowY = 'hidden';
+      scrollContainer.style.padding = '14px 24px';
+    } else {
+      scrollContainer.style.overflowY = 'auto';
+      scrollContainer.style.padding = '24px';
+    }
   }
 
   if (updateHistory && window.currentDossierMecha) {
@@ -582,6 +593,16 @@ function closeDossier(updateHistory = true) {
   if (modalBackdrop) modalBackdrop.classList.remove('open');
   document.body.style.overflow = '';
 
+  const urlParams = new URLSearchParams(window.location.search);
+  const fromEp = urlParams.get('from_ep') || sessionStorage.getItem('robotech_active_episode');
+  const returnTab = urlParams.get('return_tab') || sessionStorage.getItem('robotech_active_tab') || 'units';
+  if (fromEp) {
+    sessionStorage.removeItem('robotech_active_episode');
+    sessionStorage.removeItem('robotech_active_tab');
+    window.location.href = `episodios.html?ep=${encodeURIComponent(fromEp)}&tab=${encodeURIComponent(returnTab)}`;
+    return;
+  }
+
   if (updateHistory) {
     const cleanUrl = window.location.pathname;
     if (history.state?.modal === 'dossier') {
@@ -625,6 +646,12 @@ function populateDossierModal(m) {
   // Reset a la primera pestaña
   document.querySelectorAll('.dossier-tab-btn').forEach((b, idx) => b.classList.toggle('active', idx === 0));
   document.querySelectorAll('.tab-pane').forEach((p, idx) => p.classList.toggle('active', idx === 0));
+  const scrollContainer = document.querySelector('.dossier-content-scroll');
+  if (scrollContainer) {
+    scrollContainer.scrollTop = 0;
+    scrollContainer.style.overflowY = 'auto';
+    scrollContainer.style.padding = '24px';
+  }
 
   // 1. Tab Overview
   const manifestItem = window.appState?.manifest?.mechas?.find(item => item.id === m.id);

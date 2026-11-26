@@ -123,8 +123,8 @@
         "en": "Pop Vocalist, Cultural Icon & Key Psychological Pacification Asset"
       },
       "faction": {
-        "es": "Población Civil de Macross City // Fuerzas de Defensa Robotech",
-        "en": "Macross City Civilian Population // Robotech Defense Force"
+        "es": "",
+        "en": ""
       },
       "faction_logo": "assets/images/ui/logo_UNSpacy.png",
       "assignment": {
@@ -137,8 +137,8 @@
       },
       "thumbnail": "assets/images/personajes/lynn_minmei/minmei_movie.jpg",
       "summary": {
-        "es": "La voz que salvó a la humanidad de la extinción total. Su victoria como Miss Macross a bordo del SDF-1 impulsó una carrera musical que desarmó psicológicamente a la flota imperial Zentraedi.",
-        "en": "The voice that saved humanity from total annihilation. Crowned Miss Macross aboard the SDF-1, her musical career psychologically dismantled the Imperial Zentraedi armada."
+        "es": "La voz que salvó a la humanidad de la extinción total. Su victoria como Miss Macross a bordo del SDF-1 impulsó una carrera musical que desarmó psicoló...",
+        "en": "The voice that saved humanity from total annihilation. Crowned Miss Macross aboard the SDF-1, her musical career psychologically dismantled the Imperi..."
       },
       "stats": {
         "command": 45,
@@ -146,8 +146,7 @@
         "resolve": 90,
         "piloting": 15
       },
-      "dataFile": "data/personajes/lynn_minmei.json",
-      "generation": "gen1"
+      "dataFile": "data/personajes/lynn_minmei.json"
     },
     {
       "id": "roy_fokker",

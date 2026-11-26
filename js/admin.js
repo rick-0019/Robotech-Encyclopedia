@@ -237,9 +237,6 @@ window.toggleVariantsSection = function(forceState) {
   if (checkbox) checkbox.checked = active;
 
   section.style.display = active ? 'block' : 'none';
-  if (active && document.querySelectorAll('#mecha-variants-container .variant-admin-card').length === 0) {
-    addVariantRow();
-  }
 };
 
 window.openAssetBrowserForVariantRow = function(btn) {
@@ -655,7 +652,7 @@ async function loadMechaIntoForm(id) {
     (data.weapons || []).forEach(w => addWeaponRow(w));
 
     // Veritech / Modos de Transformación
-    const isVar = Boolean(data.is_variable || data.category === 'veritech' || (data.vehicle_type?.es && (data.vehicle_type.es.toLowerCase().includes('variable') || data.vehicle_type.es.toLowerCase().includes('transformable'))) || data.modes);
+    const isVar = Boolean(data.is_variable === true || data.category === 'veritech' || (data.vehicle_type?.es && (data.vehicle_type.es.toLowerCase().includes('variable') || data.vehicle_type.es.toLowerCase().includes('transformable'))));
     const varCheck = document.getElementById('m_is_variable');
     if (varCheck) varCheck.checked = isVar;
     toggleVariableModes(isVar);
@@ -693,11 +690,11 @@ async function loadMechaIntoForm(id) {
     // Variantes Tácticas de Producción
     const varContainer = document.getElementById('mecha-variants-container');
     if (varContainer) varContainer.innerHTML = '';
-    const hasVariants = Boolean(data.has_variants || (data.variants && data.variants.length > 0));
+    const hasVariants = Boolean(data.has_variants && Array.isArray(data.variants) && data.variants.length > 0);
     const varCheckEl = document.getElementById('m_has_variants');
     if (varCheckEl) varCheckEl.checked = hasVariants;
-    toggleVariantsSection(hasVariants || isVar);
-    if (data.variants && data.variants.length > 0) {
+    toggleVariantsSection(hasVariants);
+    if (hasVariants && data.variants) {
       data.variants.forEach(v => addVariantRow(v));
     }
 
@@ -1165,7 +1162,8 @@ function buildCurrentMechaJSON() {
     }
   });
 
-  const hasVariants = variantsList.length > 0 || Boolean(document.getElementById('m_has_variants')?.checked);
+  const varChecked = Boolean(document.getElementById('m_has_variants')?.checked);
+  const hasVariants = Boolean(varChecked && variantsList.length > 0);
 
   return {
     id: id,
@@ -1174,7 +1172,7 @@ function buildCurrentMechaJSON() {
     category: category,
     is_variable: isVariable,
     has_variants: hasVariants,
-    variants: variantsList,
+    variants: hasVariants ? variantsList : [],
     modes: modesData,
     series: { es: series_es, en: series_en },
     faction: { es: faction_es, en: faction_en },

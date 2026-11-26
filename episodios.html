@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotech Episode Archive // Bitácora Táctica SDF-1</title>
+  <link rel="icon" type="image/png" href="assets/images/ui/logo_UNSpacy.png">
+  
+  <!-- Tipografías Tácticas Futuristas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- Hojas de Estilos HUD con Cache Busting -->
+  <link rel="stylesheet" href="css/style.css?v=1.1.4">
+  <link rel="stylesheet" href="css/hud-components.css?v=1.1.4">
+</head>
+<body>
+  <!-- Borde Superior de Alerta -->
+  <div class="hud-border-top"></div>
+
+  <div class="container">
+    <!-- HEADER MILITAR TÁCTICO -->
+    <header class="tactical-header">
+      <div class="brand-section">
+        <div class="un-spacy-insignia">
+          <img src="assets/images/ui/logo_UNSpacy.png" alt="Robotech Defense Force Insignia" class="insignia-img">
+        </div>
+        <div class="brand-text">
+          <h1 data-i18n="system_title">ROBOTECH <span>EPISODE ARCHIVE</span></h1>
+          <div class="system-status">
+            <span class="status-dot"></span>
+            <span data-i18n="status_online">ONLINE // BITÁCORA OPERACIONAL SDF-1 (85 EPISODIOS)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Enlaces a Otros Módulos del Sistema -->
+        <a href="index.html" class="portal-nav-btn" style="text-decoration: none; padding: 7px 14px; background: rgba(0,240,255,0.1); border: 1px solid var(--un-cyan); color: var(--un-cyan); font-family: var(--font-hud); font-size: 0.75rem; letter-spacing: 1.5px; border-radius: 2px; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition-fast);" onmouseover="this.style.background='var(--un-cyan)'; this.style.color='#000';" onmouseout="this.style.background='rgba(0,240,255,0.1)'; this.style.color='var(--un-cyan)';">⮌ INICIO</a>
+
+        <a href="mechas.html" class="portal-nav-btn" style="text-decoration: none; padding: 7px 14px; background: rgba(255,157,0,0.1); border: 1px solid var(--skull-amber); color: var(--skull-amber); font-family: var(--font-hud); font-size: 0.75rem; letter-spacing: 1.5px; border-radius: 2px; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition-fast);" onmouseover="this.style.background='var(--skull-amber)'; this.style.color='#000';" onmouseout="this.style.background='rgba(255,157,0,0.1)'; this.style.color='var(--skull-amber)';">⌖ MECHAS</a>
+
+        <a href="personajes.html" class="portal-nav-btn" style="text-decoration: none; padding: 7px 14px; background: rgba(0,240,255,0.1); border: 1px solid var(--un-cyan); color: var(--un-cyan); font-family: var(--font-hud); font-size: 0.75rem; letter-spacing: 1.5px; border-radius: 2px; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition-fast);" onmouseover="this.style.background='var(--un-cyan)'; this.style.color='#000';" onmouseout="this.style.background='rgba(0,240,255,0.1)'; this.style.color='var(--un-cyan)';">👤 PERSONAJES</a>
+
+        <a href="naves.html" class="portal-nav-btn" style="text-decoration: none; padding: 7px 14px; background: rgba(16,185,129,0.1); border: 1px solid var(--radar-green); color: var(--radar-green); font-family: var(--font-hud); font-size: 0.75rem; letter-spacing: 1.5px; border-radius: 2px; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition-fast);" onmouseover="this.style.background='var(--radar-green)'; this.style.color='#000';" onmouseout="this.style.background='rgba(16,185,129,0.1)'; this.style.color='var(--radar-green)';">⚓ NAVES</a>
+
+        <a href="historia.html" class="portal-nav-btn" style="text-decoration: none; padding: 7px 14px; background: rgba(192,132,252,0.1); border: 1px solid #c084fc; color: #c084fc; font-family: var(--font-hud); font-size: 0.75rem; letter-spacing: 1.5px; border-radius: 2px; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition-fast);" onmouseover="this.style.background='#c084fc'; this.style.color='#000';" onmouseout="this.style.background='rgba(192,132,252,0.1)'; this.style.color='#c084fc';">📜 CRONOLOGÍA</a>
+
+        <!-- Selector Bilingüe ES / EN -->
+        <button class="lang-switch active" data-lang="es">ES</button>
+        <button class="lang-switch" data-lang="en">EN</button>
+        
+        <!-- Toggle Efectos de Sonido Web Audio API -->
+        <button class="audio-switch" id="audio-switch" data-i18n="sound_on">SFX: ON</button>
+      </div>
+    </header>
+
+    <!-- BARRA DE HERRAMIENTAS: GENERACIONES Y BÚSQUEDA -->
+    <section class="tactical-toolbar">
+      <div class="category-nav" style="width: 100%;">
+        <button class="gen-btn active" data-generation="all" data-i18n="gen_all">TODOS LOS EPISODIOS (85)</button>
+        <button class="gen-btn" data-generation="gen1" data-i18n="gen_1">1ª GEN: MACROSS (1-36)</button>
+        <button class="gen-btn" data-generation="gen2" data-i18n="gen_2">2ª GEN: MAESTROS (37-60)</button>
+        <button class="gen-btn" data-generation="gen3" data-i18n="gen_3">3ª GEN: INVASIÓN INVID (61-85)</button>
+      </div>
+
+      <div class="search-filter-box">
+        <div class="search-input-wrapper">
+          <span class="search-icon">⌕</span>
+          <input type="text" id="search-input" class="search-input" placeholder="Buscar por número, título, personaje o palabra clave..." autocomplete="off">
+        </div>
+        <div class="results-telemetry">
+          <span id="results-count" class="highlight">0 / 85</span> REGISTROS
+        </div>
+      </div>
+    </section>
+
+    <!-- GRILLA PRINCIPAL DE EPISODIOS -->
+    <main id="episodes-grid" class="mecha-grid">
+      <!-- Cargado dinámicamente mediante js/episodes.js -->
+    </main>
+  </div>
+
+  <!-- MODAL DE EXPEDIENTE / BITÁCORA TÁCTICA DE EPISODIO -->
+  <div id="episode-modal-backdrop" class="dossier-modal-backdrop">
+    <div class="dossier-modal" role="dialog" aria-modal="true">
+      <!-- Encabezado del Modal -->
+      <div class="dossier-header">
+        <div class="dossier-title-area">
+          <img id="ep-dossier-faction-logo" class="dossier-faction-logo" src="" alt="Faction Insignia" width="34" height="34" style="width:34px; height:34px; object-fit:contain;">
+          <div>
+            <h2 id="ep-dossier-title">TÍTULO DEL EPISODIO</h2>
+            <span id="ep-dossier-subtitle">// REGISTRO DE BITÁCORA OPERACIONAL</span>
+          </div>
+        </div>
+
+        <div class="dossier-actions">
+          <button id="btn-close-episode" class="btn-close-modal">✕</button>
+        </div>
+      </div>
+
+      <!-- Pestañas de Navegación del Dossier -->
+      <nav class="dossier-tabs">
+        <button class="dossier-tab-btn active" data-tab="ep-pane-debrief" data-i18n="tab_debrief">INFORME TÁCTICO Y SINOPSIS</button>
+        <button class="dossier-tab-btn" data-tab="ep-pane-characters" data-i18n="tab_characters">PERSONAL INVOLUCRADO</button>
+        <button class="dossier-tab-btn" data-tab="ep-pane-units" data-i18n="tab_units">UNIDADES Y NAVES</button>
+        <button class="dossier-tab-btn" data-tab="ep-pane-gallery" data-i18n="tab_gallery">ARCHIVOS VISUALES</button>
+      </nav>
+
+      <div class="dossier-content-scroll">
+        <!-- 1. Informe Táctico y Sinopsis -->
+        <div id="ep-pane-debrief" class="tab-pane active">
+          <div id="ep-debrief-content"></div>
+        </div>
+
+        <!-- 2. Personal Involucrado -->
+        <div id="ep-pane-characters" class="tab-pane">
+          <div id="ep-characters-content"></div>
+        </div>
+
+        <!-- 3. Unidades y Naves -->
+        <div id="ep-pane-units" class="tab-pane">
+          <div id="ep-units-content"></div>
+        </div>
+
+        <!-- 4. Galería Visual (Espejo) -->
+        <div id="ep-pane-gallery" class="tab-pane">
+          <!-- Renderizado dinámicamente -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX PARA AMPLIACIÓN FULL SCREEN -->
+  <div id="lightbox-backdrop" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.95); z-index:1200; align-items:center; justify-content:center; flex-direction:column; padding:20px; cursor:zoom-out;">
+    <img id="lightbox-image" src="" style="max-width:92vw; max-height:85vh; border:2px solid var(--un-cyan); border-radius:4px; box-shadow:0 0 30px rgba(0,240,255,0.4);" alt="Lightbox">
+    <div id="lightbox-caption" style="margin-top:14px; color:#fff; font-family:var(--font-hud); letter-spacing:1.5px; font-size:1rem; text-shadow:0 0 8px var(--un-cyan);"></div>
+  </div>
+
+  <!-- Motores JavaScript con Cache Busting -->
+  <script src="js/audio.js?v=1.1.4"></script>
+  <script src="js/episodes.js?v=1.0.5"></script>
+</body>
+</html>

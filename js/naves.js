@@ -480,6 +480,16 @@ function closeShipDossier(updateHistory = true) {
     document.body.style.overflow = '';
   }
 
+  const urlParams = new URLSearchParams(window.location.search);
+  const fromEp = urlParams.get('from_ep') || sessionStorage.getItem('robotech_active_episode');
+  const returnTab = urlParams.get('return_tab') || sessionStorage.getItem('robotech_active_tab') || 'units';
+  if (fromEp) {
+    sessionStorage.removeItem('robotech_active_episode');
+    sessionStorage.removeItem('robotech_active_tab');
+    window.location.href = `episodios.html?ep=${encodeURIComponent(fromEp)}&tab=${encodeURIComponent(returnTab)}`;
+    return;
+  }
+
   if (updateHistory) {
     const cleanUrl = window.location.pathname;
     if (history.state?.modal === 'ship-dossier') {
@@ -869,9 +879,13 @@ function setupModalEvents() {
     }
   });
 
-  // Apertura directa por URL (?ship=sdf_01_macross)
+  // Apertura directa por URL (?ship=sdf1_macross o ?nave=sdf1_macross)
   const urlParams = new URLSearchParams(window.location.search);
-  const shipParam = urlParams.get('ship');
+  const fromEpParam = urlParams.get('from_ep');
+  const returnTabParam = urlParams.get('return_tab');
+  if (fromEpParam) sessionStorage.setItem('robotech_active_episode', fromEpParam);
+  if (returnTabParam) sessionStorage.setItem('robotech_active_tab', returnTabParam);
+  const shipParam = urlParams.get('ship') || urlParams.get('nave');
   const tabParam = urlParams.get('tab');
   if (shipParam) {
     openShipDossier(shipParam, false).then(() => {

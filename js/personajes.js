@@ -380,6 +380,16 @@ function closeCharDossier(updateHistory = true) {
   if (modalBackdrop) modalBackdrop.classList.remove('open');
   document.body.style.overflow = '';
 
+  const urlParams = new URLSearchParams(window.location.search);
+  const fromEp = urlParams.get('from_ep') || sessionStorage.getItem('robotech_active_episode');
+  const returnTab = urlParams.get('return_tab') || sessionStorage.getItem('robotech_active_tab') || 'characters';
+  if (fromEp) {
+    sessionStorage.removeItem('robotech_active_episode');
+    sessionStorage.removeItem('robotech_active_tab');
+    window.location.href = `episodios.html?ep=${encodeURIComponent(fromEp)}&tab=${encodeURIComponent(returnTab)}`;
+    return;
+  }
+
   if (updateHistory) {
     const cleanUrl = window.location.pathname;
     if (history.state?.modal === 'char-dossier') {
@@ -727,9 +737,13 @@ function setupModalEvents() {
     }
   });
 
-  // Apertura directa por URL (?char=rick_hunter)
+  // Apertura directa por URL (?char=rick_hunter o ?id=rick_hunter)
   const urlParams = new URLSearchParams(window.location.search);
-  const charParam = urlParams.get('char');
+  const fromEpParam = urlParams.get('from_ep');
+  const returnTabParam = urlParams.get('return_tab');
+  if (fromEpParam) sessionStorage.setItem('robotech_active_episode', fromEpParam);
+  if (returnTabParam) sessionStorage.setItem('robotech_active_tab', returnTabParam);
+  const charParam = urlParams.get('char') || urlParams.get('id');
   const tabParam = urlParams.get('tab');
   if (charParam) {
     openCharDossier(charParam, false).then(() => {

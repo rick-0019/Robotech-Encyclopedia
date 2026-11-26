@@ -424,12 +424,12 @@
   background: rgba(8, 16, 30, 0.95);
   border-bottom: 1px solid rgba(0, 240, 255, 0.2);
   overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .dossier-tabs::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none;
 }
 
 .dossier-tab-btn {
@@ -438,10 +438,10 @@
   border-bottom: 2px solid transparent;
   color: var(--text-muted);
   font-family: var(--font-hud);
-  font-size: 0.74rem;
-  padding: 12px 16px;
+  font-size: 0.72rem;
+  padding: 11px 15px;
   cursor: pointer;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   white-space: nowrap;
   transition: var(--transition-fast);
@@ -498,6 +498,20 @@
   display: block;
   opacity: 1;
   animation: tabFadeIn 0.22s ease-out forwards;
+}
+
+#pane-gallery {
+  height: 100%;
+}
+
+#pane-gallery.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.dossier-content-scroll:has(#pane-gallery.active) {
+  overflow-y: hidden;
+  padding: 16px 24px;
 }
 
 @keyframes tabFadeIn {
@@ -741,18 +755,22 @@
 .tactical-carousel {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   background: rgba(4, 9, 18, 0.7);
   border: 1px solid var(--border-tactical);
   border-radius: 4px;
-  padding: 16px;
+  padding: 12px;
   position: relative;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .carousel-viewport {
   position: relative;
   width: 100%;
-  height: 480px;
+  flex: 1;
+  min-height: 260px;
+  height: clamp(260px, 46vh, 420px);
   background: #020610;
   border: 1px solid rgba(0, 240, 255, 0.2);
   border-radius: 3px;

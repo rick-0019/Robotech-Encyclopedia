@@ -47,6 +47,14 @@ const PORTAL_I18N = {
     col_04_status: "EN LÍNEA // CRONOLOGÍA COMPLETA",
     col_04_btn: "EXPLORAR LÍNEA TEMPORAL →",
 
+    // Columna 05: Episodios
+    col_05_tag: "SECTOR 05 // OPERATIVO",
+    col_05_title: "BITÁCORA DE EPISODIOS",
+    col_05_sub: "85 CAPÍTULOS · 3 GENERACIONES",
+    col_05_desc: "Registro de misiones completo con informes tácticos, personal involucrado, despliegue de mechas y capturas visuales en perspectiva espejo.",
+    col_05_status: "EN LÍNEA // 85 EPISODIOS REGISTRADOS",
+    col_05_btn: "ACCEDER A LA BITÁCORA →",
+
     // Toast
     toast_title: "ACCESO RESTRINGIDO // SECTOR EN PREPARACIÓN",
     toast_msg: "Este sector está listo para recibir fotos y datos. Agrega tus imágenes en la carpeta correspondiente para habilitarlo."
@@ -93,6 +101,14 @@ const PORTAL_I18N = {
     col_04_desc: "Ultra-detailed interactive timeline: From the crash of Zor's fortress on Earth to the climax of The Shadow Chronicles.",
     col_04_status: "ONLINE // COMPLETE TIMELINE",
     col_04_btn: "EXPLORE WAR TIMELINE →",
+
+    // Columna 05: Episodios (English)
+    col_05_tag: "SECTOR 05 // OPERATIONAL",
+    col_05_title: "EPISODE LOGBOOK",
+    col_05_sub: "85 EPISODES · 3 GENERATIONS",
+    col_05_desc: "Complete operational mission logs with tactical debriefs, notable personnel, combat units deployed, and visual archives in mirrored perspective.",
+    col_05_status: "ONLINE // 85 LOGGED EPISODES",
+    col_05_btn: "OPEN MISSION LOGS →",
 
     // Toast
     toast_title: "RESTRICTED ACCESS // SECTOR IN PREPARATION",

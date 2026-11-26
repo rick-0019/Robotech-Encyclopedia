@@ -13,8 +13,8 @@
   },
   "category": "scientists",
   "faction": {
-    "es": "Población Civil de Macross City // Fuerzas de Defensa Robotech",
-    "en": "Macross City Civilian Population // Robotech Defense Force"
+    "es": "",
+    "en": ""
   },
   "faction_logo": "assets/images/ui/logo_UNSpacy.png",
   "series": {
@@ -46,29 +46,29 @@
       "url": "assets/images/personajes/lynn_minmei/minmei_red_dress.jpg",
       "title_es": "En Concierto - El Legendario Vestido Rojo",
       "title_en": "Live Concert - The Iconic Red Dress Performance",
-      "type_es": "Concierto Táctico",
-      "type_en": "Tactical Concert"
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
     },
     {
       "url": "assets/images/personajes/lynn_minmei/minmei_from_the_stars.png",
       "title_es": "Gira Galáctica - Retrato Clásico de Estudio",
       "title_en": "Galactic Tour - Classic Studio Portrait",
-      "type_es": "Archivo Histórico",
-      "type_en": "Historical Archive"
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
     },
     {
       "url": "assets/images/personajes/lynn_minmei/minmei_and_janice.jpg",
       "title_es": "Dueto con Janice Em - Misión Pionera REF",
       "title_en": "Duet with Janice Em - REF Pioneer Mission",
-      "type_es": "Expansión REF",
-      "type_en": "REF Era"
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
     },
     {
       "url": "assets/images/personajes/lynn_minmei/minmei_robotech2.jpg",
       "title_es": "Minmei - Era Robotech II: The Sentinels",
       "title_en": "Minmei - Robotech II: The Sentinels Era",
-      "type_es": "Misión Sentinels",
-      "type_en": "Sentinels Mission"
+      "type_es": "Retrato Oficial",
+      "type_en": "Official Portrait"
     }
   ],
   "summary": {
@@ -86,25 +86,25 @@
       "value": 45,
       "label_es": "Mando y Liderazgo Táctico",
       "label_en": "Command & Tactical Leadership",
-      "desc_es": "Sin formación militar formal; su liderazgo emana de su magnetismo mediático y carisma civil."
+      "desc_es": "Capacidad para comandar flotas y operaciones tácticas a gran escala."
     },
     "strategy": {
       "value": 55,
       "label_es": "Estrategia e Inteligencia Militar",
       "label_en": "Strategic Intelligence & Planning",
-      "desc_es": "Comprensión intuitiva del impacto de sus canciones sobre las masas y la psicología del enemigo."
+      "desc_es": "Maestría en análisis balístico, predicción de movimientos y logística bélica."
     },
     "resolve": {
       "value": 90,
       "label_es": "Resolución y Templanza bajo Fuego",
       "label_en": "Poise & Crisis Resolution",
-      "desc_es": "Cantó en vivo en el puente de mando mientras miles de naves enemigas disparaban sobre la nave."
+      "desc_es": "Serenidad mental y toma de decisiones crítica en condiciones extremas."
     },
     "piloting": {
       "value": 15,
       "label_es": "Habilidad de Vuelo y Pilotaje",
       "label_en": "Flight & Piloting Proficiency",
-      "desc_es": "Pasajera civil; no cuenta con instrucción de pilotaje aeroespacial ni mechas."
+      "desc_es": "Aptitud de pilotaje de cazas aeroespaciales y maniobras de evasión."
     }
   },
   "stats": {
@@ -145,40 +145,6 @@
       "assignment_en": "Enlists in REF Pioneer Mission aboard the SDF-3 departing for Tirol"
     }
   ],
-  "relationships": [
-    {
-      "character": "Rick Hunter",
-      "relation_es": "Amigo entrañable, primer amor y protector; vínculo marcado por la guerra y caminos divergentes.",
-      "relation_en": "Cherished friend, first love, and guardian; bond forever altered by warfare and divergent paths."
-    },
-    {
-      "character": "Lisa Hayes",
-      "relation_es": "Rival afectiva inicial que devino en respeto mutuo y gratitud histórica por la salvación de la Tierra.",
-      "relation_en": "Initial romantic rival evolving into deep mutual respect and gratitude for the salvation of Earth."
-    },
-    {
-      "character": "Lynn Kyle",
-      "relation_es": "Primo, manager y compañero de dueto; relación tormentosa por el pacifismo fanático de Kyle.",
-      "relation_en": "Cousin, manager, and stage partner; turbulent relationship strained by Kyle's fanatical pacifism."
-    },
-    {
-      "character": "Roy Fokker",
-      "relation_es": "Figura fraterna y protectora; la animó en sus primeros pasos como cantante en el SDF-1.",
-      "relation_en": "Protective older-brother figure who encouraged her early singing ambitions aboard the SDF-1."
-    }
-  ],
-  "key_quotes": [
-    {
-      "quote_es": "Mi novio es un piloto... pero mi música pertenece a todos los que miran a las estrellas.",
-      "quote_en": "My boyfriend is a pilot... but my music belongs to everyone looking at the stars.",
-      "context_es": "Concierto a bordo del SDF-1 durante la travesía desde Júpiter.",
-      "context_en": "Live concert aboard SDF-1 during the voyage inbound from Jupiter."
-    },
-    {
-      "quote_es": "¡Rick, por favor vuelve a salvo! Si tú no regresas, ¿para quién voy a cantar?",
-      "quote_en": "Rick, please come back safe! If you don't return, who am I going to sing for?",
-      "context_es": "Antes del despliegue del Escuadrón Skull en la batalla contra Bodolza.",
-      "context_en": "Prior to Skull Squadron's sortie in the climactic battle against Bodolza."
-    }
-  ]
+  "relationships": [],
+  "decorations": []
 }
