@@ -217,5 +217,6 @@
       "description_es": "Capaz de fijar y seguir hasta 48 blancos simultáneamente mediante escáner óptico y radar Doppler.",
       "description_en": "Capable of locking and tracking up to 48 targets simultaneously via optical scanner and Doppler radar."
     }
-  ]
+  ],
+  "generation": "gen1"
 }

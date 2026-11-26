@@ -178,5 +178,6 @@
       "description_es": "Montado en la cabeza para adquisición de blancos a larga distancia.",
       "description_en": "Head-mounted for long distance target acquisition."
     }
-  ]
+  ],
+  "generation": "gen1"
 }

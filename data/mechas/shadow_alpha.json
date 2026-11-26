@@ -1,0 +1,155 @@
+{
+  "id": "shadow_alpha",
+  "name": "Shadow Alpha Fighter",
+  "alias": "VF/A-6X Shadow Fighter",
+  "category": "veritech",
+  "generation": "gen3",
+  "is_variable": true,
+  "modes": {
+    "fighter": "assets/images/mechas/shadow_alpha/shadow_alpha_profile.jpg",
+    "guardian": "assets/images/mechas/shadow_alpha/shadow_alpha_profile.jpg",
+    "battloid": "assets/images/mechas/shadow_alpha/shadow_alpha_battloid.jpg"
+  },
+  "series": {
+    "es": "Robotech: The Shadow Chronicles",
+    "en": "Robotech: The Shadow Chronicles"
+  },
+  "faction": {
+    "es": "Fuerza Expedicionaria Robotech // Escuadrones de Operaciones Furtivas",
+    "en": "Robotech Expeditionary Force // Stealth Operations Wings"
+  },
+  "vehicle_type": {
+    "es": "Caza Transformable Furtivo de Quinta Generación con Camuflaje Cuántico",
+    "en": "Fifth-Generation Stealth Transformable Fighter with Quantum Cloak"
+  },
+  "crew": {
+    "es": "1 piloto (Marcus Rush, Maia Sterling, Alex Romero)",
+    "en": "1 pilot (Marcus Rush, Maia Sterling, Alex Romero)"
+  },
+  "thumbnail": "assets/images/mechas/shadow_alpha/shadow_alpha_profile.jpg",
+  "faction_logo": "assets/images/ui/Mars_Base.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/shadow_alpha/shadow_alpha_profile.jpg",
+      "title_es": "VF/A-6X Shadow Fighter en Modo Caza Furtivo",
+      "title_en": "VF/A-6X Shadow Fighter in Stealth Fighter Mode",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/shadow_alpha/shadow_alpha_battloid.jpg",
+      "title_es": "Modo Battloid con revestimiento negro absorbente de radar",
+      "title_en": "Battloid mode with radar-absorbent matte black coating",
+      "type": "action"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 4600,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 98,
+      "label_es": "Mach 3.8 en atmósfera superior",
+      "label_en": "Mach 3.8 high atmosphere"
+    },
+    "armor": {
+      "value": 280,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 56,
+      "label_es": "280 C.D.M. Compuesto Furtivo Shadow",
+      "label_en": "280 M.D.C. Shadow Stealth Composite"
+    },
+    "firepower": {
+      "value": 96,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 96,
+      "label_es": "96 Pts (Cañón Sincrónico Shadow y 60 Misiles)",
+      "label_en": "96 Pts (Shadow Synchro Cannon & 60 Missiles)"
+    },
+    "range": {
+      "value": 20.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 50,
+      "label_es": "20 km alcance",
+      "label_en": "20 km range"
+    },
+    "sensors": {
+      "value": 310,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 88,
+      "label_es": "310 km Sensores Pasivos Cuánticos",
+      "label_en": "310 km Quantum Passive Sensors"
+    },
+    "mobility": {
+      "value": 99,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 99,
+      "label_es": "99 Pts (Invisibilidad sensorial completa ante Invid)",
+      "label_en": "99 Pts (Complete sensor invisibility to Invid)"
+    }
+  },
+  "dimensions": {
+    "height": "4.60 m (Caza) / 8.75 m (Battloid)",
+    "width": "8.20 m",
+    "length": "10.25 m",
+    "mass": "17.1 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Turbinas Termonucleares Gemelas con Supresor de Firma Shadow Haydonita",
+    "output": "4,500 shp"
+  },
+  "lore": {
+    "overview_es": "La cúspide tecnológica de la Fuerza Expedicionaria Robotech al final de la Tercera Guerra. El Shadow Alpha incorpora la tecnología furtiva Shadow cedida por los misteriosos Haydonitas, la cual neutraliza por completo la emisión de radiación de Protocultura, haciendo al caza 100% invisible para los sensores biológicos y de enjambre de los mechas Invid.",
+    "overview_en": "The pinnacle of REF aerospace engineering at the close of the Third War. The Shadow Alpha incorporates Haydonite-designed Shadow cloaking technology that completely masks all Protoculture radiation signatures, rendering the fighter totally invisible to Invid biosensors.",
+    "history_es": "Pilotado por la Comandante Maia Sterling y el Escuadrón Skull durante la gran Batalla de Reflex Point, fue fundamental para diezmar las defensas Invid antes del descubrimiento de la traición Haydonita.",
+    "history_en": "Flown by Commander Maia Sterling and Skull Squadron during the Battle of Reflex Point, it spearheaded the offensive until the Haydonite betrayal was uncovered."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Cuerpo Principal (*)",
+      "location_en": "Main Body (*)",
+      "mdc": 280
+    },
+    {
+      "location_es": "Cabina Reforzada con Pantalla Holográfica",
+      "location_en": "Reinforced Cockpit with HUD",
+      "mdc": 150
+    },
+    {
+      "location_es": "Cañón Sincrónico de Haz de Hombro",
+      "location_en": "Shoulder Synchro Beam Cannon",
+      "mdc": 130
+    },
+    {
+      "location_es": "Alas de Geometría Variable Furtivas (2)",
+      "location_en": "Variable-Geometry Stealth Wings (2)",
+      "mdc": 110
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañón Sincrónico Cuántico de Haz Concentrado",
+      "name_en": "Quantum Synchro Beam Gunpod",
+      "damage": "1D6x10 por descarga",
+      "range": "3.8 km"
+    },
+    {
+      "name_es": "60 Micromisiles Furtivos Guiados por Imagen Infrarroja",
+      "name_en": "60 Stealth Infrared-Guided Micro-Missiles",
+      "damage": "2D6x10 por salva de 6",
+      "range": "18 km"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Dispositivo de camuflaje de firma Protocultura (Shadow Cloaking Device) que oculta la nave ante radares convencionales y receptores biológicos alienígenas.",
+      "description_en": "Shadow Cloaking Device masking all protoculture emissions from conventional radar and alien biosensors."
+    }
+  ]
+}

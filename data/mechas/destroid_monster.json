@@ -1,0 +1,256 @@
+{
+  "id": "destroid_monster",
+  "name": "Monster",
+  "alias": "HWR-00-Mk II Monster",
+  "category": "destroid",
+  "is_variable": true,
+  "has_variants": true,
+  "variants": [
+    {
+      "id": "vf-1",
+      "model_code": "VF-1",
+      "name_es": "VF-1",
+      "name_en": "VF-1",
+      "role_es": "",
+      "role_en": "",
+      "crew_es": "1 Piloto (Monoplaza)",
+      "crew_en": "1 Pilot (Single seat)",
+      "head_lasers": {
+        "count": 1,
+        "description_es": "",
+        "description_en": ""
+      },
+      "color_scheme": {
+        "name_es": "",
+        "name_en": "",
+        "primary_color": "#8c6239",
+        "secondary_color": "#ffffff"
+      },
+      "pilots": [],
+      "image": "",
+      "description_es": "",
+      "description_en": "",
+      "speed": "Mach 2.71 (3.870 km/h a 10.000m)",
+      "armor": "C.D.M. Estándar de Fábrica",
+      "firepower": "Estándar"
+    },
+    {
+      "id": "vf-1",
+      "model_code": "VF-1",
+      "name_es": "VF-1",
+      "name_en": "VF-1",
+      "role_es": "",
+      "role_en": "",
+      "crew_es": "1 Piloto (Monoplaza)",
+      "crew_en": "1 Pilot (Single seat)",
+      "head_lasers": {
+        "count": 1,
+        "description_es": "",
+        "description_en": ""
+      },
+      "color_scheme": {
+        "name_es": "",
+        "name_en": "",
+        "primary_color": "#8c6239",
+        "secondary_color": "#ffffff"
+      },
+      "pilots": [],
+      "image": "",
+      "description_es": "",
+      "description_en": "",
+      "speed": "Mach 2.71 (3.870 km/h a 10.000m)",
+      "armor": "C.D.M. Estándar de Fábrica",
+      "firepower": "Estándar"
+    }
+  ],
+  "modes": {
+    "fighter": {
+      "name_es": "Modo Caza / Jet",
+      "name_en": "Fighter Mode / Jet",
+      "image": "assets/images/mechas/destroid_monster/monster_profile.png",
+      "length": "",
+      "wingspan": "",
+      "height": "",
+      "max_speed": "",
+      "notes_es": "",
+      "notes_en": ""
+    },
+    "guardian": {
+      "name_es": "Modo Guardián (Gerwalk)",
+      "name_en": "Guardian Mode (Gerwalk)",
+      "image": "assets/images/mechas/destroid_monster/monster_profile.png",
+      "length": "",
+      "wingspan": "",
+      "height": "",
+      "speed": "",
+      "notes_es": "",
+      "notes_en": ""
+    },
+    "battloid": {
+      "name_es": "Modo Battloid (Humanoide)",
+      "name_en": "Battloid Mode (Humanoid)",
+      "image": "assets/images/mechas/destroid_monster/monster_profile.png",
+      "height": "",
+      "width": "",
+      "depth": "",
+      "ground_speed": "",
+      "notes_es": "",
+      "notes_en": ""
+    }
+  },
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "faction": {
+    "es": "U.N. Spacy",
+    "en": "U.N. Spacy"
+  },
+  "vehicle_type": {
+    "es": "Destroid Antiaéreo No Transformable",
+    "en": "Non-Transformable Anti-Aircraft Destroid"
+  },
+  "crew": {
+    "es": "3 tripulantes (Comandante, Conductor/Piloto y Artillero de Cañones Principales)",
+    "en": "3 tripulantes (Comandante, Conductor/Piloto y Artillero de Cañones Principales)"
+  },
+  "thumbnail": "assets/images/mechas/destroid_monster/monster_profile.png",
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/destroid_monster/MEC_15_1_7893_366_275_s.jpg",
+      "title_es": "Silueta y cañones colosales del HWR-00 Monster",
+      "title_en": "Profile and colossal cannons of the HWR-00 Monster",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/destroid_monster/monster_anime.jpg",
+      "title_es": "El Monster desplegado en New Macross City durante la defensa final",
+      "title_en": "Monster deployed in New Macross City during final defense",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/destroid_monster/MEC_15_4_8085_366_275_s.jpg",
+      "title_es": "El Destroid Monster da un paso",
+      "title_en": "Armored cockpit for the three-officer crew",
+      "type": "render"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 48,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 16,
+      "label_es": "48 km/h",
+      "label_en": "48 km/h"
+    },
+    "armor": {
+      "value": 550,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 100,
+      "label_es": "550 C.D.M. Cuerpo",
+      "label_en": "550 M.D.C. Main Body"
+    },
+    "firepower": {
+      "value": 100,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 100,
+      "label_es": "100 Pts",
+      "label_en": "100 Pts"
+    },
+    "range": {
+      "value": 160,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 100,
+      "label_es": "160 km",
+      "label_en": "160 km"
+    },
+    "sensors": {
+      "value": 210,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 60,
+      "label_es": "210 km Radar",
+      "label_en": "210 km Radar"
+    },
+    "mobility": {
+      "value": 18,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 18,
+      "label_es": "18 Pts",
+      "label_en": "18 Pts"
+    }
+  },
+  "dimensions": {
+    "height": {
+      "metric": ""
+    },
+    "weight": {
+      "metric": ""
+    }
+  },
+  "powerplant": {
+    "engine_es": "",
+    "engine_en": ""
+  },
+  "lore": {
+    "overview_es": "El artefacto terrestre móvil terrestre más colosal de la Primera Guerra Robotech. Con más de 22 metros de altura y un peso que supera las 285 toneladas, el HWR-00 Monster es una fortaleza de artillería andante dotada de cuatro cañones de 400mm que disparan proyectiles explosivos capaces de pulverizar naves de desembarco alienígenas enteras a más de 100 kilómetros de distancia.",
+    "overview_en": "The most colossal mobile ground combat unit of the First Robotech War. Standing over 22 meters tall and weighing over 285 metric tons, the HWR-00 Monster is a walking artillery fortress armed with four 400mm cannons firing heavy explosive shells that can pulverize alien landing ships over 100 kilometers away.",
+    "tactical_analysis_es": "",
+    "tactical_analysis_en": ""
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Casco Principal de la Fortaleza (*)",
+      "location_en": "Main Fortress Hull (*)",
+      "mdc": 550
+    },
+    {
+      "location_es": "Cañones de Artillería de 400mm (4)",
+      "location_en": "400mm Artillery Cannons (4)",
+      "mdc": 200
+    },
+    {
+      "location_es": "Lanzadores de Misiles Pesados de Brazo (2)",
+      "location_en": "Heavy Arm Missile Pods (2)",
+      "mdc": 180
+    },
+    {
+      "location_es": "Cabina Blindada de Comando",
+      "location_en": "Armored Command Bridge",
+      "mdc": 240
+    },
+    {
+      "location_es": "Pilares de Piernas Hidráulicas (2)",
+      "location_en": "Hydraulic Leg Pillars (2)",
+      "mdc": 350
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "4 Cañones Pesados de Artillería Viggers de 400mm (40 cm)",
+      "name_en": "4x Viggers 400mm Heavy Artillery Cannons",
+      "damage": "4D6x10 por proyectil / 2D4x100 salva completa",
+      "range": "160 km"
+    },
+    {
+      "name_es": "2 Lanzaderas de Misiles de Asalto LSS-6 (6 misiles pesados de crucero)",
+      "name_en": "2x LSS-6 Heavy Assault Missile Launchers (6 heavy cruise missiles)",
+      "damage": "1D6x100 por misil",
+      "range": "80 km"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Patas con anclaje geotécnico electromagnético para absorber el retroceso de 400mm, ordenador balístico con enlace satelital orbital.",
+      "description_en": "Geotechnical electromagnetic ground clamps for 400mm recoil absorption, ballistic computer with orbital satellite link."
+    }
+  ]
+}

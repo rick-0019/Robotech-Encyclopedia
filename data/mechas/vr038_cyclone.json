@@ -1,0 +1,149 @@
+{
+  "id": "vr038_cyclone",
+  "name": "VR-038 Bartley Cyclone",
+  "alias": "VR-038L Bartley Recon Cyclone Ligero",
+  "category": "veritech",
+  "generation": "gen3",
+  "is_variable": true,
+  "modes": {
+    "fighter": "assets/images/mechas/vr038_cyclone/vr038_cycle.jpg",
+    "battloid": "assets/images/mechas/vr038_cyclone/vr038_profile.jpg"
+  },
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "faction": {
+    "es": "Fuerza Expedicionaria Robotech // Resistencia Terrestre // Rook Bartley",
+    "en": "Robotech Expeditionary Force // Earth Resistance // Rook Bartley"
+  },
+  "vehicle_type": {
+    "es": "Motocicleta Transformable Ligera de Reconocimiento y Escolta Femenina",
+    "en": "Lightweight Reconnaissance & Escort Transformable Motorcycle"
+  },
+  "crew": {
+    "es": "1 piloto (Rook Bartley)",
+    "en": "1 pilot (Rook Bartley)"
+  },
+  "thumbnail": "assets/images/mechas/vr038_cyclone/vr038_profile.jpg",
+  "faction_logo": "assets/images/ui/Mars_Base.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/vr038_cyclone/vr038_profile.jpg",
+      "title_es": "VR-038L Cyclone de Rook Bartley en Modo Armadura",
+      "title_en": "Rook Bartley's VR-038L Cyclone in Armor Mode",
+      "type": "armor"
+    },
+    {
+      "url": "assets/images/mechas/vr038_cyclone/vr038_cycle.jpg",
+      "title_es": "Modo Motocicleta ligera de alta velocidad",
+      "title_en": "Lightweight high-speed Motorcycle Mode",
+      "type": "vehicle"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 270,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 52,
+      "label_es": "270 km/h (El Cyclone más veloz)",
+      "label_en": "270 km/h (Fastest Cyclone)"
+    },
+    "armor": {
+      "value": 100,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 20,
+      "label_es": "100 C.D.M. Chasis Ultraligero",
+      "label_en": "100 M.D.C. Ultralight Chassis"
+    },
+    "firepower": {
+      "value": 72,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 72,
+      "label_es": "72 Pts (Lanzaderas RL-6 y Gallant)",
+      "label_en": "72 Pts (RL-6 Launchers & Gallant)"
+    },
+    "range": {
+      "value": 4.5,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 20,
+      "label_es": "4.5 km alcance",
+      "label_en": "4.5 km range"
+    },
+    "sensors": {
+      "value": 60,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 35,
+      "label_es": "60 km Radar de Exploración Rápida",
+      "label_en": "60 km Scout Radar"
+    },
+    "mobility": {
+      "value": 100,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 100,
+      "label_es": "100 Pts (Aceleración y maniobrabilidad récord)",
+      "label_en": "100 Pts (Record acceleration & handling)"
+    }
+  },
+  "dimensions": {
+    "height": "1.00 m / 1.95 m",
+    "width": "0.85 m",
+    "length": "2.05 m",
+    "mass": "98 kg"
+  },
+  "powerplant": {
+    "type": "Generador Ultraligero de Protocultura P-11",
+    "output": "310 shp"
+  },
+  "lore": {
+    "overview_es": "Diseñado originalmente para operadores de contextura más pequeña y misiones de reconocimiento rápido, el VR-038L Bartley reduce el peso del bastidor en un 15%, lo que le permite alcanzar una velocidad punta superior a 270 km/h y una maniobrabilidad asombrosa tanto en carretera como en campo abierto.",
+    "overview_en": "Engineered for smaller-stature operators and rapid scout missions, the VR-038L Bartley sheds 15% chassis weight, allowing it to hit top speeds exceeding 270 km/h with peerless cornering and acceleration.",
+    "history_es": "Fue la montura de combate indiscutible de Rook Bartley, permitiéndole flanquear y atraer el fuego de patrullas enteras de Invid Shock Troopers para que Scott y Rand los emboscaran.",
+    "history_en": "Rook Bartley's signature combat ride, allowing her to outflank and bait entire Invid Shock Trooper patrols into Scott and Rand's crossfires."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Exoesquema Ligero (*)",
+      "location_en": "Lightweight Exoskeleton (*)",
+      "mdc": 100
+    },
+    {
+      "location_es": "Lanzador de Cohetes RL-6 de Hombro",
+      "location_en": "RL-6 Shoulder Rocket Launcher",
+      "mdc": 40
+    },
+    {
+      "location_es": "Ruedas de Moto (2)",
+      "location_en": "Cycle Wheels (2)",
+      "mdc": 30
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Lanzacohetes de Asalto RL-6 (6 cohetes de fragmentación)",
+      "name_en": "RL-6 Assault Rocket Pod (6 fragmentation rockets)",
+      "damage": "1D4x10 por cohete",
+      "range": "2.2 km"
+    },
+    {
+      "name_es": "Fusil de Energía Multirráfaga Gallant H-90",
+      "name_en": "Gallant H-90 Multi-Burst Energy Rifle",
+      "damage": "3D6 por ráfaga",
+      "range": "800 m"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Sistema de frenado regenerativo y suspensión hidráulica de competición para saltos acrobáticos.",
+      "description_en": "Regenerative braking system and competition hydraulic suspension for extreme stunts."
+    }
+  ]
+}

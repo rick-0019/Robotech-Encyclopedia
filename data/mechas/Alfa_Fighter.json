@@ -257,5 +257,6 @@
       "description_es": "Módulo de habitáculo eyectable con soporte vital para 72 horas en atmósfera hostil o vacío espacial.",
       "description_en": "Self-contained jettison cockpit with 72-hour life support for vacuum or hostile atmosphere survival."
     }
-  ]
+  ],
+  "generation": "gen3"
 }

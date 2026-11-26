@@ -1,0 +1,172 @@
+{
+  "id": "vht1_spartas",
+  "name": "Spartas Hovertank",
+  "alias": "VHT-1 Veritech Hover Tank",
+  "category": "veritech",
+  "generation": "gen2",
+  "is_variable": true,
+  "modes": {
+    "fighter": "assets/images/mechas/vht1_spartas/spartas_flight.jpg",
+    "guardian": "assets/images/mechas/vht1_spartas/spartas_tank.jpg",
+    "battloid": "assets/images/mechas/vht1_spartas/spartas_profile.jpg"
+  },
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Masters Saga (Second Robotech War)"
+  },
+  "faction": {
+    "es": "Ejército de la Cruz del Sur // 15º Cuerpo Táctico Blindado (ATAC)",
+    "en": "Army of the Southern Cross // 15th Armored Tactical Corps (ATAC)"
+  },
+  "vehicle_type": {
+    "es": "Tanque Acorazado Transformable de Asalto Terrestre y Urbano",
+    "en": "Transformable Armored Ground & Urban Assault Tank"
+  },
+  "crew": {
+    "es": "1 piloto (Dana Sterling, Sean Phillips, Angelo Dante) + asiento secundario de artillero/navegante",
+    "en": "1 pilot (Dana Sterling, Sean Phillips, Angelo Dante) + secondary gunner seat"
+  },
+  "thumbnail": "assets/images/mechas/vht1_spartas/spartas_profile.jpg",
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/vht1_spartas/spartas_profile.jpg",
+      "title_es": "Modo Battloid de combate cuerpo a cuerpo y blindaje urbano",
+      "title_en": "Battloid mode for urban close-quarters combat",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/vht1_spartas/spartas_tank.jpg",
+      "title_es": "Modo Hovertank de gran velocidad y disparo de cañón pesado",
+      "title_en": "High-speed Hovertank mode with heavy cannon fire",
+      "type": "action"
+    },
+    {
+      "url": "assets/images/mechas/vht1_spartas/spartas_flight.jpg",
+      "title_es": "Modo Gladiador para avance artillero con escudo desplegado",
+      "title_en": "Gladiator mode for artillery advance with deployed shield",
+      "type": "action"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 210,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 45,
+      "label_es": "210 km/h en colchón de aire",
+      "label_en": "210 km/h hover cushion"
+    },
+    "armor": {
+      "value": 320,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 64,
+      "label_es": "320 C.D.M. Blindaje Chobham Especial",
+      "label_en": "320 M.D.C. Special Chobham Armor"
+    },
+    "firepower": {
+      "value": 92,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 92,
+      "label_es": "92 Pts (Cañón de Partículas Pesadas)",
+      "label_en": "92 Pts (Heavy Particle Beam Cannon)"
+    },
+    "range": {
+      "value": 16.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 48,
+      "label_es": "16 km alcance efectivo",
+      "label_en": "16 km effective range"
+    },
+    "sensors": {
+      "value": 95,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 46,
+      "label_es": "95 km Radar de Seguimiento Terrestre",
+      "label_en": "95 km Ground Radar"
+    },
+    "mobility": {
+      "value": 80,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 80,
+      "label_es": "80 Pts (Agilidad en terreno quebrado)",
+      "label_en": "80 Pts (Rough terrain agility)"
+    }
+  },
+  "dimensions": {
+    "height": "6.40 m (Modo Tanque) / 9.80 m (Modo Battloid)",
+    "width": "4.50 m",
+    "length": "8.20 m",
+    "mass": "24.8 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Célula de Fusión Miniaturizada de Protocultura ASC",
+    "output": "3,100 shp"
+  },
+  "lore": {
+    "overview_es": "El caballo de batalla indiscutible de las fuerzas terrestres de la Cruz del Sur. El VHT-1 Spartas es un mecha transformable en tres configuraciones: el veloz Modo Tanque sobre colchón de aire hovercraft, el robusto Modo Gladiador (artillería intermedia bípeda con escudo) y el imponente Modo Battloid para combate cercano.",
+    "overview_en": "The definitive ground workhorse of the Army of the Southern Cross. The VHT-1 Spartas transitions seamlessly across three modes: high-speed Hovertank, rugged Gladiator fire-support mode with gun-shield, and humanoid Battloid for close-quarters fighting.",
+    "history_es": "Bajo el intrépido liderazgo de la Teniente Dana Sterling, el 15º Escuadrón ATAC utilizó la versatilidad del Spartas para infiltrarse repetidamente en el interior de las naves nodrizas de los Maestros de la Robotech.",
+    "history_en": "Under the fearless command of Lieutenant Dana Sterling, the 15th ATAC Squadron used the Spartas' unique versatility to breach and infiltrate deep inside the Robotech Masters' motherships."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Cuerpo Principal (*)",
+      "location_en": "Main Body (*)",
+      "mdc": 320
+    },
+    {
+      "location_es": "Cañón Principal de Haz de Partículas",
+      "location_en": "Main Heavy Particle Cannon",
+      "mdc": 180
+    },
+    {
+      "location_es": "Escudo Balístico Blindado",
+      "location_en": "Heavy Armored Ballistic Shield",
+      "mdc": 200
+    },
+    {
+      "location_es": "Cabina Cerrada / Cúpula Blindada",
+      "location_en": "Armored Cockpit Canopy",
+      "mdc": 160
+    },
+    {
+      "location_es": "Faldas de Flotación Hovercraft (2)",
+      "location_en": "Hovercraft Skirts (2)",
+      "mdc": 130
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañón Pesado de Haz de Partículas de Alta Energía",
+      "name_en": "Heavy High-Energy Particle Beam Cannon",
+      "damage": "1D6x10 por disparo concentrado",
+      "range": "16 km"
+    },
+    {
+      "name_es": "Cañón Tri-Barrilete Láser Secundario de 32mm",
+      "name_en": "Secondary 32mm Triple-Barrel Laser Cannon",
+      "damage": "4D6 por ráfaga corta",
+      "range": "1.5 km"
+    },
+    {
+      "name_es": "Lanzador de Humo y Señuelos Antirradar de Torreta",
+      "name_en": "Turret Smoke & Anti-Laser Chaff Dispensers",
+      "damage": "Ocultamiento y disipación de calor",
+      "range": "300 m"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Sistema de propulsión de colchón de aire magnético-neumático con capacidad de desplazamiento sobre agua, arena y terrenos radioactivos.",
+      "description_en": "Magneto-pneumatic hover skirt propulsion with amphibious and hazardous terrain traversal."
+    }
+  ]
+}

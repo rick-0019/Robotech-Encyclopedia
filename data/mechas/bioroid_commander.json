@@ -1,0 +1,147 @@
+{
+  "id": "bioroid_commander",
+  "name": "Bioroid de Zor Prime",
+  "alias": "Bioroid Triumvirate Especial / Prototipo de Bio-Enlace",
+  "category": "bioroid",
+  "generation": "gen2",
+  "is_variable": false,
+  "modes": {
+    "battloid": "assets/images/mechas/bioroid_commander/bioroid_commander_zor.png"
+  },
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Masters Saga (Second Robotech War)"
+  },
+  "faction": {
+    "es": "Maestros de la Robotech // Zor Prime",
+    "en": "Robotech Masters // Zor Prime"
+  },
+  "vehicle_type": {
+    "es": "Mecha Prototipo de Control Psíquico y Mando de Flota",
+    "en": "Prototype Psychic-Linked Fleet Command Mecha"
+  },
+  "crew": {
+    "es": "Zor Prime (primer clon del científico Zor)",
+    "en": "Zor Prime (first clone of scientist Zor)"
+  },
+  "thumbnail": "assets/images/mechas/bioroid_commander/bioroid_commander_zor.png",
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/bioroid_commander/bioroid_commander_zor.png",
+      "title_es": "El Bioroid Comandante pilotado por Zor Prime",
+      "title_en": "The Commander Bioroid piloted by Zor Prime",
+      "type": "render"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 200,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 44,
+      "label_es": "200 km/h / 650 km/h sobre Hovercraft",
+      "label_en": "200 km/h / 650 km/h on Hovercraft"
+    },
+    "armor": {
+      "value": 350,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 70,
+      "label_es": "350 C.D.M. Coraza de Biopolímero Especial",
+      "label_en": "350 M.D.C. Special Biopolymer Hull"
+    },
+    "firepower": {
+      "value": 96,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 96,
+      "label_es": "96 Pts (Armamento Bioplasmático Experimental)",
+      "label_en": "96 Pts (Experimental Bioplasmic Weaponry)"
+    },
+    "range": {
+      "value": 10.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 40,
+      "label_es": "10 km alcance",
+      "label_en": "10 km range"
+    },
+    "sensors": {
+      "value": 240,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 75,
+      "label_es": "240 km Conexión Mental con la Nave Nodriza",
+      "label_en": "240 km Neural Mothership Link"
+    },
+    "mobility": {
+      "value": 95,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 95,
+      "label_es": "95 Pts (Respuesta neural instantánea)",
+      "label_en": "95 Pts (Instantaneous neural response)"
+    }
+  },
+  "dimensions": {
+    "height": "7.55 m",
+    "width": "4.20 m",
+    "length": "3.40 m",
+    "mass": "17.2 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Matriz Biogenética Avanzada de Protocultura Pura",
+    "output": "3,700 shp"
+  },
+  "lore": {
+    "overview_es": "El mecha más avanzado tecnológicamente de los Maestros. Pilotado por Zor Prime, el clon genético del creador de la Protocultura, este prototipo contaba con una conexión neural directa tan profunda que permitía al piloto sentir el daño del mecha como si fuera su propio cuerpo, logrando a cambio una fluidez y velocidad de combate incomparables.",
+    "overview_en": "The most technologically sophisticated mecha in the Masters' arsenal. Piloted by Zor Prime, the clone of Protoculture discoverer Zor, this prototype featured an unprecedented neural feedback loop granting peerless combat fluidity.",
+    "history_es": "Tras su captura por el 15º Escuadrón de Dana Sterling, el análisis de este mecha y de Zor Prime permitió a los humanos descubrir el origen clonado de los invasores y los secretos de la Flor de la Vida.",
+    "history_en": "Following its capture by Dana Sterling's 15th ATAC, studying this mecha and Zor Prime unlocked the truth of the Masters' clone caste and the Flower of Life."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Torso Principal (*)",
+      "location_en": "Main Torso (*)",
+      "mdc": 350
+    },
+    {
+      "location_es": "Cabina de Conexión Biocibernética",
+      "location_en": "Biocibernetic Interface Cockpit",
+      "mdc": 170
+    },
+    {
+      "location_es": "Brazos de Combate Avanzado (2)",
+      "location_en": "Advanced Combat Arms (2)",
+      "mdc": 150
+    },
+    {
+      "location_es": "Piernas Reforzadas (2)",
+      "location_en": "Reinforced Legs (2)",
+      "mdc": 200
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Fusil Blaster Bioplasmático Prototipo de Zor",
+      "name_en": "Zor's Prototype Bioplasmic Blaster Rifle",
+      "damage": "1D6x10+20 por descarga máxima",
+      "range": "4.5 km"
+    },
+    {
+      "name_es": "Emisores de Descarga de Energía en las Palmas",
+      "name_en": "Palm-Mounted Energy Discharge Nodes",
+      "damage": "5D6 por choque",
+      "range": "500 m"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Enlace telepático bidireccional con el supercomputador biológico de la Nave Nodriza de los Maestros.",
+      "description_en": "Two-way telepathic datalink with the Masters' Mothership biocomputer."
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "id": "bioroid_hovercraft",
+  "name": "Bioroid Hovercraft",
+  "alias": "Trineo Gravitatorio de Combate Bioroid",
+  "category": "support",
+  "generation": "gen2",
+  "is_variable": false,
+  "modes": {
+    "fighter": "assets/images/mechas/bioroid_hovercraft/bioroid_hovercraft.jpg"
+  },
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Masters Saga (Second Robotech War)"
+  },
+  "faction": {
+    "es": "Maestros de la Robotech // Legiones de Asalto Bioroid",
+    "en": "Robotech Masters // Bioroid Assault Legions"
+  },
+  "vehicle_type": {
+    "es": "Plataforma Aérea de Desplazamiento Antigravitatorio y Combate",
+    "en": "Aerial Antigravity Transport & Combat Sled"
+  },
+  "crew": {
+    "es": "Plataforma no tripulada operada directamente por los pies del mecha Bioroid que la monta",
+    "en": "Unmanned platform magnetically controlled by the feet of the riding Bioroid mecha"
+  },
+  "thumbnail": "assets/images/mechas/bioroid_hovercraft/bioroid_hovercraft.jpg",
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/bioroid_hovercraft/bioroid_hovercraft.jpg",
+      "title_es": "Trineo Gravitatorio Hovercraft en vuelo de crucero",
+      "title_en": "Hovercraft Sled in cruise flight",
+      "type": "render"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 620,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 58,
+      "label_es": "620 km/h en vuelo rasante",
+      "label_en": "620 km/h low-altitude flight"
+    },
+    "armor": {
+      "value": 210,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 42,
+      "label_es": "210 C.D.M. Chasis Antigravitatorio",
+      "label_en": "210 M.D.C. Antigrav Chassis"
+    },
+    "firepower": {
+      "value": 65,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 65,
+      "label_es": "65 Pts (Cañones de Plasma Frontales)",
+      "label_en": "65 Pts (Forward Plasma Cannons)"
+    },
+    "range": {
+      "value": 4.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 20,
+      "label_es": "4 km alcance frontal",
+      "label_en": "4 km forward range"
+    },
+    "sensors": {
+      "value": 80,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 40,
+      "label_es": "80 km Radar de Navegación Rasante",
+      "label_en": "80 km Terrain Radar"
+    },
+    "mobility": {
+      "value": 92,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 92,
+      "label_es": "92 Pts (Levitación y virajes instantáneos)",
+      "label_en": "92 Pts (Instant levitation and sharp turns)"
+    }
+  },
+  "dimensions": {
+    "height": "1.80 m",
+    "width": "4.80 m",
+    "length": "7.20 m",
+    "mass": "6.4 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Generador Antigravitatorio Tiroliano de Flujo Repulsor",
+    "output": "2,400 shp"
+  },
+  "lore": {
+    "overview_es": "El complemento de movilidad por excelencia de los Bioroids. Este trineo volador actúa como plataforma de vuelo por repulsión gravitatoria, permitiendo a los mechas bípedos alcanzar velocidades de más de 600 km/h, volar sobre cualquier terreno, ascender hasta las naves nodrizas e incluso disparar sus cañones integrados de proa mientras maniobran.",
+    "overview_en": "The quintessential mobility platform for Bioroid mechas. This flying sled harnesses repulsor antigravity, allowing bipedal mechas to cruise at over 600 km/h, skim over any terrain, ascend to orbit, and fire integrated forward plasma guns while banking.",
+    "history_es": "Su capacidad para girar en el aire sobre su propio eje y elevarse verticalmente obligó a los pilotos de la Cruz del Sur a desarrollar tácticas de emboscada coordinadas para derribar a los Bioroids de sus monturas.",
+    "history_en": "Its ability to pivot on its axis and climb vertically forced Southern Cross pilots to coordinate crossfire ambushes to shoot Bioroids off their mounts."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Estructura Principal del Trineo (*)",
+      "location_en": "Main Sled Structure (*)",
+      "mdc": 210
+    },
+    {
+      "location_es": "Plataforma Magnética de Anclaje de Pies",
+      "location_en": "Magnetic Foot Clamps",
+      "mdc": 110
+    },
+    {
+      "location_es": "Cañones de Plasma de Proa (2)",
+      "location_en": "Forward Plasma Cannons (2)",
+      "mdc": 90
+    },
+    {
+      "location_es": "Toberas Antigravedad Inferiores",
+      "location_en": "Ventral Antigrav Nodes",
+      "mdc": 120
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañones Gemelos de Plasma de Asalto Montados en Proa",
+      "name_en": "Twin Forward-Mounted Assault Plasma Cannons",
+      "damage": "6D6 por disparo",
+      "range": "2.5 km"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Fijadores magnéticos que anclan firmemente las botas del Bioroid a la cubierta incluso en giros de 90 grados a máxima velocidad.",
+      "description_en": "High-power magnetic clamps locking the Bioroid's boots to the deck even during 90-degree high-speed turns."
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "id": "gnerl_fighter",
+  "name": "Gnerl Fighter Pod",
+  "alias": "Caza Aeroespacial Ligero Zentraedi",
+  "category": "zentraedi",
+  "generation": "gen1",
+  "is_variable": false,
+  "modes": {
+    "fighter": "assets/images/mechas/gnerl_fighter/gnerl_profile.png"
+  },
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "faction": {
+    "es": "Gran Armada Imperial Zentraedi // Escuadrones de Caza",
+    "en": "Grand Zentraedi Imperial Armada // Fighter Wings"
+  },
+  "vehicle_type": {
+    "es": "Caza Aeroespacial de Asalto Ligero y Alta Velocidad",
+    "en": "Light High-Speed Aerospace Strike Fighter"
+  },
+  "crew": {
+    "es": "1 piloto Zentraedi en cabina presurizada",
+    "en": "1 Zentraedi pilot in pressurized cockpit"
+  },
+  "thumbnail": "assets/images/mechas/gnerl_fighter/gnerl_profile.png",
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/gnerl_fighter/gnerl_profile.png",
+      "title_es": "Caza Zentraedi Gnerl en vuelo de combate",
+      "title_en": "Zentraedi Gnerl Fighter in combat flight",
+      "type": "render"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 4800,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 99,
+      "label_es": "Mach 3.9 en vacío espacial",
+      "label_en": "Mach 3.9 vacuum speed"
+    },
+    "armor": {
+      "value": 160,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 32,
+      "label_es": "160 C.D.M. Fuselaje",
+      "label_en": "160 M.D.C. Fuselage"
+    },
+    "firepower": {
+      "value": 82,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 82,
+      "label_es": "82 Pts (Cañones de Haz y Misiles)",
+      "label_en": "82 Pts (Beam Cannons & Missiles)"
+    },
+    "range": {
+      "value": 12.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 40,
+      "label_es": "12 km alcance efectivo",
+      "label_en": "12 km effective range"
+    },
+    "sensors": {
+      "value": 110,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 50,
+      "label_es": "110 km Radar Frontal",
+      "label_en": "110 km Forward Radar"
+    },
+    "mobility": {
+      "value": 90,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 90,
+      "label_es": "90 Pts (Excelente aceleración en línea recta)",
+      "label_en": "90 Pts (Outstanding linear acceleration)"
+    }
+  },
+  "dimensions": {
+    "height": "6.80 m",
+    "width": "7.20 m",
+    "length": "14.50 m",
+    "mass": "15.6 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Turborreactor Termonuclear de Fusión con Toberas Vectoriales",
+    "output": "4,200 shp"
+  },
+  "lore": {
+    "overview_es": "El caza de combate espacial más numeroso de la armada Zentraedi. Con su peculiar silueta aerodinámica y un motor colosal que ocupa más de la mitad de su fuselaje, el Gnerl fue diseñado para atacar en formaciones masivas de miles de unidades para desbordar las defensas de portanaves enemigos.",
+    "overview_en": "The most numerous space fighter in the Zentraedi armada. Featuring a distinctive streamlined silhouette and an oversized thruster comprising over half its hull, the Gnerl was engineered to overwhelm enemy carriers in swarms of thousands.",
+    "history_es": "Formaron la vanguardia de las oleadas que diezmaron las flotas orbitales de la Tierra durante la invasión de Boddole Zer.",
+    "history_en": "Formed the vanguard of the assault waves that decimated Earth's orbital defense fleets during Boddole Zer's grand bombardment."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Fuselaje Principal (*)",
+      "location_en": "Main Fuselage (*)",
+      "mdc": 160
+    },
+    {
+      "location_es": "Cabina del Piloto",
+      "location_en": "Cockpit Module",
+      "mdc": 90
+    },
+    {
+      "location_es": "Motor Propulsor Principal",
+      "location_en": "Main Engine Thruster",
+      "mdc": 130
+    },
+    {
+      "location_es": "Alerones Guía (2)",
+      "location_en": "Guide Fins (2)",
+      "mdc": 60
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañones Gemelos de Haz Láser de Proa",
+      "name_en": "Dual Forward Laser Beam Cannons",
+      "damage": "4D6 por disparo",
+      "range": "1.5 km"
+    },
+    {
+      "name_es": "Lanzadores de Misiles Tácticos de Ataque Rápido (8 misiles)",
+      "name_en": "Fast-Attack Tactical Missile Pods (8 missiles)",
+      "damage": "2D6x10 por salva de 2",
+      "range": "12 km"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Aviónica de combate simplificada para pilotos clonados Zentraedi.",
+      "description_en": "Simplified combat avionics designed for mass-cloned Zentraedi pilots."
+    }
+  ]
+}

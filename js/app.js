@@ -7,10 +7,17 @@ const I18N = {
   es: {
     system_title: "ROBOTECH TACTICAL CODEX",
     system_subtitle: "U.N. SPACY ARCHIVE DATABASE // SDF-1 RECON",
+    gen_all: "TODAS LAS GENERACIONES (32)",
+    gen_1: "1ª GEN: MACROSS (13)",
+    gen_2: "2ª GEN: MAESTROS (9)",
+    gen_3: "3ª GEN: INVASIÓN INVID (10)",
     all_units: "TODOS LOS MECHAS",
     destroids: "DESTROIDS",
-    veritechs: "VERITECHS / VALKYRIES",
-    zentraedi: "FUERZAS ZENTRAEDI",
+    veritechs: "VERITECHS Y CAZAS",
+    zentraedi: "ZENTRAEDI / MELTRANDI",
+    bioroids: "BIOROIDS",
+    invid: "HORDA INVID",
+    support: "APOYO Y RECON",
     search_placeholder: "ESCANEAR BASE DE DATOS (NOMBRE, ARMA, LORE)...",
     results_found: "UNIDADES IDENTIFICADAS",
     no_results_title: "ACCESO DENEGADO / MECHA NO DETECTADO",
@@ -42,10 +49,17 @@ const I18N = {
   en: {
     system_title: "ROBOTECH TACTICAL CODEX",
     system_subtitle: "U.N. SPACY ARCHIVE DATABASE // SDF-1 RECON",
+    gen_all: "ALL GENERATIONS (32)",
+    gen_1: "1ST GEN: MACROSS (13)",
+    gen_2: "2ND GEN: MASTERS (9)",
+    gen_3: "3RD GEN: INVID INVASION (10)",
     all_units: "ALL UNITS",
     destroids: "DESTROIDS",
-    veritechs: "VERITECHS / VALKYRIES",
-    zentraedi: "ZENTRAEDI FORCES",
+    veritechs: "VERITECHS & FIGHTERS",
+    zentraedi: "ZENTRAEDI & MELTRANDI",
+    bioroids: "BIOROIDS",
+    invid: "INVID SWARM",
+    support: "SUPPORT & RECON",
     search_placeholder: "SCAN DATABASE (NAME, WEAPON, LORE)...",
     results_found: "UNITS IDENTIFIED",
     no_results_title: "ACCESS DENIED / MECHA NOT FOUND",
@@ -79,6 +93,7 @@ const I18N = {
 window.appState = {
   lang: localStorage.getItem('robotech_lang') || 'es',
   category: 'all',
+  generation: 'all',
   searchQuery: '',
   manifest: null,
   mechaCache: {}
@@ -217,6 +232,16 @@ function setupCategoryNav() {
       renderMechas();
     });
   });
+
+  document.querySelectorAll('.gen-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.gen-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      window.appState.generation = btn.dataset.generation;
+      window.tacticalAudio?.hover();
+      renderMechas();
+    });
+  });
 }
 
 function setupSearch() {
@@ -253,6 +278,9 @@ function getFactionLogo(m) {
   }
 
   // Detección automática por palabras clave
+  if (catStr === 'invid' || facStr.includes('invid')) {
+    return 'assets/images/ui/logo_invid.png';
+  }
   if (facStr.includes('marte') || facStr.includes('mars') || facStr.includes('pioneer') || facStr.includes('expedicionaria') || facStr.includes('ref')) {
     return 'assets/images/ui/Mars_Base.png';
   }
@@ -270,9 +298,13 @@ function renderMechas() {
   const isLocal = ['localhost', '127.0.0.1', '0.0.0.0', ''].includes(window.location.hostname) || window.location.protocol === 'file:';
   const lang = window.appState.lang;
   const category = window.appState.category;
+  const generation = window.appState.generation || 'all';
   const q = window.appState.searchQuery;
 
   const filtered = window.appState.manifest.mechas.filter(m => {
+    // Generación
+    if (generation !== 'all' && m.generation !== generation) return false;
+
     // Categoría
     if (category !== 'all' && m.category !== category) return false;
 
@@ -308,8 +340,8 @@ function renderMechas() {
     const classText = m.class[lang] || m.class.en || '';
     const factionLogo = getFactionLogo(m);
 
-    // Detección de Mecha Variable / Veritech 3-Modos
-    const isVariable = m.is_variable || (m.modes && (m.modes.fighter || m.modes.guardian || m.modes.battloid));
+    // Detección de Mecha Variable / Veritech 3-Modos (solo si tiene múltiples modos y es transformable)
+    const isVariable = m.is_variable === true || (m.modes && typeof m.modes === 'object' && Object.keys(m.modes).filter(k => m.modes[k]).length > 1);
     const modesObj = m.modes || {};
     const fighterImg = (typeof modesObj.fighter === 'string' ? modesObj.fighter : modesObj.fighter?.image) || m.thumbnail;
     const guardianImg = (typeof modesObj.guardian === 'string' ? modesObj.guardian : modesObj.guardian?.image) || m.thumbnail;
@@ -529,13 +561,18 @@ async function openDossier(id, pushHistory = true) {
     }
   }
 
-  populateDossierModal(data);
-  modalBackdrop.classList.add('open');
-  document.body.style.overflow = 'hidden';
+  try {
+    populateDossierModal(data);
+    modalBackdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
 
-  if (pushHistory) {
-    const newUrl = `${window.location.pathname}?mecha=${encodeURIComponent(id)}`;
-    history.pushState({ modal: 'dossier', mechaId: id, tab: 'pane-overview' }, '', newUrl);
+    if (pushHistory) {
+      const newUrl = `${window.location.pathname}?mecha=${encodeURIComponent(id)}`;
+      history.pushState({ modal: 'dossier', mechaId: id, tab: 'pane-overview' }, '', newUrl);
+    }
+  } catch (err) {
+    console.error("Error al poblar el dossier del mecha:", err);
+    alert("Error táctico al renderizar el expediente del mecha: " + err.message);
   }
 }
 
@@ -593,7 +630,7 @@ function populateDossierModal(m) {
   const manifestItem = window.appState?.manifest?.mechas?.find(item => item.id === m.id);
   const heroThumb = manifestItem?.thumbnail || m.thumbnail;
 
-  const isVariable = m.is_variable || (m.modes && (m.modes.fighter || m.modes.guardian || m.modes.battloid));
+  const isVariable = m.is_variable === true || (m.modes && typeof m.modes === 'object' && Object.keys(m.modes).filter(k => m.modes[k]).length > 1);
   const fighterMode = m.modes?.fighter || {};
   const guardianMode = m.modes?.guardian || {};
   const battloidMode = m.modes?.battloid || {};
@@ -610,6 +647,11 @@ function populateDossierModal(m) {
   const guardianNotes = guardianMode[`tactical_notes_${lang}`] || guardianMode.tactical_notes_en || '';
   const battloidNotes = battloidMode[`tactical_notes_${lang}`] || battloidMode.tactical_notes_en || '';
 
+  const dimHeight = m.dimensions?.height?.metric || m.dimensions?.height || 'N/A';
+  const dimWeight = m.dimensions?.weight?.metric || m.dimensions?.mass || m.dimensions?.weight || 'N/A';
+  const dimEngine = m.powerplant?.[`engine_${lang}`] || m.powerplant?.engine_en || (m.powerplant?.type ? `${m.powerplant.type}${m.powerplant.output ? ' (' + m.powerplant.output + ')' : ''}` : 'N/A');
+  const tacticalLore = m.lore?.[`tactical_analysis_${lang}`] || m.lore?.tactical_analysis_en || m.lore?.[`history_${lang}`] || m.lore?.history_en || '';
+
   const overviewPane = document.getElementById('pane-overview');
   overviewPane.innerHTML = `
     <div class="overview-grid">
@@ -619,9 +661,9 @@ function populateDossierModal(m) {
         </div>
         <table class="quick-specs-table" id="dossier-specs-table">
           <tr><td>${I18N[lang].crew}:</td><td>${m.crew?.[lang] || m.crew?.en || m.crew || 'N/A'}</td></tr>
-          <tr><td>${I18N[lang].height}:</td><td>${m.dimensions?.height?.metric || 'N/A'}</td></tr>
-          <tr><td>${I18N[lang].weight}:</td><td>${m.dimensions?.weight?.metric || 'N/A'}</td></tr>
-          <tr><td>${I18N[lang].engine}:</td><td>${m.powerplant?.[`engine_${lang}`] || m.powerplant?.engine_en || 'N/A'}</td></tr>
+          <tr><td>${I18N[lang].height}:</td><td>${dimHeight}</td></tr>
+          <tr><td>${I18N[lang].weight}:</td><td>${dimWeight}</td></tr>
+          <tr><td>${I18N[lang].engine}:</td><td>${dimEngine}</td></tr>
         </table>
       </div>
       <div class="lore-section">
@@ -631,7 +673,7 @@ function populateDossierModal(m) {
         </div>
         <div class="lore-box">
           <h4>${lang === 'es' ? 'ANÁLISIS TÁCTICO EN COMBATE' : 'TACTICAL DEPLOYMENT ANALYSIS'}</h4>
-          <p>${m.lore?.[`tactical_analysis_${lang}`] || m.lore?.tactical_analysis_en || ''}</p>
+          <p>${tacticalLore}</p>
         </div>
       </div>
     </div>
@@ -827,11 +869,23 @@ function populateDossierModal(m) {
 
   // 4. Tab Sensors
   const sensorsPane = document.getElementById('pane-sensors');
+  let equipmentList = [];
+  if (Array.isArray(m.special_equipment)) {
+    equipmentList = m.special_equipment;
+  } else if (m.special_equipment && typeof m.special_equipment === 'object') {
+    equipmentList = [{
+      name_es: 'Equipamiento Táctico y Sensores de Abordo',
+      name_en: 'Tactical Systems & Onboard Sensors',
+      description_es: m.special_equipment.es || m.special_equipment.description_es || '',
+      description_en: m.special_equipment.en || m.special_equipment.description_en || ''
+    }];
+  }
+
   sensorsPane.innerHTML = `
     <div class="equipment-list">
-      ${(m.special_equipment || []).map(eq => {
-        const eqName = eq[`name_${lang}`] || eq.name_en;
-        const eqDesc = eq[`description_${lang}`] || eq.description_en;
+      ${equipmentList.map(eq => {
+        const eqName = eq[`name_${lang}`] || eq.name_en || (lang === 'es' ? 'Sistema Especial' : 'Special System');
+        const eqDesc = eq[`description_${lang}`] || eq.description_en || eq.desc_es || eq.desc_en || '';
         return `
           <div class="equipment-card">
             <h5>${eqName}</h5>
@@ -845,7 +899,7 @@ function populateDossierModal(m) {
   // 4b. Tab Variantes de Producción (Modelos Tácticos)
   const tabBtnVariants = document.getElementById('tab-btn-variants');
   const variantsPane = document.getElementById('pane-variants');
-  if (m.variants && m.variants.length > 0) {
+  if (Array.isArray(m.variants) && m.variants.length > 0) {
     if (tabBtnVariants) tabBtnVariants.style.display = 'inline-flex';
     if (variantsPane) renderDossierVariants(m);
   } else {

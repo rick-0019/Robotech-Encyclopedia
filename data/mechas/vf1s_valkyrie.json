@@ -270,7 +270,11 @@
         "primary_color": "#8c6239",
         "secondary_color": "#d9d9d9"
       },
-      "pilots": ["Pilotos de Flota de la RDF / U.N. Spacy", "Ben Dixon (asignación inicial)", "Escuadrones de Línea"],
+      "pilots": [
+        "Pilotos de Flota de la RDF / U.N. Spacy",
+        "Ben Dixon (asignación inicial)",
+        "Escuadrones de Línea"
+      ],
       "image": "assets/images/mechas/VF-1/14e12a40a8a5de3416717e1002976daa.jpg",
       "description_es": "Modelo estándar de un solo asiento, utilizado por la mayoría de las tripulaciones y caracterizado por su capacidad de combate general y versatilidad en todos los teatros operativos.",
       "description_en": "Standard single-seat mass-production model, utilized by the majority of fleet aircrews and characterized by balanced general combat capabilities and high reliability.",
@@ -298,7 +302,11 @@
         "primary_color": "#c41e3a",
         "secondary_color": "#ffffff"
       },
-      "pilots": ["Rick Hunter (Líder Vermilion)", "Max Sterling (Azul Cobalto)", "Miriya Parina (Rojo Carmesí)"],
+      "pilots": [
+        "Rick Hunter (Líder Vermilion)",
+        "Max Sterling (Azul Cobalto)",
+        "Miriya Parina (Rojo Carmesí)"
+      ],
       "image": "assets/images/mechas/VF-1/4aafa5d4665991cca0a0711ba92cd796.jpg",
       "description_es": "Variante de un solo asiento con mejoras en el armamento y sistemas, siendo la nave emblemática de pilotos como Rick Hunter y Max Sterling.",
       "description_en": "Single-seat variant with upgraded avionics, targeting computers, and twin head weaponry, serving as the iconic craft of pilots like Rick Hunter and Max Sterling.",
@@ -326,7 +334,10 @@
         "primary_color": "#f59e0b",
         "secondary_color": "#111827"
       },
-      "pilots": ["Roy Fokker (Skull Leader Original)", "Rick Hunter (Comandante Skull One)"],
+      "pilots": [
+        "Roy Fokker (Skull Leader Original)",
+        "Rick Hunter (Comandante Skull One)"
+      ],
       "image": "assets/images/mechas/VF-1/826b12a642952f0af85bf05e6ce58f3a.jpg",
       "description_es": "Versión de élite de un solo asiento con mayor velocidad y maniobrabilidad, diseñada para pilotos de alto rango como Miriya Parusa y Roy Fokker.",
       "description_en": "Elite single-seat version with enhanced speed and agility, designed for high-ranking commanders such as Roy Fokker and Miriya Parina.",
@@ -354,7 +365,10 @@
         "primary_color": "#ea580c",
         "secondary_color": "#ffffff"
       },
-      "pilots": ["Rick Hunter & Lynn Minmay (Primer Vuelo de Combate en Macross)", "Instructores de Vuelo RDF"],
+      "pilots": [
+        "Rick Hunter & Lynn Minmay (Primer Vuelo de Combate en Macross)",
+        "Instructores de Vuelo RDF"
+      ],
       "image": "assets/images/mechas/VF-1/9821aff3d34f70d7b144def0a4704ba3.jpg",
       "description_es": "Modelo de dos asientos utilizado para entrenamiento y observación, aunque capaz de entrar en combate si es necesario.",
       "description_en": "Two-seat model used for training and observation, though fully capable of engaging in active combat if required.",
@@ -362,5 +376,6 @@
       "armor": "C.D.M. Reforzado para Instrucción",
       "firepower": "2x Láseres Craneales RoV-20 + Cañón GU-11 55mm + Cargas de Práctica/Combate"
     }
-  ]
+  ],
+  "generation": "gen1"
 }

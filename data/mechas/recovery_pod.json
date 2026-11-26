@@ -1,0 +1,147 @@
+{
+  "id": "recovery_pod",
+  "name": "Cápsula de Recuperación Kelcadra",
+  "alias": "Cápsula Utilitaria y Logística Zentraedi",
+  "category": "zentraedi",
+  "generation": "gen1",
+  "is_variable": false,
+  "modes": {
+    "fighter": "assets/images/mechas/recovery_pod/recovery_pod_profile.png"
+  },
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "faction": {
+    "es": "Gran Armada Imperial Zentraedi // Cuerpos de Apoyo y Rescate",
+    "en": "Grand Zentraedi Imperial Armada // Support & Retrieval Corps"
+  },
+  "vehicle_type": {
+    "es": "Nave Auxiliar de Rescate, Transporte de Carga y Enlace",
+    "en": "Auxiliary Rescue, Cargo Transport & Retrieval Craft"
+  },
+  "crew": {
+    "es": "2 tripulantes Zentraedi gigantes + espacio para especímenes o mechas capturados",
+    "en": "2 giant Zentraedi crew + cargo hold for specimens or captured mecha"
+  },
+  "thumbnail": "assets/images/mechas/recovery_pod/recovery_pod_profile.png",
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/recovery_pod/recovery_pod_profile.png",
+      "title_es": "Cápsula de Recuperación Zentraedi transportando un avión capturado",
+      "title_en": "Zentraedi Recovery Pod carrying captured aircraft",
+      "type": "render"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 2100,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 72,
+      "label_es": "Mach 1.7 en vuelo suborbital",
+      "label_en": "Mach 1.7 suborbital flight"
+    },
+    "armor": {
+      "value": 220,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 44,
+      "label_es": "220 C.D.M. Casco Reforzado",
+      "label_en": "220 M.D.C. Reinforced Hull"
+    },
+    "firepower": {
+      "value": 40,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 40,
+      "label_es": "40 Pts (Láseres de corte y contención)",
+      "label_en": "40 Pts (Cutting & containment lasers)"
+    },
+    "range": {
+      "value": 5.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 22,
+      "label_es": "5 km alcance",
+      "label_en": "5 km range"
+    },
+    "sensors": {
+      "value": 120,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 52,
+      "label_es": "120 km Sensores de Resonancia",
+      "label_en": "120 km Resonance Sensors"
+    },
+    "mobility": {
+      "value": 60,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 60,
+      "label_es": "60 Pts (Pinzas hidráulicas de amarre)",
+      "label_en": "60 Pts (Hydraulic grapple clamps)"
+    }
+  },
+  "dimensions": {
+    "height": "8.40 m",
+    "width": "9.10 m",
+    "length": "18.60 m",
+    "mass": "29.5 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Reactor Termonuclear Zentraedi Auxiliar de Fusión",
+    "output": "2,600 shp"
+  },
+  "lore": {
+    "overview_es": "Vehículo utilitario indispensable en las operaciones de la flota Zentraedi. Equipado con potentes pinzas mecánicas externas y una bahía ventral de acoplamiento, el Kelcadra se encarga de recuperar cápsulas de combate dañadas en el vacío espacial, recoger pilotos eyectados y capturar tecnología enemiga intacta para su examen en los buques insignia.",
+    "overview_en": "An indispensable utility workhorse across the Zentraedi armada. Equipped with heavy mechanical grappling arms and a ventral mooring bay, the Kelcadra retrieves damaged battle pods in deep space, rescues ejected pilots, and captures enemy technology for examination.",
+    "history_es": "Fue precisamente una cápsula Kelcadra la que atrapó el Cat's Eye de Hikaru y Minmei en el espacio profundo tras la batalla en los anillos de Saturno, transportándolos directamente ante Breetai y Exedore.",
+    "history_en": "It was a Kelcadra Recovery Pod that captured Hikaru and Minmei's Cat's Eye after the Saturn ring skirmish, ferrying them directly to Breetai and Exedore."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Casco Principal (*)",
+      "location_en": "Main Hull (*)",
+      "mdc": 220
+    },
+    {
+      "location_es": "Brazos de Enganche Mecánico (2)",
+      "location_en": "Mechanical Grapple Arms (2)",
+      "mdc": 120
+    },
+    {
+      "location_es": "Cabina Blindada de Dos Pilotos",
+      "location_en": "Two-Pilot Armored Cockpit",
+      "mdc": 130
+    },
+    {
+      "location_es": "Toberas de Propulsión Posterior",
+      "location_en": "Rear Propulsion Thrusters",
+      "mdc": 110
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañones Gemelos Láser de Corte y Autodefensa",
+      "name_en": "Dual Cutting & Self-Defense Laser Cannons",
+      "damage": "3D6 por pulso",
+      "range": "1 km"
+    },
+    {
+      "name_es": "Emisor de Rayo Magnético de Remolque",
+      "name_en": "Magnetic Tow Tractor Beam",
+      "damage": "Captura y sujeción inercial",
+      "range": "2 km"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Bahía de carga presurizada con atmósfera adaptable y brazos de sujeción para naves de hasta 25 toneladas.",
+      "description_en": "Pressurized cargo bay with adaptable atmosphere and magnetic clamps for craft up to 25 metric tons."
+    }
+  ]
+}

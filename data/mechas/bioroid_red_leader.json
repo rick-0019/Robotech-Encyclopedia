@@ -1,0 +1,147 @@
+{
+  "id": "bioroid_red_leader",
+  "name": "Bioroid Comandante Rojo",
+  "alias": "Bioroid de Liderazgo y Asalto Avanzado",
+  "category": "bioroid",
+  "generation": "gen2",
+  "is_variable": false,
+  "modes": {
+    "battloid": "assets/images/mechas/bioroid_red_leader/bioroid_red_profile.jpg"
+  },
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Masters Saga (Second Robotech War)"
+  },
+  "faction": {
+    "es": "Maestros de la Robotech // Guardia de Élite del Triunvirato",
+    "en": "Robotech Masters // Triumvirate Elite Guard"
+  },
+  "vehicle_type": {
+    "es": "Mecha de Mando Táctico y Conducción de Escuadra",
+    "en": "Tactical Command & Squadron Leader Mecha"
+  },
+  "crew": {
+    "es": "1 comandante clon tirolés de rango superior",
+    "en": "1 high-ranking Tirolian clone commander"
+  },
+  "thumbnail": "assets/images/mechas/bioroid_red_leader/bioroid_red_profile.jpg",
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/bioroid_red_leader/bioroid_red_profile.jpg",
+      "title_es": "Bioroid Comandante Rojo en formación de asalto",
+      "title_en": "Red Leader Bioroid in strike formation",
+      "type": "render"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 185,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 42,
+      "label_es": "185 km/h / 620 km/h sobre Hovercraft",
+      "label_en": "185 km/h / 620 km/h on Hovercraft"
+    },
+    "armor": {
+      "value": 330,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 66,
+      "label_es": "330 C.D.M. Coraza Reforzada Escarlata",
+      "label_en": "330 M.D.C. Scarlet Heavy Armor"
+    },
+    "firepower": {
+      "value": 89,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 89,
+      "label_es": "89 Pts (Blaster Pesado Dual)",
+      "label_en": "89 Pts (Dual Heavy Blaster)"
+    },
+    "range": {
+      "value": 8.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 36,
+      "label_es": "8 km alcance",
+      "label_en": "8 km range"
+    },
+    "sensors": {
+      "value": 180,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 65,
+      "label_es": "180 km Enlace Telepático Táctico",
+      "label_en": "180 km Tactical Telepathic Link"
+    },
+    "mobility": {
+      "value": 90,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 90,
+      "label_es": "90 Pts (Reflejos de combate superiores)",
+      "label_en": "90 Pts (Superior combat reflexes)"
+    }
+  },
+  "dimensions": {
+    "height": "7.45 m",
+    "width": "4.10 m",
+    "length": "3.30 m",
+    "mass": "16.7 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Generador Bioplasmático Reforzado de Protocultura",
+    "output": "3,200 shp"
+  },
+  "lore": {
+    "overview_es": "Reconocible por su imponente acabado en rojo escarlata y hombreras extendidas, el Bioroid Rojo lidera escuadras completas de Bioroids Azules en combate. Posee una mayor capacidad de fuego, armadura reforzada y emisores de enlace mental para coordinar emboscadas complejas contra los mechas de la Cruz del Sur.",
+    "overview_en": "Instantly recognizable by its deep scarlet livery and flared pauldrons, the Red Bioroid leads squads of Blue Troopers into battle. It boasts heavier plating, dual-action blasters, and neural broadcast transmitters to direct squad tactics.",
+    "history_es": "Lideraron los contraataques más destructivos contra las bases de la Cruz del Sur en la órbita de Monument City.",
+    "history_en": "Spearheaded the most punishing counteroffensives against Southern Cross airbases around Monument City."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Torso Principal (*)",
+      "location_en": "Main Torso (*)",
+      "mdc": 330
+    },
+    {
+      "location_es": "Cabeza de Mando y Antenas Sensoriales",
+      "location_en": "Command Head & Sensor Antennas",
+      "mdc": 130
+    },
+    {
+      "location_es": "Brazos Reforzados (2)",
+      "location_en": "Reinforced Arms (2)",
+      "mdc": 140
+    },
+    {
+      "location_es": "Piernas Blindadas (2)",
+      "location_en": "Armored Legs (2)",
+      "mdc": 190
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Fusil Blaster de Plasma Pesado de Asalto Tiroliano",
+      "name_en": "Tirolian Heavy Assault Plasma Blaster Rifle",
+      "damage": "1D6x10 por impacto",
+      "range": "4 km"
+    },
+    {
+      "name_es": "Cañones Láser Oculares Integrados en la Cabeza",
+      "name_en": "Head-Integrated Optic Laser Cannons",
+      "damage": "4D6 por disparo",
+      "range": "1.2 km"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Módulo repetidor telepático que amplifica las órdenes de los Maestros a las unidades circundantes.",
+      "description_en": "Telepathic relay node amplifying the Masters' commands to nearby battle units."
+    }
+  ]
+}

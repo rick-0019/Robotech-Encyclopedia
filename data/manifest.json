@@ -1,77 +1,51 @@
 {
   "system_version": "1.0.0",
-  "database_name": "ROBOTECH TACTICAL CODEX",
-  "updated_at": "2026-09-25",
+  "database_name": "ROBOTECH MECHA & VEHICLE ARCHIVE",
+  "updated_at": "2026-11-25",
   "categories": [
     {
       "id": "all",
       "label_es": "Todos los Mechas",
-      "label_en": "All Units"
-    },
-    {
-      "id": "destroid",
-      "label_es": "Destroids",
-      "label_en": "Destroids"
+      "label_en": "All Mechas"
     },
     {
       "id": "veritech",
-      "label_es": "Veritechs / Valkyries",
-      "label_en": "Veritechs / Valkyries"
+      "label_es": "Veritechs y Cazas Transformables",
+      "label_en": "Veritechs & Transformables"
+    },
+    {
+      "id": "destroid",
+      "label_es": "Destroids y Artillería Terrestre",
+      "label_en": "Destroids & Heavy Ground"
     },
     {
       "id": "zentraedi",
-      "label_es": "Fuerzas Zentraedi",
-      "label_en": "Zentraedi Forces"
+      "label_es": "Fuerzas Zentraedi / Meltrandi",
+      "label_en": "Zentraedi & Meltrandi"
+    },
+    {
+      "id": "bioroid",
+      "label_es": "Bioroids de los Maestros",
+      "label_en": "Robotech Masters Bioroids"
+    },
+    {
+      "id": "invid",
+      "label_es": "Horda Invid",
+      "label_en": "Invid Swarm"
+    },
+    {
+      "id": "support",
+      "label_es": "Apoyo, Escolta y Reconocimiento",
+      "label_en": "Support & Recon"
     }
   ],
   "mechas": [
-    {
-      "id": "destroid_raidar_x",
-      "name": "Raidar X",
-      "alias": "Defender ADR-04-MKX",
-      "category": "destroid",
-      "faction": {
-        "es": "U.N. Spacy",
-        "en": "U.N. Spacy"
-      },
-      "class": {
-        "es": "Destroid Antiaéreo No Transformable",
-        "en": "Non-Transformable Anti-Aircraft Destroid"
-      },
-      "thumbnail": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
-      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
-      "is_variable": true,
-      "has_variants": true,
-      "variants_count": 1,
-      "modes": {
-        "fighter": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
-        "guardian": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
-        "battloid": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg"
-      },
-      "summary": {
-        "es": "El Raidar X es un mecha no transformable utilizado como unidad antiaérea a bordo del SDF-1 por la U.N. SPACY y...",
-        "en": "The Raidar X is a non-transformable mecha used as an anti-aircraft unit aboard the SDF-1, by the U.N. SPACY an..."
-      },
-      "stats": {
-        "speed": 128.7,
-        "speed_unit": "km/h",
-        "armor": 250,
-        "armor_unit": "C.D.M.",
-        "firepower": 85,
-        "firepower_unit": "Pts",
-        "range": 12.7,
-        "range_unit": "km",
-        "sensors": 321,
-        "sensors_unit": "km",
-        "mobility": 30
-      },
-      "dataFile": "data/mechas/destroid_raidar_x.json"
-    },
     {
       "id": "vf1s_valkyrie",
       "name": "VF-1 Valkyrie",
       "alias": "Veritech Fighter",
       "category": "veritech",
+      "generation": "gen1",
       "faction": {
         "es": "U.N. Spacy",
         "en": "U.N. Spacy"
@@ -86,13 +60,43 @@
       "has_variants": true,
       "variants_count": 4,
       "modes": {
-        "fighter": "assets/images/mechas/VF-1/cd7542498611aaee9cefa3fc17e710b9.jpg",
-        "guardian": "assets/images/mechas/VF-1/fa092418fdb7296f0be73ed9085f4a04.jpg",
-        "battloid": "assets/images/mechas/VF-1/ebab350fda69bd2bfcb39b98a92a6153.jpg"
+        "fighter": {
+          "name_es": "Modo Caza / Jet",
+          "name_en": "Fighter Mode / Jet",
+          "image": "assets/images/mechas/VF-1/cd7542498611aaee9cefa3fc17e710b9.jpg",
+          "length": "",
+          "wingspan": "",
+          "height": "",
+          "max_speed": "",
+          "notes_es": "",
+          "notes_en": ""
+        },
+        "guardian": {
+          "name_es": "Modo Guardián (Gerwalk)",
+          "name_en": "Guardian Mode (Gerwalk)",
+          "image": "assets/images/mechas/VF-1/fa092418fdb7296f0be73ed9085f4a04.jpg",
+          "length": "",
+          "wingspan": "",
+          "height": "",
+          "speed": "",
+          "notes_es": "",
+          "notes_en": ""
+        },
+        "battloid": {
+          "name_es": "Modo Battloid (Humanoide)",
+          "name_en": "Battloid Mode (Humanoid)",
+          "image": "assets/images/mechas/VF-1/ebab350fda69bd2bfcb39b98a92a6153.jpg",
+          "height": "",
+          "width": "",
+          "depth": "",
+          "ground_speed": "",
+          "notes_es": "",
+          "notes_en": ""
+        }
       },
       "summary": {
-        "es": "El VF-1S Valkyrie es el caza variable Veritech insignia para líderes de escuadrón. Equipado con una unidad de ...",
-        "en": "The VF-1S Valkyrie is the flagship variable Veritech fighter designed for squadron commanders. Fitted with a r..."
+        "es": "El VF-1S Valkyrie es el caza variable Veritech insignia para líderes de escuadrón. Equipado con una unidad de cabeza reforzada que monta cuatro cañones láser Ma...",
+        "en": "The VF-1S Valkyrie is the flagship variable Veritech fighter designed for squadron commanders. Fitted with a reinforced command head housing four Mauler RoV-20 ..."
       },
       "stats": {
         "speed": 3871,
@@ -114,6 +118,7 @@
       "name": "Tomahawk",
       "alias": "MBR-04-VI Heavy Battle Destroid",
       "category": "destroid",
+      "generation": "gen1",
       "faction": {
         "es": "U.N. Spacy",
         "en": "U.N. Spacy"
@@ -125,10 +130,12 @@
       "thumbnail": "assets/images/mechas/Tomahawk/6d61a5d62aca2e39ace6d6298680a5c7.jpg",
       "faction_logo": "assets/images/ui/logo_UNSpacy.png",
       "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
       "modes": null,
       "summary": {
-        "es": "El MBR-04 Tomahawk es el pilar blindado de primera línea de las fuerzas terrestres de la U.N. Spacy y la defen...",
-        "en": "The MBR-04 Tomahawk is the primary armored battle tank of the U.N. Spacy ground forces and SDF-1 deck defense...."
+        "es": "El MBR-04 Tomahawk es el pilar blindado de primera línea de las fuerzas terrestres de la U.N. Spacy y la defensa de cubierta del SDF-1. Diseñado como el princip...",
+        "en": "The MBR-04 Tomahawk is the primary armored battle tank of the U.N. Spacy ground forces and SDF-1 deck defense. Designed as the mainline heavy combat mecha, it m..."
       },
       "stats": {
         "speed": 112,
@@ -146,10 +153,249 @@
       "dataFile": "data/mechas/destroid_tomahawk.json"
     },
     {
+      "id": "destroid_raidar_x",
+      "name": "Raidar X",
+      "alias": "Defender ADR-04-MKX",
+      "category": "destroid",
+      "generation": "gen1",
+      "faction": {
+        "es": "U.N. Spacy",
+        "en": "U.N. Spacy"
+      },
+      "class": {
+        "es": "Destroid Antiaéreo No Transformable",
+        "en": "Non-Transformable Anti-Aircraft Destroid"
+      },
+      "thumbnail": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "is_variable": true,
+      "has_variants": true,
+      "variants_count": 1,
+      "modes": {
+        "fighter": {
+          "name_es": "Modo Caza / Jet",
+          "name_en": "Fighter Mode / Jet",
+          "image": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
+          "length": "",
+          "wingspan": "",
+          "height": "",
+          "max_speed": "",
+          "notes_es": "",
+          "notes_en": ""
+        },
+        "guardian": {
+          "name_es": "Modo Guardián (Gerwalk)",
+          "name_en": "Guardian Mode (Gerwalk)",
+          "image": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
+          "length": "",
+          "wingspan": "",
+          "height": "",
+          "speed": "",
+          "notes_es": "",
+          "notes_en": ""
+        },
+        "battloid": {
+          "name_es": "Modo Battloid (Humanoide)",
+          "name_en": "Battloid Mode (Humanoid)",
+          "image": "assets/images/mechas/destroid_raidar_x/3be36d25284826a74f6147ff56c32053.jpg",
+          "height": "",
+          "width": "",
+          "depth": "",
+          "ground_speed": "",
+          "notes_es": "",
+          "notes_en": ""
+        }
+      },
+      "summary": {
+        "es": "El Raidar X es un mecha no transformable utilizado como unidad antiaérea a bordo del SDF-1 por la U.N. SPACY y los gobiernos terrestres locales. El Raidar X es ...",
+        "en": "The Raidar X is a non-transformable mecha used as an anti-aircraft unit aboard the SDF-1, by the U.N. SPACY and local Earth governments. Raidar X is lighter wei..."
+      },
+      "stats": {
+        "speed": 128.7,
+        "speed_unit": "km/h",
+        "armor": 250,
+        "armor_unit": "C.D.M.",
+        "firepower": 85,
+        "firepower_unit": "Pts",
+        "range": 12.7,
+        "range_unit": "km",
+        "sensors": 321,
+        "sensors_unit": "km",
+        "mobility": 30
+      },
+      "dataFile": "data/mechas/destroid_raidar_x.json"
+    },
+    {
+      "id": "destroid_spartan",
+      "name": "Spartan",
+      "alias": "MBR-07-Mk II Spartan",
+      "category": "destroid",
+      "generation": "gen1",
+      "faction": {
+        "es": "U.N. Spacy // Fuerzas de Defensa Terrestre (RDF)",
+        "en": "U.N. Spacy // Robotech Defense Force (RDF)"
+      },
+      "class": {
+        "es": "Destroid de Combate Cercano e Incursión Pesada",
+        "en": "Heavy Close-Combat & Incursion Destroid"
+      },
+      "thumbnail": "assets/images/mechas/destroid_spartan/spartan_profile.png",
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "battloid": "assets/images/mechas/destroid_spartan/spartan_profile.png"
+      },
+      "summary": {
+        "es": "El MBR-07 Spartan es el mecha bípedo más ágil de la familia de Destroids de la Primera Guerra Robotech. Concebido como una unidad de asalto directo, combate cue...",
+        "en": "The MBR-07 Spartan is the most agile bipedal mech in the First Robotech War Destroid family. Designed as a direct assault, melee combat, and anti-giant Zentraed..."
+      },
+      "stats": {
+        "speed": 118,
+        "speed_unit": "km/h",
+        "armor": 280,
+        "armor_unit": "C.D.M.",
+        "firepower": 78,
+        "firepower_unit": "Pts",
+        "range": 15.0,
+        "range_unit": "km",
+        "sensors": 85,
+        "sensors_unit": "km",
+        "mobility": 65
+      },
+      "dataFile": "data/mechas/destroid_spartan.json"
+    },
+    {
+      "id": "destroid_phalanx",
+      "name": "Phalanx",
+      "alias": "SDR-04-Mk XII Phalanx",
+      "category": "destroid",
+      "generation": "gen1",
+      "faction": {
+        "es": "U.N. Spacy // Fuerzas de Defensa Terrestre (RDF)",
+        "en": "U.N. Spacy // Robotech Defense Force (RDF)"
+      },
+      "class": {
+        "es": "Destroid de Defensa Antiaérea Pesada y Bombardeo de Saturación",
+        "en": "Heavy Anti-Aircraft & Saturation Barrage Destroid"
+      },
+      "thumbnail": "assets/images/mechas/destroid_phalanx/phalanx_profile.png",
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "battloid": "assets/images/mechas/destroid_phalanx/phalanx_profile.png"
+      },
+      "summary": {
+        "es": "El SDR-04 Phalanx fue desarrollado como respuesta urgente a los ataques masivos de cápsulas voladoras Regult y cazas Gnerl. En lugar de brazos manipuladores est...",
+        "en": "The SDR-04 Phalanx was developed as an urgent countermeasure against swarms of Regult pods and Gnerl fighters. Instead of standard manipulator hands, it mounts ..."
+      },
+      "stats": {
+        "speed": 102,
+        "speed_unit": "km/h",
+        "armor": 260,
+        "armor_unit": "C.D.M.",
+        "firepower": 96,
+        "firepower_unit": "Pts",
+        "range": 65.0,
+        "range_unit": "km",
+        "sensors": 160,
+        "sensors_unit": "km",
+        "mobility": 35
+      },
+      "dataFile": "data/mechas/destroid_phalanx.json"
+    },
+    {
+      "id": "destroid_monster",
+      "name": "Monster",
+      "alias": "HWR-00-Mk II Monster",
+      "category": "destroid",
+      "faction": {
+        "es": "U.N. Spacy",
+        "en": "U.N. Spacy"
+      },
+      "class": {
+        "es": "Destroid Antiaéreo No Transformable",
+        "en": "Non-Transformable Anti-Aircraft Destroid"
+      },
+      "thumbnail": "assets/images/mechas/destroid_monster/monster_profile.png",
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "is_variable": true,
+      "has_variants": true,
+      "variants_count": 2,
+      "modes": {
+        "fighter": "assets/images/mechas/destroid_monster/monster_profile.png",
+        "guardian": "assets/images/mechas/destroid_monster/monster_profile.png",
+        "battloid": "assets/images/mechas/destroid_monster/monster_profile.png"
+      },
+      "summary": {
+        "es": "El artefacto terrestre móvil terrestre más colosal de la Primera Guerra Robotech. Con más de 22 metros de altu...",
+        "en": "The most colossal mobile ground combat unit of the First Robotech War. Standing over 22 meters tall and weighi..."
+      },
+      "stats": {
+        "speed": 48,
+        "speed_unit": "km/h",
+        "armor": 550,
+        "armor_unit": "C.D.M.",
+        "firepower": 100,
+        "firepower_unit": "Pts",
+        "range": 160,
+        "range_unit": "km",
+        "sensors": 210,
+        "sensors_unit": "km",
+        "mobility": 18
+      },
+      "dataFile": "data/mechas/destroid_monster.json"
+    },
+    {
+      "id": "cat_eye_recon",
+      "name": "Cat's Eye",
+      "alias": "ES-11D Cat's Eye Recon Plane",
+      "category": "support",
+      "generation": "gen1",
+      "faction": {
+        "es": "U.N. Spacy // Escuadrón de Vigilancia y Guerra Electrónica",
+        "en": "U.N. Spacy // Early Warning & Electronic Warfare Wing"
+      },
+      "class": {
+        "es": "Aeronave Aeroespacial de Alerta Temprana, Radar y Guerra Electrónica",
+        "en": "Aerospace Airborne Early Warning & Electronic Warfare Craft"
+      },
+      "thumbnail": "assets/images/mechas/cat_eye_recon/cat_eye_profile.jpg",
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "fighter": "assets/images/mechas/cat_eye_recon/cat_eye_profile.jpg"
+      },
+      "summary": {
+        "es": "Los \"ojos y oídos\" de la flota terrestre. El ES-11D Cat's Eye monta un rotodomo gigante de radar en su sección dorsal superior, capaz de penetrar las interferen...",
+        "en": "The \"eyes and ears\" of the RDF fleet. The ES-11D Cat's Eye features a massive dorsal rotodome radar capable of cutting through Zentraedi ECM jamming and vectori..."
+      },
+      "stats": {
+        "speed": 2850,
+        "speed_unit": "km/h",
+        "armor": 140,
+        "armor_unit": "C.D.M.",
+        "firepower": 25,
+        "firepower_unit": "Pts",
+        "range": 8.0,
+        "range_unit": "km",
+        "sensors": 650,
+        "sensors_unit": "km",
+        "mobility": 75
+      },
+      "dataFile": "data/mechas/cat_eye_recon.json"
+    },
+    {
       "id": "regult_battle_pod",
       "name": "Regult Tactical Pod",
       "alias": "Zentraedi Standard Battle Pod",
       "category": "zentraedi",
+      "generation": "gen1",
       "faction": {
         "es": "Flota Principal Zentraedi (Boddole Zer)",
         "en": "Zentraedi Main Fleet (Boddole Zer)"
@@ -161,10 +407,12 @@
       "thumbnail": "assets/images/mechas/Zentraedi_Tactical_Battlepod/Zentraedi_Tactical_Battlepod.webp",
       "faction_logo": "assets/images/ui/logo_zentran.png",
       "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
       "modes": null,
       "summary": {
-        "es": "El Regult es el mecha de producción en masa estándar de la infantería mecanizada Zentraedi. Con su diseño bípe...",
-        "en": "The Regult is the standard mass-production combat mecha of the Zentraedi mechanized infantry. Featuring an inv..."
+        "es": "El Regult es el mecha de producción en masa estándar de la infantería mecanizada Zentraedi. Con su diseño bípedo de huevo aviar invertido y sus largas piernas d...",
+        "en": "The Regult is the standard mass-production combat mecha of the Zentraedi mechanized infantry. Featuring an inverted egg-shaped cockpit and long bipedal running ..."
       },
       "stats": {
         "speed": 281,
@@ -186,6 +434,7 @@
       "name": "Officer's Battle Pod",
       "alias": "Glaug Tactical Officer Pod",
       "category": "zentraedi",
+      "generation": "gen1",
       "faction": {
         "es": "Flota Principal Zentraedi (Boddole Zer)",
         "en": "Zentraedi Main Fleet (Boddole Zer)"
@@ -197,10 +446,12 @@
       "thumbnail": "assets/images/mechas/Zentraedi_Officiers_Pod/1d1a7cedb0381842975d1d8864537abf.jpg",
       "faction_logo": "assets/images/ui/logo_zentran.png",
       "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
       "modes": null,
       "summary": {
-        "es": "El Glaug es el mecha de mando supremo de la infantería Zentraedi, reservado para comandantes como Khyron. Combina un cañón superior de partículas devastador con blindaje reforzado y propulsores de alta maniobrabilidad.",
-        "en": "The Glaug is the premier command battlepod of the Zentraedi forces, piloted by high-ranking leaders such as Khyron. It pairs a devastating dorsal particle cannon with heavy armor and high-output maneuvering thrusters."
+        "es": "La Cápsula de Mando Táctico Zentraedi (designada como Glaug o 'Officer's Battle Pod') es un mecha de combate de élite reservado exclusivamente para oficiales de...",
+        "en": "The Zentraedi Tactical Officer's Battle Pod (designated Glaug) is an elite combat mecha reserved exclusively for high-ranking field commanders, battalion leader..."
       },
       "stats": {
         "speed": 281.6,
@@ -218,10 +469,550 @@
       "dataFile": "data/mechas/zentraedi_officers_pod.json"
     },
     {
+      "id": "queadluun_rau",
+      "name": "Queadluun-Rau",
+      "alias": "Armadura de Asalto Femenina Meltrandi",
+      "category": "zentraedi",
+      "generation": "gen1",
+      "faction": {
+        "es": "Flota Meltrandi // Cuadrilátero Femenino de Asalto de Miriya",
+        "en": "Meltrandi Fleet // Female Quadrono Assault Squadron"
+      },
+      "class": {
+        "es": "Traje Acorazado de Asalto Aeroespacial y Alta Agilidad",
+        "en": "High-Agility Aerospace Assault Power Armor"
+      },
+      "thumbnail": "assets/images/mechas/queadluun_rau/queadluun_profile.png",
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "battloid": "assets/images/mechas/queadluun_rau/queadluun_profile.png"
+      },
+      "summary": {
+        "es": "El pináculo del desarrollo meca alienígena en la Primera Guerra Robotech. Utilizado exclusivamente por la casta guerrera femenina Meltrandi, el Queadluun-Rau es...",
+        "en": "The pinnacle of alien mecha engineering in the First Robotech War. Exclusively piloted by elite female Meltrandi Quadronos, the Queadluun-Rau is renowned for it..."
+      },
+      "stats": {
+        "speed": 4150,
+        "speed_unit": "km/h",
+        "armor": 240,
+        "armor_unit": "C.D.M.",
+        "firepower": 94,
+        "firepower_unit": "Pts",
+        "range": 25.0,
+        "range_unit": "km",
+        "sensors": 190,
+        "sensors_unit": "km",
+        "mobility": 100
+      },
+      "dataFile": "data/mechas/queadluun_rau.json"
+    },
+    {
+      "id": "nousjadeul_ger",
+      "name": "Nousjadeul-Ger",
+      "alias": "Armadura de Combate Zentraedi Masculina",
+      "category": "zentraedi",
+      "generation": "gen1",
+      "faction": {
+        "es": "Gran Armada Imperial Zentraedi // Tropas de Asalto Blindado",
+        "en": "Grand Zentraedi Imperial Armada // Armored Assault Shock Troops"
+      },
+      "class": {
+        "es": "Traje Acorazado Pesado de Vuelo y Combate Exoatmosférico",
+        "en": "Heavy Exoatmospheric Assault Power Armor"
+      },
+      "thumbnail": "assets/images/mechas/nousjadeul_ger/nousjadeul_profile.png",
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "battloid": "assets/images/mechas/nousjadeul_ger/nousjadeul_profile.png"
+      },
+      "summary": {
+        "es": "La armadura de asalto estándar para los comandantes y soldados de élite de la casta masculina Zentraedi. A diferencia de las cápsulas ligeras Regult, el Nousjad...",
+        "en": "The standard heavy power armor for elite commanders and officers of the male Zentraedi caste. Unlike the lighter Regult battle pods, the Nousjadeul-Ger provides..."
+      },
+      "stats": {
+        "speed": 2950,
+        "speed_unit": "km/h",
+        "armor": 300,
+        "armor_unit": "C.D.M.",
+        "firepower": 88,
+        "firepower_unit": "Pts",
+        "range": 18.0,
+        "range_unit": "km",
+        "sensors": 140,
+        "sensors_unit": "km",
+        "mobility": 82
+      },
+      "dataFile": "data/mechas/nousjadeul_ger.json"
+    },
+    {
+      "id": "gnerl_fighter",
+      "name": "Gnerl Fighter Pod",
+      "alias": "Caza Aeroespacial Ligero Zentraedi",
+      "category": "zentraedi",
+      "generation": "gen1",
+      "faction": {
+        "es": "Gran Armada Imperial Zentraedi // Escuadrones de Caza",
+        "en": "Grand Zentraedi Imperial Armada // Fighter Wings"
+      },
+      "class": {
+        "es": "Caza Aeroespacial de Asalto Ligero y Alta Velocidad",
+        "en": "Light High-Speed Aerospace Strike Fighter"
+      },
+      "thumbnail": "assets/images/mechas/gnerl_fighter/gnerl_profile.png",
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "fighter": "assets/images/mechas/gnerl_fighter/gnerl_profile.png"
+      },
+      "summary": {
+        "es": "El caza de combate espacial más numeroso de la armada Zentraedi. Con su peculiar silueta aerodinámica y un motor colosal que ocupa más de la mitad de su fuselaj...",
+        "en": "The most numerous space fighter in the Zentraedi armada. Featuring a distinctive streamlined silhouette and an oversized thruster comprising over half its hull,..."
+      },
+      "stats": {
+        "speed": 4800,
+        "speed_unit": "km/h",
+        "armor": 160,
+        "armor_unit": "C.D.M.",
+        "firepower": 82,
+        "firepower_unit": "Pts",
+        "range": 12.0,
+        "range_unit": "km",
+        "sensors": 110,
+        "sensors_unit": "km",
+        "mobility": 90
+      },
+      "dataFile": "data/mechas/gnerl_fighter.json"
+    },
+    {
+      "id": "recovery_pod",
+      "name": "Cápsula de Recuperación Kelcadra",
+      "alias": "Cápsula Utilitaria y Logística Zentraedi",
+      "category": "zentraedi",
+      "generation": "gen1",
+      "faction": {
+        "es": "Gran Armada Imperial Zentraedi // Cuerpos de Apoyo y Rescate",
+        "en": "Grand Zentraedi Imperial Armada // Support & Retrieval Corps"
+      },
+      "class": {
+        "es": "Nave Auxiliar de Rescate, Transporte de Carga y Enlace",
+        "en": "Auxiliary Rescue, Cargo Transport & Retrieval Craft"
+      },
+      "thumbnail": "assets/images/mechas/recovery_pod/recovery_pod_profile.png",
+      "faction_logo": "assets/images/ui/logo_zentran.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "fighter": "assets/images/mechas/recovery_pod/recovery_pod_profile.png"
+      },
+      "summary": {
+        "es": "Vehículo utilitario indispensable en las operaciones de la flota Zentraedi. Equipado con potentes pinzas mecánicas externas y una bahía ventral de acoplamiento,...",
+        "en": "An indispensable utility workhorse across the Zentraedi armada. Equipped with heavy mechanical grappling arms and a ventral mooring bay, the Kelcadra retrieves ..."
+      },
+      "stats": {
+        "speed": 2100,
+        "speed_unit": "km/h",
+        "armor": 220,
+        "armor_unit": "C.D.M.",
+        "firepower": 40,
+        "firepower_unit": "Pts",
+        "range": 5.0,
+        "range_unit": "km",
+        "sensors": 120,
+        "sensors_unit": "km",
+        "mobility": 60
+      },
+      "dataFile": "data/mechas/recovery_pod.json"
+    },
+    {
+      "id": "vht1_spartas",
+      "name": "Spartas Hovertank",
+      "alias": "VHT-1 Veritech Hover Tank",
+      "category": "veritech",
+      "generation": "gen2",
+      "faction": {
+        "es": "Ejército de la Cruz del Sur // 15º Cuerpo Táctico Blindado (ATAC)",
+        "en": "Army of the Southern Cross // 15th Armored Tactical Corps (ATAC)"
+      },
+      "class": {
+        "es": "Tanque Acorazado Transformable de Asalto Terrestre y Urbano",
+        "en": "Transformable Armored Ground & Urban Assault Tank"
+      },
+      "thumbnail": "assets/images/mechas/vht1_spartas/spartas_profile.jpg",
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "is_variable": true,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "fighter": "assets/images/mechas/vht1_spartas/spartas_flight.jpg",
+        "guardian": "assets/images/mechas/vht1_spartas/spartas_tank.jpg",
+        "battloid": "assets/images/mechas/vht1_spartas/spartas_profile.jpg"
+      },
+      "summary": {
+        "es": "El caballo de batalla indiscutible de las fuerzas terrestres de la Cruz del Sur. El VHT-1 Spartas es un mecha transformable en tres configuraciones: el veloz Mo...",
+        "en": "The definitive ground workhorse of the Army of the Southern Cross. The VHT-1 Spartas transitions seamlessly across three modes: high-speed Hovertank, rugged Gla..."
+      },
+      "stats": {
+        "speed": 210,
+        "speed_unit": "km/h",
+        "armor": 320,
+        "armor_unit": "C.D.M.",
+        "firepower": 92,
+        "firepower_unit": "Pts",
+        "range": 16.0,
+        "range_unit": "km",
+        "sensors": 95,
+        "sensors_unit": "km",
+        "mobility": 80
+      },
+      "dataFile": "data/mechas/vht1_spartas.json"
+    },
+    {
+      "id": "vf8_logan",
+      "name": "VF-8 Logan",
+      "alias": "Caza Ligero Transformable Interceptor",
+      "category": "veritech",
+      "generation": "gen2",
+      "faction": {
+        "es": "Ejército de la Cruz del Sur // Flota Táctica Espacial (TASC)",
+        "en": "Army of the Southern Cross // Tactical Armored Space Corps"
+      },
+      "class": {
+        "es": "Caza Ligero Transformable de Defensa Aérea e Intercepción",
+        "en": "Light Transformable Air Defense & Interceptor Fighter"
+      },
+      "thumbnail": "assets/images/mechas/vf8_logan/logan_profile.png",
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "is_variable": true,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "fighter": "assets/images/mechas/vf8_logan/logan_profile.png",
+        "guardian": "assets/images/mechas/vf8_logan/logan_marie.png",
+        "battloid": "assets/images/mechas/vf8_logan/logan_battloid.png"
+      },
+      "summary": {
+        "es": "Diseñado para sustituir al venerable VF-1 Valkyrie como interceptor ligero de respuesta inmediata, el VF-8 Logan destaca por sus dimensiones hipercompactas y su...",
+        "en": "Designed to succeed the venerable VF-1 Valkyrie as a rapid-reaction light interceptor, the VF-8 Logan features hyper-compact dimensions and instantaneous mode t..."
+      },
+      "stats": {
+        "speed": 3950,
+        "speed_unit": "km/h",
+        "armor": 190,
+        "armor_unit": "C.D.M.",
+        "firepower": 80,
+        "firepower_unit": "Pts",
+        "range": 10.0,
+        "range_unit": "km",
+        "sensors": 180,
+        "sensors_unit": "km",
+        "mobility": 96
+      },
+      "dataFile": "data/mechas/vf8_logan.json"
+    },
+    {
+      "id": "vfh10_auroran",
+      "name": "Auroran (AGACS)",
+      "alias": "VFH-10 Armored Gyro Assault Chopper",
+      "category": "veritech",
+      "generation": "gen2",
+      "faction": {
+        "es": "Ejército de la Cruz del Sur // Flota Táctica Espacial (TASC)",
+        "en": "Army of the Southern Cross // Tactical Armored Space Corps"
+      },
+      "class": {
+        "es": "Helicóptero Girocóptero y Meca de Asalto Espacial Pesado",
+        "en": "Heavy Aerospace Gyro Chopper & Assault Battle Mecha"
+      },
+      "thumbnail": "assets/images/mechas/vfh10_auroran/auroran_profile.jpg",
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "is_variable": true,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "fighter": "assets/images/mechas/vfh10_auroran/auroran_chopper.jpg",
+        "guardian": "assets/images/mechas/vfh10_auroran/auroran_combat.png",
+        "battloid": "assets/images/mechas/vfh10_auroran/auroran_profile.jpg"
+      },
+      "summary": {
+        "es": "El sustituto definitivo del Logan en las fases avanzadas de la Segunda Guerra Robotech. El VFH-10 Auroran (AGACS) combina la capacidad de vuelo estacionario de ...",
+        "en": "The ultimate replacement for the Logan in the later stages of the Second Robotech War. The VFH-10 Auroran (AGACS) blends hover-chopper aerodynamics with the she..."
+      },
+      "stats": {
+        "speed": 4200,
+        "speed_unit": "km/h",
+        "armor": 270,
+        "armor_unit": "C.D.M.",
+        "firepower": 90,
+        "firepower_unit": "Pts",
+        "range": 14.0,
+        "range_unit": "km",
+        "sensors": 220,
+        "sensors_unit": "km",
+        "mobility": 94
+      },
+      "dataFile": "data/mechas/vfh10_auroran.json"
+    },
+    {
+      "id": "sylphide",
+      "name": "FA-109 Sylphide",
+      "alias": "Caza Interceptor de Gran Altitud",
+      "category": "support",
+      "generation": "gen2",
+      "faction": {
+        "es": "Ejército de la Cruz del Sur // Fuerza Aérea Táctica (TAF)",
+        "en": "Army of the Southern Cross // Tactical Air Force (TAF)"
+      },
+      "class": {
+        "es": "Caza Interceptor No Transformable de Alta Velocidad y Cota",
+        "en": "Non-Transformable High-Altitude Interceptor Fighter"
+      },
+      "thumbnail": "assets/images/mechas/sylphide/sylphide_profile.png",
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "fighter": "assets/images/mechas/sylphide/sylphide_profile.png"
+      },
+      "summary": {
+        "es": "El interceptor supersónico de primera línea para la defensa aérea terrestre durante la invasión de los Maestros. Aunque no es transformable, el Sylphide superab...",
+        "en": "The front-line supersonic interceptor guarding Earth's skies during the Masters' invasion. Non-transformable, the Sylphide prioritized climb rate and raw speed ..."
+      },
+      "stats": {
+        "speed": 4650,
+        "speed_unit": "km/h",
+        "armor": 170,
+        "armor_unit": "C.D.M.",
+        "firepower": 75,
+        "firepower_unit": "Pts",
+        "range": 22.0,
+        "range_unit": "km",
+        "sensors": 260,
+        "sensors_unit": "km",
+        "mobility": 88
+      },
+      "dataFile": "data/mechas/sylphide.json"
+    },
+    {
+      "id": "bioroid_blue_trooper",
+      "name": "Bioroid Soldado Azul",
+      "alias": "Bioroid Estándar de Infantería Pesada",
+      "category": "bioroid",
+      "generation": "gen2",
+      "faction": {
+        "es": "Maestros de la Robotech // Legiones de Clones Bioroid",
+        "en": "Robotech Masters // Bioroid Clone Legions"
+      },
+      "class": {
+        "es": "Mecha Biocibernético Bípedo de Asalto Pesado",
+        "en": "Biocylindrical Bipedal Heavy Assault Mecha"
+      },
+      "thumbnail": "assets/images/mechas/bioroid_blue_trooper/bioroid_blue_profile.jpg",
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "battloid": "assets/images/mechas/bioroid_blue_trooper/bioroid_blue_profile.jpg"
+      },
+      "summary": {
+        "es": "La unidad de combate básica y más numerosa del ejército de los Maestros de la Robotech. El Bioroid Azul posee un diseño bio-orgánico distintivo con superficies ...",
+        "en": "The backbone infantry mecha of the Robotech Masters. The Blue Bioroid boasts a distinctive organic, curved silhouette designed to deflect incoming laser and kin..."
+      },
+      "stats": {
+        "speed": 160,
+        "speed_unit": "km/h",
+        "armor": 290,
+        "armor_unit": "C.D.M.",
+        "firepower": 84,
+        "firepower_unit": "Pts",
+        "range": 6.0,
+        "range_unit": "km",
+        "sensors": 110,
+        "sensors_unit": "km",
+        "mobility": 85
+      },
+      "dataFile": "data/mechas/bioroid_blue_trooper.json"
+    },
+    {
+      "id": "bioroid_red_leader",
+      "name": "Bioroid Comandante Rojo",
+      "alias": "Bioroid de Liderazgo y Asalto Avanzado",
+      "category": "bioroid",
+      "generation": "gen2",
+      "faction": {
+        "es": "Maestros de la Robotech // Guardia de Élite del Triunvirato",
+        "en": "Robotech Masters // Triumvirate Elite Guard"
+      },
+      "class": {
+        "es": "Mecha de Mando Táctico y Conducción de Escuadra",
+        "en": "Tactical Command & Squadron Leader Mecha"
+      },
+      "thumbnail": "assets/images/mechas/bioroid_red_leader/bioroid_red_profile.jpg",
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "battloid": "assets/images/mechas/bioroid_red_leader/bioroid_red_profile.jpg"
+      },
+      "summary": {
+        "es": "Reconocible por su imponente acabado en rojo escarlata y hombreras extendidas, el Bioroid Rojo lidera escuadras completas de Bioroids Azules en combate. Posee u...",
+        "en": "Instantly recognizable by its deep scarlet livery and flared pauldrons, the Red Bioroid leads squads of Blue Troopers into battle. It boasts heavier plating, du..."
+      },
+      "stats": {
+        "speed": 185,
+        "speed_unit": "km/h",
+        "armor": 330,
+        "armor_unit": "C.D.M.",
+        "firepower": 89,
+        "firepower_unit": "Pts",
+        "range": 8.0,
+        "range_unit": "km",
+        "sensors": 180,
+        "sensors_unit": "km",
+        "mobility": 90
+      },
+      "dataFile": "data/mechas/bioroid_red_leader.json"
+    },
+    {
+      "id": "bioroid_invid_fighter",
+      "name": "Bioroid Invid Fighter",
+      "alias": "Bioroid Pesado Especializado Anti-Invid",
+      "category": "bioroid",
+      "generation": "gen2",
+      "faction": {
+        "es": "Maestros de la Robotech // Legiones de Contención Anti-Invid",
+        "en": "Robotech Masters // Anti-Invid Shock Guard"
+      },
+      "class": {
+        "es": "Mecha de Asalto Superpesado y Cazador de Blindados",
+        "en": "Super-Heavy Assault & Tank-Hunter Mecha"
+      },
+      "thumbnail": "assets/images/mechas/bioroid_invid_fighter/bioroid_invid_fighter.jpg",
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "battloid": "assets/images/mechas/bioroid_invid_fighter/bioroid_invid_fighter.jpg"
+      },
+      "summary": {
+        "es": "Desarrollado originalmente por los Maestros de la Robotech para contener las devastadoras hordas de mechas Shock Troopers de la Reina Invid en el espacio profun...",
+        "en": "Originally engineered by the Masters to counter the savage Invid Shock Trooper swarms in deep space, the Invid Fighter Bioroid incorporates heavy plasma-resista..."
+      },
+      "stats": {
+        "speed": 170,
+        "speed_unit": "km/h",
+        "armor": 380,
+        "armor_unit": "C.D.M.",
+        "firepower": 94,
+        "firepower_unit": "Pts",
+        "range": 12.0,
+        "range_unit": "km",
+        "sensors": 150,
+        "sensors_unit": "km",
+        "mobility": 82
+      },
+      "dataFile": "data/mechas/bioroid_invid_fighter.json"
+    },
+    {
+      "id": "bioroid_commander",
+      "name": "Bioroid de Zor Prime",
+      "alias": "Bioroid Triumvirate Especial / Prototipo de Bio-Enlace",
+      "category": "bioroid",
+      "generation": "gen2",
+      "faction": {
+        "es": "Maestros de la Robotech // Zor Prime",
+        "en": "Robotech Masters // Zor Prime"
+      },
+      "class": {
+        "es": "Mecha Prototipo de Control Psíquico y Mando de Flota",
+        "en": "Prototype Psychic-Linked Fleet Command Mecha"
+      },
+      "thumbnail": "assets/images/mechas/bioroid_commander/bioroid_commander_zor.png",
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "battloid": "assets/images/mechas/bioroid_commander/bioroid_commander_zor.png"
+      },
+      "summary": {
+        "es": "El mecha más avanzado tecnológicamente de los Maestros. Pilotado por Zor Prime, el clon genético del creador de la Protocultura, este prototipo contaba con una ...",
+        "en": "The most technologically sophisticated mecha in the Masters' arsenal. Piloted by Zor Prime, the clone of Protoculture discoverer Zor, this prototype featured an..."
+      },
+      "stats": {
+        "speed": 200,
+        "speed_unit": "km/h",
+        "armor": 350,
+        "armor_unit": "C.D.M.",
+        "firepower": 96,
+        "firepower_unit": "Pts",
+        "range": 10.0,
+        "range_unit": "km",
+        "sensors": 240,
+        "sensors_unit": "km",
+        "mobility": 95
+      },
+      "dataFile": "data/mechas/bioroid_commander.json"
+    },
+    {
+      "id": "bioroid_hovercraft",
+      "name": "Bioroid Hovercraft",
+      "alias": "Trineo Gravitatorio de Combate Bioroid",
+      "category": "support",
+      "generation": "gen2",
+      "faction": {
+        "es": "Maestros de la Robotech // Legiones de Asalto Bioroid",
+        "en": "Robotech Masters // Bioroid Assault Legions"
+      },
+      "class": {
+        "es": "Plataforma Aérea de Desplazamiento Antigravitatorio y Combate",
+        "en": "Aerial Antigravity Transport & Combat Sled"
+      },
+      "thumbnail": "assets/images/mechas/bioroid_hovercraft/bioroid_hovercraft.jpg",
+      "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "fighter": "assets/images/mechas/bioroid_hovercraft/bioroid_hovercraft.jpg"
+      },
+      "summary": {
+        "es": "El complemento de movilidad por excelencia de los Bioroids. Este trineo volador actúa como plataforma de vuelo por repulsión gravitatoria, permitiendo a los mec...",
+        "en": "The quintessential mobility platform for Bioroid mechas. This flying sled harnesses repulsor antigravity, allowing bipedal mechas to cruise at over 600 km/h, sk..."
+      },
+      "stats": {
+        "speed": 620,
+        "speed_unit": "km/h",
+        "armor": 210,
+        "armor_unit": "C.D.M.",
+        "firepower": 65,
+        "firepower_unit": "Pts",
+        "range": 4.0,
+        "range_unit": "km",
+        "sensors": 80,
+        "sensors_unit": "km",
+        "mobility": 92
+      },
+      "dataFile": "data/mechas/bioroid_hovercraft.json"
+    },
+    {
       "id": "Alfa_Fighter",
       "name": "Alpha Fighter",
       "alias": "VAF-6R Alpha Fighter",
       "category": "veritech",
+      "generation": "gen3",
       "faction": {
         "es": "REF - División Marte (Mars Base)",
         "en": "REF - Mars Base Division"
@@ -233,14 +1024,46 @@
       "thumbnail": "assets/images/mechas/Alfa Fighter/d06dca1d-299c-4e1b-a7d9-4ba708b63b41.png",
       "faction_logo": "assets/images/ui/Mars_Base.png",
       "is_variable": true,
+      "has_variants": false,
+      "variants_count": 0,
       "modes": {
-        "fighter": "assets/images/mechas/Alfa Fighter/th (1).jpg",
-        "guardian": "assets/images/mechas/Alfa Fighter/s-l1600.webp",
-        "battloid": "assets/images/mechas/Alfa Fighter/671d609a0cd0fc43ce2af07e514e9762.jpg"
+        "fighter": {
+          "name_es": "Modo Caza / Jet",
+          "name_en": "Fighter Mode / Jet",
+          "image": "assets/images/mechas/Alfa Fighter/th (1).jpg",
+          "length": "10,25 m",
+          "wingspan": "8,20 m",
+          "height": "4,60 m",
+          "max_speed": "Mach 2.87 a gran altitud / Mach 1.5 a nivel del mar",
+          "notes_es": "",
+          "notes_en": ""
+        },
+        "guardian": {
+          "name_es": "Modo Guardián (Gerwalk)",
+          "name_en": "Guardian Mode (Gerwalk)",
+          "image": "assets/images/mechas/Alfa Fighter/s-l1600.webp",
+          "length": "8,00 m",
+          "wingspan": "8,20 m",
+          "height": "5,72 m",
+          "speed": "VTOL / 680 km/h en vuelo rasante",
+          "notes_es": "",
+          "notes_en": ""
+        },
+        "battloid": {
+          "name_es": "Modo Battloid (Humanoide)",
+          "name_en": "Battloid Mode (Humanoid)",
+          "image": "assets/images/mechas/Alfa Fighter/671d609a0cd0fc43ce2af07e514e9762.jpg",
+          "height": "8,75 m",
+          "width": "",
+          "depth": "",
+          "ground_speed": "110 km/h en carrera terrestre / Vuelo asistido por retrocohetes",
+          "notes_es": "",
+          "notes_en": ""
+        }
       },
       "summary": {
-        "es": "El VAF-6R Alpha Fighter es la espina dorsal táctica de la Fuerza Expedicionaria Robotech (REF) y las divisione...",
-        "en": "The VAF-6R Alpha Fighter is the tactical backbone of the Robotech Expeditionary Force (REF) and Mars Division ..."
+        "es": "El VAF-6R Alpha Fighter es la espina dorsal táctica de la Fuerza Expedicionaria Robotech (REF) y las divisiones de reconquista terrestre de la División Marte du...",
+        "en": "The VAF-6R Alpha Fighter is the tactical backbone of the Robotech Expeditionary Force (REF) and Mars Division planetary recapture forces during the Third Robote..."
       },
       "stats": {
         "speed": 120,
@@ -256,6 +1079,382 @@
         "mobility": 95
       },
       "dataFile": "data/mechas/Alfa_Fighter.json"
+    },
+    {
+      "id": "vfb9_beta",
+      "name": "Beta Fighter",
+      "alias": "VFB-9 Veritech Beta Heavy Fighter / Bomber",
+      "category": "veritech",
+      "generation": "gen3",
+      "faction": {
+        "es": "Fuerza Expedicionaria Robotech (REF) // Cuerpos de Caza Pesada",
+        "en": "Robotech Expeditionary Force (REF) // Heavy Strike Wings"
+      },
+      "class": {
+        "es": "Bombardero y Caza Pesado Transformable / Propulsor Acoplable Legios",
+        "en": "Heavy Transformable Fighter-Bomber & Legios Linkup Booster"
+      },
+      "thumbnail": "assets/images/mechas/vfb9_beta/beta_profile.jpg",
+      "faction_logo": "assets/images/ui/Mars_Base.png",
+      "is_variable": true,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "fighter": "assets/images/mechas/vfb9_beta/beta_profile.jpg",
+        "guardian": "assets/images/mechas/vfb9_beta/beta_combo.png",
+        "battloid": "assets/images/mechas/vfb9_beta/beta_linkup.png"
+      },
+      "summary": {
+        "es": "El complemento definitivo para el Alpha Fighter en la Tercera Guerra Robotech. El VFB-9 Beta es un coloso acorazado diseñado para acoplarse directamente en la c...",
+        "en": "The ultimate tactical companion to the Alpha Fighter in the Third Robotech War. The VFB-9 Beta is an armored heavy lifter that mates to the rear of the Alpha Fi..."
+      },
+      "stats": {
+        "speed": 4900,
+        "speed_unit": "km/h",
+        "armor": 420,
+        "armor_unit": "C.D.M.",
+        "firepower": 98,
+        "firepower_unit": "Pts",
+        "range": 80.0,
+        "range_unit": "km",
+        "sensors": 280,
+        "sensors_unit": "km",
+        "mobility": 82
+      },
+      "dataFile": "data/mechas/vfb9_beta.json"
+    },
+    {
+      "id": "shadow_alpha",
+      "name": "Shadow Alpha Fighter",
+      "alias": "VF/A-6X Shadow Fighter",
+      "category": "veritech",
+      "generation": "gen3",
+      "faction": {
+        "es": "Fuerza Expedicionaria Robotech // Escuadrones de Operaciones Furtivas",
+        "en": "Robotech Expeditionary Force // Stealth Operations Wings"
+      },
+      "class": {
+        "es": "Caza Transformable Furtivo de Quinta Generación con Camuflaje Cuántico",
+        "en": "Fifth-Generation Stealth Transformable Fighter with Quantum Cloak"
+      },
+      "thumbnail": "assets/images/mechas/shadow_alpha/shadow_alpha_profile.jpg",
+      "faction_logo": "assets/images/ui/Mars_Base.png",
+      "is_variable": true,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "fighter": "assets/images/mechas/shadow_alpha/shadow_alpha_profile.jpg",
+        "guardian": "assets/images/mechas/shadow_alpha/shadow_alpha_profile.jpg",
+        "battloid": "assets/images/mechas/shadow_alpha/shadow_alpha_battloid.jpg"
+      },
+      "summary": {
+        "es": "La cúspide tecnológica de la Fuerza Expedicionaria Robotech al final de la Tercera Guerra. El Shadow Alpha incorpora la tecnología furtiva Shadow cedida por los...",
+        "en": "The pinnacle of REF aerospace engineering at the close of the Third War. The Shadow Alpha incorporates Haydonite-designed Shadow cloaking technology that comple..."
+      },
+      "stats": {
+        "speed": 4600,
+        "speed_unit": "km/h",
+        "armor": 280,
+        "armor_unit": "C.D.M.",
+        "firepower": 96,
+        "firepower_unit": "Pts",
+        "range": 20.0,
+        "range_unit": "km",
+        "sensors": 310,
+        "sensors_unit": "km",
+        "mobility": 99
+      },
+      "dataFile": "data/mechas/shadow_alpha.json"
+    },
+    {
+      "id": "vr052_cyclone",
+      "name": "VR-052 Battler Cyclone",
+      "alias": "VR-052F / VR-052T Armadura de Combate Transformable",
+      "category": "veritech",
+      "generation": "gen3",
+      "faction": {
+        "es": "Fuerza Expedicionaria Robotech // División Marte // Resistencia Terrestre",
+        "en": "Robotech Expeditionary Force // Mars Base Division // Resistance"
+      },
+      "class": {
+        "es": "Motocicleta Todo Terreno Transformable en Servoarmadura de Infantería Pesada",
+        "en": "All-Terrain Transformable Motorcycle into Heavy Exoskeleton Power Armor"
+      },
+      "thumbnail": "assets/images/mechas/vr052_cyclone/cyclone_render.jpg",
+      "faction_logo": "assets/images/ui/Mars_Base.png",
+      "is_variable": true,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "fighter": "assets/images/mechas/vr052_cyclone/cyclone_cycle.jpg",
+        "battloid": "assets/images/mechas/vr052_cyclone/cyclone_battloid.jpg"
+      },
+      "summary": {
+        "es": "El vehículo personal más revolucionario en la historia militar de la humanidad. Concebido para dotar a los pilotos caídos de una capacidad de supervivencia y po...",
+        "en": "The most revolutionary personal combat system in human history. Designed to provide downed pilots with the firepower and survivability of a light tank, the Cycl..."
+      },
+      "stats": {
+        "speed": 240,
+        "speed_unit": "km/h",
+        "armor": 120,
+        "armor_unit": "C.D.M.",
+        "firepower": 75,
+        "firepower_unit": "Pts",
+        "range": 4.0,
+        "range_unit": "km",
+        "sensors": 45,
+        "sensors_unit": "km",
+        "mobility": 98
+      },
+      "dataFile": "data/mechas/vr052_cyclone.json"
+    },
+    {
+      "id": "vr041_cyclone",
+      "name": "VR-041 Saber Cyclone",
+      "alias": "VR-041H Saber Cyclone de Asalto Cercano",
+      "category": "veritech",
+      "generation": "gen3",
+      "faction": {
+        "es": "Fuerza Expedicionaria Robotech // Resistencia Terrestre // Lancer",
+        "en": "Robotech Expeditionary Force // Earth Resistance // Lancer"
+      },
+      "class": {
+        "es": "Motocicleta Transformable Especializada en Asalto Furtivo y Cuchillas de Plasma",
+        "en": "Transformable Motorcycle Specialized in Stealth Melee & High-Frequency Blades"
+      },
+      "thumbnail": "assets/images/mechas/vr041_cyclone/vr041_profile.jpg",
+      "faction_logo": "assets/images/ui/Mars_Base.png",
+      "is_variable": true,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "fighter": "assets/images/mechas/vr041_cyclone/vr041_profile.jpg",
+        "battloid": "assets/images/mechas/vr041_cyclone/vr041_combat.jpg"
+      },
+      "summary": {
+        "es": "La variante de combate cercano de la familia Cyclone. El VR-041 Saber reemplaza los lanzamisiles pesados de hombro por dos afiladas hojas de plasma de alta frec...",
+        "en": "The close-combat variant of the Cyclone platform. The VR-041 Saber swaps heavy missile boxes for twin forearm-mounted high-frequency plasma blades (CADS-1), cap..."
+      },
+      "stats": {
+        "speed": 255,
+        "speed_unit": "km/h",
+        "armor": 110,
+        "armor_unit": "C.D.M.",
+        "firepower": 70,
+        "firepower_unit": "Pts",
+        "range": 3.0,
+        "range_unit": "km",
+        "sensors": 50,
+        "sensors_unit": "km",
+        "mobility": 100
+      },
+      "dataFile": "data/mechas/vr041_cyclone.json"
+    },
+    {
+      "id": "vr038_cyclone",
+      "name": "VR-038 Bartley Cyclone",
+      "alias": "VR-038L Bartley Recon Cyclone Ligero",
+      "category": "veritech",
+      "generation": "gen3",
+      "faction": {
+        "es": "Fuerza Expedicionaria Robotech // Resistencia Terrestre // Rook Bartley",
+        "en": "Robotech Expeditionary Force // Earth Resistance // Rook Bartley"
+      },
+      "class": {
+        "es": "Motocicleta Transformable Ligera de Reconocimiento y Escolta Femenina",
+        "en": "Lightweight Reconnaissance & Escort Transformable Motorcycle"
+      },
+      "thumbnail": "assets/images/mechas/vr038_cyclone/vr038_profile.jpg",
+      "faction_logo": "assets/images/ui/Mars_Base.png",
+      "is_variable": true,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "fighter": "assets/images/mechas/vr038_cyclone/vr038_cycle.jpg",
+        "battloid": "assets/images/mechas/vr038_cyclone/vr038_profile.jpg"
+      },
+      "summary": {
+        "es": "Diseñado originalmente para operadores de contextura más pequeña y misiones de reconocimiento rápido, el VR-038L Bartley reduce el peso del bastidor en un 15%, ...",
+        "en": "Engineered for smaller-stature operators and rapid scout missions, the VR-038L Bartley sheds 15% chassis weight, allowing it to hit top speeds exceeding 270 km/..."
+      },
+      "stats": {
+        "speed": 270,
+        "speed_unit": "km/h",
+        "armor": 100,
+        "armor_unit": "C.D.M.",
+        "firepower": 72,
+        "firepower_unit": "Pts",
+        "range": 4.5,
+        "range_unit": "km",
+        "sensors": 60,
+        "sensors_unit": "km",
+        "mobility": 100
+      },
+      "dataFile": "data/mechas/vr038_cyclone.json"
+    },
+    {
+      "id": "invid_scout",
+      "name": "Invid Scout",
+      "alias": "Iigaa / Rastreador Ligero de Enjambre",
+      "category": "invid",
+      "generation": "gen3",
+      "faction": {
+        "es": "Horda Invid (Regis / Regiss)",
+        "en": "Invid Swarm (Regis / Regiss)"
+      },
+      "class": {
+        "es": "Meca Ligero de Reconocimiento, Exploración y Ataque en Enjambre",
+        "en": "Light Reconnaissance, Scout & Swarm Attack Mecha"
+      },
+      "thumbnail": "assets/images/mechas/invid_scout/invid_scout_anime.jpeg",
+      "faction_logo": "assets/images/ui/logo_invid.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "battloid": "assets/images/mechas/invid_scout/invid_scout_anime.jpeg"
+      },
+      "summary": {
+        "es": "La unidad biomecánica más común y emblemática de la ocupación Invid. Con su silueta redondeada semejante a un crustáceo bípede, dos prominentes sensores ópticos...",
+        "en": "The most common and iconic biomechanical unit of the Invid occupation. Resembling a bipedal crustacean with twin glowing optical sensors and clawed limbs, the I..."
+      },
+      "stats": {
+        "speed": 320,
+        "speed_unit": "km/h",
+        "armor": 160,
+        "armor_unit": "C.D.M.",
+        "firepower": 68,
+        "firepower_unit": "Pts",
+        "range": 3.0,
+        "range_unit": "km",
+        "sensors": 180,
+        "sensors_unit": "km",
+        "mobility": 96
+      },
+      "dataFile": "data/mechas/invid_scout.json"
+    },
+    {
+      "id": "invid_shock_trooper",
+      "name": "Invid Shock Trooper",
+      "alias": "Gurab / Mecha Bípedo Artillero de Choque",
+      "category": "invid",
+      "generation": "gen3",
+      "faction": {
+        "es": "Horda Invid (Regis / Regiss)",
+        "en": "Invid Swarm (Regis / Regiss)"
+      },
+      "class": {
+        "es": "Mecha Bípedo de Línea Artillera y Asalto Pesado",
+        "en": "Bipedal Line Artillery & Heavy Assault Mecha"
+      },
+      "thumbnail": "assets/images/mechas/invid_shock_trooper/invid_shock_profile.jpg",
+      "faction_logo": "assets/images/ui/logo_invid.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "battloid": "assets/images/mechas/invid_shock_trooper/invid_shock_profile.jpg"
+      },
+      "summary": {
+        "es": "La espina dorsal artillera de las fuerzas Invid en la Tierra. A diferencia del ligero Scout, el Shock Trooper monta dos colosales cañones de plasma de energía b...",
+        "en": "The artillery backbone of Invid ground formations on Earth. Distinct from the light Scout, the Shock Trooper carries twin shoulder-mounted bio-plasma cannons ca..."
+      },
+      "stats": {
+        "speed": 280,
+        "speed_unit": "km/h",
+        "armor": 260,
+        "armor_unit": "C.D.M.",
+        "firepower": 90,
+        "firepower_unit": "Pts",
+        "range": 8.0,
+        "range_unit": "km",
+        "sensors": 200,
+        "sensors_unit": "km",
+        "mobility": 88
+      },
+      "dataFile": "data/mechas/invid_shock_trooper.json"
+    },
+    {
+      "id": "invid_pincer",
+      "name": "Invid Pincer",
+      "alias": "Gosu / Enforcer de Asalto Acorazado",
+      "category": "invid",
+      "generation": "gen3",
+      "faction": {
+        "es": "Horda Invid (Regis / Regiss)",
+        "en": "Invid Swarm (Regis / Regiss)"
+      },
+      "class": {
+        "es": "Mecha de Asalto Superpesado, Incursión Urbana y Guardia Colmena",
+        "en": "Super-Heavy Assault, Urban Incursion & Hive Guard Mecha"
+      },
+      "thumbnail": "assets/images/mechas/invid_pincer/invid_pincer_profile.png",
+      "faction_logo": "assets/images/ui/logo_invid.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "battloid": "assets/images/mechas/invid_pincer/invid_pincer_profile.png"
+      },
+      "summary": {
+        "es": "El blindado pesado por excelencia de la reina Regis. El Invid Pincer (Gosu / Enforcer) combina una coraza frontal casi inmune al fuego de los rifles de asalto V...",
+        "en": "The premier heavy assault mecha of the Invid Regis. The Invid Pincer combines an armor shell nearly immune to standard Veritech gunfire with a heavy disintegrat..."
+      },
+      "stats": {
+        "speed": 220,
+        "speed_unit": "km/h",
+        "armor": 340,
+        "armor_unit": "C.D.M.",
+        "firepower": 94,
+        "firepower_unit": "Pts",
+        "range": 10.0,
+        "range_unit": "km",
+        "sensors": 220,
+        "sensors_unit": "km",
+        "mobility": 85
+      },
+      "dataFile": "data/mechas/invid_pincer.json"
+    },
+    {
+      "id": "invid_commander_mecha",
+      "name": "Invid Royal Command Mecha",
+      "alias": "Gamo / Mecha Supremo de Comandante Invid",
+      "category": "invid",
+      "generation": "gen3",
+      "faction": {
+        "es": "Horda Invid // Corona Real (Príncipe Corg y Princesa Sera)",
+        "en": "Invid Swarm // Royal Court (Prince Corg & Princess Sera)"
+      },
+      "class": {
+        "es": "Mecha de Mando Supremo, Vuelo Aeroespacial de Alta Velocidad y Duelo",
+        "en": "Supreme Command, High-Speed Aerospace Flight & Duel Mecha"
+      },
+      "thumbnail": "assets/images/mechas/invid_commander_mecha/invid_commander_profile.jpg",
+      "faction_logo": "assets/images/ui/logo_invid.png",
+      "is_variable": false,
+      "has_variants": false,
+      "variants_count": 0,
+      "modes": {
+        "battloid": "assets/images/mechas/invid_commander_mecha/invid_commander_profile.jpg"
+      },
+      "summary": {
+        "es": "La cúspide de la ingeniería meca de la raza Invid. Construido exclusivamente para los hijos humanizados de la Reina Regis —el despiadado Príncipe Corg y la comp...",
+        "en": "The pinnacle of Invid bio-engineering. Crafted exclusively for Queen Regis's transmuted royal heirs —ruthless Prince Corg and compassionate Princess Sera—, this..."
+      },
+      "stats": {
+        "speed": 4500,
+        "speed_unit": "km/h",
+        "armor": 390,
+        "armor_unit": "C.D.M.",
+        "firepower": 98,
+        "firepower_unit": "Pts",
+        "range": 15.0,
+        "range_unit": "km",
+        "sensors": 350,
+        "sensors_unit": "km",
+        "mobility": 100
+      },
+      "dataFile": "data/mechas/invid_commander_mecha.json"
     }
   ]
 }

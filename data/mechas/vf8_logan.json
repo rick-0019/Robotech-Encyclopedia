@@ -1,0 +1,161 @@
+{
+  "id": "vf8_logan",
+  "name": "VF-8 Logan",
+  "alias": "Caza Ligero Transformable Interceptor",
+  "category": "veritech",
+  "generation": "gen2",
+  "is_variable": true,
+  "modes": {
+    "fighter": "assets/images/mechas/vf8_logan/logan_profile.png",
+    "guardian": "assets/images/mechas/vf8_logan/logan_marie.png",
+    "battloid": "assets/images/mechas/vf8_logan/logan_battloid.png"
+  },
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Masters Saga (Second Robotech War)"
+  },
+  "faction": {
+    "es": "Ejército de la Cruz del Sur // Flota Táctica Espacial (TASC)",
+    "en": "Army of the Southern Cross // Tactical Armored Space Corps"
+  },
+  "vehicle_type": {
+    "es": "Caza Ligero Transformable de Defensa Aérea e Intercepción",
+    "en": "Light Transformable Air Defense & Interceptor Fighter"
+  },
+  "crew": {
+    "es": "1 piloto (Marie Crystal y pilotos de la Fuerza Aérea Táctica)",
+    "en": "1 pilot (Marie Crystal and Tactical Air Force pilots)"
+  },
+  "thumbnail": "assets/images/mechas/vf8_logan/logan_profile.png",
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/vf8_logan/logan_profile.png",
+      "title_es": "VF-8 Logan en formación de vuelo de combate",
+      "title_en": "VF-8 Logan in combat flight formation",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/vf8_logan/logan_battloid.png",
+      "title_es": "Modo Battloid compacto del Logan",
+      "title_en": "Compact Battloid mode of the Logan",
+      "type": "action"
+    },
+    {
+      "url": "assets/images/mechas/vf8_logan/logan_marie.png",
+      "title_es": "El Logan insignia de la Teniente Marie Crystal",
+      "title_en": "Lieutenant Marie Crystal's flagship Logan",
+      "type": "pilot"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 3950,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 95,
+      "label_es": "Mach 3.2 en atmósfera alta",
+      "label_en": "Mach 3.2 high atmosphere"
+    },
+    "armor": {
+      "value": 190,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 38,
+      "label_es": "190 C.D.M. Fuselaje Ligero",
+      "label_en": "190 M.D.C. Lightweight Fuselage"
+    },
+    "firepower": {
+      "value": 80,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 80,
+      "label_es": "80 Pts (Láseres triples y misiles)",
+      "label_en": "80 Pts (Triple Lasers & Missiles)"
+    },
+    "range": {
+      "value": 10.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 38,
+      "label_es": "10 km alcance aire-aire",
+      "label_en": "10 km air-to-air range"
+    },
+    "sensors": {
+      "value": 180,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 65,
+      "label_es": "180 km Radar Interceptor Rápido",
+      "label_en": "180 km Fast Interceptor Radar"
+    },
+    "mobility": {
+      "value": 96,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 96,
+      "label_es": "96 Pts (Giro y trepada excepcionales)",
+      "label_en": "96 Pts (Exceptional climb & turn rate)"
+    }
+  },
+  "dimensions": {
+    "height": "3.20 m (Caza) / 5.80 m (Battloid)",
+    "width": "4.80 m",
+    "length": "6.40 m",
+    "mass": "11.8 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Turbinas Termonucleares Gemelas Miniaturizadas ASC Protocultura",
+    "output": "2,900 shp"
+  },
+  "lore": {
+    "overview_es": "Diseñado para sustituir al venerable VF-1 Valkyrie como interceptor ligero de respuesta inmediata, el VF-8 Logan destaca por sus dimensiones hipercompactas y su rápida transformación entre los modos Caza y Battloid. Fue la principal aeronave de escolta de la Cruz del Sur durante las fases iniciales de la invasión tirolesa.",
+    "overview_en": "Designed to succeed the venerable VF-1 Valkyrie as a rapid-reaction light interceptor, the VF-8 Logan features hyper-compact dimensions and instantaneous mode transitions between Fighter and Battloid.",
+    "history_es": "Pilotado con maestría por la Teniente Marie Crystal, el Logan demostró ser letal a quemarropa contra las corbetas Bioroid, aunque su blindaje ligero exigía reflejos sobrehumanos por parte de los pilotos.",
+    "history_en": "Mastered by Lieutenant Marie Crystal, the Logan proved lethal at point-blank range against Bioroid corvettes, though its thin armor demanded razor-sharp reflexes."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Cuerpo Principal (*)",
+      "location_en": "Main Body (*)",
+      "mdc": 190
+    },
+    {
+      "location_es": "Cabina Reforzada",
+      "location_en": "Reinforced Canopy",
+      "mdc": 110
+    },
+    {
+      "location_es": "Cañón Triple de Haz de Partículas Ventral",
+      "location_en": "Ventral Triple Particle Beam Cannon",
+      "mdc": 90
+    },
+    {
+      "location_es": "Alas Cortas con Bahías de Misiles (2)",
+      "location_en": "Short Wings with Missile Bays (2)",
+      "mdc": 80
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañón Triple de Haz de Partículas de Disparo Rápido",
+      "name_en": "Triple-Barrel Rapid-Fire Particle Beam Cannon",
+      "damage": "6D6 por descarga simultánea",
+      "range": "2.5 km"
+    },
+    {
+      "name_es": "Lanzadores de Micromisiles Guiados de Ala (12 misiles)",
+      "name_en": "Wing-Mounted Guided Micro-Missile Pods (12 missiles)",
+      "damage": "1D6x10 por salva de 2",
+      "range": "10 km"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Sistema de eyección acelerada de cabina con cápsula de escape de supervivencia orbital.",
+      "description_en": "Accelerated cockpit ejection module with orbital survival cocoon."
+    }
+  ]
+}

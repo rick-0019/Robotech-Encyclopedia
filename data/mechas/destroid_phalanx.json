@@ -1,0 +1,153 @@
+{
+  "id": "destroid_phalanx",
+  "name": "Phalanx",
+  "alias": "SDR-04-Mk XII Phalanx",
+  "category": "destroid",
+  "generation": "gen1",
+  "is_variable": false,
+  "modes": {
+    "battloid": "assets/images/mechas/destroid_phalanx/phalanx_profile.png"
+  },
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "faction": {
+    "es": "U.N. Spacy // Fuerzas de Defensa Terrestre (RDF)",
+    "en": "U.N. Spacy // Robotech Defense Force (RDF)"
+  },
+  "vehicle_type": {
+    "es": "Destroid de Defensa Antiaérea Pesada y Bombardeo de Saturación",
+    "en": "Heavy Anti-Aircraft & Saturation Barrage Destroid"
+  },
+  "crew": {
+    "es": "2 tripulantes (Piloto y Oficial de Control de Fuego de Misiles)",
+    "en": "2 crew (Pilot and Missile Fire Control Officer)"
+  },
+  "thumbnail": "assets/images/mechas/destroid_phalanx/phalanx_profile.png",
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/destroid_phalanx/phalanx_profile.png",
+      "title_es": "Esquema frontal del SDR-04 Phalanx",
+      "title_en": "Frontal schematic of the SDR-04 Phalanx",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/destroid_phalanx/phalanx_barrage.jpg",
+      "title_es": "Descarga masiva de misiles Derringer durante la defensa orbital",
+      "title_en": "Massive Derringer missile barrage during orbital defense",
+      "type": "combat"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 102,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 30,
+      "label_es": "102 km/h",
+      "label_en": "102 km/h"
+    },
+    "armor": {
+      "value": 260,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 52,
+      "label_es": "260 C.D.M. Chasis",
+      "label_en": "260 M.D.C. Chassis"
+    },
+    "firepower": {
+      "value": 96,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 96,
+      "label_es": "96 Pts (44 Misiles de Crucero)",
+      "label_en": "96 Pts (44 Cruise Missiles)"
+    },
+    "range": {
+      "value": 65.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 85,
+      "label_es": "65 km alcance de misiles",
+      "label_en": "65 km missile range"
+    },
+    "sensors": {
+      "value": 160,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 62,
+      "label_es": "160 km Radar Antiaéreo 3D",
+      "label_en": "160 km 3D Air Search Radar"
+    },
+    "mobility": {
+      "value": 35,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 35,
+      "label_es": "35 Pts (Plataforma pesada)",
+      "label_en": "35 Pts (Heavy platform)"
+    }
+  },
+  "dimensions": {
+    "height": "12.05 m",
+    "width": "8.20 m",
+    "length": "5.10 m",
+    "mass": "47.2 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Planta Termonuclear de Fusión Westinghouse-Oerlikon",
+    "output": "2,800 shp"
+  },
+  "lore": {
+    "overview_es": "El SDR-04 Phalanx fue desarrollado como respuesta urgente a los ataques masivos de cápsulas voladoras Regult y cazas Gnerl. En lugar de brazos manipuladores estándar, monta dos colosales tambores que albergan un total de 44 misiles de medio y largo alcance Derringer, capaces de saturar el cielo con un muro infranqueable de fuego y metralla.",
+    "overview_en": "The SDR-04 Phalanx was developed as an urgent countermeasure against swarms of Regult pods and Gnerl fighters. Instead of standard manipulator hands, it mounts two massive cylindrical pods housing 44 Derringer long-range missiles, capable of blanketing the skies with an impenetrable wall of flak and shrapnel.",
+    "history_es": "A bordo del SDF-1, los Phalanx eran emplazados en las cubiertas exteriores del portaaviones Prometheus y en las bahías de tiro del Daedalus. En el épico Ataque Daedalus, su bombardeo concentrado aniquilaba los centros de comando Zentraedi en cuestión de segundos.",
+    "history_en": "Aboard the SDF-1, Phalanx units guarded the Prometheus flight deck and Daedalus firing bays. In the iconic Daedalus Attack, their concentrated missile volleys obliterated Zentraedi command centers within seconds."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Cuerpo Principal (*)",
+      "location_en": "Main Body (*)",
+      "mdc": 260
+    },
+    {
+      "location_es": "Lanzaderas Cilíndricas de Misiles (2)",
+      "location_en": "Missile Pod Cylinders (2)",
+      "mdc": 200
+    },
+    {
+      "location_es": "Cúpula de Radar y Sensores",
+      "location_en": "Radar & Sensor Dome",
+      "mdc": 90
+    },
+    {
+      "location_es": "Piernas Reforzadas (2)",
+      "location_en": "Reinforced Legs (2)",
+      "mdc": 190
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Lanzaderas Gemelas de Misiles de Medio Alcance MDS-H-22 Derringer (44 misiles)",
+      "name_en": "Dual MDS-H-22 Derringer Medium-Range Missile Pods (44 missiles)",
+      "damage": "3D6x10 por salva de 4 / 1D4x100 salva masiva",
+      "range": "65 km"
+    },
+    {
+      "name_es": "Foco de Luz Xenón de Alta Intensidad y Láser Guía",
+      "name_en": "High-Intensity Xenon Searchlight & Targeting Laser",
+      "damage": "Cegamiento temporal / Designación de blancos",
+      "range": "10 km"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Radar de adquisición de blancos múltiples con capacidad de rastreo simultáneo de 48 objetivos.",
+      "description_en": "Multi-target acquisition radar with 48 simultaneous target tracking capability."
+    }
+  ]
+}

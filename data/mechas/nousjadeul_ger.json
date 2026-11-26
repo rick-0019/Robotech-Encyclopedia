@@ -1,0 +1,164 @@
+{
+  "id": "nousjadeul_ger",
+  "name": "Nousjadeul-Ger",
+  "alias": "Armadura de Combate Zentraedi Masculina",
+  "category": "zentraedi",
+  "generation": "gen1",
+  "is_variable": false,
+  "modes": {
+    "battloid": "assets/images/mechas/nousjadeul_ger/nousjadeul_profile.png"
+  },
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "faction": {
+    "es": "Gran Armada Imperial Zentraedi // Tropas de Asalto Blindado",
+    "en": "Grand Zentraedi Imperial Armada // Armored Assault Shock Troops"
+  },
+  "vehicle_type": {
+    "es": "Traje Acorazado Pesado de Vuelo y Combate Exoatmosférico",
+    "en": "Heavy Exoatmospheric Assault Power Armor"
+  },
+  "crew": {
+    "es": "1 soldado gigante Zentraedi masculino (comandantes y ases como Rico y soldados de choque)",
+    "en": "1 giant male Zentraedi soldier"
+  },
+  "thumbnail": "assets/images/mechas/nousjadeul_ger/nousjadeul_profile.png",
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/nousjadeul_ger/nousjadeul_profile.png",
+      "title_es": "Armadura de Asalto Nousjadeul-Ger en posición de alerta",
+      "title_en": "Nousjadeul-Ger Assault Armor in alert stance",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/nousjadeul_ger/nousjadeul_armor.png",
+      "title_es": "Detalle del blindaje y cañón de hombro de plasma",
+      "title_en": "Armor plating and shoulder plasma cannon detail",
+      "type": "blueprint"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 2950,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 86,
+      "label_es": "Mach 2.4 en vuelo espacial",
+      "label_en": "Mach 2.4 spaceflight"
+    },
+    "armor": {
+      "value": 300,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 60,
+      "label_es": "300 C.D.M. Coraza Reforzada",
+      "label_en": "300 M.D.C. Heavy Carapace"
+    },
+    "firepower": {
+      "value": 88,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 88,
+      "label_es": "88 Pts (Cañón de Plasma Pesado)",
+      "label_en": "88 Pts (Heavy Plasma Cannon)"
+    },
+    "range": {
+      "value": 18.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 50,
+      "label_es": "18 km alcance artillero",
+      "label_en": "18 km artillery range"
+    },
+    "sensors": {
+      "value": 140,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 58,
+      "label_es": "140 km Radar Táctico",
+      "label_en": "140 km Tactical Radar"
+    },
+    "mobility": {
+      "value": 82,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 82,
+      "label_es": "82 Pts (Propulsores vectoriales de espalda)",
+      "label_en": "82 Pts (Backpack vector thrusters)"
+    }
+  },
+  "dimensions": {
+    "height": "16.40 m",
+    "width": "10.20 m",
+    "length": "8.50 m",
+    "mass": "34.8 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Reactor Termonuclear Zentraedi de Fusión de Pulso",
+    "output": "3,400 shp"
+  },
+  "lore": {
+    "overview_es": "La armadura de asalto estándar para los comandantes y soldados de élite de la casta masculina Zentraedi. A diferencia de las cápsulas ligeras Regult, el Nousjadeul-Ger proporciona una protección acorazada total y un propulsor dorsal que permite vuelos orbitales y maniobras atmosféricas de alta aceleración.",
+    "overview_en": "The standard heavy power armor for elite commanders and officers of the male Zentraedi caste. Unlike the lighter Regult battle pods, the Nousjadeul-Ger provides full armored protection and a massive backpack booster enabling orbital combat and high-g maneuvers.",
+    "history_es": "Utilizado intensamente durante las incursiones en New Macross City y por las fuerzas de Khyron durante las escaramuzas post-guerra en las tierras baldías de Sudamérica y África.",
+    "history_en": "Used extensively during raids on New Macross City and by Khyron's loyalists during the post-war skirmishes in the South American and African wastelands."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Torso Principal (*)",
+      "location_en": "Main Torso (*)",
+      "mdc": 300
+    },
+    {
+      "location_es": "Cañón de Plasma en Hombro Derecho",
+      "location_en": "Right Shoulder Plasma Cannon",
+      "mdc": 140
+    },
+    {
+      "location_es": "Mochila de Propulsores Dorsales",
+      "location_en": "Backpack Thruster Unit",
+      "mdc": 180
+    },
+    {
+      "location_es": "Brazos Blindados (2)",
+      "location_en": "Armored Arms (2)",
+      "mdc": 110
+    },
+    {
+      "location_es": "Piernas Acorazadas (2)",
+      "location_en": "Armored Legs (2)",
+      "mdc": 190
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañón de Plasma de Partículas Pesadas de Hombro",
+      "name_en": "Shoulder-Mounted Heavy Particle Plasma Cannon",
+      "damage": "1D6x10 por descarga",
+      "range": "18 km"
+    },
+    {
+      "name_es": "Fusil de Asalto de Energía Manual Zentraedi",
+      "name_en": "Handheld Zentraedi Energy Assault Rifle",
+      "damage": "4D6 por ráfaga",
+      "range": "2 km"
+    },
+    {
+      "name_es": "Láser de Proa Torácico de Defensa Cercana",
+      "name_en": "Chest Anti-Personnel Defense Laser",
+      "damage": "3D6 por pulso",
+      "range": "800 m"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Sistema de soporte vital de 7 días, propulsores vernier giroscópicos para giro instantáneo en gravedad cero.",
+      "description_en": "7-day life support system, gyroscopic vernier thrusters for zero-g instant rotation."
+    }
+  ]
+}

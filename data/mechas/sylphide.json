@@ -1,0 +1,153 @@
+{
+  "id": "sylphide",
+  "name": "FA-109 Sylphide",
+  "alias": "Caza Interceptor de Gran Altitud",
+  "category": "support",
+  "generation": "gen2",
+  "is_variable": false,
+  "modes": {
+    "fighter": "assets/images/mechas/sylphide/sylphide_profile.png"
+  },
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Masters Saga (Second Robotech War)"
+  },
+  "faction": {
+    "es": "Ejército de la Cruz del Sur // Fuerza Aérea Táctica (TAF)",
+    "en": "Army of the Southern Cross // Tactical Air Force (TAF)"
+  },
+  "vehicle_type": {
+    "es": "Caza Interceptor No Transformable de Alta Velocidad y Cota",
+    "en": "Non-Transformable High-Altitude Interceptor Fighter"
+  },
+  "crew": {
+    "es": "1 piloto de la Fuerza Aérea Táctica",
+    "en": "1 Tactical Air Force pilot"
+  },
+  "thumbnail": "assets/images/mechas/sylphide/sylphide_profile.png",
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/sylphide/sylphide_profile.png",
+      "title_es": "Caza Interceptor FA-109 Sylphide en vuelo de crucero",
+      "title_en": "FA-109 Sylphide Interceptor in cruise flight",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/sylphide/sylphide_flight.jpg",
+      "title_es": "Sylphide en trepada supersónica hacia la órbita baja",
+      "title_en": "Sylphide in supersonic climb towards low orbit",
+      "type": "action"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 4650,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 98,
+      "label_es": "Mach 3.8 en estratósfera",
+      "label_en": "Mach 3.8 stratosphere"
+    },
+    "armor": {
+      "value": 170,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 34,
+      "label_es": "170 C.D.M. Titanio-Cerámico",
+      "label_en": "170 M.D.C. Titanium-Ceramic"
+    },
+    "firepower": {
+      "value": 75,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 75,
+      "label_es": "75 Pts (Misiles aire-aire pesados)",
+      "label_en": "75 Pts (Heavy Air-to-Air Missiles)"
+    },
+    "range": {
+      "value": 22.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 52,
+      "label_es": "22 km alcance de combate",
+      "label_en": "22 km combat range"
+    },
+    "sensors": {
+      "value": 260,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 78,
+      "label_es": "260 km Radar BVR Más Allá del Alcance Visual",
+      "label_en": "260 km Beyond-Visual-Range Radar"
+    },
+    "mobility": {
+      "value": 88,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 88,
+      "label_es": "88 Pts (Excelente aceleración ascensional)",
+      "label_en": "88 Pts (Superb climb acceleration)"
+    }
+  },
+  "dimensions": {
+    "height": "3.90 m",
+    "width": "8.60 m",
+    "length": "15.40 m",
+    "mass": "14.2 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Doble Motor Turborreactor de Pulso Termonuclear ASC",
+    "output": "4,100 shp"
+  },
+  "lore": {
+    "overview_es": "El interceptor supersónico de primera línea para la defensa aérea terrestre durante la invasión de los Maestros. Aunque no es transformable, el Sylphide superaba en velocidad punta y altitud de vuelo a la mayoría de mechas de su época, actuando como primera barrera de contención ante las incursiones de naves de desembarco alienígenas.",
+    "overview_en": "The front-line supersonic interceptor guarding Earth's skies during the Masters' invasion. Non-transformable, the Sylphide prioritized climb rate and raw speed to intercept incoming landing ships before they breached lower airspace.",
+    "history_es": "Fueron los primeros en interceptar a las naves nodrizas de los Maestros de la Robotech cuando estas emergieron en la órbita de la Tierra en el episodio inicial de la Segunda Guerra Robotech.",
+    "history_en": "They were the first to engage the Robotech Masters' motherships when they emerged into Earth orbit in the opening chapter of the Second Robotech War."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Fuselaje Principal (*)",
+      "location_en": "Main Fuselage (*)",
+      "mdc": 170
+    },
+    {
+      "location_es": "Cabina Presurizada de Altitud",
+      "location_en": "High-Altitude Cockpit",
+      "mdc": 90
+    },
+    {
+      "location_es": "Alas Delgadas en Delta (2)",
+      "location_en": "Delta Wings (2)",
+      "mdc": 80
+    },
+    {
+      "location_es": "Toberas de Postcombustión (2)",
+      "location_en": "Afterburning Thrusters (2)",
+      "mdc": 120
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañones Láser Pesados de Morro (2)",
+      "name_en": "Dual Heavy Nose-Mounted Laser Cannons",
+      "damage": "4D6 por disparo",
+      "range": "2 km"
+    },
+    {
+      "name_es": "Bahía Interna de Misiles Pesados Aire-Aire (6 misiles Sparrowhawk)",
+      "name_en": "Internal Heavy Air-to-Air Missile Bay (6 Sparrowhawk missiles)",
+      "damage": "2D6x10 por impacto",
+      "range": "22 km"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Sensores de telemetría de largo alcance enlazados con la red de defensa aeroespacial de New Macross y Monument City.",
+      "description_en": "Long-range telemetry sensors datalinked with Monument City aerospace defense network."
+    }
+  ]
+}

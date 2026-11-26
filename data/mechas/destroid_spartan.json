@@ -1,0 +1,170 @@
+{
+  "id": "destroid_spartan",
+  "name": "Spartan",
+  "alias": "MBR-07-Mk II Spartan",
+  "category": "destroid",
+  "generation": "gen1",
+  "is_variable": false,
+  "modes": {
+    "battloid": "assets/images/mechas/destroid_spartan/spartan_profile.png"
+  },
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "faction": {
+    "es": "U.N. Spacy // Fuerzas de Defensa Terrestre (RDF)",
+    "en": "U.N. Spacy // Robotech Defense Force (RDF)"
+  },
+  "vehicle_type": {
+    "es": "Destroid de Combate Cercano e Incursión Pesada",
+    "en": "Heavy Close-Combat & Incursion Destroid"
+  },
+  "crew": {
+    "es": "1 piloto (cabina central blindada con visión periscópica)",
+    "en": "1 pilot (armored cockpit with periscopic vision)"
+  },
+  "thumbnail": "assets/images/mechas/destroid_spartan/spartan_profile.png",
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/destroid_spartan/spartan_profile.png",
+      "title_es": "Perfil táctico del MBR-07 Spartan",
+      "title_en": "MBR-07 Spartan tactical profile",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/destroid_spartan/spartan_deck.jpg",
+      "title_es": "Spartan en formación de patrulla en la cubierta del SDF-1",
+      "title_en": "Spartan patrol formation on the SDF-1 flight deck",
+      "type": "action"
+    },
+    {
+      "url": "assets/images/mechas/destroid_spartan/spartan_blueprint.gif",
+      "title_es": "Diagrama esquemático estructural del Spartan",
+      "title_en": "Spartan structural schematic diagram",
+      "type": "blueprint"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 118,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 35,
+      "label_es": "118 km/h en tierra",
+      "label_en": "118 km/h land speed"
+    },
+    "armor": {
+      "value": 280,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 56,
+      "label_es": "280 C.D.M. Torso Central",
+      "label_en": "280 M.D.C. Main Torso"
+    },
+    "firepower": {
+      "value": 78,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 78,
+      "label_es": "78 Pts (Misiles y Láseres)",
+      "label_en": "78 Pts (Missiles & Lasers)"
+    },
+    "range": {
+      "value": 15.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 45,
+      "label_es": "15 km alcance efectivo",
+      "label_en": "15 km effective range"
+    },
+    "sensors": {
+      "value": 85,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 42,
+      "label_es": "85 km Radar táctico",
+      "label_en": "85 km Tactical Radar"
+    },
+    "mobility": {
+      "value": 65,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 65,
+      "label_es": "65 Pts (Alta agilidad cuerpo a cuerpo)",
+      "label_en": "65 Pts (High melee agility)"
+    }
+  },
+  "dimensions": {
+    "height": "11.27 m",
+    "width": "6.10 m",
+    "length": "5.20 m",
+    "mass": "27.4 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Generador Termonuclear de Fusión Shinnakasu-Mitsubishi",
+    "output": "2,400 shp"
+  },
+  "lore": {
+    "overview_es": "El MBR-07 Spartan es el mecha bípedo más ágil de la familia de Destroids de la Primera Guerra Robotech. Concebido como una unidad de asalto directo, combate cuerpo a cuerpo y contención anti-infantería gigante Zentraedi, el Spartan sacrifica parte del blindaje masivo del Tomahawk para obtener una velocidad de respuesta y articulación de brazos sin parangón en el arsenal terrestre.",
+    "overview_en": "The MBR-07 Spartan is the most agile bipedal mech in the First Robotech War Destroid family. Designed as a direct assault, melee combat, and anti-giant Zentraedi infantry unit, the Spartan trades some of the Tomahawk's heavy armor for unmatched reaction speed and arm articulation.",
+    "history_es": "Desplegado en masa a bordo del SDF-1 y durante el Ataque Daedalus, los Spartan lideraban las penetraciones de choque en el interior de los acorazados Zentraedi, utilizando sus garras hidráulicas de combate y sus baterías de misiles para despejar pasillos enteros.",
+    "history_en": "Deployed in force aboard the SDF-1 and during the Daedalus Attack, Spartans spearheaded breach assaults inside Zentraedi battleships, using their hydraulic claws and missile pods to clear corridors."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Cuerpo Principal (*)",
+      "location_en": "Main Body (*)",
+      "mdc": 280
+    },
+    {
+      "location_es": "Cabina Reforzada",
+      "location_en": "Reinforced Cockpit",
+      "mdc": 160
+    },
+    {
+      "location_es": "Lanzador de Misiles Torso",
+      "location_en": "Chest Missile Launcher",
+      "mdc": 120
+    },
+    {
+      "location_es": "Brazos de Combate (2)",
+      "location_en": "Combat Arms (2)",
+      "mdc": 110
+    },
+    {
+      "location_es": "Piernas Reforzadas (2)",
+      "location_en": "Reinforced Legs (2)",
+      "mdc": 180
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Batería de Misiles de Corto Alcance Astra de 12 Tubos",
+      "name_en": "Astra 12-Tube Short-Range Missile Battery",
+      "damage": "2D6x10 por salva de 3 misiles",
+      "range": "8 km"
+    },
+    {
+      "name_es": "Láseres Gemelos de Cabeza de Disparo Rápido",
+      "name_en": "Dual Head-Mounted Rapid-Fire Lasers",
+      "damage": "4D6 por descarga",
+      "range": "1.2 km"
+    },
+    {
+      "name_es": "Garras Hidráulicas de Asalto Cuerpo a Cuerpo",
+      "name_en": "Hydraulic Melee Assault Claws",
+      "damage": "3D6+6 aplastamiento / perforación",
+      "range": "Cuerpo a cuerpo"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Sistema de absorción de impactos para saltos y caídas, sensores térmicos infrarrojos de visión nocturna.",
+      "description_en": "Drop shock absorption system, thermal infrared night-vision sensors."
+    }
+  ]
+}

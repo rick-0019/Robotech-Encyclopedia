@@ -185,5 +185,6 @@
       "description_es": "Permite navegación tridimensional en combate de gravedad cero.",
       "description_en": "Enables 3D navigation in zero-G combat."
     }
-  ]
+  ],
+  "generation": "gen1"
 }

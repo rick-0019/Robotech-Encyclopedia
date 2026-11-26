@@ -1,0 +1,147 @@
+{
+  "id": "bioroid_blue_trooper",
+  "name": "Bioroid Soldado Azul",
+  "alias": "Bioroid Estándar de Infantería Pesada",
+  "category": "bioroid",
+  "generation": "gen2",
+  "is_variable": false,
+  "modes": {
+    "battloid": "assets/images/mechas/bioroid_blue_trooper/bioroid_blue_profile.jpg"
+  },
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Masters Saga (Second Robotech War)"
+  },
+  "faction": {
+    "es": "Maestros de la Robotech // Legiones de Clones Bioroid",
+    "en": "Robotech Masters // Bioroid Clone Legions"
+  },
+  "vehicle_type": {
+    "es": "Mecha Biocibernético Bípedo de Asalto Pesado",
+    "en": "Biocylindrical Bipedal Heavy Assault Mecha"
+  },
+  "crew": {
+    "es": "1 piloto clon tirolés en interfaz neural biocibernética",
+    "en": "1 cloned Tirolian pilot in biocibernetic neural interface"
+  },
+  "thumbnail": "assets/images/mechas/bioroid_blue_trooper/bioroid_blue_profile.jpg",
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/bioroid_blue_trooper/bioroid_blue_profile.jpg",
+      "title_es": "Bioroid Soldado Azul en guardia de combate",
+      "title_en": "Blue Trooper Bioroid in combat stance",
+      "type": "render"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 160,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 38,
+      "label_es": "160 km/h en tierra / 550 km/h sobre Hovercraft",
+      "label_en": "160 km/h ground / 550 km/h on Hovercraft"
+    },
+    "armor": {
+      "value": 290,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 58,
+      "label_es": "290 C.D.M. Coraza Biocerámica Curva",
+      "label_en": "290 M.D.C. Curved Bioceramic Armor"
+    },
+    "firepower": {
+      "value": 84,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 84,
+      "label_es": "84 Pts (Blaster Blaster de Iones Pesado)",
+      "label_en": "84 Pts (Heavy Ion Blaster Rifle)"
+    },
+    "range": {
+      "value": 6.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 32,
+      "label_es": "6 km alcance de blaster",
+      "label_en": "6 km blaster range"
+    },
+    "sensors": {
+      "value": 110,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 50,
+      "label_es": "110 km Sensores Telepáticos Tirolianos",
+      "label_en": "110 km Tirolian Telepathic Sensors"
+    },
+    "mobility": {
+      "value": 85,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 85,
+      "label_es": "85 Pts (Reflejos bioeléctricos aumentados)",
+      "label_en": "85 Pts (Enhanced bioelectric reflexes)"
+    }
+  },
+  "dimensions": {
+    "height": "7.30 m",
+    "width": "3.90 m",
+    "length": "3.20 m",
+    "mass": "15.8 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Célula Biogenética Avanzada de Protocultura de los Maestros",
+    "output": "2,700 shp"
+  },
+  "lore": {
+    "overview_es": "La unidad de combate básica y más numerosa del ejército de los Maestros de la Robotech. El Bioroid Azul posee un diseño bio-orgánico distintivo con superficies curvas y articulaciones esféricas que dispersan la energía de los impactos láser enemigos. Es pilotado por un clon tirolés conectado por bio-sensores neurales a los sistemas motrices.",
+    "overview_en": "The backbone infantry mecha of the Robotech Masters. The Blue Bioroid boasts a distinctive organic, curved silhouette designed to deflect incoming laser and kinetic fire, piloted by a cloned Tirolian soldier hardwired via neural biotransmitters.",
+    "history_es": "Desplegados a bordo de trineos voladores Hovercraft, diezmaron a las divisiones terrestres convencionales en los primeros choques de la Segunda Guerra.",
+    "history_en": "Mounted on aerial Hovercraft sleds, they devastated conventional ground forces during the opening salvoes of the Second War."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Torso Principal (*)",
+      "location_en": "Main Torso (*)",
+      "mdc": 290
+    },
+    {
+      "location_es": "Cabeza y Sensor Óptico Central",
+      "location_en": "Head & Central Optical Sensor",
+      "mdc": 110
+    },
+    {
+      "location_es": "Brazos Manipuladores (2)",
+      "location_en": "Arms (2)",
+      "mdc": 120
+    },
+    {
+      "location_es": "Piernas Reforzadas (2)",
+      "location_en": "Legs (2)",
+      "mdc": 170
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Fusil Blaster de Energía Iónica de Alta Frecuencia",
+      "name_en": "High-Frequency Ionic Blaster Rifle",
+      "damage": "1D4x10 por descarga pesada",
+      "range": "3 km"
+    },
+    {
+      "name_es": "Golpe de Puño Biomecánico Pesado",
+      "name_en": "Heavy Biomechanical Punch",
+      "damage": "3D6 aplastamiento",
+      "range": "Cuerpo a cuerpo"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Enlace telepático directo con el Triunvirato de mando tirolés para obediencia táctica ciega.",
+      "description_en": "Direct telepathic datalink with the ruling Tirolian Triumvirate for total tactical coordination."
+    }
+  ]
+}

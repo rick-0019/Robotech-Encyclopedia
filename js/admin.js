@@ -1528,6 +1528,13 @@ window.filterAssetBrowserGrid = function() {
 };
 
 window.selectAsset = function(path) {
+  if (typeof currentAssetTarget === 'function') {
+    currentAssetTarget(path);
+    window.tacticalAudio?.scan();
+    closeAssetBrowser();
+    return;
+  }
+
   if (typeof currentAssetTarget === 'string') {
     if (currentAssetTarget === 'new_gallery_row') {
       const filename = path.split('/').pop().replace(/\.[^/.]+$/, '').replace(/_/g, ' ');
@@ -1548,6 +1555,16 @@ window.selectAsset = function(path) {
         type_en: 'Official Portrait'
       });
       updateLiveCharPreview();
+    } else if (currentAssetTarget === 'new_ship_gallery_row') {
+      const filename = path.split('/').pop().replace(/\.[^/.]+$/, '').replace(/_/g, ' ');
+      addShipGalleryRow({
+        url: path,
+        title_es: filename,
+        title_en: filename,
+        type_es: 'Pintura Oficial',
+        type_en: 'Official Art'
+      });
+      updateLiveShipPreview();
     } else {
       const targetInput = document.getElementById(currentAssetTarget);
       if (targetInput) {
@@ -1561,6 +1578,8 @@ window.selectAsset = function(path) {
         } else if (currentAssetTarget.startsWith('m_mode_')) {
           const mode = currentAssetTarget.replace('m_mode_', '').replace('_img', '');
           updateModePreview(mode);
+        } else if (currentAssetTarget === 't_image' || currentAssetTarget === 't_f1_logo' || currentAssetTarget === 't_f2_logo') {
+          if (typeof updateTimelineImagePreview === 'function') updateTimelineImagePreview();
         }
         updateLivePreview();
         updateLiveCharPreview();
@@ -1604,8 +1623,12 @@ window.handleNativeFileSelected = async function(event) {
     folder = `naves/${shipId}`;
   } else if (activeAdminModule === 'characters' && charId) {
     folder = `personajes/${charId}`;
+  } else if (activeAdminModule === 'mechas' && mechaId) {
+    folder = `mechas/${mechaId}`;
   } else if (mechaId) {
-    folder = mechaId;
+    folder = `mechas/${mechaId}`;
+  } else if (activeAdminModule === 'timeline') {
+    folder = 'historia';
   }
 
   const reader = new FileReader();
@@ -2925,28 +2948,19 @@ window.syncShipRowThumb = function(input) {
   if (img) img.src = input.value.trim() || 'assets/images/ui/logo_UNSpacy.png';
 };
 
+window.openAssetBrowserCallback = function(cb) {
+  window.openAssetBrowser(cb);
+};
+
 window.openAssetBrowserForNewShipGalleryItem = function() {
-  openAssetBrowserCallback((chosenPath) => {
-    addShipGalleryRow({
-      url: chosenPath,
-      title_es: 'Fotografía Naval',
-      title_en: 'Naval Photo',
-      type_es: 'Pintura Oficial',
-      type_en: 'Official Art'
-    });
-    updateLiveShipPreview();
-  });
+  window.openAssetBrowser('new_ship_gallery_row');
 };
 
 window.openAssetBrowserForShipGalleryRow = function(btn) {
   const row = btn.closest('.gallery-admin-row');
   const input = row?.querySelector('.gal-ship-url');
   if (input) {
-    openAssetBrowserCallback((chosenPath) => {
-      input.value = chosenPath;
-      syncShipRowThumb(input);
-      updateLiveShipPreview();
-    });
+    window.openAssetBrowser(input);
   }
 };
 

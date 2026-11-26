@@ -1,0 +1,153 @@
+{
+  "id": "invid_shock_trooper",
+  "name": "Invid Shock Trooper",
+  "alias": "Gurab / Mecha Bípedo Artillero de Choque",
+  "category": "invid",
+  "generation": "gen3",
+  "is_variable": false,
+  "modes": {
+    "battloid": "assets/images/mechas/invid_shock_trooper/invid_shock_profile.jpg"
+  },
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "faction": {
+    "es": "Horda Invid (Regis / Regiss)",
+    "en": "Invid Swarm (Regis / Regiss)"
+  },
+  "vehicle_type": {
+    "es": "Mecha Bípedo de Línea Artillera y Asalto Pesado",
+    "en": "Bipedal Line Artillery & Heavy Assault Mecha"
+  },
+  "crew": {
+    "es": "1 soldado biológico Invid adulto",
+    "en": "1 adult biological Invid soldier"
+  },
+  "thumbnail": "assets/images/mechas/invid_shock_trooper/invid_shock_profile.jpg",
+  "faction_logo": "assets/images/ui/logo_invid.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/invid_shock_trooper/invid_shock_profile.jpg",
+      "title_es": "Invid Shock Trooper con cañones de plasma pesados",
+      "title_en": "Invid Shock Trooper with heavy plasma cannons",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/invid_shock_trooper/invid_shock_combat.jpg",
+      "title_es": "Lanza de Shock Troopers en formación de avance",
+      "title_en": "Shock Trooper lance in advancing formation",
+      "type": "combat"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 280,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 52,
+      "label_es": "280 km/h en vuelo / 90 km/h a pie",
+      "label_en": "280 km/h flight / 90 km/h running"
+    },
+    "armor": {
+      "value": 260,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 52,
+      "label_es": "260 C.D.M. Caparazón Blindado Reforzado",
+      "label_en": "260 M.D.C. Reinforced Chitin Carapace"
+    },
+    "firepower": {
+      "value": 90,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 90,
+      "label_es": "90 Pts (Cañones de Plasma Gemelos Superpesados)",
+      "label_en": "90 Pts (Dual Super-Heavy Plasma Cannons)"
+    },
+    "range": {
+      "value": 8.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 36,
+      "label_es": "8 km alcance de plasma",
+      "label_en": "8 km plasma range"
+    },
+    "sensors": {
+      "value": 200,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 70,
+      "label_es": "200 km Ojo Sensorial Invid",
+      "label_en": "200 km Invid Sensory Eye"
+    },
+    "mobility": {
+      "value": 88,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 88,
+      "label_es": "88 Pts (Potentes propulsores de salto ventrales)",
+      "label_en": "88 Pts (Powerful ventral jump boosters)"
+    }
+  },
+  "dimensions": {
+    "height": "6.80 m",
+    "width": "4.80 m",
+    "length": "4.20 m",
+    "mass": "14.5 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Bionúcleo de Protocultura Reforzado de la Reina Regis",
+    "output": "2,800 shp"
+  },
+  "lore": {
+    "overview_es": "La espina dorsal artillera de las fuerzas Invid en la Tierra. A diferencia del ligero Scout, el Shock Trooper monta dos colosales cañones de plasma de energía biológica sobre los hombros, capaces de destruir de un solo disparo a un caza Alpha o pulverizar blindados terrestres a gran distancia.",
+    "overview_en": "The artillery backbone of Invid ground formations on Earth. Distinct from the light Scout, the Shock Trooper carries twin shoulder-mounted bio-plasma cannons capable of obliterating an Alpha Fighter or heavy tank with a direct hit.",
+    "history_es": "Formaron las líneas de defensa concéntricas más densas alrededor de Reflex Point, repeliendo con fuego concentrado a las sucesivas oleadas de desembarco de la Flota de Reconquista.",
+    "history_en": "Formed the dense concentric defensive rings around Reflex Point, repelling waves of REF dropships with brutal massed artillery fire."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Cuerpo Principal (*)",
+      "location_en": "Main Body (*)",
+      "mdc": 260
+    },
+    {
+      "location_es": "Cañones de Plasma Pesados de Hombro (2)",
+      "location_en": "Shoulder Heavy Plasma Cannons (2)",
+      "mdc": 140
+    },
+    {
+      "location_es": "Ojo Sensorial Central",
+      "location_en": "Central Sensory Eye",
+      "mdc": 80
+    },
+    {
+      "location_es": "Piernas Reforzadas (2)",
+      "location_en": "Reinforced Legs (2)",
+      "mdc": 150
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañones Gemelos Pesados de Plasma Concentrado",
+      "name_en": "Twin Heavy Concentrated Plasma Cannons",
+      "damage": "1D6x10 por descarga pesada",
+      "range": "4.5 km"
+    },
+    {
+      "name_es": "Garras Trituradoras de Pinza Hidráulica",
+      "name_en": "Hydraulic Pincer Crushing Claws",
+      "damage": "4D6 cuerpo a cuerpo",
+      "range": "Cuerpo a cuerpo"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Propulsores de sustentación de plasma biológico para saltos acrobáticos de hasta 300 metros.",
+      "description_en": "Biological plasma hover boosters allowing leaps of up to 300 meters."
+    }
+  ]
+}

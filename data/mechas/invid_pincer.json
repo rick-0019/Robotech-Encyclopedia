@@ -1,0 +1,147 @@
+{
+  "id": "invid_pincer",
+  "name": "Invid Pincer",
+  "alias": "Gosu / Enforcer de Asalto Acorazado",
+  "category": "invid",
+  "generation": "gen3",
+  "is_variable": false,
+  "modes": {
+    "battloid": "assets/images/mechas/invid_pincer/invid_pincer_profile.png"
+  },
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "faction": {
+    "es": "Horda Invid (Regis / Regiss)",
+    "en": "Invid Swarm (Regis / Regiss)"
+  },
+  "vehicle_type": {
+    "es": "Mecha de Asalto Superpesado, Incursión Urbana y Guardia Colmena",
+    "en": "Super-Heavy Assault, Urban Incursion & Hive Guard Mecha"
+  },
+  "crew": {
+    "es": "1 guerrero Invid evolucionado de casta superior",
+    "en": "1 evolved higher-caste Invid warrior"
+  },
+  "thumbnail": "assets/images/mechas/invid_pincer/invid_pincer_profile.png",
+  "faction_logo": "assets/images/ui/logo_invid.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/invid_pincer/invid_pincer_profile.png",
+      "title_es": "Invid Pincer Command en posición de asalto",
+      "title_en": "Invid Pincer Command in assault posture",
+      "type": "render"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 220,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 46,
+      "label_es": "220 km/h en vuelo / 80 km/h en tierra",
+      "label_en": "220 km/h flight / 80 km/h land"
+    },
+    "armor": {
+      "value": 340,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 68,
+      "label_es": "340 C.D.M. Caparazón Fortificado Antibalístico",
+      "label_en": "340 M.D.C. Fortified Anti-Ballistic Carapace"
+    },
+    "firepower": {
+      "value": 94,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 94,
+      "label_es": "94 Pts (Cañones de Haz de Desintegración y Garras)",
+      "label_en": "94 Pts (Disintegration Beam & Claws)"
+    },
+    "range": {
+      "value": 10.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 40,
+      "label_es": "10 km alcance",
+      "label_en": "10 km range"
+    },
+    "sensors": {
+      "value": 220,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 72,
+      "label_es": "220 km Receptor Telepático de Colmena",
+      "label_en": "220 km Hive Telepathic Sensor"
+    },
+    "mobility": {
+      "value": 85,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 85,
+      "label_es": "85 Pts (Fuerza destructiva masiva)",
+      "label_en": "85 Pts (Massive destructive power)"
+    }
+  },
+  "dimensions": {
+    "height": "7.90 m",
+    "width": "5.40 m",
+    "length": "4.80 m",
+    "mass": "21.0 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Matriz Bioplasmática de Alta Eficiencia Invid",
+    "output": "3,400 shp"
+  },
+  "lore": {
+    "overview_es": "El blindado pesado por excelencia de la reina Regis. El Invid Pincer (Gosu / Enforcer) combina una coraza frontal casi inmune al fuego de los rifles de asalto Veritech con un cañón de energía de alta penetración y tenazas mecánicas gigantes capaces de partir en dos a un caza Alpha.",
+    "overview_en": "The premier heavy assault mecha of the Invid Regis. The Invid Pincer combines an armor shell nearly immune to standard Veritech gunfire with a heavy disintegration beam cannon and massive mechanical pincers capable of snapping an Alpha Fighter in half.",
+    "history_es": "Custodiaban las cámaras más sagradas de los Pozos del Génesis y los santuarios de la Flor de la Vida en las colmenas metropolitanas.",
+    "history_en": "Guarded the sacred Genesis Pits and Flower of Life sanctums within regional metropolitan hives."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Cuerpo Principal (*)",
+      "location_en": "Main Body (*)",
+      "mdc": 340
+    },
+    {
+      "location_es": "Pinzas Trituradoras Superpesadas (2)",
+      "location_en": "Super-Heavy Pincers (2)",
+      "mdc": 180
+    },
+    {
+      "location_es": "Cañón de Haz de Desintegración",
+      "location_en": "Disintegration Beam Cannon",
+      "mdc": 150
+    },
+    {
+      "location_es": "Piernas Acorazadas (2)",
+      "location_en": "Armored Legs (2)",
+      "mdc": 200
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañón Pesado de Haz de Desintegración Molecular",
+      "name_en": "Heavy Molecular Disintegration Beam Cannon",
+      "damage": "1D6x10+15 por disparo",
+      "range": "5 km"
+    },
+    {
+      "name_es": "Tenazas Trituradoras Hidráulicas de Corte",
+      "name_en": "Hydraulic Shearing Pincer Claws",
+      "damage": "2D4x10 aplastamiento/corte",
+      "range": "Cuerpo a cuerpo"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Blindaje quitinoso con aislamiento biológico refractario que absorbe un 30% del daño por fuego láser.",
+      "description_en": "Refractory biological chitin armor absorbing 30% of laser fire damage."
+    }
+  ]
+}

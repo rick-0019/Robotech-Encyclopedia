@@ -1,0 +1,164 @@
+{
+  "id": "queadluun_rau",
+  "name": "Queadluun-Rau",
+  "alias": "Armadura de Asalto Femenina Meltrandi",
+  "category": "zentraedi",
+  "generation": "gen1",
+  "is_variable": false,
+  "modes": {
+    "battloid": "assets/images/mechas/queadluun_rau/queadluun_profile.png"
+  },
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "faction": {
+    "es": "Flota Meltrandi // Cuadrilátero Femenino de Asalto de Miriya",
+    "en": "Meltrandi Fleet // Female Quadrono Assault Squadron"
+  },
+  "vehicle_type": {
+    "es": "Traje Acorazado de Asalto Aeroespacial y Alta Agilidad",
+    "en": "High-Agility Aerospace Assault Power Armor"
+  },
+  "crew": {
+    "es": "1 piloto femenina Zentraedi/Meltrandi micronizada o gigante (Miriya Parina)",
+    "en": "1 female Zentraedi/Meltrandi pilot (Miriya Parina)"
+  },
+  "thumbnail": "assets/images/mechas/queadluun_rau/queadluun_profile.png",
+  "faction_logo": "assets/images/ui/logo_zentran.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/queadluun_rau/queadluun_profile.png",
+      "title_es": "Armadura de Asalto Queadluun-Rau de Miriya Parina",
+      "title_en": "Miriya Parina's Queadluun-Rau Power Armor",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/queadluun_rau/miriya_cockpit.png",
+      "title_es": "Miriya en la cabina de control neural de su Queadluun-Rau",
+      "title_en": "Miriya inside the neural-linked cockpit of her Queadluun-Rau",
+      "type": "pilot"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 4150,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 98,
+      "label_es": "Mach 3.4 en vuelo espacial",
+      "label_en": "Mach 3.4 spaceflight"
+    },
+    "armor": {
+      "value": 240,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 48,
+      "label_es": "240 C.D.M. Blindaje Biometálico",
+      "label_en": "240 M.D.C. Biometallic Armor"
+    },
+    "firepower": {
+      "value": 94,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 94,
+      "label_es": "94 Pts (126 Micromisiles guiados)",
+      "label_en": "94 Pts (126 Guided Micro-missiles)"
+    },
+    "range": {
+      "value": 25.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 55,
+      "label_es": "25 km alcance de combate",
+      "label_en": "25 km combat range"
+    },
+    "sensors": {
+      "value": 190,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 68,
+      "label_es": "190 km Sensores Óptico-Electrónicos",
+      "label_en": "190 km Optoelectronic Sensors"
+    },
+    "mobility": {
+      "value": 100,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 100,
+      "label_es": "100 Pts (La unidad más ágil de la guerra)",
+      "label_en": "100 Pts (Most agile war unit)"
+    }
+  },
+  "dimensions": {
+    "height": "16.75 m",
+    "width": "11.40 m",
+    "length": "9.80 m",
+    "mass": "32.5 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Doble Motor Termonuclear Zentraedi de Fusión de Alta Tasa",
+    "output": "3,600 shp"
+  },
+  "lore": {
+    "overview_es": "El pináculo del desarrollo meca alienígena en la Primera Guerra Robotech. Utilizado exclusivamente por la casta guerrera femenina Meltrandi, el Queadluun-Rau es célebre por su velocidad y maniobrabilidad supersónicas, capaz de superar en giros y aceleración a los cazas Veritech humanos.",
+    "overview_en": "The pinnacle of alien mecha engineering in the First Robotech War. Exclusively piloted by elite female Meltrandi Quadronos, the Queadluun-Rau is renowned for its blinding speed and maneuverability, out-turning and out-accelerating human Veritech fighters.",
+    "history_es": "Miriya Parina comandó su Queadluun-Rau rojo escarlata en legendarios duelos contra Roy Fokker y Max Sterling, penetrando las defensas del SDF-1 antes de unirse al bando humano tras su matrimonio con Max.",
+    "history_en": "Miriya Parina piloted her scarlet-red Queadluun-Rau in legendary dogfights against Roy Fokker and Max Sterling, penetrating SDF-1 defenses before defecting to the human side after marrying Max."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Torso Principal (*)",
+      "location_en": "Main Torso (*)",
+      "mdc": 240
+    },
+    {
+      "location_es": "Cápsula de Control / Cabina",
+      "location_en": "Cockpit Module",
+      "mdc": 150
+    },
+    {
+      "location_es": "Lanzaderas de Micromisiles en Hombros y Piernas (4)",
+      "location_en": "Shoulder & Leg Missile Bays (4)",
+      "mdc": 120
+    },
+    {
+      "location_es": "Propulsores de Maniobra Espacial (2)",
+      "location_en": "Main Thruster Boosters (2)",
+      "mdc": 160
+    },
+    {
+      "location_es": "Brazos con Cañones Láser (2)",
+      "location_en": "Forearm Laser Cannons (2)",
+      "mdc": 100
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "4 Baterías de Micromisiles de Alta Maniobrabilidad (126 misiles totales)",
+      "name_en": "4x High-Maneuverability Micro-Missile Pods (126 missiles total)",
+      "damage": "2D6x10 salva de 6 misiles / 1D6x100 salva de enjambre",
+      "range": "25 km"
+    },
+    {
+      "name_es": "2 Cañones de Pulso Láser Gemelos de Antebrazo",
+      "name_en": "2x Forearm Twin Laser Pulse Cannons",
+      "damage": "6D6 por disparo simultáneo",
+      "range": "2 km"
+    },
+    {
+      "name_es": "2 Cañones de Haz de Partículas Pesadas en el Pecho",
+      "name_en": "2x Heavy Chest Particle Beam Cannons",
+      "damage": "1D4x10 por descarga",
+      "range": "3.5 km"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Sistema de control neuronal de bio-enlace que conecta los reflejos de la piloto directamente con los propulsores vernier.",
+      "description_en": "Bio-linked neural control system tying pilot reflexes directly to vernier maneuvering thrusters."
+    }
+  ]
+}

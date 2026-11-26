@@ -1,0 +1,149 @@
+{
+  "id": "vr041_cyclone",
+  "name": "VR-041 Saber Cyclone",
+  "alias": "VR-041H Saber Cyclone de Asalto Cercano",
+  "category": "veritech",
+  "generation": "gen3",
+  "is_variable": true,
+  "modes": {
+    "fighter": "assets/images/mechas/vr041_cyclone/vr041_profile.jpg",
+    "battloid": "assets/images/mechas/vr041_cyclone/vr041_combat.jpg"
+  },
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "faction": {
+    "es": "Fuerza Expedicionaria Robotech // Resistencia Terrestre // Lancer",
+    "en": "Robotech Expeditionary Force // Earth Resistance // Lancer"
+  },
+  "vehicle_type": {
+    "es": "Motocicleta Transformable Especializada en Asalto Furtivo y Cuchillas de Plasma",
+    "en": "Transformable Motorcycle Specialized in Stealth Melee & High-Frequency Blades"
+  },
+  "crew": {
+    "es": "1 piloto (Yellow Belmont / Lancer)",
+    "en": "1 pilot (Yellow Belmont / Lancer)"
+  },
+  "thumbnail": "assets/images/mechas/vr041_cyclone/vr041_profile.jpg",
+  "faction_logo": "assets/images/ui/Mars_Base.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/vr041_cyclone/vr041_profile.jpg",
+      "title_es": "VR-041 Saber Cyclone en configuración de moto de infiltración",
+      "title_en": "VR-041 Saber Cyclone in stealth motorcycle mode",
+      "type": "vehicle"
+    },
+    {
+      "url": "assets/images/mechas/vr041_cyclone/vr041_combat.jpg",
+      "title_es": "Modo Armadura con hojas de alta frecuencia desplegadas",
+      "title_en": "Armor Mode with high-frequency blades extended",
+      "type": "armor"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 255,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 50,
+      "label_es": "255 km/h en asfalto",
+      "label_en": "255 km/h on highway"
+    },
+    "armor": {
+      "value": 110,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 22,
+      "label_es": "110 C.D.M. Aleación Ligera de Infiltración",
+      "label_en": "110 M.D.C. Light Infiltration Alloy"
+    },
+    "firepower": {
+      "value": 70,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 70,
+      "label_es": "70 Pts (Hojas Láser de Alta Frecuencia)",
+      "label_en": "70 Pts (High-Frequency Laser Sabers)"
+    },
+    "range": {
+      "value": 3.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 15,
+      "label_es": "3 km alcance",
+      "label_en": "3 km range"
+    },
+    "sensors": {
+      "value": 50,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 30,
+      "label_es": "50 km Visor Térmico de Asalto",
+      "label_en": "50 km Thermal Assault Visor"
+    },
+    "mobility": {
+      "value": 100,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 100,
+      "label_es": "100 Pts (Máxima agilidad cuerpo a cuerpo)",
+      "label_en": "100 Pts (Maximum close-quarters agility)"
+    }
+  },
+  "dimensions": {
+    "height": "1.05 m / 2.05 m",
+    "width": "0.88 m",
+    "length": "2.10 m",
+    "mass": "110 kg"
+  },
+  "powerplant": {
+    "type": "Célula Compacta de Protocultura P-12 Refinada",
+    "output": "330 shp"
+  },
+  "lore": {
+    "overview_es": "La variante de combate cercano de la familia Cyclone. El VR-041 Saber reemplaza los lanzamisiles pesados de hombro por dos afiladas hojas de plasma de alta frecuencia (CADS-1) montadas en los antebrazos, capaces de rebanar el blindaje de quitina de los mechas Invid como si fuera mantequilla.",
+    "overview_en": "The close-combat variant of the Cyclone platform. The VR-041 Saber swaps heavy missile boxes for twin forearm-mounted high-frequency plasma blades (CADS-1), capable of cleaving Invid chitin armor with absolute precision.",
+    "history_es": "Lancer utilizó este modelo en arriesgadas misiones de infiltración y rescate de prisioneros en las fortalezas colmena Invid.",
+    "history_en": "Lancer deployed this agile unit during daring infiltration sorties and prisoner rescue missions into Invid hives."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Exoesquema Central (*)",
+      "location_en": "Central Exoskeleton (*)",
+      "mdc": 110
+    },
+    {
+      "location_es": "Hojas de Alta Frecuencia CADS-1 (2)",
+      "location_en": "CADS-1 High-Frequency Blades (2)",
+      "mdc": 45
+    },
+    {
+      "location_es": "Ruedas de Moto Blindadas (2)",
+      "location_en": "Armored Cycle Wheels (2)",
+      "mdc": 35
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Hojas de Plasma de Alta Frecuencia CADS-1 de Antebrazo (2)",
+      "name_en": "CADS-1 Forearm High-Frequency Plasma Blades (2)",
+      "damage": "3D6x10 por tajo cortante a quemarropa",
+      "range": "Cuerpo a cuerpo"
+    },
+    {
+      "name_es": "Pistola Láser Pesada de Rayo Concentrado Gallant H-90",
+      "name_en": "Gallant H-90 Heavy Energy Pistol/Rifle",
+      "damage": "3D6 en modo rifle",
+      "range": "800 m"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Escudos deflectores en los antebrazos que permiten bloquear ataques cinéticos de garras Invid.",
+      "description_en": "Forearm deflector plates capable of parrying kinetic Invid claw strikes."
+    }
+  ]
+}

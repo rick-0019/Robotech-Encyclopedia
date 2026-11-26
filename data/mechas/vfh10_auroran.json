@@ -1,0 +1,161 @@
+{
+  "id": "vfh10_auroran",
+  "name": "Auroran (AGACS)",
+  "alias": "VFH-10 Armored Gyro Assault Chopper",
+  "category": "veritech",
+  "generation": "gen2",
+  "is_variable": true,
+  "modes": {
+    "fighter": "assets/images/mechas/vfh10_auroran/auroran_chopper.jpg",
+    "guardian": "assets/images/mechas/vfh10_auroran/auroran_combat.png",
+    "battloid": "assets/images/mechas/vfh10_auroran/auroran_profile.jpg"
+  },
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Masters Saga (Second Robotech War)"
+  },
+  "faction": {
+    "es": "Ejército de la Cruz del Sur // Flota Táctica Espacial (TASC)",
+    "en": "Army of the Southern Cross // Tactical Armored Space Corps"
+  },
+  "vehicle_type": {
+    "es": "Helicóptero Girocóptero y Meca de Asalto Espacial Pesado",
+    "en": "Heavy Aerospace Gyro Chopper & Assault Battle Mecha"
+  },
+  "crew": {
+    "es": "1 piloto (Marie Crystal como comandante del escuadrón AGACS)",
+    "en": "1 pilot (Marie Crystal as AGACS flight commander)"
+  },
+  "thumbnail": "assets/images/mechas/vfh10_auroran/auroran_profile.jpg",
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/vfh10_auroran/auroran_profile.jpg",
+      "title_es": "Modo Battloid de combate aeroespacial del AGACS",
+      "title_en": "AGACS Battloid aerospace combat mode",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/vfh10_auroran/auroran_chopper.jpg",
+      "title_es": "Modo Helicóptero Girocóptero de asalto de baja cota",
+      "title_en": "Low-altitude Gyro Chopper assault mode",
+      "type": "action"
+    },
+    {
+      "url": "assets/images/mechas/vfh10_auroran/auroran_combat.png",
+      "title_es": "AGACS en combate directo contra las corbetas Bioroid",
+      "title_en": "AGACS in direct combat against Bioroid corvettes",
+      "type": "action"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 4200,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 98,
+      "label_es": "Mach 3.5 en espacio / 380 km/h en modo Chopper",
+      "label_en": "Mach 3.5 space / 380 km/h Chopper"
+    },
+    "armor": {
+      "value": 270,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 54,
+      "label_es": "270 C.D.M. Blindaje Reforzado",
+      "label_en": "270 M.D.C. Reinforced Armor"
+    },
+    "firepower": {
+      "value": 90,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 90,
+      "label_es": "90 Pts (Cañones de Haz Triples Gemelos)",
+      "label_en": "90 Pts (Twin Triple-Beam Cannons)"
+    },
+    "range": {
+      "value": 14.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 44,
+      "label_es": "14 km alcance artillero",
+      "label_en": "14 km gun range"
+    },
+    "sensors": {
+      "value": 220,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 72,
+      "label_es": "220 km Radar Giroscópico de Combate",
+      "label_en": "220 km Gyroscopic Combat Radar"
+    },
+    "mobility": {
+      "value": 94,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 94,
+      "label_es": "94 Pts (Rotores de propulsión omnidireccionales)",
+      "label_en": "94 Pts (Omnidirectional propulsion rotors)"
+    }
+  },
+  "dimensions": {
+    "height": "4.10 m (Chopper) / 8.70 m (Battloid)",
+    "width": "6.20 m",
+    "length": "9.80 m",
+    "mass": "16.4 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Propulsor Giro-Termonuclear Dual ASC de Protocultura",
+    "output": "3,500 shp"
+  },
+  "lore": {
+    "overview_es": "El sustituto definitivo del Logan en las fases avanzadas de la Segunda Guerra Robotech. El VFH-10 Auroran (AGACS) combina la capacidad de vuelo estacionario de un helicóptero táctico con la brutal aceleración de un meca espacial pesado, armado con cañones de energía gemelos en sus barquillas alares.",
+    "overview_en": "The ultimate replacement for the Logan in the later stages of the Second Robotech War. The VFH-10 Auroran (AGACS) blends hover-chopper aerodynamics with the sheer punch of a heavy space mecha.",
+    "history_es": "Marie Crystal y sus escuadrones de élite encabezaron los asaltos espaciales contra las naves nodrizas de los Maestros, permitiendo abrir brechas de desembarco para las tropas de infantería.",
+    "history_en": "Marie Crystal and her elite wings spearheaded deep-space boarding actions against the Masters' city-ships, carving entry corridors for invasion troops."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Cuerpo Principal (*)",
+      "location_en": "Main Body (*)",
+      "mdc": 270
+    },
+    {
+      "location_es": "Rotores Girocópteros de Propulsión (2)",
+      "location_en": "Propulsion Gyro Rotors (2)",
+      "mdc": 140
+    },
+    {
+      "location_es": "Cañones de Partículas de Brazo (2)",
+      "location_en": "Arm Particle Cannons (2)",
+      "mdc": 120
+    },
+    {
+      "location_es": "Cabina Blindada Esférica",
+      "location_en": "Spherical Armored Cockpit",
+      "mdc": 150
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañones Gemelos Pesados de Haz de Partículas Montados en Brazos",
+      "name_en": "Twin Arm-Mounted Heavy Particle Beam Cannons",
+      "damage": "1D4x10 por descarga simultánea",
+      "range": "3.2 km"
+    },
+    {
+      "name_es": "Lanzaderas de Cohetes de Saturación Giroscópica (24 cohetes)",
+      "name_en": "Gyroscopic Saturation Rocket Pods (24 rockets)",
+      "damage": "2D6x10 por salva de 4",
+      "range": "14 km"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Rotores multifunción que actúan como propulsores iónicos en el espacio y palas de sustentación aerodinámica en atmósfera.",
+      "description_en": "Dual-mode rotors acting as ion thrusters in deep space and lift blades in planetary atmosphere."
+    }
+  ]
+}

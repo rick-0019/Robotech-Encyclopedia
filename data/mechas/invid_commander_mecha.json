@@ -1,0 +1,158 @@
+{
+  "id": "invid_commander_mecha",
+  "name": "Invid Royal Command Mecha",
+  "alias": "Gamo / Mecha Supremo de Comandante Invid",
+  "category": "invid",
+  "generation": "gen3",
+  "is_variable": false,
+  "modes": {
+    "battloid": "assets/images/mechas/invid_commander_mecha/invid_commander_profile.jpg"
+  },
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "faction": {
+    "es": "Horda Invid // Corona Real (Príncipe Corg y Princesa Sera)",
+    "en": "Invid Swarm // Royal Court (Prince Corg & Princess Sera)"
+  },
+  "vehicle_type": {
+    "es": "Mecha de Mando Supremo, Vuelo Aeroespacial de Alta Velocidad y Duelo",
+    "en": "Supreme Command, High-Speed Aerospace Flight & Duel Mecha"
+  },
+  "crew": {
+    "es": "1 príncipe/princesa Invid transmutado a forma humana (Corg o Sera)",
+    "en": "1 royal Invid prince/princess transmuted into human form (Corg or Sera)"
+  },
+  "thumbnail": "assets/images/mechas/invid_commander_mecha/invid_commander_profile.jpg",
+  "faction_logo": "assets/images/ui/logo_invid.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/invid_commander_mecha/invid_commander_profile.jpg",
+      "title_es": "Mecha de Comandante Invid pilotado por el Príncipe Corg",
+      "title_en": "Invid Command Mecha piloted by Prince Corg",
+      "type": "render"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 4500,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 98,
+      "label_es": "Mach 3.7 en vuelo / Superior a cazas Alpha",
+      "label_en": "Mach 3.7 flight / Outruns Alpha Fighters"
+    },
+    "armor": {
+      "value": 390,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 78,
+      "label_es": "390 C.D.M. Blindaje Biometálico Real",
+      "label_en": "390 M.D.C. Royal Biometallic Armor"
+    },
+    "firepower": {
+      "value": 98,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 98,
+      "label_es": "98 Pts (Cañones de Plasma Gemelos y Misiles Orgánicos)",
+      "label_en": "98 Pts (Twin Plasma & Organic Missiles)"
+    },
+    "range": {
+      "value": 15.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 45,
+      "label_es": "15 km alcance",
+      "label_en": "15 km range"
+    },
+    "sensors": {
+      "value": 350,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 92,
+      "label_es": "350 km Enlace Mental con la Reina Regis",
+      "label_en": "350 km Mental Datalink with Queen Regis"
+    },
+    "mobility": {
+      "value": 100,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 100,
+      "label_es": "100 Pts (La unidad aérea Invid más letal)",
+      "label_en": "100 Pts (Most lethal Invid aerial unit)"
+    }
+  },
+  "dimensions": {
+    "height": "8.20 m",
+    "width": "5.80 m",
+    "length": "4.90 m",
+    "mass": "22.8 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Matriz Viva de Protocultura Pura de la Flor de la Vida",
+    "output": "4,200 shp"
+  },
+  "lore": {
+    "overview_es": "La cúspide de la ingeniería meca de la raza Invid. Construido exclusivamente para los hijos humanizados de la Reina Regis —el despiadado Príncipe Corg y la compasiva Princesa Sera—, este mecha regio posee una silueta esbelta, alas articuladas de vuelo supersónico y una ferocidad en combate que superaba a cualquier meca terrestre.",
+    "overview_en": "The pinnacle of Invid bio-engineering. Crafted exclusively for Queen Regis's transmuted royal heirs —ruthless Prince Corg and compassionate Princess Sera—, this royal mecha features sweeping aerodynamic wings, supersonic flight, and ferocity unmatched by any Earth mecha.",
+    "history_es": "El Príncipe Corg masacró escuadrones completos de cazas Alpha antes de su duelo a muerte final contra Scott Bernard en los cielos de Reflex Point.",
+    "history_en": "Prince Corg slaughtered entire Alpha Fighter wings before his climactic death duel against Scott Bernard over Reflex Point."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Torso Principal (*)",
+      "location_en": "Main Torso (*)",
+      "mdc": 390
+    },
+    {
+      "location_es": "Cabina Real de Control Biocibernético",
+      "location_en": "Royal Biocibernetic Cockpit",
+      "mdc": 200
+    },
+    {
+      "location_es": "Alas de Vuelo Supersónico (2)",
+      "location_en": "Supersonic Flight Wings (2)",
+      "mdc": 170
+    },
+    {
+      "location_es": "Cañones de Plasma Gemelos de Hombro",
+      "location_en": "Twin Shoulder Plasma Cannons",
+      "mdc": 160
+    },
+    {
+      "location_es": "Garras Trituradoras y Piernas (2)",
+      "location_en": "Crushing Claws & Legs (2)",
+      "mdc": 220
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañones Gemelos Pesados de Bio-Plasma de Alta Frecuencia",
+      "name_en": "Twin Heavy High-Frequency Bio-Plasma Cannons",
+      "damage": "1D6x10+20 por descarga simultánea",
+      "range": "6 km"
+    },
+    {
+      "name_es": "Lanzadores de Esporas Explosivas y Micromisiles de Ala",
+      "name_en": "Explosive Spores & Wing Micro-Missile Bays",
+      "damage": "2D6x10 por salva de 4",
+      "range": "15 km"
+    },
+    {
+      "name_es": "Garras de Plasma Térmico de Asalto",
+      "name_en": "Thermal Plasma Assault Claws",
+      "damage": "5D6 cortante",
+      "range": "Cuerpo a cuerpo"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Enlace telepático de mando soberano sobre todos los enjambres de Scouts y Shock Troopers en un radio de 500 km.",
+      "description_en": "Sovereign telepathic datalink commanding all Scout and Shock Trooper swarms within a 500 km radius."
+    }
+  ]
+}

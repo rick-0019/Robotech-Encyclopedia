@@ -1,0 +1,147 @@
+{
+  "id": "bioroid_invid_fighter",
+  "name": "Bioroid Invid Fighter",
+  "alias": "Bioroid Pesado Especializado Anti-Invid",
+  "category": "bioroid",
+  "generation": "gen2",
+  "is_variable": false,
+  "modes": {
+    "battloid": "assets/images/mechas/bioroid_invid_fighter/bioroid_invid_fighter.jpg"
+  },
+  "series": {
+    "es": "Los Maestros de la Robotech (Segunda Guerra Robotech)",
+    "en": "The Masters Saga (Second Robotech War)"
+  },
+  "faction": {
+    "es": "Maestros de la Robotech // Legiones de Contención Anti-Invid",
+    "en": "Robotech Masters // Anti-Invid Shock Guard"
+  },
+  "vehicle_type": {
+    "es": "Mecha de Asalto Superpesado y Cazador de Blindados",
+    "en": "Super-Heavy Assault & Tank-Hunter Mecha"
+  },
+  "crew": {
+    "es": "1 piloto clon tirolés de reflejos de combate aumentados genéticamente",
+    "en": "1 genetically augmented Tirolian clone pilot"
+  },
+  "thumbnail": "assets/images/mechas/bioroid_invid_fighter/bioroid_invid_fighter.jpg",
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/bioroid_invid_fighter/bioroid_invid_fighter.jpg",
+      "title_es": "Bioroid Invid Fighter con blindaje reforzado y garras mecánicas",
+      "title_en": "Invid Fighter Bioroid with heavy armor and claw manipulators",
+      "type": "render"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 170,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 39,
+      "label_es": "170 km/h en tierra",
+      "label_en": "170 km/h land"
+    },
+    "armor": {
+      "value": 380,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 76,
+      "label_es": "380 C.D.M. Blindaje Anti-Plasma",
+      "label_en": "380 M.D.C. Anti-Plasma Plating"
+    },
+    "firepower": {
+      "value": 94,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 94,
+      "label_es": "94 Pts (Cañones de Plasma Pesado)",
+      "label_en": "94 Pts (Heavy Plasma Cannons)"
+    },
+    "range": {
+      "value": 12.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 42,
+      "label_es": "12 km alcance artillero",
+      "label_en": "12 km artillery range"
+    },
+    "sensors": {
+      "value": 150,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 60,
+      "label_es": "150 km Escáner Bioenergético",
+      "label_en": "150 km Bioenergy Scanner"
+    },
+    "mobility": {
+      "value": 82,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 82,
+      "label_es": "82 Pts (Alta fuerza de impacto)",
+      "label_en": "82 Pts (High kinetic impact power)"
+    }
+  },
+  "dimensions": {
+    "height": "7.60 m",
+    "width": "4.30 m",
+    "length": "3.50 m",
+    "mass": "18.5 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Núcleo de Protocultura Reforzado Anti-Disrupción",
+    "output": "3,600 shp"
+  },
+  "lore": {
+    "overview_es": "Desarrollado originalmente por los Maestros de la Robotech para contener las devastadoras hordas de mechas Shock Troopers de la Reina Invid en el espacio profundo, el Bioroid Invid Fighter cuenta con blindaje multicapa resistente al fuego de plasma y garras reforzadas capaces de desgarrar las carcasas enemigas.",
+    "overview_en": "Originally engineered by the Masters to counter the savage Invid Shock Trooper swarms in deep space, the Invid Fighter Bioroid incorporates heavy plasma-resistant armor and reinforced claws capable of ripping enemy mechas apart.",
+    "history_es": "Desplegado en la Tierra durante las últimas fases de la guerra como fuerza de choque desesperada contra los Spartas Hovertank de la Cruz del Sur.",
+    "history_en": "Deployed on Earth in the twilight stages of the Second War as a brutal assault countermeasure against Southern Cross Spartas Hovertanks."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Torso Principal (*)",
+      "location_en": "Main Torso (*)",
+      "mdc": 380
+    },
+    {
+      "location_es": "Garras Trituradoras de Asalto (2)",
+      "location_en": "Crushing Assault Claws (2)",
+      "mdc": 160
+    },
+    {
+      "location_es": "Cañón de Plasma Dorsal",
+      "location_en": "Dorsal Plasma Cannon",
+      "mdc": 150
+    },
+    {
+      "location_es": "Piernas Pesadas Reforzadas (2)",
+      "location_en": "Heavy Reinforced Legs (2)",
+      "mdc": 210
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañón Dorsal de Plasma de Alta Concentración Térmica",
+      "name_en": "Dorsal High-Concentration Thermal Plasma Cannon",
+      "damage": "1D6x10+10 por disparo",
+      "range": "5 km"
+    },
+    {
+      "name_es": "Garras Hidráulicas de Corte Molecular",
+      "name_en": "Molecular-Cutting Hydraulic Claws",
+      "damage": "4D6 perforante",
+      "range": "Cuerpo a cuerpo"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Revestimiento térmico reflectante de plasma orgánico y sensores de rastreo de protocultura.",
+      "description_en": "Reflective organic plasma coating and protoculture resonance tracking sensors."
+    }
+  ]
+}

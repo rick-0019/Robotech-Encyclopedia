@@ -1,0 +1,147 @@
+{
+  "id": "cat_eye_recon",
+  "name": "Cat's Eye",
+  "alias": "ES-11D Cat's Eye Recon Plane",
+  "category": "support",
+  "generation": "gen1",
+  "is_variable": false,
+  "modes": {
+    "fighter": "assets/images/mechas/cat_eye_recon/cat_eye_profile.jpg"
+  },
+  "series": {
+    "es": "La Saga Macross (Primera Guerra Robotech)",
+    "en": "The Macross Saga (First Robotech War)"
+  },
+  "faction": {
+    "es": "U.N. Spacy // Escuadrón de Vigilancia y Guerra Electrónica",
+    "en": "U.N. Spacy // Early Warning & Electronic Warfare Wing"
+  },
+  "vehicle_type": {
+    "es": "Aeronave Aeroespacial de Alerta Temprana, Radar y Guerra Electrónica",
+    "en": "Aerospace Airborne Early Warning & Electronic Warfare Craft"
+  },
+  "crew": {
+    "es": "3 tripulantes (Piloto, Copiloto y Oficial de Sensores/Radar)",
+    "en": "3 crew (Pilot, Copilot, and Sensor/Radar Officer)"
+  },
+  "thumbnail": "assets/images/mechas/cat_eye_recon/cat_eye_profile.jpg",
+  "faction_logo": "assets/images/ui/logo_UNSpacy.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/cat_eye_recon/cat_eye_profile.jpg",
+      "title_es": "Aeronave de Reconocimiento ES-11D Cat's Eye",
+      "title_en": "ES-11D Cat's Eye Reconnaissance Aircraft",
+      "type": "render"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 2850,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 84,
+      "label_es": "Mach 2.3 en atmósfera alta",
+      "label_en": "Mach 2.3 high altitude"
+    },
+    "armor": {
+      "value": 140,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 28,
+      "label_es": "140 C.D.M. Fuselaje Ligero",
+      "label_en": "140 M.D.C. Light Fuselage"
+    },
+    "firepower": {
+      "value": 25,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 25,
+      "label_es": "25 Pts (Solo autodefensa)",
+      "label_en": "25 Pts (Self-defense only)"
+    },
+    "range": {
+      "value": 8.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 30,
+      "label_es": "8 km alcance defensivo",
+      "label_en": "8 km defense range"
+    },
+    "sensors": {
+      "value": 650,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 100,
+      "label_es": "650 km Domo Radar AWACS",
+      "label_en": "650 km AWACS Radar Dome"
+    },
+    "mobility": {
+      "value": 75,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 75,
+      "label_es": "75 Pts (Maniobras de evasión electrónica)",
+      "label_en": "75 Pts (Electronic evasive maneuvers)"
+    }
+  },
+  "dimensions": {
+    "height": "6.10 m",
+    "width": "14.80 m",
+    "length": "17.20 m",
+    "mass": "18.4 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Motores Turborreactores Termonucleares Gemelos Shinsei Industry",
+    "output": "3,800 shp"
+  },
+  "lore": {
+    "overview_es": "Los \"ojos y oídos\" de la flota terrestre. El ES-11D Cat's Eye monta un rotodomo gigante de radar en su sección dorsal superior, capaz de penetrar las interferencias Zentraedi y coordinar a los escuadrones Veritech a cientos de kilómetros de distancia.",
+    "overview_en": "The \"eyes and ears\" of the RDF fleet. The ES-11D Cat's Eye features a massive dorsal rotodome radar capable of cutting through Zentraedi ECM jamming and vectoring friendly Veritech fighter squadrons across hundreds of kilometers.",
+    "history_es": "Durante una misión de reconocimiento crucial, el Cat's Eye tripulado por Hayao Kakizaki, Max Sterling, Hikaru Ichijyo y Lynn Minmei fue interceptado y capturado por la nave de Breetai, desencadenando el histórico primer contacto cultural con los Zentraedi.",
+    "history_en": "During a pivotal recon sortie, the Cat's Eye carrying Hayao Kakizaki, Max Sterling, Hikaru Ichijyo, and Lynn Minmei was tractor-beamed and captured by Breetai's ship, sparking humanity's historic first cultural contact with the Zentraedi."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Fuselaje Central (*)",
+      "location_en": "Main Fuselage (*)",
+      "mdc": 140
+    },
+    {
+      "location_es": "Rotodomo de Radar Dorsal",
+      "location_en": "Dorsal Radar Rotodome",
+      "mdc": 110
+    },
+    {
+      "location_es": "Cabina Tripulada Reforzada",
+      "location_en": "Reinforced Crew Cabin",
+      "mdc": 90
+    },
+    {
+      "location_es": "Alas y Motores (2)",
+      "location_en": "Wings & Engines (2)",
+      "mdc": 80
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Torreta Láser Retráctil Ventral de Autodefensa",
+      "name_en": "Ventral Retractable Self-Defense Laser Turret",
+      "damage": "3D6 por pulso",
+      "range": "1.2 km"
+    },
+    {
+      "name_es": "Dispensadores de Señuelos Chaff y Bengalas Térmicas (60 cargas)",
+      "name_en": "Chaff & Flare Decoy Dispensers (60 loads)",
+      "damage": "Desvío de misiles guiados por calor o radar",
+      "range": "Inmediato"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Sistema de guerra electrónica ECM/ECCM de espectro completo, suite de análisis de comunicaciones y encriptación militar SDF-1.",
+      "description_en": "Full-spectrum ECM/ECCM electronic warfare suite, communications decryption and SDF-1 datalink."
+    }
+  ]
+}

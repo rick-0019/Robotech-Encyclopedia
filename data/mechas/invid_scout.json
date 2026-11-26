@@ -1,0 +1,159 @@
+{
+  "id": "invid_scout",
+  "name": "Invid Scout",
+  "alias": "Iigaa / Rastreador Ligero de Enjambre",
+  "category": "invid",
+  "generation": "gen3",
+  "is_variable": false,
+  "modes": {
+    "battloid": "assets/images/mechas/invid_scout/invid_scout_anime.jpeg"
+  },
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "faction": {
+    "es": "Horda Invid (Regis / Regiss)",
+    "en": "Invid Swarm (Regis / Regiss)"
+  },
+  "vehicle_type": {
+    "es": "Meca Ligero de Reconocimiento, Exploración y Ataque en Enjambre",
+    "en": "Light Reconnaissance, Scout & Swarm Attack Mecha"
+  },
+  "crew": {
+    "es": "1 piloto biológico Invid en fase larvaria/obrera inmerso en fluido amniótico de protocultura",
+    "en": "1 Invid pilot in larval/worker stage suspended in amniotic protoculture fluid"
+  },
+  "thumbnail": "assets/images/mechas/invid_scout/invid_scout_anime.jpeg",
+  "faction_logo": "assets/images/ui/logo_invid.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/invid_scout/invid_scout_anime.jpeg",
+      "title_es": "Invid Scout en vuelo de patrulla rasante",
+      "title_en": "Invid Scout in low-altitude patrol flight",
+      "type": "action"
+    },
+    {
+      "url": "assets/images/mechas/invid_scout/invid_scout_toy.jpg",
+      "title_es": "Morfología biomecánica del Invid Scout con sensores ópticos gemelos",
+      "title_en": "Biomechanical morphology of the Invid Scout with dual optical sensors",
+      "type": "model"
+    },
+    {
+      "url": "assets/images/mechas/invid_scout/invid_scout_emblem.png",
+      "title_es": "Emblema heráldico de la silueta del Invid Scout en violeta y amarillo",
+      "title_en": "Heraldic Invid Scout silhouette emblem in violet and yellow",
+      "type": "emblem"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 320,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 55,
+      "label_es": "320 km/h en vuelo atmosférico / 80 km/h corriendo",
+      "label_en": "320 km/h atmospheric flight / 80 km/h running"
+    },
+    "armor": {
+      "value": 160,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 32,
+      "label_es": "160 C.D.M. Caparazón Quitinoso",
+      "label_en": "160 M.D.C. Chitinous Carapace"
+    },
+    "firepower": {
+      "value": 68,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 68,
+      "label_es": "68 Pts (Láseres de Plasma Gemelos)",
+      "label_en": "68 Pts (Twin Plasma Lasers)"
+    },
+    "range": {
+      "value": 3.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 16,
+      "label_es": "3 km alcance de fuego",
+      "label_en": "3 km firing range"
+    },
+    "sensors": {
+      "value": 180,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 65,
+      "label_es": "180 km Sensor Óptico de Protocultura",
+      "label_en": "180 km Protoculture Optical Sensor"
+    },
+    "mobility": {
+      "value": 96,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 96,
+      "label_es": "96 Pts (Vuelo acrobático y saltos rápidos)",
+      "label_en": "96 Pts (Acrobatic flight & rapid leaps)"
+    }
+  },
+  "dimensions": {
+    "height": "5.20 m",
+    "width": "4.10 m",
+    "length": "3.80 m",
+    "mass": "8.2 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Corazón Bio-Orgánico alimentado por Flor de la Vida Invid",
+    "output": "1,900 shp"
+  },
+  "lore": {
+    "overview_es": "La unidad biomecánica más común y emblemática de la ocupación Invid. Con su silueta redondeada semejante a un crustáceo bípede, dos prominentes sensores ópticos frontales y dos patas articuladas con garras, el Invid Scout caza en patrullas buscando cualquier rastro de emisión de Protocultura activa para convocar al enjambre.",
+    "overview_en": "The most common and iconic biomechanical unit of the Invid occupation. Resembling a bipedal crustacean with twin glowing optical sensors and clawed limbs, the Invid Scout patrols in swarms, homing in on any active Protoculture radiation.",
+    "history_es": "Fueron los primeros enemigos encontrados por el Teniente Scott Bernard tras estrellarse en la Tierra, y el azote constante de los convoyes de supervivientes y refugiados humanos.",
+    "history_en": "The first adversaries encountered by Lieutenant Scott Bernard upon crashing on Earth, and the relentless bane of human refugee convoys."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Caparazón Central (*)",
+      "location_en": "Central Carapace (*)",
+      "mdc": 160
+    },
+    {
+      "location_es": "Sensores Ópticos Gemelos Frontales (2)",
+      "location_en": "Dual Forward Optical Sensors (2)",
+      "mdc": 50
+    },
+    {
+      "location_es": "Brazos con Garras Cortantes (2)",
+      "location_en": "Slashing Claw Arms (2)",
+      "mdc": 75
+    },
+    {
+      "location_es": "Patas Articuladas (2)",
+      "location_en": "Articulated Legs (2)",
+      "mdc": 90
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañones Gemelos de Plasma de Alta Cadencia",
+      "name_en": "Dual High-Cadence Plasma Cannons",
+      "damage": "4D6 por descarga simultánea",
+      "range": "1.5 km"
+    },
+    {
+      "name_es": "Garras Trituradoras Biomecánicas",
+      "name_en": "Biomechanical Crushing Claws",
+      "damage": "2D6x10 aplastamiento",
+      "range": "Cuerpo a cuerpo"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Receptor biológico hipersensible capaz de detectar el encendido de un motor de Protocultura a más de 100 km de distancia.",
+      "description_en": "Hypersensitive biological receptor detecting protoculture engine ignitions over 100 km away."
+    }
+  ]
+}

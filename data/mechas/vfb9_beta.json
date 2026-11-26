@@ -1,0 +1,172 @@
+{
+  "id": "vfb9_beta",
+  "name": "Beta Fighter",
+  "alias": "VFB-9 Veritech Beta Heavy Fighter / Bomber",
+  "category": "veritech",
+  "generation": "gen3",
+  "is_variable": true,
+  "modes": {
+    "fighter": "assets/images/mechas/vfb9_beta/beta_profile.jpg",
+    "guardian": "assets/images/mechas/vfb9_beta/beta_combo.png",
+    "battloid": "assets/images/mechas/vfb9_beta/beta_linkup.png"
+  },
+  "series": {
+    "es": "La Nueva Generación // The Shadow Chronicles",
+    "en": "The New Generation // The Shadow Chronicles"
+  },
+  "faction": {
+    "es": "Fuerza Expedicionaria Robotech (REF) // Cuerpos de Caza Pesada",
+    "en": "Robotech Expeditionary Force (REF) // Heavy Strike Wings"
+  },
+  "vehicle_type": {
+    "es": "Bombardero y Caza Pesado Transformable / Propulsor Acoplable Legios",
+    "en": "Heavy Transformable Fighter-Bomber & Legios Linkup Booster"
+  },
+  "crew": {
+    "es": "1 piloto (con capacidad de acoplamiento tándem con un caza Alpha para 2 pilotos)",
+    "en": "1 pilot (capable of tandem docking with an Alpha Fighter for 2 pilots)"
+  },
+  "thumbnail": "assets/images/mechas/vfb9_beta/beta_profile.jpg",
+  "faction_logo": "assets/images/ui/Mars_Base.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/vfb9_beta/beta_profile.jpg",
+      "title_es": "VFB-9 Beta Fighter en Modo Bombardero Pesado",
+      "title_en": "VFB-9 Beta Fighter in Heavy Bomber Mode",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/vfb9_beta/beta_combo.png",
+      "title_es": "Configuración Legios: Alpha y Beta acoplados en vuelo",
+      "title_en": "Legios Configuration: Alpha & Beta docked in flight",
+      "type": "action"
+    },
+    {
+      "url": "assets/images/mechas/vfb9_beta/beta_linkup.png",
+      "title_es": "Mecanismo de enganche y propulsores de salto espacial",
+      "title_en": "Docking collar mechanism and deep-space boosters",
+      "type": "blueprint"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 4900,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 99,
+      "label_es": "Mach 4.0 en espacio / Mach 2.8 en atmósfera",
+      "label_en": "Mach 4.0 space / Mach 2.8 atmosphere"
+    },
+    "armor": {
+      "value": 420,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 84,
+      "label_es": "420 C.D.M. Blindaje de Asalto Pesado",
+      "label_en": "420 M.D.C. Heavy Assault Armor"
+    },
+    "firepower": {
+      "value": 98,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 98,
+      "label_es": "98 Pts (Bombas guiadas y cañones de haz triple)",
+      "label_en": "98 Pts (Guided bombs & triple beam guns)"
+    },
+    "range": {
+      "value": 80.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 88,
+      "label_es": "80 km alcance con misiles pesados",
+      "label_en": "80 km heavy missile range"
+    },
+    "sensors": {
+      "value": 280,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 82,
+      "label_es": "280 km Radar Espacial de Largo Alcance",
+      "label_en": "280 km Long-Range Space Radar"
+    },
+    "mobility": {
+      "value": 82,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 82,
+      "label_es": "82 Pts (Potencia de empuje colosal)",
+      "label_en": "82 Pts (Colossal thrust-to-weight power)"
+    }
+  },
+  "dimensions": {
+    "height": "6.10 m (Caza) / 13.70 m (Battloid)",
+    "width": "19.80 m",
+    "length": "15.40 m",
+    "mass": "29.2 toneladas métricas"
+  },
+  "powerplant": {
+    "type": "Tres Turbinas Termonucleares Pesadas de Fusión Protocultura REF",
+    "output": "8,800 shp"
+  },
+  "lore": {
+    "overview_es": "El complemento definitivo para el Alpha Fighter en la Tercera Guerra Robotech. El VFB-9 Beta es un coloso acorazado diseñado para acoplarse directamente en la cola del Alpha Fighter, formando el letal sistema de combate combinado Legios. En esta configuración unificada, el Beta suministra empuje interplanetario, capacidad de trans-salto orbital y una devastadora carga de bombas y misiles pesados.",
+    "overview_en": "The ultimate tactical companion to the Alpha Fighter in the Third Robotech War. The VFB-9 Beta is an armored heavy lifter that mates to the rear of the Alpha Fighter, creating the formidable Legios combat system. Docked together, the Beta provides interplanetary thrust, orbital range, and a massive arsenal of heavy ordnance.",
+    "history_es": "Clave en las misiones de asalto final contra Reflex Point y en el despliegue de las fuerzas expedicionarias de la Flota de Reconquista del Almirante Rick Hunter.",
+    "history_en": "Pivotal during the climactic assault waves against Reflex Point and deep-space sorties across the Sentinel campaigns."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Cuerpo Principal (*)",
+      "location_en": "Main Body (*)",
+      "mdc": 420
+    },
+    {
+      "location_es": "Cabina Reforzada",
+      "location_en": "Reinforced Cockpit",
+      "mdc": 180
+    },
+    {
+      "location_es": "Muelle de Acoplamiento para Alpha Fighter",
+      "location_en": "Alpha Fighter Docking Collar",
+      "mdc": 200
+    },
+    {
+      "location_es": "Alas de Bombardero con Bahías de Misiles (2)",
+      "location_en": "Bomber Wings with Missile Bays (2)",
+      "mdc": 220
+    },
+    {
+      "location_es": "Toberas Principales de Propulsión Pesada (3)",
+      "location_en": "Main Heavy Thrusters (3)",
+      "mdc": 180
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Cañones Triples de Haz de Partículas Montados en Pecho",
+      "name_en": "Chest-Mounted Triple Particle Beam Cannons",
+      "damage": "1D6x10 por descarga triple",
+      "range": "4.5 km"
+    },
+    {
+      "name_es": "Bahía Interna de Bombas Guiadas y Torpedos Espaciales (20 bombas pesadas)",
+      "name_en": "Internal Guided Bomb & Space Torpedo Bay (20 heavy bombs)",
+      "damage": "2D4x100 por salva de bombardeo",
+      "range": "80 km"
+    },
+    {
+      "name_es": "Lanzaderas de Misiles de Corto Alcance en Pecho (16 misiles)",
+      "name_en": "Chest Short-Range Missile Launchers (16 missiles)",
+      "damage": "2D6x10 por salva de 4",
+      "range": "8 km"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Sistema de enganche computarizado electromagnético que permite acoplarse o separarse del Alpha Fighter en pleno vuelo de combate en menos de 3 segundos.",
+      "description_en": "Computerized electromagnetic docking clamp enabling sub-3-second docking and undocking from an Alpha Fighter in mid-combat flight."
+    }
+  ]
+}

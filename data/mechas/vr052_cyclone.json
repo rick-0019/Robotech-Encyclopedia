@@ -1,0 +1,160 @@
+{
+  "id": "vr052_cyclone",
+  "name": "VR-052 Battler Cyclone",
+  "alias": "VR-052F / VR-052T Armadura de Combate Transformable",
+  "category": "veritech",
+  "generation": "gen3",
+  "is_variable": true,
+  "modes": {
+    "fighter": "assets/images/mechas/vr052_cyclone/cyclone_cycle.jpg",
+    "battloid": "assets/images/mechas/vr052_cyclone/cyclone_battloid.jpg"
+  },
+  "series": {
+    "es": "La Nueva Generación (Tercera Guerra Robotech)",
+    "en": "The New Generation (Third Robotech War)"
+  },
+  "faction": {
+    "es": "Fuerza Expedicionaria Robotech // División Marte // Resistencia Terrestre",
+    "en": "Robotech Expeditionary Force // Mars Base Division // Resistance"
+  },
+  "vehicle_type": {
+    "es": "Motocicleta Todo Terreno Transformable en Servoarmadura de Infantería Pesada",
+    "en": "All-Terrain Transformable Motorcycle into Heavy Exoskeleton Power Armor"
+  },
+  "crew": {
+    "es": "1 piloto humano equipado con traje de vuelo CVR-3 (Scott Bernard, Rand)",
+    "en": "1 human operator equipped with CVR-3 flight armor (Scott Bernard, Rand)"
+  },
+  "thumbnail": "assets/images/mechas/vr052_cyclone/cyclone_render.jpg",
+  "faction_logo": "assets/images/ui/Mars_Base.png",
+  "images": [
+    {
+      "url": "assets/images/mechas/vr052_cyclone/cyclone_render.jpg",
+      "title_es": "VR-052 Battler Cyclone en presentación táctica",
+      "title_en": "VR-052 Battler Cyclone tactical render",
+      "type": "render"
+    },
+    {
+      "url": "assets/images/mechas/vr052_cyclone/cyclone_cycle.jpg",
+      "title_es": "Modo Motocicleta de alta velocidad todo terreno",
+      "title_en": "High-speed all-terrain Motorcycle Mode",
+      "type": "vehicle"
+    },
+    {
+      "url": "assets/images/mechas/vr052_cyclone/cyclone_battloid.jpg",
+      "title_es": "Modo Armadura Acorazada desplegado sobre el piloto",
+      "title_en": "Exoskeleton Armor Mode deployed over the pilot",
+      "type": "armor"
+    }
+  ],
+  "stats": {
+    "speed": {
+      "value": 240,
+      "unit_es": "km/h",
+      "unit_en": "km/h",
+      "rating": 48,
+      "label_es": "240 km/h en Modo Moto / 95 km/h en Modo Armadura",
+      "label_en": "240 km/h Cycle / 95 km/h Armor"
+    },
+    "armor": {
+      "value": 120,
+      "unit_es": "C.D.M.",
+      "unit_en": "M.D.C.",
+      "rating": 24,
+      "label_es": "120 C.D.M. Exoesquema Blindado",
+      "label_en": "120 M.D.C. Armored Exoskeleton"
+    },
+    "firepower": {
+      "value": 75,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 75,
+      "label_es": "75 Pts (Fusil EP-40 y Micromisiles)",
+      "label_en": "75 Pts (EP-40 Rifle & Micromissiles)"
+    },
+    "range": {
+      "value": 4.0,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 18,
+      "label_es": "4 km alcance",
+      "label_en": "4 km range"
+    },
+    "sensors": {
+      "value": 45,
+      "unit_es": "km",
+      "unit_en": "km",
+      "rating": 28,
+      "label_es": "45 km Sensor Táctico Integrado en Casco",
+      "label_en": "45 km Helmet HUD Sensor"
+    },
+    "mobility": {
+      "value": 98,
+      "unit_es": "Pts",
+      "unit_en": "Pts",
+      "rating": 98,
+      "label_es": "98 Pts (Pasa por puertas y callejones estrechos)",
+      "label_en": "98 Pts (Navigates narrow doors and alleys)"
+    }
+  },
+  "dimensions": {
+    "height": "1.05 m (Modo Moto) / 2.05 m (Modo Armadura)",
+    "width": "0.90 m",
+    "length": "2.15 m",
+    "mass": "115 kg (Vacío)"
+  },
+  "powerplant": {
+    "type": "Mini-Generador de Celdas de Protocultura Tipo P-12",
+    "output": "320 shp"
+  },
+  "lore": {
+    "overview_es": "El vehículo personal más revolucionario en la historia militar de la humanidad. Concebido para dotar a los pilotos caídos de una capacidad de supervivencia y potencia de fuego equivalente a un tanque ligero, el Cyclone se transforma en segundos de una motocicleta todoterreno a un exoesqueleto blindado que multiplica por diez la fuerza de su portador.",
+    "overview_en": "The most revolutionary personal combat system in human history. Designed to provide downed pilots with the firepower and survivability of a light tank, the Cyclone morphs from a rugged motorcycle into a powered exoskeleton multiplying human strength tenfold.",
+    "history_es": "El Teniente Scott Bernard y su grupo de guerrilleros recorrieron miles de kilómetros a lomos de sus Cyclone, librando una implacable guerra de guerrillas contra las patrullas Invid hasta alcanzar Reflex Point.",
+    "history_en": "Lieutenant Scott Bernard and his band of freedom fighters crossed thousands of miles on Cyclones, waging relentless guerilla warfare against Invid patrols all the way to Reflex Point."
+  },
+  "mdc_by_location": [
+    {
+      "location_es": "Cuerpo Principal / Exoesquema (*)",
+      "location_en": "Main Body / Exoskeleton (*)",
+      "mdc": 120
+    },
+    {
+      "location_es": "Ruedas Blindadas Reforzadas (2)",
+      "location_en": "Reinforced Armored Wheels (2)",
+      "mdc": 40
+    },
+    {
+      "location_es": "Lanzador de Micromisiles de Hombro (GR-103)",
+      "location_en": "GR-103 Shoulder Micro-Missile Pod",
+      "mdc": 45
+    },
+    {
+      "location_es": "Propulsores de Salto Dorsales",
+      "location_en": "Backpack Jump Jets",
+      "mdc": 50
+    }
+  ],
+  "weapons": [
+    {
+      "name_es": "Fusil de Asalto de Haz de Partículas EP-40 de 40mm",
+      "name_en": "EP-40 40mm Particle Beam Assault Rifle",
+      "damage": "4D6 por disparo",
+      "range": "1.2 km"
+    },
+    {
+      "name_es": "Lanzadera de Micromisiles Guiados de Pecho/Hombro GR-103 (12 misiles)",
+      "name_en": "GR-103 Chest/Shoulder Micro-Missile Pod (12 missiles)",
+      "damage": "1D6x10 por salva de 2",
+      "range": "3.5 km"
+    }
+  ],
+  "special_equipment": [
+    {
+      "name_es": "Sensores Tácticos y Equipamiento Especial",
+      "name_en": "Tactical Sensors & Special Equipment",
+      "description_es": "Propulsores de salto asistido (Jump Jets) que permiten elevar al soldado por encima de árboles, acantilados y obstáculos urbanos.",
+      "description_en": "Rocket jump jets allowing the operator to leap over treelines, cliffs, and urban obstacles."
+    }
+  ]
+}

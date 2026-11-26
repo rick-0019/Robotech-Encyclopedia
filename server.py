@@ -101,13 +101,20 @@ class RobotechRequestHandler(http.server.SimpleHTTPRequestHandler):
             # Limpiar nombre de archivo
             clean_name = os.path.basename(filename).replace(' ', '_')
             
-            # Directorio destino: assets/images/mechas/{folder} o assets/images/{folder}
+            # Directorio destino: assets/images/{folder}
             if folder_name.startswith('assets/images/'):
                 target_dir = os.path.join(BASE_DIR, folder_name)
-            elif folder_name.startswith('mechas/') or folder_name.startswith('ui/'):
+            elif folder_name.startswith(('mechas/', 'naves/', 'personajes/', 'ui/', 'uploads/', 'historia')):
                 target_dir = os.path.join(BASE_DIR, 'assets', 'images', folder_name)
             elif folder_name:
-                target_dir = os.path.join(BASE_DIR, 'assets', 'images', 'mechas', folder_name)
+                if os.path.exists(os.path.join(BASE_DIR, 'assets', 'images', 'naves', folder_name)):
+                    target_dir = os.path.join(BASE_DIR, 'assets', 'images', 'naves', folder_name)
+                elif os.path.exists(os.path.join(BASE_DIR, 'assets', 'images', 'personajes', folder_name)):
+                    target_dir = os.path.join(BASE_DIR, 'assets', 'images', 'personajes', folder_name)
+                elif os.path.exists(os.path.join(BASE_DIR, 'assets', 'images', 'mechas', folder_name)):
+                    target_dir = os.path.join(BASE_DIR, 'assets', 'images', 'mechas', folder_name)
+                else:
+                    target_dir = os.path.join(BASE_DIR, 'assets', 'images', folder_name)
             else:
                 target_dir = os.path.join(BASE_DIR, 'assets', 'images', 'uploads')
                 
