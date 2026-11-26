@@ -320,11 +320,11 @@
         "es": "Destroid Antiaéreo No Transformable",
         "en": "Non-Transformable Anti-Aircraft Destroid"
       },
-      "thumbnail": "assets/images/mechas/destroid_monster/monster_profile.png",
+      "thumbnail": "assets/images/mechas/destroid_monster/MEC_15_1_7893_366_275_s.jpg",
       "faction_logo": "assets/images/ui/logo_UNSpacy.png",
       "is_variable": true,
       "has_variants": true,
-      "variants_count": 2,
+      "variants_count": 4,
       "modes": {
         "fighter": "assets/images/mechas/destroid_monster/monster_profile.png",
         "guardian": "assets/images/mechas/destroid_monster/monster_profile.png",
